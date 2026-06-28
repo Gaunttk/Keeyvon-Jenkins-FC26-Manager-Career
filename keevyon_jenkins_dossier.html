@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keevyon Jenkins | Manager Profile</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Barlow:wght@300;400;500;600&display=swap');
+
+  :root {
+    --red: #C8102E;
+    --red-dark: #9B0D22;
+    --black: #0A0A0A;
+    --off-black: #141414;
+    --charcoal: #1E1E1E;
+    --mid: #2E2E2E;
+    --steel: #444;
+    --muted: #888;
+    --light: #C8C8C8;
+    --white: #F5F5F5;
+    --gold: #D4A843;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    background: var(--red);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .masthead-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+  }
+  .masthead-date {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--off-black);
+    padding: 36px 24px 28px;
+    border-bottom: 3px solid var(--red);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: 'KJ';
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 140px;
+    color: rgba(200,16,46,0.07);
+    letter-spacing: -4px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .hero-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+  .hero-name span {
+    color: var(--red);
+  }
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .hero-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--steel);
+    color: var(--light);
+  }
+  .tag.highlight {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+  }
+
+  /* QUICK STATS BAR */
+  .stats-bar {
+    background: var(--charcoal);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--mid);
+  }
+  .stat-cell {
+    padding: 16px 12px;
+    text-align: center;
+    border-right: 1px solid var(--mid);
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--red);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 3px;
+    display: block;
+  }
+
+  /* CONTENT SECTIONS */
+  .section {
+    padding: 28px 24px;
+    border-bottom: 1px solid var(--mid);
+  }
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--mid);
+  }
+
+  /* INTRO / BIO */
+  .bio-text {
+    font-size: 15px;
+    color: var(--light);
+    line-height: 1.75;
+  }
+  .bio-text strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  /* CAREER TABLE */
+  .career-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .career-table thead tr {
+    background: var(--mid);
+  }
+  .career-table th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 8px 10px;
+    text-align: left;
+  }
+  .career-table td {
+    padding: 10px 10px;
+    font-size: 13px;
+    color: var(--light);
+    border-bottom: 1px solid var(--mid);
+    vertical-align: top;
+  }
+  .career-table tr:last-child td { border-bottom: none; }
+  .career-table .club-name {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 14px;
+  }
+  .career-table .league {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+  .career-table .years {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .career-table .stat-col {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+  }
+  .career-table .injury-row td {
+    background: rgba(200,16,46,0.06);
+  }
+  .injury-badge {
+    display: inline-block;
+    background: var(--red-dark);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    margin-top: 3px;
+  }
+
+  /* INTERNATIONAL */
+  .intl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .intl-card {
+    background: var(--charcoal);
+    padding: 16px;
+    border-left: 3px solid var(--red);
+  }
+  .intl-card-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .intl-card-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+  }
+  .intl-card-value.gold { color: var(--gold); }
+
+  /* QUOTE BLOCK */
+  .quote-block {
+    background: var(--charcoal);
+    border-left: 4px solid var(--red);
+    padding: 20px 20px 20px 24px;
+    margin: 0;
+  }
+  .quote-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .quote-attr {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  /* COACHING TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--mid);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 22px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-dot {
+    position: absolute;
+    left: -17px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+    border: 2px solid var(--black);
+  }
+  .timeline-dot.current {
+    background: var(--gold);
+    box-shadow: 0 0 8px rgba(212,168,67,0.5);
+  }
+  .timeline-years {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .timeline-role {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  .timeline-club {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    color: var(--red);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .timeline-detail {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* PERSONAL */
+  .personal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .personal-item {
+    background: var(--charcoal);
+    padding: 12px 14px;
+  }
+  .personal-item-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+  .personal-item-value {
+    font-size: 13px;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  /* STYLE SECTION */
+  .style-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .style-pill {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    background: var(--mid);
+    color: var(--light);
+    border: 1px solid var(--steel);
+  }
+  .style-pill.primary {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--off-black);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--mid);
+  }
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .footer-note {
+    font-size: 11px;
+    color: var(--steel);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <span class="masthead-label">Wrexham AFC — Manager Profile</span>
+  <span class="masthead-date">Season 2026–27</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">The Hawk Has Landed</div>
+  <div class="hero-name">Keevyon<br><span>Jenkins</span></div>
+  <div class="hero-title">Head Coach · Wrexham AFC</div>
+  <div class="hero-tags">
+    <span class="tag highlight">USMNT</span>
+    <span class="tag">Premier League Veteran</span>
+    <span class="tag">Olathe, KS</span>
+    <span class="tag">b. Jan 13, 1987</span>
+  </div>
+</div>
+
+<!-- QUICK STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-cell">
+    <span class="stat-number">240</span>
+    <span class="stat-label">Club Apps</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number">34</span>
+    <span class="stat-label">Int'l Caps</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number">41</span>
+    <span class="stat-label">Goals</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number">70</span>
+    <span class="stat-label">Assists</span>
+  </div>
+</div>
+
+<!-- BIO -->
+<div class="section">
+  <div class="section-label">The Story</div>
+  <p class="bio-text">
+    Born in <strong>Olathe, Kansas</strong> on January 13, 1987, Keevyon Darius Jenkins never looked like a typical football prodigy from the American heartland. But from the moment he arrived at <strong>Sporting Kansas City's Academy</strong> at age ten, it was obvious something was different. A Central Attacking Midfielder with rare vision, technical precision, and an engine that never quit, Jenkins became the standard-bearer for a generation of American technical players before a brutal knee injury — suffered in a Europa League qualifier at 27 — cut short a career still very much in its prime.
+    <br><br>
+    Now, back in <strong>Welsh football</strong> for the first time since his Swansea City days, Jenkins arrives at Wrexham AFC as the club's new Head Coach — bringing Hollywood levels of expectation, a continental coaching pedigree, and a point to prove.
+  </p>
+</div>
+
+<!-- QUOTE -->
+<div class="section" style="padding: 0;">
+  <blockquote class="quote-block">
+    <p class="quote-text">"I fell in love with Wales during my Swansea years. When Ryan and Rob called, I didn't think twice. This club has unfinished business."</p>
+    <span class="quote-attr">— Keevyon Jenkins, on joining Wrexham AFC</span>
+  </blockquote>
+</div>
+
+<!-- PLAYING CAREER -->
+<div class="section">
+  <div class="section-label">Playing Career</div>
+  <table class="career-table">
+    <thead>
+      <tr>
+        <th>Club</th>
+        <th>Years</th>
+        <th style="text-align:center">Apps</th>
+        <th style="text-align:center">G</th>
+        <th style="text-align:center">A</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="club-name">FC Dallas</div>
+          <div class="league">MLS</div>
+        </td>
+        <td class="years">05–08</td>
+        <td class="stat-col">67</td>
+        <td class="stat-col">14</td>
+        <td class="stat-col">22</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="club-name">Fulham FC</div>
+          <div class="league">Premier League</div>
+        </td>
+        <td class="years">08–12</td>
+        <td class="stat-col">112</td>
+        <td class="stat-col">19</td>
+        <td class="stat-col">31</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="club-name">Swansea City</div>
+          <div class="league">Premier League</div>
+        </td>
+        <td class="years">12–14</td>
+        <td class="stat-col">61</td>
+        <td class="stat-col">8</td>
+        <td class="stat-col">17</td>
+      </tr>
+      <tr class="injury-row">
+        <td colspan="5">
+          <div class="club-name" style="font-size:13px">July 24, 2014 — Europa League Qualifier vs. FC Zürich</div>
+          <div class="league">Ruptured ACL + MCL, right knee. Two comeback attempts failed.</div>
+          <span class="injury-badge">Career-ending injury</span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="color:var(--muted); font-size:13px; font-style:italic;">Officially retired February 2016</td>
+        <td class="stat-col" style="color:var(--gold);">41</td>
+        <td class="stat-col" style="color:var(--gold);">70</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- INTERNATIONAL -->
+<div class="section">
+  <div class="section-label">USMNT Career</div>
+  <div class="intl-grid">
+    <div class="intl-card">
+      <div class="intl-card-label">Total Caps</div>
+      <div class="intl-card-value">34</div>
+    </div>
+    <div class="intl-card">
+      <div class="intl-card-label">Goals / Assists</div>
+      <div class="intl-card-value gold">7 / 11</div>
+    </div>
+    <div class="intl-card">
+      <div class="intl-card-label">First Cap</div>
+      <div class="intl-card-value" style="font-size:18px; padding-top:4px">Mar 2007</div>
+    </div>
+    <div class="intl-card">
+      <div class="intl-card-label">World Cup</div>
+      <div class="intl-card-value" style="font-size:18px; padding-top:4px">2010 RSA</div>
+    </div>
+  </div>
+  <p style="font-size:13px; color:var(--muted); margin-top:14px; line-height:1.6;">
+    Featured in two group stage matches at <strong style="color:var(--light)">South Africa 2010</strong>. Named to the squad alongside Donovan and Dempsey. Final cap: June 2014, just weeks before the knee injury ended his international career.
+  </p>
+</div>
+
+<!-- COACHING CAREER -->
+<div class="section">
+  <div class="section-label">Coaching Career</div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-years">2016–2018</div>
+      <div class="timeline-role">UEFA Pro License / TV Analyst</div>
+      <div class="timeline-club">ESPN FC · BeIN Sports</div>
+      <div class="timeline-detail">Studied for his UEFA Pro License while working as an analyst. Became a recognizable voice for American soccer coverage internationally.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-years">2018–2020</div>
+      <div class="timeline-role">Assistant Manager</div>
+      <div class="timeline-club">Colorado Rapids · MLS</div>
+      <div class="timeline-detail">Learned the craft under a series of head coaches. Developed a reputation for player relationships and tactical preparation.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-years">2020–2022</div>
+      <div class="timeline-role">Head Coach</div>
+      <div class="timeline-club">San Jose Earthquakes · MLS</div>
+      <div class="timeline-detail">Finished 14th and 11th in back-to-back seasons. Dismissed after missing the playoffs. Praised for youth development; criticised for squad depth management.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-years">2022–2024</div>
+      <div class="timeline-role">Head Coach</div>
+      <div class="timeline-club">FC Nordsjælland · Danish Superliga</div>
+      <div class="timeline-detail">Transformed the club's attacking identity. Finished 3rd then 2nd in consecutive seasons. Caught attention across European football for his high-press, positional play philosophy.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot current"></div>
+      <div class="timeline-years">Jan 2025 – Present</div>
+      <div class="timeline-role">Head Coach</div>
+      <div class="timeline-club">Wrexham AFC · EFL Championship</div>
+      <div class="timeline-detail">Appointed mid-season. The club's biggest managerial appointment since the Reynolds/McElhenney era began. First American manager in Wrexham's history.</div>
+    </div>
+  </div>
+</div>
+
+<!-- MANAGERIAL STYLE -->
+<div class="section">
+  <div class="section-label">Tactical Identity</div>
+  <div class="style-pills">
+    <span class="style-pill primary">4-2-3-1</span>
+    <span class="style-pill primary">4-3-3</span>
+    <span class="style-pill">High Press</span>
+    <span class="style-pill">Positional Play</span>
+    <span class="style-pill">Youth Dev</span>
+    <span class="style-pill">Flexible</span>
+  </div>
+  <p style="font-size:13px; color:var(--muted); line-height:1.6;">
+    Prefers a press-heavy, possession-oriented system with fluid attacking movement. Prioritises young, hungry players over aging veterans. Known for individual development plans and strong dressing room culture. Can struggle when forced into a low block — his teams are built to dominate, not defend.
+  </p>
+</div>
+
+<!-- PERSONAL -->
+<div class="section">
+  <div class="section-label">Personal</div>
+  <div class="personal-grid">
+    <div class="personal-item">
+      <div class="personal-item-label">Hometown</div>
+      <div class="personal-item-value">Olathe, Kansas</div>
+    </div>
+    <div class="personal-item">
+      <div class="personal-item-label">Family</div>
+      <div class="personal-item-value">Danielle (wife), Marcus (16), Zoe (13)</div>
+    </div>
+    <div class="personal-item">
+      <div class="personal-item-label">Languages</div>
+      <div class="personal-item-value">English, some Welsh ("Diolch")</div>
+    </div>
+    <div class="personal-item">
+      <div class="personal-item-label">Connection</div>
+      <div class="personal-item-value">Close friends w/ Pulisic (USMNT era)</div>
+    </div>
+    <div class="personal-item" style="grid-column: span 2;">
+      <div class="personal-item-label">Known For</div>
+      <div class="personal-item-value">Media-savvy from ESPN days. Reynolds and McElhenney specifically cited this when hiring him. First picked up Welsh during his Swansea years.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span class="footer-brand">Wrexham AFC</span>
+  <span class="footer-note">FC26 Career Mode · Match Journal Series</span>
+</div>
+
+</body>
+</html>

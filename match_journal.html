@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrexham AFC — Match Journal | Keevyon Jenkins Era</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Barlow:wght@300;400;500;600&display=swap');
+
+  :root {
+    --red: #C8102E;
+    --red-dark: #9B0D22;
+    --black: #0A0A0A;
+    --off-black: #141414;
+    --charcoal: #1E1E1E;
+    --mid: #2E2E2E;
+    --steel: #444;
+    --muted: #888;
+    --light: #C8C8C8;
+    --white: #F5F5F5;
+    --gold: #D4A843;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    background: var(--red);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .masthead-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+  }
+  .masthead-date {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* HEADER */
+  .journal-header {
+    background: var(--off-black);
+    padding: 32px 24px 24px;
+    border-bottom: 3px solid var(--red);
+  }
+  .journal-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .journal-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  .journal-title span { color: var(--red); }
+  .journal-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  /* ENTRY */
+  .entry {
+    border-bottom: 1px solid var(--mid);
+  }
+
+  /* ENTRY HEADER (voice label + date bar) */
+  .entry-header {
+    padding: 20px 24px 0;
+  }
+  .voice-badge {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+  .voice-badge.hawks-nest {
+    background: var(--red);
+    color: white;
+  }
+  .voice-badge.dispatch {
+    background: var(--charcoal);
+    border: 1px solid var(--steel);
+    color: var(--light);
+  }
+  .entry-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+  .entry-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1.1;
+    flex: 1;
+  }
+  .entry-date {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* MATCH RESULT CHIP */
+  .result-chip {
+    background: var(--charcoal);
+    border-left: 3px solid var(--red);
+    padding: 10px 14px;
+    margin: 0 24px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .result-score {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--white);
+    line-height: 1;
+  }
+  .result-score .win { color: var(--gold); }
+  .result-score .loss { color: var(--red); }
+  .result-score .draw { color: var(--muted); }
+  .result-detail {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .result-detail strong { color: var(--light); font-weight: 600; }
+
+  /* BODY TEXT */
+  .entry-body {
+    padding: 0 24px 24px;
+    font-size: 14px;
+    color: var(--light);
+    line-height: 1.75;
+  }
+  .entry-body p { margin-bottom: 14px; }
+  .entry-body p:last-child { margin-bottom: 0; }
+  .entry-body strong { color: var(--white); font-weight: 600; }
+  .entry-body em { color: var(--muted); font-style: italic; }
+
+  /* DISPATCH-SPECIFIC: pull quote */
+  .pull-quote {
+    border-left: 3px solid var(--red);
+    padding: 12px 16px;
+    margin: 16px 0;
+    background: var(--charcoal);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.35;
+  }
+
+  /* DIVIDER between same-session entries */
+  .session-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px;
+    margin: 4px 0;
+  }
+  .session-divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--mid);
+  }
+  .session-divider-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--steel);
+  }
+
+  /* EMPTY STATE */
+  .empty-state {
+    padding: 60px 24px;
+    text-align: center;
+    color: var(--muted);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--off-black);
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--mid);
+  }
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .footer-note {
+    font-size: 11px;
+    color: var(--steel);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <span class="masthead-label">Wrexham AFC — Match Journal</span>
+  <span class="masthead-date">Keevyon Jenkins Era</span>
+</div>
+
+<!-- JOURNAL HEADER -->
+<div class="journal-header">
+  <div class="journal-eyebrow">FC26 Career Mode</div>
+  <div class="journal-title">The Red<br><span>Dragon</span><br>Chronicles</div>
+  <div class="journal-subtitle">Match by match. Voice by voice. Season 2026–27 and beyond.</div>
+</div>
+
+<!-- ENTRIES — newest first -->
+<!-- NEW ENTRIES GO HERE -->
+
+<div class="empty-state">
+  No entries yet — the story starts with the first whistle.
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span class="footer-brand">Wrexham AFC</span>
+  <span class="footer-note">FC26 Career Mode · The Hawk Era</span>
+</div>
+
+</body>
+</html>
