@@ -207,8 +207,12 @@ The more context provided, the richer the narrative. Fiction is never added — 
 
 1. **User pushes screenshots to git from phone** — no Claude needed for this step
 2. **User opens a Claude session** — reads images, updates CSV and/or generates journal entries
-3. **Claude commits and pushes** to `claude/wrexham-fc26-career-dx9xgx`
-4. **User pulls to PC** and opens HTML files locally in browser
+3. **Claude commits and pushes** to the session branch
+4. **At the end of every session, Claude must remind the user to pull** with the exact command:
+   ```
+   git pull origin <branch-name>
+   ```
+5. **User pulls to PC** and opens HTML files locally in browser — no server needed
 
 GitHub Pages (when enabled on `docs/`) provides a shareable public URL. Do not rely on Pages being active — all HTML must work as local files too. The `season_log.json` fetch in index.html fails silently when opened as a file:// — this is expected.
 
