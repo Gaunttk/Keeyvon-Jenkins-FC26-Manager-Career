@@ -15,13 +15,15 @@ When a session opens, silently load the context below. Do not summarize it back 
 
 | File | Purpose |
 |------|---------|
-| `wrexham_squad.csv` | Source of truth for all 36 squad players (53 columns) |
+| `wrexham_squad.csv` | Source of truth for all first-team squad players (53 columns) |
+| `youth_academy.csv` | Academy players — same 53-column schema; promoted players move to `wrexham_squad.csv` |
 | `season_log.json` | Structured record of matches, transfers, injuries, milestones |
 | `docs/index.html` | Season hub (GitHub Pages root) |
 | `docs/journal.html` | Match journal — "The Red Dragon Chronicles" |
 | `docs/dossier.html` | Keevyon Jenkins manager profile |
 | `docs/assets/style.css` | Shared design system — edit this, not inline styles |
 | `docs/assets/photos/` | Player/match photos for future use |
+| `docs/academy.html` | Youth Academy page — prospects, development plans, promotions |
 
 Old root-level HTML files (`keevyon_jenkins_dossier.html`, `match_journal.html`) are superseded by the `docs/` versions. Do not edit them.
 
