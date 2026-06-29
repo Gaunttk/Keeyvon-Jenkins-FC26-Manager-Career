@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wrexham AFC — Season Hub | Keevyon Jenkins Era</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <span class="masthead-label">Wrexham AFC · FC26 Career</span>
+  <span class="masthead-date">Season 2026–27</span>
+</div>
+
+<!-- HUB HEADER -->
+<div class="hub-header">
+  <div class="hub-eyebrow">The Hawk Era · Season 2026–27</div>
+  <div class="hub-title">Wrexham<br><span>AFC</span></div>
+  <div class="hub-subtitle">Keevyon Jenkins · Head Coach · EFL Championship</div>
+</div>
+
+<!-- SEASON STATS BAR -->
+<div class="season-bar">
+  <div class="stat-cell">
+    <span class="stat-number" id="stat-played">0</span>
+    <span class="stat-label">Played</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="stat-w" style="color:var(--gold)">0</span>
+    <span class="stat-label">W</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="stat-d" style="color:var(--muted)">0</span>
+    <span class="stat-label">D</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="stat-l" style="color:var(--red)">0</span>
+    <span class="stat-label">L</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="stat-pts">0</span>
+    <span class="stat-label">Pts</span>
+  </div>
+</div>
+
+<!-- NAV CARDS -->
+<div class="nav-grid">
+  <a class="nav-card" href="journal.html">
+    <div class="nav-card-label">Match Journal</div>
+    <div class="nav-card-title">The Red Dragon<br>Chronicles</div>
+    <div class="nav-card-desc">Match reports, post-game thoughts, and narrative dispatches — every game documented.</div>
+  </a>
+  <a class="nav-card" href="dossier.html">
+    <div class="nav-card-label">Manager Profile</div>
+    <div class="nav-card-title">Keevyon<br>Jenkins</div>
+    <div class="nav-card-desc">Playing career, coaching history, tactical identity, and the backstory behind The Hawk.</div>
+  </a>
+</div>
+
+<!-- RECENT LOG -->
+<div class="log-section">
+  <div class="section-label">Season Log</div>
+  <div id="season-log-entries">
+    <div class="log-row">
+      <span class="log-event" style="color:var(--muted); font-style:italic;">No entries yet — season begins with the first kick-off.</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span class="footer-brand">Wrexham AFC</span>
+  <span class="footer-note">FC26 Career Mode · The Hawk Era</span>
+</div>
+
+<script>
+// Load season_log.json if available (works when served via local server or GitHub Pages)
+// Falls back gracefully if file is not found or fetch is blocked
+async function loadSeasonLog() {
+  try {
+    const res = await fetch('../season_log.json');
+    if (!res.ok) return;
+    const data = await res.json();
+
+    const matches = (data.matches || []);
+    const W = matches.filter(m => m.result === 'W').length;
+    const D = matches.filter(m => m.result === 'D').length;
+    const L = matches.filter(m => m.result === 'L').length;
+    const played = matches.length;
+    const pts = W * 3 + D;
+
+    document.getElementById('stat-played').textContent = played;
+    document.getElementById('stat-w').textContent = W;
+    document.getElementById('stat-d').textContent = D;
+    document.getElementById('stat-l').textContent = L;
+    document.getElementById('stat-pts').textContent = pts;
+
+    const all = [
+      ...(data.matches || []).map(m => ({ ...m, _type: 'match' })),
+      ...(data.transfers || []).map(t => ({ ...t, _type: 'transfer' })),
+      ...(data.injuries || []).map(i => ({ ...i, _type: 'injury' })),
+      ...(data.milestones || []).map(ms => ({ ...ms, _type: 'milestone' })),
+    ].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 12);
+
+    if (all.length === 0) return;
+
+    const container = document.getElementById('season-log-entries');
+    container.innerHTML = '';
+
+    all.forEach(entry => {
+      const row = document.createElement('div');
+      row.className = 'log-row';
+
+      let tagHtml = '';
+      let eventHtml = '';
+
+      if (entry._type === 'match') {
+        const cls = entry.result === 'W' ? 'win' : entry.result === 'L' ? 'loss' : 'draw';
+        tagHtml = `<span class="log-tag ${cls}">${entry.result} ${entry.score}</span>`;
+        eventHtml = `<strong>${entry.home ? 'vs' : '@'} ${entry.opponent}</strong> · ${entry.competition}`;
+      } else if (entry._type === 'transfer') {
+        tagHtml = `<span class="log-tag signing">${entry.direction === 'in' ? 'SIGNED' : 'SOLD'}</span>`;
+        eventHtml = `<strong>${entry.player}</strong> ${entry.direction === 'in' ? 'joins from' : 'departs to'} ${entry.club}`;
+      } else if (entry._type === 'injury') {
+        tagHtml = `<span class="log-tag injury">INJURY</span>`;
+        eventHtml = `<strong>${entry.player}</strong> — ${entry.description}`;
+      } else if (entry._type === 'milestone') {
+        tagHtml = `<span class="log-tag draw">NOTE</span>`;
+        eventHtml = entry.description;
+      }
+
+      row.innerHTML = `
+        <span class="log-event">${eventHtml}</span>
+        <span class="log-date">${entry.date}</span>
+        ${tagHtml}
+      `;
+      container.appendChild(row);
+    });
+  } catch (e) {
+    // Silent fail — static open works without fetch
+  }
+}
+
+loadSeasonLog();
+</script>
+
+</body>
+</html>
