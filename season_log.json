@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "club": "Wrexham AFC",
+    "manager": "Keevyon Jenkins",
+    "game": "FC26 Career Mode",
+    "season": "2026-27",
+    "competition": "EFL Championship",
+    "last_updated": "2026-06-29"
+  },
+  "matches": [],
+  "transfers": [],
+  "injuries": [],
+  "milestones": [
+    {
+      "date": "2026-06-29",
+      "description": "Season hub and match journal system initialized. Squad of 36 fully catalogued."
+    }
+  ]
+}
