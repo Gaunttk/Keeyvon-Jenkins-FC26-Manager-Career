@@ -1,19 +1,28 @@
 {
   "_meta": {
     "club": "Wrexham AFC",
-    "manager": "Keevyon Jenkins",
+    "manager": "Keeyvon Jenkins",
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "EFL Championship",
-    "last_updated": "2026-06-29"
+    "last_updated": "2026-07-22"
   },
-  "matches": [],
+  "matches": [
+    { "date": "2026-07-01", "opponent": "Hull City", "home": false, "score": "2-1", "result": "W", "competition": "Youth Academy Rush Tournament", "round": "Quarter-Final", "notes": "Lord (2). MoM: Gassner GK. Neutral venue.", "journal_entry": true },
+    { "date": "2026-07-18", "opponent": "Bradford City", "home": false, "score": "4-0", "result": "W", "competition": "European International Cup", "round": "Group Stage", "notes": "Broadhead (2), Cadamarteri, Moore. Neutral venue.", "journal_entry": true },
+    { "date": "2026-07-19", "opponent": "Millwall", "home": false, "score": "3-2 AET", "result": "W", "competition": "Youth Academy Rush Tournament", "round": "Semi-Final", "notes": "Lord (2), Horne. Won in extra time. Neutral venue.", "journal_entry": true },
+    { "date": "2026-07-22", "opponent": "AD Ceuta FC", "home": false, "score": "5-0", "result": "W", "competition": "European International Cup", "round": "Group Stage", "notes": "Keillor-Dunn (2), Moore (1G/3A MoM), Cadamarteri, O'Brien. Played in Madrid.", "journal_entry": true }
+  ],
   "transfers": [],
   "injuries": [],
   "milestones": [
     {
       "date": "2026-06-29",
       "description": "Season hub and match journal system initialized. Squad of 36 fully catalogued."
+    },
+    {
+      "date": "2026-07-22",
+      "description": "Pre-season: 4W from 4. EIC undefeated (2W). Youth Tournament SF win in AET. Moore and Lord emerging as standouts. Next: EIC Group Stage vs SD Huesca."
     }
   ]
 }
