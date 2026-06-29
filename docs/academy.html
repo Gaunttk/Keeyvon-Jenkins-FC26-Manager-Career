@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth Academy · Wrexham AFC</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <div class="masthead">
+    <span class="masthead-label">Wrexham AFC · Youth Academy</span>
+    <span class="masthead-date">FC26 Career Mode · Season 2026–27</span>
+  </div>
+
+  <div class="hub-header">
+    <div class="hub-eyebrow">The Red Dragons</div>
+    <div class="hub-title">Youth <span>Academy</span></div>
+    <div class="hub-subtitle">Next generation — scouted, signed, developed</div>
+  </div>
+
+  <!-- ─── ACADEMY OVERVIEW BAR ─── -->
+  <div class="stats-bar" style="grid-template-columns: repeat(3,1fr);">
+    <div class="stat-cell">
+      <span class="stat-number" id="player-count">0</span>
+      <span class="stat-label">Players</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-number" id="avg-age">—</span>
+      <span class="stat-label">Avg Age</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-number" id="promoted-count">0</span>
+      <span class="stat-label">Promoted</span>
+    </div>
+  </div>
+
+  <!-- ─── ACTIVE ACADEMY PLAYERS ─── -->
+  <div class="depth-section">
+    <div class="depth-pos-header">Current Academy Squad</div>
+    <div id="academy-roster">
+      <div class="empty-state">No academy players on file — add screenshots to populate</div>
+    </div>
+  </div>
+
+  <!-- ─── PROMOTED PLAYERS ─── -->
+  <div class="depth-section">
+    <div class="depth-pos-header">Promoted to First Team</div>
+    <div id="promoted-roster">
+      <div class="empty-state">No promotions yet this career</div>
+    </div>
+  </div>
+
+  <!-- ─── SCOUTING PIPELINE ─── -->
+  <div class="depth-section">
+    <div class="depth-pos-header">Scouting Pipeline</div>
+    <div id="pipeline">
+      <div class="empty-state">No targets identified</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-brand">Wrexham AFC</span>
+    <span class="footer-note">Youth Academy · FC26 Career</span>
+  </div>
+
+  <nav style="padding:14px 20px; border-top:1px solid var(--mid); display:flex; gap:16px; flex-wrap:wrap;">
+    <a href="index.html" class="footer-link">← Hub</a>
+    <a href="dossier.html" class="footer-link">Dossier</a>
+    <a href="depth_chart.html" class="footer-link">Depth Chart</a>
+    <a href="journal.html" class="footer-link">Journal</a>
+  </nav>
+
+</body>
+</html>
