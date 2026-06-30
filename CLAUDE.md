@@ -39,7 +39,7 @@ Always work on: `claude/wrexham-fc26-career-dx9xgx`
 - **Playing career:** FC Dallas (MLS) → Fulham FC (PL) → Swansea City (PL); career-ending ACL/MCL injury July 2014, retired Feb 2016
 - **International:** USMNT, 34 caps, 7G/11A, World Cup 2010 South Africa
 - **Coaching career:** ESPN/BeIN analyst (2016–18) → Colorado Rapids asst (2018–20) → San Jose Earthquakes HC (2020–22) → FC Nordsjælland HC (2022–24) → **Wrexham AFC HC (Jan 2025–present)**
-- **Tactics:** 4-2-3-1 / 4-3-3, High Press, Positional Play
+- **Tactics:** 4-3-3 (current, switched from 4-2-3-1 Aug 2026), High Press, Positional Play
 - **Nickname:** The Hawk
 
 ---
