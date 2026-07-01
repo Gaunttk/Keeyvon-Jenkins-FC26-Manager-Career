@@ -15,13 +15,15 @@ When a session opens, silently load the context below. Do not summarize it back 
 
 | File | Purpose |
 |------|---------|
-| `wrexham_squad.csv` | Source of truth for all 36 squad players (53 columns) |
+| `wrexham_squad.csv` | Source of truth for all first-team squad players (53 columns) |
+| `youth_academy.csv` | Academy players — same 53-column schema; promoted players move to `wrexham_squad.csv` |
 | `season_log.json` | Structured record of matches, transfers, injuries, milestones |
 | `docs/index.html` | Season hub (GitHub Pages root) |
 | `docs/journal.html` | Match journal — "The Red Dragon Chronicles" |
 | `docs/dossier.html` | Keevyon Jenkins manager profile |
 | `docs/assets/style.css` | Shared design system — edit this, not inline styles |
 | `docs/assets/photos/` | Player/match photos for future use |
+| `docs/academy.html` | Youth Academy page — prospects, development plans, promotions |
 
 Old root-level HTML files (`keevyon_jenkins_dossier.html`, `match_journal.html`) are superseded by the `docs/` versions. Do not edit them.
 
@@ -207,8 +209,12 @@ The more context provided, the richer the narrative. Fiction is never added — 
 
 1. **User pushes screenshots to git from phone** — no Claude needed for this step
 2. **User opens a Claude session** — reads images, updates CSV and/or generates journal entries
-3. **Claude commits and pushes** to `claude/wrexham-fc26-career-dx9xgx`
-4. **User pulls to PC** and opens HTML files locally in browser
+3. **Claude commits and pushes** to the session branch
+4. **At the end of every session, Claude must remind the user to pull** with the exact command:
+   ```
+   git pull origin <branch-name>
+   ```
+5. **User pulls to PC** and opens HTML files locally in browser — no server needed
 
 GitHub Pages (when enabled on `docs/`) provides a shareable public URL. Do not rely on Pages being active — all HTML must work as local files too. The `season_log.json` fetch in index.html fails silently when opened as a file:// — this is expected.
 
