@@ -8,8 +8,21 @@
 </head>
 <body class="journal-page">
 
+<!-- SITE NAV -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="snav-brand">WRXM <span>FC26</span></a>
+    <a href="index.html" class="snav-link">Season Hub</a>
+    <a href="journal.html" class="snav-link active">Journal</a>
+    <a href="roster.html" class="snav-link">Roster</a>
+    <a href="depth_chart.html" class="snav-link">Depth Chart</a>
+    <a href="academy.html" class="snav-link">Academy</a>
+    <a href="dossier.html" class="snav-link">Dossier</a>
+  </div>
+</nav>
+
 <!-- PUBLICATION HEADER -->
-<header class="pub-header">
+<header class="pub-header" style="position:static;">
   <div class="pub-top">
     <span class="pub-flag">Wrexham AFC · FC26 Career Mode</span>
     <span class="pub-season">Season 1 · 2026–27</span>
@@ -18,16 +31,14 @@
     <div class="pub-title">The Hawk's <span>Journey</span></div>
     <div class="pub-subtitle">A Living Journal — Keeyvon Jenkins</div>
   </div>
-  <nav class="pub-nav">
-    <a href="#journal" class="nav-tab journal">The Hawk's Nest</a>
-    <a href="#dispatch" class="nav-tab dispatch">Red Dragon Dispatch</a>
-    <a href="#about" class="nav-tab">About</a>
-    <a href="depth_chart.html" class="nav-tab">Squad Depth Chart</a>
-    <a href="roster.html" class="nav-tab">Roster</a>
-    <a href="academy.html" class="nav-tab">Academy</a>
-    <a href="index.html" class="nav-tab">Season Hub</a>
-  </nav>
 </header>
+
+<!-- FILTER TABS -->
+<div class="journal-filters">
+  <button class="jf-btn active" onclick="filterJournal('all',this)">All Entries</button>
+  <button class="jf-btn gold" onclick="filterJournal('journal',this)">🦅 Hawk's Nest</button>
+  <button class="jf-btn blue" onclick="filterJournal('dispatch',this)">📰 Red Dragon Dispatch</button>
+</div>
 
 <!-- LEGEND -->
 <div class="legend">
@@ -809,6 +820,22 @@
 </footer>
 
 <script>
+// ── Journal entry filter ──
+function filterJournal(type, btn) {
+  document.querySelectorAll('.jf-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.entry.dispatch').forEach(function(el) {
+    el.style.display = (type === 'journal') ? 'none' : '';
+  });
+  document.querySelectorAll('.entry.journal').forEach(function(el) {
+    el.style.display = (type === 'dispatch') ? 'none' : '';
+  });
+  document.querySelectorAll('.entry-divider').forEach(function(el) {
+    el.style.display = (type !== 'all') ? 'none' : '';
+  });
+}
+
+// ── TOC scroll spy ──
 (function() {
   var items = document.querySelectorAll('.toc-item');
   var targets = Array.from(items).map(function(a) {

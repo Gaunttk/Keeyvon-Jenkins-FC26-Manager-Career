@@ -8,68 +8,294 @@
 </head>
 <body>
 
-  <div class="masthead">
-    <span class="masthead-label">Wrexham AFC · Youth Academy</span>
-    <span class="masthead-date">FC26 Career Mode · Season 2026–27</span>
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="snav-brand">WRXM <span>FC26</span></a>
+    <a href="index.html" class="snav-link">Season Hub</a>
+    <a href="journal.html" class="snav-link">Journal</a>
+    <a href="roster.html" class="snav-link">Roster</a>
+    <a href="depth_chart.html" class="snav-link">Depth Chart</a>
+    <a href="academy.html" class="snav-link active">Academy</a>
+    <a href="dossier.html" class="snav-link">Dossier</a>
   </div>
+</nav>
 
-  <div class="hub-header">
-    <div class="hub-eyebrow">The Red Dragons</div>
-    <div class="hub-title">Youth <span>Academy</span></div>
-    <div class="hub-subtitle">Next generation — scouted, signed, developed</div>
+<div class="masthead">
+  <span class="masthead-label">Wrexham AFC · Youth Academy</span>
+  <span class="masthead-date">FC26 Career Mode · Season 2026–27</span>
+</div>
+
+<div class="hub-header">
+  <div class="hub-eyebrow">The Red Dragons</div>
+  <div class="hub-title">Youth <span>Academy</span></div>
+  <div class="hub-subtitle">Next generation — scouted, signed, developed</div>
+</div>
+
+<div class="stats-bar" style="grid-template-columns: repeat(4,1fr);">
+  <div class="stat-cell">
+    <span class="stat-number">6</span>
+    <span class="stat-label">Catalogued</span>
   </div>
+  <div class="stat-cell">
+    <span class="stat-number" style="color:var(--dispatch-blue)">4</span>
+    <span class="stat-label">Intake Pending</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" style="color:var(--gold)">91</span>
+    <span class="stat-label">Top Ceiling</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number">0</span>
+    <span class="stat-label">Promoted</span>
+  </div>
+</div>
 
-  <!-- ─── ACADEMY OVERVIEW BAR ─── -->
-  <div class="stats-bar" style="grid-template-columns: repeat(3,1fr);">
-    <div class="stat-cell">
-      <span class="stat-number" id="player-count">0</span>
-      <span class="stat-label">Players</span>
+<!-- ─── GOALKEEPERS ─── -->
+<div class="depth-section">
+  <div class="depth-pos-header">Goalkeepers</div>
+
+  <div class="youth-card">
+    <div class="youth-top">
+      <div>
+        <div class="youth-name">M. Webber</div>
+        <div class="youth-pos-age">GK · Age 16 · Right · 6'2" / 167 lbs</div>
+      </div>
+      <div class="youth-right">
+        <div class="youth-ovr">58</div>
+        <div class="youth-ovr-label">OVR</div>
+      </div>
     </div>
-    <div class="stat-cell">
-      <span class="stat-number" id="avg-age">—</span>
-      <span class="stat-label">Avg Age</span>
+    <div class="youth-details">
+      <span class="youth-detail"><strong>Potential</strong> 70–94</span>
+      <span class="youth-detail"><strong>Dev Plan</strong> Goalkeeper</span>
+      <span class="youth-detail"><strong>Next OVR</strong> 59 · ETA 9w</span>
+      <span class="youth-detail alert"><strong>Match XP</strong> Poor · Dev Bonus: Medium</span>
     </div>
-    <div class="stat-cell">
-      <span class="stat-number" id="promoted-count">0</span>
-      <span class="stat-label">Promoted</span>
-    </div>
-  </div>
-
-  <!-- ─── ACTIVE ACADEMY PLAYERS ─── -->
-  <div class="depth-section">
-    <div class="depth-pos-header">Current Academy Squad</div>
-    <div id="academy-roster">
-      <div class="empty-state">No academy players on file — add screenshots to populate</div>
+    <div class="youth-details" style="margin-top:6px;">
+      <span class="youth-detail"><strong>Div</strong> 50</span>
+      <span class="youth-detail"><strong>Han</strong> 57</span>
+      <span class="youth-detail"><strong>Kic</strong> 52</span>
+      <span class="youth-detail"><strong>Ref</strong> 66</span>
+      <span class="youth-detail"><strong>Spd</strong> 39</span>
+      <span class="youth-detail"><strong>Pos</strong> 63</span>
     </div>
   </div>
 
-  <!-- ─── PROMOTED PLAYERS ─── -->
-  <div class="depth-section">
-    <div class="depth-pos-header">Promoted to First Team</div>
-    <div id="promoted-roster">
-      <div class="empty-state">No promotions yet this career</div>
+  <div class="youth-card">
+    <div class="youth-top">
+      <div>
+        <div class="youth-name">A. Gassner</div>
+        <div class="youth-pos-age">GK · Age 16 · Left · 6'1" / 180 lbs</div>
+      </div>
+      <div class="youth-right">
+        <div class="youth-ovr">58</div>
+        <div class="youth-ovr-label">OVR</div>
+      </div>
+    </div>
+    <div class="youth-details">
+      <span class="youth-detail"><strong>Potential</strong> 58–78</span>
+      <span class="youth-detail"><strong>Dev Plan</strong> Goalkeeper</span>
+      <span class="youth-detail"><strong>Next OVR</strong> 59 · ETA 16w</span>
+      <span class="youth-detail alert"><strong>Match XP</strong> Poor · Dev Bonus: Medium</span>
+    </div>
+    <div class="youth-details" style="margin-top:6px;">
+      <span class="youth-detail"><strong>Div</strong> 53</span>
+      <span class="youth-detail"><strong>Han</strong> 59</span>
+      <span class="youth-detail"><strong>Kic</strong> 53</span>
+      <span class="youth-detail"><strong>Ref</strong> 58</span>
+      <span class="youth-detail"><strong>Spd</strong> 34</span>
+      <span class="youth-detail"><strong>Pos</strong> 59</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DEFENDERS ─── -->
+<div class="depth-section">
+  <div class="depth-pos-header">Defenders</div>
+
+  <div class="youth-card">
+    <div class="youth-top">
+      <div>
+        <div class="youth-name">J. Lord</div>
+        <div class="youth-pos-age">LB · Age 17 · Left · 5'7" / 152 lbs</div>
+      </div>
+      <div class="youth-right">
+        <div class="youth-ovr">62</div>
+        <div class="youth-ovr-label">OVR</div>
+      </div>
+    </div>
+    <div class="youth-details">
+      <span class="youth-detail"><strong>Potential</strong> 67–91</span>
+      <span class="youth-detail"><strong>Dev Plan</strong> Attacking Wingback</span>
+      <span class="youth-detail"><strong>Next OVR</strong> 63 · ETA 1w</span>
+      <span class="youth-detail alert"><strong>Match XP</strong> Poor · Dev Bonus: Low</span>
+    </div>
+    <div class="youth-details" style="margin-top:6px;">
+      <span class="youth-detail"><strong>PAC</strong> 79</span>
+      <span class="youth-detail"><strong>SHO</strong> 38</span>
+      <span class="youth-detail"><strong>PAS</strong> 48</span>
+      <span class="youth-detail"><strong>DRI</strong> 57</span>
+      <span class="youth-detail"><strong>DEF</strong> 57</span>
+      <span class="youth-detail"><strong>PHY</strong> 61</span>
+    </div>
+    <div class="youth-details" style="margin-top:4px;">
+      <span class="youth-detail" style="font-size:11px; color:var(--muted);">LB: Falseback / Attacking WB / Inverted WB / Fullback+ / Wingback+ · CB: Wide Back+ · LW: Winger / Inside Forward</span>
     </div>
   </div>
 
-  <!-- ─── SCOUTING PIPELINE ─── -->
-  <div class="depth-section">
-    <div class="depth-pos-header">Scouting Pipeline</div>
-    <div id="pipeline">
-      <div class="empty-state">No targets identified</div>
+  <div class="youth-card">
+    <div class="youth-top">
+      <div>
+        <div class="youth-name">O. Horne</div>
+        <div class="youth-pos-age">RB · Age 17 · Right · 5'8" / 145 lbs</div>
+      </div>
+      <div class="youth-right">
+        <div class="youth-ovr">60</div>
+        <div class="youth-ovr-label">OVR</div>
+      </div>
+    </div>
+    <div class="youth-details">
+      <span class="youth-detail"><strong>Potential</strong> 60–75</span>
+      <span class="youth-detail"><strong>Dev Plan</strong> Wingback</span>
+      <span class="youth-detail"><strong>Next OVR</strong> 61 · ETA 14w</span>
+      <span class="youth-detail alert"><strong>Match XP</strong> Poor · Dev Bonus: Low</span>
+    </div>
+    <div class="youth-details" style="margin-top:6px;">
+      <span class="youth-detail"><strong>PAC</strong> 73</span>
+      <span class="youth-detail"><strong>SHO</strong> 38</span>
+      <span class="youth-detail"><strong>PAS</strong> 51</span>
+      <span class="youth-detail"><strong>DRI</strong> 61</span>
+      <span class="youth-detail"><strong>DEF</strong> 55</span>
+      <span class="youth-detail"><strong>PHY</strong> 57</span>
+    </div>
+    <div class="youth-details" style="margin-top:4px;">
+      <span class="youth-detail" style="font-size:11px; color:var(--muted);">RB: Falseback / Attacking WB / Inverted WB / Fullback+ / Wingback++ · CB: Wide Back / Ball-Playing Defender+</span>
     </div>
   </div>
+</div>
 
-  <div class="footer">
-    <span class="footer-brand">Wrexham AFC</span>
-    <span class="footer-note">Youth Academy · FC26 Career</span>
+<!-- ─── MIDFIELDERS ─── -->
+<div class="depth-section">
+  <div class="depth-pos-header">Midfielders</div>
+
+  <div class="youth-card">
+    <div class="youth-top">
+      <div>
+        <div class="youth-name">P. Dijkgraaf</div>
+        <div class="youth-pos-age">CDM · Age 17 · Right · 5'11" / 161 lbs</div>
+      </div>
+      <div class="youth-right">
+        <div class="youth-ovr">60</div>
+        <div class="youth-ovr-label">OVR</div>
+      </div>
+    </div>
+    <div class="youth-details">
+      <span class="youth-detail"><strong>Potential</strong> 62–82</span>
+      <span class="youth-detail"><strong>Dev Plan</strong> Centre-Half</span>
+      <span class="youth-detail"><strong>Next OVR</strong> 61 · ETA 18w</span>
+      <span class="youth-detail alert"><strong>Match XP</strong> Poor · Dev Bonus: Low</span>
+    </div>
+    <div class="youth-details" style="margin-top:6px;">
+      <span class="youth-detail"><strong>PAC</strong> 61</span>
+      <span class="youth-detail"><strong>SHO</strong> 41</span>
+      <span class="youth-detail"><strong>PAS</strong> 54</span>
+      <span class="youth-detail"><strong>DRI</strong> 56</span>
+      <span class="youth-detail"><strong>DEF</strong> 58</span>
+      <span class="youth-detail"><strong>PHY</strong> 66</span>
+    </div>
+    <div class="youth-details" style="margin-top:4px;">
+      <span class="youth-detail" style="font-size:11px; color:var(--muted);">CDM: Box Crasher / Wide Half · CM: Box-to-Box / Holding / Playmaker · CB: Defender / Stopper / Ball-Playing Defender</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FORWARDS ─── -->
+<div class="depth-section">
+  <div class="depth-pos-header">Forwards</div>
+
+  <div class="youth-card">
+    <div class="youth-top">
+      <div>
+        <div class="youth-name">S. Hak</div>
+        <div class="youth-pos-age">RW · Age 15 · Right · 5'8" / 149 lbs · 🇰🇷</div>
+      </div>
+      <div class="youth-right">
+        <div class="youth-ovr">58</div>
+        <div class="youth-ovr-label">OVR</div>
+      </div>
+    </div>
+    <div class="youth-details">
+      <span class="youth-detail"><strong>Potential</strong> 58–69</span>
+      <span class="youth-detail"><strong>Dev Plan</strong> Winger</span>
+      <span class="youth-detail"><strong>Next OVR</strong> 59 · ETA 31w</span>
+      <span class="youth-detail alert"><strong>Match XP</strong> Poor · Dev Bonus: Low</span>
+    </div>
+    <div class="youth-details" style="margin-top:6px;">
+      <span class="youth-detail"><strong>PAC</strong> 75</span>
+      <span class="youth-detail"><strong>SHO</strong> 48</span>
+      <span class="youth-detail"><strong>PAS</strong> 50</span>
+      <span class="youth-detail"><strong>DRI</strong> 59</span>
+      <span class="youth-detail"><strong>DEF</strong> 32</span>
+      <span class="youth-detail"><strong>PHY</strong> 51</span>
+    </div>
+    <div class="youth-details" style="margin-top:4px;">
+      <span class="youth-detail" style="font-size:11px; color:var(--muted);">RW: Winger++ / Wide Playmaker+ / Inside Forward+ · LW: Winger / Inside Forward · SM ★★★★ · WF ★★★</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── AUGUST 2026 INTAKE — PENDING ─── -->
+<div class="depth-section">
+  <div class="depth-pos-header" style="color:var(--dispatch-blue);">August 2026 Intake — Screenshots Needed</div>
+
+  <div class="how-to-use" style="margin:0 0 14px;">
+    <div class="how-to-label">Data pending</div>
+    <div class="how-to-text">Four players signed in August 2026. Push attribute screenshots to populate their cards.</div>
   </div>
 
-  <nav style="padding:14px 20px; border-top:1px solid var(--mid); display:flex; gap:16px; flex-wrap:wrap;">
-    <a href="index.html" class="footer-link">← Hub</a>
-    <a href="dossier.html" class="footer-link">Dossier</a>
-    <a href="depth_chart.html" class="footer-link">Depth Chart</a>
-    <a href="journal.html" class="footer-link">Journal</a>
-  </nav>
+  <div class="youth-card" style="border-left-color:var(--dispatch-blue); opacity:0.7;">
+    <div class="youth-top">
+      <div><div class="youth-name">V. Martini</div><div class="youth-pos-age">CB · Age 16 · 🇮🇹 Italy</div></div>
+      <div class="youth-right"><div class="youth-ovr" style="color:var(--dispatch-blue);">—</div><div class="youth-ovr-label">OVR</div></div>
+    </div>
+    <div class="youth-details"><span class="youth-detail" style="color:var(--dispatch-blue);">Awaiting screenshots</span></div>
+  </div>
+
+  <div class="youth-card" style="border-left-color:var(--dispatch-blue); opacity:0.7;">
+    <div class="youth-top">
+      <div><div class="youth-name">E. Bianchi</div><div class="youth-pos-age">CDM · Age 16 · 🇮🇹 Italy</div></div>
+      <div class="youth-right"><div class="youth-ovr" style="color:var(--dispatch-blue);">—</div><div class="youth-ovr-label">OVR</div></div>
+    </div>
+    <div class="youth-details"><span class="youth-detail" style="color:var(--dispatch-blue);">Awaiting screenshots</span></div>
+  </div>
+
+  <div class="youth-card" style="border-left-color:var(--dispatch-blue); opacity:0.7;">
+    <div class="youth-top">
+      <div><div class="youth-name">J.C. Vargas</div><div class="youth-pos-age">CAM · Age 16 · 🇦🇷 Argentina</div></div>
+      <div class="youth-right"><div class="youth-ovr" style="color:var(--dispatch-blue);">—</div><div class="youth-ovr-label">OVR</div></div>
+    </div>
+    <div class="youth-details"><span class="youth-detail" style="color:var(--dispatch-blue);">Awaiting screenshots</span></div>
+  </div>
+
+  <div class="youth-card" style="border-left-color:var(--dispatch-blue); opacity:0.7;">
+    <div class="youth-top">
+      <div><div class="youth-name">N. Mathews</div><div class="youth-pos-age">RW · Age 15 · 🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</div></div>
+      <div class="youth-right"><div class="youth-ovr" style="color:var(--dispatch-blue);">—</div><div class="youth-ovr-label">OVR</div></div>
+    </div>
+    <div class="youth-details"><span class="youth-detail" style="color:var(--dispatch-blue);">Awaiting screenshots</span></div>
+  </div>
+</div>
+
+<!-- ─── PROMOTED ─── -->
+<div class="depth-section">
+  <div class="depth-pos-header">Promoted to First Team</div>
+  <div class="empty-state">No promotions yet this career</div>
+</div>
+
+<div class="footer">
+  <span class="footer-brand">Youth Academy</span>
+  <span class="footer-note">Wrexham AFC · FC26 Career Mode · Season 2026–27</span>
+</div>
 
 </body>
 </html>
