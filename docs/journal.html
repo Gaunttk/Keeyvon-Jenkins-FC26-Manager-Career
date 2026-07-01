@@ -6,7 +6,7 @@
 <title>The Hawk's Journey — Keeyvon Jenkins</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="journal-page">
 
 <!-- PUBLICATION HEADER -->
 <header class="pub-header">
@@ -41,10 +41,49 @@
   </div>
 </div>
 
+<!-- LAYOUT: main column + sticky TOC sidebar -->
+<div class="journal-layout">
+
+<aside class="journal-toc">
+  <div class="toc-label">All Entries</div>
+  <a href="#entry-006" class="toc-item">
+    <span class="toc-num">Entry 006</span>
+    <span class="toc-title">Carabao Cup R1</span>
+    <span class="toc-date">Aug 12, 2026</span>
+  </a>
+  <a href="#entry-005" class="toc-item">
+    <span class="toc-num">Entry 005</span>
+    <span class="toc-title">4-1 at Southampton</span>
+    <span class="toc-date">Aug 9, 2026</span>
+  </a>
+  <a href="#entry-004" class="toc-item">
+    <span class="toc-num">Entry 004</span>
+    <span class="toc-title">Thirty-Six Names</span>
+    <span class="toc-date">Late July 2026</span>
+  </a>
+  <a href="#entry-003" class="toc-item">
+    <span class="toc-num">Entry 003</span>
+    <span class="toc-title">Moore Lights Up Madrid</span>
+    <span class="toc-date">Jul 22, 2026</span>
+  </a>
+  <a href="#entry-002" class="toc-item">
+    <span class="toc-num">Entry 002</span>
+    <span class="toc-title">The Backroom</span>
+    <span class="toc-date">Early July 2026</span>
+  </a>
+  <a href="#entry-001" class="toc-item">
+    <span class="toc-num">Entry 001</span>
+    <span class="toc-title">The Appointment</span>
+    <span class="toc-date">Jun 30, 2026</span>
+  </a>
+</aside>
+
+<div class="journal-main">
+
 <!-- NEW ENTRIES GO HERE (newest first) -->
 
 <!-- SEASON MARKER — ENTRY 006 -->
-<div class="season-marker">
+<div id="entry-006" class="season-marker">
   <span class="season-marker-text">Carabao Cup Round 1 · August 2026</span>
   <div class="season-marker-line"></div>
   <span class="season-badge">Aug 12, 2026</span>
@@ -169,7 +208,7 @@
 <div class="entry-divider"></div>
 
 <!-- SEASON MARKER — ENTRY 005 -->
-<div class="season-marker">
+<div id="entry-005" class="season-marker">
   <span class="season-marker-text">Matchday 1 · August 2026</span>
   <div class="season-marker-line"></div>
   <span class="season-badge">Aug 9, 2026</span>
@@ -277,7 +316,7 @@
 <div class="entry-divider"></div>
 
 <!-- SEASON MARKER — ENTRY 004 -->
-<div class="season-marker">
+<div id="entry-004" class="season-marker">
   <span class="season-marker-text">Pre-Season · Squad Ready</span>
   <div class="season-marker-line"></div>
   <span class="season-badge">Late July 2026</span>
@@ -395,7 +434,7 @@
 <div class="entry-divider"></div>
 
 <!-- SEASON MARKER — ENTRY 003 -->
-<div class="season-marker">
+<div id="entry-003" class="season-marker">
   <span class="season-marker-text">Pre-Season · July 2026</span>
   <div class="season-marker-line"></div>
   <span class="season-badge">Jul 1 – Jul 22, 2026</span>
@@ -513,7 +552,7 @@
 <div class="entry-divider"></div>
 
 <!-- SEASON MARKER — ENTRY 002 -->
-<div class="season-marker">
+<div id="entry-002" class="season-marker">
   <span class="season-marker-text">Pre-Season · Staff Assembly</span>
   <div class="season-marker-line"></div>
   <span class="season-badge">Early July 2026</span>
@@ -627,7 +666,7 @@
 <div class="entry-divider"></div>
 
 <!-- SEASON MARKER — ENTRY 001 -->
-<div class="season-marker">
+<div id="entry-001" class="season-marker">
   <span class="season-marker-text">Pre-Season · Appointment</span>
   <div class="season-marker-line"></div>
   <span class="season-badge">June 2026</span>
@@ -755,17 +794,45 @@
   </div>
 </div>
 
+</div><!-- /journal-main -->
+</div><!-- /journal-layout -->
+
 <!-- FOOTER -->
 <footer class="pub-footer">
   <div class="footer-title">The Hawk's Journey</div>
   <div class="footer-note">Keeyvon Jenkins · Wrexham AFC · FC26 Career Mode</div>
-  <div class="footer-update">Last updated: Matchday 1 · Aug 9, 2026 · Entry 005</div>
+  <div class="footer-update">Last updated: Carabao Cup R1 · Aug 12, 2026 · Entry 006</div>
   <div class="footer-links">
-    <a href="#journal" class="footer-link">Journal</a>
-    <a href="#dispatch" class="footer-link">Dispatch</a>
+    <a href="#entry-006" class="footer-link">Latest</a>
     <a href="#about" class="footer-link">About</a>
   </div>
 </footer>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('.toc-item');
+  var targets = Array.from(items).map(function(a) {
+    return document.querySelector(a.getAttribute('href'));
+  });
+
+  function setActive(idx) {
+    items.forEach(function(el) { el.classList.remove('active'); });
+    if (idx >= 0 && items[idx]) items[idx].classList.add('active');
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var idx = targets.indexOf(entry.target);
+        if (idx !== -1) setActive(idx);
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px', threshold: 0 });
+
+  targets.forEach(function(t) { if (t) observer.observe(t); });
+  setActive(0);
+})();
+</script>
 
 </body>
 </html>
