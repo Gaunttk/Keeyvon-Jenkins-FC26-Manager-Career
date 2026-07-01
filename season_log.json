@@ -8,6 +8,7 @@
     "last_updated": "2026-07-22"
   },
   "matches": [
+    { "date": "2025-08-12", "opponent": "Preston North End", "home": false, "score": "0-2", "result": "W", "competition": "Carabao Cup", "round": "Round 1", "notes": "Keillor-Dunn 19', Windass 35'. MoM: Kaboré 7.4 (1A, 16 interceptions). Clean sheet. xG 3.6–0.6.", "journal_entry": true },
     { "date": "2026-07-01", "opponent": "Hull City", "home": false, "score": "2-1", "result": "W", "competition": "Youth Academy Rush Tournament", "round": "Quarter-Final", "notes": "Lord (2). MoM: Gassner GK. Neutral venue.", "journal_entry": true },
     { "date": "2026-07-18", "opponent": "Bradford City", "home": false, "score": "4-0", "result": "W", "competition": "European International Cup", "round": "Group Stage", "notes": "Broadhead (2), Cadamarteri, Moore. Neutral venue.", "journal_entry": true },
     { "date": "2026-07-19", "opponent": "Millwall", "home": false, "score": "3-2 AET", "result": "W", "competition": "Youth Academy Rush Tournament", "round": "Semi-Final", "notes": "Lord (2), Horne. Won in extra time. Neutral venue.", "journal_entry": true },
