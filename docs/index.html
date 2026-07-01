@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<!-- SITE NAV -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="snav-brand">WRXM <span>FC26</span></a>
+    <a href="index.html" class="snav-link active">Season Hub</a>
+    <a href="journal.html" class="snav-link">Journal</a>
+    <a href="roster.html" class="snav-link">Roster</a>
+    <a href="depth_chart.html" class="snav-link">Depth Chart</a>
+    <a href="academy.html" class="snav-link">Academy</a>
+    <a href="dossier.html" class="snav-link">Dossier</a>
+  </div>
+</nav>
+
 <!-- MASTHEAD -->
 <div class="masthead">
   <span class="masthead-label">Wrexham AFC · FC26 Career</span>
@@ -91,13 +104,12 @@
 </div>
 
 <script>
-// Load season_log.json if available (works when served via local server or GitHub Pages)
-// Falls back gracefully if file is not found or fetch is blocked
-async function loadSeasonLog() {
+// Season log data — inlined so page works as a local file (no fetch needed)
+const SEASON_DATA = {"_meta":{"club":"Wrexham AFC","manager":"Keeyvon Jenkins","game":"FC26 Career Mode","season":"2026-27","competition":"EFL Championship","last_updated":"2026-08-12"},"matches":[{"date":"2026-07-01","opponent":"Hull City","home":false,"score":"2-1","result":"W","competition":"Youth Academy Rush Tournament","round":"Quarter-Final","notes":"Lord (2). MoM: Gassner GK. Neutral venue.","journal_entry":true},{"date":"2026-07-18","opponent":"Bradford City","home":false,"score":"4-0","result":"W","competition":"European International Cup","round":"Group Stage","notes":"Broadhead (2), Cadamarteri, Moore. Neutral venue.","journal_entry":true},{"date":"2026-07-19","opponent":"Millwall","home":false,"score":"3-2 AET","result":"W","competition":"Youth Academy Rush Tournament","round":"Semi-Final","notes":"Lord (2), Horne. Won in extra time. Neutral venue.","journal_entry":true},{"date":"2026-07-22","opponent":"AD Ceuta FC","home":false,"score":"5-0","result":"W","competition":"European International Cup","round":"Group Stage","notes":"Keillor-Dunn (2), Moore (1G/3A MoM), Cadamarteri, O'Brien. Played in Madrid.","journal_entry":true},{"date":"2026-08-09","opponent":"Southampton","home":false,"score":"4-1","result":"W","competition":"EFL Championship","matchday":1,"journal_entry":true},{"date":"2026-08-12","opponent":"Preston North End","home":false,"score":"0-2","result":"W","competition":"Carabao Cup","round":"Round 1","notes":"Keillor-Dunn 19', Windass 35'. MoM: Kabore 7.4 (1A, 16 interceptions). Clean sheet. xG 3.6-0.6.","journal_entry":true}],"transfers":[{"date":"2026-08-05","player":"R. Barnett","direction":"out","club":"Watford","fee":"£1.3m","wage":""}],"injuries":[],"milestones":[{"date":"2026-07-30","description":"Pre-season complete. Squad of 36 senior players catalogued. Eight loan players returned to parent clubs. Youth Academy formalised with 6 players. Board mandate: automatic promotion to Premier League."},{"date":"2026-08-05","description":"D. Ward transfer listed (£925k). D. Scarr transfer listed (£975k). A. James loan listed."},{"date":"2026-08-09","description":"D. Keillor-Dunn MoM vs Southampton (2G/1A). N. Broadhead 3 assists. Youth Academy intake: V. Martini (CB, Italy, 16), E. Bianchi (CDM, Italy, 16), J.C. Vargas (CAM, Argentina, 16), N. Mathews (RW, England, 15)."}]};
+
+function loadSeasonLog() {
   try {
-    const res = await fetch('../season_log.json');
-    if (!res.ok) return;
-    const data = await res.json();
+    const data = SEASON_DATA;
 
     const matches = (data.matches || []);
     const W = matches.filter(m => m.result === 'W').length;
@@ -153,9 +165,7 @@ async function loadSeasonLog() {
       `;
       container.appendChild(row);
     });
-  } catch (e) {
-    // Silent fail — static open works without fetch
-  }
+  } catch (e) { /* silent fail */ }
 }
 
 loadSeasonLog();
