@@ -1696,9 +1696,9 @@ body {
 
 .roster-header {
   display: grid;
-  grid-template-columns: 36px 1fr 24px 34px repeat(6, 26px) 74px;
-  gap: 3px;
-  padding: 7px 12px 6px;
+  grid-template-columns: 40px 1fr 28px 38px repeat(6, 32px) 90px;
+  gap: 4px;
+  padding: 8px 16px 7px;
   background: var(--mid);
   border-bottom: 1px solid var(--steel);
   position: sticky;
@@ -1707,9 +1707,9 @@ body {
 }
 .r-col {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--muted);
   text-align: center;
@@ -1718,9 +1718,9 @@ body {
 
 .roster-row {
   display: grid;
-  grid-template-columns: 36px 1fr 24px 34px repeat(6, 26px) 74px;
-  gap: 3px;
-  padding: 7px 12px;
+  grid-template-columns: 40px 1fr 28px 38px repeat(6, 32px) 90px;
+  gap: 4px;
+  padding: 8px 16px;
   border-bottom: 1px solid var(--mid);
   align-items: center;
   transition: background 0.1s;
@@ -1730,7 +1730,7 @@ body {
 
 .r-pos {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -1740,26 +1740,26 @@ body {
 .r-player-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--white);
   line-height: 1;
 }
 .r-player-sub {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
-  margin-top: 1px;
+  margin-top: 2px;
 }
 .r-age {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   text-align: center;
 }
 .r-ovr {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
   line-height: 1;
 }
@@ -1769,22 +1769,22 @@ body {
 
 .r-stat {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   text-align: center;
   color: var(--light);
 }
 .r-dev {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
-  letter-spacing: 0.3px;
+  font-size: 11px;
+  letter-spacing: 0.2px;
   color: var(--muted);
   text-align: right;
   line-height: 1.4;
 }
 .r-dev strong {
   color: var(--dispatch-blue);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0;
   display: block;
 }
@@ -1794,12 +1794,12 @@ body {
 
 .roster-pos-header {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--red);
-  padding: 10px 12px 6px;
+  padding: 12px 16px 7px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1823,13 +1823,13 @@ body {
 
 .roster-pot {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
+  font-size: 11px;
   color: rgba(212,168,67,0.6);
   text-align: right;
   line-height: 1.4;
 }
 .roster-pot strong {
   color: var(--gold);
-  font-size: 10px;
+  font-size: 12px;
   display: block;
 }
