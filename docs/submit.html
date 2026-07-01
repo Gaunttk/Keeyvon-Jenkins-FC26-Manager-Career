@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session Submit · Wrexham AFC FC26</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .form-wrap { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; }
+    .form-section { padding: 20px 0; border-bottom: 1px solid var(--mid); }
+    .form-section:last-of-type { border-bottom: none; }
+    .form-section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .form-section-label::after { content:''; flex:1; height:1px; background:var(--mid); }
+    .form-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; flex: 1; min-width: 160px; }
+    .form-group.full { flex: 100%; min-width: 100%; }
+    label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--muted);
+    }
+    input, select, textarea {
+      background: var(--charcoal); border: 1px solid var(--steel);
+      color: var(--white); font-family: 'Barlow', sans-serif;
+      font-size: 14px; padding: 9px 12px; outline: none;
+      transition: border-color 0.15s; width: 100%;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--red); }
+    select option { background: var(--charcoal); }
+    textarea { resize: vertical; min-height: 70px; line-height: 1.5; }
+    .score-row { display: flex; align-items: center; gap: 10px; }
+    .score-vs { font-family:'Barlow Condensed',sans-serif; font-size:20px; font-weight:800; color:var(--muted); }
+    .score-input { width: 60px !important; text-align: center; font-size: 22px !important; font-family:'Barlow Condensed',sans-serif; font-weight:800; }
+    .result-pill {
+      display: inline-block; font-family:'Barlow Condensed',sans-serif;
+      font-size: 13px; font-weight: 800; letter-spacing: 2px;
+      text-transform: uppercase; padding: 6px 14px;
+    }
+    .result-W { background: rgba(212,168,67,0.15); color: var(--gold); border: 1px solid rgba(212,168,67,0.4); }
+    .result-D { background: var(--mid); color: var(--muted); border: 1px solid var(--steel); }
+    .result-L { background: rgba(200,16,46,0.15); color: var(--red); border: 1px solid rgba(200,16,46,0.4); }
+    .sub-row { display: flex; gap: 8px; align-items: flex-end; margin-bottom: 8px; }
+    .sub-row input, .sub-row select { flex: 1; }
+    .btn-add {
+      background: none; border: 1px dashed var(--steel); color: var(--muted);
+      font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700;
+      letter-spacing:2px; text-transform:uppercase; padding:8px 16px;
+      cursor:pointer; width:100%; transition:all 0.15s; margin-top:4px;
+    }
+    .btn-add:hover { border-color:var(--red); color:var(--red); }
+    .btn-remove {
+      background: none; border: none; color: var(--steel);
+      font-size: 18px; cursor: pointer; padding: 0 6px; flex-shrink:0;
+      transition:color 0.15s; line-height:1;
+    }
+    .btn-remove:hover { color: var(--red); }
+    .generate-btn {
+      background: var(--red); border: none; color: white;
+      font-family:'Barlow Condensed',sans-serif; font-size:14px;
+      font-weight:800; letter-spacing:2px; text-transform:uppercase;
+      padding: 14px 32px; cursor: pointer; width:100%;
+      transition: background 0.15s; margin-top: 8px;
+    }
+    .generate-btn:hover { background: var(--red-dark); }
+    .output-block { margin-top: 24px; }
+    .output-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 8px;
+    }
+    .output-label {
+      font-family:'Barlow Condensed',sans-serif; font-size:11px;
+      font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--muted);
+    }
+    .copy-btn {
+      background: var(--charcoal); border: 1px solid var(--steel);
+      color: var(--muted); font-family:'Barlow Condensed',sans-serif;
+      font-size:10px; font-weight:700; letter-spacing:1.5px;
+      text-transform:uppercase; padding:5px 12px; cursor:pointer;
+      transition:all 0.15s;
+    }
+    .copy-btn:hover { border-color:var(--gold); color:var(--gold); }
+    .copy-btn.copied { border-color:#4CAF50; color:#4CAF50; }
+    pre {
+      background: var(--off-black); border: 1px solid var(--mid);
+      padding: 14px 16px; font-size: 12px; color: var(--light);
+      overflow-x: auto; white-space: pre-wrap; word-break: break-word;
+      font-family: 'Courier New', monospace; line-height: 1.6;
+    }
+    .checkbox-group { display: flex; flex-wrap:wrap; gap: 10px; }
+    .checkbox-label {
+      display: flex; align-items: center; gap: 6px;
+      font-family:'Barlow Condensed',sans-serif; font-size:12px;
+      font-weight:600; letter-spacing:1px; text-transform:uppercase;
+      color:var(--light); cursor:pointer;
+    }
+    input[type=checkbox] { width:auto; cursor:pointer; }
+    .radio-group { display:flex; gap:10px; flex-wrap:wrap; }
+    .radio-label {
+      display:flex; align-items:center; gap:6px;
+      font-family:'Barlow Condensed',sans-serif; font-size:12px;
+      font-weight:600; letter-spacing:1px; text-transform:uppercase;
+      color:var(--light); cursor:pointer;
+      padding:8px 14px; border:1px solid var(--steel); background:var(--charcoal);
+      transition:all 0.15s;
+    }
+    .radio-label:has(input:checked) { border-color:var(--red); color:white; background:rgba(200,16,46,0.15); }
+    input[type=radio] { display:none; }
+    @media(max-width:500px) { .form-group { min-width:100%; } }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="snav-brand">WRXM <span>FC26</span></a>
+    <a href="index.html" class="snav-link">Season Hub</a>
+    <a href="journal.html" class="snav-link">Journal</a>
+    <a href="roster.html" class="snav-link">Roster</a>
+    <a href="depth_chart.html" class="snav-link">Depth Chart</a>
+    <a href="academy.html" class="snav-link">Academy</a>
+    <a href="dossier.html" class="snav-link">Dossier</a>
+  </div>
+</nav>
+
+<div class="masthead">
+  <span class="masthead-label">Session Submit</span>
+  <span class="masthead-date">Fill in → Copy → Paste to Claude</span>
+</div>
+
+<div class="form-wrap">
+
+  <!-- ─── MATCH ─── -->
+  <div class="form-section">
+    <div class="form-section-label">Match Details</div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date">
+      </div>
+      <div class="form-group">
+        <label for="competition">Competition</label>
+        <select id="competition">
+          <option value="EFL Championship">EFL Championship</option>
+          <option value="Carabao Cup">Carabao Cup</option>
+          <option value="FA Cup">FA Cup</option>
+          <option value="Play-Offs">Play-Offs</option>
+          <option value="Pre-Season Friendly">Pre-Season Friendly</option>
+          <option value="European International Cup">European International Cup</option>
+          <option value="Youth Academy Rush Tournament">Youth Academy Rush Tournament</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group" id="matchday-group">
+        <label for="matchday">Matchday #</label>
+        <input type="number" id="matchday" min="1" max="46" placeholder="e.g. 2">
+      </div>
+      <div class="form-group" id="round-group" style="display:none;">
+        <label for="round">Round</label>
+        <input type="text" id="round" placeholder="e.g. Round 2">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="opponent">Opponent</label>
+        <input type="text" id="opponent" placeholder="e.g. Burnley">
+      </div>
+      <div class="form-group">
+        <label>Home or Away</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="venue" value="home" checked> Home</label>
+          <label class="radio-label"><input type="radio" name="venue" value="away"> Away</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Score (Their Goals : Our Goals)</label>
+        <div class="score-row">
+          <div id="opponent-name-score" style="font-family:'Barlow Condensed',sans-serif; font-size:13px; color:var(--muted); min-width:80px;">Opponent</div>
+          <input type="number" id="score-them" class="score-input" value="0" min="0">
+          <span class="score-vs">:</span>
+          <input type="number" id="score-us" class="score-input" value="0" min="0">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; color:var(--muted);">Wrexham</div>
+          <div id="result-pill" class="result-pill result-D">D</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group full">
+        <label for="scorers">Goalscorers (comma separated)</label>
+        <input type="text" id="scorers" placeholder="e.g. Keillor-Dunn 19', Windass 35'">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="motm">Man of the Match</label>
+        <input type="text" id="motm" placeholder="e.g. Kaboré">
+      </div>
+      <div class="form-group">
+        <label for="vibe">Vibe</label>
+        <select id="vibe">
+          <option value="">— select —</option>
+          <option value="comfortable">comfortable</option>
+          <option value="scraped it">scraped it</option>
+          <option value="dominant but no goal">dominant but no goal</option>
+          <option value="a mess">a mess</option>
+          <option value="got hammered">got hammered</option>
+          <option value="backs against the wall">backs against the wall</option>
+          <option value="controlled from start to finish">controlled from start to finish</option>
+          <option value="backs against the wall, held on">backs against the wall, held on</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group full">
+        <label for="notes">Additional Notes (MoM details, red cards, late drama, etc.)</label>
+        <textarea id="notes" placeholder="e.g. Kaboré 16 interceptions. Clean sheet. xG 3.6–0.6."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SCREENSHOTS ─── -->
+  <div class="form-section">
+    <div class="form-section-label">Screenshots Pushed</div>
+    <div class="checkbox-group">
+      <label class="checkbox-label"><input type="checkbox" id="ss-table"> League Table</label>
+      <label class="checkbox-label"><input type="checkbox" id="ss-morale"> Squad Morale</label>
+      <label class="checkbox-label"><input type="checkbox" id="ss-board"> Board / Objectives</label>
+      <label class="checkbox-label"><input type="checkbox" id="ss-stats" checked> Match Stats</label>
+      <label class="checkbox-label"><input type="checkbox" id="ss-ratings"> Player Ratings</label>
+      <label class="checkbox-label"><input type="checkbox" id="ss-goal"> Goal Replay</label>
+      <label class="checkbox-label"><input type="checkbox" id="ss-transfers"> Transfer Screen</label>
+    </div>
+  </div>
+
+  <!-- ─── TRANSFERS ─── -->
+  <div class="form-section">
+    <div class="form-section-label">Transfers (optional)</div>
+    <div id="transfers-list"></div>
+    <button class="btn-add" onclick="addTransfer()">+ Add Transfer</button>
+  </div>
+
+  <!-- ─── INJURIES ─── -->
+  <div class="form-section">
+    <div class="form-section-label">Injuries (optional)</div>
+    <div id="injuries-list"></div>
+    <button class="btn-add" onclick="addInjury()">+ Add Injury</button>
+  </div>
+
+  <!-- ─── GENERATE ─── -->
+  <div class="form-section">
+    <button class="generate-btn" onclick="generate()">⚡ Generate Session Template + Log Entry</button>
+  </div>
+
+  <!-- ─── OUTPUTS ─── -->
+  <div class="output-block" id="output-block" style="display:none;">
+
+    <div style="margin-bottom:24px;">
+      <div class="output-header">
+        <span class="output-label">Session Template — Paste to Claude</span>
+        <button class="copy-btn" id="copy-template" onclick="copyTo('template-out','copy-template')">Copy</button>
+      </div>
+      <pre id="template-out"></pre>
+    </div>
+
+    <div style="margin-bottom:24px;">
+      <div class="output-header">
+        <span class="output-label">season_log.json Entry — Paste to Claude</span>
+        <button class="copy-btn" id="copy-log" onclick="copyTo('log-out','copy-log')">Copy</button>
+      </div>
+      <pre id="log-out"></pre>
+    </div>
+
+    <div>
+      <div class="output-header">
+        <span class="output-label">Suggested Git Commit Message</span>
+        <button class="copy-btn" id="copy-commit" onclick="copyTo('commit-out','copy-commit')">Copy</button>
+      </div>
+      <pre id="commit-out"></pre>
+    </div>
+
+  </div>
+
+</div><!-- /form-wrap -->
+
+<script>
+// ── Live score → result pill ──
+function updateResult() {
+  var them = parseInt(document.getElementById('score-them').value) || 0;
+  var us   = parseInt(document.getElementById('score-us').value)   || 0;
+  var pill = document.getElementById('result-pill');
+  if (us > them)      { pill.textContent = 'W'; pill.className = 'result-pill result-W'; }
+  else if (us < them) { pill.textContent = 'L'; pill.className = 'result-pill result-L'; }
+  else                { pill.textContent = 'D'; pill.className = 'result-pill result-D'; }
+}
+document.getElementById('score-them').addEventListener('input', updateResult);
+document.getElementById('score-us').addEventListener('input', updateResult);
+
+// ── Opponent name in score row ──
+document.getElementById('opponent').addEventListener('input', function() {
+  document.getElementById('opponent-name-score').textContent = this.value || 'Opponent';
+});
+
+// ── Competition → show matchday or round ──
+document.getElementById('competition').addEventListener('change', function() {
+  var isLeague = this.value === 'EFL Championship';
+  document.getElementById('matchday-group').style.display = isLeague ? '' : 'none';
+  document.getElementById('round-group').style.display    = isLeague ? 'none' : '';
+});
+
+// ── Transfers ──
+var transferCount = 0;
+function addTransfer() {
+  var id = ++transferCount;
+  var div = document.createElement('div');
+  div.className = 'sub-row';
+  div.id = 'transfer-' + id;
+  div.innerHTML = `
+    <input type="text" placeholder="Player name" id="t-player-${id}">
+    <select id="t-dir-${id}"><option value="in">Signed IN</option><option value="out">Sold OUT</option></select>
+    <input type="text" placeholder="Club" id="t-club-${id}">
+    <input type="text" placeholder="Fee (e.g. £2.5m)" id="t-fee-${id}" style="max-width:110px;">
+    <button class="btn-remove" onclick="document.getElementById('transfer-${id}').remove()">×</button>
+  `;
+  document.getElementById('transfers-list').appendChild(div);
+}
+
+// ── Injuries ──
+var injuryCount = 0;
+function addInjury() {
+  var id = ++injuryCount;
+  var div = document.createElement('div');
+  div.className = 'sub-row';
+  div.id = 'injury-' + id;
+  div.innerHTML = `
+    <input type="text" placeholder="Player name" id="i-player-${id}">
+    <input type="text" placeholder="Description (e.g. Hamstring, 3 weeks)" id="i-desc-${id}">
+    <button class="btn-remove" onclick="document.getElementById('injury-${id}').remove()">×</button>
+  `;
+  document.getElementById('injuries-list').appendChild(div);
+}
+
+// ── Generate ──
+function generate() {
+  var date        = document.getElementById('date').value;
+  var competition = document.getElementById('competition').value;
+  var opponent    = document.getElementById('opponent').value || 'Unknown';
+  var venue       = document.querySelector('input[name="venue"]:checked').value;
+  var scoreThem   = parseInt(document.getElementById('score-them').value) || 0;
+  var scoreUs     = parseInt(document.getElementById('score-us').value)   || 0;
+  var scorers     = document.getElementById('scorers').value;
+  var motm        = document.getElementById('motm').value;
+  var vibe        = document.getElementById('vibe').value;
+  var notes       = document.getElementById('notes').value;
+  var matchday    = document.getElementById('matchday').value;
+  var round       = document.getElementById('round').value;
+
+  var result = scoreUs > scoreThem ? 'W' : scoreUs < scoreThem ? 'L' : 'D';
+  var scoreStr = scoreThem + '-' + scoreUs;
+  var dateDisp = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {month:'numeric',day:'numeric',year:'2-digit'}) : '—';
+
+  // Screenshots
+  var ssChecked = [];
+  if (document.getElementById('ss-table').checked)     ssChecked.push('League table / standings');
+  if (document.getElementById('ss-morale').checked)    ssChecked.push('Squad morale / manager confidence');
+  if (document.getElementById('ss-board').checked)     ssChecked.push('Board pressure / objective status');
+  if (document.getElementById('ss-stats').checked)     ssChecked.push('Match stats');
+  if (document.getElementById('ss-ratings').checked)   ssChecked.push('Player ratings');
+  if (document.getElementById('ss-goal').checked)      ssChecked.push('Goal replay screenshot');
+  if (document.getElementById('ss-transfers').checked) ssChecked.push('Transfer screen');
+  var ssLines = ssChecked.map(function(s) { return '- [x] ' + s; }).join('\n');
+
+  // Transfers
+  var transferLines = '';
+  var transferJSON = [];
+  document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
+    var id = row.id.replace('transfer-','');
+    var player = (document.getElementById('t-player-'+id)||{}).value || '';
+    var dir    = (document.getElementById('t-dir-'+id)||{}).value || 'in';
+    var club   = (document.getElementById('t-club-'+id)||{}).value || '';
+    var fee    = (document.getElementById('t-fee-'+id)||{}).value || '';
+    if (player) {
+      transferLines += '\n- ' + player + ' (' + (dir==='in'?'IN from':'OUT to') + ' ' + club + (fee?' · '+fee:'') + ')';
+      transferJSON.push('  { "date": "' + date + '", "player": "' + player + '", "direction": "' + dir + '", "club": "' + club + '", "fee": "' + fee + '", "wage": "" }');
+    }
+  });
+
+  // Injuries
+  var injuryLines = '';
+  var injuryJSON = [];
+  document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
+    var id = row.id.replace('injury-','');
+    var player = (document.getElementById('i-player-'+id)||{}).value || '';
+    var desc   = (document.getElementById('i-desc-'+id)||{}).value  || '';
+    if (player) {
+      injuryLines += '\n- ' + player + ': ' + desc;
+      injuryJSON.push('  { "date": "' + date + '", "player": "' + player + '", "description": "' + desc + '" }');
+    }
+  });
+
+  // ── Session Template ──
+  var compExtra = '';
+  if (competition === 'EFL Championship' && matchday) compExtra = '\n**Matchday:** ' + matchday;
+  else if (round) compExtra = '\n**Round:** ' + round;
+
+  var template = `# Session Input Template
+## Wrexham AFC · FC26 Career Mode
+
+---
+
+**DATE:** ${dateDisp}
+**MATCHDAY / EVENT:** Match
+
+---
+
+### Match Result
+- **Opponent:** ${opponent}
+- **Home or Away:** ${venue.charAt(0).toUpperCase()+venue.slice(1)}
+- **Score:** ${scoreThem}-${scoreUs}
+- **Scorer(s):** ${scorers || '—'}
+- **Competition:** ${competition}${compExtra}
+
+### Vibe
+${vibe || '—'}
+
+### Screenshots Pushed
+${ssLines || '(none checked)'}
+
+### Transfers / Injuries / Notes
+${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}${injuryLines || ''}
+
+---`;
+
+  // ── Log Entry ──
+  var logNotesParts = [];
+  if (scorers) logNotesParts.push(scorers);
+  if (motm)    logNotesParts.push('MoM: ' + motm);
+  if (notes)   logNotesParts.push(notes);
+  var logNotes = logNotesParts.join('. ');
+
+  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreThem + '-' + scoreUs + '", "result": "' + result + '", "competition": "' + competition + '"' + (matchday ? ', "matchday": ' + matchday : '') + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
+
+  var logEntry = '// Add to season_log.json → "matches" array:\n' + matchEntry;
+  if (transferJSON.length) logEntry += '\n\n// Add to "transfers" array:\n' + transferJSON.join(',\n');
+  if (injuryJSON.length)   logEntry += '\n\n// Add to "injuries" array:\n' + injuryJSON.join(',\n');
+
+  // ── Commit message ──
+  var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
+  var commitMsg = (competition === 'EFL Championship' ? 'Entry ' + (matchday ? 'MD' + matchday : '???') : competition.split(' ').slice(-1)[0] + ' entry') + ': ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreThem + '-' + scoreUs + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
+
+  document.getElementById('template-out').textContent = template;
+  document.getElementById('log-out').textContent = logEntry;
+  document.getElementById('commit-out').textContent = commitMsg;
+  document.getElementById('output-block').style.display = 'block';
+  document.getElementById('output-block').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ── Copy to clipboard ──
+function copyTo(preId, btnId) {
+  var text = document.getElementById(preId).textContent;
+  navigator.clipboard.writeText(text).then(function() {
+    var btn = document.getElementById(btnId);
+    var orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() { btn.textContent = orig; btn.classList.remove('copied'); }, 1800);
+  });
+}
+
+// ── Set today's date as default ──
+(function() {
+  var d = new Date();
+  var yyyy = d.getFullYear();
+  var mm   = String(d.getMonth()+1).padStart(2,'0');
+  var dd   = String(d.getDate()).padStart(2,'0');
+  document.getElementById('date').value = yyyy+'-'+mm+'-'+dd;
+})();
+</script>
+
+</body>
+</html>
