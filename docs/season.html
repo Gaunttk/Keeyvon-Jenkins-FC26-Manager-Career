@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Season Stats · Wrexham AFC</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* ── Season Stats Page ── */
+    .record-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 2px solid var(--steel);
+    }
+    .record-cell {
+      padding: 18px 12px;
+      text-align: center;
+      border-right: 1px solid var(--steel);
+    }
+    .record-cell:last-child { border-right: none; }
+    .record-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .record-num.green { color: #4CAF50; }
+    .record-num.red   { color: var(--red); }
+    .record-num.gold  { color: var(--gold); }
+    .record-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .comp-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--steel);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .comp-tab {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      color: var(--muted);
+      border: none;
+      background: none;
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+    }
+    .comp-tab.active { color: var(--white); border-bottom-color: var(--red); }
+
+    .comp-record {
+      display: flex;
+      gap: 20px;
+      padding: 10px 16px;
+      background: var(--charcoal);
+      border-bottom: 1px solid var(--steel);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+    .comp-record span { color: var(--white); font-weight: 700; }
+    .comp-record strong { color: var(--gold); }
+
+    /* ── Match Log Table ── */
+    .match-log-header, .match-log-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 60px 120px 80px 1fr 1fr;
+      gap: 4px;
+      padding: 8px 16px;
+      align-items: center;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    .match-log-header {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--mid);
+      border-bottom: 1px solid var(--steel);
+      position: sticky;
+      top: 48px;
+      z-index: 5;
+    }
+    .match-log-row {
+      font-size: 13px;
+      border-bottom: 1px solid var(--mid);
+      transition: background 0.1s;
+    }
+    .match-log-row:hover { background: var(--charcoal); }
+    .match-log-row.preseason { opacity: 0.55; }
+    .ml-date { font-size: 11px; color: var(--muted); }
+    .ml-opponent { font-weight: 700; color: var(--white); }
+    .ml-ha {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .ml-comp { font-size: 11px; color: var(--muted); }
+    .ml-result {
+      font-weight: 800;
+      font-size: 15px;
+      text-align: center;
+    }
+    .ml-result.w { color: #4CAF50; }
+    .ml-result.d { color: var(--gold); }
+    .ml-result.l { color: var(--red); }
+    .ml-score { font-weight: 700; font-size: 14px; color: var(--white); }
+    .ml-mom { font-size: 12px; color: var(--dispatch-blue); }
+    .ml-goals { font-size: 11px; color: var(--muted); }
+    .ml-goals strong { color: var(--light); font-weight: 600; }
+
+    .section-divider {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 12px 16px 6px;
+      border-top: 2px solid var(--mid);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--mid);
+    }
+
+    /* ── Player Stats Table ── */
+    .stats-header, .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 50px 36px 36px 36px 50px 60px;
+      gap: 4px;
+      padding: 8px 16px;
+      align-items: center;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    .stats-header {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--mid);
+      border-bottom: 1px solid var(--steel);
+      position: sticky;
+      top: 48px;
+      z-index: 5;
+    }
+    .stats-row {
+      font-size: 13px;
+      border-bottom: 1px solid var(--mid);
+      transition: background 0.1s;
+    }
+    .stats-row:hover { background: var(--charcoal); }
+    .s-name { font-weight: 700; color: var(--white); font-size: 14px; }
+    .s-pos {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .s-num { text-align: center; color: var(--light); font-size: 13px; }
+    .s-num.highlight { color: var(--gold); font-weight: 800; }
+    .s-rating { text-align: center; font-weight: 700; font-size: 13px; color: var(--dispatch-blue); }
+    .s-mins { text-align: right; font-size: 12px; color: var(--muted); }
+    .data-note {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 10px 16px;
+      border-top: 1px solid var(--mid);
+      font-style: italic;
+    }
+    .data-note strong { color: var(--dispatch-blue); font-style: normal; }
+
+    @media (max-width: 700px) {
+      .match-log-header, .match-log-row {
+        grid-template-columns: 70px 1fr 40px 70px;
+      }
+      .match-log-header > *:nth-child(n+5),
+      .match-log-row > *:nth-child(n+5) { display: none; }
+      .stats-header, .stats-row {
+        grid-template-columns: 1fr 36px 36px 36px 50px;
+      }
+      .stats-header > *:nth-child(n+6),
+      .stats-row > *:nth-child(n+6) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="snav-brand">WRXM <span>FC26</span></a>
+    <a href="index.html" class="snav-link">Season Hub</a>
+    <a href="journal.html" class="snav-link">Journal</a>
+    <a href="season.html" class="snav-link active">Season Stats</a>
+    <a href="roster.html" class="snav-link">Roster</a>
+    <a href="depth_chart.html" class="snav-link">Depth Chart</a>
+    <a href="academy.html" class="snav-link">Academy</a>
+    <a href="dossier.html" class="snav-link">Dossier</a>
+    <a href="submit.html" class="snav-link" style="margin-left:auto; color:var(--gold);">⚡ Submit</a>
+  </div>
+</nav>
+
+<div class="masthead">
+  <span class="masthead-label">Wrexham AFC · Season Stats</span>
+  <span class="masthead-date">FC26 Career Mode · 2026–27</span>
+</div>
+
+<div class="hub-header">
+  <div class="hub-eyebrow">Keeyvon Jenkins Era</div>
+  <div class="hub-title">Season <span>Record</span></div>
+  <div class="hub-subtitle">All competitions · Updated after each session</div>
+</div>
+
+<!-- ── OVERALL TALLY ── -->
+<div class="record-bar">
+  <div class="record-cell">
+    <div class="record-num green">6</div>
+    <div class="record-label">Wins</div>
+  </div>
+  <div class="record-cell">
+    <div class="record-num" style="color:var(--muted)">0</div>
+    <div class="record-label">Draws</div>
+  </div>
+  <div class="record-cell">
+    <div class="record-num red">0</div>
+    <div class="record-label">Losses</div>
+  </div>
+  <div class="record-cell">
+    <div class="record-num gold">9</div>
+    <div class="record-label">Championship Pts</div>
+  </div>
+</div>
+
+<!-- ── COMPETITION BREAKDOWN ── -->
+<div class="comp-record">
+  <div>EFL Championship &nbsp;<strong>P3 W3 D0 L0 · 9 pts</strong> &nbsp;GF9 GA3 GD+6</div>
+  <div>Carabao Cup &nbsp;<span>1W 0L</span></div>
+  <div>Pre-Season (EIC) &nbsp;<span>2W 0L</span></div>
+  <div>Youth Tournament &nbsp;<span>2W 0L</span></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MATCH LOG
+══════════════════════════════════════════ -->
+<div class="section-divider">Match Log</div>
+
+<div class="match-log-header">
+  <span>Date</span>
+  <span>Opponent</span>
+  <span>H/A</span>
+  <span>Competition</span>
+  <span style="text-align:center">Result</span>
+  <span>Man of the Match</span>
+  <span>Goals</span>
+</div>
+
+<!-- EFL Championship -->
+<div class="match-log-row">
+  <span class="ml-date">Aug 9, 2026</span>
+  <div><div class="ml-opponent">Southampton</div><div class="ml-comp">EFL Championship · MD1</div></div>
+  <span class="ml-ha">Away</span>
+  <span></span>
+  <span class="ml-result w">W 4–1</span>
+  <span class="ml-mom">D. Keillor-Dunn</span>
+  <span class="ml-goals"><strong>Keillor-Dunn</strong> ×2 · <strong>Broadhead</strong> (3A) · 2 other</span>
+</div>
+
+<div class="match-log-row">
+  <span class="ml-date">MD2</span>
+  <div><div class="ml-opponent">—</div><div class="ml-comp">EFL Championship · MD2</div></div>
+  <span class="ml-ha">—</span>
+  <span></span>
+  <span class="ml-result" style="color:var(--muted); font-size:12px;">Pending</span>
+  <span class="ml-mom" style="color:var(--muted)">—</span>
+  <span class="ml-goals" style="color:var(--muted)">—</span>
+</div>
+
+<!-- Carabao Cup -->
+<div class="match-log-row">
+  <span class="ml-date">Aug 12, 2026</span>
+  <div><div class="ml-opponent">Preston North End</div><div class="ml-comp">Carabao Cup · R1</div></div>
+  <span class="ml-ha">Away</span>
+  <span></span>
+  <span class="ml-result w">W 2–0</span>
+  <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">7.4</span></span>
+  <span class="ml-goals"><strong>Keillor-Dunn</strong> 19' · <strong>Windass</strong> 35'</span>
+</div>
+
+<!-- Pre-season divider -->
+<div class="section-divider" style="color:var(--muted); font-size:9px;">Pre-Season & Youth Fixtures</div>
+
+<div class="match-log-row preseason">
+  <span class="ml-date">Jul 22, 2026</span>
+  <div><div class="ml-opponent">AD Ceuta FC</div><div class="ml-comp">EIC Group Stage</div></div>
+  <span class="ml-ha">N</span>
+  <span></span>
+  <span class="ml-result w">W 5–0</span>
+  <span class="ml-mom">K. Moore</span>
+  <span class="ml-goals"><strong>Keillor-Dunn</strong> ×2 · <strong>Moore</strong> · <strong>Cadamarteri</strong> · <strong>O'Brien</strong></span>
+</div>
+
+<div class="match-log-row preseason">
+  <span class="ml-date">Jul 19, 2026</span>
+  <div><div class="ml-opponent">Millwall</div><div class="ml-comp">Youth Academy Rush Tournament · SF</div></div>
+  <span class="ml-ha">N</span>
+  <span></span>
+  <span class="ml-result w">W 3–2 AET</span>
+  <span class="ml-mom">—</span>
+  <span class="ml-goals"><strong>Lord</strong> ×2 · <strong>Horne</strong></span>
+</div>
+
+<div class="match-log-row preseason">
+  <span class="ml-date">Jul 18, 2026</span>
+  <div><div class="ml-opponent">Bradford City</div><div class="ml-comp">EIC Group Stage</div></div>
+  <span class="ml-ha">N</span>
+  <span></span>
+  <span class="ml-result w">W 4–0</span>
+  <span class="ml-mom">—</span>
+  <span class="ml-goals"><strong>Broadhead</strong> ×2 · <strong>Cadamarteri</strong> · <strong>Moore</strong></span>
+</div>
+
+<div class="match-log-row preseason">
+  <span class="ml-date">Jul 1, 2026</span>
+  <div><div class="ml-opponent">Hull City</div><div class="ml-comp">Youth Academy Rush Tournament · QF</div></div>
+  <span class="ml-ha">N</span>
+  <span></span>
+  <span class="ml-result w">W 2–1</span>
+  <span class="ml-mom">A. Gassner <span style="font-size:10px; color:var(--muted)">(GK)</span></span>
+  <span class="ml-goals"><strong>Lord</strong> ×2</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PLAYER SEASON STATS
+══════════════════════════════════════════ -->
+<div class="section-divider" style="margin-top:8px;">Player Season Stats — Senior Matches</div>
+
+<div class="stats-header">
+  <span>Player</span>
+  <span style="text-align:center">Apps</span>
+  <span style="text-align:center">G</span>
+  <span style="text-align:center">A</span>
+  <span style="text-align:center">Mins</span>
+  <span style="text-align:center">Avg RR</span>
+  <span style="text-align:right">Source</span>
+</div>
+
+<!-- From confirmed screenshots + notes (EFL MD1 + Carabao R1) -->
+<div class="stats-row">
+  <div><div class="s-name">D. Keillor-Dunn</div><div class="s-pos">RW · CAM</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-mins">~180</span>
+  <span class="s-rating">—</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">2 matches</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">N. Broadhead</div><div class="s-pos">LW · LM</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-mins">~159</span>
+  <span class="s-rating">7.3</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">I. Kaboré</div><div class="s-pos">RB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">1</span>
+  <span class="s-mins">90</span>
+  <span class="s-rating">7.4</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">J. Windass</div><div class="s-pos">CAM · CM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">83</span>
+  <span class="s-rating">7.1</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">B. Cadamarteri</div><div class="s-pos">ST</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">1</span>
+  <span class="s-mins">90</span>
+  <span class="s-rating">7.2</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. O'Brien</div><div class="s-pos">CM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">90</span>
+  <span class="s-rating">7.2</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">B. Sheaf</div><div class="s-pos">CDM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">85</span>
+  <span class="s-rating">7.2</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. Cacace</div><div class="s-pos">LB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">90</span>
+  <span class="s-rating">7.1</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">O. Rathbone</div><div class="s-pos">CM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">7</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. Brunt</div><div class="s-pos">CB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">90</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Cleworth</div><div class="s-pos">CB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">90</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">A. Okonkwo</div><div class="s-pos">GK</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">90</span>
+  <span class="s-rating">6.2</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">R. Longman</div><div class="s-pos">RW · RB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">21</span>
+  <span class="s-rating">6.3</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">G. Dobson</div><div class="s-pos">CM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-mins">5</span>
+  <span class="s-rating">6.2</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Preston ✓</span>
+</div>
+
+<!-- Southampton players not yet extracted -->
+<div class="stats-row" style="opacity:0.5">
+  <div><div class="s-name">D. Ward · A. Okonkwo · All MD1 players</div><div class="s-pos">EFL MD1 · Southampton</div></div>
+  <span class="s-num">—</span>
+  <span class="s-num">—</span>
+  <span class="s-num">—</span>
+  <span class="s-mins">—</span>
+  <span class="s-rating">—</span>
+  <span class="s-mins" style="color:var(--muted)">Screenshots needed</span>
+</div>
+
+<div class="data-note">
+  Stats extracted from in-game screenshots only. <strong>Preston (Aug 12)</strong> fully confirmed.
+  <strong>Southampton (Aug 9)</strong> partial — Keillor-Dunn 2G/1A, Broadhead 3A confirmed from session notes; full player ratings pending screenshots.
+  Push player performance screenshots to populate remaining rows.
+</div>
+
+<div class="footer">
+  <span class="footer-brand">Season Stats</span>
+  <span class="footer-note">Wrexham AFC · FC26 Career Mode · 2026–27</span>
+</div>
+
+</body>
+</html>
