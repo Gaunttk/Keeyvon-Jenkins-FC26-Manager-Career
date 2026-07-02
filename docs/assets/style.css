@@ -1586,14 +1586,14 @@ body {
 .journal-layout {
   display: flex;
   align-items: flex-start;
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto;
   position: relative;
 }
 .journal-main {
   flex: 1;
   min-width: 0;
-  max-width: 720px;
+  max-width: 680px;
 }
 .journal-toc {
   width: 210px;
