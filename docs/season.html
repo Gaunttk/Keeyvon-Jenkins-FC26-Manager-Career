@@ -194,6 +194,11 @@
     }
     .data-note strong { color: var(--dispatch-blue); font-style: normal; }
 
+    .stats-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
     @media (max-width: 700px) {
       .match-log-header, .match-log-row {
         grid-template-columns: 70px 1fr 40px 70px;
@@ -237,6 +242,7 @@ if ('serviceWorker' in navigator) {
   </div>
 </nav>
 
+<div class="stats-wrap">
 <div class="masthead">
   <span class="masthead-label">Wrexham AFC · Season Stats</span>
   <span class="masthead-date">FC26 Career Mode · 2026–27</span>
@@ -251,11 +257,11 @@ if ('serviceWorker' in navigator) {
 <!-- ── OVERALL TALLY ── -->
 <div class="record-bar">
   <div class="record-cell">
-    <div class="record-num green">6</div>
+    <div class="record-num green">7</div>
     <div class="record-label">Wins</div>
   </div>
   <div class="record-cell">
-    <div class="record-num" style="color:var(--muted)">0</div>
+    <div class="record-num gold">1</div>
     <div class="record-label">Draws</div>
   </div>
   <div class="record-cell">
@@ -263,14 +269,14 @@ if ('serviceWorker' in navigator) {
     <div class="record-label">Losses</div>
   </div>
   <div class="record-cell">
-    <div class="record-num gold">9</div>
+    <div class="record-num gold">7</div>
     <div class="record-label">Championship Pts</div>
   </div>
 </div>
 
 <!-- ── COMPETITION BREAKDOWN ── -->
 <div class="comp-record">
-  <div>EFL Championship &nbsp;<strong>P3 W3 D0 L0 · 9 pts</strong> &nbsp;GF9 GA3 GD+6</div>
+  <div>EFL Championship &nbsp;<strong>P3 W2 D1 L0 · 7 pts</strong> &nbsp;GF8 GA3 GD+5</div>
   <div>Carabao Cup &nbsp;<span>1W 0L</span></div>
   <div>Pre-Season (EIC) &nbsp;<span>2W 0L</span></div>
   <div>Youth Tournament &nbsp;<span>2W 0L</span></div>
@@ -293,6 +299,26 @@ if ('serviceWorker' in navigator) {
 
 <!-- EFL Championship -->
 <div class="match-log-row">
+  <span class="ml-date">Aug 20, 2026</span>
+  <div><div class="ml-opponent">Sheffield Wed</div><div class="ml-comp">EFL Championship · MD3</div></div>
+  <span class="ml-ha">Home</span>
+  <span></span>
+  <span class="ml-result d">D 1–1</span>
+  <span class="ml-mom" style="color:var(--muted)">B. Sheaf (WED)</span>
+  <span class="ml-goals"><strong>Keillor-Dunn</strong></span>
+</div>
+
+<div class="match-log-row">
+  <span class="ml-date">Aug 13, 2026</span>
+  <div><div class="ml-opponent">West Brom</div><div class="ml-comp">EFL Championship · MD2</div></div>
+  <span class="ml-ha">Home</span>
+  <span></span>
+  <span class="ml-result w">W 3–1</span>
+  <span class="ml-mom" style="color:var(--muted)">C. Styles (WBA)</span>
+  <span class="ml-goals"><strong>Moore</strong> · <strong>Broadhead</strong> ×2</span>
+</div>
+
+<div class="match-log-row">
   <span class="ml-date">Aug 9, 2026</span>
   <div><div class="ml-opponent">Southampton</div><div class="ml-comp">EFL Championship · MD1</div></div>
   <span class="ml-ha">Away</span>
@@ -300,16 +326,6 @@ if ('serviceWorker' in navigator) {
   <span class="ml-result w">W 4–1</span>
   <span class="ml-mom">N. Broadhead <span style="font-size:10px; color:var(--muted)">7.8 ★</span></span>
   <span class="ml-goals"><strong>Keillor-Dunn</strong> 9'/44' · <strong>Moore</strong> 25'/62' · Larin (SOU) 49'</span>
-</div>
-
-<div class="match-log-row">
-  <span class="ml-date">MD2</span>
-  <div><div class="ml-opponent">—</div><div class="ml-comp">EFL Championship · MD2</div></div>
-  <span class="ml-ha">—</span>
-  <span></span>
-  <span class="ml-result" style="color:var(--muted); font-size:12px;">Pending</span>
-  <span class="ml-mom" style="color:var(--muted)">—</span>
-  <span class="ml-goals" style="color:var(--muted)">—</span>
 </div>
 
 <!-- Carabao Cup -->
@@ -381,35 +397,35 @@ if ('serviceWorker' in navigator) {
   <span style="text-align:right">Source</span>
 </div>
 
-<!-- MD1 Southampton + Carabao R1 Preston — all confirmed from screenshots -->
+<!-- MD1–MD3 + Carabao R1 — goals confirmed; MD2/MD3 ratings/minutes pending screenshots -->
 <div class="stats-row">
   <div><div class="s-name">D. Keillor-Dunn</div><div class="s-pos">RW · CAM</div></div>
-  <span class="s-num">2</span>
-  <span class="s-num highlight">3</span>
+  <span class="s-num">3+</span>
+  <span class="s-num highlight">4</span>
   <span class="s-num highlight">1</span>
-  <span class="s-mins">~170</span>
+  <span class="s-mins">—</span>
   <span class="s-rating">8.4</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Both ✓</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1/CC ✓</span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">K. Moore</div><div class="s-pos">ST</div></div>
-  <span class="s-num">1</span>
-  <span class="s-num highlight">2</span>
+  <span class="s-num">2+</span>
+  <span class="s-num highlight">3</span>
   <span class="s-num">0</span>
-  <span class="s-mins">90</span>
+  <span class="s-mins">—</span>
   <span class="s-rating">8.2</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1 ✓</span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">N. Broadhead</div><div class="s-pos">LW</div></div>
-  <span class="s-num">2</span>
-  <span class="s-num">0</span>
+  <span class="s-num">3+</span>
+  <span class="s-num highlight">2</span>
   <span class="s-num highlight">3</span>
-  <span class="s-mins">180</span>
+  <span class="s-mins">—</span>
   <span class="s-rating">7.6</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Both ✓</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1/CC ✓</span>
 </div>
 
 <div class="stats-row">
@@ -553,14 +569,14 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <div class="data-note">
-  All stats confirmed from in-game screenshots. <strong>Avg RR</strong> = mean match rating across appearances.
-  MD1 = EFL Championship Matchday 1 vs Southampton (Aug 9). CC R1 = Carabao Cup Round 1 vs Preston (Aug 12).
+  Goals confirmed from session input for all matches. <strong>Apps/Mins/Avg RR</strong> confirmed only where screenshots provided (MD1 + CC R1). MD2 (West Brom) and MD3 (Sheffield Wed) detailed stats pending screenshots — shown as <strong>3+</strong> etc.
 </div>
 
 <div class="footer">
   <span class="footer-brand">Season Stats</span>
   <span class="footer-note">Wrexham AFC · FC26 Career Mode · 2026–27</span>
 </div>
+</div><!-- /stats-wrap -->
 
 </body>
 </html>
