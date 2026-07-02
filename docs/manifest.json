@@ -1,0 +1,42 @@
+{
+  "name": "Wrexham AFC — FC26 Career",
+  "short_name": "WRXM FC26",
+  "description": "Keeyvon Jenkins · Wrexham AFC · EFL Championship 2026–27",
+  "start_url": "/Keeyvon-Jenkins-FC26-Manager-Career/",
+  "scope": "/Keeyvon-Jenkins-FC26-Manager-Career/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#080808",
+  "theme_color": "#C8102E",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Journal",
+      "url": "/Keeyvon-Jenkins-FC26-Manager-Career/journal.html",
+      "description": "The Hawk's Journey"
+    },
+    {
+      "name": "Roster",
+      "url": "/Keeyvon-Jenkins-FC26-Manager-Career/roster.html",
+      "description": "First-team squad"
+    },
+    {
+      "name": "Academy",
+      "url": "/Keeyvon-Jenkins-FC26-Manager-Career/academy.html",
+      "description": "Youth Academy"
+    }
+  ]
+}
