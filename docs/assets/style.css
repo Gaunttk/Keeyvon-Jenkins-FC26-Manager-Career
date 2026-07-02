@@ -81,7 +81,7 @@ body {
 
 /* ─── PAGE WRAP (centered content) ─── */
 .page-wrap {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -1586,7 +1586,7 @@ body {
 .journal-layout {
   display: flex;
   align-items: flex-start;
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
 }
@@ -1832,4 +1832,191 @@ body {
   color: var(--gold);
   font-size: 12px;
   display: block;
+}
+
+/* ─── ALL-COMP + LEAGUE STATS BAR (Season Hub) ─── */
+.all-comp-bar {
+  background: var(--off-black);
+  border-bottom: 1px solid var(--mid);
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.all-comp-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.all-comp-played {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--light);
+}
+.all-comp-played span { color: var(--white); font-size: 16px; }
+.league-bar-label {
+  background: rgba(200,16,46,0.08);
+  border-bottom: 1px solid rgba(200,16,46,0.2);
+  padding: 5px 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+/* ─── SQUAD CARDS (Roster page redesign) ─── */
+.squad-group { border-bottom: 2px solid var(--mid); }
+.squad-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 8px;
+  border-bottom: 1px solid var(--mid);
+  background: var(--off-black);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.squad-group-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.sort-bar { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.sort-bar-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-right: 4px;
+}
+.sort-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  background: var(--mid);
+  color: var(--muted);
+  border: 1px solid var(--steel);
+  cursor: pointer;
+  transition: color 0.1s, background 0.1s;
+}
+.sort-btn:hover { color: var(--white); background: var(--steel); }
+.sort-btn.active { color: var(--white); background: var(--steel); border-color: var(--light); }
+.sort-btn.active.gk  { border-color: var(--gold); color: var(--gold); }
+.sort-btn.active.def { border-color: #4A90C4; color: #4A90C4; }
+.sort-btn.active.mid { border-color: #5BAD72; color: #5BAD72; }
+.sort-btn.active.atk { border-color: var(--red); color: var(--red); }
+
+.squad-cards-list { padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+.squad-card {
+  background: var(--charcoal);
+  border-left: 3px solid var(--steel);
+  padding: 11px 13px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.squad-card.faded { opacity: 0.55; }
+.squad-card.gk  { border-left-color: var(--gold); }
+.squad-card.def { border-left-color: #4A90C4; }
+.squad-card.mid { border-left-color: #5BAD72; }
+.squad-card.atk { border-left-color: var(--red); }
+
+.squad-pos-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.squad-pos-badge.gk  { background: rgba(212,168,67,0.15); color: var(--gold); }
+.squad-pos-badge.def { background: rgba(74,144,196,0.15); color: #4A90C4; }
+.squad-pos-badge.mid { background: rgba(91,173,114,0.15); color: #5BAD72; }
+.squad-pos-badge.atk { background: rgba(200,16,46,0.15); color: #E04060; }
+
+.squad-card-body { flex: 1; min-width: 0; }
+.squad-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.squad-meta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.squad-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+.sq-stat {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+}
+.sq-stat strong { color: var(--light); font-size: 12px; }
+.sq-stat.hi strong { color: var(--white); }
+.squad-alt-pos {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+  font-style: italic;
+}
+.squad-card-right {
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 44px;
+}
+.squad-ovr {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--muted);
+}
+.squad-ovr.elite { color: var(--gold); }
+.squad-ovr.good  { color: var(--white); }
+.squad-ovr-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.squad-dev {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+  text-align: right;
+}
+.squad-dev.dec  { color: var(--red); }
+.squad-dev.loan { color: var(--steel); font-style: italic; }
+.squad-dev.cru  { color: var(--gold); }
+
+@media (max-width: 600px) {
+  .squad-card { flex-wrap: wrap; }
+  .squad-card-right { margin-left: auto; }
 }
