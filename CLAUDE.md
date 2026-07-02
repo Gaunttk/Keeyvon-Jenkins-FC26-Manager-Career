@@ -209,14 +209,11 @@ The more context provided, the richer the narrative. Fiction is never added — 
 
 1. **User pushes screenshots to git from phone** — no Claude needed for this step
 2. **User opens a Claude session** — reads images, updates CSV and/or generates journal entries
-3. **Claude commits and pushes** to the session branch
-4. **At the end of every session, Claude must remind the user to pull** with the exact command:
-   ```
-   git pull origin <branch-name>
-   ```
-5. **User pulls to PC** and opens HTML files locally in browser — no server needed
+3. **Claude commits and pushes** to the session branch — GitHub Pages auto-deploys within ~1–2 minutes, no pull needed
 
-GitHub Pages (when enabled on `docs/`) provides a shareable public URL. Do not rely on Pages being active — all HTML must work as local files too. The `season_log.json` fetch in index.html fails silently when opened as a file:// — this is expected.
+GitHub Pages is configured to serve from the `claude/wrexham-fc26-career-dx9xgx` branch, `/docs` folder. Every push updates the live site automatically.
+
+All HTML must also work as local `file://` files (no server needed). The `season_log.json` fetch in index.html fails silently when opened as `file://` — this is expected; the inline `SEASON_DATA` block in index.html handles offline use.
 
 ---
 
