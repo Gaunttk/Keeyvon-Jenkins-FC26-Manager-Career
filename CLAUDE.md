@@ -240,6 +240,23 @@ GitHub Pages (when enabled on `docs/`) provides a shareable public URL. Do not r
 
 ---
 
+### Squad Changes — Keep All Pages in Sync
+
+Whenever a signing or departure is confirmed (screenshot or explicit user input), update **all** of the following in the same session, not just `wrexham_squad.csv`:
+
+- `wrexham_squad.csv` — add/remove the row
+- `docs/roster.html` — add/remove the player card (check for dual-position players who may appear in two position sections, e.g. a RB/RM listed under both Right Backs and Wide Attack)
+- `docs/depth_chart.html` — add/remove the player row in every position section they appear in; re-check any `gap-text` analysis notes that reference the player (e.g. "fallback option" language naming a player who has since left)
+- `season_log.json` — add a `transfers` entry and a `milestones` entry
+- `docs/season.html` — update Match Log / Player Stats table if the player has appeared in a match
+- `docs/index.html` — the `SEASON_DATA` block is a hardcoded inline copy of `season_log.json` for offline use, not a live fetch. Re-sync it (`json.dumps(data, separators=(',',':'))`) whenever `season_log.json` changes, or it silently goes stale.
+
+A departed player should not be removed from `wrexham_squad.csv` until their transfer is actually confirmed (season_log `transfers` entry exists) — being merely transfer-listed is not a departure.
+
+**Missing scouting data:** when adding a new signing, only fill in CSV columns actually confirmed by a screenshot (Status/Stats/Attributes tabs). Leave everything else blank rather than estimating or inferring from comparable players. Call out explicitly, in both the CSV `Notes` column and in the session summary to the user, which attribute groups are still missing (e.g. "Technical/Mental/Physical attributes pending — need the Attributes tab screenshots") so the user knows what to send next.
+
+---
+
 ### Season Log Schema
 
 Add entries to `season_log.json` after each game session:
@@ -269,3 +286,4 @@ Add entries to `season_log.json` after each game session:
 - Always commit on the designated branch
 - CSV must always have exactly 53 fields per row — run a gap check after any bulk edit
 - Height values like `6'1"` are stored with CSV quoting — always use the Python csv module, never manual string writes
+- Every confirmed signing or departure must be reflected across all squad-facing pages in the same session — see "Squad Changes — Keep All Pages in Sync" above. Do not update `wrexham_squad.csv` alone and leave `roster.html`/`depth_chart.html` stale.
