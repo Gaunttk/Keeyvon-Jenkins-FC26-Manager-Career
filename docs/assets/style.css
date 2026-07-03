@@ -823,6 +823,14 @@ body {
 .pub-title-row {
   padding: 14px 20px 12px;
   border-bottom: 1px solid var(--mid);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.pub-crest {
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
 }
 .pub-title {
   font-family: 'Playfair Display', serif;
