@@ -72,10 +72,19 @@ if ('serviceWorker' in navigator) {
 <!--  SENIOR SQUAD                              -->
 <!-- ═══════════════════════════════════════════ -->
 
+<nav class="anchor-nav" style="display:flex;gap:10px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--mid);font-size:0.78rem;font-family:'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase;">
+  <span style="color:var(--gold);font-weight:700;">Jump to:</span>
+  <a href="#sec-gk" class="footer-link">Goalkeepers</a>
+  <a href="#sec-def" class="footer-link">Defenders</a>
+  <a href="#sec-mid" class="footer-link">Midfielders</a>
+  <a href="#sec-atk" class="footer-link">Attackers</a>
+  <a href="#sec-academy" class="footer-link" style="color:var(--gold)">Youth Academy ↓</a>
+</nav>
+
 <div class="section-label" style="padding: 14px 12px 6px; margin:0;">Senior Squad</div>
 
 <!-- ── GOALKEEPERS ── -->
-<div class="squad-group" data-type="gk">
+<div id="sec-gk" class="squad-group" data-type="gk">
   <div class="squad-group-header">
     <span class="squad-group-title">Goalkeepers</span>
     <div class="sort-bar">
@@ -137,7 +146,7 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <!-- ── DEFENDERS ── -->
-<div class="squad-group" data-type="def">
+<div id="sec-def" class="squad-group" data-type="def">
   <div class="squad-group-header">
     <span class="squad-group-title">Defenders</span>
     <div class="sort-bar">
@@ -428,7 +437,7 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <!-- ── MIDFIELDERS ── -->
-<div class="squad-group" data-type="mid">
+<div id="sec-mid" class="squad-group" data-type="mid">
   <div class="squad-group-header">
     <span class="squad-group-title">Midfielders</span>
     <div class="sort-bar">
@@ -654,7 +663,7 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <!-- ── ATTACKERS ── -->
-<div class="squad-group" data-type="atk">
+<div id="sec-atk" class="squad-group" data-type="atk">
   <div class="squad-group-header">
     <span class="squad-group-title">Attackers</span>
     <div class="sort-bar">
@@ -710,6 +719,28 @@ if ('serviceWorker' in navigator) {
       <div class="squad-card-right">
         <div class="squad-ovr elite">72</div>
         <div class="squad-ovr-label">OVR</div>
+      </div>
+    </div>
+
+    <div class="squad-card atk" data-ovr="0" data-age="0" data-pac="0" data-sho="0" data-pas="0" data-dri="0" data-def="0" data-phy="0">
+      <div class="squad-card-body">
+        <span class="squad-pos-badge atk">ST</span>
+        <div class="squad-name">JL. Rodriguez</div>
+        <div class="squad-meta">Rotation · Free transfer Aug 2025 · Attrs pending</div>
+        <div class="squad-stats">
+          <span class="sq-stat">PAC <strong>—</strong></span>
+          <span class="sq-stat">SHO <strong>—</strong></span>
+          <span class="sq-stat">PAS <strong>—</strong></span>
+          <span class="sq-stat">DRI <strong>—</strong></span>
+          <span class="sq-stat">DEF <strong>—</strong></span>
+          <span class="sq-stat">PHY <strong>—</strong></span>
+        </div>
+        <div class="squad-alt-pos">New signing — attributes pending screenshots</div>
+      </div>
+      <div class="squad-card-right">
+        <div class="squad-ovr">—</div>
+        <div class="squad-ovr-label">OVR</div>
+        <div class="squad-dev dyn">Dynamic</div>
       </div>
     </div>
 
@@ -844,7 +875,7 @@ if ('serviceWorker' in navigator) {
 <!--  YOUTH ACADEMY                             -->
 <!-- ═══════════════════════════════════════════ -->
 
-<div class="section-label" style="padding: 14px 12px 6px; margin:0; color: var(--gold); border-bottom:none;">Youth Academy</div>
+<div id="sec-academy" class="section-label" style="padding: 14px 12px 6px; margin:0; color: var(--gold); border-bottom:none;">Youth Academy</div>
 
 <div class="depth-section">
   <div class="depth-pos-header">Goalkeepers</div>
