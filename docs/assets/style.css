@@ -662,19 +662,6 @@ body {
   border-bottom: 3px solid var(--red);
   position: relative;
 }
-.hub-header::before {
-  content: 'WRXM';
-  position: absolute;
-  right: -20px;
-  top: -10px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 90px;
-  color: rgba(200,16,46,0.05);
-  letter-spacing: -2px;
-  line-height: 1;
-  pointer-events: none;
-}
 .hub-eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px;
@@ -698,8 +685,9 @@ body {
 .hub-crest {
   position: absolute;
   right: 24px;
-  bottom: 24px;
-  height: 72px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 166px;
   width: auto;
   opacity: 0.88;
   pointer-events: none;
@@ -831,6 +819,7 @@ body {
 .pub-title-row {
   padding: 14px 20px 12px;
   border-bottom: 1px solid var(--mid);
+  position: relative;
 }
 .pub-subtitle-line {
   display: flex;
@@ -839,10 +828,14 @@ body {
   margin-top: 4px;
 }
 .pub-crest {
-  height: 18px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
   width: auto;
-  flex-shrink: 0;
   opacity: 0.85;
+  pointer-events: none;
 }
 .pub-title {
   font-family: 'Playfair Display', serif;
