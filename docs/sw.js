@@ -1,4 +1,4 @@
-const CACHE = 'wrxm-fc26-v5';
+const CACHE = 'wrxm-fc26-v6';
 
 const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/',
@@ -27,12 +27,12 @@ self.addEventListener('activate', e => {
   );
 });
 
-// Network-first for HTML (always get fresh content); cache-first for assets
+// Network-first for HTML and CSS (always fresh); cache-first for images/fonts
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET') return;
 
-  if (url.pathname.endsWith('.html') || url.pathname.endsWith('/')) {
+  if (url.pathname.endsWith('.html') || url.pathname.endsWith('/') || url.pathname.endsWith('.css')) {
     e.respondWith(
       fetch(e.request)
         .then(res => { caches.open(CACHE).then(c => c.put(e.request, res.clone())); return res; })
