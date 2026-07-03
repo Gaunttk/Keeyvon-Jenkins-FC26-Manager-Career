@@ -1874,34 +1874,35 @@ body {
 .league-bar-label {
   background: rgba(200,16,46,0.08);
   border-bottom: 1px solid rgba(200,16,46,0.2);
-  padding: 5px 20px;
+  padding: 10px 20px;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--red);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 .cup-bar-label {
   background: rgba(74,144,196,0.08);
   border-bottom: 1px solid rgba(74,144,196,0.2);
-  padding: 5px 20px;
+  padding: 10px 20px;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #4A90C4;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 .comp-logo {
-  height: 20px;
+  height: 36px;
   width: auto;
+  object-fit: contain;
   opacity: 0.9;
   flex-shrink: 0;
 }
