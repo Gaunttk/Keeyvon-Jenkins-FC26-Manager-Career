@@ -820,8 +820,6 @@ body {
   padding: 14px 20px 12px;
   border-bottom: 1px solid var(--mid);
   position: relative;
-  max-width: 960px;
-  margin: 0 auto;
 }
 .pub-subtitle-line {
   display: flex;
@@ -939,7 +937,7 @@ body {
   background: var(--dispatch-blue);
 }
 .entry-header {
-  padding: 20px 20px 0 24px;
+  padding: 20px 0 0 24px;
 }
 .entry.dispatch .entry-header { padding-left: 24px; }
 
@@ -1000,7 +998,7 @@ body {
 
 /* ─── ENTRY BODY (journal page) ─── */
 .entry-body {
-  padding: 0 20px 24px 24px;
+  padding: 0 0 24px 24px;
 }
 .entry-body p {
   font-size: 15px;
@@ -1557,8 +1555,6 @@ body {
   padding: 0 0 0 0;
   background: var(--charcoal);
   border-bottom: 1px solid var(--mid);
-  max-width: 960px;
-  margin: 0 auto;
 }
 .jf-btn {
   font-family: 'Barlow Condensed', sans-serif;
@@ -1603,8 +1599,6 @@ body {
 .journal-layout {
   display: flex;
   align-items: flex-start;
-  max-width: 960px;
-  margin: 0 auto;
   position: relative;
 }
 .journal-main {
@@ -1688,8 +1682,6 @@ body {
   padding: 10px 20px;
   background: var(--charcoal);
   border-bottom: 1px solid var(--mid);
-  max-width: 960px;
-  margin: 0 auto;
 }
 .legend-item {
   display: flex;
