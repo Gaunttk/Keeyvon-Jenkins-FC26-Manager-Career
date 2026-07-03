@@ -1,4 +1,4 @@
-const CACHE = 'wrxm-fc26-v4';
+const CACHE = 'wrxm-fc26-v5';
 
 const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/',
