@@ -779,11 +779,13 @@ body {
   padding: 2px 7px;
   white-space: nowrap;
 }
-.log-tag.win     { background: rgba(212,168,67,0.15); color: var(--gold); border: 1px solid rgba(212,168,67,0.3); }
-.log-tag.loss    { background: rgba(200,16,46,0.15);  color: var(--red);  border: 1px solid rgba(200,16,46,0.3); }
-.log-tag.draw    { background: var(--mid); color: var(--muted); border: 1px solid var(--steel); }
-.log-tag.signing { background: rgba(200,16,46,0.12); color: var(--light); border: 1px solid var(--steel); }
-.log-tag.injury  { background: rgba(200,16,46,0.2);  color: #ff6b6b; border: 1px solid rgba(200,16,46,0.4); }
+.log-tag.win     { background: rgba(91,173,114,0.15);  color: #5BAD72; border: 1px solid rgba(91,173,114,0.3); }
+.log-tag.loss    { background: rgba(200,16,46,0.15);   color: var(--red); border: 1px solid rgba(200,16,46,0.3); }
+.log-tag.draw    { background: rgba(212,168,67,0.15);  color: var(--gold); border: 1px solid rgba(212,168,67,0.3); }
+.log-tag.note    { background: rgba(120,120,120,0.12); color: var(--muted); border: 1px solid var(--steel); }
+.log-tag.signing { background: rgba(74,144,196,0.15);  color: #4A90C4; border: 1px solid rgba(74,144,196,0.3); }
+.log-tag.sold    { background: rgba(232,124,75,0.15);  color: #E87C4B; border: 1px solid rgba(232,124,75,0.3); }
+.log-tag.injury  { background: rgba(200,16,46,0.2);    color: #ff6b6b; border: 1px solid rgba(200,16,46,0.4); }
 
 /* ─── PUBLICATION HEADER (journal page) ─── */
 .pub-header {
@@ -817,7 +819,7 @@ body {
   text-transform: uppercase;
 }
 .pub-title-row {
-  padding: 14px 20px 12px;
+  padding: 14px 110px 12px 20px;
   border-bottom: 1px solid var(--mid);
   position: relative;
 }
@@ -1879,6 +1881,29 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cup-bar-label {
+  background: rgba(74,144,196,0.08);
+  border-bottom: 1px solid rgba(74,144,196,0.2);
+  padding: 5px 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #4A90C4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.comp-logo {
+  height: 20px;
+  width: auto;
+  opacity: 0.9;
+  flex-shrink: 0;
 }
 
 /* ─── SQUAD CARDS (Roster page redesign) ─── */

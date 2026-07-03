@@ -59,18 +59,21 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <!-- CHAMPIONSHIP STATS BAR -->
-<div class="league-bar-label">EFL Championship</div>
+<div class="league-bar-label">
+  <img src="assets/photos/efl-championship.png" class="comp-logo" alt="EFL Championship">
+  EFL Championship
+</div>
 <div class="season-bar">
   <div class="stat-cell">
     <span class="stat-number" id="league-p" style="color:var(--muted)">0</span>
     <span class="stat-label">P</span>
   </div>
   <div class="stat-cell">
-    <span class="stat-number" id="stat-w" style="color:var(--gold)">0</span>
+    <span class="stat-number" id="stat-w" style="color:#5BAD72">0</span>
     <span class="stat-label">W</span>
   </div>
   <div class="stat-cell">
-    <span class="stat-number" id="stat-d" style="color:var(--muted)">0</span>
+    <span class="stat-number" id="stat-d" style="color:var(--gold)">0</span>
     <span class="stat-label">D</span>
   </div>
   <div class="stat-cell">
@@ -80,6 +83,30 @@ if ('serviceWorker' in navigator) {
   <div class="stat-cell">
     <span class="stat-number" id="stat-pts">0</span>
     <span class="stat-label">Pts</span>
+  </div>
+</div>
+
+<!-- CARABAO CUP STATS BAR -->
+<div class="cup-bar-label">
+  <img src="assets/photos/carabao-cup.png" class="comp-logo" alt="Carabao Cup">
+  Carabao Cup
+</div>
+<div class="season-bar" style="grid-template-columns: repeat(4,1fr);">
+  <div class="stat-cell">
+    <span class="stat-number" id="cup-p" style="color:var(--muted)">0</span>
+    <span class="stat-label">P</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="cup-w" style="color:#5BAD72">0</span>
+    <span class="stat-label">W</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="cup-d" style="color:var(--gold)">0</span>
+    <span class="stat-label">D</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="cup-l" style="color:var(--red)">0</span>
+    <span class="stat-label">L</span>
   </div>
 </div>
 
@@ -154,6 +181,12 @@ function loadSeasonLog() {
     document.getElementById('stat-l').textContent = L;
     document.getElementById('stat-pts').textContent = pts;
 
+    const cup = matches.filter(m => m.competition === 'Carabao Cup');
+    document.getElementById('cup-p').textContent = cup.length;
+    document.getElementById('cup-w').textContent = cup.filter(m => m.result === 'W').length;
+    document.getElementById('cup-d').textContent = cup.filter(m => m.result === 'D').length;
+    document.getElementById('cup-l').textContent = cup.filter(m => m.result === 'L').length;
+
     const all = [
       ...(data.matches || []).map(m => ({ ...m, _type: 'match' })),
       ...(data.transfers || []).map(t => ({ ...t, _type: 'transfer' })),
@@ -173,18 +206,25 @@ function loadSeasonLog() {
       let tagHtml = '';
       let eventHtml = '';
 
+      const compLogoMap = {
+        'EFL Championship': 'assets/photos/efl-championship.png',
+        'Carabao Cup': 'assets/photos/carabao-cup.png'
+      };
       if (entry._type === 'match') {
         const cls = entry.result === 'W' ? 'win' : entry.result === 'L' ? 'loss' : 'draw';
         tagHtml = `<span class="log-tag ${cls}">${entry.result} ${entry.score}</span>`;
-        eventHtml = `<strong>${entry.home ? 'vs' : '@'} ${entry.opponent}</strong> · ${entry.competition}`;
+        const logoTag = compLogoMap[entry.competition]
+          ? `<img src="${compLogoMap[entry.competition]}" style="height:14px;width:auto;vertical-align:middle;margin-right:4px;opacity:0.85;">`
+          : '';
+        eventHtml = `<strong>${entry.home ? 'vs' : '@'} ${entry.opponent}</strong> · ${logoTag}${entry.competition}`;
       } else if (entry._type === 'transfer') {
-        tagHtml = `<span class="log-tag signing">${entry.direction === 'in' ? 'SIGNED' : 'SOLD'}</span>`;
+        tagHtml = `<span class="log-tag ${entry.direction === 'in' ? 'signing' : 'sold'}">${entry.direction === 'in' ? 'SIGNED' : 'SOLD'}</span>`;
         eventHtml = `<strong>${entry.player}</strong> ${entry.direction === 'in' ? 'joins from' : 'departs to'} ${entry.club}`;
       } else if (entry._type === 'injury') {
         tagHtml = `<span class="log-tag injury">INJURY</span>`;
         eventHtml = `<strong>${entry.player}</strong> — ${entry.description}`;
       } else if (entry._type === 'milestone') {
-        tagHtml = `<span class="log-tag draw">NOTE</span>`;
+        tagHtml = `<span class="log-tag note">NOTE</span>`;
         eventHtml = entry.description;
       }
 
