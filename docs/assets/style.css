@@ -820,6 +820,8 @@ body {
   padding: 14px 20px 12px;
   border-bottom: 1px solid var(--mid);
   position: relative;
+  max-width: 960px;
+  margin: 0 auto;
 }
 .pub-subtitle-line {
   display: flex;
@@ -1555,6 +1557,8 @@ body {
   padding: 0 0 0 0;
   background: var(--charcoal);
   border-bottom: 1px solid var(--mid);
+  max-width: 960px;
+  margin: 0 auto;
 }
 .jf-btn {
   font-family: 'Barlow Condensed', sans-serif;
@@ -1684,6 +1688,8 @@ body {
   padding: 10px 20px;
   background: var(--charcoal);
   border-bottom: 1px solid var(--mid);
+  max-width: 960px;
+  margin: 0 auto;
 }
 .legend-item {
   display: flex;
