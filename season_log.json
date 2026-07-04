@@ -128,6 +128,28 @@
       "matchday": 5,
       "notes": "JL Rodriguez 23'/29' (2G/1A, 9.6 debut), K. Moore 35' (7.7), D. Keillor-Dunn 68' (7.8 PotM, on 62' for Broadhead). Subs 71': Amrizi for Rodriguez, Cadamarteri for Moore, Dobson for Windass, Cleworth for Doyle. L. O'Brien 2A (7.4). Broadhead 1A (7.1). Okonkwo GK 100% save rate. Shots 11-4, xG 4.0-0.7, poss 43-57%, passes 145-167 (81-87% acc), shot acc 91-25%, dribble success 94-86%, tackles 26-15 (13-5 won), interceptions 11-11. QPR yellows: Madsen 53', Dunne 61'.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-09-20",
+      "opponent": "Norwich City",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 6,
+      "notes": "K. Moore 14' (assist N. Broadhead), Y. Amrizi 76' (sub on 69' for Broadhead), G. Dobson 89' (assist Amrizi, sub on 69' for L. O'Brien). MoM: Y. Amrizi (8.3, 1G 1A). Subs 69': Amrizi for Broadhead, Dobson for O'Brien, Rathbone for Sheaf. Norwich had 66% possession and 245 passes to Wrexham's 126, but Wrexham were clinical — 3 goals from 6 shots. L. Gibbs (NOR) yellow 69'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-09-27",
+      "opponent": "Derby County",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 7,
+      "notes": "D. Keillor-Dunn 13', J.L. Rodríguez 26' (1A), I. Kaboré 54' (1A, exceptional near-post header — his standout moment of the season so far). MoM: A. Okonkwo (GK, clean sheet, 4 saves incl. a penalty-goal-conceded aside — save success 67%). Subs 65': Amrizi for Rodríguez, Cadamarteri for Moore, Rathbone for O'Brien, Brunt for Hyam. 83': Cacace for Kaboré. O. Rathbone yellow 89'. Clean sheet at the Racecourse.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -241,6 +263,18 @@
     {
       "date": "2025-09-07",
       "description": "Youth Academy: S. Ortega (LW, Argentina, 17, OVR 63, pot 68-92) catalogued. Total: 11 players."
+    },
+    {
+      "date": "2025-09-20",
+      "description": "MD6 WIN: 3-1 away at Norwich City. Moore, Amrizi (sub) and Dobson (sub) on the scoresheet. Amrizi MoM with a goal and an assist. Record: W4 D1 L1 in the league."
+    },
+    {
+      "date": "2025-09-27",
+      "description": "MD7 WIN: 3-0 at home vs Derby County. Keillor-Dunn, Rodriguez and Kaboré (a standout header) scored; Okonkwo clean sheet earns MoM. Wrexham now 2nd in the Championship: P7 W5 D1 L1, GF18 GA6, 16 pts, one point behind league-leaders Ipswich."
+    },
+    {
+      "date": "2025-09-27",
+      "description": "Youth Academy: J.C. Vargas updated to OVR 61 (POT 83-94, CAM). S. Ortega's PlayStyle confirmed as Acrobatic. Academy remains at 11 players."
     }
   ]
 }
