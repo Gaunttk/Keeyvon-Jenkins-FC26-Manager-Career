@@ -37,8 +37,9 @@ Always work on: `claude/wrexham-fc26-career-dx9xgx`
 
 ### Manager: Keevyon Jenkins
 
-- **DOB:** January 13, 1987 · Olathe, Kansas
-- **Playing career:** FC Dallas (MLS) → Fulham FC (PL) → Swansea City (PL); career-ending ACL/MCL injury July 2014, retired Feb 2016
+- **DOB:** January 13, 1977 · Olathe, Kansas
+- **Family:** Married to Kelly · daughter Reese (14) · son Austin (11)
+- **Playing career:** FC Dallas (MLS) → Fulham FC (PL) → Swansea City (PL); career-ending ACL/MCL injury July 2014 (age 37), retired Feb 2016
 - **International:** USMNT, 34 caps, 7G/11A, World Cup 2010 South Africa
 - **Coaching career:** ESPN/BeIN analyst (2016–18) → Colorado Rapids asst (2018–20) → San Jose Earthquakes HC (2020–22) → FC Nordsjælland HC (2022–24) → **Wrexham AFC HC (Jan 2025–present)**
 - **Tactics:** 4-2-3-1 / 4-3-3, High Press, Positional Play
@@ -158,7 +159,7 @@ The journal (`docs/journal.html`) is styled like a recurring publication. Entrie
     </div>
     <div class="byline-club">
       <strong>EFL Championship</strong>
-      Season 2026–27
+      Season 2025–26
     </div>
   </div>
 </article>
@@ -167,9 +168,9 @@ The journal (`docs/journal.html`) is styled like a recurring publication. Entrie
 **Season markers** go between date groups:
 ```html
 <div class="season-marker">
-  <span class="season-marker-text">Matchday 1 · August 2026</span>
+  <span class="season-marker-text">Matchday 1 · August 2025</span>
   <div class="season-marker-line"></div>
-  <span class="season-badge">Aug 9, 2026</span>
+  <span class="season-badge">Aug 9, 2025</span>
 </div>
 ```
 
