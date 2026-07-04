@@ -67,7 +67,7 @@
       "date": "2025-08-12",
       "opponent": "Preston North End",
       "home": false,
-      "score": "0-2",
+      "score": "2-0",
       "result": "W",
       "competition": "Carabao Cup",
       "round": "Round 1",
@@ -237,6 +237,10 @@
     {
       "date": "2025-09-07",
       "description": "MD5 WIN: 4-0 vs QPR. JL Rodriguez debut brace (23'/29') + assist in 70 mins — 9.6 rating. Back to 2nd in Championship (W3 D1 L1, 10pts). Broadhead leads EFL Championship assists chart (4A in 5 apps). Moore and Keillor-Dunn both on 4G in league."
+    },
+    {
+      "date": "2025-09-07",
+      "description": "Youth Academy: S. Ortega (LW, Argentina, 17, OVR 63, pot 68-92) catalogued. Total: 11 players."
     }
   ]
 }
