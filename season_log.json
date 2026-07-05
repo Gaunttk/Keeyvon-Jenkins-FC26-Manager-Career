@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-09-07"
+    "last_updated": "2025-10-04"
   },
   "matches": [
     {
@@ -150,6 +150,28 @@
       "matchday": 7,
       "notes": "D. Keillor-Dunn 13', J.L. Rodríguez 26' (1A), I. Kaboré 54' (1A, exceptional near-post header — his standout moment of the season so far). MoM: A. Okonkwo (GK, clean sheet, 4 saves incl. a penalty-goal-conceded aside — save success 67%). Subs 65': Amrizi for Rodríguez, Cadamarteri for Moore, Rathbone for O'Brien, Brunt for Hyam. 83': Cacace for Kaboré. O. Rathbone yellow 89'. Clean sheet at the Racecourse.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-09-28",
+      "opponent": "Leicester City",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 8,
+      "notes": "J. Windass 31', K. Moore 57' (MoM, 7.9), J.L. Rodríguez 88'. Assists shared among Rodríguez, Keillor-Dunn and Broadhead (1 each, exact pairing not confirmed from screenshots). Subs: Rathbone for Windass 67', Dobson for Sheaf 75', Amrizi for Moore 82'. D. Hyam and B. Nelson (LEI) yellow cards 7'/10'. Shots 13-2 (WRX-LEI), xG 4.4-0.0, poss 42-58%, passes 128-206 (92-92% accuracy), tackles 22-20, interceptions 14-5, saves 0-3, corners 4-0. Clean sheet away from home — controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-10-04",
+      "opponent": "Birmingham City",
+      "home": true,
+      "score": "4-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 9,
+      "notes": "N. Broadhead 12', J.L. Rodríguez 23'/63' (brace, MoM 8.4), B. Cadamarteri 88' (assist D. Keillor-Dunn — an outrageous backheel through-ball). K. Moore 2A (7.4). Birmingham replied through K. Fujimoto 29' and C. Klarer 45' to level 2-2 before Wrexham pulled away. K. Wagner (BIR) yellow 44'. Subs 67': Dobson for Sheaf. 75': T. Doyle (BIR) for Fujimoto. 79': Cadamarteri for Kaboré, Rathbone for Moore, Cleworth for C. Doyle, Cacace for O'Brien. Shots 10-12 (WRX-BIR), xG 5.6-2.8, poss 43-57%, passes 137-191 (91-97% accuracy), tackles 27-20, interceptions 5-8, saves 6-3, corners 0-3. Dominant control despite a couple of defensive lapses — never in doubt.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -275,6 +297,14 @@
     {
       "date": "2025-09-27",
       "description": "Youth Academy: J.C. Vargas updated to OVR 61 (POT 83-94, CAM). S. Ortega's PlayStyle confirmed as Acrobatic. Academy remains at 11 players."
+    },
+    {
+      "date": "2025-09-28",
+      "description": "MD8 WIN: 3-0 away at Leicester City. Windass, Moore (MoM, 7.9) and Rodríguez struck; clean sheet on the road. Record: P8 W6 D1 L1, GF21 GA6, 19 pts."
+    },
+    {
+      "date": "2025-10-04",
+      "description": "MD9 WIN: 4-2 at home vs Birmingham City. Rodríguez brace (MoM, 8.4) plus Broadhead and Cadamarteri goals overturned a 2-2 scare from Fujimoto and Klarer. Record: P9 W7 D1 L1, GF25 GA8, 22 pts."
     }
   ]
 }
