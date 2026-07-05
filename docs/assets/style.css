@@ -1462,6 +1462,81 @@ body {
 .dflag-b  { background: rgba(74,144,196,0.14); color: var(--dispatch-blue); }
 .dflag-x  { background: var(--mid); color: var(--muted); }
 
+/* ─── DEPTH CHART — POSITION ACCORDION ─── */
+.dc-group {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--mid);
+}
+.dc-group-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.dc-group-summary::-webkit-details-marker { display: none; }
+.dc-group-summary::marker { content: ''; }
+.dc-group-line {
+  flex: 1;
+  height: 1px;
+  background: var(--mid);
+}
+.dc-group-arrow {
+  font-size: 11px;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+.dc-group:not([open]) .dc-group-arrow { transform: rotate(-90deg); }
+.dc-group-body { margin-top: 12px; }
+
+.dc-subsection {
+  margin-bottom: 16px;
+}
+.dc-subsection:last-child { margin-bottom: 0; }
+.dc-subsection-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.dc-subsection-summary::-webkit-details-marker { display: none; }
+.dc-subsection-summary::marker { content: ''; }
+.dc-subsection-count {
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+.dc-subsection-line {
+  flex: 1;
+  height: 1px;
+  background: var(--mid);
+}
+.dc-subsection-arrow {
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+  flex-shrink: 0;
+}
+.dc-subsection:not([open]) .dc-subsection-arrow { transform: rotate(-90deg); }
+.dc-subsection-body { padding-top: 4px; }
+
 /* ─── DEPTH CHART — YOUTH PIPELINE ─── */
 .youth-card {
   background: var(--charcoal);

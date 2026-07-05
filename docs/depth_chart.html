@@ -61,13 +61,15 @@ if ('serviceWorker' in navigator) {
 
 <nav class="anchor-nav" style="display:flex;gap:10px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--mid);font-size:0.78rem;font-family:'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase;">
   <span style="color:var(--gold);font-weight:700;">Jump to:</span>
-  <a href="#dc-gk" class="footer-link">GK</a>
   <a href="#dc-lb" class="footer-link">LB</a>
   <a href="#dc-rb" class="footer-link">RB</a>
   <a href="#dc-cb" class="footer-link">CB</a>
-  <a href="#dc-cm" class="footer-link">CM/CDM</a>
-  <a href="#dc-wide" class="footer-link">Wide</a>
+  <a href="#dc-gk" class="footer-link">GK</a>
   <a href="#dc-cam" class="footer-link">CAM</a>
+  <a href="#dc-cdm" class="footer-link">CDM</a>
+  <a href="#dc-cm" class="footer-link">CM</a>
+  <a href="#dc-lw" class="footer-link">LW</a>
+  <a href="#dc-rw" class="footer-link">RW</a>
   <a href="#dc-st" class="footer-link">ST</a>
   <a href="#dc-youth" class="footer-link" style="color:var(--gold)">Youth Pipeline ↓</a>
 </nav>
@@ -159,591 +161,755 @@ if ('serviceWorker' in navigator) {
 
 
 <!-- ══════════════════════════════════════════
-     GOALKEEPER
+     DEFENSE
 ══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div id="dc-gk" class="depth-pos-header">Goalkeeper</div>
+<details class="dc-group" open>
+  <summary class="dc-group-summary">
+    <span>Defense</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
 
-  <!-- Okonkwo -->
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">A. Okonkwo</div>
-      <div class="depth-sub"><span class="pt">GK</span> · 23 yrs · Far Throw / Cross Claimer</div>
-    </div>
-    <div class="depth-ovr dyn">70</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 71 in 11w</span>
-      <div class="depth-flags"><span class="dflag dflag-g">Youth Asset</span></div>
-    </div>
-  </div>
+    <!-- LEFT BACK -->
+    <details class="dc-subsection" id="dc-lb" open>
+      <summary class="dc-subsection-summary">
+        <span>Left Back</span>
+        <span class="dc-subsection-count">3</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
 
-  <!-- Ward -->
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">D. Ward</div>
-      <div class="depth-sub"><span class="pt">GK</span> · 32 yrs · Dynamic (plan)</div>
-    </div>
-    <div class="depth-ovr cmp">70</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">L. Cacace</div>
+            <div class="depth-sub"><span class="pt">LB</span> · 24 yrs · Falseback++ / Att. WB / Inv. WB</div>
+          </div>
+          <div class="depth-ovr dyn">72</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 73 in 33w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
 
-</div>
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">G. Thomason</div>
+            <div class="depth-sub"><span class="pt">LB</span> · 24 yrs · Att. WB+ / Wingback+ / Relentless</div>
+          </div>
+          <div class="depth-ovr dyn">69</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 70 in 31w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
 
+        <div class="depth-row">
+          <div class="depth-role role-p">Prospect</div>
+          <div>
+            <div class="depth-name">S. Revan</div>
+            <div class="depth-sub"><span class="pt">LB / CB</span> · 21 yrs · Wingback+ · Returning Jun 26</div>
+          </div>
+          <div class="depth-ovr loa">64</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">Ret. Jun 2026</span>
+            <div class="depth-flags"><span class="dflag dflag-g">Assess on Return</span></div>
+          </div>
+        </div>
 
-<!-- ══════════════════════════════════════════
-     LEFT BACK
-══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div id="dc-lb" class="depth-pos-header">Left Back</div>
-
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">L. Cacace</div>
-      <div class="depth-sub"><span class="pt">LB</span> · 24 yrs · Falseback++ / Att. WB / Inv. WB</div>
-    </div>
-    <div class="depth-ovr dyn">72</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 73 in 33w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">G. Thomason</div>
-      <div class="depth-sub"><span class="pt">LB</span> · 24 yrs · Att. WB+ / Wingback+ / Relentless</div>
-    </div>
-    <div class="depth-ovr dyn">69</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 70 in 31w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-p">Prospect</div>
-    <div>
-      <div class="depth-name">S. Revan</div>
-      <div class="depth-sub"><span class="pt">LB / CB</span> · 21 yrs · Wingback+ · Returning Jun 26</div>
-    </div>
-    <div class="depth-ovr loa">64</div>
-    <div class="depth-status">
-      <span class="dev-badge loa">On Loan</span>
-      <span class="dev-eta">Ret. Jun 2026</span>
-      <div class="depth-flags"><span class="dflag dflag-g">Assess on Return</span></div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     RIGHT BACK
-══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div id="dc-rb" class="depth-pos-header">Right Back ⚠ Loan Cliff</div>
-
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">I. Kaboré</div>
-      <div class="depth-sub"><span class="pt">RB</span> · 24 yrs · Att. WB+ / Inside Forward+ / Rapid</div>
-    </div>
-    <div class="depth-ovr loa">72</div>
-    <div class="depth-status">
-      <span class="dev-badge loa">On Loan</span>
-      <span class="dev-eta">→ 73 in 11w</span>
-      <div class="depth-flags">
-        <span class="dflag dflag-r">Loan Ends Jun 27</span>
-        <span class="dflag dflag-r">Man City</span>
       </div>
-    </div>
-  </div>
+    </details>
 
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">R. Longman</div>
-      <div class="depth-sub"><span class="pt">RB / RM</span> · 24 yrs · Att. WB+ / Whipped Pass</div>
-    </div>
-    <div class="depth-ovr dyn">68</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span><span class="dflag dflag-x">Rel. £3.55m</span></div>
-    </div>
-  </div>
+    <!-- RIGHT BACK -->
+    <details class="dc-subsection" id="dc-rb" open>
+      <summary class="dc-subsection-summary">
+        <span>Right Back ⚠ Loan Cliff</span>
+        <span class="dc-subsection-count">3</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
 
-  <div class="depth-row">
-    <div class="depth-role role-p">Prospect</div>
-    <div>
-      <div class="depth-name">A. James</div>
-      <div class="depth-sub"><span class="pt">CB / RB</span> · 20 yrs · Very raw — needs development time</div>
-    </div>
-    <div class="depth-ovr dyn">54</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 55 in 9w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">Contract Exp!</span></div>
-    </div>
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">I. Kaboré</div>
+            <div class="depth-sub"><span class="pt">RB</span> · 24 yrs · Att. WB+ / Inside Forward+ / Rapid</div>
+          </div>
+          <div class="depth-ovr loa">72</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">→ 73 in 11w</span>
+            <div class="depth-flags">
+              <span class="dflag dflag-r">Loan Ends Jun 27</span>
+              <span class="dflag dflag-r">Man City</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">R. Longman</div>
+            <div class="depth-sub"><span class="pt">RB / RM</span> · 24 yrs · Att. WB+ / Whipped Pass</div>
+          </div>
+          <div class="depth-ovr dyn">68</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span><span class="dflag dflag-x">Rel. £3.55m</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-p">Prospect</div>
+          <div>
+            <div class="depth-name">A. James</div>
+            <div class="depth-sub"><span class="pt">CB / RB</span> · 20 yrs · Very raw — needs development time</div>
+          </div>
+          <div class="depth-ovr dyn">54</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 55 in 9w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">Contract Exp!</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- CENTRE-BACK -->
+    <details class="dc-subsection" id="dc-cb" open>
+      <summary class="dc-subsection-summary">
+        <span>Centre-Back — Best Depth in Squad</span>
+        <span class="dc-subsection-count">7</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">C. Doyle</div>
+            <div class="depth-sub"><span class="pt">CB / LB</span> · 21 yrs · BPD+ / Long Ball Pass / Anticipate</div>
+          </div>
+          <div class="depth-ovr dyn">72</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span><span class="dflag dflag-g">Cornerstone</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">D. Hyam ©</div>
+            <div class="depth-sub"><span class="pt">CB</span> · 29 yrs · Long Ball Pass / Block / Aerial Fortress</div>
+          </div>
+          <div class="depth-ovr dyn">71</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-b">Captain</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">Z. Vyner</div>
+            <div class="depth-sub"><span class="pt">CB</span> · 28 yrs · Long Ball Pass / Jockey / Block / Long Throw</div>
+          </div>
+          <div class="depth-ovr dyn">70</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">M. Cleworth</div>
+            <div class="depth-sub"><span class="pt">CB</span> · 22 yrs · Precision Header / Aerial Fortress / Long Throw</div>
+          </div>
+          <div class="depth-ovr dyn">69</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 70 in 15w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span><span class="dflag dflag-g">Youth Asset</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">L. Brunt</div>
+            <div class="depth-sub"><span class="pt">CB</span> · 24 yrs · Stopper+ / Wide Back+ · Pace 79</div>
+          </div>
+          <div class="depth-ovr dyn">68</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 69 in 40w</span>
+            <div class="depth-flags"><span class="dflag dflag-x">Rel. £5.5m</span><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">T. O'Connor</div>
+            <div class="depth-sub"><span class="pt">CB</span> · 26 yrs · Left foot · strong physical</div>
+          </div>
+          <div class="depth-ovr dyn">65</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-r">Transfer Listed</span><span class="dflag dflag-x">Welcomes Move</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-p">Prospect</div>
+          <div>
+            <div class="depth-name">A. James</div>
+            <div class="depth-sub"><span class="pt">CB / RB</span> · 20 yrs · Very raw — dual-pos prospect</div>
+          </div>
+          <div class="depth-ovr dyn">54</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 55 in 9w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">Contract Exp!</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- GOALKEEPER -->
+    <details class="dc-subsection" id="dc-gk" open>
+      <summary class="dc-subsection-summary">
+        <span>Goalkeeper</span>
+        <span class="dc-subsection-count">2</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">A. Okonkwo</div>
+            <div class="depth-sub"><span class="pt">GK</span> · 23 yrs · Far Throw / Cross Claimer</div>
+          </div>
+          <div class="depth-ovr dyn">70</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 71 in 11w</span>
+            <div class="depth-flags"><span class="dflag dflag-g">Youth Asset</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">D. Ward</div>
+            <div class="depth-sub"><span class="pt">GK</span> · 32 yrs · Dynamic (plan)</div>
+          </div>
+          <div class="depth-ovr cmp">70</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
   </div>
-</div>
+</details>
 
 
 <!-- ══════════════════════════════════════════
-     CENTRE-BACK
+     MIDFIELD
 ══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div class="depth-pos-header">Centre-Back — Best Depth in Squad</div>
+<details class="dc-group" open>
+  <summary class="dc-group-summary">
+    <span>Midfield</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
 
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">C. Doyle</div>
-      <div class="depth-sub"><span class="pt">CB / LB</span> · 21 yrs · BPD+ / Long Ball Pass / Anticipate</div>
-    </div>
-    <div class="depth-ovr dyn">72</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span><span class="dflag dflag-g">Cornerstone</span></div>
-    </div>
-  </div>
+    <!-- CAM -->
+    <details class="dc-subsection" id="dc-cam" open>
+      <summary class="dc-subsection-summary">
+        <span>Attacking Midfielder — CAM ⚠ No Youth Succession</span>
+        <span class="dc-subsection-count">3</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
 
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">D. Hyam ©</div>
-      <div class="depth-sub"><span class="pt">CB</span> · 29 yrs · Long Ball Pass / Block / Aerial Fortress</div>
-    </div>
-    <div class="depth-ovr dyn">71</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-b">Captain</span></div>
-    </div>
-  </div>
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">J. Windass</div>
+            <div class="depth-sub"><span class="pt">CAM / ST / RM</span> · 31 yrs · Gamechanger / Incisive Pass / Playmaker+</div>
+          </div>
+          <div class="depth-ovr cmp">72</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">Aging</span><span class="dflag dflag-x">Willing Neg.</span></div>
+          </div>
+        </div>
 
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">Z. Vyner</div>
-      <div class="depth-sub"><span class="pt">CB</span> · 28 yrs · Long Ball Pass / Jockey / Block / Long Throw</div>
-    </div>
-    <div class="depth-ovr dyn">70</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">N. Broadhead</div>
+            <div class="depth-sub"><span class="pt">LM / CAM / ST</span> · 27 yrs · Shadow Striker+ / Dual cover</div>
+          </div>
+          <div class="depth-ovr cmp">72</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
 
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">M. Cleworth</div>
-      <div class="depth-sub"><span class="pt">CB</span> · 22 yrs · Precision Header / Aerial Fortress / Long Throw</div>
-    </div>
-    <div class="depth-ovr dyn">69</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 70 in 15w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span><span class="dflag dflag-g">Youth Asset</span></div>
-    </div>
-  </div>
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">E. Lee</div>
+            <div class="depth-sub"><span class="pt">CM / ST / CAM</span> · 30 yrs · Half-Winger+ / Shadow Striker+ · Returning Jun 26</div>
+          </div>
+          <div class="depth-ovr loa">67</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">Ret. Jun 2026</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
 
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">L. Brunt</div>
-      <div class="depth-sub"><span class="pt">CB</span> · 24 yrs · Stopper+ / Wide Back+ · Pace 79</div>
-    </div>
-    <div class="depth-ovr dyn">68</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 69 in 40w</span>
-      <div class="depth-flags"><span class="dflag dflag-x">Rel. £5.5m</span><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
+      </div>
+    </details>
 
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">T. O'Connor</div>
-      <div class="depth-sub"><span class="pt">CB</span> · 26 yrs · Left foot · strong physical</div>
-    </div>
-    <div class="depth-ovr dyn">65</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-r">Transfer Listed</span><span class="dflag dflag-x">Welcomes Move</span></div>
-    </div>
-  </div>
+    <!-- CDM -->
+    <details class="dc-subsection" id="dc-cdm" open>
+      <summary class="dc-subsection-summary">
+        <span>Defensive Midfielder — CDM</span>
+        <span class="dc-subsection-count">4</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
 
-  <div class="depth-row">
-    <div class="depth-role role-p">Prospect</div>
-    <div>
-      <div class="depth-name">A. James</div>
-      <div class="depth-sub"><span class="pt">CB / RB</span> · 20 yrs · Very raw — dual-pos prospect</div>
-    </div>
-    <div class="depth-ovr dyn">54</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 55 in 9w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">Contract Exp!</span></div>
-    </div>
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">B. Sheaf</div>
+            <div class="depth-sub"><span class="pt">CDM / CM</span> · 27 yrs · Inventive / Anticipate / Press Proven</div>
+          </div>
+          <div class="depth-ovr dyn">73</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 74 in 13w</span>
+            <div class="depth-flags"><span class="dflag dflag-b">Crucial</span><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">L. O'Brien</div>
+            <div class="depth-sub"><span class="pt">CM / CDM</span> · 26 yrs · Tiki Taka / Technical / Playmaker+</div>
+          </div>
+          <div class="depth-ovr dyn">72</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 73 in 12w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">G. Dobson</div>
+            <div class="depth-sub"><span class="pt">CM / CDM</span> · 27 yrs · Long Ball Pass / Jockey / Slide Tackle / DLP+</div>
+          </div>
+          <div class="depth-ovr cmp">70</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-p">Prospect</div>
+          <div>
+            <div class="depth-name">H. Ashfield</div>
+            <div class="depth-sub"><span class="pt">CM / RM / CDM</span> · 19 yrs · B2B+ · Very raw — assess summer 26</div>
+          </div>
+          <div class="depth-ovr loa">56</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">Ret. Jun 2026</span>
+            <div class="depth-flags"><span class="dflag dflag-g">Only U20 Mid</span><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- CM -->
+    <details class="dc-subsection" id="dc-cm" open>
+      <summary class="dc-subsection-summary">
+        <span>Central Midfielder — CM ⚠ Youth Gap</span>
+        <span class="dc-subsection-count">5</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">B. Sheaf</div>
+            <div class="depth-sub"><span class="pt">CDM / CM</span> · 27 yrs · Inventive / Anticipate / Press Proven</div>
+          </div>
+          <div class="depth-ovr dyn">73</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 74 in 13w</span>
+            <div class="depth-flags"><span class="dflag dflag-b">Crucial</span><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">L. O'Brien</div>
+            <div class="depth-sub"><span class="pt">CM / CDM</span> · 26 yrs · Tiki Taka / Technical / Playmaker+</div>
+          </div>
+          <div class="depth-ovr dyn">72</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 73 in 12w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">G. Dobson</div>
+            <div class="depth-sub"><span class="pt">CM / CDM</span> · 27 yrs · Long Ball Pass / Jockey / Slide Tackle / DLP+</div>
+          </div>
+          <div class="depth-ovr cmp">70</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">O. Rathbone</div>
+            <div class="depth-sub"><span class="pt">CM / CAM / RM</span> · 28 yrs · Press Proven / Relentless / B2B+</div>
+          </div>
+          <div class="depth-ovr cmp">69</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-p">Prospect</div>
+          <div>
+            <div class="depth-name">H. Ashfield</div>
+            <div class="depth-sub"><span class="pt">CM / RM / CDM</span> · 19 yrs · B2B+ · Very raw — assess summer 26</div>
+          </div>
+          <div class="depth-ovr loa">56</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">Ret. Jun 2026</span>
+            <div class="depth-flags"><span class="dflag dflag-g">Only U20 Mid</span><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
   </div>
-</div>
+</details>
 
 
 <!-- ══════════════════════════════════════════
-     CENTRAL MIDFIELD (CDM / CM)
+     FORWARDS
 ══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div class="depth-pos-header">Central Midfield — CDM / CM ⚠ Youth Gap</div>
+<details class="dc-group" open>
+  <summary class="dc-group-summary">
+    <span>Forwards</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
 
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">B. Sheaf</div>
-      <div class="depth-sub"><span class="pt">CDM / CM</span> · 27 yrs · Inventive / Anticipate / Press Proven</div>
-    </div>
-    <div class="depth-ovr dyn">73</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 74 in 13w</span>
-      <div class="depth-flags"><span class="dflag dflag-b">Crucial</span><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
+    <!-- LW -->
+    <details class="dc-subsection" id="dc-lw" open>
+      <summary class="dc-subsection-summary">
+        <span>Left Wing</span>
+        <span class="dc-subsection-count">3</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">N. Broadhead</div>
+            <div class="depth-sub"><span class="pt">LM / CAM / ST</span> · 27 yrs · Wide Playmaker+ / Shadow Striker+</div>
+          </div>
+          <div class="depth-ovr cmp">72</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">D. Keillor-Dunn</div>
+            <div class="depth-sub"><span class="pt">ST / CAM / LM</span> · 27 yrs · Finesse Shot / Relentless / Inventive</div>
+          </div>
+          <div class="depth-ovr cmp">68</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-x">Willing Neg.</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">Y. Amrizi</div>
+            <div class="depth-sub"><span class="pt">LW / ST</span> · 21 yrs · Signed free Aug 2025 · Attrs/Dev Plan pending</div>
+          </div>
+          <div class="depth-ovr dyn">72</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-g">New Signing</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- RW -->
+    <details class="dc-subsection" id="dc-rw" open>
+      <summary class="dc-subsection-summary">
+        <span>Right Wing</span>
+        <span class="dc-subsection-count">2</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">R. Longman</div>
+            <div class="depth-sub"><span class="pt">RM / RB</span> · 24 yrs · Wide Midfielder+ / Whipped Pass</div>
+          </div>
+          <div class="depth-ovr dyn">68</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">O. Rathbone</div>
+            <div class="depth-sub"><span class="pt">RM / CM / CAM</span> · 28 yrs · Wide Playmaker+ / Press Proven</div>
+          </div>
+          <div class="depth-ovr cmp">69</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- ST -->
+    <details class="dc-subsection" id="dc-st" open>
+      <summary class="dc-subsection-summary">
+        <span>Striker ⚠ Two Veterans Declining</span>
+        <span class="dc-subsection-count">9</span>
+        <span class="dc-subsection-line"></span>
+        <span class="dc-subsection-arrow">▾</span>
+      </summary>
+      <div class="dc-subsection-body">
+
+        <div class="depth-row">
+          <div class="depth-role role-s">Starter</div>
+          <div>
+            <div class="depth-name">K. Moore</div>
+            <div class="depth-sub"><span class="pt">ST</span> · 32 yrs · Target Forward+ / Precision Header / Aerial Fortress</div>
+          </div>
+          <div class="depth-ovr dec">72</div>
+          <div class="depth-status">
+            <span class="dev-badge dec">Declining</span>
+            <span class="dev-eta">→ 71 in 5w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">Declining Fast</span><span class="dflag dflag-x">Willing Neg.</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">S. Smith</div>
+            <div class="depth-sub"><span class="pt">ST</span> · 27 yrs · Target Forward+ / Poacher+ / Low Driven Shot</div>
+          </div>
+          <div class="depth-ovr cmp">68</div>
+          <div class="depth-status">
+            <span class="dev-badge cmp">Complete</span>
+            <span class="dev-eta">Peaked</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">R. Hardie</div>
+            <div class="depth-sub"><span class="pt">ST</span> · 28 yrs · Advanced Forward+ · Pace 82 · Returning Jun 26</div>
+          </div>
+          <div class="depth-ovr loa">68</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">Ret. Jun 2026</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">J. Rodriguez</div>
+            <div class="depth-sub"><span class="pt">ST</span> · 35 yrs · Advanced Forward+ · 1-year contract</div>
+          </div>
+          <div class="depth-ovr dec">66</div>
+          <div class="depth-status">
+            <span class="dev-badge dec">Declining</span>
+            <span class="dev-eta">→ 65 in 4w</span>
+            <div class="depth-flags"><span class="dflag dflag-r">35 yrs — Exit?</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-p">Prospect</div>
+          <div>
+            <div class="depth-name">B. Cadamarteri</div>
+            <div class="depth-sub"><span class="pt">ST</span> · 20 yrs · Advanced Forward+ · Pace 77</div>
+          </div>
+          <div class="depth-ovr dyn">65</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">→ 66 in 13w</span>
+            <div class="depth-flags"><span class="dflag dflag-g">Key Youth</span><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-p">Prospect</div>
+          <div>
+            <div class="depth-name">M. Faal</div>
+            <div class="depth-sub"><span class="pt">ST</span> · 22 yrs · Target Forward+ / Poacher+ / Chip Shot · Returning Jun 26</div>
+          </div>
+          <div class="depth-ovr loa">62</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">Ret. Jun 2026</span>
+            <div class="depth-flags"><span class="dflag dflag-g">Assess Return</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">Y. Amrizi</div>
+            <div class="depth-sub"><span class="pt">ST / LW</span> · 21 yrs · Free transfer Aug 2025 · Debut sub vs Sheffield Wed (6.4)</div>
+          </div>
+          <div class="depth-ovr dyn">72</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">Developing</span>
+            <div class="depth-flags"><span class="dflag dflag-x">Attrs/Dev Plan pending</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-r">Rotation</div>
+          <div>
+            <div class="depth-name">JL. Rodriguez</div>
+            <div class="depth-sub"><span class="pt">ST</span> · Free transfer Aug 2025 · Attrs pending — screenshots needed</div>
+          </div>
+          <div class="depth-ovr dyn">—</div>
+          <div class="depth-status">
+            <span class="dev-badge dyn">Dynamic</span>
+            <span class="dev-eta">New signing</span>
+            <div class="depth-flags"><span class="dflag dflag-x">All attrs pending</span></div>
+          </div>
+        </div>
+
+        <div class="depth-row">
+          <div class="depth-role role-b">Squad</div>
+          <div>
+            <div class="depth-name">P. Mullin</div>
+            <div class="depth-sub"><span class="pt">ST</span> · 30 yrs · Poacher+ / Finesse Shot · Returning Jun 26</div>
+          </div>
+          <div class="depth-ovr loa">65</div>
+          <div class="depth-status">
+            <span class="dev-badge loa">On Loan</span>
+            <span class="dev-eta">Ret. Jun 2026</span>
+            <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
+          </div>
+        </div>
+
+      </div>
+    </details>
+
   </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">L. O'Brien</div>
-      <div class="depth-sub"><span class="pt">CM / CDM</span> · 26 yrs · Tiki Taka / Technical / Playmaker+</div>
-    </div>
-    <div class="depth-ovr dyn">72</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 73 in 12w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">G. Dobson</div>
-      <div class="depth-sub"><span class="pt">CM / CDM</span> · 27 yrs · Long Ball Pass / Jockey / Slide Tackle / DLP+</div>
-    </div>
-    <div class="depth-ovr cmp">70</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">O. Rathbone</div>
-      <div class="depth-sub"><span class="pt">CM / CAM / RM</span> · 28 yrs · Press Proven / Relentless / B2B+</div>
-    </div>
-    <div class="depth-ovr cmp">69</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-p">Prospect</div>
-    <div>
-      <div class="depth-name">H. Ashfield</div>
-      <div class="depth-sub"><span class="pt">CM / RM / CDM</span> · 19 yrs · B2B+ · Very raw — assess summer 26</div>
-    </div>
-    <div class="depth-ovr loa">56</div>
-    <div class="depth-status">
-      <span class="dev-badge loa">On Loan</span>
-      <span class="dev-eta">Ret. Jun 2026</span>
-      <div class="depth-flags"><span class="dflag dflag-g">Only U20 Mid</span><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     WIDE ATTACK (LM / RM)
-══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div class="depth-pos-header">Wide Attack — LM / RM</div>
-
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">N. Broadhead</div>
-      <div class="depth-sub"><span class="pt">LM / CAM / ST</span> · 27 yrs · Wide Playmaker+ / Shadow Striker+</div>
-    </div>
-    <div class="depth-ovr cmp">72</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">R. Longman</div>
-      <div class="depth-sub"><span class="pt">RM / RB</span> · 24 yrs · Wide Midfielder+ / Whipped Pass</div>
-    </div>
-    <div class="depth-ovr dyn">68</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">D. Keillor-Dunn</div>
-      <div class="depth-sub"><span class="pt">ST / CAM / LM</span> · 27 yrs · Finesse Shot / Relentless / Inventive</div>
-    </div>
-    <div class="depth-ovr cmp">68</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-x">Willing Neg.</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">O. Rathbone</div>
-      <div class="depth-sub"><span class="pt">RM / CM / CAM</span> · 28 yrs · Wide Playmaker+ / Press Proven</div>
-    </div>
-    <div class="depth-ovr cmp">69</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">Y. Amrizi</div>
-      <div class="depth-sub"><span class="pt">LW / ST</span> · 21 yrs · Signed free Aug 2025 · Attrs/Dev Plan pending</div>
-    </div>
-    <div class="depth-ovr dyn">72</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-g">New Signing</span></div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     CAM
-══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div class="depth-pos-header">Attacking Midfielder — CAM ⚠ No Youth Succession</div>
-
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">J. Windass</div>
-      <div class="depth-sub"><span class="pt">CAM / ST / RM</span> · 31 yrs · Gamechanger / Incisive Pass / Playmaker+</div>
-    </div>
-    <div class="depth-ovr cmp">72</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">Aging</span><span class="dflag dflag-x">Willing Neg.</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">N. Broadhead</div>
-      <div class="depth-sub"><span class="pt">LM / CAM / ST</span> · 27 yrs · Shadow Striker+ / Dual cover</div>
-    </div>
-    <div class="depth-ovr cmp">72</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">E. Lee</div>
-      <div class="depth-sub"><span class="pt">CM / ST / CAM</span> · 30 yrs · Half-Winger+ / Shadow Striker+ · Returning Jun 26</div>
-    </div>
-    <div class="depth-ovr loa">67</div>
-    <div class="depth-status">
-      <span class="dev-badge loa">On Loan</span>
-      <span class="dev-eta">Ret. Jun 2026</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     STRIKER
-══════════════════════════════════════════ -->
-<div class="depth-section">
-  <div class="depth-pos-header">Striker ⚠ Two Veterans Declining</div>
-
-  <div class="depth-row">
-    <div class="depth-role role-s">Starter</div>
-    <div>
-      <div class="depth-name">K. Moore</div>
-      <div class="depth-sub"><span class="pt">ST</span> · 32 yrs · Target Forward+ / Precision Header / Aerial Fortress</div>
-    </div>
-    <div class="depth-ovr dec">72</div>
-    <div class="depth-status">
-      <span class="dev-badge dec">Declining</span>
-      <span class="dev-eta">→ 71 in 5w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">Declining Fast</span><span class="dflag dflag-x">Willing Neg.</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">S. Smith</div>
-      <div class="depth-sub"><span class="pt">ST</span> · 27 yrs · Target Forward+ / Poacher+ / Low Driven Shot</div>
-    </div>
-    <div class="depth-ovr cmp">68</div>
-    <div class="depth-status">
-      <span class="dev-badge cmp">Complete</span>
-      <span class="dev-eta">Peaked</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">R. Hardie</div>
-      <div class="depth-sub"><span class="pt">ST</span> · 28 yrs · Advanced Forward+ · Pace 82 · Returning Jun 26</div>
-    </div>
-    <div class="depth-ovr loa">68</div>
-    <div class="depth-status">
-      <span class="dev-badge loa">On Loan</span>
-      <span class="dev-eta">Ret. Jun 2026</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">J. Rodriguez</div>
-      <div class="depth-sub"><span class="pt">ST</span> · 35 yrs · Advanced Forward+ · 1-year contract</div>
-    </div>
-    <div class="depth-ovr dec">66</div>
-    <div class="depth-status">
-      <span class="dev-badge dec">Declining</span>
-      <span class="dev-eta">→ 65 in 4w</span>
-      <div class="depth-flags"><span class="dflag dflag-r">35 yrs — Exit?</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-p">Prospect</div>
-    <div>
-      <div class="depth-name">B. Cadamarteri</div>
-      <div class="depth-sub"><span class="pt">ST</span> · 20 yrs · Advanced Forward+ · Pace 77</div>
-    </div>
-    <div class="depth-ovr dyn">65</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">→ 66 in 13w</span>
-      <div class="depth-flags"><span class="dflag dflag-g">Key Youth</span><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-p">Prospect</div>
-    <div>
-      <div class="depth-name">M. Faal</div>
-      <div class="depth-sub"><span class="pt">ST</span> · 22 yrs · Target Forward+ / Poacher+ / Chip Shot · Returning Jun 26</div>
-    </div>
-    <div class="depth-ovr loa">62</div>
-    <div class="depth-status">
-      <span class="dev-badge loa">On Loan</span>
-      <span class="dev-eta">Ret. Jun 2026</span>
-      <div class="depth-flags"><span class="dflag dflag-g">Assess Return</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">Y. Amrizi</div>
-      <div class="depth-sub"><span class="pt">ST / LW</span> · 21 yrs · Free transfer Aug 2025 · Debut sub vs Sheffield Wed (6.4)</div>
-    </div>
-    <div class="depth-ovr dyn">72</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">Developing</span>
-      <div class="depth-flags"><span class="dflag dflag-x">Attrs/Dev Plan pending</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-r">Rotation</div>
-    <div>
-      <div class="depth-name">JL. Rodriguez</div>
-      <div class="depth-sub"><span class="pt">ST</span> · Free transfer Aug 2025 · Attrs pending — screenshots needed</div>
-    </div>
-    <div class="depth-ovr dyn">—</div>
-    <div class="depth-status">
-      <span class="dev-badge dyn">Dynamic</span>
-      <span class="dev-eta">New signing</span>
-      <div class="depth-flags"><span class="dflag dflag-x">All attrs pending</span></div>
-    </div>
-  </div>
-
-  <div class="depth-row">
-    <div class="depth-role role-b">Squad</div>
-    <div>
-      <div class="depth-name">P. Mullin</div>
-      <div class="depth-sub"><span class="pt">ST</span> · 30 yrs · Poacher+ / Finesse Shot · Returning Jun 26</div>
-    </div>
-    <div class="depth-ovr loa">65</div>
-    <div class="depth-status">
-      <span class="dev-badge loa">On Loan</span>
-      <span class="dev-eta">Ret. Jun 2026</span>
-      <div class="depth-flags"><span class="dflag dflag-r">No Negotiate</span></div>
-    </div>
-  </div>
-</div>
+</details>
 
 
 <!-- ══════════════════════════════════════════
