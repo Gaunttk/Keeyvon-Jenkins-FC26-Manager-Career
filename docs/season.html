@@ -60,19 +60,59 @@
     }
     .comp-tab.active { color: var(--white); border-bottom-color: var(--red); }
 
-    .comp-record {
-      display: flex;
-      gap: 20px;
-      padding: 10px 16px;
-      background: var(--charcoal);
+    /* ── Competition Accordion ── */
+    .comp-accordion {
       border-bottom: 1px solid var(--steel);
+    }
+    .comp-summary {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 16px;
+      background: var(--charcoal);
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+    .comp-summary::-webkit-details-marker { display: none; }
+    .comp-summary::marker { content: ''; }
+    .comp-summary-name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      white-space: nowrap;
+    }
+    .comp-summary-logo {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .comp-summary-stats {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 12px;
       color: var(--muted);
-      flex-wrap: wrap;
+      flex: 1;
     }
-    .comp-record span { color: var(--white); font-weight: 700; }
-    .comp-record strong { color: var(--gold); }
+    .comp-summary-stats strong { color: var(--gold); }
+    .comp-summary-arrow {
+      font-size: 11px;
+      color: var(--muted);
+      transition: transform 0.15s ease;
+      flex-shrink: 0;
+    }
+    .comp-accordion:not([open]) .comp-summary-arrow {
+      transform: rotate(-90deg);
+    }
+    .comp-accordion:not([open]) .comp-summary {
+      border-bottom: none;
+    }
 
     /* ── Match Log Table ── */
     .match-log-header, .match-log-row {
@@ -103,7 +143,8 @@
     .match-log-row:hover { background: var(--charcoal); }
     .match-log-row.preseason { opacity: 0.55; }
     .ml-date { font-size: 11px; color: var(--muted); }
-    .ml-opponent { font-weight: 700; color: var(--white); }
+    .ml-opponent { display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--white); }
+    .ml-crest { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; }
     .ml-ha {
       font-size: 10px;
       font-weight: 700;
@@ -272,183 +313,236 @@ if ('serviceWorker' in navigator) {
   </div>
 </div>
 
-<!-- ── COMPETITION BREAKDOWN ── -->
-<div class="comp-record">
-  <div>EFL Championship &nbsp;<strong>P9 W7 D1 L1 · 22 pts</strong> &nbsp;GF25 GA8 GD+17</div>
-  <div>Carabao Cup &nbsp;<span>1W 1L</span></div>
-  <div>Pre-Season (EIC) &nbsp;<span>2W 0L</span></div>
-  <div>Youth Tournament &nbsp;<span>2W 0L</span></div>
-</div>
-
 <!-- ══════════════════════════════════════════
-     MATCH LOG
+     MATCH LOG — grouped by competition, each an accordion
 ══════════════════════════════════════════ -->
 <div class="section-divider">Match Log</div>
 
-<div class="match-log-header">
-  <span>Date</span>
-  <span>Opponent</span>
-  <span>H/A</span>
-  <span>Competition</span>
-  <span style="text-align:center">Result</span>
-  <span>Man of the Match</span>
-  <span>Goals</span>
-</div>
-
 <!-- EFL Championship -->
-<div class="match-log-row">
-  <span class="ml-date">Oct 4, 2025</span>
-  <div><div class="ml-opponent">Birmingham City</div><div class="ml-comp">EFL Championship · MD9</div></div>
-  <span class="ml-ha">Home</span>
-  <span></span>
-  <span class="ml-result w">W 4–2</span>
-  <span class="ml-mom">J.L. Rodríguez <span style="font-size:10px; color:var(--muted)">8.4 ★</span></span>
-  <span class="ml-goals"><strong>Broadhead</strong> 12' · <strong>Rodríguez</strong> 23'/63' · <strong>Cadamarteri</strong> 88' · Fujimoto 29'/Klarer 45' (BIR)</span>
-</div>
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name"><img class="comp-summary-logo" src="assets/photos/efl-championship.png" alt="">EFL Championship</span>
+    <span class="comp-summary-stats"><strong>P9 W7 D1 L1</strong> &nbsp;· 22 pts &nbsp;GF25 GA8 GD+17</span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
 
-<div class="match-log-row">
-  <span class="ml-date">Sep 28, 2025</span>
-  <div><div class="ml-opponent">Leicester City</div><div class="ml-comp">EFL Championship · MD8</div></div>
-  <span class="ml-ha">Away</span>
-  <span></span>
-  <span class="ml-result w">W 3–0</span>
-  <span class="ml-mom">K. Moore <span style="font-size:10px; color:var(--muted)">7.9 ★</span></span>
-  <span class="ml-goals"><strong>Windass</strong> 31' · <strong>Moore</strong> 57' · <strong>Rodríguez</strong> 88'</span>
-</div>
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Sep 27, 2025</span>
-  <div><div class="ml-opponent">Derby County</div><div class="ml-comp">EFL Championship · MD7</div></div>
-  <span class="ml-ha">Home</span>
-  <span></span>
-  <span class="ml-result w">W 3–0</span>
-  <span class="ml-mom">A. Okonkwo <span style="font-size:10px; color:var(--muted)">7.6 ★ GK</span></span>
-  <span class="ml-goals"><strong>Keillor-Dunn</strong> 13' · <strong>Rodríguez</strong> 26' · <strong>Kaboré</strong> 54'</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Oct 4, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/birmingham-city.png" alt="">Birmingham City</div><div class="ml-comp">EFL Championship · MD9</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–2</span>
+    <span class="ml-mom">J.L. Rodríguez <span style="font-size:10px; color:var(--muted)">8.4 ★</span></span>
+    <span class="ml-goals"><strong>Broadhead</strong> 12' · <strong>Rodríguez</strong> 23'/63' · <strong>Cadamarteri</strong> 88' · Fujimoto 29'/Klarer 45' (BIR)</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Sep 20, 2025</span>
-  <div><div class="ml-opponent">Norwich City</div><div class="ml-comp">EFL Championship · MD6</div></div>
-  <span class="ml-ha">Away</span>
-  <span></span>
-  <span class="ml-result w">W 3–1</span>
-  <span class="ml-mom">Y. Amrizi <span style="font-size:10px; color:var(--muted)">8.3 ★</span></span>
-  <span class="ml-goals"><strong>Moore</strong> 14' · <strong>Amrizi</strong> 76' · <strong>Dobson</strong> 89'</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Sep 28, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/leicester-city.png" alt="">Leicester City</div><div class="ml-comp">EFL Championship · MD8</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">K. Moore <span style="font-size:10px; color:var(--muted)">7.9 ★</span></span>
+    <span class="ml-goals"><strong>Windass</strong> 31' · <strong>Moore</strong> 57' · <strong>Rodríguez</strong> 88'</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Sep 7, 2025</span>
-  <div><div class="ml-opponent">Queens Park Rangers</div><div class="ml-comp">EFL Championship · MD5</div></div>
-  <span class="ml-ha">Home</span>
-  <span></span>
-  <span class="ml-result w">W 4–0</span>
-  <span class="ml-mom">D. Keillor-Dunn <span style="font-size:10px; color:var(--muted)">7.8 ★</span></span>
-  <span class="ml-goals"><strong>J.L. Rodríguez</strong> 23'/29' · <strong>Moore</strong> 35' · <strong>Keillor-Dunn</strong> 68'</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Sep 27, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/derby-county.png" alt="">Derby County</div><div class="ml-comp">EFL Championship · MD7</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">A. Okonkwo <span style="font-size:10px; color:var(--muted)">7.6 ★ GK</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 13' · <strong>Rodríguez</strong> 26' · <strong>Kaboré</strong> 54'</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Aug 30, 2025</span>
-  <div><div class="ml-opponent">Millwall</div><div class="ml-comp">EFL Championship · MD4</div></div>
-  <span class="ml-ha">Away</span>
-  <span></span>
-  <span class="ml-result l">L 0–2</span>
-  <span class="ml-mom" style="color:var(--muted)">—</span>
-  <span class="ml-goals" style="color:var(--muted)">Azeez 33' · Ivanović 90' (Millwall) · no WRX goals</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Sep 20, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/norwich-city.png" alt="">Norwich City</div><div class="ml-comp">EFL Championship · MD6</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom">Y. Amrizi <span style="font-size:10px; color:var(--muted)">8.3 ★</span></span>
+    <span class="ml-goals"><strong>Moore</strong> 14' · <strong>Amrizi</strong> 76' · <strong>Dobson</strong> 89'</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Aug 27, 2025</span>
-  <div><div class="ml-opponent">Blackburn Rovers</div><div class="ml-comp">Carabao Cup · R2</div></div>
-  <span class="ml-ha">Home</span>
-  <span></span>
-  <span class="ml-result l">L 0–1</span>
-  <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">cup exit</span></span>
-  <span class="ml-goals" style="color:var(--muted)">Eliminated R2</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Sep 7, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/queens-park-rangers.png" alt="">Queens Park Rangers</div><div class="ml-comp">EFL Championship · MD5</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–0</span>
+    <span class="ml-mom">D. Keillor-Dunn <span style="font-size:10px; color:var(--muted)">7.8 ★</span></span>
+    <span class="ml-goals"><strong>J.L. Rodríguez</strong> 23'/29' · <strong>Moore</strong> 35' · <strong>Keillor-Dunn</strong> 68'</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Aug 20, 2025</span>
-  <div><div class="ml-opponent">Sheffield Wed</div><div class="ml-comp">EFL Championship · MD3</div></div>
-  <span class="ml-ha">Home</span>
-  <span></span>
-  <span class="ml-result d">D 1–1</span>
-  <span class="ml-mom">B. Sheaf <span style="font-size:10px; color:var(--muted)">7.5</span></span>
-  <span class="ml-goals"><strong>Keillor-Dunn</strong> 65'</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Aug 30, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/millwall.png" alt="">Millwall</div><div class="ml-comp">EFL Championship · MD4</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 0–2</span>
+    <span class="ml-mom" style="color:var(--muted)">—</span>
+    <span class="ml-goals" style="color:var(--muted)">Azeez 33' · Ivanović 90' (Millwall) · no WRX goals</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Aug 13, 2025</span>
-  <div><div class="ml-opponent">West Brom</div><div class="ml-comp">EFL Championship · MD2</div></div>
-  <span class="ml-ha">Home</span>
-  <span></span>
-  <span class="ml-result w">W 3–1</span>
-  <span class="ml-mom" style="color:var(--muted)">C. Styles (WBA)</span>
-  <span class="ml-goals"><strong>Broadhead</strong> 2',16' · <strong>Moore</strong> 11'</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Aug 20, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/sheffield-wednesday.png" alt="">Sheffield Wed</div><div class="ml-comp">EFL Championship · MD3</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result d">D 1–1</span>
+    <span class="ml-mom">B. Sheaf <span style="font-size:10px; color:var(--muted)">7.5</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 65'</span>
+  </div>
 
-<div class="match-log-row">
-  <span class="ml-date">Aug 9, 2025</span>
-  <div><div class="ml-opponent">Southampton</div><div class="ml-comp">EFL Championship · MD1</div></div>
-  <span class="ml-ha">Away</span>
-  <span></span>
-  <span class="ml-result w">W 4–1</span>
-  <span class="ml-mom">N. Broadhead <span style="font-size:10px; color:var(--muted)">7.8 ★</span></span>
-  <span class="ml-goals"><strong>Keillor-Dunn</strong> 9'/44' · <strong>Moore</strong> 25'/62' · Larin (SOU) 49'</span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Aug 13, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/west-brom.png" alt="">West Brom</div><div class="ml-comp">EFL Championship · MD2</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom" style="color:var(--muted)">C. Styles (WBA)</span>
+    <span class="ml-goals"><strong>Broadhead</strong> 2',16' · <strong>Moore</strong> 11'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Aug 9, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/southampton.png" alt="">Southampton</div><div class="ml-comp">EFL Championship · MD1</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 4–1</span>
+    <span class="ml-mom">N. Broadhead <span style="font-size:10px; color:var(--muted)">7.8 ★</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 9'/44' · <strong>Moore</strong> 25'/62' · Larin (SOU) 49'</span>
+  </div>
+</details>
 
 <!-- Carabao Cup -->
-<div class="match-log-row">
-  <span class="ml-date">Aug 12, 2025</span>
-  <div><div class="ml-opponent">Preston North End</div><div class="ml-comp">Carabao Cup · R1</div></div>
-  <span class="ml-ha">Away</span>
-  <span></span>
-  <span class="ml-result w">W 2–0</span>
-  <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">7.4</span></span>
-  <span class="ml-goals"><strong>Keillor-Dunn</strong> 19' · <strong>Windass</strong> 35'</span>
-</div>
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name"><img class="comp-summary-logo" src="assets/photos/carabao-cup.png" alt="">Carabao Cup</span>
+    <span class="comp-summary-stats"><strong>1W 1L</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
 
-<!-- Pre-season divider -->
-<div class="section-divider" style="color:var(--muted); font-size:9px;">Pre-Season & Youth Fixtures</div>
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
 
-<div class="match-log-row preseason">
-  <span class="ml-date">Jul 22, 2025</span>
-  <div><div class="ml-opponent">AD Ceuta FC</div><div class="ml-comp">EIC Group Stage</div></div>
-  <span class="ml-ha">N</span>
-  <span></span>
-  <span class="ml-result w">W 5–0</span>
-  <span class="ml-mom">K. Moore</span>
-  <span class="ml-goals"><strong>Keillor-Dunn</strong> ×2 · <strong>Moore</strong> · <strong>Cadamarteri</strong> · <strong>O'Brien</strong></span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Aug 27, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/blackburn-rovers.png" alt="">Blackburn Rovers</div><div class="ml-comp">Carabao Cup · R2</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result l">L 0–1</span>
+    <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">cup exit</span></span>
+    <span class="ml-goals" style="color:var(--muted)">Eliminated R2</span>
+  </div>
 
-<div class="match-log-row preseason">
-  <span class="ml-date">Jul 19, 2025</span>
-  <div><div class="ml-opponent">Millwall</div><div class="ml-comp">Youth Academy Rush Tournament · SF</div></div>
-  <span class="ml-ha">N</span>
-  <span></span>
-  <span class="ml-result w">W 3–2 AET</span>
-  <span class="ml-mom">—</span>
-  <span class="ml-goals"><strong>Lord</strong> ×2 · <strong>Horne</strong></span>
-</div>
+  <div class="match-log-row">
+    <span class="ml-date">Aug 12, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/preston-north-end.png" alt="">Preston North End</div><div class="ml-comp">Carabao Cup · R1</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 2–0</span>
+    <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">7.4</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 19' · <strong>Windass</strong> 35'</span>
+  </div>
+</details>
 
-<div class="match-log-row preseason">
-  <span class="ml-date">Jul 18, 2025</span>
-  <div><div class="ml-opponent">Bradford City</div><div class="ml-comp">EIC Group Stage</div></div>
-  <span class="ml-ha">N</span>
-  <span></span>
-  <span class="ml-result w">W 4–0</span>
-  <span class="ml-mom">—</span>
-  <span class="ml-goals"><strong>Broadhead</strong> ×2 · <strong>Cadamarteri</strong> · <strong>Moore</strong></span>
-</div>
+<!-- Pre-Season (EIC) -->
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name">Pre-Season (EIC)</span>
+    <span class="comp-summary-stats"><strong>2W 0L</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
 
-<div class="match-log-row preseason">
-  <span class="ml-date">Jul 1, 2025</span>
-  <div><div class="ml-opponent">Hull City</div><div class="ml-comp">Youth Academy Rush Tournament · QF</div></div>
-  <span class="ml-ha">N</span>
-  <span></span>
-  <span class="ml-result w">W 2–1</span>
-  <span class="ml-mom">A. Gassner <span style="font-size:10px; color:var(--muted)">(GK)</span></span>
-  <span class="ml-goals"><strong>Lord</strong> ×2</span>
-</div>
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 22, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/ad-ceuta-fc.png" alt="">AD Ceuta FC</div><div class="ml-comp">EIC Group Stage</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 5–0</span>
+    <span class="ml-mom">K. Moore</span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> ×2 · <strong>Moore</strong> · <strong>Cadamarteri</strong> · <strong>O'Brien</strong></span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 18, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/bradford-city.png" alt="">Bradford City</div><div class="ml-comp">EIC Group Stage</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 4–0</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Broadhead</strong> ×2 · <strong>Cadamarteri</strong> · <strong>Moore</strong></span>
+  </div>
+</details>
+
+<!-- Youth Tournament -->
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name">Youth Tournament</span>
+    <span class="comp-summary-stats"><strong>2W 0L</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 19, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/millwall.png" alt="">Millwall</div><div class="ml-comp">Youth Academy Rush Tournament · SF</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 3–2 AET</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Lord</strong> ×2 · <strong>Horne</strong></span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 1, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/hull-city.png" alt="">Hull City</div><div class="ml-comp">Youth Academy Rush Tournament · QF</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 2–1</span>
+    <span class="ml-mom">A. Gassner <span style="font-size:10px; color:var(--muted)">(GK)</span></span>
+    <span class="ml-goals"><strong>Lord</strong> ×2</span>
+  </div>
+</details>
 
 <!-- ══════════════════════════════════════════
      PLAYER SEASON STATS
