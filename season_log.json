@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-10-18"
+    "last_updated": "2025-11-08"
   },
   "matches": [
     {
@@ -183,6 +183,28 @@
       "matchday": 10,
       "notes": "K. Moore 16'. Stoke: S. Thomas 61', L. Cissé 74', A. Phillips 87', M. Manhoef 90'. D. Hyam yellow 67' → Cleworth on immediately. Subs (WRX): Cleworth for Hyam 67', Amrizi for Broadhead 77'. Stoke subs: Manhoef for Rak-Sakyi 62', Rigo for Seko 67', Pearson for Baker 82'. Okonkwo 5.2 (season-low). Doyle 7.2 (best on night). Shots 7-5 (STO-WRX), xG 3.4-1.2, poss 52-48%, passes 162-168 (89-86% acc), shot acc 86-80%, tackles 11-24, beaten by opp 2-11, def line breaks through 6-2, tackle success 55-33%. Wrexham led 1-0 at halftime. Four goals conceded in second half.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-11-01",
+      "opponent": "Oxford United",
+      "home": true,
+      "score": "0-0",
+      "result": "D",
+      "competition": "EFL Championship",
+      "matchday": 11,
+      "notes": "Dominant but wasteful — couldn't break Oxford's low block. MoM: I. Kaboré.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-08",
+      "opponent": "Middlesbrough",
+      "home": false,
+      "score": "0-2",
+      "result": "L",
+      "competition": "EFL Championship",
+      "matchday": 12,
+      "notes": "Got outclassed at the Riverside. Wrexham failed to register a goal in back-to-back matches for the first time this season.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -333,6 +355,14 @@
     {
       "date": "2025-10-18",
       "description": "MD10 LOSS: 4-1 at Stoke City. Wrexham led 1-0 at halftime (Moore 16') then conceded four in the second half — Thomas 61', Cissé 74', Phillips 87', Manhoef 90'. Hyam yellow 67' forced early defensive sub (Cleworth). Okonkwo 5.2 (season-low). Beaten by opponent 11-2. Record: P10 W7 D1 L2, GF26 GA12, 22 pts. Wrexham top of Championship."
+    },
+    {
+      "date": "2025-11-01",
+      "description": "MD11 DRAW: 0-0 at home vs Oxford United. Dominant but couldn't break the low block — Kaboré named MoM. Record: P11 W7 D2 L2, GF26 GA12, 23 pts."
+    },
+    {
+      "date": "2025-11-08",
+      "description": "MD12 LOSS: 0-2 away at Middlesbrough. Outclassed at the Riverside — back-to-back blanks for the first time this season. Record: P12 W7 D2 L3, GF26 GA14, 23 pts."
     }
   ]
 }
