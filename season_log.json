@@ -214,7 +214,7 @@
       "result": "W",
       "competition": "EFL Championship",
       "matchday": 13,
-      "notes": "K. Moore hat-trick (4'/45'/61') — POTM 8.5. Coventry: Thomas-Asante 16', Wright 21'. Assists: Kaboré (1), Windass (1), Broadhead (1). Sub in: V. Torp on for Wright 60' (COV), R. Esse on for Sakamoto 90' (COV). Broadhead yellow 90'. Stats: poss 40-60, shots 6-5, xG 3.2-1.2, passes 136-231 (89-94% acc), 1 penalty, 2 saves each.",
+      "notes": "K. Moore hat-trick (4'/45'/74') — POTM 8.5. Coventry: Thomas-Asante 16', Wright 21'. Assists: Kaboré (1), Windass (1), Broadhead (1). Windass missed penalty 61'. Broadhead yellow 90'. Sub in: V. Torp on for Wright 60' (COV), R. Esse on for Sakamoto 90' (COV). Stats: poss 40-60, shots 6-5, xG 3.2-1.2, passes 136-231 (89-94% acc), 2 saves each.",
       "journal_entry": true
     }
   ],
@@ -276,15 +276,6 @@
       "fee": "$1.25m",
       "wage": "",
       "notes": "Deal agreed, completes when January transfer window opens. Price rating A — Excellent Deal (market value $925k). Board allocating $913,875 to transfer budget. Separate: C. Burton talks with Zagłębie Lubin broke down 05/10."
-    },
-    {
-      "date": "2025-11-01",
-      "player": "A. Okonkwo",
-      "direction": "out",
-      "club": "Unknown (TBC)",
-      "fee": "$400k",
-      "wage": "",
-      "notes": "Deal agreed, departure effective Jan 1. Bad Negotiation — market value $350k, best possible deal was $550k. Board note: Mason Webber flagged as development GK depth."
     }
   ],
   "injuries": [],
@@ -387,7 +378,7 @@
     },
     {
       "date": "2025-11-01",
-      "description": "MD13 WIN: 3-2 at home vs Coventry City. K. Moore hat-trick (4'/45'/61') — Man of the Match 8.5. Coventry led 1-2 after 21 minutes; Moore levelled on stroke of HT then completed the comeback in second half. Windass (1 AST), Kaboré (1 AST), Broadhead (1 AST). Yellow: Broadhead 90'. Poss 40-60%, xG 3.2-1.2. Record: P13 W8 D2 L3, GF29 GA16, 26 pts."
+      "description": "MD13 WIN: 3-2 at home vs Coventry City. K. Moore hat-trick (4'/45'/74') — Man of the Match 8.5. Coventry led 1-2 after 21 minutes; Moore levelled on stroke of HT then completed the comeback with the winner at 74'. Windass missed penalty 61'. Windass (1 AST), Kaboré (1 AST), Broadhead (1 AST). Yellow: Broadhead 90'. Poss 40-60%, xG 3.2-1.2. Record: P13 W8 D2 L3, GF29 GA16, 26 pts."
     }
   ]
 }
