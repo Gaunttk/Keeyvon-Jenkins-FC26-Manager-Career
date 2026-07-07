@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-11-01"
+    "last_updated": "2025-11-05"
   },
   "matches": [
     {
@@ -216,6 +216,50 @@
       "matchday": 13,
       "notes": "K. Moore hat-trick (4'/45'/74') — POTM 8.5. Coventry: Thomas-Asante 16', Wright 21'. Assists: Kaboré (1), Windass (1), Broadhead (1). Windass missed penalty 61'. Broadhead yellow 90'. Sub in: V. Torp on for Wright 60' (COV), R. Esse on for Sakamoto 90' (COV). Stats: poss 40-60, shots 6-5, xG 3.2-1.2, passes 136-231 (89-94% acc), 2 saves each.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-11-02",
+      "opponent": "Blackburn Rovers",
+      "home": false,
+      "score": "1-8",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "QTR",
+      "notes": "Wrexham youth 8-1. Scorers not confirmed from screenshots.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-02",
+      "opponent": "West Bromwich Albion",
+      "home": true,
+      "score": "0-9",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi Final",
+      "notes": "Lord, Ortega, Bianchi, Vargas, Dijkgraaf, Matthews (2), Martini, Horne. MoM: Dijkgraaf.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-02",
+      "opponent": "Birmingham City",
+      "home": true,
+      "score": "0-11",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Vargas (2), Ortega, Bianchi, Lord, Matthews (3), Martini, Dijkgraaf, Horne. MoM: Horne (1G 3A). Ratings: Matthews 10.0 (3G), Horne 10.0 (1G 2A), Martini 10.0 (1G 1A), Dijkgraaf 9.9 (1G), Ortega 8.8 (1G 2A), Bianchi 8.3 (1G 1A), Lord 7.7 (1G 2A), Vargas 7.4 (2G), Webber 7.1. Team xG: 8.0 from 23 shots (61% accuracy), pass acc 92%, dribble success 95%, tackle success 100%.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-05",
+      "opponent": "Portsmouth",
+      "home": false,
+      "score": "0-5",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 14,
+      "notes": "Windass 18', O'Brien 21', Moore 59', Broadhead 76'/87' (brace). Z. Swanson (POR) red card 36'. Subs (WRX) 73': Cadamarteri for Moore, Amrizi for Windass, Dobson for O'Brien, Cleworth for Doyle, Brunt for Hyam. Murphy on for Alli (POR) 79'. C. Chaplin (POR) yellow 90'. PotM: J. Rodríguez 7.6. Ratings: Moore 8.3, Cadamarteri 8.0, Broadhead 7.8, O'Brien 7.3, Kaboré 7.3, Okonkwo 7.1, Hyam 6.9, Doyle 6.9, Windass 6.8, Cacace 6.8, Dobson 6.7, Cleworth 6.7, Brunt 6.7, Sheaf 6.6, Amrizi 6.6. Shots 2-20 (POR-WRX), xG 0.6-8.0, poss 57-43%, passes 195-122 (90-85% acc), tackles 20-22 (50-23% success), interceptions 15-12, saves 8-1. Portsmouth down to 10 men from 36'.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -379,6 +423,14 @@
     {
       "date": "2025-11-01",
       "description": "MD13 WIN: 3-2 at home vs Coventry City. K. Moore hat-trick (4'/45'/74') — Man of the Match 8.5. Coventry led 1-2 after 21 minutes; Moore levelled on stroke of HT then completed the comeback with the winner at 74'. Windass missed penalty 61'. Windass (1 AST), Kaboré (1 AST), Broadhead (1 AST). Yellow: Broadhead 90'. Poss 40-60%, xG 3.2-1.2. Record: P13 W8 D2 L3, GF29 GA16, 26 pts."
+    },
+    {
+      "date": "2025-11-02",
+      "description": "YOUTH TOURNAMENT WINNERS. Youth Academy Rush Tournament sweep: beat Blackburn 8-1 (QTR), West Brom 9-0 (SF), Birmingham City 11-0 (Final). Three players rated 10.0 in the Final — N. Matthews (3G), V. Martini (1G 1A), O. Horne (1G 2A, MoM). P. Dijkgraaf 9.9. Total: 28 goals scored in three matches, 2 conceded."
+    },
+    {
+      "date": "2025-11-05",
+      "description": "MD14 WIN: 5-0 away at Portsmouth. Dominant from the 36' red card (Z. Swanson, POR). Windass 18', O'Brien 21', Moore 59', Broadhead 76'/87'. Rodríguez PotM (7.6). xG 8.0 from 20 shots. Record: P14 W9 D2 L3, GF34 GA16, 29 pts. 2nd in Championship, 8 pts behind Ipswich (37)."
     }
   ]
 }
