@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-10-25"
+    "last_updated": "2025-11-01"
   },
   "matches": [
     {
@@ -205,6 +205,17 @@
       "matchday": 12,
       "notes": "T. Conway 60'/80' (brace, both second-half). 0-0 at HT. WRX lineup: Ward (GK), Kaboré (RB), Hyam (RCB), Doyle (LCB), Cacace (LB), Rathbone (LCM), Dobson (RCM), Windass (CAM), Broadhead (RW), Moore (ST), Rodríguez (LW). WRX subs: Keillor-Dunn for Broadhead 78', Amrizi for Moore 87'. MBO subs: Hansen for Castledine 53', Browne for Sarmiento 67', Sène for Whittaker 78'. Best WRX ratings: Kaboré 7.0, Hyam 7.0, Rathbone 6.7, Dobson 6.6, Windass 6.5, Cacace 6.5, Ward 6.4. Shots 11-3 (MBO-WRX), xG 2.9-0.6, poss 57-43%, passes 186-144 (90-83% acc), interceptions 19-12, saves 1-6, tackle success 54-17%, beaten by opp 4-11.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-11-01",
+      "opponent": "Coventry City",
+      "home": true,
+      "score": "3-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 13,
+      "notes": "K. Moore hat-trick (4'/45'/61') — POTM 8.5. Coventry: Thomas-Asante 16', Wright 21'. Assists: Kaboré (1), Windass (1), Broadhead (1). Sub in: V. Torp on for Wright 60' (COV), R. Esse on for Sakamoto 90' (COV). Broadhead yellow 90'. Stats: poss 40-60, shots 6-5, xG 3.2-1.2, passes 136-231 (89-94% acc), 1 penalty, 2 saves each.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -233,12 +244,13 @@
       "wage": "£26.5k/w"
     },
     {
-      "date": "2025-08-30",
+      "date": "2025-10-30",
       "player": "C. Burton",
       "direction": "out",
-      "club": "AFC Hermannstadt",
-      "fee": "$570k",
-      "wage": ""
+      "club": "Kocaelispor",
+      "fee": "$400k",
+      "wage": "",
+      "notes": "Confirmed Oct 30. Earlier talks with AFC Hermannstadt and Zaglebbie Lubin both broke down. Board allocated $283,440 to transfer budget. Sale noted as Bad Negotiation — market value $350k, best possible deal was $550k."
     },
     {
       "date": "2025-08-31",
@@ -264,6 +276,15 @@
       "fee": "$1.25m",
       "wage": "",
       "notes": "Deal agreed, completes when January transfer window opens. Price rating A — Excellent Deal (market value $925k). Board allocating $913,875 to transfer budget. Separate: C. Burton talks with Zagłębie Lubin broke down 05/10."
+    },
+    {
+      "date": "2025-11-01",
+      "player": "A. Okonkwo",
+      "direction": "out",
+      "club": "Unknown (TBC)",
+      "fee": "$400k",
+      "wage": "",
+      "notes": "Deal agreed, departure effective Jan 1. Bad Negotiation — market value $350k, best possible deal was $550k. Board note: Mason Webber flagged as development GK depth."
     }
   ],
   "injuries": [],
@@ -363,6 +384,10 @@
     {
       "date": "2025-10-25",
       "description": "MD12 LOSS: 0-2 away at Middlesbrough. T. Conway 60'/80' brace — both goals in second half, 0-0 at HT. Wrexham had 3 shots (1 on target), xG 0.6 vs 2.9. Tackle success 17% vs 54%. Beaten by opponent 11-4. Kaboré and Hyam best on night (both 7.0). Record: P12 W7 D2 L3, GF26 GA14, 23 pts."
+    },
+    {
+      "date": "2025-11-01",
+      "description": "MD13 WIN: 3-2 at home vs Coventry City. K. Moore hat-trick (4'/45'/61') — Man of the Match 8.5. Coventry led 1-2 after 21 minutes; Moore levelled on stroke of HT then completed the comeback in second half. Windass (1 AST), Kaboré (1 AST), Broadhead (1 AST). Yellow: Broadhead 90'. Poss 40-60%, xG 3.2-1.2. Record: P13 W8 D2 L3, GF29 GA16, 26 pts."
     }
   ]
 }
