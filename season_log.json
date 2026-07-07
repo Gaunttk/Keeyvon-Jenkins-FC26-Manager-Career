@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-11-08"
+    "last_updated": "2025-10-25"
   },
   "matches": [
     {
@@ -185,18 +185,18 @@
       "journal_entry": true
     },
     {
-      "date": "2025-11-01",
+      "date": "2025-10-22",
       "opponent": "Oxford United",
       "home": true,
       "score": "0-0",
       "result": "D",
       "competition": "EFL Championship",
       "matchday": 11,
-      "notes": "Dominant but wasteful — couldn't break Oxford's low block. MoM: I. Kaboré.",
+      "notes": "Kaboré yellow 21', subbed off 70' (Thomason on). WRX subs: Broadhead for Windass 70', Thomason for Kaboré 70', Amrizi for Moore 78'. OXF subs: Płacheta for Emakhu 70', Harris for Lankshear 78', Peart-Harris for Jeon Jin Woo 89'. Lineup: Okonkwo (GK), Kaboré (RB, 7.9 MoM), Hyam (RCB, 7.6), Doyle (LCB, 7.1), Cacace (LB, 7.5), O'Brien (LCM, 7.3), Sheaf (RCM, 6.5), Windass (CAM, 7.1), Keillor-Dunn (CAM, 6.6), Rodríguez (LW, 6.4 PotM), Moore (ST, 5.7). Shots 6-8 (WRX-OXF), xG 1.8-1.2, poss 57-43%, passes 207-106 (85-87% acc), interceptions 10-22, saves 4-4, tackle success 38-38%.",
       "journal_entry": true
     },
     {
-      "date": "2025-11-08",
+      "date": "2025-10-25",
       "opponent": "Middlesbrough",
       "home": false,
       "score": "0-2",
@@ -357,11 +357,11 @@
       "description": "MD10 LOSS: 4-1 at Stoke City. Wrexham led 1-0 at halftime (Moore 16') then conceded four in the second half — Thomas 61', Cissé 74', Phillips 87', Manhoef 90'. Hyam yellow 67' forced early defensive sub (Cleworth). Okonkwo 5.2 (season-low). Beaten by opponent 11-2. Record: P10 W7 D1 L2, GF26 GA12, 22 pts. Wrexham top of Championship."
     },
     {
-      "date": "2025-11-01",
+      "date": "2025-10-22",
       "description": "MD11 DRAW: 0-0 at home vs Oxford United. Dominant but couldn't break the low block — Kaboré named MoM. Record: P11 W7 D2 L2, GF26 GA12, 23 pts."
     },
     {
-      "date": "2025-11-08",
+      "date": "2025-10-25",
       "description": "MD12 LOSS: 0-2 away at Middlesbrough. T. Conway 60'/80' brace — both goals in second half, 0-0 at HT. Wrexham had 3 shots (1 on target), xG 0.6 vs 2.9. Tackle success 17% vs 54%. Beaten by opponent 11-4. Kaboré and Hyam best on night (both 7.0). Record: P12 W7 D2 L3, GF26 GA14, 23 pts."
     }
   ]
