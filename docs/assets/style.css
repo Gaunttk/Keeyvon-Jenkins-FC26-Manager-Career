@@ -2182,3 +2182,17 @@ body {
   .standings-table { font-size: 12px; }
   .standings-table th, .standings-table td { padding: 5px 4px; }
 }
+
+/* ── Club Crests ── */
+.ml-crest {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.comp-summary-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
