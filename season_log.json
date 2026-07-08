@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-11-08"
+    "last_updated": "2025-11-22"
   },
   "matches": [
     {
@@ -271,6 +271,16 @@
       "matchday": 15,
       "notes": "N. Broadhead 19', C. Kelman 54' (CHA), K. Moore 79', G. Dobson 89' (off bench, 3 min after coming on). I. Kaboré yellow 16'. Charlton sub: C. Coventry for Z. Mitchell 75'. WRX subs 86': Cadamarteri for Moore, Amrizi for Broadhead, Rathbone for O'Brien, Dobson for Sheaf. Lineup: Okonkwo (GK), Kaboré (RB, 7.3), Hyam (RCB, 7.2), Doyle (LCB, 6.3), Cacace (LB, 7.1), O'Brien (LCM, 6.6), Sheaf (RCM, 7.3, 1A), Windass (CAM, 6.6, 1A), Rodríguez (LW, 7.0), Broadhead (RW, 6.5, 1G), Moore (ST, 7.0, 1G). Subs: Cadamarteri 5.9, Amrizi 6.1, Rathbone 6.2, Dobson 6.6 (1G). Shots 9-4 (WRX-CHA), xG 2.0-1.8, poss 39-61%, passes 131-213 (85-91% acc), tackles 21-6 (7-4 won, 33-67% success), interceptions 11-14, saves 1-4, shot acc 78-50%, dribble success 89-97%, corners 2-0, yellow cards 1-0.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-11-22",
+      "opponent": "Ipswich",
+      "home": false,
+      "score": "1-0",
+      "result": "L",
+      "competition": "EFL Championship",
+      "matchday": 16,
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -442,6 +452,14 @@
     {
       "date": "2025-11-05",
       "description": "MD14 WIN: 5-0 away at Portsmouth. Dominant from the 36' red card (Z. Swanson, POR). Windass 18', O'Brien 21', Moore 59', Broadhead 76'/87'. Rodríguez PotM (7.6). xG 8.0 from 20 shots. Record: P14 W9 D2 L3, GF34 GA16, 29 pts. 2nd in Championship, 8 pts behind Ipswich (37)."
+    },
+    {
+      "date": "2025-11-08",
+      "description": "MD15 WIN: 3-1 vs Charlton Athletic. Dobson off bench 86', scored 89'. Moore 12G on season. Record: P15 W10 D2 L3, GF37 GA17, 32 pts. 2nd in Championship."
+    },
+    {
+      "date": "2025-11-22",
+      "description": "MD16 LOSS: 1-0 away at Ipswich. Fought hard but couldn't generate in the final third. Record: P16 W10 D2 L4, GF37 GA18, 32 pts. 2nd in Championship."
     }
   ]
 }
