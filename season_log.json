@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-11-05"
+    "last_updated": "2025-11-08"
   },
   "matches": [
     {
@@ -259,6 +259,17 @@
       "competition": "EFL Championship",
       "matchday": 14,
       "notes": "Windass 18', O'Brien 21', Moore 59', Broadhead 76'/87' (brace). Z. Swanson (POR) red card 36'. Subs (WRX) 73': Cadamarteri for Moore, Amrizi for Windass, Dobson for O'Brien, Cleworth for Doyle, Brunt for Hyam. Murphy on for Alli (POR) 79'. C. Chaplin (POR) yellow 90'. PotM: J. Rodríguez 7.6. Ratings: Moore 8.3, Cadamarteri 8.0, Broadhead 7.8, O'Brien 7.3, Kaboré 7.3, Okonkwo 7.1, Hyam 6.9, Doyle 6.9, Windass 6.8, Cacace 6.8, Dobson 6.7, Cleworth 6.7, Brunt 6.7, Sheaf 6.6, Amrizi 6.6. Shots 2-20 (POR-WRX), xG 0.6-8.0, poss 57-43%, passes 195-122 (90-85% acc), tackles 20-22 (50-23% success), interceptions 15-12, saves 8-1. Portsmouth down to 10 men from 36'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-08",
+      "opponent": "Charlton Athletic",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 15,
+      "notes": "N. Broadhead 19', C. Kelman 54' (CHA), K. Moore 79', G. Dobson 89' (off bench, 3 min after coming on). I. Kaboré yellow 16'. Charlton sub: C. Coventry for Z. Mitchell 75'. WRX subs 86': Cadamarteri for Moore, Amrizi for Broadhead, Rathbone for O'Brien, Dobson for Sheaf. Lineup: Okonkwo (GK), Kaboré (RB, 7.3), Hyam (RCB, 7.2), Doyle (LCB, 6.3), Cacace (LB, 7.1), O'Brien (LCM, 6.6), Sheaf (RCM, 7.3, 1A), Windass (CAM, 6.6, 1A), Rodríguez (LW, 7.0), Broadhead (RW, 6.5, 1G), Moore (ST, 7.0, 1G). Subs: Cadamarteri 5.9, Amrizi 6.1, Rathbone 6.2, Dobson 6.6 (1G). Shots 9-4 (WRX-CHA), xG 2.0-1.8, poss 39-61%, passes 131-213 (85-91% acc), tackles 21-6 (7-4 won, 33-67% success), interceptions 11-14, saves 1-4, shot acc 78-50%, dribble success 89-97%, corners 2-0, yellow cards 1-0.",
       "journal_entry": true
     }
   ],
