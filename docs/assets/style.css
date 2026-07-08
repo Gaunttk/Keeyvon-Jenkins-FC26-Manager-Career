@@ -2196,3 +2196,217 @@ body {
   object-fit: contain;
   flex-shrink: 0;
 }
+
+/* ─── ACADEMY PROFILE CARDS ─── */
+.acad-profile-card {
+  background: var(--charcoal);
+  border-left: 3px solid var(--gold);
+  margin-bottom: 10px;
+}
+.acad-profile-card:last-child { margin-bottom: 0; }
+.acad-profile-card.elite { border-left-color: #FFD700; }
+
+.acad-card-top {
+  display: flex;
+  gap: 14px;
+  padding: 14px 14px 10px;
+  align-items: flex-start;
+}
+
+.acad-jersey-wrap {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.acad-jersey-svg {
+  width: 64px;
+  height: 72px;
+  display: block;
+}
+.acad-jersey-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.acad-profile-body {
+  flex: 1;
+  min-width: 0;
+}
+.acad-profile-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 19px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.acad-profile-meta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.acad-pos-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.acad-pos-badge.gk  { background: rgba(212,168,67,0.15); color: var(--gold); }
+.acad-pos-badge.def { background: rgba(74,144,196,0.15); color: #4A90C4; }
+.acad-pos-badge.mid { background: rgba(91,173,114,0.15); color: #5BAD72; }
+.acad-pos-badge.atk { background: rgba(200,16,46,0.15); color: #E04060; }
+
+.acad-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 6px;
+}
+.acad-stat {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+}
+.acad-stat strong { color: var(--light); font-size: 13px; }
+
+.acad-dev-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.acad-dev-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+}
+.acad-dev-item strong { color: var(--light); }
+.acad-dev-item.hi strong { color: var(--gold); }
+.acad-dev-item.warn strong { color: #f0a030; }
+
+.acad-card-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+.acad-ovr {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--gold);
+  line-height: 1;
+}
+.acad-ovr-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+.acad-pot {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  color: rgba(212,168,67,0.6);
+  white-space: nowrap;
+}
+.acad-pot strong {
+  color: var(--gold);
+  font-size: 12px;
+  display: block;
+  margin-bottom: 1px;
+}
+
+/* Bio / Profile collapsible */
+.acad-bio {
+  border-top: 1px solid var(--mid);
+}
+.acad-bio-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.acad-bio-summary::-webkit-details-marker { display: none; }
+.acad-bio-summary::marker { content: ''; }
+.acad-bio-toggle-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.acad-bio-line { flex: 1; height: 1px; background: var(--mid); }
+.acad-bio-arrow {
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+.acad-bio:not([open]) .acad-bio-arrow { transform: rotate(-90deg); }
+
+.acad-bio-content {
+  padding: 2px 14px 14px;
+}
+.acad-bio-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 12px;
+}
+.acad-bio-text strong { color: var(--light); }
+
+.acad-family-section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.acad-family-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.acad-family-item {
+  background: rgba(0,0,0,0.25);
+  padding: 7px 10px;
+}
+.acad-family-item-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+.acad-family-item-value {
+  font-size: 12px;
+  color: var(--light);
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .acad-family-grid { grid-template-columns: 1fr; }
+  .acad-card-top { gap: 10px; }
+  .acad-jersey-svg { width: 54px; height: 60px; }
+  .acad-profile-name { font-size: 17px; }
+}
