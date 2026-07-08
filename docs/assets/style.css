@@ -2160,24 +2160,42 @@ body {
   border-bottom: 1px solid var(--mid);
   color: var(--light);
   font-size: 13px;
+  background: var(--off-black);
 }
 .standings-table td:nth-child(1) { text-align: left; color: var(--muted); font-size: 11px; min-width: 28px; }
 .standings-table td:nth-child(2) { text-align: left; color: var(--white); font-weight: 700; font-size: 13px; }
 .standings-table td:last-child { font-weight: 800; font-size: 15px; color: var(--white); }
-.standings-table .wrexham-row td { background: rgba(200,16,46,0.1); }
+.standings-table .wrexham-row td { background: rgba(200,16,46,0.14) !important; }
 .standings-table .wrexham-row td:nth-child(1) { color: var(--red); font-weight: 700; }
 .standings-table .wrexham-row td:nth-child(2) { color: var(--red); }
 .standings-table .wrexham-row td:last-child { color: var(--gold); }
 .standings-table .table-gap td {
-  color: var(--steel);
   font-size: 10px;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 5px 6px;
-  background: var(--charcoal);
+  letter-spacing: 1.5px;
+  text-align: left;
+  padding: 4px 8px;
   border-bottom: 1px solid var(--mid);
-  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
 }
+.standings-table .table-gap.gap-promo td {
+  color: #4CAF50;
+  background: rgba(76,175,80,0.12);
+}
+.standings-table .table-gap.gap-playoff td {
+  color: var(--dispatch-blue);
+  background: rgba(74,144,196,0.12);
+}
+.standings-table .table-gap.gap-relegate td {
+  color: var(--red);
+  background: rgba(200,16,46,0.12);
+}
+.standings-table .table-promo td { background: rgba(76,175,80,0.05); }
+.standings-table .table-playoff td { background: rgba(74,144,196,0.05); }
+.standings-table .table-relegate td { background: rgba(200,16,46,0.05); }
+.standings-table tr:hover td { background: var(--charcoal) !important; }
+.st-club { display: flex; align-items: center; gap: 6px; }
+.st-crest { width: 18px; height: 18px; object-fit: contain; flex-shrink: 0; }
 @media (max-width: 480px) {
   .standings-table { font-size: 12px; }
   .standings-table th, .standings-table td { padding: 5px 4px; }
