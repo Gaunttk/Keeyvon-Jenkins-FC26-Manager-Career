@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-11-22"
+    "last_updated": "2025-12-06"
   },
   "matches": [
     {
@@ -281,6 +281,39 @@
       "competition": "EFL Championship",
       "matchday": 16,
       "journal_entry": true
+    },
+    {
+      "date": "2025-11-26",
+      "opponent": "Bristol City",
+      "home": true,
+      "score": "2-2",
+      "result": "D",
+      "competition": "EFL Championship",
+      "matchday": 17,
+      "notes": "Windass 58', Moore 78'. Led twice, couldn't hold either lead.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-29",
+      "opponent": "Blackburn Rovers",
+      "home": true,
+      "score": "0-3",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 18,
+      "notes": "Broadhead 18', JL Rodriguez 55', O'Brien 62'. MoM: O'Brien. Controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-06",
+      "opponent": "Preston",
+      "home": false,
+      "score": "3-4",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 19,
+      "notes": "Moore 16', Broadhead 66', JL Rodriguez 83', Amrizi 93'. Miraculous comeback.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -460,6 +493,18 @@
     {
       "date": "2025-11-22",
       "description": "MD16 LOSS: 1-0 away at Ipswich. Fought hard but couldn't generate in the final third. Record: P16 W10 D2 L4, GF37 GA18, 32 pts. 2nd in Championship."
+    },
+    {
+      "date": "2025-11-26",
+      "description": "MD17 DRAW: 2-2 vs Bristol City at home. Led twice — Windass 58', Moore 78' — but Bristol City equalized both times. Record: P17 W10 D3 L4, GF39 GA20, 33 pts."
+    },
+    {
+      "date": "2025-11-29",
+      "description": "MD18 WIN: 3-0 vs Blackburn Rovers at home. Broadhead 18', JL Rodriguez 55', O'Brien 62'. Controlled from start to finish. MoM: O'Brien. Record: P18 W11 D3 L4, GF42 GA20, 36 pts."
+    },
+    {
+      "date": "2025-12-06",
+      "description": "MD19 WIN: 4-3 away at Preston. Miraculous comeback. Moore 16', Broadhead 66', JL Rodriguez 83', Amrizi 93' (stoppage time winner). Record: P19 W12 D3 L4, GF46 GA23, 39 pts."
     }
   ]
 }
