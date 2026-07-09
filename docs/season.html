@@ -184,7 +184,7 @@
     /* ── Player Stats Table ── */
     .stats-header, .stats-row {
       display: grid;
-      grid-template-columns: 1fr 50px 36px 36px 36px 50px 60px;
+      grid-template-columns: 1fr 50px 36px 36px 50px 60px;
       gap: 4px;
       padding: 8px 16px;
       align-items: center;
@@ -239,10 +239,10 @@
       .match-log-header > *:nth-child(n+5),
       .match-log-row > *:nth-child(n+5) { display: none; }
       .stats-header, .stats-row {
-        grid-template-columns: 1fr 36px 36px 36px 50px;
+        grid-template-columns: 1fr 36px 36px 50px;
       }
-      .stats-header > *:nth-child(n+6),
-      .stats-row > *:nth-child(n+6) { display: none; }
+      .stats-header > *:nth-child(n+5),
+      .stats-row > *:nth-child(n+5) { display: none; }
     }
   </style>
 <link rel="manifest" href="manifest.json">
@@ -299,7 +299,7 @@ if ('serviceWorker' in navigator) {
     <div class="record-label">Draws</div>
   </div>
   <div class="record-cell">
-    <div class="record-num red">4</div>
+    <div class="record-num red">5</div>
     <div class="record-label">Losses</div>
   </div>
   <div class="record-cell">
@@ -317,7 +317,7 @@ if ('serviceWorker' in navigator) {
 <details class="comp-accordion" open>
   <summary class="comp-summary">
     <span class="comp-summary-name"><img class="comp-summary-logo" src="assets/photos/efl-championship.png" alt="">EFL Championship</span>
-    <span class="comp-summary-stats"><strong>P15 W10 D2 L3</strong> &nbsp;· 32 pts &nbsp;GF37 GA17 GD+20</span>
+    <span class="comp-summary-stats"><strong>P16 W10 D2 L4</strong> &nbsp;· 32 pts &nbsp;GF37 GA18 GD+19</span>
     <span class="comp-summary-arrow">▾</span>
   </summary>
 
@@ -329,6 +329,16 @@ if ('serviceWorker' in navigator) {
     <span style="text-align:center">Result</span>
     <span>Man of the Match</span>
     <span>Goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 22, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/ipswich-town.png" alt="">Ipswich Town</div><div class="ml-comp">EFL Championship · MD16</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 0–1</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals">— (Wrexham 0, Ipswich 1)</span>
   </div>
 
   <div class="match-log-row">
@@ -609,7 +619,6 @@ if ('serviceWorker' in navigator) {
   <span style="text-align:center">Apps</span>
   <span style="text-align:center">G</span>
   <span style="text-align:center">A</span>
-  <span style="text-align:center">Mins</span>
   <span style="text-align:center">Avg RR</span>
   <span style="text-align:right">Source</span>
 </div>
@@ -621,7 +630,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">11</span>
   <span class="s-num highlight">6</span>
   <span class="s-num highlight">3</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">8.0</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD10-15</span>
 </div>
@@ -631,7 +639,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">8</span>
   <span class="s-num highlight">6</span>
   <span class="s-num highlight">3</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">7.6</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓</span>
 </div>
@@ -641,7 +648,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">14</span>
   <span class="s-num highlight">12</span>
   <span class="s-num highlight">3</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">7.5</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-15 ✓</span>
 </div>
@@ -651,7 +657,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">14</span>
   <span class="s-num highlight">6</span>
   <span class="s-num highlight">7</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">7.1</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD10-15</span>
 </div>
@@ -661,7 +666,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">15</span>
   <span class="s-num highlight">1</span>
   <span class="s-num highlight">4</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">7.0</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD10-15</span>
 </div>
@@ -671,7 +675,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">7</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">553</span>
   <span class="s-rating">6.9</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-8 ✓ (unused sub MD9)</span>
 </div>
@@ -681,7 +684,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">11</span>
   <span class="s-num highlight">1</span>
   <span class="s-num highlight">2</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">6.9</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓ + MD11,MD13-15</span>
 </div>
@@ -691,7 +693,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">7</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">565</span>
   <span class="s-rating">6.8</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓</span>
 </div>
@@ -701,7 +702,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">13</span>
   <span class="s-num">0</span>
   <span class="s-num highlight">1</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">6.8</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓ + MD8-15 (excl. MD12)</span>
 </div>
@@ -711,7 +711,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">6</span>
   <span class="s-num highlight">1</span>
   <span class="s-num highlight">1</span>
-  <span class="s-mins">110</span>
   <span class="s-rating">6.7</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-8 ✓ (unused sub MD9)</span>
 </div>
@@ -721,7 +720,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">4</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">282</span>
   <span class="s-rating">6.6</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-3,8-9 ✓</span>
 </div>
@@ -731,7 +729,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">8</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">693</span>
   <span class="s-rating">6.6</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓</span>
 </div>
@@ -741,7 +738,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">7</span>
   <span class="s-num highlight">1</span>
   <span class="s-num highlight">1</span>
-  <span class="s-mins">184</span>
   <span class="s-rating">6.5</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7,9 ✓ (unused sub MD8)</span>
 </div>
@@ -751,7 +747,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">3</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">208</span>
   <span class="s-rating">6.7</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-2,9 ✓ (unused sub MD8)</span>
 </div>
@@ -761,7 +756,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">10</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">906</span>
   <span class="s-rating">6.5</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓</span>
 </div>
@@ -771,7 +765,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">6</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">348</span>
   <span class="s-rating">6.4</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7,9 ✓ (unused sub MD8)</span>
 </div>
@@ -781,7 +774,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">11</span>
   <span class="s-num highlight">3</span>
   <span class="s-num">0</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">6.5</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD12-15</span>
 </div>
@@ -791,7 +783,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">12</span>
   <span class="s-num highlight">3</span>
   <span class="s-num highlight">2</span>
-  <span class="s-mins">—</span>
   <span class="s-rating">6.5</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-8 ✓ + MD12-15</span>
 </div>
@@ -801,7 +792,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">3</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">125</span>
   <span class="s-rating">6.4</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓</span>
 </div>
@@ -811,7 +801,6 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">8</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-mins">205</span>
   <span class="s-rating">6.2</span>
   <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓</span>
 </div>
