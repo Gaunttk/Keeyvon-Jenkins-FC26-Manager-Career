@@ -2223,6 +2223,11 @@ body {
 }
 .acad-profile-card:last-child { margin-bottom: 0; }
 .acad-profile-card.elite { border-left-color: #FFD700; }
+.acad-profile-card.faded { opacity: 0.55; }
+.acad-profile-card.def { border-left-color: #4A90C4; }
+.acad-profile-card.mid { border-left-color: #5BAD72; }
+.acad-profile-card.atk { border-left-color: var(--red); }
+.acad-stat.hi strong { color: var(--white); }
 
 .acad-card-top {
   display: flex;

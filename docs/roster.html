@@ -50,27 +50,11 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <div class="stats-bar" style="grid-template-columns: repeat(4,1fr);">
-  <div class="stat-cell">
-    <span class="stat-number">35</span>
-    <span class="stat-label">Senior</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" style="color:var(--gold)">68.5</span>
-    <span class="stat-label">Avg OVR</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number">10</span>
-    <span class="stat-label">Academy</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" style="color:var(--gold)">59.3</span>
-    <span class="stat-label">Acad OVR</span>
-  </div>
+  <div class="stat-cell"><span class="stat-number">34</span><span class="stat-label">Senior</span></div>
+  <div class="stat-cell"><span class="stat-number" style="color:var(--gold)">68.1</span><span class="stat-label">Avg OVR</span></div>
+  <div class="stat-cell"><span class="stat-number">10</span><span class="stat-label">Academy</span></div>
+  <div class="stat-cell"><span class="stat-number" style="color:var(--gold)">58.8</span><span class="stat-label">Acad OVR</span></div>
 </div>
-
-<!-- ═══════════════════════════════════════════ -->
-<!--  SENIOR SQUAD                              -->
-<!-- ═══════════════════════════════════════════ -->
 
 <nav class="anchor-nav" style="display:flex;gap:10px;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--mid);font-size:0.78rem;font-family:'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase;">
   <span style="color:var(--gold);font-weight:700;">Jump to:</span>
@@ -84,1095 +68,1559 @@ if ('serviceWorker' in navigator) {
 <div class="section-label" style="padding: 14px 12px 6px; margin:0;">Senior Squad</div>
 
 <!-- ── GOALKEEPERS ── -->
-<div id="sec-gk" class="squad-group" data-type="gk">
-  <div class="squad-group-header">
-    <span class="squad-group-title">Goalkeepers</span>
-    <div class="sort-bar">
-      <span class="sort-bar-label">Sort:</span>
-      <button class="sort-btn" onclick="sortGroup(this,'ovr')">OVR</button>
-      <button class="sort-btn" onclick="sortGroup(this,'age')">AGE</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pac')">SPD</button>
-      <button class="sort-btn" onclick="sortGroup(this,'sho')">KIC</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pas')">POS</button>
-      <button class="sort-btn" onclick="sortGroup(this,'dri')">REF</button>
-      <button class="sort-btn" onclick="sortGroup(this,'def')">HAN</button>
-      <button class="sort-btn" onclick="sortGroup(this,'phy')">DIV</button>
-    </div>
-  </div>
-  <div class="squad-cards-list">
-
-    <div class="squad-card gk" data-ovr="70" data-age="32" data-pac="46" data-sho="68" data-pas="68" data-dri="69" data-def="69" data-phy="71">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge gk">GK</span>
-        <div class="squad-name">D. Ward</div>
-        <div class="squad-meta">Age 32 · Important · Dynamic · Dev Complete</div>
-        <div class="squad-stats">
-          <span class="sq-stat">SPD <strong>46</strong></span>
-          <span class="sq-stat">KIC <strong>68</strong></span>
-          <span class="sq-stat">POS <strong>68</strong></span>
-          <span class="sq-stat hi">REF <strong>69</strong></span>
-          <span class="sq-stat">HAN <strong>69</strong></span>
-          <span class="sq-stat hi">DIV <strong>71</strong></span>
+<details class="dc-group" open id="sec-gk">
+  <summary class="dc-group-summary">
+    <span>GK · Goalkeepers</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <div class="acad-profile-card">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">GK</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">D. Ward</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge gk">GK</span>Age 32 · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>SPD</strong> 46</span>
+            <span class="acad-stat"><strong>KIC</strong> 68</span>
+            <span class="acad-stat"><strong>POS</strong> 68</span>
+            <span class="acad-stat hi"><strong>REF</strong> 69</span>
+            <span class="acad-stat hi"><strong>HAN</strong> 69</span>
+            <span class="acad-stat hi"><strong>DIV</strong> 71</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">70</div>
+          <span class="acad-ovr-label">OVR</span>
         </div>
       </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">70</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
     </div>
 
-    <div class="squad-card gk" data-ovr="70" data-age="23" data-pac="44" data-sho="68" data-pas="70" data-dri="70" data-def="68" data-phy="69">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge gk">GK</span>
-        <div class="squad-name">A. Okonkwo</div>
-        <div class="squad-meta">Age 23 · Important · Dynamic · 70→71 ETA 34w</div>
-        <div class="squad-stats">
-          <span class="sq-stat">SPD <strong>44</strong></span>
-          <span class="sq-stat">KIC <strong>68</strong></span>
-          <span class="sq-stat hi">POS <strong>70</strong></span>
-          <span class="sq-stat hi">REF <strong>70</strong></span>
-          <span class="sq-stat">HAN <strong>68</strong></span>
-          <span class="sq-stat">DIV <strong>69</strong></span>
+    <div class="acad-profile-card">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">GK</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">A. Okonkwo</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge gk">GK</span>Age 23 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>SPD</strong> 44</span>
+            <span class="acad-stat"><strong>KIC</strong> 68</span>
+            <span class="acad-stat hi"><strong>POS</strong> 70</span>
+            <span class="acad-stat hi"><strong>REF</strong> 70</span>
+            <span class="acad-stat"><strong>HAN</strong> 68</span>
+            <span class="acad-stat"><strong>DIV</strong> 69</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 70→71 · ETA 34w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">70</div>
+          <span class="acad-ovr-label">OVR</span>
         </div>
       </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">70</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
     </div>
-
-
   </div>
-</div>
+</details>
 
 <!-- ── DEFENDERS ── -->
-<div id="sec-def" class="squad-group" data-type="def">
-  <div class="squad-group-header">
-    <span class="squad-group-title">Defenders</span>
-    <div class="sort-bar">
-      <span class="sort-bar-label">Sort:</span>
-      <button class="sort-btn" onclick="sortGroup(this,'ovr')">OVR</button>
-      <button class="sort-btn" onclick="sortGroup(this,'age')">AGE</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pac')">PAC</button>
-      <button class="sort-btn" onclick="sortGroup(this,'sho')">SHO</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pas')">PAS</button>
-      <button class="sort-btn" onclick="sortGroup(this,'dri')">DRI</button>
-      <button class="sort-btn" onclick="sortGroup(this,'def')">DEF</button>
-      <button class="sort-btn" onclick="sortGroup(this,'phy')">PHY</button>
+<details class="dc-group" open id="sec-def">
+  <summary class="dc-group-summary">
+    <span>DEF · Defenders</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <!-- Left Backs -->
+    <div class="acad-profile-card def elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">LB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">L. Cacace</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">LB</span>Age 24 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 72</span>
+            <span class="acad-stat"><strong>SHO</strong> 60</span>
+            <span class="acad-stat"><strong>PAS</strong> 67</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 71</span>
+            <span class="acad-stat"><strong>DEF</strong> 69</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 73</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 72→73 · ETA 33w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">LB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">G. Thomason</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">LB</span>Age 24 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 62</span>
+            <span class="acad-stat"><strong>SHO</strong> 61</span>
+            <span class="acad-stat"><strong>PAS</strong> 67</span>
+            <span class="acad-stat"><strong>DRI</strong> 68</span>
+            <span class="acad-stat"><strong>DEF</strong> 65</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 71</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 69→70 · ETA 31w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">69</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">LB</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">S. Revan</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">LB</span>Age 21 · Sporadic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 66</span>
+            <span class="acad-stat"><strong>SHO</strong> 44</span>
+            <span class="acad-stat"><strong>PAS</strong> 55</span>
+            <span class="acad-stat"><strong>DRI</strong> 62</span>
+            <span class="acad-stat"><strong>DEF</strong> 60</span>
+            <span class="acad-stat"><strong>PHY</strong> 60</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Burton Albion · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">64</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Backs -->
+    <div class="acad-profile-card def elite faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">RB</text>
+          </svg>
+          <div class="acad-jersey-num">On Loan</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">I. Kaboré</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">RB</span>Age 24 · On Loan (Man City)</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 86</span>
+            <span class="acad-stat"><strong>SHO</strong> 44</span>
+            <span class="acad-stat"><strong>PAS</strong> 64</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 72</span>
+            <span class="acad-stat"><strong>DEF</strong> 66</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 74</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 72→73 · ETA 11w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">RB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">R. Longman</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">RB</span>Age 24 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 78</span>
+            <span class="acad-stat"><strong>SHO</strong> 66</span>
+            <span class="acad-stat"><strong>PAS</strong> 62</span>
+            <span class="acad-stat"><strong>DRI</strong> 68</span>
+            <span class="acad-stat"><strong>DEF</strong> 62</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 73</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic · Whipped Pass</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">68</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+    <!-- Centre Backs -->
+    <div class="acad-profile-card def elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">C. Doyle</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 21 · Dynamic · Also LB</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 58</span>
+            <span class="acad-stat"><strong>SHO</strong> 44</span>
+            <span class="acad-stat"><strong>PAS</strong> 67</span>
+            <span class="acad-stat"><strong>DRI</strong> 68</span>
+            <span class="acad-stat hi"><strong>DEF</strong> 71</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 76</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic · Active</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">D. Hyam</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 29 · Captain</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 51</span>
+            <span class="acad-stat"><strong>SHO</strong> 32</span>
+            <span class="acad-stat"><strong>PAS</strong> 54</span>
+            <span class="acad-stat"><strong>DRI</strong> 58</span>
+            <span class="acad-stat hi"><strong>DEF</strong> 71</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 76</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic · Active</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">71</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">Z. Vyner</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 28 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 68</span>
+            <span class="acad-stat"><strong>SHO</strong> 38</span>
+            <span class="acad-stat"><strong>PAS</strong> 56</span>
+            <span class="acad-stat"><strong>DRI</strong> 62</span>
+            <span class="acad-stat hi"><strong>DEF</strong> 70</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 72</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Active</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">70</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">C. Coady</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 32 · Important</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 43</span>
+            <span class="acad-stat"><strong>SHO</strong> 56</span>
+            <span class="acad-stat hi"><strong>PAS</strong> 70</span>
+            <span class="acad-stat"><strong>DRI</strong> 63</span>
+            <span class="acad-stat hi"><strong>DEF</strong> 72</span>
+            <span class="acad-stat"><strong>PHY</strong> 65</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Charlton Ath · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">70</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">M. Cleworth</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 22 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 67</span>
+            <span class="acad-stat"><strong>SHO</strong> 29</span>
+            <span class="acad-stat"><strong>PAS</strong> 56</span>
+            <span class="acad-stat"><strong>DRI</strong> 63</span>
+            <span class="acad-stat"><strong>DEF</strong> 68</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 75</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 69→70 · ETA 15w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">69</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">L. Brunt</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 24 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 79</span>
+            <span class="acad-stat"><strong>SHO</strong> 49</span>
+            <span class="acad-stat"><strong>PAS</strong> 58</span>
+            <span class="acad-stat"><strong>DRI</strong> 64</span>
+            <span class="acad-stat"><strong>DEF</strong> 66</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 74</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 68→69 · ETA 40w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">68</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Listed</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">T. O'Connor</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 26 · Transfer Listed</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 66</span>
+            <span class="acad-stat"><strong>SHO</strong> 57</span>
+            <span class="acad-stat"><strong>PAS</strong> 62</span>
+            <span class="acad-stat"><strong>DRI</strong> 60</span>
+            <span class="acad-stat"><strong>DEF</strong> 63</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 72</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item warn"><strong>Status</strong> Transfer listed · welcomes a move</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">65</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card def faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CB</text>
+          </svg>
+          <div class="acad-jersey-num">Prospect</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">A. James</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 20 · Also RB · Exp. contract</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 67</span>
+            <span class="acad-stat"><strong>SHO</strong> 27</span>
+            <span class="acad-stat"><strong>PAS</strong> 38</span>
+            <span class="acad-stat"><strong>DRI</strong> 46</span>
+            <span class="acad-stat"><strong>DEF</strong> 54</span>
+            <span class="acad-stat"><strong>PHY</strong> 64</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item warn"><strong>Contract</strong> Expiring · Dynamic 54→55 ETA 9w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">54</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="squad-cards-list">
-
-    <!-- LEFT BACKS -->
-    <div class="squad-card def" data-ovr="72" data-age="24" data-pac="72" data-sho="60" data-pas="67" data-dri="71" data-def="69" data-phy="73">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">LB</span>
-        <div class="squad-name">L. Cacace</div>
-        <div class="squad-meta">Age 24 · Important · Dynamic · 72→73 ETA 33w</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>72</strong></span>
-          <span class="sq-stat">SHO <strong>60</strong></span>
-          <span class="sq-stat">PAS <strong>67</strong></span>
-          <span class="sq-stat hi">DRI <strong>71</strong></span>
-          <span class="sq-stat">DEF <strong>69</strong></span>
-          <span class="sq-stat hi">PHY <strong>73</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="69" data-age="24" data-pac="62" data-sho="61" data-pas="67" data-dri="68" data-def="65" data-phy="71">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">LB</span>
-        <div class="squad-name">G. Thomason</div>
-        <div class="squad-meta">Age 24 · Important · Dynamic · 69→70 ETA 31w</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>62</strong></span>
-          <span class="sq-stat">SHO <strong>61</strong></span>
-          <span class="sq-stat">PAS <strong>67</strong></span>
-          <span class="sq-stat">DRI <strong>68</strong></span>
-          <span class="sq-stat">DEF <strong>65</strong></span>
-          <span class="sq-stat hi">PHY <strong>71</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">69</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card def faded" data-ovr="64" data-age="21" data-pac="66" data-sho="44" data-pas="55" data-dri="62" data-def="60" data-phy="60">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">LB</span>
-        <div class="squad-name">S. Revan</div>
-        <div class="squad-meta">Age 21 · Sporadic · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>66</strong></span>
-          <span class="sq-stat">SHO <strong>44</strong></span>
-          <span class="sq-stat">PAS <strong>55</strong></span>
-          <span class="sq-stat">DRI <strong>62</strong></span>
-          <span class="sq-stat">DEF <strong>60</strong></span>
-          <span class="sq-stat">PHY <strong>60</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">64</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-    <!-- RIGHT BACKS -->
-    <div class="squad-card def faded" data-ovr="72" data-age="24" data-pac="86" data-sho="44" data-pas="64" data-dri="72" data-def="66" data-phy="74">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">RB</span>
-        <div class="squad-name">I. Kaboré</div>
-        <div class="squad-meta">Age 24 · Important · Loan (Man City) · 72→73 ETA 11w</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>86</strong></span>
-          <span class="sq-stat">SHO <strong>44</strong></span>
-          <span class="sq-stat">PAS <strong>64</strong></span>
-          <span class="sq-stat hi">DRI <strong>72</strong></span>
-          <span class="sq-stat">DEF <strong>66</strong></span>
-          <span class="sq-stat hi">PHY <strong>74</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">On loan</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="68" data-age="24" data-pac="78" data-sho="66" data-pas="62" data-dri="68" data-def="62" data-phy="73">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">RB</span>
-        <div class="squad-name">R. Longman</div>
-        <div class="squad-meta">Age 24 · Important · Dynamic · Dev Active</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>78</strong></span>
-          <span class="sq-stat">SHO <strong>66</strong></span>
-          <span class="sq-stat">PAS <strong>62</strong></span>
-          <span class="sq-stat">DRI <strong>68</strong></span>
-          <span class="sq-stat">DEF <strong>62</strong></span>
-          <span class="sq-stat hi">PHY <strong>73</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">68</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <!-- CENTRE BACKS -->
-    <div class="squad-card def" data-ovr="72" data-age="21" data-pac="58" data-sho="44" data-pas="67" data-dri="68" data-def="71" data-phy="76">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">C. Doyle</div>
-        <div class="squad-meta">Age 21 · Important · Dynamic · Dev Active</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>58</strong></span>
-          <span class="sq-stat">SHO <strong>44</strong></span>
-          <span class="sq-stat">PAS <strong>67</strong></span>
-          <span class="sq-stat">DRI <strong>68</strong></span>
-          <span class="sq-stat hi">DEF <strong>71</strong></span>
-          <span class="sq-stat hi">PHY <strong>76</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="71" data-age="29" data-pac="51" data-sho="32" data-pas="54" data-dri="58" data-def="71" data-phy="76">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">D. Hyam</div>
-        <div class="squad-meta">Age 29 · Important · Dynamic · Dev Active · Captain</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>51</strong></span>
-          <span class="sq-stat">SHO <strong>32</strong></span>
-          <span class="sq-stat">PAS <strong>54</strong></span>
-          <span class="sq-stat">DRI <strong>58</strong></span>
-          <span class="sq-stat hi">DEF <strong>71</strong></span>
-          <span class="sq-stat hi">PHY <strong>76</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">71</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev cru">Captain</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="70" data-age="28" data-pac="68" data-sho="38" data-pas="56" data-dri="62" data-def="70" data-phy="72">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">Z. Vyner</div>
-        <div class="squad-meta">Age 28 · Important · Dynamic · Dev Active</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>68</strong></span>
-          <span class="sq-stat">SHO <strong>38</strong></span>
-          <span class="sq-stat">PAS <strong>56</strong></span>
-          <span class="sq-stat">DRI <strong>62</strong></span>
-          <span class="sq-stat hi">DEF <strong>70</strong></span>
-          <span class="sq-stat hi">PHY <strong>72</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">70</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card def faded" data-ovr="70" data-age="32" data-pac="43" data-sho="56" data-pas="70" data-dri="63" data-def="72" data-phy="65">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">C. Coady</div>
-        <div class="squad-meta">Age 32 · Important · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>43</strong></span>
-          <span class="sq-stat">SHO <strong>56</strong></span>
-          <span class="sq-stat hi">PAS <strong>70</strong></span>
-          <span class="sq-stat">DRI <strong>63</strong></span>
-          <span class="sq-stat hi">DEF <strong>72</strong></span>
-          <span class="sq-stat">PHY <strong>65</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">70</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="69" data-age="22" data-pac="67" data-sho="29" data-pas="56" data-dri="63" data-def="68" data-phy="75">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">M. Cleworth</div>
-        <div class="squad-meta">Age 22 · Important · Dynamic · 69→70 ETA 15w</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>67</strong></span>
-          <span class="sq-stat">SHO <strong>29</strong></span>
-          <span class="sq-stat">PAS <strong>56</strong></span>
-          <span class="sq-stat">DRI <strong>63</strong></span>
-          <span class="sq-stat">DEF <strong>68</strong></span>
-          <span class="sq-stat hi">PHY <strong>75</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">69</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="68" data-age="24" data-pac="79" data-sho="49" data-pas="58" data-dri="64" data-def="66" data-phy="74">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">L. Brunt</div>
-        <div class="squad-meta">Age 24 · Important · Dynamic · 68→69 ETA 40w</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>79</strong></span>
-          <span class="sq-stat">SHO <strong>49</strong></span>
-          <span class="sq-stat">PAS <strong>58</strong></span>
-          <span class="sq-stat">DRI <strong>64</strong></span>
-          <span class="sq-stat">DEF <strong>66</strong></span>
-          <span class="sq-stat hi">PHY <strong>74</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">68</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="65" data-age="26" data-pac="66" data-sho="57" data-pas="62" data-dri="60" data-def="63" data-phy="72">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">T. O'Connor</div>
-        <div class="squad-meta">Age 26 · Rotation · Dynamic · Transfer listed</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>66</strong></span>
-          <span class="sq-stat">SHO <strong>57</strong></span>
-          <span class="sq-stat">PAS <strong>62</strong></span>
-          <span class="sq-stat">DRI <strong>60</strong></span>
-          <span class="sq-stat">DEF <strong>63</strong></span>
-          <span class="sq-stat hi">PHY <strong>72</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">65</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev dec">Listed</div>
-      </div>
-    </div>
-
-    <div class="squad-card def" data-ovr="54" data-age="20" data-pac="67" data-sho="27" data-pas="38" data-dri="46" data-def="54" data-phy="64">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge def">CB</span>
-        <div class="squad-name">A. James</div>
-        <div class="squad-meta">Age 20 · Prospect · Dynamic · Exp. contract</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>67</strong></span>
-          <span class="sq-stat">SHO <strong>27</strong></span>
-          <span class="sq-stat">PAS <strong>38</strong></span>
-          <span class="sq-stat">DRI <strong>46</strong></span>
-          <span class="sq-stat">DEF <strong>54</strong></span>
-          <span class="sq-stat">PHY <strong>64</strong></span>
-        </div>
-        <div class="squad-alt-pos">Also plays: RB</div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">54</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev dec">Exp. ctr.</div>
-      </div>
-    </div>
-
-  </div>
-</div>
+</details>
 
 <!-- ── MIDFIELDERS ── -->
-<div id="sec-mid" class="squad-group" data-type="mid">
-  <div class="squad-group-header">
-    <span class="squad-group-title">Midfielders</span>
-    <div class="sort-bar">
-      <span class="sort-bar-label">Sort:</span>
-      <button class="sort-btn" onclick="sortGroup(this,'ovr')">OVR</button>
-      <button class="sort-btn" onclick="sortGroup(this,'age')">AGE</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pac')">PAC</button>
-      <button class="sort-btn" onclick="sortGroup(this,'sho')">SHO</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pas')">PAS</button>
-      <button class="sort-btn" onclick="sortGroup(this,'dri')">DRI</button>
-      <button class="sort-btn" onclick="sortGroup(this,'def')">DEF</button>
-      <button class="sort-btn" onclick="sortGroup(this,'phy')">PHY</button>
+<details class="dc-group" open id="sec-mid">
+  <summary class="dc-group-summary">
+    <span>MID · Midfielders</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <div class="acad-profile-card mid elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="16" fill="white" text-anchor="middle">CDM</text>
+          </svg>
+          <div class="acad-jersey-num">Crucial</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">B. Sheaf</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CDM</span>Age 27 · Crucial</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 55</span>
+            <span class="acad-stat"><strong>SHO</strong> 56</span>
+            <span class="acad-stat hi"><strong>PAS</strong> 71</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 71</span>
+            <span class="acad-stat hi"><strong>DEF</strong> 72</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 74</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 73→74 · ETA 13w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">73</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CM</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">L. O'Brien</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CM</span>Age 26 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 66</span>
+            <span class="acad-stat"><strong>SHO</strong> 62</span>
+            <span class="acad-stat"><strong>PAS</strong> 66</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 75</span>
+            <span class="acad-stat"><strong>DEF</strong> 68</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 71</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 72→73 · ETA 12w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="16" fill="white" text-anchor="middle">CAM</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">J. Windass</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CAM</span>Age 31 · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 83</span>
+            <span class="acad-stat hi"><strong>SHO</strong> 72</span>
+            <span class="acad-stat"><strong>PAS</strong> 68</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 73</span>
+            <span class="acad-stat"><strong>DEF</strong> 35</span>
+            <span class="acad-stat"><strong>PHY</strong> 66</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">LM</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">N. Broadhead</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">LM</span>Age 27 · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 76</span>
+            <span class="acad-stat hi"><strong>SHO</strong> 72</span>
+            <span class="acad-stat"><strong>PAS</strong> 68</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 74</span>
+            <span class="acad-stat"><strong>DEF</strong> 37</span>
+            <span class="acad-stat"><strong>PHY</strong> 67</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CM</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">G. Dobson</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CM</span>Age 27 · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 54</span>
+            <span class="acad-stat"><strong>SHO</strong> 59</span>
+            <span class="acad-stat"><strong>PAS</strong> 68</span>
+            <span class="acad-stat"><strong>DRI</strong> 68</span>
+            <span class="acad-stat"><strong>DEF</strong> 68</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 77</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">70</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CM</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">O. Rathbone</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CM</span>Age 28 · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 82</span>
+            <span class="acad-stat"><strong>SHO</strong> 60</span>
+            <span class="acad-stat"><strong>PAS</strong> 64</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 70</span>
+            <span class="acad-stat"><strong>DEF</strong> 64</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 76</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">69</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="16" fill="white" text-anchor="middle">CAM</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">D. Keillor-Dunn</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CAM</span>Age 27 · Also ST · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 80</span>
+            <span class="acad-stat"><strong>SHO</strong> 68</span>
+            <span class="acad-stat"><strong>PAS</strong> 63</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 71</span>
+            <span class="acad-stat"><strong>DEF</strong> 39</span>
+            <span class="acad-stat"><strong>PHY</strong> 65</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">68</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+    <div class="acad-profile-card mid faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CM</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">E. Lee</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CM</span>Age 30 · Rotation</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 67</span>
+            <span class="acad-stat"><strong>SHO</strong> 66</span>
+            <span class="acad-stat"><strong>PAS</strong> 65</span>
+            <span class="acad-stat"><strong>DRI</strong> 68</span>
+            <span class="acad-stat"><strong>DEF</strong> 61</span>
+            <span class="acad-stat"><strong>PHY</strong> 68</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Doncaster · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">67</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CM</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">A. Cannon</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CM</span>Age 29 · Sporadic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 70</span>
+            <span class="acad-stat"><strong>SHO</strong> 57</span>
+            <span class="acad-stat"><strong>PAS</strong> 62</span>
+            <span class="acad-stat"><strong>DRI</strong> 66</span>
+            <span class="acad-stat"><strong>DEF</strong> 61</span>
+            <span class="acad-stat"><strong>PHY</strong> 66</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Burton Albion · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">64</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card mid faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">CM</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">H. Ashfield</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CM</span>Age 19 · Prospect</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 62</span>
+            <span class="acad-stat"><strong>SHO</strong> 51</span>
+            <span class="acad-stat"><strong>PAS</strong> 54</span>
+            <span class="acad-stat"><strong>DRI</strong> 57</span>
+            <span class="acad-stat"><strong>DEF</strong> 50</span>
+            <span class="acad-stat"><strong>PHY</strong> 55</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Cheltenham · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">56</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="squad-cards-list">
-
-    <div class="squad-card mid" data-ovr="73" data-age="27" data-pac="55" data-sho="56" data-pas="71" data-dri="71" data-def="72" data-phy="74">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CDM</span>
-        <div class="squad-name">B. Sheaf</div>
-        <div class="squad-meta">Age 27 · Crucial · Dynamic · 73→74 ETA 13w</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>55</strong></span>
-          <span class="sq-stat">SHO <strong>56</strong></span>
-          <span class="sq-stat hi">PAS <strong>71</strong></span>
-          <span class="sq-stat hi">DRI <strong>71</strong></span>
-          <span class="sq-stat hi">DEF <strong>72</strong></span>
-          <span class="sq-stat hi">PHY <strong>74</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">73</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev cru">Crucial</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid" data-ovr="72" data-age="26" data-pac="66" data-sho="62" data-pas="66" data-dri="75" data-def="68" data-phy="71">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CM</span>
-        <div class="squad-name">L. O'Brien</div>
-        <div class="squad-meta">Age 26 · Important · Dynamic · 72→73 ETA 12w</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>66</strong></span>
-          <span class="sq-stat">SHO <strong>62</strong></span>
-          <span class="sq-stat">PAS <strong>66</strong></span>
-          <span class="sq-stat hi">DRI <strong>75</strong></span>
-          <span class="sq-stat">DEF <strong>68</strong></span>
-          <span class="sq-stat hi">PHY <strong>71</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid" data-ovr="72" data-age="31" data-pac="83" data-sho="72" data-pas="68" data-dri="73" data-def="35" data-phy="66">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CAM</span>
-        <div class="squad-name">J. Windass</div>
-        <div class="squad-meta">Age 31 · Important · Dynamic · Dev Complete</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>83</strong></span>
-          <span class="sq-stat hi">SHO <strong>72</strong></span>
-          <span class="sq-stat">PAS <strong>68</strong></span>
-          <span class="sq-stat hi">DRI <strong>73</strong></span>
-          <span class="sq-stat">DEF <strong>35</strong></span>
-          <span class="sq-stat">PHY <strong>66</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid" data-ovr="72" data-age="27" data-pac="76" data-sho="72" data-pas="68" data-dri="74" data-def="37" data-phy="67">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">LM</span>
-        <div class="squad-name">N. Broadhead</div>
-        <div class="squad-meta">Age 27 · Important · Dynamic · Dev Complete</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>76</strong></span>
-          <span class="sq-stat hi">SHO <strong>72</strong></span>
-          <span class="sq-stat">PAS <strong>68</strong></span>
-          <span class="sq-stat hi">DRI <strong>74</strong></span>
-          <span class="sq-stat">DEF <strong>37</strong></span>
-          <span class="sq-stat">PHY <strong>67</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid" data-ovr="70" data-age="27" data-pac="54" data-sho="59" data-pas="68" data-dri="68" data-def="68" data-phy="77">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CM</span>
-        <div class="squad-name">G. Dobson</div>
-        <div class="squad-meta">Age 27 · Important · Dynamic · Dev Complete</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>54</strong></span>
-          <span class="sq-stat">SHO <strong>59</strong></span>
-          <span class="sq-stat">PAS <strong>68</strong></span>
-          <span class="sq-stat">DRI <strong>68</strong></span>
-          <span class="sq-stat">DEF <strong>68</strong></span>
-          <span class="sq-stat hi">PHY <strong>77</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">70</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-
-    <div class="squad-card mid" data-ovr="69" data-age="28" data-pac="82" data-sho="60" data-pas="64" data-dri="70" data-def="64" data-phy="76">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CM</span>
-        <div class="squad-name">O. Rathbone</div>
-        <div class="squad-meta">Age 28 · Important · Dynamic · Dev Complete</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>82</strong></span>
-          <span class="sq-stat">SHO <strong>60</strong></span>
-          <span class="sq-stat">PAS <strong>64</strong></span>
-          <span class="sq-stat hi">DRI <strong>70</strong></span>
-          <span class="sq-stat">DEF <strong>64</strong></span>
-          <span class="sq-stat hi">PHY <strong>76</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">69</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid" data-ovr="68" data-age="27" data-pac="80" data-sho="68" data-pas="63" data-dri="71" data-def="39" data-phy="65">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CAM</span>
-        <div class="squad-name">D. Keillor-Dunn</div>
-        <div class="squad-meta">Age 27 · Important · Dynamic · Dev Complete</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>80</strong></span>
-          <span class="sq-stat">SHO <strong>68</strong></span>
-          <span class="sq-stat">PAS <strong>63</strong></span>
-          <span class="sq-stat hi">DRI <strong>71</strong></span>
-          <span class="sq-stat">DEF <strong>39</strong></span>
-          <span class="sq-stat">PHY <strong>65</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">68</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid faded" data-ovr="67" data-age="30" data-pac="67" data-sho="66" data-pas="65" data-dri="68" data-def="61" data-phy="68">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CM</span>
-        <div class="squad-name">E. Lee</div>
-        <div class="squad-meta">Age 30 · Rotation · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>67</strong></span>
-          <span class="sq-stat">SHO <strong>66</strong></span>
-          <span class="sq-stat">PAS <strong>65</strong></span>
-          <span class="sq-stat">DRI <strong>68</strong></span>
-          <span class="sq-stat">DEF <strong>61</strong></span>
-          <span class="sq-stat">PHY <strong>68</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">67</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid faded" data-ovr="64" data-age="29" data-pac="70" data-sho="57" data-pas="62" data-dri="66" data-def="61" data-phy="66">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CM</span>
-        <div class="squad-name">A. Cannon</div>
-        <div class="squad-meta">Age 29 · Sporadic · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>70</strong></span>
-          <span class="sq-stat">SHO <strong>57</strong></span>
-          <span class="sq-stat">PAS <strong>62</strong></span>
-          <span class="sq-stat">DRI <strong>66</strong></span>
-          <span class="sq-stat">DEF <strong>61</strong></span>
-          <span class="sq-stat">PHY <strong>66</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">64</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-    <div class="squad-card mid faded" data-ovr="56" data-age="19" data-pac="62" data-sho="51" data-pas="54" data-dri="57" data-def="50" data-phy="55">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge mid">CM</span>
-        <div class="squad-name">H. Ashfield</div>
-        <div class="squad-meta">Age 19 · Prospect · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>62</strong></span>
-          <span class="sq-stat">SHO <strong>51</strong></span>
-          <span class="sq-stat">PAS <strong>54</strong></span>
-          <span class="sq-stat">DRI <strong>57</strong></span>
-          <span class="sq-stat">DEF <strong>50</strong></span>
-          <span class="sq-stat">PHY <strong>55</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">56</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-  </div>
-</div>
+</details>
 
 <!-- ── ATTACKERS ── -->
-<div id="sec-atk" class="squad-group" data-type="atk">
-  <div class="squad-group-header">
-    <span class="squad-group-title">Attackers</span>
-    <div class="sort-bar">
-      <span class="sort-bar-label">Sort:</span>
-      <button class="sort-btn" onclick="sortGroup(this,'ovr')">OVR</button>
-      <button class="sort-btn" onclick="sortGroup(this,'age')">AGE</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pac')">PAC</button>
-      <button class="sort-btn" onclick="sortGroup(this,'sho')">SHO</button>
-      <button class="sort-btn" onclick="sortGroup(this,'pas')">PAS</button>
-      <button class="sort-btn" onclick="sortGroup(this,'dri')">DRI</button>
-      <button class="sort-btn" onclick="sortGroup(this,'def')">DEF</button>
-      <button class="sort-btn" onclick="sortGroup(this,'phy')">PHY</button>
+<details class="dc-group" open id="sec-atk">
+  <summary class="dc-group-summary">
+    <span>ATK · Attackers</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <div class="acad-profile-card atk elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">K. Moore</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 32 · Declining</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 64</span>
+            <span class="acad-stat hi"><strong>SHO</strong> 70</span>
+            <span class="acad-stat"><strong>PAS</strong> 56</span>
+            <span class="acad-stat"><strong>DRI</strong> 66</span>
+            <span class="acad-stat"><strong>DEF</strong> 45</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 80</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item warn"><strong>Dev</strong> Declining 72→71 · ETA 5w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">Y. Amrizi</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 21 · Also LW · Free Aug 2025</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 64</span>
+            <span class="acad-stat hi"><strong>SHO</strong> 74</span>
+            <span class="acad-stat"><strong>PAS</strong> 54</span>
+            <span class="acad-stat"><strong>DRI</strong> 67</span>
+            <span class="acad-stat"><strong>DEF</strong> 27</span>
+            <span class="acad-stat"><strong>PHY</strong> —</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic · PHY/Mental/Tech attrs pending</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">LW</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">JL. Rodriguez</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">LW</span>Age 27 · Also RW · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 85</span>
+            <span class="acad-stat"><strong>SHO</strong> 68</span>
+            <span class="acad-stat"><strong>PAS</strong> 66</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 75</span>
+            <span class="acad-stat"><strong>DEF</strong> 28</span>
+            <span class="acad-stat"><strong>PHY</strong> 64</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete · Finesse Shot+ / Rapid</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr" style="color:var(--gold)">72</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">R. Hardie</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 28 · Important</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 82</span>
+            <span class="acad-stat"><strong>SHO</strong> 67</span>
+            <span class="acad-stat"><strong>PAS</strong> 51</span>
+            <span class="acad-stat"><strong>DRI</strong> 69</span>
+            <span class="acad-stat"><strong>DEF</strong> 27</span>
+            <span class="acad-stat"><strong>PHY</strong> 63</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Huddersfield · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">68</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">S. Smith</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 27 · Dev Complete</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 73</span>
+            <span class="acad-stat"><strong>SHO</strong> 66</span>
+            <span class="acad-stat"><strong>PAS</strong> 57</span>
+            <span class="acad-stat"><strong>DRI</strong> 65</span>
+            <span class="acad-stat"><strong>DEF</strong> 42</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 75</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Complete</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">68</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Important</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">J. Rodriguez</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 35 · Declining</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 50</span>
+            <span class="acad-stat hi"><strong>SHO</strong> 69</span>
+            <span class="acad-stat"><strong>PAS</strong> 63</span>
+            <span class="acad-stat"><strong>DRI</strong> 65</span>
+            <span class="acad-stat"><strong>DEF</strong> 38</span>
+            <span class="acad-stat"><strong>PHY</strong> 63</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item warn"><strong>Dev</strong> Declining 66→65 · ETA 4w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">66</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Rotation</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">B. Cadamarteri</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 20 · Dynamic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 77</span>
+            <span class="acad-stat"><strong>SHO</strong> 63</span>
+            <span class="acad-stat"><strong>PAS</strong> 47</span>
+            <span class="acad-stat"><strong>DRI</strong> 63</span>
+            <span class="acad-stat"><strong>DEF</strong> 32</span>
+            <span class="acad-stat"><strong>PHY</strong> 64</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev</strong> Dynamic 65→66 · ETA 13w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">65</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">P. Mullin</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 30 · Rotation</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 69</span>
+            <span class="acad-stat"><strong>SHO</strong> 67</span>
+            <span class="acad-stat"><strong>PAS</strong> 56</span>
+            <span class="acad-stat"><strong>DRI</strong> 63</span>
+            <span class="acad-stat"><strong>DEF</strong> 39</span>
+            <span class="acad-stat"><strong>PHY</strong> 65</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Bradford City · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">65</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="acad-profile-card atk faded">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="62" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="20" fill="white" text-anchor="middle">ST</text>
+          </svg>
+          <div class="acad-jersey-num">Loan Ret.</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">M. Faal</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">ST</span>Age 22 · Sporadic</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 73</span>
+            <span class="acad-stat"><strong>SHO</strong> 59</span>
+            <span class="acad-stat"><strong>PAS</strong> 44</span>
+            <span class="acad-stat"><strong>DRI</strong> 61</span>
+            <span class="acad-stat"><strong>DEF</strong> 24</span>
+            <span class="acad-stat"><strong>PHY</strong> 68</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Loan</strong> Cheltenham Town · back Jun 2026</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">62</div>
+          <span class="acad-ovr-label">OVR</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="squad-cards-list">
+</details>
 
-    <div class="squad-card atk" data-ovr="72" data-age="32" data-pac="64" data-sho="70" data-pas="56" data-dri="66" data-def="45" data-phy="80">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">K. Moore</div>
-        <div class="squad-meta">Age 32 · Important · Declining · 72→71</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>64</strong></span>
-          <span class="sq-stat hi">SHO <strong>70</strong></span>
-          <span class="sq-stat">PAS <strong>56</strong></span>
-          <span class="sq-stat">DRI <strong>66</strong></span>
-          <span class="sq-stat">DEF <strong>45</strong></span>
-          <span class="sq-stat hi">PHY <strong>80</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev dec">Declining</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk" data-ovr="72" data-age="21" data-pac="64" data-sho="74" data-pas="54" data-dri="67" data-def="27" data-phy="0">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">Y. Amrizi</div>
-        <div class="squad-meta">Age 21 · Important · Free signing Aug 2025</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>64</strong></span>
-          <span class="sq-stat hi">SHO <strong>74</strong></span>
-          <span class="sq-stat">PAS <strong>54</strong></span>
-          <span class="sq-stat">DRI <strong>67</strong></span>
-          <span class="sq-stat">DEF <strong>27</strong></span>
-          <span class="sq-stat">PHY <strong>—</strong></span>
-        </div>
-        <div class="squad-alt-pos">Also plays: LW · Physical/Mental/Technical attrs pending</div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr elite">72</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk" data-ovr="0" data-age="0" data-pac="0" data-sho="0" data-pas="0" data-dri="0" data-def="0" data-phy="0">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">JL. Rodriguez</div>
-        <div class="squad-meta">Rotation · Free transfer Aug 2025 · Attrs pending</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>—</strong></span>
-          <span class="sq-stat">SHO <strong>—</strong></span>
-          <span class="sq-stat">PAS <strong>—</strong></span>
-          <span class="sq-stat">DRI <strong>—</strong></span>
-          <span class="sq-stat">DEF <strong>—</strong></span>
-          <span class="sq-stat">PHY <strong>—</strong></span>
-        </div>
-        <div class="squad-alt-pos">New signing — attributes pending screenshots</div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">—</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev dyn">Dynamic</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk" data-ovr="68" data-age="28" data-pac="82" data-sho="67" data-pas="51" data-dri="69" data-def="27" data-phy="63">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">R. Hardie</div>
-        <div class="squad-meta">Age 28 · Important · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>82</strong></span>
-          <span class="sq-stat">SHO <strong>67</strong></span>
-          <span class="sq-stat">PAS <strong>51</strong></span>
-          <span class="sq-stat hi">DRI <strong>69</strong></span>
-          <span class="sq-stat">DEF <strong>27</strong></span>
-          <span class="sq-stat">PHY <strong>63</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">68</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk faded" data-ovr="68" data-age="27" data-pac="73" data-sho="66" data-pas="57" data-dri="65" data-def="42" data-phy="75">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">S. Smith</div>
-        <div class="squad-meta">Age 27 · Important · Dynamic · Dev Complete</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>73</strong></span>
-          <span class="sq-stat">SHO <strong>66</strong></span>
-          <span class="sq-stat">PAS <strong>57</strong></span>
-          <span class="sq-stat">DRI <strong>65</strong></span>
-          <span class="sq-stat">DEF <strong>42</strong></span>
-          <span class="sq-stat hi">PHY <strong>75</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr good">68</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk" data-ovr="66" data-age="35" data-pac="50" data-sho="69" data-pas="63" data-dri="65" data-def="38" data-phy="63">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">J. Rodriguez</div>
-        <div class="squad-meta">Age 35 · Important · Declining · 66→65</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>50</strong></span>
-          <span class="sq-stat hi">SHO <strong>69</strong></span>
-          <span class="sq-stat">PAS <strong>63</strong></span>
-          <span class="sq-stat">DRI <strong>65</strong></span>
-          <span class="sq-stat">DEF <strong>38</strong></span>
-          <span class="sq-stat">PHY <strong>63</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">66</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev dec">Declining</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk" data-ovr="65" data-age="20" data-pac="77" data-sho="63" data-pas="47" data-dri="63" data-def="32" data-phy="64">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">B. Cadamarteri</div>
-        <div class="squad-meta">Age 20 · Rotation · Dynamic · 65→66 ETA 13w</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>77</strong></span>
-          <span class="sq-stat">SHO <strong>63</strong></span>
-          <span class="sq-stat">PAS <strong>47</strong></span>
-          <span class="sq-stat">DRI <strong>63</strong></span>
-          <span class="sq-stat">DEF <strong>32</strong></span>
-          <span class="sq-stat">PHY <strong>64</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">65</div>
-        <div class="squad-ovr-label">OVR</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk faded" data-ovr="65" data-age="30" data-pac="69" data-sho="67" data-pas="56" data-dri="63" data-def="39" data-phy="65">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">P. Mullin</div>
-        <div class="squad-meta">Age 30 · Rotation · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat">PAC <strong>69</strong></span>
-          <span class="sq-stat">SHO <strong>67</strong></span>
-          <span class="sq-stat">PAS <strong>56</strong></span>
-          <span class="sq-stat">DRI <strong>63</strong></span>
-          <span class="sq-stat">DEF <strong>39</strong></span>
-          <span class="sq-stat">PHY <strong>65</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">65</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-    <div class="squad-card atk faded" data-ovr="62" data-age="22" data-pac="73" data-sho="59" data-pas="44" data-dri="61" data-def="24" data-phy="68">
-      <div class="squad-card-body">
-        <span class="squad-pos-badge atk">ST</span>
-        <div class="squad-name">M. Faal</div>
-        <div class="squad-meta">Age 22 · Sporadic · Loan return</div>
-        <div class="squad-stats">
-          <span class="sq-stat hi">PAC <strong>73</strong></span>
-          <span class="sq-stat">SHO <strong>59</strong></span>
-          <span class="sq-stat">PAS <strong>44</strong></span>
-          <span class="sq-stat">DRI <strong>61</strong></span>
-          <span class="sq-stat">DEF <strong>24</strong></span>
-          <span class="sq-stat">PHY <strong>68</strong></span>
-        </div>
-      </div>
-      <div class="squad-card-right">
-        <div class="squad-ovr">62</div>
-        <div class="squad-ovr-label">OVR</div>
-        <div class="squad-dev loan">Loan ret.</div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════ -->
-<!--  YOUTH ACADEMY                             -->
-<!-- ═══════════════════════════════════════════ -->
-
+<!-- ═══ YOUTH ACADEMY ═══ -->
 <div id="sec-academy" class="section-label" style="padding: 14px 12px 6px; margin:0; color: var(--gold); border-bottom:none;">Youth Academy</div>
 
-<div class="depth-section">
-  <div class="depth-pos-header">Goalkeepers</div>
+<details class="dc-group" open>
+  <summary class="dc-group-summary">
+    <span>GK · Goalkeepers</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <div class="acad-profile-card elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-31"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-31)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-31)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-31)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">31</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">M. Webber</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge gk">GK</span>Age 16 · Right · 6'2" / 167 lbs</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>Div</strong> 50</span>
+            <span class="acad-stat"><strong>Han</strong> 57</span>
+            <span class="acad-stat"><strong>Kic</strong> 52</span>
+            <span class="acad-stat hi"><strong>Ref</strong> 66</span>
+            <span class="acad-stat"><strong>Spd</strong> 39</span>
+            <span class="acad-stat"><strong>Pos</strong> 63</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Goalkeeper</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 59 · ETA 9w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">58</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 70–94</div>
+        </div>
+      </div>
+    </div>
 
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">M. Webber</div>
-        <div class="youth-pos-age">GK · Age 16 · Right · 6'2" / 167 lbs</div>
+    <div class="acad-profile-card">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-32"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-32)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-32)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-32)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">32</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">A. Gassner</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge gk">GK</span>Age 16 · Left · 6'1" / 180 lbs</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>Div</strong> 53</span>
+            <span class="acad-stat hi"><strong>Han</strong> 59</span>
+            <span class="acad-stat"><strong>Kic</strong> 53</span>
+            <span class="acad-stat"><strong>Ref</strong> 58</span>
+            <span class="acad-stat"><strong>Spd</strong> 34</span>
+            <span class="acad-stat"><strong>Pos</strong> 59</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Goalkeeper</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 59 · ETA 16w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">58</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 58–78</div>
+        </div>
       </div>
-      <div class="youth-right">
-        <div class="youth-ovr">58</div>
-        <div class="youth-ovr-label">OVR</div>
-      </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 70–94</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Goalkeeper</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 59 · ETA 9w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>Div</strong> 50</span>
-      <span class="youth-detail"><strong>Han</strong> 57</span>
-      <span class="youth-detail"><strong>Kic</strong> 52</span>
-      <span class="youth-detail"><strong>Ref</strong> 66</span>
-      <span class="youth-detail"><strong>Spd</strong> 39</span>
-      <span class="youth-detail"><strong>Pos</strong> 63</span>
     </div>
   </div>
+</details>
 
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">A. Gassner</div>
-        <div class="youth-pos-age">GK · Age 16 · Left · 6'1" / 180 lbs</div>
-      </div>
-      <div class="youth-right">
-        <div class="youth-ovr">58</div>
-        <div class="youth-ovr-label">OVR</div>
+<details class="dc-group" open>
+  <summary class="dc-group-summary">
+    <span>DEF · Defenders</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <div class="acad-profile-card def elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-33"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-33)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-33)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-33)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">33</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">J. Lord</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">LB</span>Age 17 · Left · 5'7" / 152 lbs · Also CB · LW</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 79</span>
+            <span class="acad-stat"><strong>SHO</strong> 38</span>
+            <span class="acad-stat"><strong>PAS</strong> 48</span>
+            <span class="acad-stat"><strong>DRI</strong> 57</span>
+            <span class="acad-stat"><strong>DEF</strong> 57</span>
+            <span class="acad-stat"><strong>PHY</strong> 61</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Attacking Wingback</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 63 · ETA 1w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">63</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 67–91</div>
+        </div>
       </div>
     </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 58–78</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Goalkeeper</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 59 · ETA 16w</span>
+
+    <div class="acad-profile-card def">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-34"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-34)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-34)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-34)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">34</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">O. Horne</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">RB</span>Age 17 · Right · 5'8" / 145 lbs · Also CB</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 73</span>
+            <span class="acad-stat"><strong>SHO</strong> 38</span>
+            <span class="acad-stat"><strong>PAS</strong> 51</span>
+            <span class="acad-stat"><strong>DRI</strong> 61</span>
+            <span class="acad-stat"><strong>DEF</strong> 55</span>
+            <span class="acad-stat"><strong>PHY</strong> 57</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Wingback</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 61 · ETA 14w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">60</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 60–75</div>
+        </div>
+      </div>
     </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>Div</strong> 53</span>
-      <span class="youth-detail"><strong>Han</strong> 59</span>
-      <span class="youth-detail"><strong>Kic</strong> 53</span>
-      <span class="youth-detail"><strong>Ref</strong> 58</span>
-      <span class="youth-detail"><strong>Spd</strong> 34</span>
-      <span class="youth-detail"><strong>Pos</strong> 59</span>
+
+    <div class="acad-profile-card def elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-35"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-35)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-35)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-35)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">35</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">V. Martini</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge def">CB</span>Age 16 · Left · 5'11" / 169 lbs · Aug 2025 intake</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 59</span>
+            <span class="acad-stat"><strong>SHO</strong> 30</span>
+            <span class="acad-stat"><strong>PAS</strong> 39</span>
+            <span class="acad-stat"><strong>DRI</strong> 47</span>
+            <span class="acad-stat"><strong>DEF</strong> 55</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 62</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Wide Back</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 57 · ETA 7w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">56</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 72–94</div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</details>
 
-<div class="depth-section">
-  <div class="depth-pos-header">Defenders</div>
+<details class="dc-group" open>
+  <summary class="dc-group-summary">
+    <span>MID · Midfielders</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <div class="acad-profile-card mid">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-36"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-36)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-36)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-36)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">36</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">L. Dijkgraaf</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CDM</span>Age 17 · Right · 5'10" / 161 lbs</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 61</span>
+            <span class="acad-stat"><strong>SHO</strong> 41</span>
+            <span class="acad-stat"><strong>PAS</strong> 54</span>
+            <span class="acad-stat"><strong>DRI</strong> 56</span>
+            <span class="acad-stat"><strong>DEF</strong> 58</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 66</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Centre-Half</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 63 · ETA 13w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">62</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 62–82</div>
+        </div>
+      </div>
+    </div>
 
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">J. Lord</div>
-        <div class="youth-pos-age">LB · Age 17 · Left · 5'7" / 152 lbs</div>
+    <div class="acad-profile-card mid">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-37"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-37)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-37)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-37)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">37</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">G. Bianchi</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CDM</span>Age 16 · Right · 5'9" / 154 lbs</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat"><strong>PAC</strong> 58</span>
+            <span class="acad-stat"><strong>SHO</strong> 43</span>
+            <span class="acad-stat"><strong>PAS</strong> 47</span>
+            <span class="acad-stat"><strong>DRI</strong> 49</span>
+            <span class="acad-stat"><strong>DEF</strong> 54</span>
+            <span class="acad-stat hi"><strong>PHY</strong> 62</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Deep-Lying Playmaker</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 56 · ETA 6w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">55</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 66–88</div>
+        </div>
       </div>
-      <div class="youth-right">
-        <div class="youth-ovr">63</div>
-        <div class="youth-ovr-label">OVR</div>
+    </div>
+
+    <div class="acad-profile-card mid elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-38"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-38)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-38)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-38)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">38</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">D. Vargas</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge mid">CAM</span>Age 16 · Right · 5'8" / 145 lbs · Also LM · RM</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 67</span>
+            <span class="acad-stat"><strong>SHO</strong> 46</span>
+            <span class="acad-stat hi"><strong>PAS</strong> 56</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 60</span>
+            <span class="acad-stat"><strong>DEF</strong> 33</span>
+            <span class="acad-stat"><strong>PHY</strong> 50</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Half-Winger</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 61 · ETA 10w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">60</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 82–94</div>
+        </div>
       </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 67–91</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Attacking Wingback</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 63 · ETA 1w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 79</span>
-      <span class="youth-detail"><strong>SHO</strong> 38</span>
-      <span class="youth-detail"><strong>PAS</strong> 48</span>
-      <span class="youth-detail"><strong>DRI</strong> 57</span>
-      <span class="youth-detail"><strong>DEF</strong> 57</span>
-      <span class="youth-detail"><strong>PHY</strong> 61</span>
-    </div>
-    <div class="youth-details" style="margin-top:4px;">
-      <span class="youth-detail" style="font-size:11px; color:var(--muted);">Also: CB (Wide Back+) · LW (Winger / Inside Forward)</span>
     </div>
   </div>
+</details>
 
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">O. Horne</div>
-        <div class="youth-pos-age">RB · Age 17 · Right · 5'8" / 145 lbs</div>
+<details class="dc-group" open>
+  <summary class="dc-group-summary">
+    <span>FW · Forwards</span>
+    <span class="dc-group-line"></span>
+    <span class="dc-group-arrow">▾</span>
+  </summary>
+  <div class="dc-group-body">
+    <div class="acad-profile-card atk">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-39"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-39)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-39)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-39)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">39</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">B. Hak</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">RW</span>Age 15 · Right · 5'7" / 141 lbs · Also LW</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 75</span>
+            <span class="acad-stat"><strong>SHO</strong> 48</span>
+            <span class="acad-stat"><strong>PAS</strong> 50</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 59</span>
+            <span class="acad-stat"><strong>DEF</strong> 32</span>
+            <span class="acad-stat"><strong>PHY</strong> 51</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Winger</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 57 · ETA 8w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">56</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 58–69</div>
+        </div>
       </div>
-      <div class="youth-right">
-        <div class="youth-ovr">60</div>
-        <div class="youth-ovr-label">OVR</div>
+    </div>
+
+    <div class="acad-profile-card atk elite">
+      <div class="acad-card-top">
+        <div class="acad-jersey-wrap">
+          <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+            <defs><clipPath id="jc-40"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+            <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#FFCC00"/>
+            <rect x="0"  y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-40)"/>
+            <rect x="27" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-40)"/>
+            <rect x="54" y="0" width="13" height="88" fill="#006633" clip-path="url(#jc-40)"/>
+            <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+            <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#003311" stroke-width="3" paint-order="stroke" text-anchor="middle">40</text>
+          </svg>
+          <div class="acad-jersey-num">Academy</div>
+        </div>
+        <div class="acad-profile-body">
+          <div class="acad-profile-name">E. Matthews</div>
+          <div class="acad-profile-meta"><span class="acad-pos-badge atk">RW</span>Age 15 · Right · 5'6" / 138 lbs · Also LW · ST</div>
+          <div class="acad-stat-row">
+            <span class="acad-stat hi"><strong>PAC</strong> 71</span>
+            <span class="acad-stat hi"><strong>SHO</strong> 49</span>
+            <span class="acad-stat"><strong>PAS</strong> 50</span>
+            <span class="acad-stat hi"><strong>DRI</strong> 57</span>
+            <span class="acad-stat"><strong>DEF</strong> 32</span>
+            <span class="acad-stat"><strong>PHY</strong> 49</span>
+          </div>
+          <div class="acad-dev-row">
+            <span class="acad-dev-item"><strong>Dev Plan</strong> Wide Playmaker</span>
+            <span class="acad-dev-item"><strong>Next OVR</strong> 57 · ETA 5w</span>
+          </div>
+        </div>
+        <div class="acad-card-right">
+          <div class="acad-ovr">56</div>
+          <span class="acad-ovr-label">OVR</span>
+          <div class="acad-pot"><strong>POT</strong> 68–92</div>
+        </div>
       </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 60–75</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Wingback</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 61 · ETA 14w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 73</span>
-      <span class="youth-detail"><strong>SHO</strong> 38</span>
-      <span class="youth-detail"><strong>PAS</strong> 51</span>
-      <span class="youth-detail"><strong>DRI</strong> 61</span>
-      <span class="youth-detail"><strong>DEF</strong> 55</span>
-      <span class="youth-detail"><strong>PHY</strong> 57</span>
-    </div>
-    <div class="youth-details" style="margin-top:4px;">
-      <span class="youth-detail" style="font-size:11px; color:var(--muted);">Also: CB (Wide Back / Ball-Playing Defender+)</span>
     </div>
   </div>
+</details>
 
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">V. Martini</div>
-        <div class="youth-pos-age">CB · Age 16 · Left · 5'11" / 169 lbs · 🇮🇹 Aug 2025 intake</div>
-      </div>
-      <div class="youth-right">
-        <div class="youth-ovr">56</div>
-        <div class="youth-ovr-label">OVR</div>
-      </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 72–94</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Wide Back</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 57 · ETA 7w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 59</span>
-      <span class="youth-detail"><strong>SHO</strong> 30</span>
-      <span class="youth-detail"><strong>PAS</strong> 39</span>
-      <span class="youth-detail"><strong>DRI</strong> 47</span>
-      <span class="youth-detail"><strong>DEF</strong> 55</span>
-      <span class="youth-detail"><strong>PHY</strong> 62</span>
-    </div>
-  </div>
-</div>
-
-<div class="depth-section">
-  <div class="depth-pos-header">Midfielders</div>
-
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">P. Dijkgraaf</div>
-        <div class="youth-pos-age">CDM · Age 17 · Right · 5'11" / 161 lbs</div>
-      </div>
-      <div class="youth-right">
-        <div class="youth-ovr">60</div>
-        <div class="youth-ovr-label">OVR</div>
-      </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 62–82</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Centre-Half</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 61 · ETA 18w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 61</span>
-      <span class="youth-detail"><strong>SHO</strong> 41</span>
-      <span class="youth-detail"><strong>PAS</strong> 54</span>
-      <span class="youth-detail"><strong>DRI</strong> 56</span>
-      <span class="youth-detail"><strong>DEF</strong> 58</span>
-      <span class="youth-detail"><strong>PHY</strong> 66</span>
-    </div>
-    <div class="youth-details" style="margin-top:4px;">
-      <span class="youth-detail" style="font-size:11px; color:var(--muted);">Also: CM (Box-to-Box / Holding / Playmaker) · CB (Defender / Stopper / Ball-Playing Defender)</span>
-    </div>
-  </div>
-
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">E. Bianchi</div>
-        <div class="youth-pos-age">CDM · Age 16 · Left · 6'3" / 185 lbs · 🇮🇹 Aug 2025 intake</div>
-      </div>
-      <div class="youth-right">
-        <div class="youth-ovr">56</div>
-        <div class="youth-ovr-label">OVR</div>
-      </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 66–88</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Deep-Lying Playmaker</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 57 · ETA 20w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 58</span>
-      <span class="youth-detail"><strong>SHO</strong> 43</span>
-      <span class="youth-detail"><strong>PAS</strong> 47</span>
-      <span class="youth-detail"><strong>DRI</strong> 49</span>
-      <span class="youth-detail"><strong>DEF</strong> 54</span>
-      <span class="youth-detail"><strong>PHY</strong> 62</span>
-    </div>
-  </div>
-
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">J.C. Vargas</div>
-        <div class="youth-pos-age">CAM · Age 16 · Right · 5'9" / 149 lbs · 🇦🇷 Aug 2025 intake</div>
-      </div>
-      <div class="youth-right">
-        <div class="youth-ovr" style="color:var(--gold);">60</div>
-        <div class="youth-ovr-label">OVR</div>
-      </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 82–94</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Half-Winger</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 61 · ETA 8w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 67</span>
-      <span class="youth-detail"><strong>SHO</strong> 46</span>
-      <span class="youth-detail"><strong>PAS</strong> 56</span>
-      <span class="youth-detail"><strong>DRI</strong> 60</span>
-      <span class="youth-detail"><strong>DEF</strong> 33</span>
-      <span class="youth-detail"><strong>PHY</strong> 50</span>
-    </div>
-  </div>
-</div>
-
-<div class="depth-section">
-  <div class="depth-pos-header">Forwards</div>
-
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">S. Hak</div>
-        <div class="youth-pos-age">RW · Age 15 · Right · 5'8" / 149 lbs · 🇰🇷</div>
-      </div>
-      <div class="youth-right">
-        <div class="youth-ovr">58</div>
-        <div class="youth-ovr-label">OVR</div>
-      </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 58–69</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Winger</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 59 · ETA 31w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 75</span>
-      <span class="youth-detail"><strong>SHO</strong> 48</span>
-      <span class="youth-detail"><strong>PAS</strong> 50</span>
-      <span class="youth-detail"><strong>DRI</strong> 59</span>
-      <span class="youth-detail"><strong>DEF</strong> 32</span>
-      <span class="youth-detail"><strong>PHY</strong> 51</span>
-    </div>
-    <div class="youth-details" style="margin-top:4px;">
-      <span class="youth-detail" style="font-size:11px; color:var(--muted);">Also: LW (Winger / Inside Forward) · SM ★★★★ · WF ★★★</span>
-    </div>
-  </div>
-
-  <div class="youth-card">
-    <div class="youth-top">
-      <div>
-        <div class="youth-name">N. Matthews</div>
-        <div class="youth-pos-age">RW · Age 15 · Right · 5'5" / 138 lbs · 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Aug 2025 intake</div>
-      </div>
-      <div class="youth-right">
-        <div class="youth-ovr">55</div>
-        <div class="youth-ovr-label">OVR</div>
-      </div>
-    </div>
-    <div class="youth-details">
-      <span class="youth-detail"><strong>Potential</strong> 68–92</span>
-      <span class="youth-detail"><strong>Dev Plan</strong> Wide Playmaker</span>
-      <span class="youth-detail"><strong>Next OVR</strong> 56 · ETA 6w</span>
-    </div>
-    <div class="youth-details" style="margin-top:6px;">
-      <span class="youth-detail"><strong>PAC</strong> 71</span>
-      <span class="youth-detail"><strong>SHO</strong> 49</span>
-      <span class="youth-detail"><strong>PAS</strong> 50</span>
-      <span class="youth-detail"><strong>DRI</strong> 57</span>
-      <span class="youth-detail"><strong>DEF</strong> 32</span>
-      <span class="youth-detail"><strong>PHY</strong> 49</span>
-    </div>
-  </div>
-</div>
-
-<!-- LEGEND NOTE -->
 <div class="how-to-use" style="margin: 12px;">
   <div class="how-to-label">Reading This Page</div>
   <div class="how-to-text">
-    Stats shown are <strong>Summary tab</strong> values from FC26.
-    Border color = position group: <span style="color:var(--gold)">■ GK</span> · <span style="color:#4A90C4">■ DEF</span> · <span style="color:#5BAD72">■ MID</span> · <span style="color:#E04060">■ ATK</span>.
-    Faded cards = loan returns. GK stats: SPD/KIC/POS/REF/HAN/DIV.
-    <strong style="color:var(--gold)">Gold OVR</strong> = 72+. Use sort buttons to rank within each position group.
+    Stats shown are <strong>Summary tab</strong> values from FC26. GK stats: SPD/KIC/POS/REF/HAN/DIV.
+    Border color = position group: <span style="color:var(--gold)">■ GK</span> · <span style="color:#4A90C4">■ DEF</span> · <span style="color:#5BAD72">■ MID</span> · <span style="color:var(--red)">■ ATK</span>.
+    Faded cards = on loan or transfer-listed. <strong style="color:var(--gold)">Gold OVR</strong> = 72+. Tap section headers to collapse.
   </div>
 </div>
 
@@ -1190,29 +1638,5 @@ if ('serviceWorker' in navigator) {
 </nav>
 
 </div><!-- end .page-wrap -->
-
-<script>
-function sortGroup(btn, col) {
-  const bar = btn.closest('.sort-bar');
-  const group = btn.closest('.squad-group');
-  const list = group.querySelector('.squad-cards-list');
-  const posType = group.dataset.type;
-
-  bar.querySelectorAll('.sort-btn').forEach(b => {
-    b.classList.remove('active', 'gk', 'def', 'mid', 'atk');
-  });
-  btn.classList.add('active', posType);
-
-  const cards = [...list.querySelectorAll('.squad-card')];
-  cards.sort((a, b) => {
-    const av = parseFloat(a.dataset[col]) || 0;
-    const bv = parseFloat(b.dataset[col]) || 0;
-    if (col === 'age') return av - bv;
-    return bv - av;
-  });
-  cards.forEach(c => list.appendChild(c));
-}
-</script>
-
 </body>
 </html>
