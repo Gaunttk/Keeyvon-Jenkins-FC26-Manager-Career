@@ -112,9 +112,12 @@ Writing a journal entry (the two-voice Hawk's Nest / Red Dragon Dispatch pair)? 
 
 ### Workflow
 
-1. **User pushes screenshots to git from phone** — no Claude needed for this step
+1. **User pushes screenshots to git from phone** — lands in `docs/Screenshots/`, no Claude needed for this step
 2. **User opens a Claude session** — reads images, updates CSV and/or generates journal entries
-3. **Claude commits and pushes** to the session branch — GitHub Pages auto-deploys within ~1–2 minutes, no pull needed
+3. **Delete the processed screenshots** from `docs/Screenshots/` (`git rm`) in the same commit, once their data has been captured into the CSV/`season_log.json`/journal. The screenshots are source material, not a permanent record — nothing should still need them after this session. Exception: the rare image actually embedded in a journal entry (`<img src="assets/photos/...">`) — move that one into `docs/assets/photos/` first (it's referenced by the published page and must not be deleted).
+4. **Claude commits and pushes** to the session branch — GitHub Pages auto-deploys within ~1–2 minutes, no pull needed
+
+`docs/Screenshots/` should be empty (or near-empty) between sessions — if it's accumulating untouched files across multiple sessions, that's a sign step 3 was skipped and needs to be caught up.
 
 GitHub Pages is configured to serve from the `claude/wrexham-fc26-career-dx9xgx` branch, `/docs` folder. Every push updates the live site automatically.
 
