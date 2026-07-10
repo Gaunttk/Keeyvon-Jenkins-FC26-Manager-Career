@@ -6,7 +6,11 @@ Read this file when a session is writing journal entries for `docs/journal.html`
 
 ### Journal: "The Hawk's Journey" — Two-Voice System
 
-The journal is styled like a recurring publication. Entries are added **newest first**, each session producing a pair: one Dispatch, one Journal.
+The journal is styled like a recurring publication. Entries are added **newest first**.
+
+**Cadence — read this before writing anything:**
+- **Red Dragon Dispatch (Owen Meredith):** every session, same as always — one per match/session.
+- **The Hawk's Nest (Keeyvon's private journal):** **monthly, not per-session.** Only write a Hawk's Nest entry when roughly an in-game month has passed since the last one (about every 4–5 matchdays), and check what the most recent `Entry NNN` journal-voice entry's date was before deciding whether one is due this session. When it is due, it should reflect on the whole stretch since the last entry — the arc of results, form, mood — not just the most recent match. Most sessions will publish a Dispatch only, with no paired Journal entry.
 
 **Voice 1 — The Hawk's Nest (private journal):**
 ```html
@@ -78,7 +82,7 @@ The journal is styled like a recurring publication. Entries are added **newest f
 </div>
 ```
 
-**Entry divider** between Dispatch and Journal pairs:
+**Entry divider** — only needed on the (now less common) sessions where both a Dispatch and a Hawk's Nest entry are published together (the monthly cadence hit). On ordinary sessions there's just a single Dispatch entry with no divider:
 ```html
 <div class="entry-divider"></div>
 ```
@@ -91,9 +95,16 @@ Owen Meredith is the named journalist behind the Red Dragon Dispatch. He is the 
 
 - **Bio:** Wrexham-born, 34. Covered the club since League Two for WalesOnline. Joined The Athletic UK desk in 2023. Has complicated feelings about the Hollywood era: loves what it did for the club financially, quietly mourns something he can't name.
 - **Voice:** Skeptical but fair. Not hostile to Jenkins, but not a cheerleader. Asks the questions the pressroom won't.
-- **Running thesis across the season:** *Can an American coach, hired by American owners, win an English football league with a Welsh club? And what gets lost if he does?*
+- **Running threads — rotate through these, don't lean on one:** the "American coach, American owners" question is one thread in Meredith's back pocket, not his whole personality. Don't open with it, and don't reach for it more than occasionally. Other threads to draw on instead:
+  - Welsh identity vs. the global Hollywood-brand version of the club
+  - Academy graduates breaking through vs. money spent on marquee signings
+  - Whether promotion (or a bad run) vindicates or exposes the ownership's data-driven approach
+  - The pressroom's mood swinging with results — patience wearing thin, or goodwill returning
+  - What the town itself makes of a club now watched worldwide
+  - Jenkins's own transition from player to manager, and what that cost him
+  - The America angle, when it does come up: vary the framing each time (a specific incident, a fan's comment, a boardroom decision) rather than repeating the same "can an American win an English league" line
 - **Dispatch sections:** `Match Coverage` / `Inside the Club` / `Feature` / `Transfer Window` / `Season Review`
-- **Athletic formula:** Open with a scene, not the result. Use the specific to illuminate the universal. Build running threads across entries. End with an open question.
+- **Athletic formula:** Open with a scene, not the result. Use the specific to illuminate the universal. Build running threads across entries — but rotate which thread, don't default to the same one. End with an open question.
 
 **The two voices should occasionally contradict.** Jenkins thinks a training session went well; Meredith reports the captain looked disinterested. That friction is the story.
 
