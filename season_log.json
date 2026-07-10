@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-12-11"
+    "last_updated": "2025-12-13"
   },
   "matches": [
     {
@@ -325,6 +325,17 @@
       "matchday": 20,
       "notes": "K. Moore 20', Y. Amrizi 84' (sub on 65' for Moore). O. McBurnie 31' (HUL); Hull's second goal a stoppage-time penalty (scorer unconfirmed) — Wrexham conceded a penalty (0 committed by HUL, 1 by WRX). D. Hyam yellow 75'. WRX subs: Amrizi for Moore 65', Keillor-Dunn for Broadhead 65', Dobson for Windass 88'. J. Windass best-rated on the pitch (7.3, 1A) — no MoM badge confirmed. Shots 7-12 (HUL-WRX), xG 4.3-4.7, poss 56-44%/57-43%, passes 189-143 (89-86% acc), tackles 13-13 (38-23% success), interceptions 13-12, saves 9-3. Wrexham 2nd in Championship (P20 W12 D4 L4, GF48 GA25, 40 pts), 8 points behind Ipswich.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-12-13",
+      "opponent": "Watford",
+      "home": true,
+      "score": "3-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 21,
+      "notes": "Y. Amrizi 75', J. Windass 82', N. Broadhead 90+4' — three goals in the closing stages to complete the comeback. C. Doyle yellow 30', then a straight red 51' (Wrexham conceded a penalty in the same passage — 1 penalty committed by WRX, converted by Watford). Wrexham played the remainder a man down. L. Kjerrumgaard 88' for Watford (their other goal, presumably the penalty, unconfirmed scorer/time). Subs: Y. Amrizi for B. Sheaf 66', M. Cleworth for K. Moore 66'. Shots 3-8 (WRX-WAT), xG 1.4-3.1, poss 40-60%, passes 128-224 (89-94% acc), tackles 9-18. Doyle given a 1-match ban for the red card. What a game.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -525,6 +536,10 @@
     {
       "date": "2025-12-08",
       "description": "D. Scarr sold to BSC Young Boys for $1,170,000 — personal terms agreed, deal completes when the transfer window opens. Corrects the record: the Gil Vicente FC deal logged 2025-08-15 fell through in negotiations and never completed; this Young Boys deal is the confirmed sale."
+    },
+    {
+      "date": "2025-12-13",
+      "description": "MD21 WIN: 3-2 vs Watford at home. C. Doyle yellow 30', red 51' (conceded a penalty in the process) — Wrexham played the rest of the match a man down, then scored three in the closing stages (Amrizi 75', Windass 82', Broadhead 90+4') to complete the comeback after Kjerrumgaard's 88th-minute leveler. Doyle handed a 1-match ban. Record: P21 W13 D4 L4, GF51 GA27, 43 pts. 2nd in Championship, 8 points behind Ipswich."
     }
   ]
 }
