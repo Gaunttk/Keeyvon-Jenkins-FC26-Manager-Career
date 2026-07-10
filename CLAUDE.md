@@ -25,6 +25,7 @@ When a session opens, silently load the context below. Do not summarize it back 
 | `docs/assets/photos/` | Player/match photos for future use |
 | `docs/academy.html` | Youth Academy page — prospects, development plans, promotions |
 | `docs/journal/` | Frozen archives of past seasons' journal entries (`season-01.html`, `season-02.html`, ...) — see "Season Rollover" |
+| `docs/season/` | Frozen archives of past seasons' Match Log / Player Stats (`season-01.html`, ...) — see "Season Rollover" |
 | `scripts/sync_season_summary.py` | Regenerates the `SEASON_SUMMARY` block in `docs/index.html` from `season_log.json`. Run after any change to `season_log.json` |
 | `JOURNAL_STYLE_GUIDE.md` | HTML templates, Owen Meredith persona, and capture checklist for journal-writing sessions. Read on demand — not loaded automatically |
 | `scripts/check_roster_sync.py` | Cross-checks `docs/roster.html` cards against `wrexham_squad.csv` (name/age/OVR/position). Run after any squad change to catch stale or missing cards |
@@ -192,9 +193,10 @@ Trigger: the user confirms the in-game season is over (final league position kno
 
 1. **Archive the journal.** Cut every `<article class="entry ...">` (and its `season-marker` divs) belonging to the finished season out of `docs/journal.html` and into a new `docs/journal/season-NN.html`. Give the archive file the same nav/masthead chrome as `journal.html`, with relative paths adjusted for the subdirectory (`../assets/style.css`, `../index.html`, etc.) and its own self-contained TOC covering only that season.
 2. **Reset `docs/journal.html`** to an empty entry list for the new season: update the `Past Seasons` sidebar list (slot already exists) with a link to the new archive file, update `pub-season`, and restart entry numbering at `Entry 001`.
-3. **Archive `season_log.json`.** Move the finished season's file to `season_logs/season-NN.json` (create the folder if it doesn't exist), then start a fresh `season_log.json` with empty `matches`/`transfers`/`injuries`/`milestones` arrays and an updated `_meta.season`. Do this *before* running the sync script — `sync_season_summary.py` computes stats over whatever is in `season_log.json`, so last season's results must not carry into the new season's stat bar.
-4. **Run `python3 scripts/sync_season_summary.py`** to regenerate `docs/index.html`'s stat bar against the fresh (empty) season log.
-5. **Do not reset `wrexham_squad.csv` / `youth_academy.csv`.** The squad carries over between seasons — ages, contracts, and development continue as normal per-session updates.
+3. **Archive `docs/season.html`.** Same idea as the journal: cut the finished season's `comp-accordion` Match Log sections and the Player Season Stats rows out of `docs/season.html` into a new `docs/season/season-NN.html` (same chrome, adjusted relative paths, self-contained). Reset `docs/season.html` to empty Match Log / Player Stats sections for the new season, with the overall tally (`record-bar`) zeroed, and add a link to the new archive file in the `Past Seasons` slot (already present, above the Match Log section).
+4. **Archive `season_log.json`.** Move the finished season's file to `season_logs/season-NN.json` (create the folder if it doesn't exist), then start a fresh `season_log.json` with empty `matches`/`transfers`/`injuries`/`milestones` arrays and an updated `_meta.season`. Do this *before* running the sync script — `sync_season_summary.py` computes stats over whatever is in `season_log.json`, so last season's results must not carry into the new season's stat bar.
+5. **Run `python3 scripts/sync_season_summary.py`** to regenerate `docs/index.html`'s stat bar against the fresh (empty) season log.
+6. **Do not reset `wrexham_squad.csv` / `youth_academy.csv`.** The squad carries over between seasons — ages, contracts, and development continue as normal per-session updates.
 
 ---
 
