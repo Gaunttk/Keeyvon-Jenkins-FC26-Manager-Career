@@ -93,9 +93,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.masthead.masthead-blue {
-  background: var(--dispatch-blue);
-}
 .masthead-label {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
@@ -2436,3 +2433,20 @@ body {
   .acad-jersey-svg { width: 54px; height: 60px; }
   .acad-profile-name { font-size: 17px; }
 }
+
+/* ─── SESSION SUBMIT PAGE — BLUE THEME (body.theme-blue only) ─── */
+body.theme-blue .site-nav { border-bottom-color: var(--dispatch-blue); }
+body.theme-blue .snav-brand span { color: var(--dispatch-blue); }
+body.theme-blue .snav-link.active { border-bottom-color: var(--dispatch-blue); }
+body.theme-blue .masthead { background: var(--dispatch-blue); }
+body.theme-blue .form-section-label { color: var(--dispatch-blue); }
+body.theme-blue input:focus,
+body.theme-blue select:focus,
+body.theme-blue textarea:focus { border-color: var(--dispatch-blue); }
+body.theme-blue .radio-label:has(input:checked) {
+  border-color: var(--dispatch-blue);
+  background: rgba(74,144,196,0.15);
+}
+body.theme-blue .generate-btn { background: var(--dispatch-blue); }
+body.theme-blue .generate-btn:hover { background: var(--dispatch-accent); }
+body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var(--dispatch-blue); }

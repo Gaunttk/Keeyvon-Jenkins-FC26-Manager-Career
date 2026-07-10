@@ -8,7 +8,7 @@
   "display_override": ["window-controls-overlay", "standalone"],
   "orientation": "portrait-primary",
   "background_color": "#080808",
-  "theme_color": "#C8102E",
+  "theme_color": "#4A90C4",
   "prefer_related_applications": false,
   "icons": [
     {
