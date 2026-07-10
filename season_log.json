@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-12-06"
+    "last_updated": "2025-12-11"
   },
   "matches": [
     {
@@ -314,6 +314,17 @@
       "matchday": 19,
       "notes": "Moore 16', Broadhead 66', JL Rodriguez 83', Amrizi 93'. Miraculous comeback.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-12-11",
+      "opponent": "Hull City",
+      "home": false,
+      "score": "2-2",
+      "result": "D",
+      "competition": "EFL Championship",
+      "matchday": 20,
+      "notes": "K. Moore 20', Y. Amrizi 84' (sub on 65' for Moore). O. McBurnie 31' (HUL); Hull's second goal a stoppage-time penalty (scorer unconfirmed) — Wrexham conceded a penalty (0 committed by HUL, 1 by WRX). D. Hyam yellow 75'. WRX subs: Amrizi for Moore 65', Keillor-Dunn for Broadhead 65', Dobson for Windass 88'. J. Windass best-rated on the pitch (7.3, 1A) — no MoM badge confirmed. Shots 7-12 (HUL-WRX), xG 4.3-4.7, poss 56-44%/57-43%, passes 189-143 (89-86% acc), tackles 13-13 (38-23% success), interceptions 13-12, saves 9-3. Wrexham 2nd in Championship (P20 W12 D4 L4, GF48 GA25, 40 pts), 8 points behind Ipswich.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -326,12 +337,13 @@
       "wage": ""
     },
     {
-      "date": "2025-08-15",
+      "date": "2025-12-08",
       "player": "D. Scarr",
       "direction": "out",
-      "club": "Gil Vicente FC",
-      "fee": "$1.2m",
-      "wage": ""
+      "club": "BSC Young Boys",
+      "fee": "$1,170,000",
+      "wage": "",
+      "notes": "Personal terms agreed; completes when the transfer window opens. Board allocating $853,866 to transfer budget. Supersedes an earlier Gil Vicente FC deal (logged 2025-08-15) that fell through in contract negotiations and never completed."
     },
     {
       "date": "2025-08-20",
@@ -505,6 +517,14 @@
     {
       "date": "2025-12-06",
       "description": "MD19 WIN: 4-3 away at Preston. Miraculous comeback. Moore 16', Broadhead 66', JL Rodriguez 83', Amrizi 93' (stoppage time winner). Record: P19 W12 D3 L4, GF46 GA23, 39 pts."
+    },
+    {
+      "date": "2025-12-11",
+      "description": "MD20 DRAW: 2-2 away at Hull City. Moore and Amrizi cancelled out an early two-goal deficit. Record: P20 W12 D4 L4, GF48 GA25, 40 pts."
+    },
+    {
+      "date": "2025-12-08",
+      "description": "D. Scarr sold to BSC Young Boys for $1,170,000 — personal terms agreed, deal completes when the transfer window opens. Corrects the record: the Gil Vicente FC deal logged 2025-08-15 fell through in negotiations and never completed; this Young Boys deal is the confirmed sale."
     }
   ]
 }

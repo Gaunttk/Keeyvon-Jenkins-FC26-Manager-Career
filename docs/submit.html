@@ -281,28 +281,12 @@ if ('serviceWorker' in navigator) {
   <!-- ─── OUTPUTS ─── -->
   <div class="output-block" id="output-block" style="display:none;">
 
-    <div style="margin-bottom:24px;">
-      <div class="output-header">
-        <span class="output-label">Session Template — Paste to Claude</span>
-        <button class="copy-btn" id="copy-template" onclick="copyTo('template-out','copy-template')">Copy</button>
-      </div>
-      <pre id="template-out"></pre>
-    </div>
-
-    <div style="margin-bottom:24px;">
-      <div class="output-header">
-        <span class="output-label">season_log.json Entry — Paste to Claude</span>
-        <button class="copy-btn" id="copy-log" onclick="copyTo('log-out','copy-log')">Copy</button>
-      </div>
-      <pre id="log-out"></pre>
-    </div>
-
     <div>
       <div class="output-header">
-        <span class="output-label">Suggested Git Commit Message</span>
-        <button class="copy-btn" id="copy-commit" onclick="copyTo('commit-out','copy-commit')">Copy</button>
+        <span class="output-label">Paste to Claude</span>
+        <button class="copy-btn" id="copy-all" onclick="copyTo('all-out','copy-all')">Copy</button>
       </div>
-      <pre id="commit-out"></pre>
+      <pre id="all-out"></pre>
     </div>
 
   </div>
@@ -474,9 +458,8 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
   var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
   var commitMsg = (competition === 'EFL Championship' ? 'Entry ' + (matchday ? 'MD' + matchday : '???') : competition.split(' ').slice(-1)[0] + ' entry') + ': ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreThem + '-' + scoreUs + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
 
-  document.getElementById('template-out').textContent = template;
-  document.getElementById('log-out').textContent = logEntry;
-  document.getElementById('commit-out').textContent = commitMsg;
+  var combined = template + '\n\n' + logEntry + '\n\n// Suggested Git Commit Message:\n' + commitMsg;
+  document.getElementById('all-out').textContent = combined;
   document.getElementById('output-block').style.display = 'block';
   document.getElementById('output-block').scrollIntoView({ behavior:'smooth', block:'start' });
 }
