@@ -1,4 +1,4 @@
-const CACHE = 'wrxm-fc26-v7';
+const CACHE = 'wrxm-fc26-v8';
 
 const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/',
@@ -9,8 +9,10 @@ const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/depth_chart.html',
   '/Keeyvon-Jenkins-FC26-Manager-Career/academy.html',
   '/Keeyvon-Jenkins-FC26-Manager-Career/dossier.html',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/submit.html',
   '/Keeyvon-Jenkins-FC26-Manager-Career/assets/style.css',
   '/Keeyvon-Jenkins-FC26-Manager-Career/manifest.json',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/manifest-submit.json',
 ];
 
 self.addEventListener('install', e => {
