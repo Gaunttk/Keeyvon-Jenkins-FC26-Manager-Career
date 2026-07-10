@@ -93,6 +93,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.masthead.masthead-blue {
+  background: var(--dispatch-blue);
+}
 .masthead-label {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
