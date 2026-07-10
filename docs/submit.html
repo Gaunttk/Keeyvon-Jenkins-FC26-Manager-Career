@@ -67,6 +67,14 @@
       transition: background 0.15s; margin-top: 8px;
     }
     .generate-btn:hover { background: var(--red-dark); }
+    .clear-btn {
+      background: none; border: 1px solid var(--steel); color: var(--muted);
+      font-family:'Barlow Condensed',sans-serif; font-size:12px;
+      font-weight:700; letter-spacing:2px; text-transform:uppercase;
+      padding: 10px 32px; cursor: pointer; width:100%;
+      transition: all 0.15s; margin-top: 10px;
+    }
+    .clear-btn:hover { border-color:var(--red); color:var(--red); }
     .output-block { margin-top: 24px; }
     .output-header {
       display: flex; justify-content: space-between; align-items: center;
@@ -276,6 +284,7 @@ if ('serviceWorker' in navigator) {
   <!-- ─── GENERATE ─── -->
   <div class="form-section">
     <button class="generate-btn" onclick="generate()">⚡ Generate Session Template + Log Entry</button>
+    <button class="clear-btn" onclick="clearForm()">Clear Form</button>
   </div>
 
   <!-- ─── OUTPUTS ─── -->
@@ -462,6 +471,43 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
   document.getElementById('all-out').textContent = combined;
   document.getElementById('output-block').style.display = 'block';
   document.getElementById('output-block').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ── Clear form ──
+function clearForm() {
+  var keepDate = document.getElementById('date').value;
+  var matchday = document.getElementById('matchday').value;
+  var nextMatchday = matchday ? (parseInt(matchday) + 1) : '';
+
+  document.getElementById('competition').value = 'EFL Championship';
+  document.getElementById('competition').dispatchEvent(new Event('change'));
+  document.getElementById('matchday').value = nextMatchday;
+  document.getElementById('round').value = '';
+  document.getElementById('opponent').value = '';
+  document.getElementById('opponent-name-score').textContent = 'Opponent';
+  document.querySelector('input[name="venue"][value="home"]').checked = true;
+  document.getElementById('score-them').value = 0;
+  document.getElementById('score-us').value = 0;
+  updateResult();
+  document.getElementById('scorers').value = '';
+  document.getElementById('motm').value = '';
+  document.getElementById('vibe').value = '';
+  document.getElementById('notes').value = '';
+
+  document.getElementById('ss-table').checked = false;
+  document.getElementById('ss-morale').checked = false;
+  document.getElementById('ss-board').checked = false;
+  document.getElementById('ss-stats').checked = true;
+  document.getElementById('ss-ratings').checked = false;
+  document.getElementById('ss-goal').checked = false;
+  document.getElementById('ss-transfers').checked = false;
+
+  document.getElementById('transfers-list').innerHTML = '';
+  document.getElementById('injuries-list').innerHTML = '';
+
+  document.getElementById('output-block').style.display = 'none';
+
+  document.getElementById('date').value = keepDate;
 }
 
 // ── Copy to clipboard ──
