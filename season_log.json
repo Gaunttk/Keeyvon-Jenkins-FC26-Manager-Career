@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-12-20"
+    "last_updated": "2025-12-29"
   },
   "matches": [
     {
@@ -347,6 +347,28 @@
       "matchday": 22,
       "notes": "Eom Ji Sung 34' (SWA). J. Windass 88', Y. Amrizi 90' (sub on 80' for K. Moore; J. Amelia also on 80' for B. Sheaf). J. Windass best-rated on the pitch (7.5, 1G) — no MoM badge confirmed; I. Kaboré next-best (7.3). Shots 4-13 (SWA-WRX), xG 1.1-3.4, poss 57-43%, passes 225-123 (93-89% acc), tackles 15-30, interceptions 11-14, saves 4-2. Wrexham 2nd in Championship (P22 W14 D4 L4, GF53 GA28, 46 pts), 8 points behind Ipswich.",
       "journal_entry": true
+    },
+    {
+      "date": "2025-12-26",
+      "opponent": "Sheffield Utd",
+      "home": true,
+      "score": "4-3",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 23,
+      "notes": "C. Ogbene 14' (SHU); K. Moore 40'/51' brace (assists: N. Broadhead x2); 3rd SHU goal — scorer/minute unconfirmed; A. Matos 69' (SHU); J. Rodríguez 75' (assist: Y. Amrizi); Y. Amrizi 84' (assist: J. Windass). SHU sub: H. Burrows for L. Hjelde 73'. Best rated: L. Cacace 7.5, N. Broadhead 7.4 (2A), K. Moore 7.2 (2G), Y. Amrizi 7.2 (1G 1A), C. Doyle 7.1, L. O'Brien 6.9; A. Okonkwo 5.6 (GK, season-low). Shots 8-10 (WRX-SHU), xG 2.8-2.9, poss 35-65%, passes 128-259 (86-95% acc), tackles 17-11, interceptions 11-13, saves 3-3. Wrexham 2nd in Championship (P23 W15 D4 L4, GF57 GA31, 49 pts), 5 points behind Ipswich (54).",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-29",
+      "opponent": "Preston",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 24,
+      "notes": "L. O'Brien red card 6' (Wrexham played 84 mins with 10 men). N. Broadhead 12', J. Storey OG 17' (PNE), L. Cacace 34' (assist: K. Moore). HT 3-0. A. Devine 70' (PNE). WRX subs 83': Y. Amrizi for J. Rodríguez, B. Cadamarteri for K. Moore, D. Keillor-Dunn for N. Broadhead, G. Dobson for B. Sheaf, L. Brunt for C. Doyle. PNE sub: C. Lang for M. Osmajić 88'. PotM: J. Amelia 7.8 (LB, stepped up after O'Brien red). Other ratings: C. Doyle 7.4, J. Rodríguez 7.2, M. Cleworth 7.2, I. Kaboré 6.8, N. Broadhead 6.9 (1G), K. Moore 6.6 (1A), L. Cacace 7.4 (1G). Shots 13-2 (WRX-PRE), xG 4.9-0.7, poss 49-51%, passes 161-170 (91-94% acc), saves 1-6, red cards 1-0 (WRX). Wrexham 2nd in Championship (P24 W16 D4 L4, GF60 GA32, 52 pts), 3 points behind Ipswich (55).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -408,6 +430,15 @@
       "fee": "$1.25m",
       "wage": "",
       "notes": "Deal agreed, completes when January transfer window opens. Price rating A — Excellent Deal (market value $925k). Board allocating $913,875 to transfer budget. Separate: C. Burton talks with Zagłębie Lubin broke down 05/10."
+    },
+    {
+      "date": "2025-12-28",
+      "player": "O. Rathbone",
+      "direction": "out",
+      "club": "Coventry City",
+      "fee": "$1,800,000",
+      "wage": "",
+      "notes": "Personal terms agreed; deal completes when January transfer window opens. Board allocating $1,332,900 to transfer budget."
     }
   ],
   "injuries": [],
@@ -555,6 +586,18 @@
     {
       "date": "2025-12-20",
       "description": "MD22 WIN: 2-1 away at Swansea City. Eom Ji Sung put Swansea ahead 34', but two late goals — Windass 88', Amrizi 90' (super sub, on 80' for Moore) — sealed it. Record: P22 W14 D4 L4, GF53 GA28, 46 pts. 2nd in Championship, 8 points behind Ipswich."
+    },
+    {
+      "date": "2025-12-26",
+      "description": "MD23 WIN: 4-3 vs Sheffield Utd at home. K. Moore brace (40'/51'), J. Rodríguez 75', Y. Amrizi 84'. SHU levelled at 2-2 then went ahead 2-3 before the final surge. Record: P23 W15 D4 L4, GF57 GA31, 49 pts. 2nd in Championship, 5 points behind Ipswich."
+    },
+    {
+      "date": "2025-12-28",
+      "description": "O. Rathbone personal terms agreed with Coventry City — $1,800,000 fee, deal completes when January window opens. Board allocating $1,332,900 to transfer budget."
+    },
+    {
+      "date": "2025-12-29",
+      "description": "MD24 WIN: 3-1 vs Preston at home, with 10 men after L. O'Brien red card at 6'. N. Broadhead 12', J. Storey OG 17', L. Cacace 34' — 3-0 at HT. PNE pulled one back (Devine 70'). PotM: J. Amelia 7.8 (LB). Record: P24 W16 D4 L4, GF60 GA32, 52 pts. 2nd in Championship, 3 points behind Ipswich (55)."
     }
   ]
 }
