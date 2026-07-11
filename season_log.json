@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-12-11"
+    "last_updated": "2025-12-20"
   },
   "matches": [
     {
@@ -324,6 +324,17 @@
       "competition": "EFL Championship",
       "matchday": 20,
       "notes": "K. Moore 20', Y. Amrizi 84' (sub on 65' for Moore). O. McBurnie 31' (HUL); Hull's second goal a stoppage-time penalty (scorer unconfirmed) — Wrexham conceded a penalty (0 committed by HUL, 1 by WRX). D. Hyam yellow 75'. WRX subs: Amrizi for Moore 65', Keillor-Dunn for Broadhead 65', Dobson for Windass 88'. J. Windass best-rated on the pitch (7.3, 1A) — no MoM badge confirmed. Shots 7-12 (HUL-WRX), xG 4.3-4.7, poss 56-44%/57-43%, passes 189-143 (89-86% acc), tackles 13-13 (38-23% success), interceptions 13-12, saves 9-3. Wrexham 2nd in Championship (P20 W12 D4 L4, GF48 GA25, 40 pts), 8 points behind Ipswich.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-20",
+      "opponent": "Swansea City",
+      "home": false,
+      "score": "1-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 22,
+      "notes": "Windass 88', Amrizi 90'. Another late goal by super sub Amrizi.",
       "journal_entry": true
     }
   ],
