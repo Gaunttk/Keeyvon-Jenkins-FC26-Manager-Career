@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2025-12-29"
+    "last_updated": "2026-01-01"
   },
   "matches": [
     {
@@ -369,6 +369,28 @@
       "matchday": 24,
       "notes": "L. O'Brien red card 6' (Wrexham played 84 mins with 10 men). N. Broadhead 12', J. Storey OG 17' (PNE), L. Cacace 34' (assist: K. Moore). HT 3-0. A. Devine 70' (PNE). WRX subs 83': Y. Amrizi for J. Rodríguez, B. Cadamarteri for K. Moore, D. Keillor-Dunn for N. Broadhead, G. Dobson for B. Sheaf, L. Brunt for C. Doyle. PNE sub: C. Lang for M. Osmajić 88'. PotM: J. Amelia 7.8 (LB, stepped up after O'Brien red). Other ratings: C. Doyle 7.4, J. Rodríguez 7.2, M. Cleworth 7.2, I. Kaboré 6.8, N. Broadhead 6.9 (1G), K. Moore 6.6 (1A), L. Cacace 7.4 (1G). Shots 13-2 (WRX-PRE), xG 4.9-0.7, poss 49-51%, passes 161-170 (91-94% acc), saves 1-6, red cards 1-0 (WRX). Wrexham 2nd in Championship (P24 W16 D4 L4, GF60 GA32, 52 pts), 3 points behind Ipswich (55).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-01-01",
+      "opponent": "Blackburn Rovers",
+      "home": true,
+      "score": "0-8",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "QTR",
+      "notes": "Ortega (2), Lord, Matthews, Martini (3), Dijkgraaf. MoM: Dijkgraaf 10.0 (2A). Also: Matthews 10.0 (2A), Martini 10.0 (3G), Webber 9.6 (GK). New Youth Academy Rush Tournament — not a continuation of the Nov 2025 sweep.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-01",
+      "opponent": "Blackburn Rovers",
+      "home": true,
+      "score": "1-6",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 25,
+      "notes": "Moore 7', J. Rodríguez 22'/34' (brace, HT 3-0), Y. Ohashi 48' (BLK), Moore 67', Amrizi 85' (sub on 68'), Keillor-Dunn 90' (sub on 68'). PotM: J. Rodríguez 9.6 (2G 2A). Subs 68': Amrizi for Moore, Keillor-Dunn for Broadhead, Cadamarteri for Windass, Cleworth for Hyam, Amelia for Kaboré. Lineup: Okonkwo (GK), Kaboré (RB), Doyle (LCB), Cleworth (RCB), Cacace (LB), Sheaf (RCM, 7.1), Dobson (LCM, 7.1), Windass (CAM, 7.0, 1A), Rodríguez (LW, 9.6, 2G 2A), Broadhead (RW, 7.7, 2A), Moore (ST, 8.2, 2G). Sub ratings: Amrizi 7.1 (1G), Keillor-Dunn 7.8 (1G), Cadamarteri 5.6, Cleworth 6.8, Amelia n/a. Cacace 6.9 (1A). Shots 3-12 (BLK-WRX), passes 183-141 (86-85% acc), interceptions 15-20, dribble success 95-94%, tackle success 67-27%, saves 0-2. Yellow: 1 (BLK). Wrexham 2nd in Championship (P25 W17 D4 L4, GF66 GA33, 55 pts), 1 point behind Ipswich (56).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -598,6 +620,14 @@
     {
       "date": "2025-12-29",
       "description": "MD24 WIN: 3-1 vs Preston at home, with 10 men after L. O'Brien red card at 6'. N. Broadhead 12', J. Storey OG 17', L. Cacace 34' — 3-0 at HT. PNE pulled one back (Devine 70'). PotM: J. Amelia 7.8 (LB). Record: P24 W16 D4 L4, GF60 GA32, 52 pts. 2nd in Championship, 3 points behind Ipswich (55)."
+    },
+    {
+      "date": "2026-01-01",
+      "description": "Youth Academy Rush Tournament QTR WIN: 8-0 vs Blackburn Rovers. Dijkgraaf MoM (10.0, 2A). Matthews (10.0, 2A), Martini (3G, 10.0), Webber GK (9.6). Scorers: Ortega ×2, Lord, Matthews, Martini ×3, Dijkgraaf. New tournament — not a continuation of the Nov 2025 sweep."
+    },
+    {
+      "date": "2026-01-01",
+      "description": "MD25 WIN: 6-1 at home vs Blackburn Rovers. Dominant first half — Moore 7', Rodríguez brace 22'/34' for 3-0 at HT. Ohashi 48' (BLK) before Wrexham surged: Moore 67', Amrizi 85', Keillor-Dunn 90'. Rodríguez PotM (9.6, 2G 2A). Record: P25 W17 D4 L4, GF66 GA33, 55 pts. 2nd in Championship, 1 point behind Ipswich (56)."
     }
   ]
 }
