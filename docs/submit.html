@@ -119,6 +119,51 @@
     .radio-label:has(input:checked) { border-color:var(--red); color:white; background:rgba(200,16,46,0.15); }
     input[type=radio] { display:none; }
     @media(max-width:500px) { .form-group { min-width:100%; } }
+
+    /* ── Batch Queue ── */
+    .batch-tray {
+      background: rgba(74,144,196,0.08); border: 1px solid rgba(74,144,196,0.3);
+      padding: 14px 16px; margin-bottom: 20px;
+    }
+    .batch-tray-label {
+      font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700;
+      letter-spacing:2.5px; text-transform:uppercase; color:#4A90C4; margin-bottom:10px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .batch-tray-label::after { content:''; flex:1; height:1px; background:rgba(74,144,196,0.25); }
+    .batch-chips-row { display:flex; flex-wrap:wrap; gap:8px; }
+    .batch-chip {
+      display:inline-flex; align-items:center; gap:6px;
+      background:#4A90C4; color:#fff;
+      font-family:'Barlow Condensed',sans-serif; font-size:12px;
+      font-weight:700; letter-spacing:1px; text-transform:uppercase;
+      padding:6px 8px 6px 12px;
+    }
+    .chip-remove {
+      background:none; border:none; color:rgba(255,255,255,0.65);
+      font-size:17px; line-height:1; cursor:pointer; padding:0 2px;
+      transition:color 0.1s;
+    }
+    .chip-remove:hover { color:#fff; }
+    .stage-btn {
+      background:#4A90C4; border:none; color:#fff;
+      font-family:'Barlow Condensed',sans-serif; font-size:14px;
+      font-weight:800; letter-spacing:2px; text-transform:uppercase;
+      padding:14px 32px; cursor:pointer; width:100%;
+      transition:background 0.15s; margin-top:8px;
+    }
+    .stage-btn:hover { background:#3d7ab0; }
+    .batch-section {
+      background:rgba(74,144,196,0.06); border:1px solid rgba(74,144,196,0.25);
+      padding:16px; margin-top:12px;
+    }
+    .batch-section label { color:#4A90C4; }
+    .batch-section input { border-color:rgba(74,144,196,0.4); }
+    .batch-section input:focus { border-color:#4A90C4; }
+    .batch-generate-btn {
+      background:#4A90C4 !important; margin-top:10px;
+    }
+    .batch-generate-btn:hover { background:#3d7ab0 !important; }
   </style>
 <link rel="manifest" href="manifest-submit.json">
 <meta name="theme-color" content="#4A90C4">
@@ -156,6 +201,12 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <div class="form-wrap">
+
+  <!-- ─── BATCH TRAY ─── -->
+  <div class="batch-tray" id="batch-tray" style="display:none;">
+    <div class="batch-tray-label">Staged Events</div>
+    <div class="batch-chips-row" id="batch-chips"></div>
+  </div>
 
   <!-- ─── MATCH ─── -->
   <div class="form-section">
@@ -283,8 +334,18 @@ if ('serviceWorker' in navigator) {
 
   <!-- ─── GENERATE ─── -->
   <div class="form-section">
-    <button class="generate-btn" onclick="generate()">⚡ Generate Session Template + Log Entry</button>
+    <button class="stage-btn" onclick="stageEvent()">+ Add to Batch</button>
+    <button class="generate-btn" onclick="generate()" style="margin-top:8px;">⚡ Generate This Event Only</button>
     <button class="clear-btn" onclick="clearForm()">Clear Form</button>
+
+    <!-- Batch generate — visible only when ≥1 event staged -->
+    <div class="batch-section" id="batch-generate-section" style="display:none;">
+      <div class="form-group" style="margin-bottom:10px;">
+        <label for="commit-name">GitHub Commit Name / Hash</label>
+        <input type="text" id="commit-name" placeholder="e.g. abc1234 or 'MD25-MD27 screenshots'">
+      </div>
+      <button class="generate-btn batch-generate-btn" onclick="generateBatch()">⚡ Generate Full Batch</button>
+    </div>
   </div>
 
   <!-- ─── OUTPUTS ─── -->
@@ -359,115 +420,10 @@ function addInjury() {
   document.getElementById('injuries-list').appendChild(div);
 }
 
-// ── Generate ──
+// ── Generate (single event) ──
 function generate() {
-  var date        = document.getElementById('date').value;
-  var competition = document.getElementById('competition').value;
-  var opponent    = document.getElementById('opponent').value || 'Unknown';
-  var venue       = document.querySelector('input[name="venue"]:checked').value;
-  var scoreThem   = parseInt(document.getElementById('score-them').value) || 0;
-  var scoreUs     = parseInt(document.getElementById('score-us').value)   || 0;
-  var scorers     = document.getElementById('scorers').value;
-  var motm        = document.getElementById('motm').value;
-  var vibe        = document.getElementById('vibe').value;
-  var notes       = document.getElementById('notes').value;
-  var matchday    = document.getElementById('matchday').value;
-  var round       = document.getElementById('round').value;
-
-  var result = scoreUs > scoreThem ? 'W' : scoreUs < scoreThem ? 'L' : 'D';
-  var scoreStr = scoreThem + '-' + scoreUs;
-  var dateDisp = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {month:'numeric',day:'numeric',year:'2-digit'}) : '—';
-
-  // Screenshots
-  var ssChecked = [];
-  if (document.getElementById('ss-table').checked)     ssChecked.push('League table / standings');
-  if (document.getElementById('ss-morale').checked)    ssChecked.push('Squad morale / manager confidence');
-  if (document.getElementById('ss-board').checked)     ssChecked.push('Board pressure / objective status');
-  if (document.getElementById('ss-stats').checked)     ssChecked.push('Match stats');
-  if (document.getElementById('ss-ratings').checked)   ssChecked.push('Player ratings');
-  if (document.getElementById('ss-goal').checked)      ssChecked.push('Goal replay screenshot');
-  if (document.getElementById('ss-transfers').checked) ssChecked.push('Transfer screen');
-  var ssLines = ssChecked.map(function(s) { return '- [x] ' + s; }).join('\n');
-
-  // Transfers
-  var transferLines = '';
-  var transferJSON = [];
-  document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
-    var id = row.id.replace('transfer-','');
-    var player = (document.getElementById('t-player-'+id)||{}).value || '';
-    var dir    = (document.getElementById('t-dir-'+id)||{}).value || 'in';
-    var club   = (document.getElementById('t-club-'+id)||{}).value || '';
-    var fee    = (document.getElementById('t-fee-'+id)||{}).value || '';
-    if (player) {
-      transferLines += '\n- ' + player + ' (' + (dir==='in'?'IN from':'OUT to') + ' ' + club + (fee?' · '+fee:'') + ')';
-      transferJSON.push('  { "date": "' + date + '", "player": "' + player + '", "direction": "' + dir + '", "club": "' + club + '", "fee": "' + fee + '", "wage": "" }');
-    }
-  });
-
-  // Injuries
-  var injuryLines = '';
-  var injuryJSON = [];
-  document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
-    var id = row.id.replace('injury-','');
-    var player = (document.getElementById('i-player-'+id)||{}).value || '';
-    var desc   = (document.getElementById('i-desc-'+id)||{}).value  || '';
-    if (player) {
-      injuryLines += '\n- ' + player + ': ' + desc;
-      injuryJSON.push('  { "date": "' + date + '", "player": "' + player + '", "description": "' + desc + '" }');
-    }
-  });
-
-  // ── Session Template ──
-  var compExtra = '';
-  if (competition === 'EFL Championship' && matchday) compExtra = '\n**Matchday:** ' + matchday;
-  else if (round) compExtra = '\n**Round:** ' + round;
-
-  var template = `# Session Input Template
-## Wrexham AFC · FC26 Career Mode
-
----
-
-**DATE:** ${dateDisp}
-**MATCHDAY / EVENT:** Match
-
----
-
-### Match Result
-- **Opponent:** ${opponent}
-- **Home or Away:** ${venue.charAt(0).toUpperCase()+venue.slice(1)}
-- **Score:** ${scoreThem}-${scoreUs}
-- **Scorer(s):** ${scorers || '—'}
-- **Competition:** ${competition}${compExtra}
-
-### Vibe
-${vibe || '—'}
-
-### Screenshots Pushed
-${ssLines || '(none checked)'}
-
-### Transfers / Injuries / Notes
-${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}${injuryLines || ''}
-
----`;
-
-  // ── Log Entry ──
-  var logNotesParts = [];
-  if (scorers) logNotesParts.push(scorers);
-  if (motm)    logNotesParts.push('MoM: ' + motm);
-  if (notes)   logNotesParts.push(notes);
-  var logNotes = logNotesParts.join('. ');
-
-  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreThem + '-' + scoreUs + '", "result": "' + result + '", "competition": "' + competition + '"' + (matchday ? ', "matchday": ' + matchday : '') + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
-
-  var logEntry = '// Add to season_log.json → "matches" array:\n' + matchEntry;
-  if (transferJSON.length) logEntry += '\n\n// Add to "transfers" array:\n' + transferJSON.join(',\n');
-  if (injuryJSON.length)   logEntry += '\n\n// Add to "injuries" array:\n' + injuryJSON.join(',\n');
-
-  // ── Commit message ──
-  var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
-  var commitMsg = (competition === 'EFL Championship' ? 'Entry ' + (matchday ? 'MD' + matchday : '???') : competition.split(' ').slice(-1)[0] + ' entry') + ': ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreThem + '-' + scoreUs + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
-
-  var combined = template + '\n\n' + logEntry + '\n\n// Suggested Git Commit Message:\n' + commitMsg;
+  var ev = collectEventData();
+  var combined = ev.template + '\n\n' + ev.logEntry + '\n\n// Suggested Git Commit Message:\n' + ev.commitMsg;
   document.getElementById('all-out').textContent = combined;
   document.getElementById('output-block').style.display = 'block';
   document.getElementById('output-block').scrollIntoView({ behavior:'smooth', block:'start' });
@@ -530,6 +486,191 @@ function copyTo(preId, btnId) {
   var dd   = String(d.getDate()).padStart(2,'0');
   document.getElementById('date').value = yyyy+'-'+mm+'-'+dd;
 })();
+
+// ── Batch queue ──
+var stagedEvents = [];
+
+function collectEventData() {
+  var date        = document.getElementById('date').value;
+  var competition = document.getElementById('competition').value;
+  var opponent    = document.getElementById('opponent').value || 'Unknown';
+  var venue       = document.querySelector('input[name="venue"]:checked').value;
+  var scoreThem   = parseInt(document.getElementById('score-them').value) || 0;
+  var scoreUs     = parseInt(document.getElementById('score-us').value)   || 0;
+  var scorers     = document.getElementById('scorers').value;
+  var motm        = document.getElementById('motm').value;
+  var vibe        = document.getElementById('vibe').value;
+  var notes       = document.getElementById('notes').value;
+  var matchday    = document.getElementById('matchday').value;
+  var round       = document.getElementById('round').value;
+
+  var result   = scoreUs > scoreThem ? 'W' : scoreUs < scoreThem ? 'L' : 'D';
+  var scoreStr = scoreThem + '-' + scoreUs;
+  var dateDisp = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {month:'numeric',day:'numeric',year:'2-digit'}) : '—';
+
+  var ssChecked = [];
+  if (document.getElementById('ss-table').checked)     ssChecked.push('League table / standings');
+  if (document.getElementById('ss-morale').checked)    ssChecked.push('Squad morale / manager confidence');
+  if (document.getElementById('ss-board').checked)     ssChecked.push('Board pressure / objective status');
+  if (document.getElementById('ss-stats').checked)     ssChecked.push('Match stats');
+  if (document.getElementById('ss-ratings').checked)   ssChecked.push('Player ratings');
+  if (document.getElementById('ss-goal').checked)      ssChecked.push('Goal replay screenshot');
+  if (document.getElementById('ss-transfers').checked) ssChecked.push('Transfer screen');
+  var ssLines = ssChecked.map(function(s) { return '- [x] ' + s; }).join('\n');
+
+  var transferLines = '';
+  var transferJSON = [];
+  document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
+    var id = row.id.replace('transfer-','');
+    var player = (document.getElementById('t-player-'+id)||{}).value || '';
+    var dir    = (document.getElementById('t-dir-'+id)||{}).value || 'in';
+    var club   = (document.getElementById('t-club-'+id)||{}).value || '';
+    var fee    = (document.getElementById('t-fee-'+id)||{}).value || '';
+    if (player) {
+      transferLines += '\n- ' + player + ' (' + (dir==='in'?'IN from':'OUT to') + ' ' + club + (fee?' · '+fee:'') + ')';
+      transferJSON.push('  { "date": "' + date + '", "player": "' + player + '", "direction": "' + dir + '", "club": "' + club + '", "fee": "' + fee + '", "wage": "" }');
+    }
+  });
+
+  var injuryLines = '';
+  var injuryJSON = [];
+  document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
+    var id = row.id.replace('injury-','');
+    var player = (document.getElementById('i-player-'+id)||{}).value || '';
+    var desc   = (document.getElementById('i-desc-'+id)||{}).value  || '';
+    if (player) {
+      injuryLines += '\n- ' + player + ': ' + desc;
+      injuryJSON.push('  { "date": "' + date + '", "player": "' + player + '", "description": "' + desc + '" }');
+    }
+  });
+
+  var compExtra = '';
+  if (competition === 'EFL Championship' && matchday) compExtra = '\n**Matchday:** ' + matchday;
+  else if (round) compExtra = '\n**Round:** ' + round;
+
+  var template = `# Session Input Template
+## Wrexham AFC · FC26 Career Mode
+
+---
+
+**DATE:** ${dateDisp}
+**MATCHDAY / EVENT:** Match
+
+---
+
+### Match Result
+- **Opponent:** ${opponent}
+- **Home or Away:** ${venue.charAt(0).toUpperCase()+venue.slice(1)}
+- **Score:** ${scoreThem}-${scoreUs}
+- **Scorer(s):** ${scorers || '—'}
+- **Competition:** ${competition}${compExtra}
+
+### Vibe
+${vibe || '—'}
+
+### Screenshots Pushed
+${ssLines || '(none checked)'}
+
+### Transfers / Injuries / Notes
+${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}${injuryLines || ''}
+
+---`;
+
+  var logNotesParts = [];
+  if (scorers) logNotesParts.push(scorers);
+  if (motm)    logNotesParts.push('MoM: ' + motm);
+  if (notes)   logNotesParts.push(notes);
+  var logNotes = logNotesParts.join('. ');
+
+  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreThem + '-' + scoreUs + '", "result": "' + result + '", "competition": "' + competition + '"' + (matchday ? ', "matchday": ' + matchday : '') + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
+
+  var logEntry = '// Add to season_log.json → "matches" array:\n' + matchEntry;
+  if (transferJSON.length) logEntry += '\n\n// Add to "transfers" array:\n' + transferJSON.join(',\n');
+  if (injuryJSON.length)   logEntry += '\n\n// Add to "injuries" array:\n' + injuryJSON.join(',\n');
+
+  var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
+  var commitMsg = (competition === 'EFL Championship' ? 'Entry ' + (matchday ? 'MD' + matchday : '???') : competition.split(' ').slice(-1)[0] + ' entry') + ': ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreThem + '-' + scoreUs + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
+
+  var chipLabel = (competition === 'EFL Championship' && matchday ? 'MD' + matchday : competition.split(' ').pop()) + ' · ' + opponent + ' · ' + scoreStr + ' · ' + result;
+
+  return {
+    label: chipLabel,
+    template: template,
+    logEntry: logEntry,
+    commitMsg: commitMsg,
+    matchday: matchday,
+    transferJSON: transferJSON,
+    injuryJSON: injuryJSON
+  };
+}
+
+function stageEvent() {
+  var ev = collectEventData();
+  stagedEvents.push(ev);
+  renderBatchTray();
+  clearForm();
+  document.getElementById('output-block').style.display = 'none';
+}
+
+function removeStagedEvent(idx) {
+  stagedEvents.splice(idx, 1);
+  renderBatchTray();
+}
+
+function renderBatchTray() {
+  var tray    = document.getElementById('batch-tray');
+  var chips   = document.getElementById('batch-chips');
+  var batchSec = document.getElementById('batch-generate-section');
+  if (stagedEvents.length === 0) {
+    tray.style.display = 'none';
+    batchSec.style.display = 'none';
+    return;
+  }
+  tray.style.display = '';
+  batchSec.style.display = '';
+  chips.innerHTML = stagedEvents.map(function(ev, i) {
+    return '<div class="batch-chip">' +
+      '<span>' + ev.label + '</span>' +
+      '<button class="chip-remove" onclick="removeStagedEvent(' + i + ')">×</button>' +
+    '</div>';
+  }).join('');
+}
+
+function generateBatch() {
+  var commitName = (document.getElementById('commit-name').value || '').trim() || '[paste commit name / hash here]';
+  var count = stagedEvents.length;
+  var out = '# BATCH SESSION SUBMIT\n';
+  out += '## GitHub Commit: ' + commitName + '\n';
+  out += '## ' + count + ' event' + (count !== 1 ? 's' : '') + ' in this batch\n';
+  out += '## Screenshots are in docs/Screenshots/ as of that commit\n\n';
+
+  var allTransfers = [];
+  var allInjuries  = [];
+
+  stagedEvents.forEach(function(ev, i) {
+    out += '══════════════════════════════════════\n';
+    out += 'EVENT ' + (i+1) + ' of ' + count + ' — ' + ev.label + '\n';
+    out += '══════════════════════════════════════\n\n';
+    out += ev.template + '\n\n';
+    out += ev.logEntry + '\n\n';
+    allTransfers = allTransfers.concat(ev.transferJSON);
+    allInjuries  = allInjuries.concat(ev.injuryJSON);
+  });
+
+  out += '══════════════════════════════════════\n';
+  out += '// COMBINED season_log.json entries\n\n';
+  out += '// matches (add each in order):\n';
+  stagedEvents.forEach(function(ev) {
+    var line = ev.logEntry.split('\n')[1];
+    if (line) out += line + ',\n';
+  });
+  if (allTransfers.length) out += '\n// transfers:\n' + allTransfers.join(',\n') + '\n';
+  if (allInjuries.length)  out += '\n// injuries:\n'  + allInjuries.join(',\n')  + '\n';
+
+  document.getElementById('all-out').textContent = out;
+  document.getElementById('output-block').style.display = 'block';
+  document.getElementById('output-block').scrollIntoView({ behavior:'smooth', block:'start' });
+}
 </script>
 
 </body>
