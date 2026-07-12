@@ -67,8 +67,8 @@
     .comp-summary {
       display: flex;
       align-items: center;
-      gap: 14px;
-      padding: 12px 16px;
+      gap: 18px;
+      padding: 24px 18px;
       background: var(--charcoal);
       cursor: pointer;
       list-style: none;
@@ -79,25 +79,26 @@
     .comp-summary-name {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 12px;
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px;
+      font-size: 26px;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--white);
       white-space: nowrap;
     }
-    /* .comp-summary-logo defined in style.css */
+    /* .comp-summary-logo base defined in style.css; enlarged here to match 2x subheader */
+    .comp-summary-logo { width: 48px; height: 48px; }
     .comp-summary-stats {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 12px;
+      font-size: 20px;
       color: var(--muted);
       flex: 1;
     }
     .comp-summary-stats strong { color: var(--gold); }
     .comp-summary-arrow {
-      font-size: 11px;
+      font-size: 22px;
       color: var(--muted);
       transition: transform 0.15s ease;
       flex-shrink: 0;
@@ -291,7 +292,7 @@ if ('serviceWorker' in navigator) {
 <!-- ── OVERALL TALLY ── -->
 <div class="record-bar">
   <div class="record-cell">
-    <div class="record-num green">16</div>
+    <div class="record-num green">18</div>
     <div class="record-label">Wins</div>
   </div>
   <div class="record-cell">
@@ -303,7 +304,7 @@ if ('serviceWorker' in navigator) {
     <div class="record-label">Losses</div>
   </div>
   <div class="record-cell">
-    <div class="record-num gold">52</div>
+    <div class="record-num gold">58</div>
     <div class="record-label">Championship Pts</div>
   </div>
 </div>
@@ -326,7 +327,7 @@ if ('serviceWorker' in navigator) {
 <details class="comp-accordion" open>
   <summary class="comp-summary">
     <span class="comp-summary-name"><img class="comp-summary-logo" src="assets/photos/efl-championship.png" alt="">EFL Championship</span>
-    <span class="comp-summary-stats"><strong>P25 W17 D4 L4</strong> &nbsp;· 55 pts &nbsp;GF66 GA33 GD+33</span>
+    <span class="comp-summary-stats"><strong>P26 W18 D4 L4</strong> &nbsp;· 58 pts &nbsp;GF68 GA33 GD+35</span>
     <span class="comp-summary-arrow">▾</span>
   </summary>
 
@@ -372,7 +373,7 @@ if ('serviceWorker' in navigator) {
 
   <div class="match-log-row">
     <span class="ml-date">Dec 26, 2025</span>
-    <div><div class="ml-opponent">Sheffield Utd</div><div class="ml-comp">EFL Championship · MD23</div></div>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/sheffield-united-logo-footylogos.png" alt="">Sheffield Utd</div><div class="ml-comp">EFL Championship · MD23</div></div>
     <span class="ml-ha">Home</span>
     <span></span>
     <span class="ml-result w">W 4–3</span>
@@ -392,7 +393,7 @@ if ('serviceWorker' in navigator) {
 
   <div class="match-log-row">
     <span class="ml-date">Dec 13, 2025</span>
-    <div><div class="ml-opponent">Watford</div><div class="ml-comp">EFL Championship · MD21</div></div>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/watford-logo-footylogos.png" alt="">Watford</div><div class="ml-comp">EFL Championship · MD21</div></div>
     <span class="ml-ha">Home</span>
     <span></span>
     <span class="ml-result w">W 3–2</span>
@@ -432,7 +433,7 @@ if ('serviceWorker' in navigator) {
 
   <div class="match-log-row">
     <span class="ml-date">Nov 26, 2025</span>
-    <div><div class="ml-opponent">Bristol City</div><div class="ml-comp">EFL Championship · MD17</div></div>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/bristol-city-logo-footylogos.png" alt="">Bristol City</div><div class="ml-comp">EFL Championship · MD17</div></div>
     <span class="ml-ha">Home</span>
     <span></span>
     <span class="ml-result d">D 2–2</span>
@@ -442,7 +443,7 @@ if ('serviceWorker' in navigator) {
 
   <div class="match-log-row">
     <span class="ml-date">Nov 22, 2025</span>
-    <div><div class="ml-opponent">Ipswich Town</div><div class="ml-comp">EFL Championship · MD16</div></div>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/ipswich-town-logo-footylogos.png" alt="">Ipswich Town</div><div class="ml-comp">EFL Championship · MD16</div></div>
     <span class="ml-ha">Away</span>
     <span></span>
     <span class="ml-result l">L 0–1</span>
@@ -452,7 +453,7 @@ if ('serviceWorker' in navigator) {
 
   <div class="match-log-row">
     <span class="ml-date">Nov 8, 2025</span>
-    <div><div class="ml-opponent">Charlton Athletic</div><div class="ml-comp">EFL Championship · MD15</div></div>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/charlton-athletic-logo-footylogos.png" alt="">Charlton Athletic</div><div class="ml-comp">EFL Championship · MD15</div></div>
     <span class="ml-ha">Home</span>
     <span></span>
     <span class="ml-result w">W 3–1</span>
@@ -462,7 +463,7 @@ if ('serviceWorker' in navigator) {
 
   <div class="match-log-row">
     <span class="ml-date">Nov 5, 2025</span>
-    <div><div class="ml-opponent">Portsmouth</div><div class="ml-comp">EFL Championship · MD14</div></div>
+    <div><div class="ml-opponent"><img class="ml-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/portsmouth-logo-footylogos.png" alt="">Portsmouth</div><div class="ml-comp">EFL Championship · MD14</div></div>
     <span class="ml-ha">Away</span>
     <span></span>
     <span class="ml-result w">W 5–0</span>
@@ -777,37 +778,37 @@ if ('serviceWorker' in navigator) {
 <div class="stats-row">
   <div><div class="s-name">J.L. Rodríguez</div><div class="s-pos">LW · ST</div></div>
   <span class="s-num">11</span>
-  <span class="s-num highlight">6</span>
+  <span class="s-num highlight">11</span>
   <span class="s-num highlight">3</span>
   <span class="s-rating">8.0</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD10-15</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">D. Keillor-Dunn</div><div class="s-pos">RW · CAM</div></div>
   <span class="s-num">8</span>
-  <span class="s-num highlight">6</span>
+  <span class="s-num highlight">7</span>
   <span class="s-num highlight">3</span>
   <span class="s-rating">7.6</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">K. Moore</div><div class="s-pos">ST</div></div>
   <span class="s-num">14</span>
-  <span class="s-num highlight">12</span>
+  <span class="s-num highlight">21</span>
   <span class="s-num highlight">3</span>
   <span class="s-rating">7.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-15 ✓</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">N. Broadhead</div><div class="s-pos">LW</div></div>
   <span class="s-num">14</span>
-  <span class="s-num highlight">6</span>
+  <span class="s-num highlight">10</span>
   <span class="s-num highlight">7</span>
   <span class="s-rating">7.1</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD10-15</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
@@ -831,19 +832,19 @@ if ('serviceWorker' in navigator) {
 <div class="stats-row">
   <div><div class="s-name">L. O'Brien</div><div class="s-pos">CM</div></div>
   <span class="s-num">11</span>
-  <span class="s-num highlight">1</span>
+  <span class="s-num highlight">2</span>
   <span class="s-num highlight">2</span>
   <span class="s-rating">6.9</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓ + MD11,MD13-15</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">L. Cacace</div><div class="s-pos">LB</div></div>
   <span class="s-num">7</span>
-  <span class="s-num">0</span>
+  <span class="s-num highlight">1</span>
   <span class="s-num">0</span>
   <span class="s-rating">6.8</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
@@ -858,10 +859,10 @@ if ('serviceWorker' in navigator) {
 <div class="stats-row">
   <div><div class="s-name">Y. Amrizi</div><div class="s-pos">ST · LW</div></div>
   <span class="s-num">6</span>
-  <span class="s-num highlight">1</span>
+  <span class="s-num highlight">7</span>
   <span class="s-num highlight">1</span>
   <span class="s-rating">6.7</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-8 ✓ (unused sub MD9)</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
@@ -930,10 +931,10 @@ if ('serviceWorker' in navigator) {
 <div class="stats-row">
   <div><div class="s-name">J. Windass</div><div class="s-pos">CAM · CM</div></div>
   <span class="s-num">12</span>
-  <span class="s-num highlight">3</span>
+  <span class="s-num highlight">6</span>
   <span class="s-num highlight">2</span>
   <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-8 ✓ + MD12-15</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26</span>
 </div>
 
 <div class="stats-row">
@@ -955,7 +956,7 @@ if ('serviceWorker' in navigator) {
 </div>
 
 <div class="data-note">
-  Goals/assists confirmed from session screenshots through MD15 (Charlton Athletic, Nov 8). Key additions this session: Moore 12G (+2), Broadhead 6G (+3), Windass 3G/2A (+1G/+1A), O'Brien 1G, Dobson 3G (+1, 89' off bench vs Charlton), Sheaf 1A (assist to Dobson). Apps reconciled to MD15 for Moore, Broadhead, Kaboré, Rodríguez, Windass, O'Brien, Sheaf, Dobson. <strong>MD12 note: D. Ward started in goal (not Okonkwo).</strong> Mins column cleared to "—" where only partial data available.
+  <strong>Goals reconciled from the match log through MD26 (Derby County, Jan 4)</strong> — senior matches (Championship + Carabao Cup). Moore 21, Rodríguez 11, Broadhead 10, Amrizi 7, Keillor-Dunn 7, Windass 6, Dobson 3, O'Brien 2, Cadamarteri 1, Kaboré 1, Cacace 1 (Keillor-Dunn and Windass each include one Carabao Cup goal). Apps, assists and average ratings still reflect the last full screenshot reconciliation (MD15) and are pending update for MD16–26. <strong>MD12 note: D. Ward started in goal (not Okonkwo).</strong>
 </div>
 
 <div class="footer">
