@@ -139,6 +139,8 @@
       font-weight:700; letter-spacing:1px; text-transform:uppercase;
       padding:6px 8px 6px 12px;
     }
+    .chip-label { cursor: pointer; }
+    .chip-label:hover { text-decoration: underline; }
     .chip-remove {
       background:none; border:none; color:rgba(255,255,255,0.65);
       font-size:17px; line-height:1; cursor:pointer; padding:0 2px;
@@ -505,7 +507,7 @@ function collectEventData() {
   var round       = document.getElementById('round').value;
 
   var result   = scoreUs > scoreThem ? 'W' : scoreUs < scoreThem ? 'L' : 'D';
-  var scoreStr = scoreThem + '-' + scoreUs;
+  var scoreStr = scoreUs + '-' + scoreThem;
   var dateDisp = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {month:'numeric',day:'numeric',year:'2-digit'}) : '—';
 
   var ssChecked = [];
@@ -561,7 +563,7 @@ function collectEventData() {
 ### Match Result
 - **Opponent:** ${opponent}
 - **Home or Away:** ${venue.charAt(0).toUpperCase()+venue.slice(1)}
-- **Score:** ${scoreThem}-${scoreUs}
+- **Score:** ${scoreUs}-${scoreThem}
 - **Scorer(s):** ${scorers || '—'}
 - **Competition:** ${competition}${compExtra}
 
@@ -582,16 +584,53 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
   if (notes)   logNotesParts.push(notes);
   var logNotes = logNotesParts.join('. ');
 
-  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreThem + '-' + scoreUs + '", "result": "' + result + '", "competition": "' + competition + '"' + (matchday ? ', "matchday": ' + matchday : '') + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
+  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreUs + '-' + scoreThem + '", "result": "' + result + '", "competition": "' + competition + '"' + (matchday ? ', "matchday": ' + matchday : '') + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
 
   var logEntry = '// Add to season_log.json → "matches" array:\n' + matchEntry;
   if (transferJSON.length) logEntry += '\n\n// Add to "transfers" array:\n' + transferJSON.join(',\n');
   if (injuryJSON.length)   logEntry += '\n\n// Add to "injuries" array:\n' + injuryJSON.join(',\n');
 
   var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
-  var commitMsg = (competition === 'EFL Championship' ? 'Entry ' + (matchday ? 'MD' + matchday : '???') : competition.split(' ').slice(-1)[0] + ' entry') + ': ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreThem + '-' + scoreUs + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
+  var commitMsg = (competition === 'EFL Championship' ? 'Entry ' + (matchday ? 'MD' + matchday : '???') : competition.split(' ').slice(-1)[0] + ' entry') + ': ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
 
   var chipLabel = (competition === 'EFL Championship' && matchday ? 'MD' + matchday : competition.split(' ').pop()) + ' · ' + opponent + ' · ' + scoreStr + ' · ' + result;
+
+  var transfersRaw = [];
+  document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
+    var id = row.id.replace('transfer-','');
+    transfersRaw.push({
+      player: (document.getElementById('t-player-'+id)||{}).value || '',
+      dir:    (document.getElementById('t-dir-'+id)||{}).value || 'in',
+      club:   (document.getElementById('t-club-'+id)||{}).value || '',
+      fee:    (document.getElementById('t-fee-'+id)||{}).value || ''
+    });
+  });
+
+  var injuriesRaw = [];
+  document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
+    var id = row.id.replace('injury-','');
+    injuriesRaw.push({
+      player: (document.getElementById('i-player-'+id)||{}).value || '',
+      desc:   (document.getElementById('i-desc-'+id)||{}).value || ''
+    });
+  });
+
+  var raw = {
+    date: date, competition: competition, opponent: document.getElementById('opponent').value,
+    venue: venue, scoreThem: scoreThem, scoreUs: scoreUs, scorers: scorers,
+    motm: motm, vibe: vibe, notes: notes, matchday: matchday, round: round,
+    ss: {
+      table: document.getElementById('ss-table').checked,
+      morale: document.getElementById('ss-morale').checked,
+      board: document.getElementById('ss-board').checked,
+      stats: document.getElementById('ss-stats').checked,
+      ratings: document.getElementById('ss-ratings').checked,
+      goal: document.getElementById('ss-goal').checked,
+      transfers: document.getElementById('ss-transfers').checked
+    },
+    transfers: transfersRaw,
+    injuries: injuriesRaw
+  };
 
   return {
     label: chipLabel,
@@ -600,13 +639,21 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
     commitMsg: commitMsg,
     matchday: matchday,
     transferJSON: transferJSON,
-    injuryJSON: injuryJSON
+    injuryJSON: injuryJSON,
+    raw: raw
   };
 }
 
+var editingIndex = -1;
+
 function stageEvent() {
   var ev = collectEventData();
-  stagedEvents.push(ev);
+  if (editingIndex >= 0) {
+    stagedEvents.splice(editingIndex, 0, ev);
+    editingIndex = -1;
+  } else {
+    stagedEvents.push(ev);
+  }
   renderBatchTray();
   clearForm();
   document.getElementById('output-block').style.display = 'none';
@@ -614,7 +661,64 @@ function stageEvent() {
 
 function removeStagedEvent(idx) {
   stagedEvents.splice(idx, 1);
+  if (editingIndex === idx) editingIndex = -1;
   renderBatchTray();
+}
+
+function editStagedEvent(idx) {
+  var ev = stagedEvents[idx];
+  if (!ev || !ev.raw) return;
+  populateForm(ev.raw);
+  stagedEvents.splice(idx, 1);
+  editingIndex = idx;
+  renderBatchTray();
+  document.getElementById('output-block').style.display = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function populateForm(raw) {
+  document.getElementById('date').value = raw.date || '';
+  document.getElementById('competition').value = raw.competition || 'EFL Championship';
+  document.getElementById('competition').dispatchEvent(new Event('change'));
+  document.getElementById('opponent').value = raw.opponent || '';
+  document.getElementById('opponent-name-score').textContent = raw.opponent || 'Opponent';
+  document.querySelector('input[name="venue"][value="' + (raw.venue || 'home') + '"]').checked = true;
+  document.getElementById('score-them').value = raw.scoreThem || 0;
+  document.getElementById('score-us').value = raw.scoreUs || 0;
+  updateResult();
+  document.getElementById('scorers').value = raw.scorers || '';
+  document.getElementById('motm').value = raw.motm || '';
+  document.getElementById('vibe').value = raw.vibe || '';
+  document.getElementById('notes').value = raw.notes || '';
+  document.getElementById('matchday').value = raw.matchday || '';
+  document.getElementById('round').value = raw.round || '';
+
+  var ss = raw.ss || {};
+  document.getElementById('ss-table').checked     = !!ss.table;
+  document.getElementById('ss-morale').checked    = !!ss.morale;
+  document.getElementById('ss-board').checked     = !!ss.board;
+  document.getElementById('ss-stats').checked     = !!ss.stats;
+  document.getElementById('ss-ratings').checked   = !!ss.ratings;
+  document.getElementById('ss-goal').checked      = !!ss.goal;
+  document.getElementById('ss-transfers').checked = !!ss.transfers;
+
+  document.getElementById('transfers-list').innerHTML = '';
+  (raw.transfers || []).forEach(function(t) {
+    addTransfer();
+    var id = transferCount;
+    document.getElementById('t-player-'+id).value = t.player || '';
+    document.getElementById('t-dir-'+id).value    = t.dir || 'in';
+    document.getElementById('t-club-'+id).value   = t.club || '';
+    document.getElementById('t-fee-'+id).value    = t.fee || '';
+  });
+
+  document.getElementById('injuries-list').innerHTML = '';
+  (raw.injuries || []).forEach(function(inj) {
+    addInjury();
+    var id = injuryCount;
+    document.getElementById('i-player-'+id).value = inj.player || '';
+    document.getElementById('i-desc-'+id).value    = inj.desc || '';
+  });
 }
 
 function renderBatchTray() {
@@ -630,7 +734,7 @@ function renderBatchTray() {
   batchSec.style.display = '';
   chips.innerHTML = stagedEvents.map(function(ev, i) {
     return '<div class="batch-chip">' +
-      '<span>' + ev.label + '</span>' +
+      '<span class="chip-label" onclick="editStagedEvent(' + i + ')" title="Click to edit">' + ev.label + '</span>' +
       '<button class="chip-remove" onclick="removeStagedEvent(' + i + ')">×</button>' +
     '</div>';
   }).join('');
