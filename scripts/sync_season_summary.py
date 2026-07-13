@@ -41,6 +41,7 @@ def build_summary(log):
     matches = log.get("matches", [])
     league = [m for m in matches if m.get("competition") == "EFL Championship"]
     cup = [m for m in matches if m.get("competition") == "Carabao Cup"]
+    fa_cup = [m for m in matches if m.get("competition") == "FA Cup"]
     competitive = [m for m in matches if m.get("competition") not in PRESEASON_COMPS]
 
     def record(ms):
@@ -51,12 +52,14 @@ def build_summary(log):
 
     lw, ld, ll = record(league)
     cw, cd, cl = record(cup)
+    fw, fd, fl = record(fa_cup)
 
     stats = {
         "played": len(competitive),
         "league_p": len(league), "league_w": lw, "league_d": ld, "league_l": ll,
         "league_pts": lw * 3 + ld,
         "cup_p": len(cup), "cup_w": cw, "cup_d": cd, "cup_l": cl,
+        "fa_cup_p": len(fa_cup), "fa_cup_w": fw, "fa_cup_d": fd, "fa_cup_l": fl,
     }
 
     all_events = (

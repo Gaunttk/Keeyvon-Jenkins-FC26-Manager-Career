@@ -110,6 +110,30 @@ if ('serviceWorker' in navigator) {
   </div>
 </div>
 
+<!-- FA CUP STATS BAR -->
+<div class="cup-bar-label">
+  <img src="assets/photos/crests/england_emirates-fa-cup_512x512.football-logos.cc.png" class="comp-logo" alt="FA Cup">
+  FA Cup
+</div>
+<div class="season-bar" style="grid-template-columns: repeat(4,1fr);">
+  <div class="stat-cell">
+    <span class="stat-number" id="facup-p" style="color:var(--muted)">0</span>
+    <span class="stat-label">P</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="facup-w" style="color:#5BAD72">0</span>
+    <span class="stat-label">W</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="facup-d" style="color:var(--gold)">0</span>
+    <span class="stat-label">D</span>
+  </div>
+  <div class="stat-cell">
+    <span class="stat-number" id="facup-l" style="color:var(--red)">0</span>
+    <span class="stat-label">L</span>
+  </div>
+</div>
+
 <!-- LEAGUE TABLE -->
 <div class="log-section" style="margin-top:24px;">
   <div class="section-label">
@@ -263,7 +287,7 @@ if ('serviceWorker' in navigator) {
 // this page works as a local file:// (no fetch needed). Do not hand-edit —
 // regenerate with `python3 scripts/sync_season_summary.py` after any change
 // to season_log.json.
-const SEASON_SUMMARY = {"_meta":{"club":"Wrexham AFC","manager":"Keeyvon Jenkins","game":"FC26 Career Mode","season":"2025-26","competition":"EFL Championship","last_updated":"2026-01-04"},"stats":{"played":30,"league_p":27,"league_w":19,"league_d":4,"league_l":4,"league_pts":61,"cup_p":2,"cup_w":1,"cup_d":0,"cup_l":1},"recent":[{"type":"match","date":"2026-01-17","opponent":"Norwich","home":true,"score":"0-1","result":"W","competition":"EFL Championship"},{"type":"transfer","date":"2026-01-17","player":"Sam Smith","direction":"out","club":"FC Kobenhavn"},{"type":"milestone","date":"2026-01-17","description":"MD29 WIN: 1-0 at home vs Norwich. JL Rodriguez 65' the only goal in a comfortable evening. MoM: Amelia."},{"type":"milestone","date":"2026-01-17","description":"Sam Smith (ST) sold to FC Kobenhavn for $1,900,000."},{"type":"match","date":"2026-01-04","opponent":"Derby County","home":false,"score":"0-2","result":"W","competition":"EFL Championship"},{"type":"match","date":"2026-01-04","opponent":"Leicester City","home":false,"score":"0-3","result":"W","competition":"FA Cup"},{"type":"milestone","date":"2026-01-04","description":"MD26 WIN: 2-0 away at Derby County. K. Moore brace (67'/72') the only goals — 0-0 at HT, professional second half, five subs at 77' with points secure. xG 4.0-1.1 on 8 shots vs 4. Clean sheet, no cards. Record: P26 W18 D4 L4, GF68 GA33, 58 pts. 2nd in Championship, 1 point behind Ipswich (59)."},{"type":"milestone","date":"2026-01-04","description":"FA CUP ROUND 3 WIN: 3-0 away at Leicester City. JL Rodriguez 10', Broadhead 45', Moore 78' (MoM). Controlled from start to finish. Wrexham advance to face Notts County on Feb 14."},{"type":"match","date":"2026-01-01","opponent":"Blackburn Rovers","home":true,"score":"0-8","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2026-01-01","opponent":"Blackburn Rovers","home":true,"score":"1-6","result":"W","competition":"EFL Championship"},{"type":"milestone","date":"2026-01-01","description":"Youth Academy Rush Tournament QTR WIN: 8-0 vs Blackburn Rovers. Dijkgraaf MoM (10.0, 2A). Matthews (10.0, 2A), Martini (3G, 10.0), Webber GK (9.6). Scorers: Ortega ×2, Lord, Matthews, Martini ×3, Dijkgraaf. New tournament — not a continuation of the Nov 2025 sweep."},{"type":"milestone","date":"2026-01-01","description":"MD25 WIN: 6-1 at home vs Blackburn Rovers. Dominant first half — Moore 7', Rodríguez brace 22'/34' for 3-0 at HT. Ohashi 48' (BLK) before Wrexham surged: Moore 67', Amrizi 85', Keillor-Dunn 90'. Rodríguez PotM (9.6, 2G 2A). Record: P25 W17 D4 L4, GF66 GA33, 55 pts. 2nd in Championship, 1 point behind Ipswich (56)."}]};
+const SEASON_SUMMARY = {"_meta":{"club":"Wrexham AFC","manager":"Keeyvon Jenkins","game":"FC26 Career Mode","season":"2025-26","competition":"EFL Championship","last_updated":"2026-01-04"},"stats":{"played":30,"league_p":27,"league_w":19,"league_d":4,"league_l":4,"league_pts":61,"cup_p":2,"cup_w":1,"cup_d":0,"cup_l":1,"fa_cup_p":1,"fa_cup_w":1,"fa_cup_d":0,"fa_cup_l":0},"recent":[{"type":"match","date":"2026-01-17","opponent":"Norwich","home":true,"score":"0-1","result":"W","competition":"EFL Championship"},{"type":"transfer","date":"2026-01-17","player":"Sam Smith","direction":"out","club":"FC Kobenhavn"},{"type":"milestone","date":"2026-01-17","description":"MD29 WIN: 1-0 at home vs Norwich. JL Rodriguez 65' the only goal in a comfortable evening. MoM: Amelia."},{"type":"milestone","date":"2026-01-17","description":"Sam Smith (ST) sold to FC Kobenhavn for $1,900,000."},{"type":"match","date":"2026-01-04","opponent":"Derby County","home":false,"score":"0-2","result":"W","competition":"EFL Championship"},{"type":"match","date":"2026-01-04","opponent":"Leicester City","home":false,"score":"0-3","result":"W","competition":"FA Cup"},{"type":"milestone","date":"2026-01-04","description":"MD26 WIN: 2-0 away at Derby County. K. Moore brace (67'/72') the only goals — 0-0 at HT, professional second half, five subs at 77' with points secure. xG 4.0-1.1 on 8 shots vs 4. Clean sheet, no cards. Record: P26 W18 D4 L4, GF68 GA33, 58 pts. 2nd in Championship, 1 point behind Ipswich (59)."},{"type":"milestone","date":"2026-01-04","description":"FA CUP ROUND 3 WIN: 3-0 away at Leicester City. JL Rodriguez 10', Broadhead 45', Moore 78' (MoM). Controlled from start to finish. Wrexham advance to face Notts County on Feb 14."},{"type":"match","date":"2026-01-01","opponent":"Blackburn Rovers","home":true,"score":"0-8","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2026-01-01","opponent":"Blackburn Rovers","home":true,"score":"1-6","result":"W","competition":"EFL Championship"},{"type":"milestone","date":"2026-01-01","description":"Youth Academy Rush Tournament QTR WIN: 8-0 vs Blackburn Rovers. Dijkgraaf MoM (10.0, 2A). Matthews (10.0, 2A), Martini (3G, 10.0), Webber GK (9.6). Scorers: Ortega ×2, Lord, Matthews, Martini ×3, Dijkgraaf. New tournament — not a continuation of the Nov 2025 sweep."},{"type":"milestone","date":"2026-01-01","description":"MD25 WIN: 6-1 at home vs Blackburn Rovers. Dominant first half — Moore 7', Rodríguez brace 22'/34' for 3-0 at HT. Ohashi 48' (BLK) before Wrexham surged: Moore 67', Amrizi 85', Keillor-Dunn 90'. Rodríguez PotM (9.6, 2G 2A). Record: P25 W17 D4 L4, GF66 GA33, 55 pts. 2nd in Championship, 1 point behind Ipswich (56)."}]};
 
 function loadSeasonLog() {
   try {
@@ -284,6 +308,11 @@ function loadSeasonLog() {
     document.getElementById('cup-d').textContent = stats.cup_d;
     document.getElementById('cup-l').textContent = stats.cup_l;
 
+    document.getElementById('facup-p').textContent = stats.fa_cup_p;
+    document.getElementById('facup-w').textContent = stats.fa_cup_w;
+    document.getElementById('facup-d').textContent = stats.fa_cup_d;
+    document.getElementById('facup-l').textContent = stats.fa_cup_l;
+
     if (!recent || recent.length === 0) return;
 
     const container = document.getElementById('season-log-entries');
@@ -291,7 +320,8 @@ function loadSeasonLog() {
 
     const compLogoMap = {
       'EFL Championship': 'assets/photos/efl-championship-england-logo-footylogos.png',
-      'Carabao Cup': 'assets/photos/carabao-cup.png'
+      'Carabao Cup': 'assets/photos/carabao-cup.png',
+      'FA Cup': 'assets/photos/crests/england_emirates-fa-cup_512x512.football-logos.cc.png'
     };
 
     recent.forEach(entry => {
