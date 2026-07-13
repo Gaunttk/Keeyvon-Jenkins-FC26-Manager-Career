@@ -422,7 +422,7 @@
       "result": "W",
       "competition": "EFL Championship",
       "matchday": 29,
-      "notes": "JL Rodriguez 65'. MoM: Amelia. Comfortable.",
+      "notes": "JL Rodriguez 65'. MoM: J. Amelia (RB, 7.5). Comfortable. Shots 10-5 (WRX-NOR), poss 41-59%, passes 127-237 (87-92% acc), tackles 2-5. Wrexham 1st in Championship (P27 W19 D4 L4, GF69 GA33, 61 pts), 1 point ahead of Ipswich — first time top of the table all season.",
       "journal_entry": true
     }
   ],
@@ -684,7 +684,11 @@
     },
     {
       "date": "2026-01-17",
-      "description": "Sam Smith (ST) sold to FC Kobenhavn for $1,900,000."
+      "description": "Sam Smith (ST) sold to FC Kobenhavn for $1,900,000. Board allocated $1,410,180 to transfer budget."
+    },
+    {
+      "date": "2026-01-17",
+      "description": "Wrexham TOP OF THE TABLE for the first time all season — MD29 win over Norwich moves them above Ipswich, P27 W19 D4 L4 GF69 GA33 GD+36, 61 pts, 1 point clear of Ipswich (60 pts, P27)."
     }
   ]
 }
