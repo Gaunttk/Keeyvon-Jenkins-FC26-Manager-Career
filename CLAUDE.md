@@ -163,6 +163,23 @@ A departed player should not be removed from `wrexham_squad.csv` until their tra
 
 ---
 
+### Match Submission Checklist
+
+Every match session updates all of the following:
+
+- `season_log.json` — a `matches` entry + a `milestones` entry
+- `docs/season.html` — Match Log row in the right competition accordion; that competition's `comp-summary-stats`; the overall `record-bar` tally; Apps + goal count (and MoM, already tracked via the Match Log row) for every player who appeared, not just scorers
+- `docs/index.html` — run `python3 scripts/sync_season_summary.py` to regenerate the `SEASON_SUMMARY` stat bar
+- **`docs/index.html` full league standings table** (`EFL Championship Standings` section) — this table is hand-maintained, separate from `SEASON_SUMMARY`, and is *not* touched by `sync_season_summary.py`. It must be rebuilt from a full league-table screenshot (or screenshots covering all 24 clubs) every time it changes. **If a match session doesn't include a full-table screenshot, ask the user for one rather than leaving this table stale or guessing at it.**
+- `docs/Screenshots/` — delete processed screenshots (`git rm`) in the same commit
+- A two-voice journal entry (`JOURNAL_STYLE_GUIDE.md`) — write one for every match, not just when asked
+
+Minutes played is not tracked — not realistically capturable from the screenshots this workflow uses.
+
+A non-match "Squad Update" submission (attribute refresh, ratings/development review, or a roster change with no match that day) uses the Squad Update path on `docs/submit.html` instead of the Match path — it produces a `milestones` entry (not a `matches` entry) and an optional journal entry per the "write a journal entry for this" checkbox.
+
+---
+
 ### Season Log Schema
 
 Add entries to `season_log.json` after each game session:
