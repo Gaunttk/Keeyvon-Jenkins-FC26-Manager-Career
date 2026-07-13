@@ -210,15 +210,29 @@ if ('serviceWorker' in navigator) {
     <div class="batch-chips-row" id="batch-chips"></div>
   </div>
 
-  <!-- ─── MATCH ─── -->
+  <!-- ─── SUBMISSION TYPE ─── -->
   <div class="form-section">
-    <div class="form-section-label">Match Details</div>
-
+    <div class="form-section-label">Submission Type</div>
     <div class="form-row">
       <div class="form-group">
         <label for="date">Date</label>
         <input type="date" id="date">
       </div>
+      <div class="form-group">
+        <label>Type</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="subtype" value="match" checked> Match</label>
+          <label class="radio-label"><input type="radio" name="subtype" value="squad"> Squad Update</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── MATCH ─── -->
+  <div class="form-section" id="match-section">
+    <div class="form-section-label">Match Details</div>
+
+    <div class="form-row">
       <div class="form-group">
         <label for="competition">Competition</label>
         <select id="competition">
@@ -302,6 +316,36 @@ if ('serviceWorker' in navigator) {
       <div class="form-group full">
         <label for="notes">Additional Notes (MoM details, red cards, late drama, etc.)</label>
         <textarea id="notes" placeholder="e.g. Kaboré 16 interceptions. Clean sheet. xG 3.6–0.6."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SQUAD UPDATE ─── -->
+  <div class="form-section" id="squad-section" style="display:none;">
+    <div class="form-section-label">Squad Update Details</div>
+
+    <div class="form-row">
+      <div class="form-group full">
+        <label>What changed?</label>
+        <div class="checkbox-group">
+          <label class="checkbox-label"><input type="checkbox" id="su-attrs"> Attributes updated (wrexham_squad.csv)</label>
+          <label class="checkbox-label"><input type="checkbox" id="su-ratings"> Overall ratings / potential reviewed</label>
+          <label class="checkbox-label"><input type="checkbox" id="su-dev"> Development plan progress</label>
+          <label class="checkbox-label"><input type="checkbox" id="su-roster"> Roster change (see Transfers below)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group full">
+        <label for="squad-notes">Details (players affected, what changed)</label>
+        <textarea id="squad-notes" placeholder="e.g. Mid-season attribute refresh — 6 players screenshotted (Technical/Physical tabs). Rodríguez OVR 73→75, new PlayStyle+ Rapid."></textarea>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="checkbox-label" style="text-transform:none;"><input type="checkbox" id="squad-journal"> Write a journal entry for this</label>
       </div>
     </div>
   </div>
@@ -390,6 +434,16 @@ document.getElementById('competition').addEventListener('change', function() {
   document.getElementById('round-group').style.display    = isLeague ? 'none' : '';
 });
 
+// ── Submission type → toggle Match vs Squad Update sections ──
+function updateSubtype() {
+  var subtype = document.querySelector('input[name="subtype"]:checked').value;
+  document.getElementById('match-section').style.display = subtype === 'match' ? '' : 'none';
+  document.getElementById('squad-section').style.display = subtype === 'squad' ? '' : 'none';
+}
+document.querySelectorAll('input[name="subtype"]').forEach(function(r) {
+  r.addEventListener('change', updateSubtype);
+});
+
 // ── Transfers ──
 var transferCount = 0;
 function addTransfer() {
@@ -420,6 +474,133 @@ function addInjury() {
     <button class="btn-remove" onclick="document.getElementById('injury-${id}').remove()">×</button>
   `;
   document.getElementById('injuries-list').appendChild(div);
+}
+
+// ── Shared transfer / injury collection ──
+function collectTransfers(date) {
+  var lines = '', json = [], raw = [];
+  document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
+    var id = row.id.replace('transfer-','');
+    var player = (document.getElementById('t-player-'+id)||{}).value || '';
+    var dir    = (document.getElementById('t-dir-'+id)||{}).value || 'in';
+    var club   = (document.getElementById('t-club-'+id)||{}).value || '';
+    var fee    = (document.getElementById('t-fee-'+id)||{}).value || '';
+    raw.push({ player: player, dir: dir, club: club, fee: fee });
+    if (player) {
+      lines += '\n- ' + player + ' (' + (dir==='in'?'IN from':'OUT to') + ' ' + club + (fee?' · '+fee:'') + ')';
+      json.push('  { "date": "' + date + '", "player": "' + player + '", "direction": "' + dir + '", "club": "' + club + '", "fee": "' + fee + '", "wage": "" }');
+    }
+  });
+  return { lines: lines, json: json, raw: raw };
+}
+
+function collectInjuries(date) {
+  var lines = '', json = [], raw = [];
+  document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
+    var id = row.id.replace('injury-','');
+    var player = (document.getElementById('i-player-'+id)||{}).value || '';
+    var desc   = (document.getElementById('i-desc-'+id)||{}).value  || '';
+    raw.push({ player: player, desc: desc });
+    if (player) {
+      lines += '\n- ' + player + ': ' + desc;
+      json.push('  { "date": "' + date + '", "player": "' + player + '", "description": "' + desc + '" }');
+    }
+  });
+  return { lines: lines, json: json, raw: raw };
+}
+
+// ── Squad Update event (roster/attribute/ratings, non-match) ──
+function collectSquadEventData() {
+  var date = document.getElementById('date').value;
+  var dateDisp = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {month:'numeric',day:'numeric',year:'2-digit'}) : '—';
+
+  var whatChanged = [];
+  if (document.getElementById('su-attrs').checked)   whatChanged.push('Attributes updated');
+  if (document.getElementById('su-ratings').checked) whatChanged.push('Ratings / potential reviewed');
+  if (document.getElementById('su-dev').checked)     whatChanged.push('Development plan progress');
+  if (document.getElementById('su-roster').checked)  whatChanged.push('Roster change');
+  var squadNotes = document.getElementById('squad-notes').value;
+  var writeJournal = document.getElementById('squad-journal').checked;
+
+  var t = collectTransfers(date);
+  var inj = collectInjuries(date);
+
+  var ssChecked = [];
+  if (document.getElementById('ss-table').checked)     ssChecked.push('League table / standings');
+  if (document.getElementById('ss-morale').checked)    ssChecked.push('Squad morale / manager confidence');
+  if (document.getElementById('ss-board').checked)     ssChecked.push('Board pressure / objective status');
+  if (document.getElementById('ss-stats').checked)     ssChecked.push('Match stats');
+  if (document.getElementById('ss-ratings').checked)   ssChecked.push('Player ratings');
+  if (document.getElementById('ss-goal').checked)      ssChecked.push('Goal replay screenshot');
+  if (document.getElementById('ss-transfers').checked) ssChecked.push('Transfer screen');
+  var ssLines = ssChecked.map(function(s) { return '- [x] ' + s; }).join('\n');
+
+  var template = `# Session Input Template
+## Wrexham AFC · FC26 Career Mode
+
+---
+
+**DATE:** ${dateDisp}
+**MATCHDAY / EVENT:** Squad Update
+
+---
+
+### What Changed
+${whatChanged.length ? whatChanged.map(function(w){return '- ' + w;}).join('\n') : '(none checked)'}
+
+### Details
+${squadNotes || '—'}${t.lines || ''}${inj.lines || ''}
+
+### Screenshots Pushed
+${ssLines || '(none checked)'}
+
+### Write Journal Entry?
+${writeJournal ? 'Yes' : 'No'}
+
+---`;
+
+  var milestoneDesc = (whatChanged.join('; ') || 'Squad update') + (squadNotes ? ' — ' + squadNotes : '');
+  var milestoneEntry = '{ "date": "' + date + '", "description": "' + milestoneDesc.replace(/"/g,'\\"') + '"' + (writeJournal ? ', "journal_entry": true' : '') + ' }';
+
+  var logEntry = '// Add to season_log.json → "milestones" array:\n' + milestoneEntry;
+  if (t.json.length)   logEntry += '\n\n// Add to "transfers" array:\n' + t.json.join(',\n');
+  if (inj.json.length) logEntry += '\n\n// Add to "injuries" array:\n' + inj.json.join(',\n');
+
+  var commitMsg = 'Squad update: ' + (whatChanged.join(', ') || 'roster/attributes') + '\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
+
+  var chipLabel = 'Squad · ' + (whatChanged[0] || 'Update') + (whatChanged.length > 1 ? ' +' + (whatChanged.length-1) : '');
+
+  var raw = {
+    subtype: 'squad', date: date,
+    suAttrs: document.getElementById('su-attrs').checked,
+    suRatings: document.getElementById('su-ratings').checked,
+    suDev: document.getElementById('su-dev').checked,
+    suRoster: document.getElementById('su-roster').checked,
+    squadNotes: squadNotes, squadJournal: writeJournal,
+    ss: {
+      table: document.getElementById('ss-table').checked,
+      morale: document.getElementById('ss-morale').checked,
+      board: document.getElementById('ss-board').checked,
+      stats: document.getElementById('ss-stats').checked,
+      ratings: document.getElementById('ss-ratings').checked,
+      goal: document.getElementById('ss-goal').checked,
+      transfers: document.getElementById('ss-transfers').checked
+    },
+    transfers: t.raw,
+    injuries: inj.raw
+  };
+
+  return {
+    label: chipLabel,
+    eventType: 'squad',
+    template: template,
+    logEntry: logEntry,
+    commitMsg: commitMsg,
+    milestoneJSON: [milestoneEntry],
+    transferJSON: t.json,
+    injuryJSON: inj.json,
+    raw: raw
+  };
 }
 
 // ── Generate (single event) ──
@@ -463,6 +644,15 @@ function clearForm() {
   document.getElementById('transfers-list').innerHTML = '';
   document.getElementById('injuries-list').innerHTML = '';
 
+  document.querySelector('input[name="subtype"][value="match"]').checked = true;
+  document.getElementById('su-attrs').checked = false;
+  document.getElementById('su-ratings').checked = false;
+  document.getElementById('su-dev').checked = false;
+  document.getElementById('su-roster').checked = false;
+  document.getElementById('squad-notes').value = '';
+  document.getElementById('squad-journal').checked = false;
+  updateSubtype();
+
   document.getElementById('output-block').style.display = 'none';
 
   document.getElementById('date').value = keepDate;
@@ -493,6 +683,12 @@ function copyTo(preId, btnId) {
 var stagedEvents = [];
 
 function collectEventData() {
+  var subtype = document.querySelector('input[name="subtype"]:checked').value;
+  if (subtype === 'squad') return collectSquadEventData();
+  return collectMatchEventData();
+}
+
+function collectMatchEventData() {
   var date        = document.getElementById('date').value;
   var competition = document.getElementById('competition').value;
   var opponent    = document.getElementById('opponent').value || 'Unknown';
@@ -520,31 +716,10 @@ function collectEventData() {
   if (document.getElementById('ss-transfers').checked) ssChecked.push('Transfer screen');
   var ssLines = ssChecked.map(function(s) { return '- [x] ' + s; }).join('\n');
 
-  var transferLines = '';
-  var transferJSON = [];
-  document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
-    var id = row.id.replace('transfer-','');
-    var player = (document.getElementById('t-player-'+id)||{}).value || '';
-    var dir    = (document.getElementById('t-dir-'+id)||{}).value || 'in';
-    var club   = (document.getElementById('t-club-'+id)||{}).value || '';
-    var fee    = (document.getElementById('t-fee-'+id)||{}).value || '';
-    if (player) {
-      transferLines += '\n- ' + player + ' (' + (dir==='in'?'IN from':'OUT to') + ' ' + club + (fee?' · '+fee:'') + ')';
-      transferJSON.push('  { "date": "' + date + '", "player": "' + player + '", "direction": "' + dir + '", "club": "' + club + '", "fee": "' + fee + '", "wage": "" }');
-    }
-  });
-
-  var injuryLines = '';
-  var injuryJSON = [];
-  document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
-    var id = row.id.replace('injury-','');
-    var player = (document.getElementById('i-player-'+id)||{}).value || '';
-    var desc   = (document.getElementById('i-desc-'+id)||{}).value  || '';
-    if (player) {
-      injuryLines += '\n- ' + player + ': ' + desc;
-      injuryJSON.push('  { "date": "' + date + '", "player": "' + player + '", "description": "' + desc + '" }');
-    }
-  });
+  var t = collectTransfers(date);
+  var transferLines = t.lines, transferJSON = t.json;
+  var inj = collectInjuries(date);
+  var injuryLines = inj.lines, injuryJSON = inj.json;
 
   var compExtra = '';
   if (competition === 'EFL Championship' && matchday) compExtra = '\n**Matchday:** ' + matchday;
@@ -616,6 +791,7 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
   });
 
   var raw = {
+    subtype: 'match',
     date: date, competition: competition, opponent: document.getElementById('opponent').value,
     venue: venue, scoreThem: scoreThem, scoreUs: scoreUs, scorers: scorers,
     motm: motm, vibe: vibe, notes: notes, matchday: matchday, round: round,
@@ -634,10 +810,12 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
 
   return {
     label: chipLabel,
+    eventType: 'match',
     template: template,
     logEntry: logEntry,
     commitMsg: commitMsg,
     matchday: matchday,
+    matchJSON: matchEntry,
     transferJSON: transferJSON,
     injuryJSON: injuryJSON,
     raw: raw
@@ -678,6 +856,48 @@ function editStagedEvent(idx) {
 
 function populateForm(raw) {
   document.getElementById('date').value = raw.date || '';
+
+  var subtype = raw.subtype || 'match';
+  document.querySelector('input[name="subtype"][value="' + subtype + '"]').checked = true;
+  updateSubtype();
+
+  if (subtype === 'squad') {
+    document.getElementById('su-attrs').checked   = !!raw.suAttrs;
+    document.getElementById('su-ratings').checked = !!raw.suRatings;
+    document.getElementById('su-dev').checked     = !!raw.suDev;
+    document.getElementById('su-roster').checked  = !!raw.suRoster;
+    document.getElementById('squad-notes').value  = raw.squadNotes || '';
+    document.getElementById('squad-journal').checked = !!raw.squadJournal;
+
+    var ss2 = raw.ss || {};
+    document.getElementById('ss-table').checked     = !!ss2.table;
+    document.getElementById('ss-morale').checked    = !!ss2.morale;
+    document.getElementById('ss-board').checked     = !!ss2.board;
+    document.getElementById('ss-stats').checked     = !!ss2.stats;
+    document.getElementById('ss-ratings').checked   = !!ss2.ratings;
+    document.getElementById('ss-goal').checked      = !!ss2.goal;
+    document.getElementById('ss-transfers').checked = !!ss2.transfers;
+
+    document.getElementById('transfers-list').innerHTML = '';
+    (raw.transfers || []).forEach(function(t) {
+      addTransfer();
+      var id = transferCount;
+      document.getElementById('t-player-'+id).value = t.player || '';
+      document.getElementById('t-dir-'+id).value    = t.dir || 'in';
+      document.getElementById('t-club-'+id).value   = t.club || '';
+      document.getElementById('t-fee-'+id).value    = t.fee || '';
+    });
+
+    document.getElementById('injuries-list').innerHTML = '';
+    (raw.injuries || []).forEach(function(inj) {
+      addInjury();
+      var id = injuryCount;
+      document.getElementById('i-player-'+id).value = inj.player || '';
+      document.getElementById('i-desc-'+id).value    = inj.desc || '';
+    });
+    return;
+  }
+
   document.getElementById('competition').value = raw.competition || 'EFL Championship';
   document.getElementById('competition').dispatchEvent(new Event('change'));
   document.getElementById('opponent').value = raw.opponent || '';
@@ -761,15 +981,16 @@ function generateBatch() {
     allInjuries  = allInjuries.concat(ev.injuryJSON);
   });
 
+  var allMatches    = stagedEvents.filter(function(ev){ return ev.eventType === 'match'; }).map(function(ev){ return ev.matchJSON; });
+  var allMilestones = stagedEvents.filter(function(ev){ return ev.eventType === 'squad'; })
+    .reduce(function(acc, ev){ return acc.concat(ev.milestoneJSON || []); }, []);
+
   out += '══════════════════════════════════════\n';
   out += '// COMBINED season_log.json entries\n\n';
-  out += '// matches (add each in order):\n';
-  stagedEvents.forEach(function(ev) {
-    var line = ev.logEntry.split('\n')[1];
-    if (line) out += line + ',\n';
-  });
-  if (allTransfers.length) out += '\n// transfers:\n' + allTransfers.join(',\n') + '\n';
-  if (allInjuries.length)  out += '\n// injuries:\n'  + allInjuries.join(',\n')  + '\n';
+  if (allMatches.length)    out += '// matches (add each in order):\n' + allMatches.join(',\n') + '\n';
+  if (allMilestones.length) out += '\n// milestones:\n' + allMilestones.join(',\n') + '\n';
+  if (allTransfers.length)  out += '\n// transfers:\n' + allTransfers.join(',\n') + '\n';
+  if (allInjuries.length)   out += '\n// injuries:\n'  + allInjuries.join(',\n')  + '\n';
 
   document.getElementById('all-out').textContent = out;
   document.getElementById('output-block').style.display = 'block';
