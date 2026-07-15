@@ -457,6 +457,17 @@
       "matchday": 31,
       "notes": "K. Moore 19', A. Gómez 69' (debut, MoM 7.8, 1G/1A), B. Cadamarteri 81'. A. James (SHW) yellow 57'. Subs 73': Ward for Okonkwo, Cadamarteri for Moore, Amrizi for Rodríguez, Thomason for Cacace, Cleworth for Doyle. N. Chalobah (SHW) yellow 90'. Shots 12-5 (WRX-SHW), xG 2.4-0.7, poss 45-55%, passes 122-176 (84-88% acc), tackles 19-12, interceptions 15-15, saves 2-4. MoM: J. Rodríguez (7.1, 1A) per in-game award, despite Gómez's higher 7.8 rating.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-02-07",
+      "opponent": "Millwall",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 32,
+      "notes": "B. Gutiérrez 36' (debut goal), K. Moore 45' (MoM, 9.1, 1G/2A), D. Bobadilla 65' (debut goal). Subs: 52' C. Neghli on for J. Bryan (MIL). 62' M. Ivanović on for J. Coburn (MIL). 70': D. Keillor-Dunn for A. Gómez, J. Windass for B. Gutiérrez, J. Amelia for I. Kaboré (WRX). 85': B. Bannan on for W. Smallbone (MIL). Controlled from start to finish. Shots 13-4 (WRX-MIL), xG 5.3-1.4, poss 43-57%, passes 134-195 (82-89% acc), tackles 11-25, interceptions 19-15, saves 3-6, corners 6-1, offsides 3-0, fouls 0-1. Wrexham 1st in Championship (P31 W23 D4 L4, GF81 GA35, GD+46, 73 pts), next opponent Bristol City.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -559,6 +570,14 @@
       "club": "NEC Nijmegen",
       "fee": "$2,500,000",
       "wage": ""
+    },
+    {
+      "date": "2026-02-07",
+      "player": "Damián Bobadilla",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$33,500/w"
     }
   ],
   "injuries": [],
@@ -770,6 +789,18 @@
     {
       "date": "2026-01-31",
       "description": "Lewis Brunt (CB, 24) sold to NEC Nijmegen for $2,500,000, effective after the Sheffield Wed match in which he was an unused substitute."
+    },
+    {
+      "date": "2026-02-07",
+      "description": "MD32 WIN: 3-0 at home vs Millwall. B. Gutiérrez 36' (debut goal), K. Moore 45' (MoM, 9.1, 1G/2A), D. Bobadilla 65' (debut goal) — both new January signings off the mark on their first starts. Controlled from start to finish, clean sheet. Record: P31 W23 D4 L4, GF81 GA35, GD+46, 73 pts. 1st in Championship, next opponent Bristol City."
+    },
+    {
+      "date": "2026-02-07",
+      "description": "Damián Bobadilla (CM/CDM, 24, Paraguay) signed as a free agent — $33,500/w, 3-year deal, $290,000 signing bonus, market value $7.0M. Scored on his debut vs Millwall the same day."
+    },
+    {
+      "date": "2026-02-07",
+      "description": "Stats tab confirmed for both January signings: Andrés Gómez (PAC 77/SHO 69/PAS 68/DRI 76/DEF 34/PHY 59) and Brian Gutiérrez (PAC 71/SHO 68/PAS 72/DRI 73/DEF 42/PHY 61) — wrexham_squad.csv and roster.html updated, previously blank pending a Stats tab screenshot."
     }
   ]
 }
