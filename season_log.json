@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2026-02-21"
+    "last_updated": "2026-02-24"
   },
   "matches": [
     {
@@ -512,6 +512,17 @@
       "round": "Semi Final",
       "notes": "Martini (3), Matthews (2), Vargas. Home.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-02-24",
+      "opponent": "Hull City",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Lord, Ortega, Martini, Martini (as submitted — 4 scorer credits for a 3-0 scoreline; unresolved discrepancy, needs confirmation). MoM: Mason Webber. Controlled from start to finish.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -861,6 +872,10 @@
     {
       "date": "2026-02-21",
       "description": "Youth Academy Rush Tournament SEMI-FINAL WIN: 6-1 at home vs Watford. Martini hat-trick, Matthews brace, Vargas also on the scoresheet. Academy Rush side advances to the Final."
+    },
+    {
+      "date": "2026-02-24",
+      "description": "YOUTH ACADEMY RUSH TOURNAMENT WINNERS. Beat Hull City 3-0 in the Final — Lord, Ortega, and a Martini brace. MoM: Mason Webber. Controlled from start to finish."
     }
   ]
 }
