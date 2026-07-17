@@ -59,7 +59,6 @@
       "score": "4-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 1,
       "notes": "Keillor-Dunn 9'/44' (2G/1A, 8.4), Moore 25'/62' (2G, 8.2), Broadhead 3A (7.8 PotM). Larin 49' consolation. Subs: Cadamarteri for Kaboré 80', Dobson for Hyam 80'. Shots 7-10 (WRX-SOU), xG 4.8–1.6, poss 42-58%, passes 128-200 (87-93% accuracy), shot accuracy 86-40%, tackles 27-25, interceptions 12-7, saves 3-2, dribble success 84-93%.",
       "journal_entry": true
     },
@@ -81,7 +80,6 @@
       "score": "3-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 2,
       "notes": "Broadhead 2'/16', Moore 11'. Heggebø 75' (West Brom). Hyam yellow 38'. Cleworth for Hyam 45'. Subs 76': Longman for Kaboré, Smith for Broadhead, Cadamarteri for Moore, Dobson for Sheaf. Johnston for Diakité (WBA) 86'. MoM: C. Styles (West Brom). Shots 8-4, xG 3.9-1.7, poss 38-62%, passes 121-224 (83-89% accuracy), shot accuracy 63-50%, tackles 21-22, interceptions 20-11.",
       "journal_entry": true
     },
@@ -92,7 +90,6 @@
       "score": "1-1",
       "result": "D",
       "competition": "EFL Championship",
-      "matchday": 3,
       "notes": "Keillor-Dunn 65'. J. Yates 72' (Sheff Wed). Subs: Amrizi for Broadhead 72' (debut), Cadamarteri for Moore 72', Dobson for Sheaf 72', Rathbone for Windass 79', Thomason for Kaboré 88'. MoM: B. Sheaf (Wrexham, 7.5). Shots 8-13, xG 2.8-1.4, poss 57-43%, passes 177-136 (84-83% accuracy), shot accuracy 63-46%, tackles 19-15 (37-40% TSR), interceptions 17-22.",
       "journal_entry": true
     },
@@ -114,7 +111,6 @@
       "score": "0-2",
       "result": "L",
       "competition": "EFL Championship",
-      "matchday": 4,
       "notes": "F. Azeez 33' (yellow 43'), M. Ivanović 90' (both Millwall). No Wrexham goals — one shot on target from 4 attempts. Subs: Amrizi for Broadhead 78', Rathbone for Windass 83', Cadamarteri for Moore 86'. Millwall subs: Smallbone/Mazou-Sacko 67', Ivanović/Coburn 75', Bryan/McNamara 78'. Shots 10-4 (MIL-WRX), xG 3.4-0.5, poss 60-40%, passes 195-137 (90-82% accuracy), tackles 26-10, interceptions 15-13, saves 2-3.",
       "journal_entry": true
     },
@@ -125,7 +121,6 @@
       "score": "4-0",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 5,
       "notes": "JL Rodriguez 23'/29' (2G/1A, 9.6 debut), K. Moore 35' (7.7), D. Keillor-Dunn 68' (7.8 PotM, on 62' for Broadhead). Subs 71': Amrizi for Rodriguez, Cadamarteri for Moore, Dobson for Windass, Cleworth for Doyle. L. O'Brien 2A (7.4). Broadhead 1A (7.1). Okonkwo GK 100% save rate. Shots 11-4, xG 4.0-0.7, poss 43-57%, passes 145-167 (81-87% acc), shot acc 91-25%, dribble success 94-86%, tackles 26-15 (13-5 won), interceptions 11-11. QPR yellows: Madsen 53', Dunne 61'.",
       "journal_entry": true
     },
@@ -136,7 +131,6 @@
       "score": "3-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 6,
       "notes": "K. Moore 14' (assist N. Broadhead), Y. Amrizi 76' (assist I. Kaboré, sub on 69' for Broadhead), G. Dobson 89' (assist Amrizi, sub on 69' for L. O'Brien). MoM: Y. Amrizi (8.3, 1G 1A). Subs 69': Amrizi for Broadhead, Dobson for O'Brien, Rathbone for Sheaf. Norwich had 66% possession and 245 passes to Wrexham's 126, but Wrexham were clinical — 3 goals from 6 shots. L. Gibbs (NOR) yellow 69'.",
       "journal_entry": true
     },
@@ -147,7 +141,6 @@
       "score": "3-0",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 7,
       "notes": "D. Keillor-Dunn 13', J.L. Rodríguez 26' (1A), I. Kaboré 54' (1A, exceptional near-post header — his standout moment of the season so far). MoM: A. Okonkwo (GK, clean sheet, 4 saves incl. a penalty-goal-conceded aside — save success 67%). Subs 65': Amrizi for Rodríguez, Cadamarteri for Moore, Rathbone for O'Brien, Brunt for Hyam. 83': Cacace for Kaboré. O. Rathbone yellow 89'. Clean sheet at the Racecourse.",
       "journal_entry": true
     },
@@ -158,7 +151,6 @@
       "score": "3-0",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 8,
       "notes": "J. Windass 31', K. Moore 57' (MoM, 7.9), J.L. Rodríguez 88'. Assists shared among Rodríguez, Keillor-Dunn and Broadhead (1 each, exact pairing not confirmed from screenshots). Subs: Rathbone for Windass 67', Dobson for Sheaf 75', Amrizi for Moore 82'. D. Hyam and B. Nelson (LEI) yellow cards 7'/10'. Shots 13-2 (WRX-LEI), xG 4.4-0.0, poss 42-58%, passes 128-206 (92-92% accuracy), tackles 22-20, interceptions 14-5, saves 0-3, corners 4-0. Clean sheet away from home — controlled from start to finish.",
       "journal_entry": true
     },
@@ -169,7 +161,6 @@
       "score": "4-2",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 9,
       "notes": "N. Broadhead 12', J.L. Rodríguez 23'/63' (brace, MoM 8.4), B. Cadamarteri 88' (assist D. Keillor-Dunn — an outrageous backheel through-ball). K. Moore 2A (7.4). Birmingham replied through K. Fujimoto 29' and C. Klarer 45' to level 2-2 before Wrexham pulled away. K. Wagner (BIR) yellow 44'. Subs 67': Dobson for Sheaf. 75': T. Doyle (BIR) for Fujimoto. 79': Cadamarteri for Kaboré, Rathbone for Moore, Cleworth for C. Doyle, Cacace for O'Brien. Shots 10-12 (WRX-BIR), xG 5.6-2.8, poss 43-57%, passes 137-191 (91-97% accuracy), tackles 27-20, interceptions 5-8, saves 6-3, corners 0-3. Dominant control despite a couple of defensive lapses — never in doubt.",
       "journal_entry": true
     },
@@ -180,7 +171,6 @@
       "score": "4-1",
       "result": "L",
       "competition": "EFL Championship",
-      "matchday": 10,
       "notes": "K. Moore 16'. Stoke: S. Thomas 61', L. Cissé 74', A. Phillips 87', M. Manhoef 90'. D. Hyam yellow 67' → Cleworth on immediately. Subs (WRX): Cleworth for Hyam 67', Amrizi for Broadhead 77'. Stoke subs: Manhoef for Rak-Sakyi 62', Rigo for Seko 67', Pearson for Baker 82'. Okonkwo 5.2 (season-low). Doyle 7.2 (best on night). Shots 7-5 (STO-WRX), xG 3.4-1.2, poss 52-48%, passes 162-168 (89-86% acc), shot acc 86-80%, tackles 11-24, beaten by opp 2-11, def line breaks through 6-2, tackle success 55-33%. Wrexham led 1-0 at halftime. Four goals conceded in second half.",
       "journal_entry": true
     },
@@ -191,7 +181,6 @@
       "score": "0-0",
       "result": "D",
       "competition": "EFL Championship",
-      "matchday": 11,
       "notes": "Kaboré yellow 21', subbed off 70' (Thomason on). WRX subs: Broadhead for Windass 70', Thomason for Kaboré 70', Amrizi for Moore 78'. OXF subs: Płacheta for Emakhu 70', Harris for Lankshear 78', Peart-Harris for Jeon Jin Woo 89'. Lineup: Okonkwo (GK), Kaboré (RB, 7.9 MoM), Hyam (RCB, 7.6), Doyle (LCB, 7.1), Cacace (LB, 7.5), O'Brien (LCM, 7.3), Sheaf (RCM, 6.5), Windass (CAM, 7.1), Keillor-Dunn (CAM, 6.6), Rodríguez (LW, 6.4 PotM), Moore (ST, 5.7). Shots 6-8 (WRX-OXF), xG 1.8-1.2, poss 57-43%, passes 207-106 (85-87% acc), interceptions 10-22, saves 4-4, tackle success 38-38%.",
       "journal_entry": true
     },
@@ -202,7 +191,6 @@
       "score": "0-2",
       "result": "L",
       "competition": "EFL Championship",
-      "matchday": 12,
       "notes": "T. Conway 60'/80' (brace, both second-half). 0-0 at HT. WRX lineup: Ward (GK), Kaboré (RB), Hyam (RCB), Doyle (LCB), Cacace (LB), Rathbone (LCM), Dobson (RCM), Windass (CAM), Broadhead (RW), Moore (ST), Rodríguez (LW). WRX subs: Keillor-Dunn for Broadhead 78', Amrizi for Moore 87'. MBO subs: Hansen for Castledine 53', Browne for Sarmiento 67', Sène for Whittaker 78'. Best WRX ratings: Kaboré 7.0, Hyam 7.0, Rathbone 6.7, Dobson 6.6, Windass 6.5, Cacace 6.5, Ward 6.4. Shots 11-3 (MBO-WRX), xG 2.9-0.6, poss 57-43%, passes 186-144 (90-83% acc), interceptions 19-12, saves 1-6, tackle success 54-17%, beaten by opp 4-11.",
       "journal_entry": true
     },
@@ -213,7 +201,6 @@
       "score": "3-2",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 13,
       "notes": "K. Moore hat-trick (4'/45'/74') — POTM 8.5. Coventry: Thomas-Asante 16', Wright 21'. Assists: Kaboré (1), Windass (1), Broadhead (1). Windass missed penalty 61'. Broadhead yellow 90'. Sub in: V. Torp on for Wright 60' (COV), R. Esse on for Sakamoto 90' (COV). Stats: poss 40-60, shots 6-5, xG 3.2-1.2, passes 136-231 (89-94% acc), 2 saves each.",
       "journal_entry": true
     },
@@ -257,7 +244,6 @@
       "score": "0-5",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 14,
       "notes": "Windass 18', O'Brien 21', Moore 59', Broadhead 76'/87' (brace). Z. Swanson (POR) red card 36'. Subs (WRX) 73': Cadamarteri for Moore, Amrizi for Windass, Dobson for O'Brien, Cleworth for Doyle, Brunt for Hyam. Murphy on for Alli (POR) 79'. C. Chaplin (POR) yellow 90'. PotM: J. Rodríguez 7.6. Ratings: Moore 8.3, Cadamarteri 8.0, Broadhead 7.8, O'Brien 7.3, Kaboré 7.3, Okonkwo 7.1, Hyam 6.9, Doyle 6.9, Windass 6.8, Cacace 6.8, Dobson 6.7, Cleworth 6.7, Brunt 6.7, Sheaf 6.6, Amrizi 6.6. Shots 2-20 (POR-WRX), xG 0.6-8.0, poss 57-43%, passes 195-122 (90-85% acc), tackles 20-22 (50-23% success), interceptions 15-12, saves 8-1. Portsmouth down to 10 men from 36'.",
       "journal_entry": true
     },
@@ -268,7 +254,6 @@
       "score": "3-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 15,
       "notes": "N. Broadhead 19', C. Kelman 54' (CHA), K. Moore 79', G. Dobson 89' (off bench, 3 min after coming on). I. Kaboré yellow 16'. Charlton sub: C. Coventry for Z. Mitchell 75'. WRX subs 86': Cadamarteri for Moore, Amrizi for Broadhead, Rathbone for O'Brien, Dobson for Sheaf. Lineup: Okonkwo (GK), Kaboré (RB, 7.3), Hyam (RCB, 7.2), Doyle (LCB, 6.3), Cacace (LB, 7.1), O'Brien (LCM, 6.6), Sheaf (RCM, 7.3, 1A), Windass (CAM, 6.6, 1A), Rodríguez (LW, 7.0), Broadhead (RW, 6.5, 1G), Moore (ST, 7.0, 1G). Subs: Cadamarteri 5.9, Amrizi 6.1, Rathbone 6.2, Dobson 6.6 (1G). Shots 9-4 (WRX-CHA), xG 2.0-1.8, poss 39-61%, passes 131-213 (85-91% acc), tackles 21-6 (7-4 won, 33-67% success), interceptions 11-14, saves 1-4, shot acc 78-50%, dribble success 89-97%, corners 2-0, yellow cards 1-0.",
       "journal_entry": true
     },
@@ -279,7 +264,6 @@
       "score": "1-0",
       "result": "L",
       "competition": "EFL Championship",
-      "matchday": 16,
       "journal_entry": true
     },
     {
@@ -289,7 +273,6 @@
       "score": "2-2",
       "result": "D",
       "competition": "EFL Championship",
-      "matchday": 17,
       "notes": "Windass 58', Moore 78'. Led twice, couldn't hold either lead.",
       "journal_entry": true
     },
@@ -300,7 +283,6 @@
       "score": "0-3",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 18,
       "notes": "Broadhead 18', JL Rodriguez 55', O'Brien 62'. MoM: O'Brien. Controlled from start to finish.",
       "journal_entry": true
     },
@@ -311,7 +293,6 @@
       "score": "3-4",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 19,
       "notes": "Moore 16', Broadhead 66', JL Rodriguez 83', Amrizi 93'. Miraculous comeback.",
       "journal_entry": true
     },
@@ -322,7 +303,6 @@
       "score": "2-2",
       "result": "D",
       "competition": "EFL Championship",
-      "matchday": 20,
       "notes": "K. Moore 20', Y. Amrizi 84' (sub on 65' for Moore). O. McBurnie 31' (HUL); Hull's second goal a stoppage-time penalty (scorer unconfirmed) — Wrexham conceded a penalty (0 committed by HUL, 1 by WRX). D. Hyam yellow 75'. WRX subs: Amrizi for Moore 65', Keillor-Dunn for Broadhead 65', Dobson for Windass 88'. J. Windass best-rated on the pitch (7.3, 1A) — no MoM badge confirmed. Shots 7-12 (HUL-WRX), xG 4.3-4.7, poss 56-44%/57-43%, passes 189-143 (89-86% acc), tackles 13-13 (38-23% success), interceptions 13-12, saves 9-3. Wrexham 2nd in Championship (P20 W12 D4 L4, GF48 GA25, 40 pts), 8 points behind Ipswich.",
       "journal_entry": true
     },
@@ -333,7 +313,6 @@
       "score": "3-2",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 21,
       "notes": "Y. Amrizi 75', J. Windass 82', N. Broadhead 90+4' — three goals in the closing stages to complete the comeback. C. Doyle yellow 30', then a straight red 51' (Wrexham conceded a penalty in the same passage — 1 penalty committed by WRX, converted by Watford). Wrexham played the remainder a man down. L. Kjerrumgaard 88' for Watford (their other goal, presumably the penalty, unconfirmed scorer/time). Subs: Y. Amrizi for B. Sheaf 66', M. Cleworth for K. Moore 66'. Shots 3-8 (WRX-WAT), xG 1.4-3.1, poss 40-60%, passes 128-224 (89-94% acc), tackles 9-18. Doyle given a 1-match ban for the red card. What a game.",
       "journal_entry": true
     },
@@ -344,7 +323,6 @@
       "score": "1-2",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 22,
       "notes": "Eom Ji Sung 34' (SWA). J. Windass 88', Y. Amrizi 90' (sub on 80' for K. Moore; J. Amelia also on 80' for B. Sheaf). J. Windass best-rated on the pitch (7.5, 1G) — no MoM badge confirmed; I. Kaboré next-best (7.3). Shots 4-13 (SWA-WRX), xG 1.1-3.4, poss 57-43%, passes 225-123 (93-89% acc), tackles 15-30, interceptions 11-14, saves 4-2. Wrexham 2nd in Championship (P22 W14 D4 L4, GF53 GA28, 46 pts), 8 points behind Ipswich.",
       "journal_entry": true
     },
@@ -355,7 +333,6 @@
       "score": "4-3",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 23,
       "notes": "C. Ogbene 14' (SHU); K. Moore 40'/51' brace (assists: N. Broadhead x2); 3rd SHU goal — scorer/minute unconfirmed; A. Matos 69' (SHU); J. Rodríguez 75' (assist: Y. Amrizi); Y. Amrizi 84' (assist: J. Windass). SHU sub: H. Burrows for L. Hjelde 73'. Best rated: L. Cacace 7.5, N. Broadhead 7.4 (2A), K. Moore 7.2 (2G), Y. Amrizi 7.2 (1G 1A), C. Doyle 7.1, L. O'Brien 6.9; A. Okonkwo 5.6 (GK, season-low). Shots 8-10 (WRX-SHU), xG 2.8-2.9, poss 35-65%, passes 128-259 (86-95% acc), tackles 17-11, interceptions 11-13, saves 3-3. Wrexham 2nd in Championship (P23 W15 D4 L4, GF57 GA31, 49 pts), 5 points behind Ipswich (54).",
       "journal_entry": true
     },
@@ -366,7 +343,6 @@
       "score": "3-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 24,
       "notes": "L. O'Brien red card 6' (Wrexham played 84 mins with 10 men). N. Broadhead 12', J. Storey OG 17' (PNE), L. Cacace 34' (assist: K. Moore). HT 3-0. A. Devine 70' (PNE). WRX subs 83': Y. Amrizi for J. Rodríguez, B. Cadamarteri for K. Moore, D. Keillor-Dunn for N. Broadhead, G. Dobson for B. Sheaf, L. Brunt for C. Doyle. PNE sub: C. Lang for M. Osmajić 88'. PotM: J. Amelia 7.8 (LB, stepped up after O'Brien red). Other ratings: C. Doyle 7.4, J. Rodríguez 7.2, M. Cleworth 7.2, I. Kaboré 6.8, N. Broadhead 6.9 (1G), K. Moore 6.6 (1A), L. Cacace 7.4 (1G). Shots 13-2 (WRX-PRE), xG 4.9-0.7, poss 49-51%, passes 161-170 (91-94% acc), saves 1-6, red cards 1-0 (WRX). Wrexham 2nd in Championship (P24 W16 D4 L4, GF60 GA32, 52 pts), 3 points behind Ipswich (55).",
       "journal_entry": true
     },
@@ -388,7 +364,6 @@
       "score": "0-2",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 26,
       "notes": "K. Moore 67'/72' (brace, 7.7, MoM/PotM). J. Rodríguez 6.6 (0G 1A). B. Sheaf 1A (7.2). J. Windass 7.5. Lineup: Okonkwo (GK, 6.9), Kaboré (RB, 6.8), Hyam (RCB, 6.9), Doyle (LCB, 7.2), Cacace (LB, 6.4), O'Brien (LCM, 6.9), Sheaf (RCM, 7.2 1A), Windass (CAM, 7.5), Rodríguez (LW, 6.6 PotM 1A), Broadhead (RW, 6.5), Moore (ST, 7.7 2G). Subs 77': Cadamarteri for Moore, Amrizi for Broadhead, Dobson for Windass, Brunt for Hyam, Amelia for Kaboré. Sub ratings: Cadamarteri 5.6, Amrizi 5.9, Dobson 5.9, Brunt 6.8, Amelia 6.2. Derby sub: Szmodics for Murkin 89'. Shots 4-8 (DER-WRX), xG 1.1-4.0, poss 56-44%, passes 190-151 (86-86% acc), tackles 10-17 (60-29% success), interceptions 14-14, saves 2-3, corners 2-3, def duels won 14-20, beaten by opp 5-9. No cards. Wrexham 2nd (P26 W18 D4 L4, GF68 GA33 GD35, 58 pts), 1 point behind Ipswich (59).",
       "journal_entry": true
     },
@@ -399,7 +374,6 @@
       "score": "1-6",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 25,
       "notes": "Moore 7', J. Rodríguez 22'/34' (brace, HT 3-0), Y. Ohashi 48' (BLK), Moore 67', Amrizi 85' (sub on 68'), Keillor-Dunn 90' (sub on 68'). PotM: J. Rodríguez 9.6 (2G 2A). Subs 68': Amrizi for Moore, Keillor-Dunn for Broadhead, Cadamarteri for Windass, Cleworth for Hyam, Amelia for Kaboré. Lineup: Okonkwo (GK), Kaboré (RB), Doyle (LCB), Cleworth (RCB), Cacace (LB), Sheaf (RCM, 7.1), Dobson (LCM, 7.1), Windass (CAM, 7.0, 1A), Rodríguez (LW, 9.6, 2G 2A), Broadhead (RW, 7.7, 2A), Moore (ST, 8.2, 2G). Sub ratings: Amrizi 7.1 (1G), Keillor-Dunn 7.8 (1G), Cadamarteri 5.6, Cleworth 6.8, Amelia n/a. Cacace 6.9 (1A). Shots 3-12 (BLK-WRX), passes 183-141 (86-85% acc), interceptions 15-20, dribble success 95-94%, tackle success 67-27%, saves 0-2. Yellow: 1 (BLK). Wrexham 2nd in Championship (P25 W17 D4 L4, GF66 GA33, 55 pts), 1 point behind Ipswich (56).",
       "journal_entry": true
     },
@@ -421,7 +395,6 @@
       "score": "0-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 28,
       "notes": "JL Rodriguez 65'. MoM: J. Amelia (RB, 7.5). Comfortable. Shots 10-5 (WRX-NOR), poss 41-59%, passes 127-237 (87-92% acc), tackles 2-5. Wrexham 1st in Championship (P27 W19 D4 L4, GF69 GA33, 61 pts), 1 point ahead of Ipswich — first time top of the table all season.",
       "journal_entry": true
     },
@@ -432,7 +405,6 @@
       "score": "4-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 29,
       "notes": "J. Rodríguez 38', 78'; K. Moore 45', 65' (Wrexham). J. Ayew 28' (Leicester). MoM: J. Rodríguez (7.8, 2G).",
       "journal_entry": true
     },
@@ -443,7 +415,6 @@
       "score": "2-1",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 30,
       "notes": "Y. Amrizi 58', K. Moore 68' (Wrexham); R. Burrell 61' (QPR). Subs 76': Keillor-Dunn for Amrizi, Cadamarteri for Moore, Dobson for Sheaf, Amelia for Cacace, Brunt for Hyam. Shots 8-5 (WRX-QPR), xG 2.5-1.3, poss 42-58%, passes 145-213 (83-87% acc), tackles 30-8, interceptions 23-17, saves 2-3. Passing needs to improve — defenders too easily beaten, diving in too often.",
       "journal_entry": true
     },
@@ -454,7 +425,6 @@
       "score": "3-0",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 31,
       "notes": "K. Moore 19', A. Gómez 69' (debut, MoM 7.8, 1G/1A), B. Cadamarteri 81'. A. James (SHW) yellow 57'. Subs 73': Ward for Okonkwo, Cadamarteri for Moore, Amrizi for Rodríguez, Thomason for Cacace, Cleworth for Doyle. N. Chalobah (SHW) yellow 90'. Shots 12-5 (WRX-SHW), xG 2.4-0.7, poss 45-55%, passes 122-176 (84-88% acc), tackles 19-12, interceptions 15-15, saves 2-4. MoM: J. Rodríguez (7.1, 1A) per in-game award, despite Gómez's higher 7.8 rating.",
       "journal_entry": true
     },
@@ -465,7 +435,6 @@
       "score": "3-0",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 32,
       "notes": "B. Gutiérrez 36' (debut goal), K. Moore 45' (MoM, 9.1, 1G/2A), D. Bobadilla 65' (debut goal). Subs: 52' C. Neghli on for J. Bryan (MIL). 62' M. Ivanović on for J. Coburn (MIL). 70': D. Keillor-Dunn for A. Gómez, J. Windass for B. Gutiérrez, J. Amelia for I. Kaboré (WRX). 85': B. Bannan on for W. Smallbone (MIL). Controlled from start to finish. Shots 13-4 (WRX-MIL), xG 5.3-1.4, poss 43-57%, passes 134-195 (82-89% acc), tackles 11-25, interceptions 19-15, saves 3-6, corners 6-1, offsides 3-0, fouls 0-1. Wrexham 1st in Championship (P31 W23 D4 L4, GF81 GA35, GD+46, 73 pts), next opponent Bristol City.",
       "journal_entry": true
     },
@@ -476,7 +445,6 @@
       "score": "3-2",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 33,
       "notes": "E. Riis 3' (BRC), A. Gómez 12', M. Bird 24' (BRC), B. Gutiérrez 35', J.L. Rodríguez 90' (game winner, MoM 7.7, 1G/1A). Subs 70': Y. Amrizi for K. Moore, J. Amelia for L. Cacace. BRC subs: A. Randell for D. Burgzorg 69', S. Twine for M. Sykes 86'. Shots 12-2 (WRX-BRC), xG 6.1-1.5, poss 43-57%, passes 115-178 (87-93% acc), tackles 4-5, interceptions 9-9, saves 0-6. Wrexham 1st in Championship (P32 W24 D4 L4, GF84 GA37, GD+47, 76 pts).",
       "journal_entry": true
     },
@@ -498,7 +466,6 @@
       "score": "1-0",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 34,
       "notes": "L. O'Brien 49'. MoM: D. Hyam (RCB, 7.2). Subs: 69' Y. Amrizi for K. Moore. Scraped it. Shots 7-3 (WRX-IPS), xG 2.3-1.0, poss 43-57%, passes 125-199 (86-92% acc), tackles 16-16, saves 2-2. Wrexham 1st in Championship (P33 W25 D4 L4, GF85 GA37, GD+48, 79 pts).",
       "journal_entry": true
     },
@@ -531,7 +498,6 @@
       "score": "2-0",
       "result": "W",
       "competition": "EFL Championship",
-      "matchday": 35,
       "notes": "J.L. Rodríguez 10'/75' (brace, MoM 8.0). Subs 76': Y. Amrizi for K. Moore (1A), N. Broadhead for A. Gómez, J. Windass for B. Gutiérrez (1A), G. Thomason for L. Cacace, J. Amelia for I. Kaboré. Comfortable. Shots 7-1, xG 2.9-0.6, poss 34-66%, passes 105-241 (85-93% acc), tackles 31-5, saves 0-2, corners 1-0, offsides 1-0. Wrexham 1st in Championship (P34 W26 D4 L4, GF87 GA37, GD+50, 82 pts).",
       "journal_entry": true
     },
@@ -542,7 +508,6 @@
       "score": "1-4",
       "result": "L",
       "competition": "EFL Championship",
-      "matchday": 36,
       "notes": "C. Kelman 45'/53' (Charlton), B. Gutiérrez 83' (1G, assist A. Gómez), J. Rankin-Costello 90'/90'+4 (Charlton, MoM). Subs 64': Y. Amrizi for K. Moore, J. Amelia for L. Cacace. A mess. Shots 15-9 (CHA-WRX), xG 5.2-2.8, poss 58-42%, passes 211-121 (90-85% acc), tackles 10-18, saves 2-6, corners 3-0, offsides 4-1. Wrexham 1st in Championship (P35 W26 D4 L5, GF88 GA41, GD+47, 82 pts).",
       "journal_entry": true
     }
@@ -833,7 +798,7 @@
     },
     {
       "date": "2026-01-17",
-      "description": "MD29 WIN: 1-0 at home vs Norwich. JL Rodriguez 65' the only goal in a comfortable evening. MoM: Amelia."
+      "description": "MD27 WIN: 1-0 at home vs Norwich. JL Rodriguez 65' the only goal in a comfortable evening. MoM: Amelia."
     },
     {
       "date": "2026-01-17",
@@ -841,19 +806,19 @@
     },
     {
       "date": "2026-01-17",
-      "description": "Wrexham TOP OF THE TABLE for the first time all season — MD29 win over Norwich moves them above Ipswich, P27 W19 D4 L4 GF69 GA33 GD+36, 61 pts, 1 point clear of Ipswich (60 pts, P27)."
+      "description": "Wrexham TOP OF THE TABLE for the first time all season — MD27 win over Norwich moves them above Ipswich, P27 W19 D4 L4 GF69 GA33 GD+36, 61 pts, 1 point clear of Ipswich (60 pts, P27)."
     },
     {
       "date": "2026-01-20",
-      "description": "MD29 WIN: 4-1 at home vs Leicester City. Rodríguez 38'/78' and Moore 45'/65' either side of Ayew's 28' leveler for Leicester — 2-1 at HT, comfortable from there despite Leicester dominating possession (62%). 13 shots to 6, 5.7 xG to 2.3. MoM: J. Rodríguez. Record: P29 W21 D4 L4, GF73 GA34, GD+39, 67 pts. 1st in Championship, 4 points clear of Ipswich (60 pts, P28)."
+      "description": "MD28 WIN: 4-1 at home vs Leicester City. Rodríguez 38'/78' and Moore 45'/65' either side of Ayew's 28' leveler for Leicester — 2-1 at HT, comfortable from there despite Leicester dominating possession (62%). 13 shots to 6, 5.7 xG to 2.3. MoM: J. Rodríguez. Record: P29 W21 D4 L4, GF73 GA34, GD+39, 67 pts. 1st in Championship, 4 points clear of Ipswich (60 pts, P28)."
     },
     {
       "date": "2026-01-24",
-      "description": "MD30 WIN: 2-1 away at Queens Park Rangers. Y. Amrizi 58', K. Moore 68' either side of R. Burrell's 61' equalizer. A scrappy win — manager's note: passing needs to improve, defenders too easily beaten, diving in too often. Record: P30 W22 D4 L4, GF75 GA35, GD+40, 70 pts. 1st in Championship."
+      "description": "MD29 WIN: 2-1 away at Queens Park Rangers. Y. Amrizi 58', K. Moore 68' either side of R. Burrell's 61' equalizer. A scrappy win — manager's note: passing needs to improve, defenders too easily beaten, diving in too often. Record: P30 W22 D4 L4, GF75 GA35, GD+40, 70 pts. 1st in Championship."
     },
     {
       "date": "2026-01-31",
-      "description": "MD31 WIN: 3-0 at home vs Sheffield Wed. K. Moore 19', debutant Andrés Gómez 69' (MoM 7.8, 1G/1A on his first appearance), B. Cadamarteri 81'. In-game Player of the Match award actually went to J. Rodríguez (7.1, 1A) despite Gómez's higher rating. Clean sheet. Record: P30 W22 D4 L4, GF78 GA35, GD+43, 70 pts. 1st in Championship."
+      "description": "MD30 WIN: 3-0 at home vs Sheffield Wed. K. Moore 19', debutant Andrés Gómez 69' (MoM 7.8, 1G/1A on his first appearance), B. Cadamarteri 81'. In-game Player of the Match award actually went to J. Rodríguez (7.1, 1A) despite Gómez's higher rating. Clean sheet. Record: P30 W22 D4 L4, GF78 GA35, GD+43, 70 pts. 1st in Championship."
     },
     {
       "date": "2026-01-31",
@@ -869,7 +834,7 @@
     },
     {
       "date": "2026-02-07",
-      "description": "MD32 WIN: 3-0 at home vs Millwall. B. Gutiérrez 36' (debut goal), K. Moore 45' (MoM, 9.1, 1G/2A), D. Bobadilla 65' (debut goal) — both new January signings off the mark on their first starts. Controlled from start to finish, clean sheet. Record: P31 W23 D4 L4, GF81 GA35, GD+46, 73 pts. 1st in Championship, next opponent Bristol City."
+      "description": "MD31 WIN: 3-0 at home vs Millwall. B. Gutiérrez 36' (debut goal), K. Moore 45' (MoM, 9.1, 1G/2A), D. Bobadilla 65' (debut goal) — both new January signings off the mark on their first starts. Controlled from start to finish, clean sheet. Record: P31 W23 D4 L4, GF81 GA35, GD+46, 73 pts. 1st in Championship, next opponent Bristol City."
     },
     {
       "date": "2026-02-07",
@@ -881,7 +846,7 @@
     },
     {
       "date": "2026-02-10",
-      "description": "MD33 WIN: 3-2 away at Bristol City. J.L. Rodríguez scored the 90th-minute winner (MoM, 7.7, 1G/1A) after Wrexham twice had to come from behind — Gómez and Gutiérrez cancelling out goals from Riis and Bird. Record: P32 W24 D4 L4, GF84 GA37, GD+47, 76 pts. 1st in Championship."
+      "description": "MD32 WIN: 3-2 away at Bristol City. J.L. Rodríguez scored the 90th-minute winner (MoM, 7.7, 1G/1A) after Wrexham twice had to come from behind — Gómez and Gutiérrez cancelling out goals from Riis and Bird. Record: P32 W24 D4 L4, GF84 GA37, GD+47, 76 pts. 1st in Championship."
     },
     {
       "date": "2026-02-14",
@@ -889,7 +854,7 @@
     },
     {
       "date": "2026-02-21",
-      "description": "MD34 WIN: 1-0 at home vs Ipswich, in a game billed as potentially deciding the title race. L. O'Brien's 49th-minute strike was the only goal — scraped it. MoM: D. Hyam. Record: P33 W25 D4 L4, GF85 GA37, GD+48, 79 pts. 1st in Championship, 11 points clear of 2nd-place Ipswich with 1 game in hand."
+      "description": "MD33 WIN: 1-0 at home vs Ipswich, in a game billed as potentially deciding the title race. L. O'Brien's 49th-minute strike was the only goal — scraped it. MoM: D. Hyam. Record: P33 W25 D4 L4, GF85 GA37, GD+48, 79 pts. 1st in Championship, 11 points clear of 2nd-place Ipswich with 1 game in hand."
     },
     {
       "date": "2026-02-21",

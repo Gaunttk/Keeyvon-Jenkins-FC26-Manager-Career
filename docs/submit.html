@@ -246,10 +246,6 @@ if ('serviceWorker' in navigator) {
           <option value="Other">Other</option>
         </select>
       </div>
-      <div class="form-group" id="matchday-group">
-        <label for="matchday">Matchday #</label>
-        <input type="number" id="matchday" min="1" max="46" placeholder="e.g. 2">
-      </div>
       <div class="form-group" id="round-group" style="display:none;">
         <label for="round">Round</label>
         <input type="text" id="round" placeholder="e.g. Round 2">
@@ -427,11 +423,10 @@ document.getElementById('opponent').addEventListener('input', function() {
   document.getElementById('opponent-name-score').textContent = this.value || 'Opponent';
 });
 
-// ── Competition → show matchday or round ──
+// ── Competition → show round (non-league only; EFL Championship matchday is derived, not entered) ──
 document.getElementById('competition').addEventListener('change', function() {
   var isLeague = this.value === 'EFL Championship';
-  document.getElementById('matchday-group').style.display = isLeague ? '' : 'none';
-  document.getElementById('round-group').style.display    = isLeague ? 'none' : '';
+  document.getElementById('round-group').style.display = isLeague ? 'none' : '';
 });
 
 // ── Submission type → toggle Match vs Squad Update sections ──
@@ -615,12 +610,9 @@ function generate() {
 // ── Clear form ──
 function clearForm() {
   var keepDate = document.getElementById('date').value;
-  var matchday = document.getElementById('matchday').value;
-  var nextMatchday = matchday ? (parseInt(matchday) + 1) : '';
 
   document.getElementById('competition').value = 'EFL Championship';
   document.getElementById('competition').dispatchEvent(new Event('change'));
-  document.getElementById('matchday').value = nextMatchday;
   document.getElementById('round').value = '';
   document.getElementById('opponent').value = '';
   document.getElementById('opponent-name-score').textContent = 'Opponent';
@@ -699,7 +691,6 @@ function collectMatchEventData() {
   var motm        = document.getElementById('motm').value;
   var vibe        = document.getElementById('vibe').value;
   var notes       = document.getElementById('notes').value;
-  var matchday    = document.getElementById('matchday').value;
   var round       = document.getElementById('round').value;
 
   var result   = scoreUs > scoreThem ? 'W' : scoreUs < scoreThem ? 'L' : 'D';
@@ -722,8 +713,7 @@ function collectMatchEventData() {
   var injuryLines = inj.lines, injuryJSON = inj.json;
 
   var compExtra = '';
-  if (competition === 'EFL Championship' && matchday) compExtra = '\n**Matchday:** ' + matchday;
-  else if (round) compExtra = '\n**Round:** ' + round;
+  if (round) compExtra = '\n**Round:** ' + round;
 
   var template = `# Session Input Template
 ## Wrexham AFC · FC26 Career Mode
@@ -759,16 +749,16 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
   if (notes)   logNotesParts.push(notes);
   var logNotes = logNotesParts.join('. ');
 
-  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreUs + '-' + scoreThem + '", "result": "' + result + '", "competition": "' + competition + '"' + (matchday ? ', "matchday": ' + matchday : '') + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
+  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreUs + '-' + scoreThem + '", "result": "' + result + '", "competition": "' + competition + '"' + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
 
   var logEntry = '// Add to season_log.json → "matches" array:\n' + matchEntry;
   if (transferJSON.length) logEntry += '\n\n// Add to "transfers" array:\n' + transferJSON.join(',\n');
   if (injuryJSON.length)   logEntry += '\n\n// Add to "injuries" array:\n' + injuryJSON.join(',\n');
 
   var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
-  var commitMsg = (competition === 'EFL Championship' ? 'Entry ' + (matchday ? 'MD' + matchday : '???') : competition.split(' ').slice(-1)[0] + ' entry') + ': ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
+  var commitMsg = competition.split(' ').slice(-1)[0] + ' entry: ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
 
-  var chipLabel = (competition === 'EFL Championship' && matchday ? 'MD' + matchday : competition.split(' ').pop()) + ' · ' + opponent + ' · ' + scoreStr + ' · ' + result;
+  var chipLabel = competition.split(' ').pop() + ' · ' + opponent + ' · ' + scoreStr + ' · ' + result;
 
   var transfersRaw = [];
   document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
@@ -794,7 +784,7 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
     subtype: 'match',
     date: date, competition: competition, opponent: document.getElementById('opponent').value,
     venue: venue, scoreThem: scoreThem, scoreUs: scoreUs, scorers: scorers,
-    motm: motm, vibe: vibe, notes: notes, matchday: matchday, round: round,
+    motm: motm, vibe: vibe, notes: notes, round: round,
     ss: {
       table: document.getElementById('ss-table').checked,
       morale: document.getElementById('ss-morale').checked,
@@ -814,7 +804,6 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
     template: template,
     logEntry: logEntry,
     commitMsg: commitMsg,
-    matchday: matchday,
     matchJSON: matchEntry,
     transferJSON: transferJSON,
     injuryJSON: injuryJSON,
@@ -910,7 +899,6 @@ function populateForm(raw) {
   document.getElementById('motm').value = raw.motm || '';
   document.getElementById('vibe').value = raw.vibe || '';
   document.getElementById('notes').value = raw.notes || '';
-  document.getElementById('matchday').value = raw.matchday || '';
   document.getElementById('round').value = raw.round || '';
 
   var ss = raw.ss || {};

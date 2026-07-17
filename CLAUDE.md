@@ -174,6 +174,8 @@ Every match session updates all of the following:
 - `docs/Screenshots/` — delete processed screenshots (`git rm`) in the same commit
 - A two-voice journal entry (`JOURNAL_STYLE_GUIDE.md`) — write one for every match, not just when asked
 
+For an EFL Championship match, derive its matchday (see "Season Log Schema" below) before writing any "MD—" label — don't trust a matchday number the user supplies, and don't copy the previous match's label forward. Non-league matches (FA Cup, Youth Academy Rush Tournament, etc.) use `round`, never a matchday number.
+
 Minutes played is not tracked — not realistically capturable from the screenshots this workflow uses.
 
 A non-match "Squad Update" submission (attribute refresh, ratings/development review, or a roster change with no match that day) uses the Squad Update path on `docs/submit.html` instead of the Match path — it produces a `milestones` entry (not a `matches` entry) and an optional journal entry per the "write a journal entry for this" checkbox.
@@ -187,7 +189,11 @@ Add entries to `season_log.json` after each game session:
 ```json
 // Match
 { "date": "YYYY-MM-DD", "opponent": "Club Name", "home": true, "score": "2-1",
-  "result": "W", "competition": "EFL Championship", "matchday": 1, "journal_entry": true }
+  "result": "W", "competition": "EFL Championship", "journal_entry": true }
+
+// Non-league match (FA Cup, Carabao Cup, Youth Academy Rush Tournament, etc.)
+{ "date": "YYYY-MM-DD", "opponent": "Club Name", "home": true, "score": "2-1",
+  "result": "W", "competition": "FA Cup", "round": "Round 4", "journal_entry": true }
 
 // Transfer
 { "date": "YYYY-MM-DD", "player": "F. Lastname", "direction": "in",
@@ -199,6 +205,17 @@ Add entries to `season_log.json` after each game session:
 // Milestone
 { "date": "YYYY-MM-DD", "description": "Free text note" }
 ```
+
+**No `matchday` field.** It used to be a user-supplied number and drifted out of sync with reality repeatedly (a skipped/duplicate label around January 2026 threw every subsequent EFL Championship match off by one, silently, for over a month). Matchday is now always **derived**: it equals the 1-indexed position of that match within the EFL Championship-only matches in `season_log.json`, sorted by date. Only EFL Championship games count toward it — FA Cup, Carabao Cup, Youth Academy Rush Tournament, and friendlies never increment it and use `round` instead.
+
+To get the matchday for a given EFL Championship match (e.g. for a journal entry's "MD—" label or `docs/season.html`'s Match Log), count:
+```python
+import json
+d = json.load(open('season_log.json', encoding='utf-8'))
+efl = sorted([m for m in d['matches'] if m['competition'] == 'EFL Championship'], key=lambda m: m['date'])
+matchday = {m['date'] + m['opponent']: i for i, m in enumerate(efl, start=1)}  # 1-indexed position = matchday
+```
+Never hand-type an "MD—" label anywhere (journal prose, `season.html`, `index.html` standings header) without deriving it this way first — that's exactly how the drift happened before.
 
 ---
 
