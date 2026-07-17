@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2026-02-24"
+    "last_updated": "2026-02-28"
   },
   "matches": [
     {
@@ -517,11 +517,33 @@
       "date": "2026-02-24",
       "opponent": "Hull City",
       "home": true,
-      "score": "3-0",
+      "score": "4-0",
       "result": "W",
       "competition": "Youth Academy Rush Tournament",
       "round": "Final",
-      "notes": "Lord, Ortega, Martini, Martini (as submitted — 4 scorer credits for a 3-0 scoreline; unresolved discrepancy, needs confirmation). MoM: Mason Webber. Controlled from start to finish.",
+      "notes": "Lord, Ortega, Martini (2). MoM: Mason Webber. Controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-24",
+      "opponent": "Portsmouth",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "matchday": 35,
+      "notes": "J.L. Rodríguez 10'/75' (brace, MoM 8.0). Subs 76': Y. Amrizi for K. Moore (1A), N. Broadhead for A. Gómez, J. Windass for B. Gutiérrez (1A), G. Thomason for L. Cacace, J. Amelia for I. Kaboré. Comfortable. Shots 7-1, xG 2.9-0.6, poss 34-66%, passes 105-241 (85-93% acc), tackles 31-5, saves 0-2, corners 1-0, offsides 1-0. Wrexham 1st in Championship (P34 W26 D4 L4, GF87 GA37, GD+50, 82 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-28",
+      "opponent": "Charlton Athletic",
+      "home": false,
+      "score": "1-4",
+      "result": "L",
+      "competition": "EFL Championship",
+      "matchday": 36,
+      "notes": "C. Kelman 45'/53' (Charlton), B. Gutiérrez 83' (1G, assist A. Gómez), J. Rankin-Costello 90'/90'+4 (Charlton, MoM). Subs 64': Y. Amrizi for K. Moore, J. Amelia for L. Cacace. A mess. Shots 15-9 (CHA-WRX), xG 5.2-2.8, poss 58-42%, passes 211-121 (90-85% acc), tackles 10-18, saves 2-6, corners 3-0, offsides 4-1. Wrexham 1st in Championship (P35 W26 D4 L5, GF88 GA41, GD+47, 82 pts).",
       "journal_entry": true
     }
   ],
@@ -875,7 +897,15 @@
     },
     {
       "date": "2026-02-24",
-      "description": "YOUTH ACADEMY RUSH TOURNAMENT WINNERS. Beat Hull City 3-0 in the Final — Lord, Ortega, and a Martini brace. MoM: Mason Webber. Controlled from start to finish."
+      "description": "YOUTH ACADEMY RUSH TOURNAMENT WINNERS. Beat Hull City 4-0 in the Final — Lord, Ortega, and a Martini brace (2G). MoM: Mason Webber. Controlled from start to finish."
+    },
+    {
+      "date": "2026-02-24",
+      "description": "MD34 WIN: 2-0 at home vs Portsmouth. José Luis Rodríguez brace (MoM, 8.0) either side of the hour mark. Comfortable. Record: P34 W26 D4 L4, GF87 GA37, GD+50, 82 pts. 1st in Championship."
+    },
+    {
+      "date": "2026-02-28",
+      "description": "MD35 LOSS: 1-4 away at Charlton Athletic. Charlie Kelman brace either side of half-time put Charlton in control; Brian Gutiérrez pulled one back on 83' but Joe Rankin-Costello's late brace (90', 90'+4, MoM) sealed it. First defeat since MD16. Record: P35 W26 D4 L5, GF88 GA41, GD+47, 82 pts. Still 1st in Championship, 11 points clear of Ipswich."
     }
   ]
 }
