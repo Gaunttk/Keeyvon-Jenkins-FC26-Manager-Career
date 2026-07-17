@@ -501,6 +501,17 @@
       "matchday": 34,
       "notes": "L. O'Brien 49'. MoM: D. Hyam (RCB, 7.2). Subs: 69' Y. Amrizi for K. Moore. Scraped it. Shots 7-3 (WRX-IPS), xG 2.3-1.0, poss 43-57%, passes 125-199 (86-92% acc), tackles 16-16, saves 2-2. Wrexham 1st in Championship (P33 W25 D4 L4, GF85 GA37, GD+48, 79 pts).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-02-21",
+      "opponent": "Watford",
+      "home": true,
+      "score": "6-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi Final",
+      "notes": "Martini (3), Matthews (2), Vargas. Home.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -841,11 +852,15 @@
     },
     {
       "date": "2026-02-14",
-      "description": "FA CUP ROUND 4 WIN: 3-2 at home vs Notts County. Heavily rotated lineup of reserves and backups. Brenden Cadamarteri brace plus an assist (MoM, 8.5) either side of an L. O'Brien opener; Notts pulled one back through J. Jones before Cadamarteri's second settled it. Wrexham advance to the next round."
+      "description": "FA CUP ROUND 4 WIN: 3-2 at home vs Notts County. Heavily rotated lineup of reserves and backups. Bailey Cadamarteri brace plus an assist (MoM, 8.5) either side of an L. O'Brien opener; Notts pulled one back through J. Jones before Cadamarteri's second settled it. Wrexham advance to the next round."
     },
     {
       "date": "2026-02-21",
       "description": "MD34 WIN: 1-0 at home vs Ipswich, in a game billed as potentially deciding the title race. L. O'Brien's 49th-minute strike was the only goal — scraped it. MoM: D. Hyam. Record: P33 W25 D4 L4, GF85 GA37, GD+48, 79 pts. 1st in Championship, 11 points clear of 2nd-place Ipswich with 1 game in hand."
+    },
+    {
+      "date": "2026-02-21",
+      "description": "Youth Academy Rush Tournament SEMI-FINAL WIN: 6-1 at home vs Watford. Martini hat-trick, Matthews brace, Vargas also on the scoresheet. Academy Rush side advances to the Final."
     }
   ]
 }
