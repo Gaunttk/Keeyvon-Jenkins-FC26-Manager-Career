@@ -270,6 +270,26 @@ if ('serviceWorker' in navigator) {
   </a>
 </div>
 
+<!-- CLUB HERITAGE + ON THIS DAY -->
+<div class="log-section" style="margin-top:24px;">
+  <a href="history.html" style="text-decoration:none;color:inherit;display:block;">
+    <div class="section-label">Club Heritage · The Long Way Home →</div>
+  </a>
+  <div class="stats-bar" style="grid-template-columns:repeat(4,1fr);border:1px solid var(--mid);">
+    <div class="stat-cell"><span class="stat-number">1864</span><span class="stat-label">Founded</span></div>
+    <div class="stat-cell"><span class="stat-number">×23</span><span class="stat-label">Welsh Cups</span></div>
+    <div class="stat-cell"><span class="stat-number">3</span><span class="stat-label">Promotions in a row</span></div>
+    <div class="stat-cell"><span class="stat-number" style="color:var(--gold)">0</span><span class="stat-label">Top-flight seasons</span></div>
+  </div>
+
+  <a href="history.html" style="text-decoration:none;color:inherit;display:block;margin-top:14px;">
+    <div class="context-card" style="margin:0;border-left:3px solid var(--gold);">
+      <div class="context-card-label" id="otd-label" style="color:var(--gold);">From the Archives</div>
+      <div class="log-event" id="otd-text" style="font-size:14px;line-height:1.65;color:var(--light);">Loading…</div>
+    </div>
+  </a>
+</div>
+
 <!-- RECENT LOG -->
 <div class="log-section">
   <div class="section-label">Season Log</div>
@@ -366,6 +386,46 @@ function loadSeasonLog() {
 }
 
 loadSeasonLog();
+
+// ─── ON THIS DAY / FROM THE ARCHIVES ───
+function renderOnThisDay() {
+  try {
+    const onThisDay = {
+      '10-04': { y: 1864, t: 'Wrexham AFC is founded at the Turf Hotel — the oldest football club in Wales.' },
+      '01-04': { y: 1992, t: 'Wrexham 2–1 Arsenal: bottom of the Football League beat the reigning champions, Mickey Thomas with the free kick.' },
+      '01-26': { y: 1957, t: 'A record 34,445 pack the Racecourse for an FA Cup tie with Manchester United.' },
+      '03-03': { y: 1962, t: 'Wrexham record their biggest ever win, 10–1 against Hartlepools United.' },
+      '03-05': { y: 1877, t: 'Wales play their first home international at the Racecourse — still the oldest international ground in use.' },
+      '10-15': { y: 1963, t: "The club's heaviest defeat, 0–9 away at Brentford." },
+      '09-01': { y: 2022, t: "Wrexham is granted city status in the Platinum Jubilee honours — Wales's seventh city." },
+      '12-26': { y: 1936, t: 'A record league crowd of 29,261 watch Wrexham face Chester City.' }
+    };
+    const archive = [
+      "Tommy Bamford's 51 goals in 1933–34 is still the club's single-season record.",
+      'Arfon Griffiths — "Mr Wrexham" — made a record 592 league appearances.',
+      'The 111 points won in 2022–23 is a record for the top five tiers of English football.',
+      'Wrexham have won the Welsh Cup a record 23 times.',
+      "The 1975–76 Cup Winners' Cup run reached the quarter-finals, beating FC Porto along the way.",
+      'Wrexham spent 15 seasons in non-league (2008–2023) before three straight promotions.',
+      'In 160+ years, Wrexham have never played in the English top flight — a first is in reach this season.',
+      "The Racecourse has staged football since 1864 and is the world's oldest international stadium still in use."
+    ];
+    const now = new Date();
+    const key = String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+    const labelEl = document.getElementById('otd-label');
+    const textEl = document.getElementById('otd-text');
+    if (!labelEl || !textEl) return;
+    if (onThisDay[key]) {
+      labelEl.textContent = 'On This Day · ' + onThisDay[key].y;
+      textEl.textContent = onThisDay[key].t;
+    } else {
+      const doy = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+      labelEl.textContent = 'From the Archives';
+      textEl.textContent = archive[doy % archive.length];
+    }
+  } catch (e) { /* silent fail */ }
+}
+renderOnThisDay();
 </script>
 
 </body>
