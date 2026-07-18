@@ -28,7 +28,7 @@ When a session opens, silently load the context below. Do not summarize it back 
 | `docs/season/` | Frozen archives of past seasons' Match Log / Player Stats (`season-01.html`, ...) — see "Season Rollover" |
 | `scripts/sync_season_summary.py` | Regenerates the `SEASON_SUMMARY` block in `docs/index.html` from `season_log.json`. Run after any change to `season_log.json` |
 | `JOURNAL_STYLE_GUIDE.md` | HTML templates, Owen Meredith persona, and capture checklist for journal-writing sessions. Read on demand — not loaded automatically |
-| `scripts/check_roster_sync.py` | Cross-checks `docs/roster.html` cards against `wrexham_squad.csv` (name/age/OVR/position). Run after any squad change to catch stale or missing cards |
+| `scripts/check_roster_sync.py` | Cross-checks `docs/roster.html` (senior section against `wrexham_squad.csv`, academy section against `youth_academy.csv`) and `docs/academy.html` (against `youth_academy.csv`) — name/age/OVR/position/POT. Run after any squad or academy change to catch stale or missing cards |
 
 Old root-level HTML files (`keevyon_jenkins_dossier.html`, `match_journal.html`) are superseded by the `docs/` versions. Do not edit them.
 
@@ -160,6 +160,20 @@ Whenever a signing or departure is confirmed (screenshot or explicit user input)
 A departed player should not be removed from `wrexham_squad.csv` until their transfer is actually confirmed (season_log `transfers` entry exists) — being merely transfer-listed is not a departure.
 
 **Missing scouting data:** when adding a new signing, only fill in CSV columns actually confirmed by a screenshot (Status/Stats/Attributes tabs). Leave everything else blank rather than estimating or inferring from comparable players. Call out explicitly, in both the CSV `Notes` column and in the session summary to the user, which attribute groups are still missing (e.g. "Technical/Mental/Physical attributes pending — need the Attributes tab screenshots") so the user knows what to send next.
+
+---
+
+### Academy Changes — Keep Pages in Sync
+
+`youth_academy.csv` is duplicated into **two** HTML pages, not one: the dedicated `docs/academy.html` (full cards with bio detail) and a condensed card set embedded in `docs/roster.html` under `id="sec-academy"` (grouped into GK/DEF/MID/FWD `dc-group` sections, same card markup minus the `<details class="acad-bio">` block). It is easy to update `academy.html` from a screenshot and forget that `roster.html` carries its own separate copy of the same cards — this has caused real drift (roster.html academy section going stale for months while `academy.html` stayed current).
+
+Whenever `youth_academy.csv` changes (new prospect, attribute refresh, POT/dev-plan update, promotion, position change), update **all** of the following in the same session:
+
+- `youth_academy.csv` — add/remove/update the row
+- `docs/academy.html` — add/remove/update the full card (+ bio for new signings, if known)
+- `docs/roster.html`'s academy section — add/remove/update the matching condensed card in the correct position group (GK/DEF/MID/FWD). A position change (e.g. a converted CAM) means moving the card to a different `dc-group`, not just editing the badge text in place.
+- If a player is promoted to the first team, move their row from `youth_academy.csv` to `wrexham_squad.csv` and follow "Squad Changes — Keep All Pages in Sync" above; remove their academy card from both `academy.html` and `roster.html`.
+- Run `python3 scripts/check_roster_sync.py` afterward — it now checks name/age/OVR/position/POT for the academy section of both `roster.html` and `academy.html` against `youth_academy.csv`, not just the senior roster.
 
 ---
 
