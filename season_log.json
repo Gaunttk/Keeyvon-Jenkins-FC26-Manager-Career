@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2026-02-28"
+    "last_updated": "2026-03-04"
   },
   "matches": [
     {
@@ -510,6 +510,16 @@
       "competition": "EFL Championship",
       "notes": "C. Kelman 45'/53' (Charlton), B. Gutiérrez 83' (1G, assist A. Gómez), J. Rankin-Costello 90'/90'+4 (Charlton, MoM). Subs 64': Y. Amrizi for K. Moore, J. Amelia for L. Cacace. A mess. Shots 15-9 (CHA-WRX), xG 5.2-2.8, poss 58-42%, passes 211-121 (90-85% acc), tackles 10-18, saves 2-6, corners 3-0, offsides 4-1. Wrexham 1st in Championship (P35 W26 D4 L5, GF88 GA41, GD+47, 82 pts).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-03-04",
+      "opponent": "Watford",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Moore 49'. MoM: Sheaf. Scraped it.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -871,6 +881,10 @@
     {
       "date": "2026-02-28",
       "description": "MD35 LOSS: 1-4 away at Charlton Athletic. Charlie Kelman brace either side of half-time put Charlton in control; Brian Gutiérrez pulled one back on 83' but Joe Rankin-Costello's late brace (90', 90'+4, MoM) sealed it. First defeat since MD16. Record: P35 W26 D4 L5, GF88 GA41, GD+47, 82 pts. Still 1st in Championship, 11 points clear of Ipswich."
+    },
+    {
+      "date": "2026-03-04",
+      "description": "MD36 WIN: 1-0 away at Watford. K. Moore 49' the only goal. MoM: Sheaf. Scraped it. Record: P36 W27 D4 L5, GF89 GA41, GD+48, 85 pts. 1st in Championship."
     }
   ]
 }
