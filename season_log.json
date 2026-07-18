@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2026-03-08"
+    "last_updated": "2026-03-14"
   },
   "matches": [
     {
@@ -531,6 +531,16 @@
       "round": "Round 5",
       "notes": "B. Kamara 9' (AV), J. McGinn 20' (AV), B. Gutiérrez 32', D. Bobadilla 65', K. Moore 90'. MoM: B. Kamara (AV), 8.7 RR. Assists: Rodríguez, Gómez, Gutiérrez (one each; exact pairing to goal not shown). Lineup: Okonkwo (GK, 6.1), Kaboré (RB, 6.5), Hyam (RCB, 7.1), Doyle (LCB, 6.5), Cacace (LB, 6.4), Sheaf (RCM, 6.4), Bobadilla (LCM, 6.8, 1G), Gutiérrez (CAM, 7.5, 1G/1A), Rodríguez (LW, 6.2, 1A), Gómez (RW, 6.0, 1A), Moore (ST, 6.7, 1G). No Wrexham subs used. Shots 6-4 (AV-WRX), on target 4-3, xG 2.0-1.7, poss 68-32%, passes 285-103 (91-78% acc), tackles 17-26 (47-12% success), interceptions 20-21, saves 0-2, corners 1-0, offsides 0-1, no cards. Backs against the wall — small club vs. the big boys, and Moore's stoppage-time winner sealed a stunning comeback.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-03-14",
+      "opponent": "Swansea City",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 44' the only goal. MoM: K. Moore (7.6, 1G). Lineup: Okonkwo (GK, 6.2), Thomason (RB, 7.2), Cleworth (RCB, 7.1), Doyle (LCB, 6.3), Amelia (LB, 6.4), Bobadilla (CDM, 6.9), O'Brien (RCM, 6.9, subbed off 78'), Gutiérrez (LCM, 7.1, 1A, subbed off 78'), Rodríguez (LW, 6.1, subbed off 78'), Gómez (RW, 7.3, 1A, subbed off 78'), Moore (ST, 7.6, 1G, subbed off 48'). Subs: Amrizi for Moore 48' (5.8), Sheaf for O'Brien 78' (6.1), Cacace for Gutiérrez 78' (6.2), Cadamarteri for Gómez 78' (5.8, injured 90'), Broadhead for Rodríguez 78' (6.1). Unused: Kaboré, Ward, Hyam, Windass. Shots 7-0 (WRX-SWA), on target 2-0, xG 1.9-0.0, poss 42-58%, passes 133-226 (81-91% acc), tackles 23-13 (26-23% success), interceptions 17-17, saves 0-1, corners 4-1, offsides 2-0, no cards. Wrexham 1st in Championship (P37 W28 D4 L5, GF90 GA41, GD+49, 88 pts).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -900,6 +910,10 @@
     {
       "date": "2026-03-08",
       "description": "Wrexham beat Aston Villa 3-2 away in the FA Cup Round 5, coming from behind. Kieffer Moore's 90th-minute winner completed the comeback and sent Wrexham through to the next round."
+    },
+    {
+      "date": "2026-03-14",
+      "description": "MD37 WIN: 1-0 at home vs Swansea City. Kieffer Moore 44' the only goal, MoM. Comfortable. Record: P37 W28 D4 L5, GF90 GA41, GD+49, 88 pts. 1st in Championship. B. Cadamarteri picked up an apparent injury in the 90th minute (icon shown on the sub event, no severity/duration confirmed yet — flag for next screenshot batch)."
     }
   ]
 }
