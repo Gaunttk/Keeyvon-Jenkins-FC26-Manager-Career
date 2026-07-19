@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2026-03-14"
+    "last_updated": "2026-03-21"
   },
   "matches": [
     {
@@ -541,6 +541,16 @@
       "competition": "EFL Championship",
       "notes": "K. Moore 44' the only goal. MoM: K. Moore (7.6, 1G). Lineup: Okonkwo (GK, 6.2), Thomason (RB, 7.2), Cleworth (RCB, 7.1), Doyle (LCB, 6.3), Amelia (LB, 6.4), Bobadilla (CDM, 6.9), O'Brien (RCM, 6.9, subbed off 78'), Gutiérrez (LCM, 7.1, 1A, subbed off 78'), Rodríguez (LW, 6.1, subbed off 78'), Gómez (RW, 7.3, 1A, subbed off 78'), Moore (ST, 7.6, 1G, subbed off 48'). Subs: Amrizi for Moore 48' (5.8), Sheaf for O'Brien 78' (6.1), Cacace for Gutiérrez 78' (6.2), Cadamarteri for Gómez 78' (5.8, injured 90'), Broadhead for Rodríguez 78' (6.1). Unused: Kaboré, Ward, Hyam, Windass. Shots 7-0 (WRX-SWA), on target 2-0, xG 1.9-0.0, poss 42-58%, passes 133-226 (81-91% acc), tackles 23-13 (26-23% success), interceptions 17-17, saves 0-1, corners 4-1, offsides 2-0, no cards. Wrexham 1st in Championship (P37 W28 D4 L5, GF90 GA41, GD+49, 88 pts).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-03-21",
+      "opponent": "Sheffield UTD",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 11' the only goal. MoM: O'Hare (Sheffield Utd). Lineup: Ward (GK, 7.6), Amelia (RB, 7.2), Hyam (RCB, 7.5), Doyle (LCB, 6.2), Cacace (LB, 6.5), Sheaf (RCM, 6.9), Bobadilla (LCM, 6.4), Gutiérrez (CAM, 6.3, 1A, subbed off 76'), Gómez (RW, 6.4), Moore (ST, 7.4, 1G, subbed off 63'), Broadhead (LW, 5.9, subbed off). Subs: Amrizi for Moore 63' (6.2), Windass for Gutiérrez 76' (5.9), Rodríguez for Broadhead (6.1). Unused: Thomason, Webber, Keillor-Dunn, Cleworth, Cadamarteri, O'Brien. Shots 9-6 (WRX-SHU), on target 4-5, xG 2.7-1.5, poss 38-62%, passes 141-268 (86-93% acc), tackles 10-12 (40-33% success), interceptions 13-17, saves 5-3, corners 1-1, offsides 0-2, no cards. Wrexham 1st in Championship (P38 W29 D4 L5, GF91 GA41, GD+50, 91 pts) — promotion to the Premier League confirmed with 8 games still to play.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -653,7 +663,18 @@
       "wage": "$33,500/w"
     }
   ],
-  "injuries": [],
+  "injuries": [
+    {
+      "date": "2026-03-21",
+      "player": "A. Okonkwo",
+      "description": "Torn Quad - 8 weeks"
+    },
+    {
+      "date": "2026-03-21",
+      "player": "I. Kaboré",
+      "description": "Groin - 3 weeks"
+    }
+  ],
   "milestones": [
     {
       "date": "2025-06-29",
@@ -919,6 +940,19 @@
       "date": "2026-03-14",
       "description": "Academy update: 3 new Argentine signings added to the Youth Squad (March 2026 intake) — Martin Leon (CM, 15, OVR 51, POT 78-84), Fabricio Sandoval (CAM/LW, 17, OVR 59, POT 74-80), Marco Soria (LW/LM/CAM, 17, OVR 63, POT 74-80). Academy now at 15 players. Development refresh confirmed for the rest of the academy from the same screenshot batch: OVR +1 for Gassner (60), Martini (59, also turned 17), Horne (62), Dijkgraaf (62), Bianchi (58), Vargas (62), Ortega (63, unchanged but completed his LW→CAM conversion — POT rose to 75-81 and he turned 18), Hak (60), Matthews (58), Forster (57). Jamie Lord's OVR (64) and POT ranges were unchanged this cycle.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-03-21",
+      "description": "Training injury clash: Arthur Okonkwo and Issa Kaboré collided in training and both came away injured — Okonkwo with a torn quad (out 8 weeks), Kaboré with a groin strain (out 3 weeks). Danny Ward moves into the starting GK jersey; Joenathan Amelia starts at RB in Kaboré's absence."
+    },
+    {
+      "date": "2026-03-21",
+      "description": "Mason Webber (17, GK, OVR 62) promoted from the Youth Academy to the first team as emergency backup goalkeeper behind Danny Ward, following Okonkwo's training injury.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-21",
+      "description": "MD38 WIN: 1-0 away at Sheffield Utd. Kieffer Moore 11' the only goal. MoM: O'Hare (Sheffield Utd). Record: P38 W29 D4 L5, GF91 GA41, GD+50, 91 pts. WREXHAM ARE PROMOTED TO THE PREMIER LEAGUE — secured with 8 games still to play."
     }
   ]
 }
