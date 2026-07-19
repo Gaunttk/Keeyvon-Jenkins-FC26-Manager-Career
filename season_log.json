@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2026-03-29"
+    "last_updated": "2026-04-04"
   },
   "matches": [
     {
@@ -561,6 +561,16 @@
       "competition": "EFL Championship",
       "notes": "D. Keillor-Dunn 32' the only goal. Lineup: Webber (GK, 6.8, debut), Vyner (RB, 7.1), Cleworth (RCB, 6.8), Doyle (LCB, 6.7), Thomason (LB, 6.1), Dobson (RCM, 6.6), O'Brien (LCM, 6.7, subbed off 81'), Ortega (CAM, 6.5, 1A, debut, subbed off 74'), Keillor-Dunn (RW, 7.1, 1G), Moore (ST, 6.4), Cacace (LW, 6.4). Subs: Windass for Ortega 74' (6.2), Sheaf for O'Brien 81' (6.1). Unused: Amrizi, Rodriguez, Ward, James, Cadamarteri. Shots 6-4 (WRX-HUL), on target 3-1, xG 2.9-1.3, poss 40-60%, passes 130-224 (85-91% acc), tackles 19-17 (21-29% success), interceptions 16-16, saves 1-2, corners 1-1, offsides 0-0, no cards. Santi Ortega (promoted from academy this session) assisted on debut; Mason Webber kept a clean sheet on his senior debut. Wrexham 1st in Championship (P39 W30 D4 L5, GF92 GA41, GD+51, 94 pts).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "West Bromwich Albion",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "A. Gómez 66' (1G), B. Gutiérrez 69' (MoM, 8.3, 1G), Y. Amrizi 85' (1G, sub). Lineup (Performance tab): Webber (GK, 6.3), Amelia (RB, 6.7), Cleworth (RCB, 7.0), Hyam (LCB, 6.5), Cacace (LB, 6.3), Bobadilla (RCM, 7.0), Windass (LCM, 6.2), Gutiérrez (LCM, MoM 8.3, 1G), Ortega (CAM, 6.9, 1A), Gómez (RW, 7.3, 1G/1A), Broadhead (LW, 5.6), Rodríguez (LW, 6.0), Moore (ST, 6.2), Cadamarteri (ST, 5.7), Amrizi (RW, 7.1, 1G). Confirmed sub: Thomason on for Cacace 74' (6.0). Unused: Sheaf, Ward, O'Brien, Doyle. Shots 1-15 (WBA-WRX), on target 0-10, shot accuracy 0-67%, poss 41-59% (WRX 59%), passes 224-134 (WBA-WRX), pass accuracy 90-84%, dribble success 95-89%, tackles 13-9, tackle success 54-44%, interceptions 14-20, saves 7-0, corners 0-3, offsides 1-0, no cards. Controlled from start to finish. Wrexham 1st in Championship (P40 W31 D4 L5, GF95 GA41, GD+54, 97 pts) — EFL Championship TITLE mathematically clinched (2nd-place Ipswich cannot catch Wrexham's points total with games remaining).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -671,6 +681,15 @@
       "club": "Free Agent",
       "fee": "$0",
       "wage": "$33,500/w"
+    },
+    {
+      "date": "2026-04-04",
+      "player": "Chido Obi",
+      "direction": "in",
+      "club": "Manchester United",
+      "fee": "$2,950,000",
+      "wage": "",
+      "notes": "18-year-old ST, price rating A (Excellent Deal). Contract length, wage, and Wrexham squad role not yet confirmed — need a Financial tab screenshot."
     }
   ],
   "injuries": [
@@ -972,6 +991,20 @@
     {
       "date": "2026-03-29",
       "description": "MD39 WIN: 1-0 vs Hull City (H). Keillor-Dunn 32' the only goal. Ortega debut with an assist; Webber debut in goal with a clean sheet. Record: P39 W30 D4 L5, GF92 GA41, GD+51, 94 pts."
+    },
+    {
+      "date": "2026-04-04",
+      "description": "MD40 WIN: 3-0 away at West Bromwich Albion. Gómez, Gutiérrez (MoM) and Amrizi on the scoresheet. Record: P40 W31 D4 L5, GF95 GA41, GD+54, 97 pts.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-04",
+      "description": "EFL CHAMPIONSHIP TITLE CLINCHED — Wrexham's 97 points (P40) cannot be caught by 2nd-place Ipswich (74 pts, P39, max possible 95). First-ever Championship title for the club, on top of the promotion already secured on 2026-03-21. Trophy presentation planned for the next home game.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-04",
+      "description": "Chido Obi (18, ST) signed from Manchester United for $2,950,000 — an Excellent Deal per the game's price rating. Developing young striker; attribute/contract detail pending a Wrexham-side Financial tab screenshot."
     }
   ]
 }
