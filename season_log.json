@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2025-26",
     "competition": "EFL Championship",
-    "last_updated": "2026-04-04"
+    "last_updated": "2026-04-11"
   },
   "matches": [
     {
@@ -582,6 +582,16 @@
       "competition": "EFL Championship",
       "notes": "A. Gómez 66' (1G), B. Gutiérrez 69' (MoM, 8.3, 1G), Y. Amrizi 85' (1G, sub). Lineup (Performance tab): Webber (GK, 6.3), Amelia (RB, 6.7), Cleworth (RCB, 7.0), Hyam (LCB, 6.5), Cacace (LB, 6.3), Bobadilla (RCM, 7.0), Windass (LCM, 6.2), Gutiérrez (LCM, MoM 8.3, 1G), Ortega (CAM, 6.9, 1A), Gómez (RW, 7.3, 1G/1A), Broadhead (LW, 5.6), Rodríguez (LW, 6.0), Moore (ST, 6.2), Cadamarteri (ST, 5.7), Amrizi (RW, 7.1, 1G). Confirmed sub: Thomason on for Cacace 74' (6.0). Unused: Sheaf, Ward, O'Brien, Doyle. Shots 1-15 (WBA-WRX), on target 0-10, shot accuracy 0-67%, poss 41-59% (WRX 59%), passes 224-134 (WBA-WRX), pass accuracy 90-84%, dribble success 95-89%, tackles 13-9, tackle success 54-44%, interceptions 14-20, saves 7-0, corners 0-3, offsides 1-0, no cards. Controlled from start to finish. Wrexham 1st in Championship (P40 W31 D4 L5, GF95 GA41, GD+54, 97 pts) — EFL Championship TITLE mathematically clinched (2nd-place Ipswich cannot catch Wrexham's points total with games remaining).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "Southampton",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "C. Larin 9' gave Southampton an early lead; A. Gómez 23', D. Bobadilla 59', Y. Amrizi 90' (sub) won it for Wrexham. MoM: Bobadilla. Lineup (Performance tab, only defensive half + Sheaf captured before the list scrolled out of view): Ward (GK, 6.3), Thomason (RB, 6.9, yellow 66', subbed off 67'), Hyam (RCB, 7.1, subbed off 67'), Doyle (LCB, 6.7), Cacace (LB, 6.5), Sheaf (RCM, 7.0). Front six (Bobadilla, Gómez, Moore, Rodríguez, Gutiérrez) and their ratings not captured in screenshots. Southampton: F. Downes yellow 23'. Subs (all Wrexham subs made together at 67'): Cleworth on for Hyam, Amelia on for Thomason, Broadhead on for Rodríguez, Amrizi on for Moore (scored 90'), Ortega on for Gutiérrez (Ortega picked up a knock at 68', severity unconfirmed). Southampton subs: Scienza for Matsuki 63', Fellows for Edozie 67', Jelert for Roerslev 87'. Unused: Webber, Cadamarteri, O'Brien, Windass. Shots 8-3 (WRX-SOU), on target 4-3, xG 3.1-0.9, poss 46-54%, passes 151-221 (87-90% acc), tackles 13-18 (8-39% success), interceptions 16-14, saves 2-1, corners 1-0, offsides 1-0, fouls 1-1, 2 yellow cards (1 each), no reds. Wrexham's final home game of the season — EFL Championship trophy presented on the pitch after the final whistle, captain Max Cleworth lifting it in front of the Racecourse crowd. Wrexham 1st in Championship (P41 W32 D4 L5, GF98 GA42, GD+56, 100 pts).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -1020,6 +1030,15 @@
     {
       "date": "2026-04-04",
       "description": "Chido Obi (18, ST) agreed terms to join from Manchester United for $2,950,000 — an Excellent Deal per the game's price rating. Deal completes when the transfer window opens; not yet on the books. Developing young striker; attribute/contract detail pending a Wrexham-side Financial tab screenshot once he joins."
+    },
+    {
+      "date": "2026-04-11",
+      "description": "MD41 WIN: 3-1 at home vs Southampton (Larin 9' SOU; Gómez 23', Bobadilla 59' MoM, Amrizi 90' WRX). Record: P41 W32 D4 L5, GF98 GA42, GD+56, 100 pts.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "description": "EFL CHAMPIONSHIP TROPHY LIFTED — captain Max Cleworth raised the trophy at the Racecourse after the final whistle of Wrexham's last home game of the season, confirming the title clinched on 2026-04-04 at West Brom. First-ever Championship title in club history."
     }
   ]
 }
