@@ -575,6 +575,17 @@
     },
     {
       "date": "2026-04-04",
+      "opponent": "Coventry City",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "QTR",
+      "notes": "Martini.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-04-04",
       "opponent": "West Bromwich Albion",
       "home": false,
       "score": "3-0",
@@ -608,7 +619,7 @@
       "date": "2026-04-11",
       "opponent": "Southampton",
       "home": true,
-      "score": "1-0",
+      "score": "4-0",
       "result": "W",
       "competition": "Youth Academy Rush Tournament",
       "round": "Final",
