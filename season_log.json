@@ -584,13 +584,45 @@
       "journal_entry": true
     },
     {
-      "date": "2026-04-11",
+      "date": "2026-04-07",
       "opponent": "Southampton",
       "home": true,
       "score": "3-1",
       "result": "W",
       "competition": "EFL Championship",
       "notes": "C. Larin 9' gave Southampton an early lead; A. Gómez 23', D. Bobadilla 59', Y. Amrizi 90' (sub) won it for Wrexham. MoM: Bobadilla. Lineup (Performance tab, only defensive half + Sheaf captured before the list scrolled out of view): Ward (GK, 6.3), Thomason (RB, 6.9, yellow 66', subbed off 67'), Hyam (RCB, 7.1, subbed off 67'), Doyle (LCB, 6.7), Cacace (LB, 6.5), Sheaf (RCM, 7.0). Front six (Bobadilla, Gómez, Moore, Rodríguez, Gutiérrez) and their ratings not captured in screenshots. Southampton: F. Downes yellow 23'. Subs (all Wrexham subs made together at 67'): Cleworth on for Hyam, Amelia on for Thomason, Broadhead on for Rodríguez, Amrizi on for Moore (scored 90'), Ortega on for Gutiérrez (Ortega picked up a knock at 68', severity unconfirmed). Southampton subs: Scienza for Matsuki 63', Fellows for Edozie 67', Jelert for Roerslev 87'. Unused: Webber, Cadamarteri, O'Brien, Windass. Shots 8-3 (WRX-SOU), on target 4-3, xG 3.1-0.9, poss 46-54%, passes 151-221 (87-90% acc), tackles 13-18 (8-39% success), interceptions 16-14, saves 2-1, corners 1-0, offsides 1-0, fouls 1-1, 2 yellow cards (1 each), no reds. Wrexham's final home game of the season — EFL Championship trophy presented on the pitch after the final whistle, captain Max Cleworth lifting it in front of the Racecourse crowd. Wrexham 1st in Championship (P41 W32 D4 L5, GF98 GA42, GD+56, 100 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "West Bromwich",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi",
+      "notes": "Martini, Lord. MoM: Gassner.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "Southampton",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Lord, Vargas, Lord, Soria. MoM: Lord.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "Birmingham City",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "S. Ortega 74' the only goal (assist: N. Broadhead, on as a sub 3 minutes earlier). MoM: Fidalgo (Birmingham) — no Wrexham player carried the icon. A. Gómez picked up a knock ~40' and was withdrawn at 68' alongside K. Moore (Broadhead and Y. Amrizi on in their places). Lineup (Performance tab): Webber (GK, 7.7), Amelia (RB, 7.5), Hyam (RCB, 7.1), Doyle (LCB, 6.8), Cacace (LB, 6.0), Bobadilla (LCM, 6.8), Gutiérrez (RCM, 6.3), Ortega (CAM, 6.6, 1G), Gómez (RW, 5.8, subbed off 68'), Rodríguez (LW, 6.3), Moore (ST, 5.8, subbed off 68'). Subs 68': Amrizi for Moore (5.9), Broadhead for Gómez (6.4, 1A). Unused: Thomason, Ward, Sheaf, Cleworth, Cadamarteri, O'Brien, Windass. Birmingham subs: T. Doyle for I. Osman 68', K. Wagner for Paik Seung Ho 72', K. Furuhashi for M. Ducksch 81'. Shots 7-4 (BIR-WRX), on target/shot accuracy 86-50%, xG 3.1-1.6, poss 65-35%, passes 281-120 (93-83% acc), dribble success 96-88%, tackles 13-20 (4-4 won), interceptions 12-14, saves 1-6, offsides 0-3, corners 1-0, free kicks 4-0, fouls 0-1, no cards. Def line breaks: through 3-1, around 1-2, over 1-0. This was matchday 42 of 46 — 4 games remain in the Championship season. Wrexham 1st in Championship (P42 W33 D4 L5, GF99 GA42, GD+57, 103 pts).",
       "journal_entry": true
     }
   ],
