@@ -754,6 +754,31 @@
       "fee": "$2,950,000",
       "wage": "",
       "notes": "18-year-old ST, price rating A (Excellent Deal). Personal terms agreed; deal completes when the transfer window opens — not yet at the club. Contract length, wage, and Wrexham squad role not yet confirmed — need a Financial tab screenshot once he joins."
+    },
+    {
+      "date": "2026-04-18",
+      "player": "Milán Vitális",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$22,500/w"
+    },
+    {
+      "date": "2026-04-18",
+      "player": "Vladyslav Veleten",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$27,500/w"
+    },
+    {
+      "date": "2026-04-18",
+      "player": "Alan Minda",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "",
+      "notes": "Financial tab not screenshotted this session — wage/value/contract length pending."
     }
   ],
   "injuries": [
@@ -1082,6 +1107,10 @@
     {
       "date": "2026-04-11",
       "description": "EFL CHAMPIONSHIP TROPHY LIFTED — captain Max Cleworth raised the trophy at the Racecourse after the final whistle of Wrexham's last home game of the season, confirming the title clinched on 2026-04-04 at West Brom. First-ever Championship title in club history."
+    },
+    {
+      "date": "2026-04-18",
+      "description": "Three free-agent signings joined: Milán Vitális (24, CM/CDM, Hungary), Vladyslav Veleten (23, RW/RM, Ukraine), and Alan Minda (22, ST/RM/CAM, Ecuador). All real-world pros in FC26's database — Vitális at DAC Dunajská Streda, Veleten at Polissya Zhytomyr (Ukraine international), Minda at Atlético Mineiro (Ecuador international, 2026 World Cup squad). Minda's Financial tab wasn't screenshotted — contract/wage/value pending."
     }
   ]
 }
