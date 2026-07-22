@@ -645,6 +645,26 @@
       "competition": "EFL Championship",
       "notes": "Moore 14', 27' (2G, 1A); Gutiérrez 1A; Keillor-Dunn 40' (1G); M. Smit 33' (Stoke). MoM: K. Moore (9.1). Starting XI: Ward (GK, 5.5); Kaboré (RB, 6.7, subbed 68'); Cacace (LB, 7.1); Doyle (LCB, 7.0); Cleworth (RCB, 7.0); Bobadilla (LCM, 7.2, subbed 68'); Sheaf (RCM, 7.0); Gutiérrez (CAM, 6.7, 1A, subbed 68'); Rodríguez (LW, 6.5); Moore (ST, 9.1, 2G 1A, subbed 68'); Keillor-Dunn (RW, 7.1, 1G, subbed 68'). Subs 68': Amelia for Kaboré (6.3), O'Brien for Bobadilla (6.2), Ortega for Gutiérrez (5.8), Amrizi for Moore (6.0), Cadamarteri for Keillor-Dunn (5.9). Unused: Broadhead, Webber, Hyam, Windass. Shots 12-1 (8-1 on target), xG 3.4-0.3, poss 45-55%, passes 156-229 (92-90% acc), tackles 12-14 (4-6 won), interceptions 20-10, saves 0-5, corners 3-0, free kicks 0-1, offsides 1-0, no cards. This was matchday 43 of 46 — 3 games remain in the Championship season. Wrexham 1st in Championship (P43 W34 D4 L5, GF102 GA43, GD+59, 106 pts).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-04-21",
+      "opponent": "Oxford United",
+      "home": false,
+      "score": "0-2",
+      "result": "L",
+      "competition": "EFL Championship",
+      "notes": "S. Dembélé 52', N. Prelec 90' (both Oxford). M. Cleworth injured 29' (broken toe), subbed off at HT for C. Doyle. A heavily rotated Wrexham side (Veleten, Minda and Vitális all starting for the first time) were second-best throughout. Shots 7-1 (OXF-WRX), on target 4-0, xG 3.3-0.5, poss 63-37%, passes 237-136 (92-85% acc), tackles 10-22 (70-23% success), interceptions 13-15, saves 0-2. Subs 72': M. Harris for O. Romeny (OXF), Y. Amrizi for J. Rodríguez, A. Minda for K. Moore (WRX). This was matchday 44 of 46 — 2 games remain in the Championship season. Wrexham 1st in Championship (P44 W34 D4 L6, GF102 GA45, GD+57, 106 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "Coventry City",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore hat-trick (8', 15', 41') plus Y. Amrizi 79' (sub, on for Moore 57'). MoM: K. Moore. Y. Veleten had 3 assists. Coventry sit 5th, still chasing the second automatic promotion spot but may have been overtaken for it. Controlled from start to finish. Subs 57': Y. Amrizi for K. Moore, S. Ortega for B. Gutiérrez, J. Amelia for I. Kaboré. Coventry sub: H. Wright for B. Thomas-Asante 64'. Shots 8-7 (COV-WRX), on target 5-5, poss 55-45%, passes 254-154 (93-89% acc), tackles 17-15, interceptions 11-13, saves 1-5. This was matchday 45 of 46 — 1 game remains in the Championship season. Wrexham 1st in Championship (P45 W35 D4 L6, GF106 GA45, GD+61, 109 pts).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -801,6 +821,16 @@
       "date": "2026-03-21",
       "player": "I. Kaboré",
       "description": "Groin - 3 weeks"
+    },
+    {
+      "date": "2026-04-11",
+      "player": "Andrés Gómez",
+      "description": "Broken Toe, 3 months (retroactively reported 2026-04-21)"
+    },
+    {
+      "date": "2026-04-21",
+      "player": "Max Cleworth",
+      "description": "Broken Toe, 3 months"
     }
   ],
   "milestones": [
@@ -1121,6 +1151,20 @@
     {
       "date": "2026-04-18",
       "description": "Three free-agent signings joined: Milán Vitális (24, CM/CDM, Hungary), Vladyslav Veleten (23, RW/RM, Ukraine), and Alan Minda (22, ST/RM/CAM, Ecuador). All real-world pros in FC26's database — Vitális at DAC Dunajská Streda, Veleten at Polissya Zhytomyr (Ukraine international), Minda at Atlético Mineiro (Ecuador international, 2026 World Cup squad). Minda's Financial tab wasn't screenshotted — contract/wage/value pending."
+    },
+    {
+      "date": "2026-04-21",
+      "description": "MD44 LOSS: 0-2 away at Oxford United. A heavily rotated Wrexham side gave first starts to new signings Veleten, Minda and Vitális. Goals from S. Dembélé (52') and N. Prelec (90') sealed it after Max Cleworth was injured (broken toe) in the 29th minute. First loss since MD35. Record: P44 W34 D4 L6, GF102 GA45, GD+57, 106 pts. Still 1st in Championship with 2 games left.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-21",
+      "description": "Max Cleworth suffered a broken toe (3 months) in the 29th minute at Oxford United, forcing an early change (C. Doyle on at HT). Andrés Gómez's broken toe (also 3 months) is now confirmed to have actually occurred on 2026-04-11 (vs Birmingham City) — logged retroactively this session."
+    },
+    {
+      "date": "2026-04-25",
+      "description": "MD45 WIN: 4-0 away at Coventry City. Kieffer Moore hat-trick (8', 15', 41') plus a Y. Amrizi finish (79', on as a sub for Moore) completed a comfortable rout. Y. Veleten chipped in 3 assists. Controlled from start to finish. Record: P45 W35 D4 L6, GF106 GA45, GD+61, 109 pts — 1 game left in the Championship season, title and promotion already secured.",
+      "journal_entry": true
     }
   ]
 }
