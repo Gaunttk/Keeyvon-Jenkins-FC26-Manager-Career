@@ -9,11 +9,27 @@
   },
   "matches": [],
   "transfers": [],
-  "injuries": [],
+  "injuries": [
+    {
+      "date": "2026-05-02",
+      "player": "Arthur Okonkwo",
+      "description": "Tricep Muscle, out ~6 weeks (exact injury date unconfirmed — no calendar screenshot, flagged for user)"
+    }
+  ],
   "milestones": [
     {
       "date": "2026-05-02",
       "description": "Season 1 (2025-26) archived: journal.html -> journal/season-01.html, season.html -> season/season-01.html, season_log.json -> season_logs/season-01.json. Wrexham AFC finished 1st in the EFL Championship (P46 W36 D4 L6, GF111 GA47, GD+64, 112 pts), automatically promoted. Season 2 begins.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-05-02",
+      "description": "Arthur Okonkwo picked up a tricep muscle injury (~6 weeks), sidelining him early in Season 2 preparations. Mason Webber (17) is next in line in goal.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-05-02",
+      "description": "Danny Ward (32, GK) has submitted a transfer request and is unhappy despite dev being complete at OVR 71 — first squad-management decision of Season 2. Both Ward and Arthur Okonkwo flipped from 'not willing' to 'willing to negotiate new terms' in this review; Mason Webber (17) also now willing to negotiate.",
       "journal_entry": false
     }
   ]
