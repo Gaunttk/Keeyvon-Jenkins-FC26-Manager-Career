@@ -7,13 +7,76 @@
     "competition": "Premier League",
     "last_updated": "2026-05-02"
   },
-  "matches": [],
-  "transfers": [],
+  "matches": [
+    {
+      "date": "2026-05-15",
+      "opponent": "Ipswich",
+      "home": true,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Round 1",
+      "notes": "Lord, Matthews. Scored in extra time with golden goal. Anton Gassner (youth academy GK) was released from the academy after believing he was good enough for the senior squad.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-06-04",
+      "opponent": "Watford",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Soria, Lord, Vargas",
+      "journal_entry": true
+    }
+  ],
+  "transfers": [
+    {
+      "date": "2026-05-15",
+      "player": "Danny Ward",
+      "direction": "out",
+      "club": "Utrecht",
+      "fee": "£1.3m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Josh Windass",
+      "direction": "out",
+      "club": "Wolves",
+      "fee": "£2.6m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Nathan Broadhead",
+      "direction": "out",
+      "club": "Olympique Lyonnais",
+      "fee": "£4.5m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Zak Vyner",
+      "direction": "out",
+      "club": "SC Braga",
+      "fee": "£2.4m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Davis Keillor-Dunn",
+      "direction": "out",
+      "club": "Levante UD",
+      "fee": "£2.55m",
+      "wage": ""
+    }
+  ],
   "injuries": [
     {
       "date": "2026-05-02",
       "player": "Arthur Okonkwo",
-      "description": "Tricep Muscle, out ~6 weeks (exact injury date unconfirmed — no calendar screenshot, flagged for user)"
+      "description": "Tricep muscle — ongoing injury, sidelined for approximately 3 months as of late June 2026 (onset roughly late March 2026; exact date still unconfirmed, carried over from Season 1 rather than a new Season 2 injury)."
     }
   ],
   "milestones": [
@@ -31,6 +94,14 @@
       "date": "2026-05-02",
       "description": "Danny Ward (32, GK) has submitted a transfer request and is unhappy despite dev being complete at OVR 71 — first squad-management decision of Season 2. Both Ward and Arthur Okonkwo flipped from 'not willing' to 'willing to negotiate new terms' in this review; Mason Webber (17) also now willing to negotiate.",
       "journal_entry": false
+    },
+    {
+      "date": "2026-05-15",
+      "description": "Youth academy roster change — Dijkgraaf and Horne terminated their youth contracts, both wanted out and were not yet good enough for the senior squad. Anton Gassner released from the academy after believing he was good enough for the senior squad — no ultimatums. Added Lenny Kuhn (GK) to the academy."
+    },
+    {
+      "date": "2026-05-02",
+      "description": "Danny Ward (32, GK) placed on the transfer list by manager decision — Arthur Okonkwo is returning from injury and Mason Webber (17) is being prioritized for development, leaving Ward surplus to the goalkeeping plans."
     }
   ]
 }
