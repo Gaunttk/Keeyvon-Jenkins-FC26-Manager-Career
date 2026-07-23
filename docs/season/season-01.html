@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Season Stats — Season 1 Archive (2025–26) · Wrexham AFC</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* ── Season Stats Page ── */
+    .record-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 2px solid var(--steel);
+    }
+    .record-cell {
+      padding: 18px 12px;
+      text-align: center;
+      border-right: 1px solid var(--steel);
+    }
+    .record-cell:last-child { border-right: none; }
+    .record-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .record-num.green { color: #4CAF50; }
+    .record-num.red   { color: var(--red); }
+    .record-num.gold  { color: var(--gold); }
+    .record-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .comp-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--steel);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .comp-tab {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 18px;
+      color: var(--muted);
+      border: none;
+      background: none;
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+    }
+    .comp-tab.active { color: var(--white); border-bottom-color: var(--red); }
+
+    /* ── Competition Accordion ── */
+    .comp-accordion {
+      border-bottom: 1px solid var(--steel);
+    }
+    .comp-summary {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 24px 18px;
+      background: var(--charcoal);
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+    .comp-summary::-webkit-details-marker { display: none; }
+    .comp-summary::marker { content: ''; }
+    .comp-summary-name {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      white-space: nowrap;
+    }
+    /* .comp-summary-logo base defined in style.css; enlarged here to match 2x subheader */
+    .comp-summary-logo { width: 48px; height: 48px; }
+    .comp-summary-stats {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      color: var(--muted);
+      flex: 1;
+    }
+    .comp-summary-stats strong { color: var(--gold); }
+    .comp-summary-arrow {
+      font-size: 22px;
+      color: var(--muted);
+      transition: transform 0.15s ease;
+      flex-shrink: 0;
+    }
+    .comp-accordion:not([open]) .comp-summary-arrow {
+      transform: rotate(-90deg);
+    }
+    .comp-accordion:not([open]) .comp-summary {
+      border-bottom: none;
+    }
+
+    /* ── Match Log Table ── */
+    .match-log-header, .match-log-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 60px 120px 80px 1fr 1fr;
+      gap: 4px;
+      padding: 8px 16px;
+      align-items: center;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    .match-log-header {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--mid);
+      border-bottom: 1px solid var(--steel);
+      position: sticky;
+      top: 48px;
+      z-index: 5;
+    }
+    .match-log-row {
+      font-size: 13px;
+      border-bottom: 1px solid var(--mid);
+      transition: background 0.1s;
+    }
+    .match-log-row:hover { background: var(--charcoal); }
+    .match-log-row.preseason { opacity: 0.55; }
+    .ml-date { font-size: 11px; color: var(--muted); }
+    .ml-opponent { display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--white); }
+    /* .ml-crest defined in style.css */
+    .ml-ha {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .ml-comp { font-size: 11px; color: var(--muted); }
+    .ml-result {
+      font-weight: 800;
+      font-size: 15px;
+      text-align: center;
+    }
+    .ml-result.w { color: #4CAF50; }
+    .ml-result.d { color: var(--gold); }
+    .ml-result.l { color: var(--red); }
+    .ml-score { font-weight: 700; font-size: 14px; color: var(--white); }
+    .ml-mom { font-size: 12px; color: var(--dispatch-blue); }
+    .ml-goals { font-size: 11px; color: var(--muted); }
+    .ml-goals strong { color: var(--light); font-weight: 600; }
+
+    .section-divider {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 12px 16px 6px;
+      border-top: 2px solid var(--mid);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--mid);
+    }
+
+    /* ── Player Stats Table ── */
+    .stats-header, .stats-row {
+      display: grid;
+      grid-template-columns: 1fr 50px 36px 36px 50px 60px;
+      gap: 4px;
+      padding: 8px 16px;
+      align-items: center;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+    .stats-header {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--mid);
+      border-bottom: 1px solid var(--steel);
+      position: sticky;
+      top: 48px;
+      z-index: 5;
+    }
+    .stats-row {
+      font-size: 13px;
+      border-bottom: 1px solid var(--mid);
+      transition: background 0.1s;
+    }
+    .stats-row:hover { background: var(--charcoal); }
+    .s-name { font-weight: 700; color: var(--white); font-size: 14px; }
+    .s-pos {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .s-num { text-align: center; color: var(--light); font-size: 13px; }
+    .s-num.highlight { color: var(--gold); font-weight: 800; }
+    .s-rating { text-align: center; font-weight: 700; font-size: 13px; color: var(--dispatch-blue); }
+    .s-mins { text-align: right; font-size: 12px; color: var(--muted); }
+    .data-note {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 10px 16px;
+      border-top: 1px solid var(--mid);
+      font-style: italic;
+    }
+    .data-note strong { color: var(--dispatch-blue); font-style: normal; }
+
+    /* page-wrap in style.css handles max-width */
+
+    @media (max-width: 700px) {
+      .match-log-header, .match-log-row {
+        grid-template-columns: 70px 1fr 40px 70px;
+      }
+      .match-log-header > *:nth-child(n+5),
+      .match-log-row > *:nth-child(n+5) { display: none; }
+      .stats-header, .stats-row {
+        grid-template-columns: 1fr 36px 36px 50px;
+      }
+      .stats-header > *:nth-child(n+5),
+      .stats-row > *:nth-child(n+5) { display: none; }
+    }
+  </style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#C8102E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="WRXM FC26">
+<link rel="apple-touch-icon" href="../assets/icons/icon-192.png">
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/Keeyvon-Jenkins-FC26-Manager-Career/sw.js');
+  });
+}
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="../index.html" class="snav-brand">WRXM <span>FC26</span></a>
+    <a href="../index.html" class="snav-link">Season Hub</a>
+    <a href="../journal.html" class="snav-link">Journal</a>
+    <a href="../season.html" class="snav-link active">Season Stats</a>
+    <a href="../roster.html" class="snav-link">Roster</a>
+    <a href="../depth_chart.html" class="snav-link">Depth Chart</a>
+    <a href="../academy.html" class="snav-link">Academy</a>
+    <a href="../dossier.html" class="snav-link">Dossier</a>
+    <a href="../history.html" class="snav-link">History</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+<div class="masthead">
+  <span class="masthead-label">Wrexham AFC · Season Stats · Season 1 Archive</span>
+  <span class="masthead-date">FC26 Career Mode · 2025–26</span>
+</div>
+
+<div class="hub-header">
+  <div class="hub-eyebrow">Keeyvon Jenkins Era</div>
+  <div class="hub-title">Season 1 <span>Record</span></div>
+  <div class="hub-subtitle">Champions, EFL Championship 2025&ndash;26 &middot; Frozen archive</div>
+  <img class="hub-crest" src="../assets/photos/wrexham-crest.png" alt="Wrexham AFC">
+</div>
+
+<!-- OVERALL TALLY (final) -->
+<div class="record-bar">
+  <div class="record-cell"><div class="record-num green">36</div><div class="record-label">Wins</div></div>
+  <div class="record-cell"><div class="record-num gold">4</div><div class="record-label">Draws</div></div>
+  <div class="record-cell"><div class="record-num red">6</div><div class="record-label">Losses</div></div>
+  <div class="record-cell"><div class="record-num gold">112</div><div class="record-label">Championship Pts</div></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     MATCH LOG — grouped by competition, each an accordion
+══════════════════════════════════════════ -->
+<div class="section-divider">Match Log</div>
+
+<!-- EFL Championship -->
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name"><img class="comp-summary-logo" src="../assets/photos/efl-championship-england-logo-footylogos.png" alt="">EFL Championship</span>
+    <span class="comp-summary-stats"><strong>P46 W36 D4 L6</strong> &nbsp;· 112 pts &nbsp;GF111 GA47 GD+64 &nbsp;— <strong style="color:var(--gold)">CHAMPIONS, PROMOTED</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">May 2, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/middlesbrough.png" alt="">Middlesbrough</div><div class="ml-comp">EFL Championship · MD46 · Season finale</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 5–2</span>
+    <span class="ml-mom">D. Bobadilla <span style="font-size:10px; color:var(--muted)">8.3</span></span>
+    <span class="ml-goals"><strong>Moore</strong> 39' · <strong>Rodríguez</strong> 45' · <strong>Bobadilla</strong> 49' · <strong>Minda</strong> 53' · <strong>Vitális</strong> 83' · Conway 3'/30' (MID)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 25, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/coventry-city.png" alt="">Coventry City</div><div class="ml-comp">EFL Championship · MD45</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 4–0</span>
+    <span class="ml-mom">K. Moore</span>
+    <span class="ml-goals"><strong>Moore</strong> 8', 15', 41' · <strong>Amrizi</strong> 79'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 21, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/oxford-united.png" alt="">Oxford United</div><div class="ml-comp">EFL Championship · MD44</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 0–2</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals" style="color:var(--muted)">Dembélé 52' · Prelec 90' (Oxford) · no WRX goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 18, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/stoke-city.png" alt="">Stoke City</div><div class="ml-comp">EFL Championship · MD43</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom">K. Moore</span>
+    <span class="ml-goals"><strong>Moore</strong> 14', 27' · <strong>Keillor-Dunn</strong> 40'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 11, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/birmingham-city.png" alt="">Birmingham City</div><div class="ml-comp">EFL Championship · MD42</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">Fidalgo (Birmingham)</span>
+    <span class="ml-goals"><strong>Ortega</strong> 74'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 7, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/southampton.png" alt="">Southampton</div><div class="ml-comp">EFL Championship · MD41 · Trophy lift</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom">D. Bobadilla</span>
+    <span class="ml-goals"><strong>Gómez</strong> 23', <strong>Bobadilla</strong> 59', <strong>Amrizi</strong> 90'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 4, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/west-brom.png" alt="">West Bromwich Albion</div><div class="ml-comp">EFL Championship · MD40</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">B. Gutiérrez</span>
+    <span class="ml-goals"><strong>Gómez</strong> 66', <strong>Gutiérrez</strong> 69', <strong>Amrizi</strong> 85'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Mar 29, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/hull-city.png" alt="">Hull City</div><div class="ml-comp">EFL Championship · MD39</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 32'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Mar 21, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/sheffield-united-logo-footylogos.png" alt="">Sheffield Utd</div><div class="ml-comp">EFL Championship · MD38</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">O'Hare (SHU)</span>
+    <span class="ml-goals"><strong>Moore</strong> 11'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Mar 14, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/swansea-city-white-crest.png" alt="">Swansea City</div><div class="ml-comp">EFL Championship · MD37</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">K. Moore <span style="font-size:10px; color:var(--muted)">7.6 ★</span></span>
+    <span class="ml-goals"><strong>Moore</strong> 44'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Mar 4, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/watford-logo-footylogos.png" alt="">Watford</div><div class="ml-comp">EFL Championship · MD36</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">B. Sheaf <span style="font-size:10px; color:var(--muted)">7.5 ★</span></span>
+    <span class="ml-goals"><strong>Moore</strong> 49'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 28, 2026</span>
+    <div><div class="ml-opponent">Charlton Athletic</div><div class="ml-comp">EFL Championship · MD35</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 1–4</span>
+    <span class="ml-mom">J. Rankin-Costello (CHA)</span>
+    <span class="ml-goals"><strong>Gutiérrez</strong> 83'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 24, 2026</span>
+    <div><div class="ml-opponent">Portsmouth</div><div class="ml-comp">EFL Championship · MD34</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 2–0</span>
+    <span class="ml-mom">J.L. Rodríguez</span>
+    <span class="ml-goals"><strong>Rodríguez</strong> 10' · <strong>Rodríguez</strong> 75'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 21, 2026</span>
+    <div><div class="ml-opponent">Ipswich</div><div class="ml-comp">EFL Championship · MD33</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">D. Hyam</span>
+    <span class="ml-goals"><strong>O'Brien</strong> 49'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 10, 2026</span>
+    <div><div class="ml-opponent">Bristol City</div><div class="ml-comp">EFL Championship · MD32</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–2</span>
+    <span class="ml-mom">J.L. Rodríguez</span>
+    <span class="ml-goals"><strong>Gómez</strong> 12' · <strong>Gutiérrez</strong> 35' · <strong>Rodríguez</strong> 90'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 7, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/millwall.png" alt="">Millwall</div><div class="ml-comp">EFL Championship · MD31</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">K. Moore</span>
+    <span class="ml-goals"><strong>Gutiérrez</strong> 36' · <strong>Moore</strong> 45' · <strong>Bobadilla</strong> 65'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 31, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/sheffield-wednesday.png" alt="">Sheffield Wed</div><div class="ml-comp">EFL Championship · MD30</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">J. Rodríguez</span>
+    <span class="ml-goals"><strong>Moore</strong> 19' · <strong>Gómez</strong> 69' · <strong>Cadamarteri</strong> 81'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 24, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/queens-park-rangers.png" alt="">Queens Park Rangers</div><div class="ml-comp">EFL Championship · MD29</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 2–1</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Amrizi</strong> 58' · <strong>Moore</strong> 68'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 20, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/leicester-city.png" alt="">Leicester City</div><div class="ml-comp">EFL Championship · MD28</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–1</span>
+    <span class="ml-mom">J. Rodríguez</span>
+    <span class="ml-goals"><strong>Rodríguez</strong> 38', 78' · <strong>Moore</strong> 45', 65'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 17, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/norwich-city.png" alt="">Norwich City</div><div class="ml-comp">EFL Championship · MD27</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">J. Amelia</span>
+    <span class="ml-goals"><strong>Rodríguez</strong> 65'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 4, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/derby-county-white.png" alt="">Derby County</div><div class="ml-comp">EFL Championship · MD26</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 2–0</span>
+    <span class="ml-mom">K. Moore</span>
+    <span class="ml-goals"><strong>Moore</strong> 67' · <strong>Moore</strong> 72'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 1, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/blackburn-rovers.png" alt="">Blackburn Rovers</div><div class="ml-comp">EFL Championship · MD25</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 6–1</span>
+    <span class="ml-mom">J. Rodríguez</span>
+    <span class="ml-goals"><strong>Moore</strong> 7' · <strong>Rodríguez</strong> 22' · <strong>Rodríguez</strong> 34' · Y. Ohashi 48' (BLK) · <strong>Moore</strong> 67' · <strong>Amrizi</strong> 85' · <strong>Keillor-Dunn</strong> 90'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Dec 29, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/preston-north-end.png" alt="">Preston</div><div class="ml-comp">EFL Championship · MD24</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom">J. Amelia</span>
+    <span class="ml-goals"><strong>Broadhead</strong> 12' · <strong>Storey OG</strong> 17' · <strong>Cacace</strong> 34' · A. Devine 70' (PNE) · O'Brien red 6' (WRX)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Dec 26, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/sheffield-united-logo-footylogos.png" alt="">Sheffield Utd</div><div class="ml-comp">EFL Championship · MD23</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–3</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Moore</strong> 40' · <strong>Moore</strong> 51' · <strong>Rodríguez</strong> 75' · <strong>Amrizi</strong> 84' · Ogbene 14' (SHU) · Matos 69' (SHU)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Dec 20, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/swansea-city-white-crest.png" alt="">Swansea City</div><div class="ml-comp">EFL Championship · MD22</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 2–1</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Windass</strong> 88' · <strong>Amrizi</strong> 90' (sub on 80' for Moore) · Eom Ji Sung 34' (SWA)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Dec 13, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/watford-logo-footylogos.png" alt="">Watford</div><div class="ml-comp">EFL Championship · MD21</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–2</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Amrizi</strong> 75' · <strong>Windass</strong> 82' · <strong>Broadhead</strong> 90+4' · Kjerrumgaard 88' (WAT); WAT's other goal unconfirmed. C. Doyle red 51' (1-match ban)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Dec 11, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/hull-city.png" alt="">Hull City</div><div class="ml-comp">EFL Championship · MD20</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result d">D 2–2</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Moore</strong> 20' · <strong>Amrizi</strong> 84' · McBurnie 31' (HUL) · pen. (HUL, scorer unconfirmed)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Dec 6, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/preston-north-end.png" alt="">Preston North End</div><div class="ml-comp">EFL Championship · MD19</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 4–3</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Moore</strong> 16' · <strong>Broadhead</strong> 66' · <strong>Rodríguez</strong> 83' · <strong>Amrizi</strong> 93' · Preston scorers unconfirmed</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 29, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/blackburn-rovers.png" alt="">Blackburn Rovers</div><div class="ml-comp">EFL Championship · MD18</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">L. O'Brien</span>
+    <span class="ml-goals"><strong>Broadhead</strong> 18' · <strong>Rodríguez</strong> 55' · <strong>O'Brien</strong> 62'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 26, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/bristol-city-logo-footylogos.png" alt="">Bristol City</div><div class="ml-comp">EFL Championship · MD17</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result d">D 2–2</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Windass</strong> 58' · <strong>Moore</strong> 78' · Bristol City scorers unconfirmed</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 22, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/ipswich-town-logo-footylogos.png" alt="">Ipswich Town</div><div class="ml-comp">EFL Championship · MD16</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 0–1</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals">— (Wrexham 0, Ipswich 1)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 8, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/charlton-athletic-logo-footylogos.png" alt="">Charlton Athletic</div><div class="ml-comp">EFL Championship · MD15</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom">B. Sheaf <span style="font-size:10px; color:var(--muted)">7.3 ★</span></span>
+    <span class="ml-goals"><strong>Broadhead</strong> 19' · <strong>Moore</strong> 79' · <strong>Dobson</strong> 89' (sub, 3 min) · Kelman 54' (CHA)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 5, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/portsmouth-logo-footylogos.png" alt="">Portsmouth</div><div class="ml-comp">EFL Championship · MD14</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 5–0</span>
+    <span class="ml-mom">J.L. Rodríguez <span style="font-size:10px; color:var(--muted)">7.6 ★</span></span>
+    <span class="ml-goals"><strong>Windass</strong> 18' · <strong>O'Brien</strong> 21' · <strong>Moore</strong> 59' · <strong>Broadhead</strong> 76'/87'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 1, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/coventry-city.png" alt="">Coventry City</div><div class="ml-comp">EFL Championship · MD13</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–2</span>
+    <span class="ml-mom">K. Moore <span style="font-size:10px; color:var(--muted)">8.5 ★</span></span>
+    <span class="ml-goals"><strong>Moore</strong> 4'/45'/74' (hat-trick) · Thomas-Asante 16'/Wright 21' (COV) · Windass pen. missed 61'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Oct 25, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/middlesbrough.png" alt="">Middlesbrough</div><div class="ml-comp">EFL Championship · MD12</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 0–2</span>
+    <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">7.0 ★</span></span>
+    <span class="ml-goals">Conway 60'/80' (MID)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Oct 22, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/oxford-united.png" alt="">Oxford United</div><div class="ml-comp">EFL Championship · MD11</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result d">D 0–0</span>
+    <span class="ml-mom">I. Kaboré</span>
+    <span class="ml-goals">—</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Oct 18, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/stoke-city.png" alt="">Stoke City</div><div class="ml-comp">EFL Championship · MD10</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 1–4</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Moore</strong> 16' · Thomas 61'/Cissé 74'/Phillips 87'/Manhoef 90' (STK)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Oct 4, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/birmingham-city.png" alt="">Birmingham City</div><div class="ml-comp">EFL Championship · MD9</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–2</span>
+    <span class="ml-mom">J.L. Rodríguez <span style="font-size:10px; color:var(--muted)">8.4 ★</span></span>
+    <span class="ml-goals"><strong>Broadhead</strong> 12' · <strong>Rodríguez</strong> 23'/63' · <strong>Cadamarteri</strong> 88' · Fujimoto 29'/Klarer 45' (BIR)</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Sep 28, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/leicester-city.png" alt="">Leicester City</div><div class="ml-comp">EFL Championship · MD8</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">K. Moore <span style="font-size:10px; color:var(--muted)">7.9 ★</span></span>
+    <span class="ml-goals"><strong>Windass</strong> 31' · <strong>Moore</strong> 57' · <strong>Rodríguez</strong> 88'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Sep 27, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/derby-county-white.png" alt="">Derby County</div><div class="ml-comp">EFL Championship · MD7</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">A. Okonkwo <span style="font-size:10px; color:var(--muted)">7.6 ★ GK</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 13' · <strong>Rodríguez</strong> 26' · <strong>Kaboré</strong> 54'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Sep 20, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/norwich-city.png" alt="">Norwich City</div><div class="ml-comp">EFL Championship · MD6</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom">Y. Amrizi <span style="font-size:10px; color:var(--muted)">8.3 ★</span></span>
+    <span class="ml-goals"><strong>Moore</strong> 14' · <strong>Amrizi</strong> 76' · <strong>Dobson</strong> 89'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Sep 7, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/queens-park-rangers.png" alt="">Queens Park Rangers</div><div class="ml-comp">EFL Championship · MD5</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–0</span>
+    <span class="ml-mom">D. Keillor-Dunn <span style="font-size:10px; color:var(--muted)">7.8 ★</span></span>
+    <span class="ml-goals"><strong>J.L. Rodríguez</strong> 23'/29' · <strong>Moore</strong> 35' · <strong>Keillor-Dunn</strong> 68'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Aug 30, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/millwall.png" alt="">Millwall</div><div class="ml-comp">EFL Championship · MD4</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result l">L 0–2</span>
+    <span class="ml-mom" style="color:var(--muted)">—</span>
+    <span class="ml-goals" style="color:var(--muted)">Azeez 33' · Ivanović 90' (Millwall) · no WRX goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Aug 20, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/sheffield-wednesday.png" alt="">Sheffield Wed</div><div class="ml-comp">EFL Championship · MD3</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result d">D 1–1</span>
+    <span class="ml-mom">B. Sheaf <span style="font-size:10px; color:var(--muted)">7.5</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 65'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Aug 13, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/west-brom.png" alt="">West Brom</div><div class="ml-comp">EFL Championship · MD2</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–1</span>
+    <span class="ml-mom" style="color:var(--muted)">C. Styles (WBA)</span>
+    <span class="ml-goals"><strong>Broadhead</strong> 2',16' · <strong>Moore</strong> 11'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Aug 9, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/southampton.png" alt="">Southampton</div><div class="ml-comp">EFL Championship · MD1</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 4–1</span>
+    <span class="ml-mom">N. Broadhead <span style="font-size:10px; color:var(--muted)">7.8 ★</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 9'/44' · <strong>Moore</strong> 25'/62' · Larin (SOU) 49'</span>
+  </div>
+</details>
+
+<!-- FA Cup -->
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name"><img class="comp-summary-logo" src="../assets/photos/crests/england_emirates-fa-cup_512x512.football-logos.cc.png" alt="">FA Cup</span>
+    <span class="comp-summary-stats"><strong>3W 1L</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Mar 29, 2026</span>
+    <div><div class="ml-opponent">Brighton</div><div class="ml-comp">FA Cup · Round 6</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result l">L 1–1 <span style="font-size:10px">(4–5 pens)</span></span>
+    <span class="ml-mom">Boscagli <span style="font-size:10px; color:var(--muted)">(BHA)</span></span>
+    <span class="ml-goals"><strong>Moore</strong> 15' · Sheaf 61' OG</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Mar 8, 2026</span>
+    <div><div class="ml-opponent">Aston Villa</div><div class="ml-comp">FA Cup · Round 5</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–2</span>
+    <span class="ml-mom">B. Kamara <span style="font-size:10px; color:var(--muted)">(AV)</span></span>
+    <span class="ml-goals"><strong>Gutiérrez</strong> 32' · <strong>Bobadilla</strong> 65' · <strong>Moore</strong> 90'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 14, 2026</span>
+    <div><div class="ml-opponent">Notts County</div><div class="ml-comp">FA Cup · 4th Round</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3–2</span>
+    <span class="ml-mom">B. Cadamarteri</span>
+    <span class="ml-goals"><strong>O'Brien</strong> 30' · <strong>Cadamarteri</strong> 58', 69'</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 4, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/leicester-city.png" alt="">Leicester City</div><div class="ml-comp">FA Cup · 3rd Round</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3–0</span>
+    <span class="ml-mom">K. Moore</span>
+    <span class="ml-goals"><strong>Rodríguez</strong> 10' · <strong>Broadhead</strong> 45' · <strong>Moore</strong> 78'</span>
+  </div>
+</details>
+
+<!-- Carabao Cup -->
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name"><img class="comp-summary-logo" src="../assets/photos/carabao-cup.png" alt="">Carabao Cup</span>
+    <span class="comp-summary-stats"><strong>1W 1L</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Aug 27, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/blackburn-rovers.png" alt="">Blackburn Rovers</div><div class="ml-comp">Carabao Cup · R2</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result l">L 0–1</span>
+    <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">cup exit</span></span>
+    <span class="ml-goals" style="color:var(--muted)">Eliminated R2</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Aug 12, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/preston-north-end.png" alt="">Preston North End</div><div class="ml-comp">Carabao Cup · R1</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 2–0</span>
+    <span class="ml-mom">I. Kaboré <span style="font-size:10px; color:var(--muted)">7.4</span></span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> 19' · <strong>Windass</strong> 35'</span>
+  </div>
+</details>
+
+<!-- Pre-Season (EIC) -->
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name">Pre-Season (EIC)</span>
+    <span class="comp-summary-stats"><strong>2W 0L</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 22, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/ad-ceuta-fc.png" alt="">AD Ceuta FC</div><div class="ml-comp">EIC Group Stage</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 5–0</span>
+    <span class="ml-mom">K. Moore</span>
+    <span class="ml-goals"><strong>Keillor-Dunn</strong> ×2 · <strong>Moore</strong> · <strong>Cadamarteri</strong> · <strong>O'Brien</strong></span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 18, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/bradford-city.png" alt="">Bradford City</div><div class="ml-comp">EIC Group Stage</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 4–0</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Broadhead</strong> ×2 · <strong>Cadamarteri</strong> · <strong>Moore</strong></span>
+  </div>
+</details>
+
+<!-- Youth Tournament -->
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name">Youth Tournament</span>
+    <span class="comp-summary-stats"><strong>11W 0L</strong></span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 11, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/southampton.png" alt="">Southampton</div><div class="ml-comp">Youth Academy Rush Tournament · Final</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–0</span>
+    <span class="ml-mom">O. Lord</span>
+    <span class="ml-goals"><strong>Lord</strong> ×2 · <strong>Vargas</strong> · <strong>Soria</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 11, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/west-brom.png" alt="">West Brom</div><div class="ml-comp">Youth Academy Rush Tournament · Semi</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 2–0</span>
+    <span class="ml-mom">A. Gassner <span style="font-size:10px; color:var(--muted)">(GK)</span></span>
+    <span class="ml-goals"><strong>Martini</strong> · <strong>Lord</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Apr 4, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/coventry-city.png" alt="">Coventry City</div><div class="ml-comp">Youth Academy Rush Tournament · QTR</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 1–0</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Martini</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 24, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/hull-city.png" alt="">Hull City</div><div class="ml-comp">Youth Academy Rush Tournament · Final</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 4–0</span>
+    <span class="ml-mom">Mason Webber</span>
+    <span class="ml-goals"><strong>Lord</strong> · <strong>Ortega</strong> · <strong>Martini</strong> ×2</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Feb 21, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/watford-logo-footylogos.png" alt="">Watford</div><div class="ml-comp">Youth Academy Rush Tournament · Semi</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 6–1</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Martini</strong> ×3 · <strong>Matthews</strong> ×2 · <strong>Vargas</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jan 1, 2026</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/blackburn-rovers.png" alt="">Blackburn Rovers</div><div class="ml-comp">Youth Academy Rush Tournament · QTR</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 8–0</span>
+    <span class="ml-mom">P. Dijkgraaf</span>
+    <span class="ml-goals"><strong>Ortega</strong> ×2 · <strong>Lord</strong> · <strong>Matthews</strong> · <strong>Martini</strong> ×3 · <strong>Dijkgraaf</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 2, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/birmingham-city.png" alt="">Birmingham City</div><div class="ml-comp">Youth Academy Rush Tournament · Final</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 11–0</span>
+    <span class="ml-mom">O. Horne</span>
+    <span class="ml-goals"><strong>Vargas</strong> ×2 · <strong>Ortega</strong> · <strong>Bianchi</strong> · <strong>Lord</strong> · <strong>Matthews</strong> ×3 · <strong>Martini</strong> · <strong>Dijkgraaf</strong> · <strong>Horne</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 2, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/west-brom.png" alt="">West Brom</div><div class="ml-comp">Youth Academy Rush Tournament · SF</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 9–0</span>
+    <span class="ml-mom">P. Dijkgraaf</span>
+    <span class="ml-goals"><strong>Lord</strong> · <strong>Ortega</strong> · <strong>Bianchi</strong> · <strong>Vargas</strong> · <strong>Dijkgraaf</strong> · <strong>Matthews</strong> ×2 · <strong>Martini</strong> · <strong>Horne</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Nov 2, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/blackburn-rovers.png" alt="">Blackburn Rovers</div><div class="ml-comp">Youth Academy Rush Tournament · QTR</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 8–1</span>
+    <span class="ml-mom">P. Dijkgraaf</span>
+    <span class="ml-goals"><strong>Lord</strong> ×2 · <strong>Bianchi</strong> · <strong>Vargas</strong> · <strong>Ortega</strong> · <strong>Matthews</strong> ×3 · <strong>Dijkgraaf</strong> · Atkinson 20' (BLK)</span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 19, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/millwall.png" alt="">Millwall</div><div class="ml-comp">Youth Academy Rush Tournament · SF</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 3–2 AET</span>
+    <span class="ml-mom">—</span>
+    <span class="ml-goals"><strong>Lord</strong> ×2 · <strong>Horne</strong></span>
+  </div>
+
+  <div class="match-log-row preseason">
+    <span class="ml-date">Jul 1, 2025</span>
+    <div><div class="ml-opponent"><img class="ml-crest" src="../assets/photos/crests/hull-city.png" alt="">Hull City</div><div class="ml-comp">Youth Academy Rush Tournament · QF</div></div>
+    <span class="ml-ha">N</span>
+    <span></span>
+    <span class="ml-result w">W 2–1</span>
+    <span class="ml-mom">A. Gassner <span style="font-size:10px; color:var(--muted)">(GK)</span></span>
+    <span class="ml-goals"><strong>Lord</strong> ×2</span>
+  </div>
+</details>
+
+<!-- ══════════════════════════════════════════
+     PLAYER SEASON STATS
+══════════════════════════════════════════ -->
+<div class="section-divider" style="margin-top:8px;">Player Season Stats — Senior Matches</div>
+
+<div class="stats-header">
+  <span>Player</span>
+  <span style="text-align:center">Apps</span>
+  <span style="text-align:center">G</span>
+  <span style="text-align:center">A</span>
+  <span style="text-align:center">Avg RR</span>
+  <span style="text-align:right">Source</span>
+</div>
+
+<!-- MD1-MD7 + Carabao R1 — fully reconciled from session screenshots, MD4 (Millwall) now included -->
+
+<div class="stats-row">
+  <div><div class="s-name">J.L. Rodríguez</div><div class="s-pos">LW · ST</div></div>
+  <span class="s-num">32</span>
+  <span class="s-num highlight">19</span>
+  <span class="s-num highlight">10</span>
+  <span class="s-rating">7.4</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD28 + MD29-31 (1A MD29-30) + MD32 (1G/1A, MoM) + FA Cup R4 (sub on 85') + MD33 (1A) + MD34 (2G, MoM) + MD35 + MD36 (1A) + FA Cup R5 (1A, 6.2) + MD37 (6.1, subbed off 78') + MD38 (6.1, sub on) + MD40 (6.0, sub) + FA Cup R6 (1A, 6.8) + MD41 (LW, subbed off 67' for Broadhead, rating not captured, trophy lift) + MD42 (6.3, LW, full 90) + MD44 (5.7, LW, subbed off 72' for Amrizi) + MD45 (started, rating not captured) + MD46 (1G/1A, 45', 7.6, LW, subbed off 65' for Veleten)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">D. Keillor-Dunn</div><div class="s-pos">RW · CAM</div></div>
+  <span class="s-num">13</span>
+  <span class="s-num highlight">9</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-rating">7.3</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + MD31 (sub on 70') + FA Cup R4 + MD39 (1G, 32', 7.1) + MD43 (1G, 40', 7.1, RW, subbed off 68' for Cadamarteri)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">S. Ortega</div><div class="s-pos">CAM · LW</div></div>
+  <span class="s-num">8</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD39 debut (1A, 6.5, subbed off 74') + MD40 (1A, 6.9, CAM, full 90) + MD41 (sub on 67' for Gutiérrez, picked up a knock at 68' — severity unconfirmed, rating not captured, trophy lift) + MD42 (1G, 74', 6.6, CAM, full 90) + MD43 (5.8, CAM, sub on 68' for Gutiérrez) + MD44 (6.2, LW, started) + MD45 (sub on 57' for Gutiérrez) + MD46 (sub on 65' for Gutiérrez, 6.4)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">K. Moore</div><div class="s-pos">ST</div></div>
+  <span class="s-num">35</span>
+  <span class="s-num highlight">38</span>
+  <span class="s-num highlight">7</span>
+  <span class="s-rating">7.4</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD28-31 (MoM MD31, 9.1, 2A) + MD32 (sub off 70') + FA Cup R4 (sub on 85') + MD33 (sub off 69') + MD34 (1A, sub off 76') + MD35 (sub off 64') + MD36 (1G) + FA Cup R5 (1G, 90', 6.7) + MD37 (1G, MoM, 7.6, sub off 48') + MD38 (1G, 11', 7.4, subbed off 63') + MD39 (6.4) + MD40 (6.2, sub) + FA Cup R6 (1G, 15', 6.6, subbed off 79') + MD41 (subbed off 67' for Amrizi, rating not captured, trophy lift) + MD42 (5.8, ST, subbed off 68' for Amrizi) + MD43 (MoM, 2G 1A, 14'/27', 9.1, ST, subbed off 68' for Amrizi) + MD44 (5.8, ST, subbed off 72' for Minda) + MD45 (MoM, hat-trick, 8'/15'/41', subbed off 57' for Amrizi) + MD46 (1G, 39', 7.3, ST, subbed off 65' for Amrizi — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">N. Broadhead</div><div class="s-pos">LW</div></div>
+  <span class="s-num">24</span>
+  <span class="s-num highlight">11</span>
+  <span class="s-num highlight">8</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD28 + MD31 + FA Cup R4 (sub off 85') + MD34 (sub on 76') + MD36 (sub on 73') + MD37 (6.1, sub on 78') + MD38 (5.9, subbed off) + MD40 (5.6) + FA Cup R6 (6.3, sub on 85', missed penalty in shootout) + MD41 (sub on 67', rating not captured, trophy lift) + MD42 (1A, 6.4, sub on 68' for Gómez)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">I. Kaboré</div><div class="s-pos">RB</div></div>
+  <span class="s-num">25</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-rating">7.0</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD10-15 + MD31 (sub off 70') + MD32 + MD33 + MD34 (sub off 76') + MD35 + FA Cup R5 (6.5) + MD43 (6.7, RB, subbed off 68') + MD45 (7.1, RB, subbed off 57' for Amelia) + MD46 (6.3, RB, subbed off 65' for Amelia)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">D. Hyam</div><div class="s-pos">CB</div></div>
+  <span class="s-num">18</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-8 ✓ (unused sub MD9) + MD31 + MD33 (MoM, 7.2) + MD34 (7.3) + MD36 (7.4) + FA Cup R5 (7.1) + MD38 (7.5) + MD40 (6.5, LCB) + FA Cup R6 (7.3, RCB) + MD41 (7.1, RCB, subbed off 67') + MD42 (7.1, RCB, full 90)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. O'Brien</div><div class="s-pos">CM</div></div>
+  <span class="s-num">19</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + FA Cup R4 (1G) + MD33 (1G) + MD37 (6.9, subbed off 78') + MD39 (6.7, subbed off 81') + FA Cup R6 (6.1, sub on 79') + MD43 (6.2, LCM, sub on 68' for Bobadilla)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. Cacace</div><div class="s-pos">LB</div></div>
+  <span class="s-num">28</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + MD31 + MD32 (sub off 70') + FA Cup R4 + MD33 + MD34 (sub off 76') + MD35 (sub off 64') + MD36 (6.9) + FA Cup R5 (6.4) + MD37 (6.2, sub on 78') + MD38 (6.5) + MD39 (6.4) + MD40 (6.3, subbed off 74') + FA Cup R6 (7.2, scored in shootout) + MD41 (6.5, full 90, trophy lift) + MD42 (6.0, LB, full 90) + MD43 (7.1, LB, full 90) + MD44 (7.0, LB, full 90) + MD45 (6.6, LB, full 90) + MD46 (7.4, LB, full 90 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">B. Sheaf</div><div class="s-pos">CDM</div></div>
+  <span class="s-num">29</span>
+  <span class="s-num">0</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓ + MD8-15 (excl. MD12) + MD31 + MD32 + FA Cup R4 (1A, sub off 85') + MD34 + MD35 + MD36 (MoM) + FA Cup R5 (6.4) + MD37 (6.1, sub on 78') + MD38 (6.9) + MD39 (6.1, sub on 81') + FA Cup R6 (OG 61', 5.8, subbed off 79') + MD41 (7.0, full 90, trophy lift) + MD43 (7.0, RCM, full 90) + MD46 (1A, 7.1, RCM, subbed off 65' for Vitális)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Y. Amrizi</div><div class="s-pos">ST · LW</div></div>
+  <span class="s-num">25</span>
+  <span class="s-num highlight">11</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD29 + MD31 + MD32 (sub on 70') + FA Cup R4 (sub on 85') + MD33 (sub on 69') + MD34 (sub on 76') + MD35 (sub on 64') + MD36 (sub on 73') + MD37 (5.8, sub on 48') + MD38 (6.2, sub on 63') + MD40 (1G, 85', 7.1, sub) + FA Cup R6 (6.5, sub on 79', scored in shootout) + MD41 (1G, 90', sub on 67' for Moore, rating not captured, trophy lift) + MD42 (5.9, sub on 68' for Moore) + MD43 (6.0, ST, sub on 68' for Moore) + MD44 (5.8, ST, sub on 72' for Rodríguez) + MD45 (1G, 79', sub on 57' for Moore) + MD46 (sub on 65' for Moore, 6.3 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">G. Thomason</div><div class="s-pos">CM · RM</div></div>
+  <span class="s-num">13</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-3,8-9 ✓ + MD30 + FA Cup R4 (yellow 52') + MD34 (sub on 76') + MD36 (6.9, RB, sub off 73') + MD37 (7.2, RB) + MD39 (6.1, LB) + MD40 (6.0, LB, sub on 74') + MD41 (6.9, RB, yellow 66', subbed off 67') + MD44 (6.7, RCB, full 90)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">C. Doyle</div><div class="s-pos">CB</div></div>
+  <span class="s-num">26</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD31 + MD32 + MD33 (unused sub FA Cup R4) + MD34 + MD35 + MD36 (6.9) + FA Cup R5 (6.5) + MD37 (6.3) + MD38 (6.2) + MD39 (6.7) + FA Cup R6 (6.3, LCB) + MD41 (6.7, LCB, full 90, trophy lift) + MD43 (7.0, LCB, full 90) + MD44 (6.2, LCB, sub on 52' for Cleworth) + MD45 (6.4, LCB, full 90) + MD46 (7.0, LCB, full 90 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">B. Cadamarteri</div><div class="s-pos">ST</div></div>
+  <span class="s-num">13</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7,9 ✓ + MD29-30 (1G) + FA Cup R4 (MoM, 8.5, 2G/1A, sub off 85') + MD37 (5.8, sub on 78', apparent injury 90' — unconfirmed severity) + MD40 (5.7, sub) + MD43 (5.9, RW, sub on 68' for Keillor-Dunn)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. Brunt</div><div class="s-pos">CB</div></div>
+  <span class="s-num">4</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-2,9 ✓ (unused sub MD8) + MD29 (unused sub MD30; sold to NEC Nijmegen 2026-01-31)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">A. Okonkwo</div><div class="s-pos">GK</div></div>
+  <span class="s-num">20</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD31 (sub off 73') + MD32 + MD33 (7.1, unused sub FA Cup R4) + MD34 + MD35 + MD36 (7.1) + FA Cup R5 (6.1) + MD37 (6.2)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Cleworth</div><div class="s-pos">CB</div></div>
+  <span class="s-num">16</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7,9 ✓ (unused sub MD8) + MD32 + FA Cup R4 + MD35 + MD37 (7.1) + MD39 (6.8, RCB) + MD40 (7.0, RCB) + MD41 (6.0, RCB, sub on 67', captain — lifted the Championship trophy post-match) + MD43 (7.0, RCB, full 90) + MD44 (6.3, LCB, injured 29' — broken toe, 3 months, subbed off HT for Doyle)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Z. Vyner</div><div class="s-pos">RB</div></div>
+  <span class="s-num">3</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">7.0</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD39 (7.1, RB) + MD45 (6.9, LCB, full 90) + MD46 (6.6, RCB, full 90 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">G. Dobson</div><div class="s-pos">CM</div></div>
+  <span class="s-num">14</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD12-15 + FA Cup R4 (sub on 85'); unused sub MD33 + MD39 (6.6)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">J. Windass</div><div class="s-pos">CAM · CM</div></div>
+  <span class="s-num">20</span>
+  <span class="s-num highlight">6</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + MD31 (sub on 70') + FA Cup R4 (sub off 85') + MD34 (sub on 76') + MD38 (5.9, sub on 76') + MD39 (6.2, sub on 74') + MD40 (6.2, LCM) + FA Cup R6 (6.8, sub on 79', scored in shootout)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">R. Longman</div><div class="s-pos">RW · RB</div></div>
+  <span class="s-num">3</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">O. Rathbone</div><div class="s-pos">CM</div></div>
+  <span class="s-num">8</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.2</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">J. Amelia</div><div class="s-pos">RB · LB</div></div>
+  <span class="s-num">18</span>
+  <span class="s-num">0</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD29 (sub) + MD30 (1A) + MD31 (sub on 70'); MoM MD27 + MD32 (sub on 70') + FA Cup R4 (yellow 85') + MD34 (sub on 76') + MD35 (sub on 64') + MD36 (6.8, sub on 73') + MD37 (6.4, LB) + MD38 (7.2, RB, starting in place of injured Kaboré) + MD40 (6.7, RB) + FA Cup R6 (6.8, RB) + MD41 (6.6, RB, sub on 67', trophy lift) + MD42 (7.5, RB, full 90, best outfield rating) + MD43 (6.3, RB, sub on 68' for Kaboré) + MD44 (6.7, RB, full 90) + MD45 (7.3, RB, sub on 57' for Kaboré) + MD46 (sub on 65' for Kaboré, 6.3 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">A. James</div><div class="s-pos">CB</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 (yellow 57') + FA Cup R4</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">D. Ward</div><div class="s-pos">GK</div></div>
+  <span class="s-num">7</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 (sub on 73') + FA Cup R4 (started); unused sub MD33 + MD38 (7.6, started) + FA Cup R6 (6.9, started) + MD41 (6.3, started, trophy lift) + MD43 (5.5, started) + MD45 (7.7, started)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Webber</div><div class="s-pos">GK</div></div>
+  <span class="s-num">5</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD39 debut (6.8, clean sheet) + MD40 (6.3, clean sheet) + MD42 (7.7, clean sheet) + MD44 (6.2, started) + MD46 (6.0, GK, full 90 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Andrés Gómez</div><div class="s-pos">RM · RW</div></div>
+  <span class="s-num">14</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-num highlight">6</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 debut (1G/1A) + MD31 (1A, sub off 70') + MD32 (1G) + MD33; unused sub FA Cup R4 + MD34 (sub off 76') + MD35 (1A) + MD36 (6.3) + FA Cup R5 (1A, 6.0) + MD37 (1A, 7.3, subbed off 78') + MD38 (6.4) + MD40 (1G/1A, 66', 7.3, RW) + FA Cup R6 (6.0, subbed off 85') + MD41 (1G, 23', full 90, rating not captured, trophy lift) + MD42 (5.8, RW, picked up a knock ~40', subbed off 68' for Broadhead)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Brian Gutiérrez</div><div class="s-pos">CAM · CM · LM</div></div>
+  <span class="s-num">17</span>
+  <span class="s-num highlight">5</span>
+  <span class="s-num highlight">7</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 debut + MD31 (1G, sub off 70') + MD32 (1G) + MD33 + MD34 (1A, sub off 76') + MD35 (1G) + MD36 (6.4, sub off 73') + FA Cup R5 (1G/1A, 32', 7.5) + MD37 (1A, 7.1, subbed off 78') + MD38 (1A, 6.3, subbed off 76') + MD40 (MoM, 1G, 69', 8.3, LCM) + FA Cup R6 (6.1, subbed off 79') + MD41 (subbed off 67' for Ortega, rating not captured, trophy lift) + MD42 (6.3, RCM, full 90) + MD43 (1A, 6.7, CAM, subbed off 68' for Ortega) + MD45 (subbed off 57' for Ortega, rating not captured) + MD46 (2A, 7.9, CAM, subbed off 65' for Ortega — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Damián Bobadilla</div><div class="s-pos">CM · CDM</div></div>
+  <span class="s-num">17</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">MD31 debut (1G) + MD32 (1A) + MD33 + MD34 + MD35 + MD36 (6.6) + FA Cup R5 (1G, 65', 6.8) + MD37 (6.9, CDM) + MD38 (6.4, CM) + MD40 (7.0, RCM) + FA Cup R6 (7.1, LCM, scored in shootout) + MD41 (MoM, 1G, 59', full 90, rating not captured, trophy lift) + MD42 (6.8, LCM, full 90) + MD43 (7.2, LCM, subbed off 68' for O'Brien) + MD44 (6.7, LCM, full 90) + MD45 (started, rating not captured) + MD46 (MoM, 1G/1A, 49', 8.3, LCM, full 90 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Milán Vitális</div><div class="s-pos">CM · CDM</div></div>
+  <span class="s-num">3</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Signed as a free agent 2026-04-18. MD44 debut (6.5, RCM, full 90) + MD45 (7.1, RCM, full 90) + MD46 (1G, 83', 7.1, RCM, sub on 65' for Sheaf — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Vladyslav Veleten</div><div class="s-pos">RW · RM</div></div>
+  <span class="s-num">3</span>
+  <span class="s-num">0</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-rating">6.3</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Signed as a free agent 2026-04-18. MD44 debut (6.2, RW, full 90) + MD45 (3A, started, rating not captured) + MD46 (sub on 65' for Rodríguez, 6.6 — season finale)</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Alan Minda</div><div class="s-pos">ST · RM · CAM</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num">0</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-mins" style="color:var(--dispatch-blue)">Signed as a free agent 2026-04-18. MD44 debut (6.0, CAM, sub on 72' for Moore) + MD46 (1G, 53', 7.0, RW, full 90 — season finale)</span>
+</div>
+
+<div class="data-note">
+  <strong>Goals reconciled from the match log through MD33 (Ipswich, Feb 21) + FA Cup R4 (Notts County, Feb 14)</strong> — senior matches (Championship + Carabao Cup + FA Cup). Moore 27, Rodríguez 16, Broadhead 11, Amrizi 8, Keillor-Dunn 7, Windass 6, Dobson 3, O'Brien 4, Cadamarteri 4, Gutiérrez 2, Bobadilla 1, Gómez 2, Kaboré 1, Cacace 1 (Keillor-Dunn and Windass each include one Carabao Cup goal; Moore, Rodríguez and Broadhead each include one FA Cup goal vs Leicester; O'Brien and Cadamarteri each include FA Cup R4 goals vs Notts County). Apps for MD32–33 and FA Cup R4 added for every player who featured, including the heavily-rotated Notts County lineup; assists updated where confirmed. Apps/assists for MD16–27 remain pending full screenshot reconciliation. Notts County's second goal (2–3) — only J. Jones' 33' strike is confirmed from screenshots; the second scorer/time is unconfirmed. <strong>MD12 note: D. Ward started in goal (not Okonkwo).</strong> Andrés Gómez and Brian Gutiérrez signed as free agents 2026-01-31 and debuted the same day vs Sheffield Wed. Damián Bobadilla signed as a free agent 2026-02-07 and scored on debut vs Millwall the same day.
+</div>
+
+
+<div class="footer">
+  <span class="footer-brand">Season Stats — Season 1 Archive</span>
+  <span class="footer-note">Wrexham AFC · FC26 Career Mode · 2025&ndash;26 &middot; Champions</span>
+</div>
+</div><!-- /page-wrap -->
+
+</body>
+</html>

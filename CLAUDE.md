@@ -15,8 +15,8 @@ When a session opens, silently load the context below. Do not summarize it back 
 
 | File | Purpose |
 |------|---------|
-| `wrexham_squad.csv` | Source of truth for all first-team squad players (53 columns) |
-| `youth_academy.csv` | Academy players — same 53-column schema; promoted players move to `wrexham_squad.csv` |
+| `wrexham_squad.csv` | Source of truth for all first-team squad players (54 columns) |
+| `youth_academy.csv` | Academy players — same 54-column schema; promoted players move to `wrexham_squad.csv` |
 | `season_log.json` | Structured record of matches, transfers, injuries, milestones |
 | `docs/index.html` | Season hub (GitHub Pages root) |
 | `docs/journal.html` | Match journal — "The Red Dragon Chronicles" |
@@ -72,10 +72,12 @@ Always work on: `claude/wrexham-fc26-career-dx9xgx`
 14 Passing          32 Crossing        50 Roles
 15 Dribbling        33 Curve           51 Development_Plan
 16 Defending        34 Def_Aware       52 Notes
-17 Physical         35 Dribbling_Tech
+17 Physical         35 Dribbling_Tech  53 Potential
 ```
 
 **GK mapping (cols 12–17):** Pace=Speed, Shooting=Kicking, Passing=Positioning, Dribbling=Reflexes, Defending=Handling, Physical=Diving. GKs have blank cols 31–46 (outfield Technical).
+
+**Potential (col 53):** range string, e.g. `78-84`. Blank for players with no known potential range. This is a real column, not text embedded in `Notes` — never write `POT XX-XX` back into `Notes`. **When promoting a player from `youth_academy.csv` to `wrexham_squad.csv`, always carry this column's value across in the same session** — it has no other source and is easy to drop silently (it was buried in free-text `Notes` and got dropped on every promotion until 2026-07-22, when it was pulled out into this dedicated column).
 
 **Python write pattern (always use this):**
 ```python
@@ -253,6 +255,6 @@ Trigger: the user confirms the in-game season is over (final league position kno
 - Never fabricate stats, scores, signings, or events from screenshots not yet provided
 - Never edit the old root-level HTML files
 - Always commit on the designated branch
-- CSV must always have exactly 53 fields per row — run a gap check after any bulk edit
+- CSV must always have exactly 54 fields per row — run a gap check after any bulk edit
 - Height values like `6'1"` are stored with CSV quoting — always use the Python csv module, never manual string writes
 - Every confirmed signing or departure must be reflected across all squad-facing pages in the same session — see "Squad Changes — Keep All Pages in Sync" above. Do not update `wrexham_squad.csv` alone and leave `roster.html`/`depth_chart.html` stale.

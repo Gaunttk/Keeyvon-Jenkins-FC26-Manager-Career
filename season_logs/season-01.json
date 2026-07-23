@@ -1,0 +1,1190 @@
+{
+  "_meta": {
+    "club": "Wrexham AFC",
+    "manager": "Keeyvon Jenkins",
+    "game": "FC26 Career Mode",
+    "season": "2025-26",
+    "competition": "EFL Championship",
+    "last_updated": "2026-05-02"
+  },
+  "matches": [
+    {
+      "date": "2025-07-01",
+      "opponent": "Hull City",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Quarter-Final",
+      "notes": "Lord (2). MoM: Gassner GK. Neutral venue.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-07-18",
+      "opponent": "Bradford City",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Group Stage",
+      "notes": "Broadhead (2), Cadamarteri, Moore. Neutral venue.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-07-19",
+      "opponent": "Millwall",
+      "home": false,
+      "score": "3-2 AET",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi-Final",
+      "notes": "Lord (2), Horne. Won in extra time. Neutral venue.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-07-22",
+      "opponent": "AD Ceuta FC",
+      "home": false,
+      "score": "5-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Group Stage",
+      "notes": "Keillor-Dunn (2), Moore (1G/3A MoM), Cadamarteri, O'Brien. Played in Madrid.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-08-09",
+      "opponent": "Southampton",
+      "home": false,
+      "score": "4-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Keillor-Dunn 9'/44' (2G/1A, 8.4), Moore 25'/62' (2G, 8.2), Broadhead 3A (7.8 PotM). Larin 49' consolation. Subs: Cadamarteri for Kaboré 80', Dobson for Hyam 80'. Shots 7-10 (WRX-SOU), xG 4.8–1.6, poss 42-58%, passes 128-200 (87-93% accuracy), shot accuracy 86-40%, tackles 27-25, interceptions 12-7, saves 3-2, dribble success 84-93%.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-08-12",
+      "opponent": "Preston North End",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "round": "Round 1",
+      "notes": "Keillor-Dunn 19', Windass 35'. Subs: Jebbison for M. Smith 60', Osmajić/Longman for Luković/Broadhead 69', Rathbone for Windass 83', Dobson for Sheaf 85'. MoM: Kaboré 7.4 (1A, 16 interceptions). Clean sheet. Shots 7-2 (WRX-PNE), xG 3.6–0.6, poss 44-56%, passes 132-156 (88-87% accuracy), shot accuracy 57-0%, tackles 27-19, interceptions 16-11, saves 0-2.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-08-13",
+      "opponent": "West Brom",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Broadhead 2'/16', Moore 11'. Heggebø 75' (West Brom). Hyam yellow 38'. Cleworth for Hyam 45'. Subs 76': Longman for Kaboré, Smith for Broadhead, Cadamarteri for Moore, Dobson for Sheaf. Johnston for Diakité (WBA) 86'. MoM: C. Styles (West Brom). Shots 8-4, xG 3.9-1.7, poss 38-62%, passes 121-224 (83-89% accuracy), shot accuracy 63-50%, tackles 21-22, interceptions 20-11.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-08-20",
+      "opponent": "Sheffield Wed",
+      "home": true,
+      "score": "1-1",
+      "result": "D",
+      "competition": "EFL Championship",
+      "notes": "Keillor-Dunn 65'. J. Yates 72' (Sheff Wed). Subs: Amrizi for Broadhead 72' (debut), Cadamarteri for Moore 72', Dobson for Sheaf 72', Rathbone for Windass 79', Thomason for Kaboré 88'. MoM: B. Sheaf (Wrexham, 7.5). Shots 8-13, xG 2.8-1.4, poss 57-43%, passes 177-136 (84-83% accuracy), shot accuracy 63-46%, tackles 19-15 (37-40% TSR), interceptions 17-22.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-08-27",
+      "opponent": "Blackburn Rovers",
+      "home": true,
+      "score": "1-0",
+      "result": "L",
+      "competition": "Carabao Cup",
+      "round": "Round 2",
+      "notes": "Carabao Cup exit at Round 2. Blackburn scored the only goal. One shot — could not break down Blackburn's final defensive line. MoM: I. Kaboré (WRX).",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-08-30",
+      "opponent": "Millwall",
+      "home": false,
+      "score": "0-2",
+      "result": "L",
+      "competition": "EFL Championship",
+      "notes": "F. Azeez 33' (yellow 43'), M. Ivanović 90' (both Millwall). No Wrexham goals — one shot on target from 4 attempts. Subs: Amrizi for Broadhead 78', Rathbone for Windass 83', Cadamarteri for Moore 86'. Millwall subs: Smallbone/Mazou-Sacko 67', Ivanović/Coburn 75', Bryan/McNamara 78'. Shots 10-4 (MIL-WRX), xG 3.4-0.5, poss 60-40%, passes 195-137 (90-82% accuracy), tackles 26-10, interceptions 15-13, saves 2-3.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-09-07",
+      "opponent": "Queens Park Rangers",
+      "home": true,
+      "score": "4-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "JL Rodriguez 23'/29' (2G/1A, 9.6 debut), K. Moore 35' (7.7), D. Keillor-Dunn 68' (7.8 PotM, on 62' for Broadhead). Subs 71': Amrizi for Rodriguez, Cadamarteri for Moore, Dobson for Windass, Cleworth for Doyle. L. O'Brien 2A (7.4). Broadhead 1A (7.1). Okonkwo GK 100% save rate. Shots 11-4, xG 4.0-0.7, poss 43-57%, passes 145-167 (81-87% acc), shot acc 91-25%, dribble success 94-86%, tackles 26-15 (13-5 won), interceptions 11-11. QPR yellows: Madsen 53', Dunne 61'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-09-20",
+      "opponent": "Norwich City",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 14' (assist N. Broadhead), Y. Amrizi 76' (assist I. Kaboré, sub on 69' for Broadhead), G. Dobson 89' (assist Amrizi, sub on 69' for L. O'Brien). MoM: Y. Amrizi (8.3, 1G 1A). Subs 69': Amrizi for Broadhead, Dobson for O'Brien, Rathbone for Sheaf. Norwich had 66% possession and 245 passes to Wrexham's 126, but Wrexham were clinical — 3 goals from 6 shots. L. Gibbs (NOR) yellow 69'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-09-27",
+      "opponent": "Derby County",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "D. Keillor-Dunn 13', J.L. Rodríguez 26' (1A), I. Kaboré 54' (1A, exceptional near-post header — his standout moment of the season so far). MoM: A. Okonkwo (GK, clean sheet, 4 saves incl. a penalty-goal-conceded aside — save success 67%). Subs 65': Amrizi for Rodríguez, Cadamarteri for Moore, Rathbone for O'Brien, Brunt for Hyam. 83': Cacace for Kaboré. O. Rathbone yellow 89'. Clean sheet at the Racecourse.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-09-28",
+      "opponent": "Leicester City",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "J. Windass 31', K. Moore 57' (MoM, 7.9), J.L. Rodríguez 88'. Assists shared among Rodríguez, Keillor-Dunn and Broadhead (1 each, exact pairing not confirmed from screenshots). Subs: Rathbone for Windass 67', Dobson for Sheaf 75', Amrizi for Moore 82'. D. Hyam and B. Nelson (LEI) yellow cards 7'/10'. Shots 13-2 (WRX-LEI), xG 4.4-0.0, poss 42-58%, passes 128-206 (92-92% accuracy), tackles 22-20, interceptions 14-5, saves 0-3, corners 4-0. Clean sheet away from home — controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-10-04",
+      "opponent": "Birmingham City",
+      "home": true,
+      "score": "4-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "N. Broadhead 12', J.L. Rodríguez 23'/63' (brace, MoM 8.4), B. Cadamarteri 88' (assist D. Keillor-Dunn — an outrageous backheel through-ball). K. Moore 2A (7.4). Birmingham replied through K. Fujimoto 29' and C. Klarer 45' to level 2-2 before Wrexham pulled away. K. Wagner (BIR) yellow 44'. Subs 67': Dobson for Sheaf. 75': T. Doyle (BIR) for Fujimoto. 79': Cadamarteri for Kaboré, Rathbone for Moore, Cleworth for C. Doyle, Cacace for O'Brien. Shots 10-12 (WRX-BIR), xG 5.6-2.8, poss 43-57%, passes 137-191 (91-97% accuracy), tackles 27-20, interceptions 5-8, saves 6-3, corners 0-3. Dominant control despite a couple of defensive lapses — never in doubt.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-10-18",
+      "opponent": "Stoke City",
+      "home": false,
+      "score": "4-1",
+      "result": "L",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 16'. Stoke: S. Thomas 61', L. Cissé 74', A. Phillips 87', M. Manhoef 90'. D. Hyam yellow 67' → Cleworth on immediately. Subs (WRX): Cleworth for Hyam 67', Amrizi for Broadhead 77'. Stoke subs: Manhoef for Rak-Sakyi 62', Rigo for Seko 67', Pearson for Baker 82'. Okonkwo 5.2 (season-low). Doyle 7.2 (best on night). Shots 7-5 (STO-WRX), xG 3.4-1.2, poss 52-48%, passes 162-168 (89-86% acc), shot acc 86-80%, tackles 11-24, beaten by opp 2-11, def line breaks through 6-2, tackle success 55-33%. Wrexham led 1-0 at halftime. Four goals conceded in second half.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-10-22",
+      "opponent": "Oxford United",
+      "home": true,
+      "score": "0-0",
+      "result": "D",
+      "competition": "EFL Championship",
+      "notes": "Kaboré yellow 21', subbed off 70' (Thomason on). WRX subs: Broadhead for Windass 70', Thomason for Kaboré 70', Amrizi for Moore 78'. OXF subs: Płacheta for Emakhu 70', Harris for Lankshear 78', Peart-Harris for Jeon Jin Woo 89'. Lineup: Okonkwo (GK), Kaboré (RB, 7.9 MoM), Hyam (RCB, 7.6), Doyle (LCB, 7.1), Cacace (LB, 7.5), O'Brien (LCM, 7.3), Sheaf (RCM, 6.5), Windass (CAM, 7.1), Keillor-Dunn (CAM, 6.6), Rodríguez (LW, 6.4 PotM), Moore (ST, 5.7). Shots 6-8 (WRX-OXF), xG 1.8-1.2, poss 57-43%, passes 207-106 (85-87% acc), interceptions 10-22, saves 4-4, tackle success 38-38%.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-10-25",
+      "opponent": "Middlesbrough",
+      "home": false,
+      "score": "0-2",
+      "result": "L",
+      "competition": "EFL Championship",
+      "notes": "T. Conway 60'/80' (brace, both second-half). 0-0 at HT. WRX lineup: Ward (GK), Kaboré (RB), Hyam (RCB), Doyle (LCB), Cacace (LB), Rathbone (LCM), Dobson (RCM), Windass (CAM), Broadhead (RW), Moore (ST), Rodríguez (LW). WRX subs: Keillor-Dunn for Broadhead 78', Amrizi for Moore 87'. MBO subs: Hansen for Castledine 53', Browne for Sarmiento 67', Sène for Whittaker 78'. Best WRX ratings: Kaboré 7.0, Hyam 7.0, Rathbone 6.7, Dobson 6.6, Windass 6.5, Cacace 6.5, Ward 6.4. Shots 11-3 (MBO-WRX), xG 2.9-0.6, poss 57-43%, passes 186-144 (90-83% acc), interceptions 19-12, saves 1-6, tackle success 54-17%, beaten by opp 4-11.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-01",
+      "opponent": "Coventry City",
+      "home": true,
+      "score": "3-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore hat-trick (4'/45'/74') — POTM 8.5. Coventry: Thomas-Asante 16', Wright 21'. Assists: Kaboré (1), Windass (1), Broadhead (1). Windass missed penalty 61'. Broadhead yellow 90'. Sub in: V. Torp on for Wright 60' (COV), R. Esse on for Sakamoto 90' (COV). Stats: poss 40-60, shots 6-5, xG 3.2-1.2, passes 136-231 (89-94% acc), 2 saves each.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-02",
+      "opponent": "Blackburn Rovers",
+      "home": false,
+      "score": "1-8",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "QTR",
+      "notes": "Lord 3'/28' (2G), Bianchi 14', Vargas 23', Ortega 33', Matthews 34'/37'/44' (hat trick as sub). Atkinson (BLK) 20'. Subs 33': Martini on (Bianchi), Dijkgraaf on (Vargas), Horne on (Ortega), Matthews on (Lord). MoM: Dijkgraaf 10.0. Ratings: Matthews 10.0 (3G), Horne 8.6, Martini 9.3, Webber 7.5. Shots 17-6, xG 12.4-2.3, poss 58-42%, on target 13-3, shot acc 76-50%.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-02",
+      "opponent": "West Bromwich Albion",
+      "home": true,
+      "score": "0-9",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi Final",
+      "notes": "Lord, Ortega, Bianchi, Vargas, Dijkgraaf, Matthews (2), Martini, Horne. MoM: Dijkgraaf.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-02",
+      "opponent": "Birmingham City",
+      "home": true,
+      "score": "0-11",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Vargas (2), Ortega, Bianchi, Lord, Matthews (3), Martini, Dijkgraaf, Horne. MoM: Horne (1G 3A). Ratings: Matthews 10.0 (3G), Horne 10.0 (1G 2A), Martini 10.0 (1G 1A), Dijkgraaf 9.9 (1G), Ortega 8.8 (1G 2A), Bianchi 8.3 (1G 1A), Lord 7.7 (1G 2A), Vargas 7.4 (2G), Webber 7.1. Team xG: 8.0 from 23 shots (61% accuracy), pass acc 92%, dribble success 95%, tackle success 100%.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-05",
+      "opponent": "Portsmouth",
+      "home": false,
+      "score": "0-5",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Windass 18', O'Brien 21', Moore 59', Broadhead 76'/87' (brace). Z. Swanson (POR) red card 36'. Subs (WRX) 73': Cadamarteri for Moore, Amrizi for Windass, Dobson for O'Brien, Cleworth for Doyle, Brunt for Hyam. Murphy on for Alli (POR) 79'. C. Chaplin (POR) yellow 90'. PotM: J. Rodríguez 7.6. Ratings: Moore 8.3, Cadamarteri 8.0, Broadhead 7.8, O'Brien 7.3, Kaboré 7.3, Okonkwo 7.1, Hyam 6.9, Doyle 6.9, Windass 6.8, Cacace 6.8, Dobson 6.7, Cleworth 6.7, Brunt 6.7, Sheaf 6.6, Amrizi 6.6. Shots 2-20 (POR-WRX), xG 0.6-8.0, poss 57-43%, passes 195-122 (90-85% acc), tackles 20-22 (50-23% success), interceptions 15-12, saves 8-1. Portsmouth down to 10 men from 36'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-08",
+      "opponent": "Charlton Athletic",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "N. Broadhead 19', C. Kelman 54' (CHA), K. Moore 79', G. Dobson 89' (off bench, 3 min after coming on). I. Kaboré yellow 16'. Charlton sub: C. Coventry for Z. Mitchell 75'. WRX subs 86': Cadamarteri for Moore, Amrizi for Broadhead, Rathbone for O'Brien, Dobson for Sheaf. Lineup: Okonkwo (GK), Kaboré (RB, 7.3), Hyam (RCB, 7.2), Doyle (LCB, 6.3), Cacace (LB, 7.1), O'Brien (LCM, 6.6), Sheaf (RCM, 7.3, 1A), Windass (CAM, 6.6, 1A), Rodríguez (LW, 7.0), Broadhead (RW, 6.5, 1G), Moore (ST, 7.0, 1G). Subs: Cadamarteri 5.9, Amrizi 6.1, Rathbone 6.2, Dobson 6.6 (1G). Shots 9-4 (WRX-CHA), xG 2.0-1.8, poss 39-61%, passes 131-213 (85-91% acc), tackles 21-6 (7-4 won, 33-67% success), interceptions 11-14, saves 1-4, shot acc 78-50%, dribble success 89-97%, corners 2-0, yellow cards 1-0.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-22",
+      "opponent": "Ipswich",
+      "home": false,
+      "score": "1-0",
+      "result": "L",
+      "competition": "EFL Championship",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-26",
+      "opponent": "Bristol City",
+      "home": true,
+      "score": "2-2",
+      "result": "D",
+      "competition": "EFL Championship",
+      "notes": "Windass 58', Moore 78'. Led twice, couldn't hold either lead.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-11-29",
+      "opponent": "Blackburn Rovers",
+      "home": true,
+      "score": "0-3",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Broadhead 18', JL Rodriguez 55', O'Brien 62'. MoM: O'Brien. Controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-06",
+      "opponent": "Preston",
+      "home": false,
+      "score": "3-4",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Moore 16', Broadhead 66', JL Rodriguez 83', Amrizi 93'. Miraculous comeback.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-11",
+      "opponent": "Hull City",
+      "home": false,
+      "score": "2-2",
+      "result": "D",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 20', Y. Amrizi 84' (sub on 65' for Moore). O. McBurnie 31' (HUL); Hull's second goal a stoppage-time penalty (scorer unconfirmed) — Wrexham conceded a penalty (0 committed by HUL, 1 by WRX). D. Hyam yellow 75'. WRX subs: Amrizi for Moore 65', Keillor-Dunn for Broadhead 65', Dobson for Windass 88'. J. Windass best-rated on the pitch (7.3, 1A) — no MoM badge confirmed. Shots 7-12 (HUL-WRX), xG 4.3-4.7, poss 56-44%/57-43%, passes 189-143 (89-86% acc), tackles 13-13 (38-23% success), interceptions 13-12, saves 9-3. Wrexham 2nd in Championship (P20 W12 D4 L4, GF48 GA25, 40 pts), 8 points behind Ipswich.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-13",
+      "opponent": "Watford",
+      "home": true,
+      "score": "3-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Y. Amrizi 75', J. Windass 82', N. Broadhead 90+4' — three goals in the closing stages to complete the comeback. C. Doyle yellow 30', then a straight red 51' (Wrexham conceded a penalty in the same passage — 1 penalty committed by WRX, converted by Watford). Wrexham played the remainder a man down. L. Kjerrumgaard 88' for Watford (their other goal, presumably the penalty, unconfirmed scorer/time). Subs: Y. Amrizi for B. Sheaf 66', M. Cleworth for K. Moore 66'. Shots 3-8 (WRX-WAT), xG 1.4-3.1, poss 40-60%, passes 128-224 (89-94% acc), tackles 9-18. Doyle given a 1-match ban for the red card. What a game.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-20",
+      "opponent": "Swansea City",
+      "home": false,
+      "score": "1-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Eom Ji Sung 34' (SWA). J. Windass 88', Y. Amrizi 90' (sub on 80' for K. Moore; J. Amelia also on 80' for B. Sheaf). J. Windass best-rated on the pitch (7.5, 1G) — no MoM badge confirmed; I. Kaboré next-best (7.3). Shots 4-13 (SWA-WRX), xG 1.1-3.4, poss 57-43%, passes 225-123 (93-89% acc), tackles 15-30, interceptions 11-14, saves 4-2. Wrexham 2nd in Championship (P22 W14 D4 L4, GF53 GA28, 46 pts), 8 points behind Ipswich.",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-26",
+      "opponent": "Sheffield Utd",
+      "home": true,
+      "score": "4-3",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "C. Ogbene 14' (SHU); K. Moore 40'/51' brace (assists: N. Broadhead x2); 3rd SHU goal — scorer/minute unconfirmed; A. Matos 69' (SHU); J. Rodríguez 75' (assist: Y. Amrizi); Y. Amrizi 84' (assist: J. Windass). SHU sub: H. Burrows for L. Hjelde 73'. Best rated: L. Cacace 7.5, N. Broadhead 7.4 (2A), K. Moore 7.2 (2G), Y. Amrizi 7.2 (1G 1A), C. Doyle 7.1, L. O'Brien 6.9; A. Okonkwo 5.6 (GK, season-low). Shots 8-10 (WRX-SHU), xG 2.8-2.9, poss 35-65%, passes 128-259 (86-95% acc), tackles 17-11, interceptions 11-13, saves 3-3. Wrexham 2nd in Championship (P23 W15 D4 L4, GF57 GA31, 49 pts), 5 points behind Ipswich (54).",
+      "journal_entry": true
+    },
+    {
+      "date": "2025-12-29",
+      "opponent": "Preston",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "L. O'Brien red card 6' (Wrexham played 84 mins with 10 men). N. Broadhead 12', J. Storey OG 17' (PNE), L. Cacace 34' (assist: K. Moore). HT 3-0. A. Devine 70' (PNE). WRX subs 83': Y. Amrizi for J. Rodríguez, B. Cadamarteri for K. Moore, D. Keillor-Dunn for N. Broadhead, G. Dobson for B. Sheaf, L. Brunt for C. Doyle. PNE sub: C. Lang for M. Osmajić 88'. PotM: J. Amelia 7.8 (LB, stepped up after O'Brien red). Other ratings: C. Doyle 7.4, J. Rodríguez 7.2, M. Cleworth 7.2, I. Kaboré 6.8, N. Broadhead 6.9 (1G), K. Moore 6.6 (1A), L. Cacace 7.4 (1G). Shots 13-2 (WRX-PRE), xG 4.9-0.7, poss 49-51%, passes 161-170 (91-94% acc), saves 1-6, red cards 1-0 (WRX). Wrexham 2nd in Championship (P24 W16 D4 L4, GF60 GA32, 52 pts), 3 points behind Ipswich (55).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-01",
+      "opponent": "Blackburn Rovers",
+      "home": true,
+      "score": "0-8",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "QTR",
+      "notes": "Ortega (2), Lord, Matthews, Martini (3), Dijkgraaf. MoM: Dijkgraaf 10.0 (2A). Also: Matthews 10.0 (2A), Martini 10.0 (3G), Webber 9.6 (GK). New Youth Academy Rush Tournament — not a continuation of the Nov 2025 sweep.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-04",
+      "opponent": "Derby County",
+      "home": false,
+      "score": "0-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 67'/72' (brace, 7.7, MoM/PotM). J. Rodríguez 6.6 (0G 1A). B. Sheaf 1A (7.2). J. Windass 7.5. Lineup: Okonkwo (GK, 6.9), Kaboré (RB, 6.8), Hyam (RCB, 6.9), Doyle (LCB, 7.2), Cacace (LB, 6.4), O'Brien (LCM, 6.9), Sheaf (RCM, 7.2 1A), Windass (CAM, 7.5), Rodríguez (LW, 6.6 PotM 1A), Broadhead (RW, 6.5), Moore (ST, 7.7 2G). Subs 77': Cadamarteri for Moore, Amrizi for Broadhead, Dobson for Windass, Brunt for Hyam, Amelia for Kaboré. Sub ratings: Cadamarteri 5.6, Amrizi 5.9, Dobson 5.9, Brunt 6.8, Amelia 6.2. Derby sub: Szmodics for Murkin 89'. Shots 4-8 (DER-WRX), xG 1.1-4.0, poss 56-44%, passes 190-151 (86-86% acc), tackles 10-17 (60-29% success), interceptions 14-14, saves 2-3, corners 2-3, def duels won 14-20, beaten by opp 5-9. No cards. Wrexham 2nd (P26 W18 D4 L4, GF68 GA33 GD35, 58 pts), 1 point behind Ipswich (59).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-01",
+      "opponent": "Blackburn Rovers",
+      "home": true,
+      "score": "1-6",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Moore 7', J. Rodríguez 22'/34' (brace, HT 3-0), Y. Ohashi 48' (BLK), Moore 67', Amrizi 85' (sub on 68'), Keillor-Dunn 90' (sub on 68'). PotM: J. Rodríguez 9.6 (2G 2A). Subs 68': Amrizi for Moore, Keillor-Dunn for Broadhead, Cadamarteri for Windass, Cleworth for Hyam, Amelia for Kaboré. Lineup: Okonkwo (GK), Kaboré (RB), Doyle (LCB), Cleworth (RCB), Cacace (LB), Sheaf (RCM, 7.1), Dobson (LCM, 7.1), Windass (CAM, 7.0, 1A), Rodríguez (LW, 9.6, 2G 2A), Broadhead (RW, 7.7, 2A), Moore (ST, 8.2, 2G). Sub ratings: Amrizi 7.1 (1G), Keillor-Dunn 7.8 (1G), Cadamarteri 5.6, Cleworth 6.8, Amelia n/a. Cacace 6.9 (1A). Shots 3-12 (BLK-WRX), passes 183-141 (86-85% acc), interceptions 15-20, dribble success 95-94%, tackle success 67-27%, saves 0-2. Yellow: 1 (BLK). Wrexham 2nd in Championship (P25 W17 D4 L4, GF66 GA33, 55 pts), 1 point behind Ipswich (56).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-04",
+      "opponent": "Leicester City",
+      "home": false,
+      "score": "0-3",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Round 3",
+      "notes": "JL Rodriguez 10', Broadhead 45', Moore 78'. MoM: Moore. Controlled from start to finish. Next round: Notts County, Feb 14.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-17",
+      "opponent": "Norwich",
+      "home": true,
+      "score": "0-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "JL Rodriguez 65'. MoM: J. Amelia (RB, 7.5). Comfortable. Shots 10-5 (WRX-NOR), poss 41-59%, passes 127-237 (87-92% acc), tackles 2-5. Wrexham 1st in Championship (P27 W19 D4 L4, GF69 GA33, 61 pts), 1 point ahead of Ipswich — first time top of the table all season.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-20",
+      "opponent": "Leicester City",
+      "home": true,
+      "score": "4-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "J. Rodríguez 38', 78'; K. Moore 45', 65' (Wrexham). J. Ayew 28' (Leicester). MoM: J. Rodríguez (7.8, 2G).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-24",
+      "opponent": "Queens Park Rangers",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Y. Amrizi 58', K. Moore 68' (Wrexham); R. Burrell 61' (QPR). Subs 76': Keillor-Dunn for Amrizi, Cadamarteri for Moore, Dobson for Sheaf, Amelia for Cacace, Brunt for Hyam. Shots 8-5 (WRX-QPR), xG 2.5-1.3, poss 42-58%, passes 145-213 (83-87% acc), tackles 30-8, interceptions 23-17, saves 2-3. Passing needs to improve — defenders too easily beaten, diving in too often.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-31",
+      "opponent": "Sheffield Wed",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 19', A. Gómez 69' (debut, MoM 7.8, 1G/1A), B. Cadamarteri 81'. A. James (SHW) yellow 57'. Subs 73': Ward for Okonkwo, Cadamarteri for Moore, Amrizi for Rodríguez, Thomason for Cacace, Cleworth for Doyle. N. Chalobah (SHW) yellow 90'. Shots 12-5 (WRX-SHW), xG 2.4-0.7, poss 45-55%, passes 122-176 (84-88% acc), tackles 19-12, interceptions 15-15, saves 2-4. MoM: J. Rodríguez (7.1, 1A) per in-game award, despite Gómez's higher 7.8 rating.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-07",
+      "opponent": "Millwall",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "B. Gutiérrez 36' (debut goal), K. Moore 45' (MoM, 9.1, 1G/2A), D. Bobadilla 65' (debut goal). Subs: 52' C. Neghli on for J. Bryan (MIL). 62' M. Ivanović on for J. Coburn (MIL). 70': D. Keillor-Dunn for A. Gómez, J. Windass for B. Gutiérrez, J. Amelia for I. Kaboré (WRX). 85': B. Bannan on for W. Smallbone (MIL). Controlled from start to finish. Shots 13-4 (WRX-MIL), xG 5.3-1.4, poss 43-57%, passes 134-195 (82-89% acc), tackles 11-25, interceptions 19-15, saves 3-6, corners 6-1, offsides 3-0, fouls 0-1. Wrexham 1st in Championship (P31 W23 D4 L4, GF81 GA35, GD+46, 73 pts), next opponent Bristol City.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-10",
+      "opponent": "Bristol City",
+      "home": false,
+      "score": "3-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "E. Riis 3' (BRC), A. Gómez 12', M. Bird 24' (BRC), B. Gutiérrez 35', J.L. Rodríguez 90' (game winner, MoM 7.7, 1G/1A). Subs 70': Y. Amrizi for K. Moore, J. Amelia for L. Cacace. BRC subs: A. Randell for D. Burgzorg 69', S. Twine for M. Sykes 86'. Shots 12-2 (WRX-BRC), xG 6.1-1.5, poss 43-57%, passes 115-178 (87-93% acc), tackles 4-5, interceptions 9-9, saves 0-6. Wrexham 1st in Championship (P32 W24 D4 L4, GF84 GA37, GD+47, 76 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-14",
+      "opponent": "Notts County",
+      "home": true,
+      "score": "3-2",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Round 4",
+      "notes": "L. O'Brien 30' (1G), J. Jones 33' (NC; second NC goal scorer/time unconfirmed from screenshots), B. Cadamarteri 58'/69' (brace, MoM 8.5, 2G/1A). G. Thomason (NC) yellow 52'. J. Amelia yellow 85'. Subs 85': J. Rodríguez for J. Windass, K. Moore for B. Cadamarteri, Y. Amrizi for B. Sheaf, G. Dobson for N. Broadhead. Heavily rotated lineup — reserves and backups fielded. Shots 9-7 (WRX-NC), xG 5.1-3.0, poss 39-61%, passes 125-192 (88-92% acc), tackles 28-20, saves 3-4, cards 2-1 (WRX-NC).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-21",
+      "opponent": "Ipswich",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "L. O'Brien 49'. MoM: D. Hyam (RCB, 7.2). Subs: 69' Y. Amrizi for K. Moore. Scraped it. Shots 7-3 (WRX-IPS), xG 2.3-1.0, poss 43-57%, passes 125-199 (86-92% acc), tackles 16-16, saves 2-2. Wrexham 1st in Championship (P33 W25 D4 L4, GF85 GA37, GD+48, 79 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-21",
+      "opponent": "Watford",
+      "home": true,
+      "score": "6-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi Final",
+      "notes": "Martini (3), Matthews (2), Vargas. Home.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-24",
+      "opponent": "Hull City",
+      "home": true,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Lord, Ortega, Martini (2). MoM: Mason Webber. Controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-24",
+      "opponent": "Portsmouth",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "J.L. Rodríguez 10'/75' (brace, MoM 8.0). Subs 76': Y. Amrizi for K. Moore (1A), N. Broadhead for A. Gómez, J. Windass for B. Gutiérrez (1A), G. Thomason for L. Cacace, J. Amelia for I. Kaboré. Comfortable. Shots 7-1, xG 2.9-0.6, poss 34-66%, passes 105-241 (85-93% acc), tackles 31-5, saves 0-2, corners 1-0, offsides 1-0. Wrexham 1st in Championship (P34 W26 D4 L4, GF87 GA37, GD+50, 82 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-02-28",
+      "opponent": "Charlton Athletic",
+      "home": false,
+      "score": "1-4",
+      "result": "L",
+      "competition": "EFL Championship",
+      "notes": "C. Kelman 45'/53' (Charlton), B. Gutiérrez 83' (1G, assist A. Gómez), J. Rankin-Costello 90'/90'+4 (Charlton, MoM). Subs 64': Y. Amrizi for K. Moore, J. Amelia for L. Cacace. A mess. Shots 15-9 (CHA-WRX), xG 5.2-2.8, poss 58-42%, passes 211-121 (90-85% acc), tackles 10-18, saves 2-6, corners 3-0, offsides 4-1. Wrexham 1st in Championship (P35 W26 D4 L5, GF88 GA41, GD+47, 82 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-04",
+      "opponent": "Watford",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 49' the only goal. MoM: B. Sheaf (7.5). Lineup: Okonkwo (GK, 7.1), Thomason (RB, 6.9, subbed off 73'), Hyam (RCB, 7.4), Doyle (LCB, 6.9), Cacace (LB, 6.9), Sheaf (RCM, 7.5 MoM), Bobadilla (LCM, 6.6), Gutiérrez (CAM, 6.4, subbed off 73'), Rodríguez (LW, 6.1, 1A), Gómez (RW, 6.3), Moore (ST, 7.2, 1G, subbed off 73'). Subs 73': Amrizi for Moore (5.9), Broadhead for Gutiérrez (6.6), Amelia for Thomason (6.8). Unused: Kaboré, Ward, Cleworth, Cadamarteri, O'Brien, Windass. Shots 4-4 (WAT-WRX), on target 3-2, xG 0.6-2.0, poss 48-52%, passes 175-159 (89-87% acc), tackles 15-19 (67-37% success), interceptions 13-17, saves 1-3, corners 2-1, offsides 1-1, no cards. Scraped it.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-08",
+      "opponent": "Aston Villa",
+      "home": false,
+      "score": "3-2",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Round 5",
+      "notes": "B. Kamara 9' (AV), J. McGinn 20' (AV), B. Gutiérrez 32', D. Bobadilla 65', K. Moore 90'. MoM: B. Kamara (AV), 8.7 RR. Assists: Rodríguez, Gómez, Gutiérrez (one each; exact pairing to goal not shown). Lineup: Okonkwo (GK, 6.1), Kaboré (RB, 6.5), Hyam (RCB, 7.1), Doyle (LCB, 6.5), Cacace (LB, 6.4), Sheaf (RCM, 6.4), Bobadilla (LCM, 6.8, 1G), Gutiérrez (CAM, 7.5, 1G/1A), Rodríguez (LW, 6.2, 1A), Gómez (RW, 6.0, 1A), Moore (ST, 6.7, 1G). No Wrexham subs used. Shots 6-4 (AV-WRX), on target 4-3, xG 2.0-1.7, poss 68-32%, passes 285-103 (91-78% acc), tackles 17-26 (47-12% success), interceptions 20-21, saves 0-2, corners 1-0, offsides 0-1, no cards. Backs against the wall — small club vs. the big boys, and Moore's stoppage-time winner sealed a stunning comeback.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-14",
+      "opponent": "Swansea City",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 44' the only goal. MoM: K. Moore (7.6, 1G). Lineup: Okonkwo (GK, 6.2), Thomason (RB, 7.2), Cleworth (RCB, 7.1), Doyle (LCB, 6.3), Amelia (LB, 6.4), Bobadilla (CDM, 6.9), O'Brien (RCM, 6.9, subbed off 78'), Gutiérrez (LCM, 7.1, 1A, subbed off 78'), Rodríguez (LW, 6.1, subbed off 78'), Gómez (RW, 7.3, 1A, subbed off 78'), Moore (ST, 7.6, 1G, subbed off 48'). Subs: Amrizi for Moore 48' (5.8), Sheaf for O'Brien 78' (6.1), Cacace for Gutiérrez 78' (6.2), Cadamarteri for Gómez 78' (5.8, injured 90'), Broadhead for Rodríguez 78' (6.1). Unused: Kaboré, Ward, Hyam, Windass. Shots 7-0 (WRX-SWA), on target 2-0, xG 1.9-0.0, poss 42-58%, passes 133-226 (81-91% acc), tackles 23-13 (26-23% success), interceptions 17-17, saves 0-1, corners 4-1, offsides 2-0, no cards. Wrexham 1st in Championship (P37 W28 D4 L5, GF90 GA41, GD+49, 88 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-21",
+      "opponent": "Sheffield UTD",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 11' the only goal. MoM: O'Hare (Sheffield Utd). Lineup: Ward (GK, 7.6), Amelia (RB, 7.2), Hyam (RCB, 7.5), Doyle (LCB, 6.2), Cacace (LB, 6.5), Sheaf (RCM, 6.9), Bobadilla (LCM, 6.4), Gutiérrez (CAM, 6.3, 1A, subbed off 76'), Gómez (RW, 6.4), Moore (ST, 7.4, 1G, subbed off 63'), Broadhead (LW, 5.9, subbed off). Subs: Amrizi for Moore 63' (6.2), Windass for Gutiérrez 76' (5.9), Rodríguez for Broadhead (6.1). Unused: Thomason, Webber, Keillor-Dunn, Cleworth, Cadamarteri, O'Brien. Shots 9-6 (WRX-SHU), on target 4-5, xG 2.7-1.5, poss 38-62%, passes 141-268 (86-93% acc), tackles 10-12 (40-33% success), interceptions 13-17, saves 5-3, corners 1-1, offsides 0-2, no cards. Wrexham 1st in Championship (P38 W29 D4 L5, GF91 GA41, GD+50, 91 pts) — promotion to the Premier League confirmed with 8 games still to play.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-29",
+      "opponent": "Hull City",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "D. Keillor-Dunn 32' the only goal. Lineup: Webber (GK, 6.8, debut), Vyner (RB, 7.1), Cleworth (RCB, 6.8), Doyle (LCB, 6.7), Thomason (LB, 6.1), Dobson (RCM, 6.6), O'Brien (LCM, 6.7, subbed off 81'), Ortega (CAM, 6.5, 1A, debut, subbed off 74'), Keillor-Dunn (RW, 7.1, 1G), Moore (ST, 6.4), Cacace (LW, 6.4). Subs: Windass for Ortega 74' (6.2), Sheaf for O'Brien 81' (6.1). Unused: Amrizi, Rodriguez, Ward, James, Cadamarteri. Shots 6-4 (WRX-HUL), on target 3-1, xG 2.9-1.3, poss 40-60%, passes 130-224 (85-91% acc), tackles 19-17 (21-29% success), interceptions 16-16, saves 1-2, corners 1-1, offsides 0-0, no cards. Santi Ortega (promoted from academy this session) assisted on debut; Mason Webber kept a clean sheet on his senior debut. Wrexham 1st in Championship (P39 W30 D4 L5, GF92 GA41, GD+51, 94 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-29",
+      "opponent": "Brighton",
+      "home": true,
+      "score": "1-1",
+      "result": "D",
+      "competition": "FA Cup",
+      "round": "Round 6",
+      "notes": "K. Moore 15' (WRX); B. Sheaf 61' OG levelled it for Brighton. 1-1 after 90 and after extra time (120'). Brighton won the penalty shootout 5-4 — Broadhead missed, Windass/Amrizi/Bobadilla/Cacace all scored. MoM: Boscagli (BHA). Lineup: Ward (GK, 6.9), Amelia (RB, 6.8), Hyam (RCB, 7.3), Doyle (LCB, 6.3), Cacace (LB, 7.2), Sheaf (RCM, 5.8, OG, subbed off 79'), Bobadilla (LCM, 7.1), Gómez (RW, 6.0, subbed off 85'), Gutiérrez (CAM, 6.1, subbed off 79'), Rodríguez (LW, 6.8, 1A), Moore (ST, 6.6, 1G, subbed off 79'). Subs: Windass for Sheaf 79' (6.8), O'Brien for Moore 79' (6.1), Amrizi for Gutiérrez 79' (6.5), Broadhead for Gómez 85' (6.3). Unused: Thomason, Webber, Cleworth, Cadamarteri, Ortega. Shots 5-8 (WRX-BHA), on target 3-3, xG 1.8-1.6, poss 41-59%, passes 179-315 (88-93% acc), tackles 21-20 (19-40% success), interceptions 17-14, saves 3-2, corners 1-1, offsides 2-1, fouls 0-1, 1 yellow (K. Mitoma, BHA, 102'). Quarterfinal heartbreak on penalties against a Premier League club — lost the shootout but not the tie in normal play.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "Coventry City",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "QTR",
+      "notes": "Martini.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-04-04",
+      "opponent": "West Bromwich Albion",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "A. Gómez 66' (1G), B. Gutiérrez 69' (MoM, 8.3, 1G), Y. Amrizi 85' (1G, sub). Lineup (Performance tab): Webber (GK, 6.3), Amelia (RB, 6.7), Cleworth (RCB, 7.0), Hyam (LCB, 6.5), Cacace (LB, 6.3), Bobadilla (RCM, 7.0), Windass (LCM, 6.2), Gutiérrez (LCM, MoM 8.3, 1G), Ortega (CAM, 6.9, 1A), Gómez (RW, 7.3, 1G/1A), Broadhead (LW, 5.6), Rodríguez (LW, 6.0), Moore (ST, 6.2), Cadamarteri (ST, 5.7), Amrizi (RW, 7.1, 1G). Confirmed sub: Thomason on for Cacace 74' (6.0). Unused: Sheaf, Ward, O'Brien, Doyle. Shots 1-15 (WBA-WRX), on target 0-10, shot accuracy 0-67%, poss 41-59% (WRX 59%), passes 224-134 (WBA-WRX), pass accuracy 90-84%, dribble success 95-89%, tackles 13-9, tackle success 54-44%, interceptions 14-20, saves 7-0, corners 0-3, offsides 1-0, no cards. Controlled from start to finish. Wrexham 1st in Championship (P40 W31 D4 L5, GF95 GA41, GD+54, 97 pts) — EFL Championship TITLE mathematically clinched (2nd-place Ipswich cannot catch Wrexham's points total with games remaining).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-07",
+      "opponent": "Southampton",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "C. Larin 9' gave Southampton an early lead; A. Gómez 23', D. Bobadilla 59', Y. Amrizi 90' (sub) won it for Wrexham. MoM: Bobadilla. Lineup (Performance tab, only defensive half + Sheaf captured before the list scrolled out of view): Ward (GK, 6.3), Thomason (RB, 6.9, yellow 66', subbed off 67'), Hyam (RCB, 7.1, subbed off 67'), Doyle (LCB, 6.7), Cacace (LB, 6.5), Sheaf (RCM, 7.0). Front six (Bobadilla, Gómez, Moore, Rodríguez, Gutiérrez) and their ratings not captured in screenshots. Southampton: F. Downes yellow 23'. Subs (all Wrexham subs made together at 67'): Cleworth on for Hyam, Amelia on for Thomason, Broadhead on for Rodríguez, Amrizi on for Moore (scored 90'), Ortega on for Gutiérrez (Ortega picked up a knock at 68', severity unconfirmed). Southampton subs: Scienza for Matsuki 63', Fellows for Edozie 67', Jelert for Roerslev 87'. Unused: Webber, Cadamarteri, O'Brien, Windass. Shots 8-3 (WRX-SOU), on target 4-3, xG 3.1-0.9, poss 46-54%, passes 151-221 (87-90% acc), tackles 13-18 (8-39% success), interceptions 16-14, saves 2-1, corners 1-0, offsides 1-0, fouls 1-1, 2 yellow cards (1 each), no reds. Wrexham's final home game of the season — EFL Championship trophy presented on the pitch after the final whistle, captain Max Cleworth lifting it in front of the Racecourse crowd. Wrexham 1st in Championship (P41 W32 D4 L5, GF98 GA42, GD+56, 100 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "West Bromwich",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi",
+      "notes": "Martini, Lord. MoM: Gassner.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "Southampton",
+      "home": true,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Lord, Vargas, Lord, Soria. MoM: Lord.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "opponent": "Birmingham City",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "S. Ortega 74' the only goal (assist: N. Broadhead, on as a sub 3 minutes earlier). MoM: Fidalgo (Birmingham) — no Wrexham player carried the icon. A. Gómez picked up a knock ~40' and was withdrawn at 68' alongside K. Moore (Broadhead and Y. Amrizi on in their places). Lineup (Performance tab): Webber (GK, 7.7), Amelia (RB, 7.5), Hyam (RCB, 7.1), Doyle (LCB, 6.8), Cacace (LB, 6.0), Bobadilla (LCM, 6.8), Gutiérrez (RCM, 6.3), Ortega (CAM, 6.6, 1G), Gómez (RW, 5.8, subbed off 68'), Rodríguez (LW, 6.3), Moore (ST, 5.8, subbed off 68'). Subs 68': Amrizi for Moore (5.9), Broadhead for Gómez (6.4, 1A). Unused: Thomason, Ward, Sheaf, Cleworth, Cadamarteri, O'Brien, Windass. Birmingham subs: T. Doyle for I. Osman 68', K. Wagner for Paik Seung Ho 72', K. Furuhashi for M. Ducksch 81'. Shots 7-4 (BIR-WRX), on target/shot accuracy 86-50%, xG 3.1-1.6, poss 65-35%, passes 281-120 (93-83% acc), dribble success 96-88%, tackles 13-20 (4-4 won), interceptions 12-14, saves 1-6, offsides 0-3, corners 1-0, free kicks 4-0, fouls 0-1, no cards. Def line breaks: through 3-1, around 1-2, over 1-0. This was matchday 42 of 46 — 4 games remain in the Championship season. Wrexham 1st in Championship (P42 W33 D4 L5, GF99 GA42, GD+57, 103 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-18",
+      "opponent": "Stoke City",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Moore 14', 27' (2G, 1A); Gutiérrez 1A; Keillor-Dunn 40' (1G); M. Smit 33' (Stoke). MoM: K. Moore (9.1). Starting XI: Ward (GK, 5.5); Kaboré (RB, 6.7, subbed 68'); Cacace (LB, 7.1); Doyle (LCB, 7.0); Cleworth (RCB, 7.0); Bobadilla (LCM, 7.2, subbed 68'); Sheaf (RCM, 7.0); Gutiérrez (CAM, 6.7, 1A, subbed 68'); Rodríguez (LW, 6.5); Moore (ST, 9.1, 2G 1A, subbed 68'); Keillor-Dunn (RW, 7.1, 1G, subbed 68'). Subs 68': Amelia for Kaboré (6.3), O'Brien for Bobadilla (6.2), Ortega for Gutiérrez (5.8), Amrizi for Moore (6.0), Cadamarteri for Keillor-Dunn (5.9). Unused: Broadhead, Webber, Hyam, Windass. Shots 12-1 (8-1 on target), xG 3.4-0.3, poss 45-55%, passes 156-229 (92-90% acc), tackles 12-14 (4-6 won), interceptions 20-10, saves 0-5, corners 3-0, free kicks 0-1, offsides 1-0, no cards. This was matchday 43 of 46 — 3 games remain in the Championship season. Wrexham 1st in Championship (P43 W34 D4 L5, GF102 GA43, GD+59, 106 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-21",
+      "opponent": "Oxford United",
+      "home": false,
+      "score": "0-2",
+      "result": "L",
+      "competition": "EFL Championship",
+      "notes": "S. Dembélé 52', N. Prelec 90' (both Oxford). M. Cleworth injured 29' (broken toe), subbed off at HT for C. Doyle. A heavily rotated Wrexham side (Veleten, Minda and Vitális all starting for the first time) were second-best throughout. Shots 7-1 (OXF-WRX), on target 4-0, xG 3.3-0.5, poss 63-37%, passes 237-136 (92-85% acc), tackles 10-22 (70-23% success), interceptions 13-15, saves 0-2. Subs 72': M. Harris for O. Romeny (OXF), Y. Amrizi for J. Rodríguez, A. Minda for K. Moore (WRX). This was matchday 44 of 46 — 2 games remain in the Championship season. Wrexham 1st in Championship (P44 W34 D4 L6, GF102 GA45, GD+57, 106 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-25",
+      "opponent": "Coventry City",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore hat-trick (8', 15', 41') plus Y. Amrizi 79' (sub, on for Moore 57'). MoM: K. Moore. Y. Veleten had 3 assists. Coventry sit 5th, still chasing the second automatic promotion spot but may have been overtaken for it. Controlled from start to finish. Subs 57': Y. Amrizi for K. Moore, S. Ortega for B. Gutiérrez, J. Amelia for I. Kaboré. Coventry sub: H. Wright for B. Thomas-Asante 64'. Shots 8-7 (COV-WRX), on target 5-5, poss 55-45%, passes 254-154 (93-89% acc), tackles 17-15, interceptions 11-13, saves 1-5. This was matchday 45 of 46 — 1 game remains in the Championship season. Wrexham 1st in Championship (P45 W35 D4 L6, GF106 GA45, GD+61, 109 pts).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-05-02",
+      "opponent": "Middlesbrough",
+      "home": true,
+      "score": "5-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "Season finale. T. Conway scored twice for Boro (3', 30') but Wrexham hit back through K. Moore 39', J. Rodríguez 45', D. Bobadilla 49', A. Minda 53' and M. Vitális 83' (sub). MoM: D. Bobadilla (8.3), also grabbing an assist. B. Gutiérrez set up 2 goals before being subbed. Subs 65': M. Vitális for B. Sheaf, J. Amelia for I. Kaboré, V. Veleten for J. Rodríguez, Y. Amrizi for K. Moore, S. Ortega for B. Gutiérrez. C. Brittain (MID) booked 81'. Shots 11-7 (WRX-MID), on target 9-5, poss 50-50%, passes 164-168 (86-91% acc), tackles 18-15, interceptions 8-16, saves 3-4. Final matchday of the season — Wrexham finish top of the EFL Championship: P46 W36 D4 L6, GF111 GA47, GD+64, 112 pts. Automatically promoted.",
+      "journal_entry": true
+    }
+  ],
+  "transfers": [
+    {
+      "date": "2025-08-05",
+      "player": "R. Barnett",
+      "direction": "out",
+      "club": "Watford",
+      "fee": "£1.3m",
+      "wage": ""
+    },
+    {
+      "date": "2025-12-08",
+      "player": "D. Scarr",
+      "direction": "out",
+      "club": "BSC Young Boys",
+      "fee": "$1,170,000",
+      "wage": "",
+      "notes": "Personal terms agreed; completes when the transfer window opens. Board allocating $853,866 to transfer budget. Supersedes an earlier Gil Vicente FC deal (logged 2025-08-15) that fell through in contract negotiations and never completed."
+    },
+    {
+      "date": "2025-08-20",
+      "player": "Y. Amrizi",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "£0",
+      "wage": "£26.5k/w"
+    },
+    {
+      "date": "2025-10-30",
+      "player": "C. Burton",
+      "direction": "out",
+      "club": "Kocaelispor",
+      "fee": "$400k",
+      "wage": "",
+      "notes": "Confirmed Oct 30. Earlier talks with AFC Hermannstadt and Zaglebbie Lubin both broke down. Board allocated $283,440 to transfer budget. Sale noted as Bad Negotiation — market value $350k, best possible deal was $550k."
+    },
+    {
+      "date": "2025-08-31",
+      "player": "JL. Rodriguez",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "FREE",
+      "wage": "$36k/w"
+    },
+    {
+      "date": "2025-08-31",
+      "player": "M. James",
+      "direction": "out",
+      "club": "Middlesbrough",
+      "fee": "$760k",
+      "wage": ""
+    },
+    {
+      "date": "2025-10-14",
+      "player": "T. O'Connor",
+      "direction": "out",
+      "club": "Kocaelispor",
+      "fee": "$1.25m",
+      "wage": "",
+      "notes": "Deal agreed, completes when January transfer window opens. Price rating A — Excellent Deal (market value $925k). Board allocating $913,875 to transfer budget. Separate: C. Burton talks with Zagłębie Lubin broke down 05/10."
+    },
+    {
+      "date": "2025-12-28",
+      "player": "O. Rathbone",
+      "direction": "out",
+      "club": "Coventry City",
+      "fee": "$1,800,000",
+      "wage": "",
+      "notes": "Personal terms agreed; deal completes when January transfer window opens. Board allocating $1,332,900 to transfer budget."
+    },
+    {
+      "date": "2026-01-17",
+      "player": "Sam Smith",
+      "direction": "out",
+      "club": "FC Kobenhavn",
+      "fee": "$1,900,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-01-31",
+      "player": "Andrés Gómez",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$33,500/w"
+    },
+    {
+      "date": "2026-01-31",
+      "player": "Brian Gutiérrez",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$30,000/w"
+    },
+    {
+      "date": "2026-01-31",
+      "player": "L. Brunt",
+      "direction": "out",
+      "club": "NEC Nijmegen",
+      "fee": "$2,500,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-02-07",
+      "player": "Damián Bobadilla",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$33,500/w"
+    },
+    {
+      "date": "2026-04-04",
+      "player": "Chido Obi",
+      "direction": "in",
+      "club": "Manchester United",
+      "fee": "$2,950,000",
+      "wage": "",
+      "notes": "18-year-old ST, price rating A (Excellent Deal). Personal terms agreed; deal completes when the transfer window opens — not yet at the club. Contract length, wage, and Wrexham squad role not yet confirmed — need a Financial tab screenshot once he joins."
+    },
+    {
+      "date": "2026-04-18",
+      "player": "Milán Vitális",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$22,500/w"
+    },
+    {
+      "date": "2026-04-18",
+      "player": "Vladyslav Veleten",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "$27,500/w"
+    },
+    {
+      "date": "2026-04-18",
+      "player": "Alan Minda",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "$0",
+      "wage": "",
+      "notes": "Financial tab not screenshotted this session — wage/value/contract length pending."
+    }
+  ],
+  "injuries": [
+    {
+      "date": "2026-03-21",
+      "player": "A. Okonkwo",
+      "description": "Torn Quad - 8 weeks"
+    },
+    {
+      "date": "2026-03-21",
+      "player": "I. Kaboré",
+      "description": "Groin - 3 weeks"
+    },
+    {
+      "date": "2026-04-11",
+      "player": "Andrés Gómez",
+      "description": "Broken Toe, 3 months (retroactively reported 2026-04-21)"
+    },
+    {
+      "date": "2026-04-21",
+      "player": "Max Cleworth",
+      "description": "Broken Toe, 3 months"
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2025-06-29",
+      "description": "Season hub and match journal system initialized. Squad of 36 fully catalogued."
+    },
+    {
+      "date": "2025-07-22",
+      "description": "Pre-season: 4W from 4. EIC undefeated (2W). Youth Tournament SF win in AET. Moore and Lord emerging as standouts. Next: EIC Group Stage vs SD Huesca."
+    },
+    {
+      "date": "2025-07-30",
+      "description": "Pre-season complete. Squad of 36 senior players catalogued. Eight loan players (Revan, Coady, Ashfield, Lee, Cannon, Mullin, Hardie, Faal) returned to parent clubs. Youth Academy formalised with 6 players. Board mandate: automatic promotion to Premier League."
+    },
+    {
+      "date": "2025-08-05",
+      "description": "D. Ward transfer listed (£925k valuation). D. Scarr transfer listed (£975k valuation). A. James loan listed."
+    },
+    {
+      "date": "2025-08-09",
+      "description": "N. Broadhead named Player of the Match vs Southampton (3A, 7.8). Keillor-Dunn 2G/1A (8.4), Moore 2G (8.2). Carabao Cup tie vs Preston North End incoming."
+    },
+    {
+      "date": "2025-08-09",
+      "description": "Youth Academy intake: V. Martini (CB, Italy, 16, pot 72-94), E. Bianchi (CDM, Italy, 16, pot 66-88), J.C. Vargas (CAM, Argentina, 16, pot 82-94), N. Matthews (RW, England, 15, pot 68-92). Also in academy: A. Gassner (GK, 16), J. Lord (LB, 17, pot 69-89), V. Horne (RB, 17), P. Dijkgraaf (CDM, 17), S. Hak (RW, 15). Total: 10 players."
+    },
+    {
+      "date": "2025-08-20",
+      "description": "Y. Amrizi (21, ST/LW) signed as a free agent — £6.5m market value, £0 fee, immediate first-team involvement. Debut off the bench vs Sheffield Wed (72', LW, 6.4 rating)."
+    },
+    {
+      "date": "2025-08-22",
+      "description": "T. O'Connor placed on the transfer list. Player has told the club he welcomes the move — morale unaffected (Happy)."
+    },
+    {
+      "date": "2025-08-27",
+      "description": "Carabao Cup Round 2 exit — lost 1-0 at home to Blackburn Rovers. Championship focus resumes."
+    },
+    {
+      "date": "2025-08-30",
+      "description": "MD4 LOSS: 0-2 at Millwall. First Championship defeat of the season. Described as a mess — no creative output, defensive frailties exposed. Record: W2 D1 L1."
+    },
+    {
+      "date": "2025-08-30",
+      "description": "C. Burton (GK, 28) sold to AFC Hermannstadt for $570k. Frees GK slot; D. Ward and A. Okonkwo remain as the senior pair."
+    },
+    {
+      "date": "2025-08-31",
+      "description": "M. James (CDM/CM, 33, declining OVR 69→68) sold to Middlesbrough for $760k. Senior midfield depth thins — reinforcement needed."
+    },
+    {
+      "date": "2025-08-31",
+      "description": "JL. Rodriguez signed as a free agent, £36k/w. Attribute details pending screenshots."
+    },
+    {
+      "date": "2025-09-07",
+      "description": "MD5 WIN: 4-0 vs QPR. JL Rodriguez debut brace (23'/29') + assist in 70 mins — 9.6 rating. Back to 2nd in Championship (W3 D1 L1, 10pts). Broadhead leads EFL Championship assists chart (4A in 5 apps). Moore and Keillor-Dunn both on 4G in league."
+    },
+    {
+      "date": "2025-09-07",
+      "description": "Youth Academy: S. Ortega (LW, Argentina, 17, OVR 63, pot 68-92) catalogued. Total: 11 players."
+    },
+    {
+      "date": "2025-09-20",
+      "description": "MD6 WIN: 3-1 away at Norwich City. Moore, Amrizi (sub) and Dobson (sub) on the scoresheet. Amrizi MoM with a goal and an assist. Record: W4 D1 L1 in the league."
+    },
+    {
+      "date": "2025-09-27",
+      "description": "MD7 WIN: 3-0 at home vs Derby County. Keillor-Dunn, Rodriguez and Kaboré (a standout header) scored; Okonkwo clean sheet earns MoM. Wrexham now 2nd in the Championship: P7 W5 D1 L1, GF18 GA6, 16 pts, one point behind league-leaders Ipswich."
+    },
+    {
+      "date": "2025-09-27",
+      "description": "Youth Academy: J.C. Vargas updated to OVR 61 (POT 83-94, CAM). S. Ortega's PlayStyle confirmed as Acrobatic. Academy remains at 11 players."
+    },
+    {
+      "date": "2025-09-28",
+      "description": "MD8 WIN: 3-0 away at Leicester City. Windass, Moore (MoM, 7.9) and Rodríguez struck; clean sheet on the road. Record: P8 W6 D1 L1, GF21 GA6, 19 pts."
+    },
+    {
+      "date": "2025-10-04",
+      "description": "MD9 WIN: 4-2 at home vs Birmingham City. Rodríguez brace (MoM, 8.4) plus Broadhead and Cadamarteri goals overturned a 2-2 scare from Fujimoto and Klarer. Record: P9 W7 D1 L1, GF25 GA8, 22 pts."
+    },
+    {
+      "date": "2025-10-14",
+      "description": "T. O'Connor (CB/CDM, OVR 65, age 26) sold to Kocaelispor for $1.25M — rated Excellent Deal (market value $925k, best possible $1.4M). Deal completes January 2026. $913,875 added to transfer budget. Separate: C. Burton transfer talks with Zagłębie Lubin broke down 05/10."
+    },
+    {
+      "date": "2025-10-18",
+      "description": "MD10 LOSS: 4-1 at Stoke City. Wrexham led 1-0 at halftime (Moore 16') then conceded four in the second half — Thomas 61', Cissé 74', Phillips 87', Manhoef 90'. Hyam yellow 67' forced early defensive sub (Cleworth). Okonkwo 5.2 (season-low). Beaten by opponent 11-2. Record: P10 W7 D1 L2, GF26 GA12, 22 pts. Wrexham top of Championship."
+    },
+    {
+      "date": "2025-10-22",
+      "description": "MD11 DRAW: 0-0 at home vs Oxford United. Dominant but couldn't break the low block — Kaboré named MoM. Record: P11 W7 D2 L2, GF26 GA12, 23 pts."
+    },
+    {
+      "date": "2025-10-25",
+      "description": "MD12 LOSS: 0-2 away at Middlesbrough. T. Conway 60'/80' brace — both goals in second half, 0-0 at HT. Wrexham had 3 shots (1 on target), xG 0.6 vs 2.9. Tackle success 17% vs 54%. Beaten by opponent 11-4. Kaboré and Hyam best on night (both 7.0). Record: P12 W7 D2 L3, GF26 GA14, 23 pts."
+    },
+    {
+      "date": "2025-11-01",
+      "description": "MD13 WIN: 3-2 at home vs Coventry City. K. Moore hat-trick (4'/45'/74') — Man of the Match 8.5. Coventry led 1-2 after 21 minutes; Moore levelled on stroke of HT then completed the comeback with the winner at 74'. Windass missed penalty 61'. Windass (1 AST), Kaboré (1 AST), Broadhead (1 AST). Yellow: Broadhead 90'. Poss 40-60%, xG 3.2-1.2. Record: P13 W8 D2 L3, GF29 GA16, 26 pts."
+    },
+    {
+      "date": "2025-11-02",
+      "description": "YOUTH TOURNAMENT WINNERS. Youth Academy Rush Tournament sweep: beat Blackburn 8-1 (QTR), West Brom 9-0 (SF), Birmingham City 11-0 (Final). Three players rated 10.0 in the Final — N. Matthews (3G), V. Martini (1G 1A), O. Horne (1G 2A, MoM). P. Dijkgraaf 9.9. Total: 28 goals scored in three matches, 2 conceded."
+    },
+    {
+      "date": "2025-11-05",
+      "description": "MD14 WIN: 5-0 away at Portsmouth. Dominant from the 36' red card (Z. Swanson, POR). Windass 18', O'Brien 21', Moore 59', Broadhead 76'/87'. Rodríguez PotM (7.6). xG 8.0 from 20 shots. Record: P14 W9 D2 L3, GF34 GA16, 29 pts. 2nd in Championship, 8 pts behind Ipswich (37)."
+    },
+    {
+      "date": "2025-11-08",
+      "description": "MD15 WIN: 3-1 vs Charlton Athletic. Dobson off bench 86', scored 89'. Moore 12G on season. Record: P15 W10 D2 L3, GF37 GA17, 32 pts. 2nd in Championship."
+    },
+    {
+      "date": "2025-11-22",
+      "description": "MD16 LOSS: 1-0 away at Ipswich. Fought hard but couldn't generate in the final third. Record: P16 W10 D2 L4, GF37 GA18, 32 pts. 2nd in Championship."
+    },
+    {
+      "date": "2025-11-26",
+      "description": "MD17 DRAW: 2-2 vs Bristol City at home. Led twice — Windass 58', Moore 78' — but Bristol City equalized both times. Record: P17 W10 D3 L4, GF39 GA20, 33 pts."
+    },
+    {
+      "date": "2025-11-29",
+      "description": "MD18 WIN: 3-0 vs Blackburn Rovers at home. Broadhead 18', JL Rodriguez 55', O'Brien 62'. Controlled from start to finish. MoM: O'Brien. Record: P18 W11 D3 L4, GF42 GA20, 36 pts."
+    },
+    {
+      "date": "2025-12-06",
+      "description": "MD19 WIN: 4-3 away at Preston. Miraculous comeback. Moore 16', Broadhead 66', JL Rodriguez 83', Amrizi 93' (stoppage time winner). Record: P19 W12 D3 L4, GF46 GA23, 39 pts."
+    },
+    {
+      "date": "2025-12-11",
+      "description": "MD20 DRAW: 2-2 away at Hull City. Moore and Amrizi cancelled out an early two-goal deficit. Record: P20 W12 D4 L4, GF48 GA25, 40 pts."
+    },
+    {
+      "date": "2025-12-08",
+      "description": "D. Scarr sold to BSC Young Boys for $1,170,000 — personal terms agreed, deal completes when the transfer window opens. Corrects the record: the Gil Vicente FC deal logged 2025-08-15 fell through in negotiations and never completed; this Young Boys deal is the confirmed sale."
+    },
+    {
+      "date": "2025-12-13",
+      "description": "MD21 WIN: 3-2 vs Watford at home. C. Doyle yellow 30', red 51' (conceded a penalty in the process) — Wrexham played the rest of the match a man down, then scored three in the closing stages (Amrizi 75', Windass 82', Broadhead 90+4') to complete the comeback after Kjerrumgaard's 88th-minute leveler. Doyle handed a 1-match ban. Record: P21 W13 D4 L4, GF51 GA27, 43 pts. 2nd in Championship, 8 points behind Ipswich."
+    },
+    {
+      "date": "2025-12-20",
+      "description": "MD22 WIN: 2-1 away at Swansea City. Eom Ji Sung put Swansea ahead 34', but two late goals — Windass 88', Amrizi 90' (super sub, on 80' for Moore) — sealed it. Record: P22 W14 D4 L4, GF53 GA28, 46 pts. 2nd in Championship, 8 points behind Ipswich."
+    },
+    {
+      "date": "2025-12-26",
+      "description": "MD23 WIN: 4-3 vs Sheffield Utd at home. K. Moore brace (40'/51'), J. Rodríguez 75', Y. Amrizi 84'. SHU levelled at 2-2 then went ahead 2-3 before the final surge. Record: P23 W15 D4 L4, GF57 GA31, 49 pts. 2nd in Championship, 5 points behind Ipswich."
+    },
+    {
+      "date": "2025-12-28",
+      "description": "O. Rathbone personal terms agreed with Coventry City — $1,800,000 fee, deal completes when January window opens. Board allocating $1,332,900 to transfer budget."
+    },
+    {
+      "date": "2025-12-29",
+      "description": "MD24 WIN: 3-1 vs Preston at home, with 10 men after L. O'Brien red card at 6'. N. Broadhead 12', J. Storey OG 17', L. Cacace 34' — 3-0 at HT. PNE pulled one back (Devine 70'). PotM: J. Amelia 7.8 (LB). Record: P24 W16 D4 L4, GF60 GA32, 52 pts. 2nd in Championship, 3 points behind Ipswich (55)."
+    },
+    {
+      "date": "2026-01-01",
+      "description": "Youth Academy Rush Tournament QTR WIN: 8-0 vs Blackburn Rovers. Dijkgraaf MoM (10.0, 2A). Matthews (10.0, 2A), Martini (3G, 10.0), Webber GK (9.6). Scorers: Ortega ×2, Lord, Matthews, Martini ×3, Dijkgraaf. New tournament — not a continuation of the Nov 2025 sweep."
+    },
+    {
+      "date": "2026-01-04",
+      "description": "MD26 WIN: 2-0 away at Derby County. K. Moore brace (67'/72') the only goals — 0-0 at HT, professional second half, five subs at 77' with points secure. xG 4.0-1.1 on 8 shots vs 4. Clean sheet, no cards. Record: P26 W18 D4 L4, GF68 GA33, 58 pts. 2nd in Championship, 1 point behind Ipswich (59)."
+    },
+    {
+      "date": "2026-01-01",
+      "description": "MD25 WIN: 6-1 at home vs Blackburn Rovers. Dominant first half — Moore 7', Rodríguez brace 22'/34' for 3-0 at HT. Ohashi 48' (BLK) before Wrexham surged: Moore 67', Amrizi 85', Keillor-Dunn 90'. Rodríguez PotM (9.6, 2G 2A). Record: P25 W17 D4 L4, GF66 GA33, 55 pts. 2nd in Championship, 1 point behind Ipswich (56)."
+    },
+    {
+      "date": "2026-01-04",
+      "description": "FA CUP ROUND 3 WIN: 3-0 away at Leicester City. JL Rodriguez 10', Broadhead 45', Moore 78' (MoM). Controlled from start to finish. Wrexham advance to face Notts County on Feb 14."
+    },
+    {
+      "date": "2026-01-17",
+      "description": "MD27 WIN: 1-0 at home vs Norwich. JL Rodriguez 65' the only goal in a comfortable evening. MoM: Amelia."
+    },
+    {
+      "date": "2026-01-17",
+      "description": "Sam Smith (ST) sold to FC Kobenhavn for $1,900,000. Board allocated $1,410,180 to transfer budget."
+    },
+    {
+      "date": "2026-01-17",
+      "description": "Wrexham TOP OF THE TABLE for the first time all season — MD27 win over Norwich moves them above Ipswich, P27 W19 D4 L4 GF69 GA33 GD+36, 61 pts, 1 point clear of Ipswich (60 pts, P27)."
+    },
+    {
+      "date": "2026-01-20",
+      "description": "MD28 WIN: 4-1 at home vs Leicester City. Rodríguez 38'/78' and Moore 45'/65' either side of Ayew's 28' leveler for Leicester — 2-1 at HT, comfortable from there despite Leicester dominating possession (62%). 13 shots to 6, 5.7 xG to 2.3. MoM: J. Rodríguez. Record: P29 W21 D4 L4, GF73 GA34, GD+39, 67 pts. 1st in Championship, 4 points clear of Ipswich (60 pts, P28)."
+    },
+    {
+      "date": "2026-01-24",
+      "description": "MD29 WIN: 2-1 away at Queens Park Rangers. Y. Amrizi 58', K. Moore 68' either side of R. Burrell's 61' equalizer. A scrappy win — manager's note: passing needs to improve, defenders too easily beaten, diving in too often. Record: P30 W22 D4 L4, GF75 GA35, GD+40, 70 pts. 1st in Championship."
+    },
+    {
+      "date": "2026-01-31",
+      "description": "MD30 WIN: 3-0 at home vs Sheffield Wed. K. Moore 19', debutant Andrés Gómez 69' (MoM 7.8, 1G/1A on his first appearance), B. Cadamarteri 81'. In-game Player of the Match award actually went to J. Rodríguez (7.1, 1A) despite Gómez's higher rating. Clean sheet. Record: P30 W22 D4 L4, GF78 GA35, GD+43, 70 pts. 1st in Championship."
+    },
+    {
+      "date": "2026-01-31",
+      "description": "Andrés Gómez (RM/RW, 23) signed as a free agent — $33,500/w, rated Excellent Deal (price rating A). Scored a goal and provided an assist on his debut vs Sheffield Wed the same day."
+    },
+    {
+      "date": "2026-01-31",
+      "description": "Brian Gutiérrez (CAM/CM/LM, 22) signed as a free agent — $30,000/w, rated Excellent Deal (price rating A). Made his debut vs Sheffield Wed."
+    },
+    {
+      "date": "2026-01-31",
+      "description": "Lewis Brunt (CB, 24) sold to NEC Nijmegen for $2,500,000, effective after the Sheffield Wed match in which he was an unused substitute."
+    },
+    {
+      "date": "2026-02-07",
+      "description": "MD31 WIN: 3-0 at home vs Millwall. B. Gutiérrez 36' (debut goal), K. Moore 45' (MoM, 9.1, 1G/2A), D. Bobadilla 65' (debut goal) — both new January signings off the mark on their first starts. Controlled from start to finish, clean sheet. Record: P31 W23 D4 L4, GF81 GA35, GD+46, 73 pts. 1st in Championship, next opponent Bristol City."
+    },
+    {
+      "date": "2026-02-07",
+      "description": "Damián Bobadilla (CM/CDM, 24, Paraguay) signed as a free agent — $33,500/w, 3-year deal, $290,000 signing bonus, market value $7.0M. Scored on his debut vs Millwall the same day."
+    },
+    {
+      "date": "2026-02-07",
+      "description": "Stats tab confirmed for both January signings: Andrés Gómez (PAC 77/SHO 69/PAS 68/DRI 76/DEF 34/PHY 59) and Brian Gutiérrez (PAC 71/SHO 68/PAS 72/DRI 73/DEF 42/PHY 61) — wrexham_squad.csv and roster.html updated, previously blank pending a Stats tab screenshot."
+    },
+    {
+      "date": "2026-02-10",
+      "description": "MD32 WIN: 3-2 away at Bristol City. J.L. Rodríguez scored the 90th-minute winner (MoM, 7.7, 1G/1A) after Wrexham twice had to come from behind — Gómez and Gutiérrez cancelling out goals from Riis and Bird. Record: P32 W24 D4 L4, GF84 GA37, GD+47, 76 pts. 1st in Championship."
+    },
+    {
+      "date": "2026-02-14",
+      "description": "FA CUP ROUND 4 WIN: 3-2 at home vs Notts County. Heavily rotated lineup of reserves and backups. Bailey Cadamarteri brace plus an assist (MoM, 8.5) either side of an L. O'Brien opener; Notts pulled one back through J. Jones before Cadamarteri's second settled it. Wrexham advance to the next round."
+    },
+    {
+      "date": "2026-02-21",
+      "description": "MD33 WIN: 1-0 at home vs Ipswich, in a game billed as potentially deciding the title race. L. O'Brien's 49th-minute strike was the only goal — scraped it. MoM: D. Hyam. Record: P33 W25 D4 L4, GF85 GA37, GD+48, 79 pts. 1st in Championship, 11 points clear of 2nd-place Ipswich with 1 game in hand."
+    },
+    {
+      "date": "2026-02-21",
+      "description": "Youth Academy Rush Tournament SEMI-FINAL WIN: 6-1 at home vs Watford. Martini hat-trick, Matthews brace, Vargas also on the scoresheet. Academy Rush side advances to the Final."
+    },
+    {
+      "date": "2026-02-24",
+      "description": "YOUTH ACADEMY RUSH TOURNAMENT WINNERS. Beat Hull City 4-0 in the Final — Lord, Ortega, and a Martini brace (2G). MoM: Mason Webber. Controlled from start to finish."
+    },
+    {
+      "date": "2026-02-24",
+      "description": "MD34 WIN: 2-0 at home vs Portsmouth. José Luis Rodríguez brace (MoM, 8.0) either side of the hour mark. Comfortable. Record: P34 W26 D4 L4, GF87 GA37, GD+50, 82 pts. 1st in Championship."
+    },
+    {
+      "date": "2026-02-28",
+      "description": "MD35 LOSS: 1-4 away at Charlton Athletic. Charlie Kelman brace either side of half-time put Charlton in control; Brian Gutiérrez pulled one back on 83' but Joe Rankin-Costello's late brace (90', 90'+4, MoM) sealed it. First defeat since MD16. Record: P35 W26 D4 L5, GF88 GA41, GD+47, 82 pts. Still 1st in Championship, 11 points clear of Ipswich."
+    },
+    {
+      "date": "2026-03-04",
+      "description": "MD36 WIN: 1-0 away at Watford. K. Moore 49' the only goal. MoM: Sheaf. Scraped it. Record: P36 W27 D4 L5, GF89 GA41, GD+48, 85 pts. 1st in Championship."
+    },
+    {
+      "date": "2026-03-08",
+      "description": "Wrexham beat Aston Villa 3-2 away in the FA Cup Round 5, coming from behind. Kieffer Moore's 90th-minute winner completed the comeback and sent Wrexham through to the next round."
+    },
+    {
+      "date": "2026-03-14",
+      "description": "MD37 WIN: 1-0 at home vs Swansea City. Kieffer Moore 44' the only goal, MoM. Comfortable. Record: P37 W28 D4 L5, GF90 GA41, GD+49, 88 pts. 1st in Championship. B. Cadamarteri picked up an apparent injury in the 90th minute (icon shown on the sub event, no severity/duration confirmed yet — flag for next screenshot batch)."
+    },
+    {
+      "date": "2026-03-14",
+      "description": "Academy update: 3 new Argentine signings added to the Youth Squad (March 2026 intake) — Martin Leon (CM, 15, OVR 51, POT 78-84), Fabricio Sandoval (CAM/LW, 17, OVR 59, POT 74-80), Marco Soria (LW/LM/CAM, 17, OVR 63, POT 74-80). Academy now at 15 players. Development refresh confirmed for the rest of the academy from the same screenshot batch: OVR +1 for Gassner (60), Martini (59, also turned 17), Horne (62), Dijkgraaf (62), Bianchi (58), Vargas (62), Ortega (63, unchanged but completed his LW→CAM conversion — POT rose to 75-81 and he turned 18), Hak (60), Matthews (58), Forster (57). Jamie Lord's OVR (64) and POT ranges were unchanged this cycle.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-21",
+      "description": "Training injury clash: Arthur Okonkwo and Issa Kaboré collided in training and both came away injured — Okonkwo with a torn quad (out 8 weeks), Kaboré with a groin strain (out 3 weeks). Danny Ward moves into the starting GK jersey; Joenathan Amelia starts at RB in Kaboré's absence."
+    },
+    {
+      "date": "2026-03-21",
+      "description": "Mason Webber (17, GK, OVR 62) promoted from the Youth Academy to the first team as emergency backup goalkeeper behind Danny Ward, following Okonkwo's training injury.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-21",
+      "description": "MD38 WIN: 1-0 away at Sheffield Utd. Kieffer Moore 11' the only goal. MoM: O'Hare (Sheffield Utd). Record: P38 W29 D4 L5, GF91 GA41, GD+50, 91 pts. WREXHAM ARE PROMOTED TO THE PREMIER LEAGUE — secured with 8 games still to play."
+    },
+    {
+      "date": "2026-03-29",
+      "description": "Wrexham's FA Cup run ends in the Round 6 quarterfinal, 1-1 (4-5 on pens) at home to Brighton. Kieffer Moore's 15th-minute opener was cancelled out by a Ben Sheaf own goal on 61'; neither side broke through in extra time. Nathan Broadhead missed Wrexham's only spot kick in the shootout. MoM: Boscagli (BHA)."
+    },
+    {
+      "date": "2026-03-29",
+      "description": "Santi Ortega (18, CAM/LW, OVR 63) promoted from the Youth Academy to the first team.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-03-29",
+      "description": "MD39 WIN: 1-0 vs Hull City (H). Keillor-Dunn 32' the only goal. Ortega debut with an assist; Webber debut in goal with a clean sheet. Record: P39 W30 D4 L5, GF92 GA41, GD+51, 94 pts."
+    },
+    {
+      "date": "2026-04-04",
+      "description": "MD40 WIN: 3-0 away at West Bromwich Albion. Gómez, Gutiérrez (MoM) and Amrizi on the scoresheet. Record: P40 W31 D4 L5, GF95 GA41, GD+54, 97 pts.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-04",
+      "description": "EFL CHAMPIONSHIP TITLE CLINCHED — Wrexham's 97 points (P40) cannot be caught by 2nd-place Ipswich (74 pts, P39, max possible 95). First-ever Championship title for the club, on top of the promotion already secured on 2026-03-21. Trophy presentation planned for the next home game.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-04",
+      "description": "Chido Obi (18, ST) agreed terms to join from Manchester United for $2,950,000 — an Excellent Deal per the game's price rating. Deal completes when the transfer window opens; not yet on the books. Developing young striker; attribute/contract detail pending a Wrexham-side Financial tab screenshot once he joins."
+    },
+    {
+      "date": "2026-04-11",
+      "description": "MD41 WIN: 3-1 at home vs Southampton (Larin 9' SOU; Gómez 23', Bobadilla 59' MoM, Amrizi 90' WRX). Record: P41 W32 D4 L5, GF98 GA42, GD+56, 100 pts.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-11",
+      "description": "EFL CHAMPIONSHIP TROPHY LIFTED — captain Max Cleworth raised the trophy at the Racecourse after the final whistle of Wrexham's last home game of the season, confirming the title clinched on 2026-04-04 at West Brom. First-ever Championship title in club history."
+    },
+    {
+      "date": "2026-04-18",
+      "description": "Three free-agent signings joined: Milán Vitális (24, CM/CDM, Hungary), Vladyslav Veleten (23, RW/RM, Ukraine), and Alan Minda (22, ST/RM/CAM, Ecuador). All real-world pros in FC26's database — Vitális at DAC Dunajská Streda, Veleten at Polissya Zhytomyr (Ukraine international), Minda at Atlético Mineiro (Ecuador international, 2026 World Cup squad). Minda's Financial tab wasn't screenshotted — contract/wage/value pending."
+    },
+    {
+      "date": "2026-04-21",
+      "description": "MD44 LOSS: 0-2 away at Oxford United. A heavily rotated Wrexham side gave first starts to new signings Veleten, Minda and Vitális. Goals from S. Dembélé (52') and N. Prelec (90') sealed it after Max Cleworth was injured (broken toe) in the 29th minute. First loss since MD35. Record: P44 W34 D4 L6, GF102 GA45, GD+57, 106 pts. Still 1st in Championship with 2 games left.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-04-21",
+      "description": "Max Cleworth suffered a broken toe (3 months) in the 29th minute at Oxford United, forcing an early change (C. Doyle on at HT). Andrés Gómez's broken toe (also 3 months) is now confirmed to have actually occurred on 2026-04-11 (vs Birmingham City) — logged retroactively this session."
+    },
+    {
+      "date": "2026-04-25",
+      "description": "MD45 WIN: 4-0 away at Coventry City. Kieffer Moore hat-trick (8', 15', 41') plus a Y. Amrizi finish (79', on as a sub for Moore) completed a comfortable rout. Y. Veleten chipped in 3 assists. Controlled from start to finish. Record: P45 W35 D4 L6, GF106 GA45, GD+61, 109 pts — 1 game left in the Championship season, title and promotion already secured.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-05-02",
+      "description": "MD46 WIN (season finale): 5-2 at home to Middlesbrough. K. Moore, J. Rodríguez, D. Bobadilla, A. Minda and M. Vitális (sub) all scored. MoM: D. Bobadilla. Final record: P46 W36 D4 L6, GF111 GA47, GD+64, 112 pts.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-05-02",
+      "description": "SEASON 2025-26 COMPLETE: Wrexham AFC finish 1st in the EFL Championship (P46 W36 D4 L6, GF111 GA47, GD+64, 112 pts) and are automatically promoted. Runners-up Ipswich finished on 81 pts — a 31-point margin. Job security status: Safe. Both short-term board objectives (automatic promotion, FA Cup Round of 16) met or exceeded.",
+      "journal_entry": true
+    }
+  ]
+}

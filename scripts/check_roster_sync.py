@@ -38,7 +38,9 @@ POS_BADGE_RE = re.compile(r'<span class="acad-pos-badge[^"]*">([^<]+)</span>')
 AGE_RE = re.compile(r'Age (\d+)')
 OVR_RE = re.compile(r'<div class="acad-ovr[^"]*"[^>]*>(\d+)</div>')
 POT_RE = re.compile(r'<div class="acad-pot"><strong>POT</strong>\s*(\d+)\s*[-–]\s*(\d+)</div>')
-NOTES_POT_RE = re.compile(r'POT (\d+)-(\d+)')
+CSV_POT_RE = re.compile(r'^(\d+)-(\d+)$')
+
+POTENTIAL_COL = 53  # dedicated 'Potential' column, e.g. "78-84" — not embedded in Notes
 
 
 def load_squad_csv_players():
@@ -60,8 +62,8 @@ def load_academy_csv_players():
     for row in rows[1:]:
         if not row or not row[0].strip():
             continue
-        name, position, age, ovr, notes = row[0], row[1], row[2], row[3], row[52]
-        pot_m = NOTES_POT_RE.search(notes)
+        name, position, age, ovr, potential = row[0], row[1], row[2], row[3], row[POTENTIAL_COL]
+        pot_m = CSV_POT_RE.match(potential.strip())
         players[name] = {
             "position": position,
             "age": age,
@@ -121,7 +123,7 @@ def diff_group(label, csv_players, html_players, check_pot=False):
             problems.append(f"POSITION DRIFT ({label}): {name} — CSV lists '{csv_p['position']}', roster.html badge '{html_p['position']}' isn't one of those")
         if check_pot and csv_p.get("pot") and html_p.get("pot") and csv_p["pot"] != html_p["pot"]:
             problems.append(
-                f"POT MISMATCH ({label}): {name} — CSV Notes say {csv_p['pot'][0]}-{csv_p['pot'][1]}, "
+                f"POT MISMATCH ({label}): {name} — CSV Potential column says {csv_p['pot'][0]}-{csv_p['pot'][1]}, "
                 f"roster.html says {html_p['pot'][0]}-{html_p['pot'][1]}"
             )
 
