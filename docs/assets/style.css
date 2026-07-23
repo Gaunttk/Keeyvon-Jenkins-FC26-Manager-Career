@@ -2332,6 +2332,22 @@ body {
 .acad-pos-badge.mid { background: rgba(91,173,114,0.15); color: #5BAD72; }
 .acad-pos-badge.atk { background: rgba(200,16,46,0.15); color: #E04060; }
 
+.season-award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  margin-bottom: 6px;
+  background: linear-gradient(90deg, rgba(212,168,67,0.22), rgba(212,168,67,0.08));
+  border: 1px solid rgba(212,168,67,0.4);
+  color: var(--gold);
+}
+
 .acad-stat-row {
   display: flex;
   flex-wrap: wrap;

@@ -182,10 +182,10 @@
       background: var(--mid);
     }
 
-    /* ── Player Stats Table ── */
+    /* ── Player Stats Table (Season 1 final datatable) ── */
     .stats-header, .stats-row {
       display: grid;
-      grid-template-columns: 1fr 50px 36px 36px 50px 60px;
+      grid-template-columns: 1.3fr 40px 34px 34px 40px 46px 1fr;
       gap: 4px;
       padding: 8px 16px;
       align-items: center;
@@ -221,6 +221,8 @@
     .s-num.highlight { color: var(--gold); font-weight: 800; }
     .s-rating { text-align: center; font-weight: 700; font-size: 13px; color: var(--dispatch-blue); }
     .s-mins { text-align: right; font-size: 12px; color: var(--muted); }
+    .s-motm { text-align: center; font-size: 12px; color: var(--gold); }
+    .s-award { text-align: right; font-size: 11px; font-weight: 700; color: var(--gold); white-space: nowrap; }
     .data-note {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px;
@@ -240,10 +242,10 @@
       .match-log-header > *:nth-child(n+5),
       .match-log-row > *:nth-child(n+5) { display: none; }
       .stats-header, .stats-row {
-        grid-template-columns: 1fr 36px 36px 50px;
+        grid-template-columns: 1fr 36px 36px 1fr;
       }
-      .stats-header > *:nth-child(n+5),
-      .stats-row > *:nth-child(n+5) { display: none; }
+      .stats-header > *:nth-child(n+4):nth-child(-n+6),
+      .stats-row > *:nth-child(n+4):nth-child(-n+6) { display: none; }
     }
   </style>
 <link rel="manifest" href="../manifest.json">
@@ -295,6 +297,161 @@ if ('serviceWorker' in navigator) {
   <div class="record-cell"><div class="record-num gold">4</div><div class="record-label">Draws</div></div>
   <div class="record-cell"><div class="record-num red">6</div><div class="record-label">Losses</div></div>
   <div class="record-cell"><div class="record-num gold">112</div><div class="record-label">Championship Pts</div></div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEASON IN REVIEW
+══════════════════════════════════════════ -->
+<div class="section-divider" style="margin-top:8px;">Season in Review</div>
+<div class="log-section" style="padding:4px 16px 18px;">
+  <p style="font-family:'Barlow',sans-serif; font-size:14px; line-height:1.7; color:var(--light); margin:10px 0;">
+    Keeyvon Jenkins took charge in January 2025 with Wrexham mid-table in the Championship and no guarantee of anything. Eighteen months later, his first full season in the dugout ended with the title wrapped up in April with a game to spare, and a 5&ndash;2 send-off against Middlesbrough on the final day to make it official on paper: <strong style="color:var(--gold)">112 points from 46 games</strong>, a <strong style="color:var(--gold)">+64 goal difference</strong>, and a <strong style="color:var(--gold)">31-point gap</strong> to second-placed Ipswich &mdash; the kind of margin that turns a promotion race into a coronation. Thirty-six wins, four draws, six losses. A hundred and eleven goals scored, forty-seven conceded. Wrexham lost as many games in the entire season as some sides lose in six weeks.
+  </p>
+  <p style="font-family:'Barlow',sans-serif; font-size:14px; line-height:1.7; color:var(--light); margin:10px 0;">
+    Kieffer Moore's <strong style="color:var(--gold)">38 goals</strong> across all competitions is the number the headlines will remember, but the deeper story is a squad that got stronger as the season wore on rather than coasting: José Luis Rodríguez matured into a genuine 19-goal, 10-assist threat from the left; a run of free-agent pickups in the second half of the campaign &mdash; Andrés Gómez, Brian Gutiérrez, Damián Bobadilla &mdash; walked straight into the side and started contributing within weeks; and by the closing weeks of the season, three more debutants (Milán Vitális, Vladyslav Veleten, Alan Minda) and a converted academy graduate in goal (Mason Webber, 17) were all getting first-team minutes in a title-winning squad. An FA Cup run to the Round of 16 &mdash; eliminated only on penalties by a Premier League side &mdash; added gloss to a season that, on the pitch, had almost nothing go wrong.
+  </p>
+  <p style="font-family:'Barlow',sans-serif; font-size:14px; line-height:1.7; color:var(--light); margin:10px 0;">
+    Whatever comes next in the Premier League, this is the season that will anchor the Jenkins era's opening chapter: the one where a club that spent decades rebuilding itself from non-league obscurity won a Championship title by the widest margin anyone in this pressroom can remember, and did it playing attacking, expansive football rather than grinding results out. Historic is an overused word in football. This year, it fits.
+  </p>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PRESS AWARDS — END OF SEASON
+══════════════════════════════════════════ -->
+<div class="section-divider" style="margin-top:8px;">Red Dragon Dispatch — End-of-Season Awards</div>
+<div class="log-section" style="padding:4px 16px 18px;">
+  <p style="font-family:'Barlow',sans-serif; font-size:13px; line-height:1.6; color:var(--muted); margin:10px 0 16px;">
+    Voted by Owen Meredith and the Red Dragon Dispatch pressroom from the season's full appearance, goal, assist, rating and Man of the Match record. See the Season in Review journal entry for the case behind each pick.
+  </p>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+    <div class="context-card" style="margin:0;">
+      <div class="context-card-label">🏆 Player of the Year</div>
+      <div class="context-card-row"><span class="context-card-key">K. Moore</span><span class="context-card-val safe">38G · 9 MOTM · 7.4 avg</span></div>
+    </div>
+    <div class="context-card" style="margin:0;">
+      <div class="context-card-label">⚽ Forward of the Year</div>
+      <div class="context-card-row"><span class="context-card-key">J.L. Rodríguez</span><span class="context-card-val safe">19G/10A · 7 MOTM</span></div>
+    </div>
+    <div class="context-card" style="margin:0;">
+      <div class="context-card-label">🎯 Midfielder of the Year</div>
+      <div class="context-card-row"><span class="context-card-key">Brian Gutiérrez</span><span class="context-card-val progress">5G/7A in 17 apps</span></div>
+    </div>
+    <div class="context-card" style="margin:0;">
+      <div class="context-card-label">🛡 Defender of the Year</div>
+      <div class="context-card-row"><span class="context-card-key">I. Kaboré</span><span class="context-card-val progress">7.0 avg · 4 MOTM · 25 apps</span></div>
+    </div>
+    <div class="context-card" style="margin:0;">
+      <div class="context-card-label">🌱 Rookie of the Year</div>
+      <div class="context-card-row"><span class="context-card-key">S. Ortega (18)</span><span class="context-card-val progress">1G/2A off the bench, MD39&ndash;46</span></div>
+    </div>
+    <div class="context-card" style="margin:0;">
+      <div class="context-card-label">✨ Rising Star</div>
+      <div class="context-card-row"><span class="context-card-key">J.C. Vargas (16, Academy)</span><span class="context-card-val progress">POT 90&ndash;94 · Youth Rush goals</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- LEAGUE TABLE -->
+<div class="log-section" style="margin-top:24px;">
+  <div class="section-label">
+    <img src="../assets/photos/efl-championship-england-logo-footylogos.png" class="comp-logo" alt="EFL Championship" style="height:18px;width:auto;vertical-align:middle;margin-right:6px;opacity:0.85;">
+    EFL Championship — Final Standings, 2025/26
+  </div>
+  <table class="standings-table" style="width:100%;margin-top:10px;">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Club</th>
+        <th>P</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>GD</th>
+        <th>Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-gap gap-promo"><td colspan="10">★ CHAMPIONS — title won, promoted to the Premier League</td></tr>
+      <tr class="table-promo wrexham-row">
+        <td>1</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/wrexham-crest.png" alt="Wrexham">Wrexham ★</div></td><td>46</td><td>36</td><td>4</td><td>6</td><td>111</td><td>47</td><td>+64</td><td>112</td>
+      </tr>
+      <tr class="table-gap gap-playoff"><td colspan="10">▲ Automatic Promotion</td></tr>
+      <tr class="table-promo">
+        <td>2</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/ipswich-town-logo-footylogos.png" alt="Ipswich">Ipswich</div></td><td>46</td><td>22</td><td>15</td><td>9</td><td>65</td><td>42</td><td>+23</td><td>81</td>
+      </tr>
+      <tr class="table-gap gap-playoff"><td colspan="10">↑ Promotion Play-offs · 3rd–6th</td></tr>
+      <tr class="table-playoff">
+        <td>3</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/swansea-city-white-crest.png" alt="Swansea City">Swansea City</div></td><td>46</td><td>21</td><td>16</td><td>9</td><td>61</td><td>42</td><td>+19</td><td>79</td>
+      </tr>
+      <tr class="table-playoff">
+        <td>4</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/southampton.png" alt="Southampton">Southampton</div></td><td>46</td><td>20</td><td>16</td><td>10</td><td>74</td><td>55</td><td>+19</td><td>76</td>
+      </tr>
+      <tr class="table-playoff">
+        <td>5</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/sheffield-united-logo-footylogos.png" alt="Sheffield Utd">Sheffield Utd</div></td><td>46</td><td>22</td><td>10</td><td>14</td><td>69</td><td>51</td><td>+18</td><td>76</td>
+      </tr>
+      <tr class="table-playoff">
+        <td>6</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/coventry-city.png" alt="Coventry City">Coventry City</div></td><td>46</td><td>19</td><td>18</td><td>9</td><td>69</td><td>53</td><td>+16</td><td>75</td>
+      </tr>
+      <tr>
+        <td>7</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/hull-city.png" alt="Hull City">Hull City</div></td><td>46</td><td>20</td><td>15</td><td>11</td><td>66</td><td>51</td><td>+15</td><td>75</td>
+      </tr>
+      <tr>
+        <td>8</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/bristol-city-logo-footylogos.png" alt="Bristol City">Bristol City</div></td><td>46</td><td>18</td><td>18</td><td>10</td><td>62</td><td>52</td><td>+10</td><td>72</td>
+      </tr>
+      <tr>
+        <td>9</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/leicester-city.png" alt="Leicester City">Leicester City</div></td><td>46</td><td>18</td><td>17</td><td>11</td><td>67</td><td>54</td><td>+13</td><td>71</td>
+      </tr>
+      <tr>
+        <td>10</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/preston-north-end.png" alt="Preston">Preston</div></td><td>46</td><td>17</td><td>17</td><td>12</td><td>65</td><td>54</td><td>+11</td><td>68</td>
+      </tr>
+      <tr>
+        <td>11</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/middlesbrough.png" alt="Middlesbrough">Middlesbrough</div></td><td>46</td><td>16</td><td>19</td><td>11</td><td>58</td><td>56</td><td>+2</td><td>67</td>
+      </tr>
+      <tr>
+        <td>12</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/millwall.png" alt="Millwall">Millwall</div></td><td>46</td><td>16</td><td>15</td><td>15</td><td>56</td><td>52</td><td>+4</td><td>63</td>
+      </tr>
+      <tr>
+        <td>13</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/birmingham-city.png" alt="Birmingham City">Birmingham City</div></td><td>46</td><td>15</td><td>15</td><td>16</td><td>57</td><td>56</td><td>+1</td><td>60</td>
+      </tr>
+      <tr>
+        <td>14</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/west-brom.png" alt="West Brom">West Brom</div></td><td>46</td><td>15</td><td>14</td><td>17</td><td>52</td><td>68</td><td>-16</td><td>59</td>
+      </tr>
+      <tr>
+        <td>15</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/watford-logo-footylogos.png" alt="Watford">Watford</div></td><td>46</td><td>12</td><td>17</td><td>17</td><td>47</td><td>49</td><td>-2</td><td>53</td>
+      </tr>
+      <tr>
+        <td>16</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/queens-park-rangers.png" alt="QPR">QPR</div></td><td>46</td><td>13</td><td>13</td><td>20</td><td>49</td><td>62</td><td>-13</td><td>52</td>
+      </tr>
+      <tr>
+        <td>17</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/stoke-city.png" alt="Stoke City">Stoke City</div></td><td>46</td><td>12</td><td>15</td><td>19</td><td>44</td><td>53</td><td>-9</td><td>51</td>
+      </tr>
+      <tr>
+        <td>18</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/norwich-city.png" alt="Norwich">Norwich</div></td><td>46</td><td>11</td><td>17</td><td>18</td><td>46</td><td>57</td><td>-11</td><td>50</td>
+      </tr>
+      <tr>
+        <td>19</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/blackburn-rovers.png" alt="Blackburn Rovers">Blackburn Rovers</div></td><td>46</td><td>9</td><td>18</td><td>19</td><td>48</td><td>68</td><td>-20</td><td>45</td>
+      </tr>
+      <tr>
+        <td>20</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/sheffield-wednesday.png" alt="Sheffield Wed">Sheffield Wed</div></td><td>46</td><td>9</td><td>16</td><td>21</td><td>43</td><td>68</td><td>-25</td><td>43</td>
+      </tr>
+      <tr>
+        <td>21</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/portsmouth-logo-footylogos.png" alt="Portsmouth">Portsmouth</div></td><td>46</td><td>9</td><td>16</td><td>21</td><td>37</td><td>64</td><td>-27</td><td>43</td>
+      </tr>
+      <tr class="table-gap gap-relegate"><td colspan="10">▼ Relegated</td></tr>
+      <tr class="table-relegate">
+        <td>22</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/derby-county-white.png" alt="Derby County">Derby County</div></td><td>46</td><td>7</td><td>20</td><td>19</td><td>42</td><td>61</td><td>-19</td><td>41</td>
+      </tr>
+      <tr class="table-relegate">
+        <td>23</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/charlton-athletic-logo-footylogos.png" alt="Charlton Ath">Charlton Ath</div></td><td>46</td><td>9</td><td>11</td><td>26</td><td>43</td><td>72</td><td>-29</td><td>38</td>
+      </tr>
+      <tr class="table-relegate">
+        <td>24</td><td><div class="st-club"><img class="st-crest" src="../assets/photos/crests/oxford-united.png" alt="Oxford United">Oxford United</div></td><td>46</td><td>5</td><td>10</td><td>31</td><td>40</td><td>84</td><td>-44</td><td>25</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <!-- ══════════════════════════════════════════
@@ -1057,37 +1214,9 @@ if ('serviceWorker' in navigator) {
   <span style="text-align:center">Apps</span>
   <span style="text-align:center">G</span>
   <span style="text-align:center">A</span>
-  <span style="text-align:center">Avg RR</span>
-  <span style="text-align:right">Source</span>
-</div>
-
-<!-- MD1-MD7 + Carabao R1 — fully reconciled from session screenshots, MD4 (Millwall) now included -->
-
-<div class="stats-row">
-  <div><div class="s-name">J.L. Rodríguez</div><div class="s-pos">LW · ST</div></div>
-  <span class="s-num">32</span>
-  <span class="s-num highlight">19</span>
-  <span class="s-num highlight">10</span>
-  <span class="s-rating">7.4</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD28 + MD29-31 (1A MD29-30) + MD32 (1G/1A, MoM) + FA Cup R4 (sub on 85') + MD33 (1A) + MD34 (2G, MoM) + MD35 + MD36 (1A) + FA Cup R5 (1A, 6.2) + MD37 (6.1, subbed off 78') + MD38 (6.1, sub on) + MD40 (6.0, sub) + FA Cup R6 (1A, 6.8) + MD41 (LW, subbed off 67' for Broadhead, rating not captured, trophy lift) + MD42 (6.3, LW, full 90) + MD44 (5.7, LW, subbed off 72' for Amrizi) + MD45 (started, rating not captured) + MD46 (1G/1A, 45', 7.6, LW, subbed off 65' for Veleten)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">D. Keillor-Dunn</div><div class="s-pos">RW · CAM</div></div>
-  <span class="s-num">13</span>
-  <span class="s-num highlight">9</span>
-  <span class="s-num highlight">3</span>
-  <span class="s-rating">7.3</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + MD31 (sub on 70') + FA Cup R4 + MD39 (1G, 32', 7.1) + MD43 (1G, 40', 7.1, RW, subbed off 68' for Cadamarteri)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">S. Ortega</div><div class="s-pos">CAM · LW</div></div>
-  <span class="s-num">8</span>
-  <span class="s-num highlight">1</span>
-  <span class="s-num highlight">2</span>
-  <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD39 debut (1A, 6.5, subbed off 74') + MD40 (1A, 6.9, CAM, full 90) + MD41 (sub on 67' for Gutiérrez, picked up a knock at 68' — severity unconfirmed, rating not captured, trophy lift) + MD42 (1G, 74', 6.6, CAM, full 90) + MD43 (5.8, CAM, sub on 68' for Gutiérrez) + MD44 (6.2, LW, started) + MD45 (sub on 57' for Gutiérrez) + MD46 (sub on 65' for Gutiérrez, 6.4)</span>
+  <span style="text-align:center">MOTM</span>
+  <span style="text-align:center">Rtg</span>
+  <span style="text-align:right">Press Award</span>
 </div>
 
 <div class="stats-row">
@@ -1095,53 +1224,19 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">35</span>
   <span class="s-num highlight">38</span>
   <span class="s-num highlight">7</span>
+  <span class="s-motm">★×9</span>
   <span class="s-rating">7.4</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD28-31 (MoM MD31, 9.1, 2A) + MD32 (sub off 70') + FA Cup R4 (sub on 85') + MD33 (sub off 69') + MD34 (1A, sub off 76') + MD35 (sub off 64') + MD36 (1G) + FA Cup R5 (1G, 90', 6.7) + MD37 (1G, MoM, 7.6, sub off 48') + MD38 (1G, 11', 7.4, subbed off 63') + MD39 (6.4) + MD40 (6.2, sub) + FA Cup R6 (1G, 15', 6.6, subbed off 79') + MD41 (subbed off 67' for Amrizi, rating not captured, trophy lift) + MD42 (5.8, ST, subbed off 68' for Amrizi) + MD43 (MoM, 2G 1A, 14'/27', 9.1, ST, subbed off 68' for Amrizi) + MD44 (5.8, ST, subbed off 72' for Minda) + MD45 (MoM, hat-trick, 8'/15'/41', subbed off 57' for Amrizi) + MD46 (1G, 39', 7.3, ST, subbed off 65' for Amrizi — season finale)</span>
+  <span class="s-award">🏆 Player of the Year</span>
 </div>
 
 <div class="stats-row">
-  <div><div class="s-name">N. Broadhead</div><div class="s-pos">LW</div></div>
-  <span class="s-num">24</span>
-  <span class="s-num highlight">11</span>
-  <span class="s-num highlight">8</span>
-  <span class="s-rating">6.8</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD28 + MD31 + FA Cup R4 (sub off 85') + MD34 (sub on 76') + MD36 (sub on 73') + MD37 (6.1, sub on 78') + MD38 (5.9, subbed off) + MD40 (5.6) + FA Cup R6 (6.3, sub on 85', missed penalty in shootout) + MD41 (sub on 67', rating not captured, trophy lift) + MD42 (1A, 6.4, sub on 68' for Gómez)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">I. Kaboré</div><div class="s-pos">RB</div></div>
-  <span class="s-num">25</span>
-  <span class="s-num highlight">1</span>
-  <span class="s-num highlight">4</span>
-  <span class="s-rating">7.0</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD10-15 + MD31 (sub off 70') + MD32 + MD33 + MD34 (sub off 76') + MD35 + FA Cup R5 (6.5) + MD43 (6.7, RB, subbed off 68') + MD45 (7.1, RB, subbed off 57' for Amelia) + MD46 (6.3, RB, subbed off 65' for Amelia)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">D. Hyam</div><div class="s-pos">CB</div></div>
-  <span class="s-num">18</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.9</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-8 ✓ (unused sub MD9) + MD31 + MD33 (MoM, 7.2) + MD34 (7.3) + MD36 (7.4) + FA Cup R5 (7.1) + MD38 (7.5) + MD40 (6.5, LCB) + FA Cup R6 (7.3, RCB) + MD41 (7.1, RCB, subbed off 67') + MD42 (7.1, RCB, full 90)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">L. O'Brien</div><div class="s-pos">CM</div></div>
-  <span class="s-num">19</span>
-  <span class="s-num highlight">4</span>
-  <span class="s-num highlight">2</span>
-  <span class="s-rating">6.9</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + FA Cup R4 (1G) + MD33 (1G) + MD37 (6.9, subbed off 78') + MD39 (6.7, subbed off 81') + FA Cup R6 (6.1, sub on 79') + MD43 (6.2, LCM, sub on 68' for Bobadilla)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">L. Cacace</div><div class="s-pos">LB</div></div>
-  <span class="s-num">28</span>
-  <span class="s-num highlight">1</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.8</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + MD31 + MD32 (sub off 70') + FA Cup R4 + MD33 + MD34 (sub off 76') + MD35 (sub off 64') + MD36 (6.9) + FA Cup R5 (6.4) + MD37 (6.2, sub on 78') + MD38 (6.5) + MD39 (6.4) + MD40 (6.3, subbed off 74') + FA Cup R6 (7.2, scored in shootout) + MD41 (6.5, full 90, trophy lift) + MD42 (6.0, LB, full 90) + MD43 (7.1, LB, full 90) + MD44 (7.0, LB, full 90) + MD45 (6.6, LB, full 90) + MD46 (7.4, LB, full 90 — season finale)</span>
+  <div><div class="s-name">J.L. Rodríguez</div><div class="s-pos">LW · ST</div></div>
+  <span class="s-num">32</span>
+  <span class="s-num highlight">19</span>
+  <span class="s-num highlight">10</span>
+  <span class="s-motm">★×7</span>
+  <span class="s-rating">7.4</span>
+  <span class="s-award">⚽ Forward of the Year</span>
 </div>
 
 <div class="stats-row">
@@ -1149,26 +1244,19 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">29</span>
   <span class="s-num">0</span>
   <span class="s-num highlight">4</span>
+  <span class="s-motm">★×3</span>
   <span class="s-rating">6.8</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓ + MD8-15 (excl. MD12) + MD31 + MD32 + FA Cup R4 (1A, sub off 85') + MD34 + MD35 + MD36 (MoM) + FA Cup R5 (6.4) + MD37 (6.1, sub on 78') + MD38 (6.9) + MD39 (6.1, sub on 81') + FA Cup R6 (OG 61', 5.8, subbed off 79') + MD41 (7.0, full 90, trophy lift) + MD43 (7.0, RCM, full 90) + MD46 (1A, 7.1, RCM, subbed off 65' for Vitális)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
-  <div><div class="s-name">Y. Amrizi</div><div class="s-pos">ST · LW</div></div>
-  <span class="s-num">25</span>
-  <span class="s-num highlight">11</span>
+  <div><div class="s-name">L. Cacace</div><div class="s-pos">LB</div></div>
+  <span class="s-num">28</span>
   <span class="s-num highlight">1</span>
-  <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD29 + MD31 + MD32 (sub on 70') + FA Cup R4 (sub on 85') + MD33 (sub on 69') + MD34 (sub on 76') + MD35 (sub on 64') + MD36 (sub on 73') + MD37 (5.8, sub on 48') + MD38 (6.2, sub on 63') + MD40 (1G, 85', 7.1, sub) + FA Cup R6 (6.5, sub on 79', scored in shootout) + MD41 (1G, 90', sub on 67' for Moore, rating not captured, trophy lift) + MD42 (5.9, sub on 68' for Moore) + MD43 (6.0, ST, sub on 68' for Moore) + MD44 (5.8, ST, sub on 72' for Rodríguez) + MD45 (1G, 79', sub on 57' for Moore) + MD46 (sub on 65' for Moore, 6.3 — season finale)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">G. Thomason</div><div class="s-pos">CM · RM</div></div>
-  <span class="s-num">13</span>
   <span class="s-num">0</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-3,8-9 ✓ + MD30 + FA Cup R4 (yellow 52') + MD34 (sub on 76') + MD36 (6.9, RB, sub off 73') + MD37 (7.2, RB) + MD39 (6.1, LB) + MD40 (6.0, LB, sub on 74') + MD41 (6.9, RB, yellow 66', subbed off 67') + MD44 (6.7, RCB, full 90)</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
@@ -1176,62 +1264,39 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">26</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
+  <span class="s-motm">—</span>
   <span class="s-rating">6.7</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD31 + MD32 + MD33 (unused sub FA Cup R4) + MD34 + MD35 + MD36 (6.9) + FA Cup R5 (6.5) + MD37 (6.3) + MD38 (6.2) + MD39 (6.7) + FA Cup R6 (6.3, LCB) + MD41 (6.7, LCB, full 90, trophy lift) + MD43 (7.0, LCB, full 90) + MD44 (6.2, LCB, sub on 52' for Cleworth) + MD45 (6.4, LCB, full 90) + MD46 (7.0, LCB, full 90 — season finale)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
-  <div><div class="s-name">B. Cadamarteri</div><div class="s-pos">ST</div></div>
-  <span class="s-num">13</span>
+  <div><div class="s-name">Y. Amrizi</div><div class="s-pos">ST · LW</div></div>
+  <span class="s-num">25</span>
+  <span class="s-num highlight">11</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">I. Kaboré</div><div class="s-pos">RB</div></div>
+  <span class="s-num">25</span>
+  <span class="s-num highlight">1</span>
   <span class="s-num highlight">4</span>
-  <span class="s-num highlight">2</span>
-  <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7,9 ✓ + MD29-30 (1G) + FA Cup R4 (MoM, 8.5, 2G/1A, sub off 85') + MD37 (5.8, sub on 78', apparent injury 90' — unconfirmed severity) + MD40 (5.7, sub) + MD43 (5.9, RW, sub on 68' for Keillor-Dunn)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">L. Brunt</div><div class="s-pos">CB</div></div>
-  <span class="s-num">4</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.7</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-2,9 ✓ (unused sub MD8) + MD29 (unused sub MD30; sold to NEC Nijmegen 2026-01-31)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">A. Okonkwo</div><div class="s-pos">GK</div></div>
-  <span class="s-num">20</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD31 (sub off 73') + MD32 + MD33 (7.1, unused sub FA Cup R4) + MD34 + MD35 + MD36 (7.1) + FA Cup R5 (6.1) + MD37 (6.2)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">M. Cleworth</div><div class="s-pos">CB</div></div>
-  <span class="s-num">16</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.7</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7,9 ✓ (unused sub MD8) + MD32 + FA Cup R4 + MD35 + MD37 (7.1) + MD39 (6.8, RCB) + MD40 (7.0, RCB) + MD41 (6.0, RCB, sub on 67', captain — lifted the Championship trophy post-match) + MD43 (7.0, RCB, full 90) + MD44 (6.3, LCB, injured 29' — broken toe, 3 months, subbed off HT for Doyle)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">Z. Vyner</div><div class="s-pos">RB</div></div>
-  <span class="s-num">3</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
+  <span class="s-motm">★×4</span>
   <span class="s-rating">7.0</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD39 (7.1, RB) + MD45 (6.9, LCB, full 90) + MD46 (6.6, RCB, full 90 — season finale)</span>
+  <span class="s-award">🛡 Defender of the Year</span>
 </div>
 
 <div class="stats-row">
-  <div><div class="s-name">G. Dobson</div><div class="s-pos">CM</div></div>
-  <span class="s-num">14</span>
-  <span class="s-num highlight">3</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.4</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓ + MD12-15 + FA Cup R4 (sub on 85'); unused sub MD33 + MD39 (6.6)</span>
+  <div><div class="s-name">N. Broadhead</div><div class="s-pos">LW</div></div>
+  <span class="s-num">24</span>
+  <span class="s-num highlight">11</span>
+  <span class="s-num highlight">8</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.8</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
@@ -1239,26 +1304,29 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">20</span>
   <span class="s-num highlight">6</span>
   <span class="s-num highlight">3</span>
+  <span class="s-motm">—</span>
   <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Goals ✓ MD26 + MD31 (sub on 70') + FA Cup R4 (sub off 85') + MD34 (sub on 76') + MD38 (5.9, sub on 76') + MD39 (6.2, sub on 74') + MD40 (6.2, LCM) + FA Cup R6 (6.8, sub on 79', scored in shootout)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
-  <div><div class="s-name">R. Longman</div><div class="s-pos">RW · RB</div></div>
-  <span class="s-num">3</span>
+  <div><div class="s-name">A. Okonkwo</div><div class="s-pos">GK</div></div>
+  <span class="s-num">20</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-rating">6.4</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-7 ✓</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
-  <div><div class="s-name">O. Rathbone</div><div class="s-pos">CM</div></div>
-  <span class="s-num">8</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.2</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD1-9 ✓</span>
+  <div><div class="s-name">L. O'Brien</div><div class="s-pos">CM</div></div>
+  <span class="s-num">19</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
@@ -1266,44 +1334,19 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">18</span>
   <span class="s-num">0</span>
   <span class="s-num highlight">1</span>
+  <span class="s-motm">★×2</span>
   <span class="s-rating">6.8</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD29 (sub) + MD30 (1A) + MD31 (sub on 70'); MoM MD27 + MD32 (sub on 70') + FA Cup R4 (yellow 85') + MD34 (sub on 76') + MD35 (sub on 64') + MD36 (6.8, sub on 73') + MD37 (6.4, LB) + MD38 (7.2, RB, starting in place of injured Kaboré) + MD40 (6.7, RB) + FA Cup R6 (6.8, RB) + MD41 (6.6, RB, sub on 67', trophy lift) + MD42 (7.5, RB, full 90, best outfield rating) + MD43 (6.3, RB, sub on 68' for Kaboré) + MD44 (6.7, RB, full 90) + MD45 (7.3, RB, sub on 57' for Kaboré) + MD46 (sub on 65' for Kaboré, 6.3 — season finale)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
-  <div><div class="s-name">A. James</div><div class="s-pos">CB</div></div>
-  <span class="s-num">2</span>
+  <div><div class="s-name">D. Hyam</div><div class="s-pos">CB</div></div>
+  <span class="s-num">18</span>
   <span class="s-num">0</span>
   <span class="s-num">0</span>
-  <span class="s-rating">6.4</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 (yellow 57') + FA Cup R4</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">D. Ward</div><div class="s-pos">GK</div></div>
-  <span class="s-num">7</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
-  <span class="s-rating">6.7</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 (sub on 73') + FA Cup R4 (started); unused sub MD33 + MD38 (7.6, started) + FA Cup R6 (6.9, started) + MD41 (6.3, started, trophy lift) + MD43 (5.5, started) + MD45 (7.7, started)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">M. Webber</div><div class="s-pos">GK</div></div>
-  <span class="s-num">5</span>
-  <span class="s-num">0</span>
-  <span class="s-num">0</span>
+  <span class="s-motm">★×1</span>
   <span class="s-rating">6.9</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD39 debut (6.8, clean sheet) + MD40 (6.3, clean sheet) + MD42 (7.7, clean sheet) + MD44 (6.2, started) + MD46 (6.0, GK, full 90 — season finale)</span>
-</div>
-
-<div class="stats-row">
-  <div><div class="s-name">Andrés Gómez</div><div class="s-pos">RM · RW</div></div>
-  <span class="s-num">14</span>
-  <span class="s-num highlight">4</span>
-  <span class="s-num highlight">6</span>
-  <span class="s-rating">6.9</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 debut (1G/1A) + MD31 (1A, sub off 70') + MD32 (1G) + MD33; unused sub FA Cup R4 + MD34 (sub off 76') + MD35 (1A) + MD36 (6.3) + FA Cup R5 (1A, 6.0) + MD37 (1A, 7.3, subbed off 78') + MD38 (6.4) + MD40 (1G/1A, 66', 7.3, RW) + FA Cup R6 (6.0, subbed off 85') + MD41 (1G, 23', full 90, rating not captured, trophy lift) + MD42 (5.8, RW, picked up a knock ~40', subbed off 68' for Broadhead)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
@@ -1311,8 +1354,9 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">17</span>
   <span class="s-num highlight">5</span>
   <span class="s-num highlight">7</span>
+  <span class="s-motm">★×1</span>
   <span class="s-rating">6.9</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD30 debut + MD31 (1G, sub off 70') + MD32 (1G) + MD33 + MD34 (1A, sub off 76') + MD35 (1G) + MD36 (6.4, sub off 73') + FA Cup R5 (1G/1A, 32', 7.5) + MD37 (1A, 7.1, subbed off 78') + MD38 (1A, 6.3, subbed off 76') + MD40 (MoM, 1G, 69', 8.3, LCM) + FA Cup R6 (6.1, subbed off 79') + MD41 (subbed off 67' for Ortega, rating not captured, trophy lift) + MD42 (6.3, RCM, full 90) + MD43 (1A, 6.7, CAM, subbed off 68' for Ortega) + MD45 (subbed off 57' for Ortega, rating not captured) + MD46 (2A, 7.9, CAM, subbed off 65' for Ortega — season finale)</span>
+  <span class="s-award">🎯 Midfielder of the Year</span>
 </div>
 
 <div class="stats-row">
@@ -1320,8 +1364,119 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">17</span>
   <span class="s-num highlight">4</span>
   <span class="s-num highlight">2</span>
+  <span class="s-motm">★×2</span>
   <span class="s-rating">6.8</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">MD31 debut (1G) + MD32 (1A) + MD33 + MD34 + MD35 + MD36 (6.6) + FA Cup R5 (1G, 65', 6.8) + MD37 (6.9, CDM) + MD38 (6.4, CM) + MD40 (7.0, RCM) + FA Cup R6 (7.1, LCM, scored in shootout) + MD41 (MoM, 1G, 59', full 90, rating not captured, trophy lift) + MD42 (6.8, LCM, full 90) + MD43 (7.2, LCM, subbed off 68' for O'Brien) + MD44 (6.7, LCM, full 90) + MD45 (started, rating not captured) + MD46 (MoM, 1G/1A, 49', 8.3, LCM, full 90 — season finale)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Cleworth</div><div class="s-pos">CB</div></div>
+  <span class="s-num">16</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Andrés Gómez</div><div class="s-pos">RM · RW</div></div>
+  <span class="s-num">14</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-num highlight">6</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">G. Dobson</div><div class="s-pos">CM</div></div>
+  <span class="s-num">14</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">D. Keillor-Dunn</div><div class="s-pos">RW · CAM</div></div>
+  <span class="s-num">13</span>
+  <span class="s-num highlight">9</span>
+  <span class="s-num highlight">3</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">7.3</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">B. Cadamarteri</div><div class="s-pos">ST</div></div>
+  <span class="s-num">13</span>
+  <span class="s-num highlight">4</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">G. Thomason</div><div class="s-pos">CM · RM</div></div>
+  <span class="s-num">13</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">S. Ortega</div><div class="s-pos">CAM · LW</div></div>
+  <span class="s-num">8</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.5</span>
+  <span class="s-award">🌱 Rookie of the Year</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">O. Rathbone</div><div class="s-pos">CM</div></div>
+  <span class="s-num">8</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.2</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">D. Ward</div><div class="s-pos">GK</div></div>
+  <span class="s-num">7</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Webber</div><div class="s-pos">GK</div></div>
+  <span class="s-num">5</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. Brunt</div><div class="s-pos">CB</div></div>
+  <span class="s-num">4</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
@@ -1329,8 +1484,9 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">3</span>
   <span class="s-num highlight">1</span>
   <span class="s-num">0</span>
+  <span class="s-motm">—</span>
   <span class="s-rating">6.9</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Signed as a free agent 2026-04-18. MD44 debut (6.5, RCM, full 90) + MD45 (7.1, RCM, full 90) + MD46 (1G, 83', 7.1, RCM, sub on 65' for Sheaf — season finale)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
@@ -1338,8 +1494,29 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">3</span>
   <span class="s-num">0</span>
   <span class="s-num highlight">3</span>
+  <span class="s-motm">—</span>
   <span class="s-rating">6.3</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Signed as a free agent 2026-04-18. MD44 debut (6.2, RW, full 90) + MD45 (3A, started, rating not captured) + MD46 (sub on 65' for Rodríguez, 6.6 — season finale)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Z. Vyner</div><div class="s-pos">RB</div></div>
+  <span class="s-num">3</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">7.0</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">R. Longman</div><div class="s-pos">RW · RB</div></div>
+  <span class="s-num">3</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="stats-row">
@@ -1347,12 +1524,23 @@ if ('serviceWorker' in navigator) {
   <span class="s-num">2</span>
   <span class="s-num highlight">1</span>
   <span class="s-num">0</span>
+  <span class="s-motm">—</span>
   <span class="s-rating">6.5</span>
-  <span class="s-mins" style="color:var(--dispatch-blue)">Signed as a free agent 2026-04-18. MD44 debut (6.0, CAM, sub on 72' for Moore) + MD46 (1G, 53', 7.0, RW, full 90 — season finale)</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">A. James</div><div class="s-pos">CB</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">—</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-award" style="color:var(--muted); font-weight:400;">—</span>
 </div>
 
 <div class="data-note">
-  <strong>Goals reconciled from the match log through MD33 (Ipswich, Feb 21) + FA Cup R4 (Notts County, Feb 14)</strong> — senior matches (Championship + Carabao Cup + FA Cup). Moore 27, Rodríguez 16, Broadhead 11, Amrizi 8, Keillor-Dunn 7, Windass 6, Dobson 3, O'Brien 4, Cadamarteri 4, Gutiérrez 2, Bobadilla 1, Gómez 2, Kaboré 1, Cacace 1 (Keillor-Dunn and Windass each include one Carabao Cup goal; Moore, Rodríguez and Broadhead each include one FA Cup goal vs Leicester; O'Brien and Cadamarteri each include FA Cup R4 goals vs Notts County). Apps for MD32–33 and FA Cup R4 added for every player who featured, including the heavily-rotated Notts County lineup; assists updated where confirmed. Apps/assists for MD16–27 remain pending full screenshot reconciliation. Notts County's second goal (2–3) — only J. Jones' 33' strike is confirmed from screenshots; the second scorer/time is unconfirmed. <strong>MD12 note: D. Ward started in goal (not Okonkwo).</strong> Andrés Gómez and Brian Gutiérrez signed as free agents 2026-01-31 and debuted the same day vs Sheffield Wed. Damián Bobadilla signed as a free agent 2026-02-07 and scored on debut vs Millwall the same day.
+  <strong>Season 1 final datatable (2025–26)</strong> — senior appearances across all competitions (EFL Championship, FA Cup, Carabao Cup). MOTM = Man of the Match awards (J.L. Rodríguez's tally merges box-score credits logged under both “J. Rodríguez” and “J.L. Rodríguez” across the season). Press Award column reflects the Red Dragon Dispatch's end-of-season vote — see the Season in Review entry for the full case behind each pick. Academy contributors (Anton Gassner, Pieter Dijkgraaf, Oliver Horne, Juan Cruz Vargas and others) are tracked separately on the Academy page; Juan Cruz Vargas (CAM, POT 90–94) was voted Rising Star of the Year for his standout campaign at Youth Rush Tournament level.
 </div>
 
 
