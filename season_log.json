@@ -97,6 +97,22 @@
       "club": "Manchester United",
       "fee": "",
       "wage": "$22,000"
+    },
+    {
+      "date": "2026-07-23",
+      "player": "Issa Kabore",
+      "direction": "out",
+      "club": "Manchester City",
+      "fee": "Loan return",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-23",
+      "player": "Jay Rodriguez",
+      "direction": "out",
+      "club": "Stade Brestois 29",
+      "fee": "Free (contract expired)",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -141,6 +157,10 @@
     {
       "date": "2026-07-23",
       "description": "Signed Chido Obi (18, ST) from the Manchester United academy — a striker prospect, contract accepted with no negotiation friction."
+    },
+    {
+      "date": "2026-07-23",
+      "description": "Issa Kabore returned to Manchester City at the end of his loan - the club decided not to pursue a permanent deal. Jay Rodriguez left as a free agent, joining Stade Brestois 29 on the pre-agreed pre-contract move flagged earlier in the summer. Harry Ashfield is back from his Cheltenham Town loan spell. Right-back depth is now thin behind Amelia and A. James."
     }
   ]
 }
