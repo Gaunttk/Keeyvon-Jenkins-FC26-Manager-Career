@@ -36,7 +36,7 @@
       "player": "Danny Ward",
       "direction": "out",
       "club": "Utrecht",
-      "fee": "£1.3m",
+      "fee": "$1.3m",
       "wage": ""
     },
     {
@@ -44,7 +44,7 @@
       "player": "Josh Windass",
       "direction": "out",
       "club": "Wolves",
-      "fee": "£2.6m",
+      "fee": "$2.6m",
       "wage": ""
     },
     {
@@ -52,7 +52,7 @@
       "player": "Nathan Broadhead",
       "direction": "out",
       "club": "Olympique Lyonnais",
-      "fee": "£4.5m",
+      "fee": "$4.5m",
       "wage": ""
     },
     {
@@ -60,7 +60,7 @@
       "player": "Zak Vyner",
       "direction": "out",
       "club": "SC Braga",
-      "fee": "£2.4m",
+      "fee": "$2.4m",
       "wage": ""
     },
     {
@@ -68,7 +68,7 @@
       "player": "Davis Keillor-Dunn",
       "direction": "out",
       "club": "Levante UD",
-      "fee": "£2.55m",
+      "fee": "$2.55m",
       "wage": ""
     }
   ],

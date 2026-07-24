@@ -687,30 +687,12 @@
       "wage": ""
     },
     {
-      "date": "2025-12-08",
-      "player": "D. Scarr",
-      "direction": "out",
-      "club": "BSC Young Boys",
-      "fee": "$1,170,000",
-      "wage": "",
-      "notes": "Personal terms agreed; completes when the transfer window opens. Board allocating $853,866 to transfer budget. Supersedes an earlier Gil Vicente FC deal (logged 2025-08-15) that fell through in contract negotiations and never completed."
-    },
-    {
       "date": "2025-08-20",
       "player": "Y. Amrizi",
       "direction": "in",
       "club": "Free Agent",
       "fee": "£0",
       "wage": "£26.5k/w"
-    },
-    {
-      "date": "2025-10-30",
-      "player": "C. Burton",
-      "direction": "out",
-      "club": "Kocaelispor",
-      "fee": "$400k",
-      "wage": "",
-      "notes": "Confirmed Oct 30. Earlier talks with AFC Hermannstadt and Zaglebbie Lubin both broke down. Board allocated $283,440 to transfer budget. Sale noted as Bad Negotiation — market value $350k, best possible deal was $550k."
     },
     {
       "date": "2025-08-31",
@@ -736,6 +718,32 @@
       "fee": "$1.25m",
       "wage": "",
       "notes": "Deal agreed, completes when January transfer window opens. Price rating A — Excellent Deal (market value $925k). Board allocating $913,875 to transfer budget. Separate: C. Burton talks with Zagłębie Lubin broke down 05/10."
+    },
+    {
+      "date": "2025-10-14",
+      "player": "T. O'Connor",
+      "direction": "out",
+      "club": "KOC",
+      "fee": "$1.3m",
+      "wage": ""
+    },
+    {
+      "date": "2025-10-30",
+      "player": "C. Burton",
+      "direction": "out",
+      "club": "Kocaelispor",
+      "fee": "$400k",
+      "wage": "",
+      "notes": "Confirmed Oct 30. Earlier talks with AFC Hermannstadt and Zaglebbie Lubin both broke down. Board allocated $283,440 to transfer budget. Sale noted as Bad Negotiation — market value $350k, best possible deal was $550k."
+    },
+    {
+      "date": "2025-12-08",
+      "player": "D. Scarr",
+      "direction": "out",
+      "club": "BSC Young Boys",
+      "fee": "$1,170,000",
+      "wage": "",
+      "notes": "Personal terms agreed; completes when the transfer window opens. Board allocating $853,866 to transfer budget. Supersedes an earlier Gil Vicente FC deal (logged 2025-08-15) that fell through in contract negotiations and never completed."
     },
     {
       "date": "2025-12-28",
@@ -776,6 +784,14 @@
       "direction": "out",
       "club": "NEC Nijmegen",
       "fee": "$2,500,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-01-31",
+      "player": "R. Longman",
+      "direction": "out",
+      "club": "Stoke City",
+      "fee": "$2.0m",
       "wage": ""
     },
     {
