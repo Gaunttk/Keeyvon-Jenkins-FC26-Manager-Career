@@ -80,7 +80,10 @@ if ('serviceWorker' in navigator) {
     <div class="acad-card-top">
       <div class="acad-jersey-wrap">
         <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
-          <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+          <defs><clipPath id="jc-fr"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+          <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#DD0000"/>
+          <rect x="0"  y="0" width="80" height="29.3" fill="#000000" clip-path="url(#jc-fr)"/>
+          <rect x="0"  y="58.6" width="80" height="29.4" fill="#FFCE00" clip-path="url(#jc-fr)"/>
           <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
           <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="26" fill="white" stroke="#7a0000" stroke-width="3" paint-order="stroke" text-anchor="middle">New</text>
         </svg>
@@ -89,13 +92,16 @@ if ('serviceWorker' in navigator) {
       <div class="acad-profile-body">
         <div class="acad-profile-name">Finn Richter</div>
         <div class="acad-profile-meta">
-          <span class="acad-pos-badge gk">GK</span>New signing
+          <span class="acad-pos-badge gk">GK</span>Age 17 &middot; Germany
         </div>
         <div class="acad-dev-row">
-          <span class="acad-dev-item">Attributes pending &mdash; awaiting scouting screenshots</span>
+          <span class="acad-dev-item"><strong>Dev</strong> Dynamic &middot; GK: Div 59/Han 61/Kic 55/Ref 63/Pos 61</span>
         </div>
       </div>
       <div class="acad-card-right">
+        <div class="acad-ovr">62</div>
+        <span class="acad-ovr-label">OVR</span>
+        <div class="acad-pot"><strong>POT</strong>67&ndash;85</div>
       </div>
     </div>
   </div>

@@ -85,10 +85,18 @@
     {
       "date": "2026-06-04",
       "player": "George Dobson",
-      "direction": "in",
+      "direction": "out",
       "club": "Besiktas JK",
       "fee": "$2.55m",
       "wage": ""
+    },
+    {
+      "date": "2026-07-23",
+      "player": "Chido Obi",
+      "direction": "in",
+      "club": "Manchester United",
+      "fee": "",
+      "wage": "$22,000"
     }
   ],
   "injuries": [
@@ -128,7 +136,11 @@
     },
     {
       "date": "2026-06-04",
-      "description": "Squad update — Andres Gomez returns from his broken toe injury. Aaron James will not be offered a new contract and will leave as a free agent when his deal expires. The club will try to sign Issa Kabore permanently when his Man City loan expires, though affordability is uncertain. George Dobson re-signed permanently from Besiktas JK for $2.55m. Signed academy goalkeeper Finn Richter instead of the previously reported Lenny Kuhn."
+      "description": "Squad update — Andres Gomez returns from his broken toe injury. Aaron James will not be offered a new contract and will leave as a free agent when his deal expires. The club will try to sign Issa Kabore permanently when his Man City loan expires, though affordability is uncertain. George Dobson transferred out to Besiktas JK for $2.55m. Signed academy goalkeeper Finn Richter (Germany) instead of the previously reported Lenny Kuhn."
+    },
+    {
+      "date": "2026-07-23",
+      "description": "Signed Chido Obi (18, ST) from the Manchester United academy — a striker prospect, contract accepted with no negotiation friction."
     }
   ]
 }
