@@ -28,6 +28,17 @@
       "competition": "Youth Academy Rush Tournament",
       "notes": "Soria, Lord, Vargas",
       "journal_entry": true
+    },
+    {
+      "date": "2026-06-19",
+      "opponent": "Blackburn",
+      "home": true,
+      "score": "4-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Matthews (2), Bianchi, Vargas. MoM: Vargas (1 goal, 2 assists). Controlled from start to finish.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -70,6 +81,14 @@
       "club": "Levante UD",
       "fee": "$2.55m",
       "wage": ""
+    },
+    {
+      "date": "2026-06-04",
+      "player": "George Dobson",
+      "direction": "in",
+      "club": "Besiktas JK",
+      "fee": "$2.55m",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -106,6 +125,10 @@
     {
       "date": "2026-07-23",
       "description": "Aaron James (20, CB/RB, academy prospect) has submitted a transfer request — contract length demands not met and his deal is down to just 1 month remaining. Needs a squad-management decision (renew, extend, or let him go)."
+    },
+    {
+      "date": "2026-06-04",
+      "description": "Squad update — Andres Gomez returns from his broken toe injury. Aaron James will not be offered a new contract and will leave as a free agent when his deal expires. The club will try to sign Issa Kabore permanently when his Man City loan expires, though affordability is uncertain. George Dobson re-signed permanently from Besiktas JK for $2.55m. Signed academy goalkeeper Finn Richter instead of the previously reported Lenny Kuhn."
     }
   ]
 }

@@ -20,6 +20,16 @@
       "journal_entry": true
     },
     {
+      "date": "2025-07-15",
+      "opponent": "SD Huesca",
+      "home": true,
+      "score": "4-2",
+      "result": "W",
+      "competition": "Pre-Season Friendly",
+      "notes": "The very first game of the Jenkins era at Wrexham — no individual stats tracked.",
+      "journal_entry": false
+    },
+    {
       "date": "2025-07-18",
       "opponent": "Bradford City",
       "home": false,
@@ -358,16 +368,6 @@
       "journal_entry": true
     },
     {
-      "date": "2026-01-04",
-      "opponent": "Derby County",
-      "home": false,
-      "score": "0-2",
-      "result": "W",
-      "competition": "EFL Championship",
-      "notes": "K. Moore 67'/72' (brace, 7.7, MoM/PotM). J. Rodríguez 6.6 (0G 1A). B. Sheaf 1A (7.2). J. Windass 7.5. Lineup: Okonkwo (GK, 6.9), Kaboré (RB, 6.8), Hyam (RCB, 6.9), Doyle (LCB, 7.2), Cacace (LB, 6.4), O'Brien (LCM, 6.9), Sheaf (RCM, 7.2 1A), Windass (CAM, 7.5), Rodríguez (LW, 6.6 PotM 1A), Broadhead (RW, 6.5), Moore (ST, 7.7 2G). Subs 77': Cadamarteri for Moore, Amrizi for Broadhead, Dobson for Windass, Brunt for Hyam, Amelia for Kaboré. Sub ratings: Cadamarteri 5.6, Amrizi 5.9, Dobson 5.9, Brunt 6.8, Amelia 6.2. Derby sub: Szmodics for Murkin 89'. Shots 4-8 (DER-WRX), xG 1.1-4.0, poss 56-44%, passes 190-151 (86-86% acc), tackles 10-17 (60-29% success), interceptions 14-14, saves 2-3, corners 2-3, def duels won 14-20, beaten by opp 5-9. No cards. Wrexham 2nd (P26 W18 D4 L4, GF68 GA33 GD35, 58 pts), 1 point behind Ipswich (59).",
-      "journal_entry": true
-    },
-    {
       "date": "2026-01-01",
       "opponent": "Blackburn Rovers",
       "home": true,
@@ -375,6 +375,16 @@
       "result": "W",
       "competition": "EFL Championship",
       "notes": "Moore 7', J. Rodríguez 22'/34' (brace, HT 3-0), Y. Ohashi 48' (BLK), Moore 67', Amrizi 85' (sub on 68'), Keillor-Dunn 90' (sub on 68'). PotM: J. Rodríguez 9.6 (2G 2A). Subs 68': Amrizi for Moore, Keillor-Dunn for Broadhead, Cadamarteri for Windass, Cleworth for Hyam, Amelia for Kaboré. Lineup: Okonkwo (GK), Kaboré (RB), Doyle (LCB), Cleworth (RCB), Cacace (LB), Sheaf (RCM, 7.1), Dobson (LCM, 7.1), Windass (CAM, 7.0, 1A), Rodríguez (LW, 9.6, 2G 2A), Broadhead (RW, 7.7, 2A), Moore (ST, 8.2, 2G). Sub ratings: Amrizi 7.1 (1G), Keillor-Dunn 7.8 (1G), Cadamarteri 5.6, Cleworth 6.8, Amelia n/a. Cacace 6.9 (1A). Shots 3-12 (BLK-WRX), passes 183-141 (86-85% acc), interceptions 15-20, dribble success 95-94%, tackle success 67-27%, saves 0-2. Yellow: 1 (BLK). Wrexham 2nd in Championship (P25 W17 D4 L4, GF66 GA33, 55 pts), 1 point behind Ipswich (56).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-01-04",
+      "opponent": "Derby County",
+      "home": false,
+      "score": "0-2",
+      "result": "W",
+      "competition": "EFL Championship",
+      "notes": "K. Moore 67'/72' (brace, 7.7, MoM/PotM). J. Rodríguez 6.6 (0G 1A). B. Sheaf 1A (7.2). J. Windass 7.5. Lineup: Okonkwo (GK, 6.9), Kaboré (RB, 6.8), Hyam (RCB, 6.9), Doyle (LCB, 7.2), Cacace (LB, 6.4), O'Brien (LCM, 6.9), Sheaf (RCM, 7.2 1A), Windass (CAM, 7.5), Rodríguez (LW, 6.6 PotM 1A), Broadhead (RW, 6.5), Moore (ST, 7.7 2G). Subs 77': Cadamarteri for Moore, Amrizi for Broadhead, Dobson for Windass, Brunt for Hyam, Amelia for Kaboré. Sub ratings: Cadamarteri 5.6, Amrizi 5.9, Dobson 5.9, Brunt 6.8, Amelia 6.2. Derby sub: Szmodics for Murkin 89'. Shots 4-8 (DER-WRX), xG 1.1-4.0, poss 56-44%, passes 190-151 (86-86% acc), tackles 10-17 (60-29% success), interceptions 14-14, saves 2-3, corners 2-3, def duels won 14-20, beaten by opp 5-9. No cards. Wrexham 2nd (P26 W18 D4 L4, GF68 GA33 GD35, 58 pts), 1 point behind Ipswich (59).",
       "journal_entry": true
     },
     {
