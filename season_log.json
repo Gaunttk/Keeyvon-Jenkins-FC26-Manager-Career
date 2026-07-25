@@ -39,6 +39,17 @@
       "round": "Final",
       "notes": "Matthews (2), Bianchi, Vargas. MoM: Vargas (1 goal, 2 assists). Controlled from start to finish.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-07-07",
+      "opponent": "West Ham",
+      "home": true,
+      "score": "3-2",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Quarter Final",
+      "notes": "Lord, Vargas, Soria",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -113,6 +124,22 @@
       "club": "Stade Brestois 29",
       "fee": "Free (contract expired)",
       "wage": ""
+    },
+    {
+      "date": "2026-07-07",
+      "player": "Jorthy Mokio",
+      "direction": "in",
+      "club": "Ajax",
+      "fee": "£8.7m",
+      "wage": "$26,000"
+    },
+    {
+      "date": "2026-07-07",
+      "player": "Toni Fruk",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "Free",
+      "wage": "$67,000"
     }
   ],
   "injuries": [
@@ -152,7 +179,7 @@
     },
     {
       "date": "2026-06-04",
-      "description": "Squad update — Andres Gomez returns from his broken toe injury. Aaron James will not be offered a new contract and will leave as a free agent when his deal expires. The club will try to sign Issa Kabore permanently when his Man City loan expires, though affordability is uncertain. George Dobson transferred out to Besiktas JK for $2.55m. Signed academy goalkeeper Finn Richter (Germany) instead of the previously reported Lenny Kuhn."
+      "description": "Squad update — Andres Gomez returns from his broken toe injury. Aaron James will not be offered a new contract and will leave as a free agent when his deal expires. The club will try to sign Issa Kabore permanently when his Man City loan expires, though affordability is uncertain. George Dobson transferred out to Besiktas JK for $2.55m. Signed academy goalkeeper (Germany), initially misreported as Lenny Kuhn, then as Finn Richter — real identity confirmed 2026-07-07 as Leo Bergmann."
     },
     {
       "date": "2026-07-23",
@@ -161,6 +188,14 @@
     {
       "date": "2026-07-23",
       "description": "Issa Kabore returned to Manchester City at the end of his loan - the club decided not to pursue a permanent deal. Jay Rodriguez left as a free agent, joining Stade Brestois 29 on the pre-agreed pre-contract move flagged earlier in the summer. Harry Ashfield is back from his Cheltenham Town loan spell. Right-back depth is now thin behind Amelia and A. James."
+    },
+    {
+      "date": "2026-07-07",
+      "description": "Signed Jorthy Mokio (18, CDM/CM/LB) from Ajax for £8.7m and Toni Fruk (25, ST/CAM/CM) as a free agent. Fruk slots straight in as the squad's top-rated striker (OVR 79) as Kieffer Moore's decline continues."
+    },
+    {
+      "date": "2026-07-07",
+      "description": "Academy: signed 14-year-old French striker Mathieu Drouet (POT 80–94). Also corrected the identity of the German academy goalkeeper signed 2026-06-04 — previously misreported as Lenny Kuhn, then as Finn Richter — the real player is Leo Bergmann (16, POT 71–89)."
     }
   ]
 }
