@@ -140,6 +140,54 @@
       "club": "Free Agent",
       "fee": "Free",
       "wage": "$67,000"
+    },
+    {
+      "date": "2026-07-16",
+      "player": "José Luis Rodríguez",
+      "direction": "out",
+      "club": "Al Qadsiah",
+      "fee": "$6,400,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Sebastian Revan",
+      "direction": "out",
+      "club": "NEOM SC",
+      "fee": "$2,000,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Conor Coady",
+      "direction": "out",
+      "club": "RSC Anderlecht",
+      "fee": "$910,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Ryan Hardie",
+      "direction": "out",
+      "club": "Leicester City",
+      "fee": "$1,800,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Jamal Belghazi",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "Free",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Mario Barbieri",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "Free",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -196,6 +244,252 @@
     {
       "date": "2026-07-07",
       "description": "Academy: signed 14-year-old French striker Mathieu Drouet (POT 80–94). Also corrected the identity of the German academy goalkeeper signed 2026-06-04 — previously misreported as Lenny Kuhn, then as Finn Richter — the real player is Leo Bergmann (16, POT 71–89)."
+    },
+    {
+      "date": "2026-07-15",
+      "description": "Alan Minda loaned out to Real Betis (2 years) and Bailey Cadamarteri loaned out to Boca Juniors (12 months). Both recallable early for an agreed fee."
+    },
+    {
+      "date": "2026-07-16",
+      "description": "José Luis Rodríguez sold to Al Qadsiah for $6,400,000. Transfer budget now stands at $4,936,320."
+    },
+    {
+      "date": "2026-07-17",
+      "description": "Santiago Ortega loaned out to Birmingham City for 12 months, recallable for an agreed fee."
+    },
+    {
+      "date": "2026-07-25",
+      "description": "Squad update — Sebastian Revan sold to NEOM SC ($2.0m), Conor Coady sold to RSC Anderlecht ($910k), and Ryan Hardie sold to Leicester City ($1.8m). Signed Jamal Belghazi (17, CDM/CM, being converted to CB) and Mario Barbieri (17, RB) as free agents."
+    }
+  ],
+  "fixtures": [
+    {
+      "date": "2026-08-15",
+      "opponent": "Wolves",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-08-22",
+      "opponent": "Sheffield United",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-08-29",
+      "opponent": "Bournemouth",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-09-12",
+      "opponent": "Tottenham",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-09-19",
+      "opponent": "Chelsea",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-09-27",
+      "opponent": "Brighton",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-04",
+      "opponent": "Newcastle",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-17",
+      "opponent": "Manchester United",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-31",
+      "opponent": "Aston Villa",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-11-08",
+      "opponent": "Liverpool",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-11-22",
+      "opponent": "Arsenal",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-11-28",
+      "opponent": "Nottingham Forest",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-01",
+      "opponent": "Sunderland",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-06",
+      "opponent": "Leeds United",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-12",
+      "opponent": "Manchester City",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Brentford",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-25",
+      "opponent": "West Ham",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-29",
+      "opponent": "Ipswich Town",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-02",
+      "opponent": "Brighton",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-06",
+      "opponent": "Chelsea",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-17",
+      "opponent": "West Ham",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-24",
+      "opponent": "Brentford",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-30",
+      "opponent": "Sheffield United",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-06",
+      "opponent": "Wolves",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-10",
+      "opponent": "Sunderland",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-20",
+      "opponent": "Nottingham Forest",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-27",
+      "opponent": "Arsenal",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Liverpool",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-03-13",
+      "opponent": "Tottenham",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-03-20",
+      "opponent": "Bournemouth",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-04-11",
+      "opponent": "Aston Villa",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-04-17",
+      "opponent": "Crystal Palace",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-04-24",
+      "opponent": "Ipswich Town",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-05-01",
+      "opponent": "Manchester United",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-05-08",
+      "opponent": "Newcastle",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-05-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-05-23",
+      "opponent": "Leeds United",
+      "home": true,
+      "competition": "Premier League"
     }
   ]
 }

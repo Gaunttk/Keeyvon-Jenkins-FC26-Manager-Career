@@ -39,7 +39,8 @@ def pick(d, fields):
 
 def build_summary(log):
     matches = log.get("matches", [])
-    league = [m for m in matches if m.get("competition") == "EFL Championship"]
+    league_name = log.get("_meta", {}).get("competition", "EFL Championship")
+    league = [m for m in matches if m.get("competition") == league_name]
     cup = [m for m in matches if m.get("competition") == "Carabao Cup"]
     fa_cup = [m for m in matches if m.get("competition") == "FA Cup"]
     competitive = [m for m in matches if m.get("competition") not in PRESEASON_COMPS]
@@ -71,7 +72,40 @@ def build_summary(log):
     all_events.sort(key=lambda e: e["date"], reverse=True)
     recent = all_events[:RECENT_LIMIT]
 
-    return {"_meta": log.get("_meta", {}), "stats": stats, "recent": recent}
+    schedule = build_schedule(log, league_name)
+
+    return {"_meta": log.get("_meta", {}), "stats": stats, "recent": recent, "schedule": schedule}
+
+
+def build_schedule(log, league_name):
+    """Cross-reference the fixed 38-game fixture list with played results.
+
+    Matched by (opponent, home) rather than date -- each opponent is played
+    home and away exactly once per season, so this stays correct even if a
+    fixture's actual played date drifts from the originally scheduled one.
+    """
+    fixtures = log.get("fixtures", [])
+    league_matches = {
+        (m.get("opponent"), m.get("home")): m
+        for m in log.get("matches", [])
+        if m.get("competition") == league_name
+    }
+
+    schedule = []
+    for i, fx in enumerate(fixtures, start=1):
+        key = (fx.get("opponent"), fx.get("home"))
+        played = league_matches.get(key)
+        entry = {
+            "md": i,
+            "date": fx.get("date"),
+            "opponent": fx.get("opponent"),
+            "home": fx.get("home"),
+        }
+        if played:
+            entry["score"] = played.get("score")
+            entry["result"] = played.get("result")
+        schedule.append(entry)
+    return schedule
 
 
 def main():
