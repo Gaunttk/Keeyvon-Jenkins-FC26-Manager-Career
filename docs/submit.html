@@ -238,6 +238,7 @@ if ('serviceWorker' in navigator) {
       <div class="form-group">
         <label for="competition">Competition</label>
         <select id="competition">
+          <option value="Premier League">Premier League</option>
           <option value="EFL Championship">EFL Championship</option>
           <option value="Carabao Cup">Carabao Cup</option>
           <option value="FA Cup">FA Cup</option>
@@ -425,9 +426,9 @@ document.getElementById('opponent').addEventListener('input', function() {
   document.getElementById('opponent-name-score').textContent = this.value || 'Opponent';
 });
 
-// ── Competition → show round (non-league only; EFL Championship matchday is derived, not entered) ──
+// ── Competition → show round (non-league only; league matchday is derived, not entered) ──
 document.getElementById('competition').addEventListener('change', function() {
-  var isLeague = this.value === 'EFL Championship';
+  var isLeague = this.value === 'Premier League' || this.value === 'EFL Championship';
   document.getElementById('round-group').style.display = isLeague ? 'none' : '';
 });
 
@@ -563,7 +564,7 @@ ${writeJournal ? 'Yes' : 'No'}
   if (t.json.length)   logEntry += '\n\n// Add to "transfers" array:\n' + t.json.join(',\n');
   if (inj.json.length) logEntry += '\n\n// Add to "injuries" array:\n' + inj.json.join(',\n');
 
-  var commitMsg = 'Squad update: ' + (whatChanged.join(', ') || 'roster/attributes') + '\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
+  var commitMsg = 'Squad update: ' + (whatChanged.join(', ') || 'roster/attributes') + '\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>';
 
   var chipLabel = 'Squad · ' + (whatChanged[0] || 'Update') + (whatChanged.length > 1 ? ' +' + (whatChanged.length-1) : '');
 
@@ -613,7 +614,7 @@ function generate() {
 function clearForm() {
   var keepDate = document.getElementById('date').value;
 
-  document.getElementById('competition').value = 'EFL Championship';
+  document.getElementById('competition').value = 'Premier League';
   document.getElementById('competition').dispatchEvent(new Event('change'));
   document.getElementById('round').value = '';
   document.getElementById('opponent').value = '';
@@ -758,7 +759,7 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
   if (injuryJSON.length)   logEntry += '\n\n// Add to "injuries" array:\n' + injuryJSON.join(',\n');
 
   var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
-  var commitMsg = competition.split(' ').slice(-1)[0] + ' entry: ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>';
+  var commitMsg = competition.split(' ').slice(-1)[0] + ' entry: ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>';
 
   var chipLabel = competition.split(' ').pop() + ' · ' + opponent + ' · ' + scoreStr + ' · ' + result;
 
@@ -889,7 +890,7 @@ function populateForm(raw) {
     return;
   }
 
-  document.getElementById('competition').value = raw.competition || 'EFL Championship';
+  document.getElementById('competition').value = raw.competition || 'Premier League';
   document.getElementById('competition').dispatchEvent(new Event('change'));
   document.getElementById('opponent').value = raw.opponent || '';
   document.getElementById('opponent-name-score').textContent = raw.opponent || 'Opponent';
