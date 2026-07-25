@@ -231,6 +231,12 @@ body {
   margin-top: 3px;
   display: block;
 }
+.stats-bar-6 { grid-template-columns: repeat(6, 1fr); }
+@media (max-width: 480px) {
+  .stats-bar-6 { grid-template-columns: repeat(3, 1fr); }
+  .stats-bar-6 .stat-cell:nth-child(3) { border-right: none; }
+  .stats-bar-6 .stat-cell:nth-child(n+4) { border-top: 1px solid var(--mid); }
+}
 
 /* ─── CONTENT SECTIONS ─── */
 .section {
@@ -1455,7 +1461,6 @@ body {
   text-transform: uppercase;
   padding: 1px 5px;
   display: inline-block;
-  white-space: nowrap;
 }
 .dflag-r  { background: rgba(200,16,46,0.2); color: #ff6b6b; }
 .dflag-g  { background: rgba(212,168,67,0.14); color: var(--gold); }

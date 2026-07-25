@@ -224,14 +224,6 @@
       "club": "Preston North End",
       "fee": "$1,000,000",
       "wage": ""
-    },
-    {
-      "date": "2026-07-28",
-      "player": "Giovanni Leoni",
-      "direction": "in",
-      "club": "Liverpool",
-      "fee": "$4,600,000",
-      "wage": ""
     }
   ],
   "injuries": [
@@ -311,7 +303,7 @@
     },
     {
       "date": "2026-07-28",
-      "description": "Elliot Lee sold to Preston North End ($1.0m); signed Giovanni Leoni (CB) from Liverpool for $4.6m."
+      "description": "Elliot Lee sold to Preston North End ($1.0m). Move for Giovanni Leoni (CB, Liverpool) fell through — the two clubs could not agree contract terms."
     }
   ],
   "fixtures": [
