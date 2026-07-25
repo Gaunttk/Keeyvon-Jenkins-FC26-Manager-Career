@@ -62,7 +62,7 @@ if ('serviceWorker' in navigator) {
 
 <!-- PREMIER LEAGUE STATS BAR -->
 <div class="league-bar-label">
-  <img src="assets/photos/premier-league-england-logo-footylogos.png" class="comp-logo" alt="Premier League">
+  <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League">
   Premier League
 </div>
 <div class="season-bar">
@@ -139,7 +139,7 @@ if ('serviceWorker' in navigator) {
 <!-- SEASON SCHEDULE -->
 <div class="log-section" style="margin-top:24px;">
   <div class="section-label">
-    <img src="assets/photos/premier-league-england-logo-footylogos.png" class="comp-logo" alt="Premier League" style="height:18px;width:auto;vertical-align:middle;margin-right:6px;opacity:0.85;">
+    <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League" style="height:18px;width:auto;vertical-align:middle;margin-right:6px;opacity:0.85;">
     Premier League — Season Schedule
   </div>
   <div id="season-schedule-rows"></div>
@@ -356,7 +356,7 @@ function loadSeasonLog() {
     container.innerHTML = '';
 
     const compLogoMap = {
-      'Premier League': 'assets/photos/premier-league-england-logo-footylogos.png',
+      'Premier League': 'assets/photos/premier-league-england-white-logo-footylogos.png',
       'EFL Championship': 'assets/photos/efl-championship-england-logo-footylogos.png',
       'Carabao Cup': 'assets/photos/carabao-cup.png',
       'FA Cup': 'assets/photos/crests/england_emirates-fa-cup_512x512.football-logos.cc.png'
@@ -396,6 +396,30 @@ function loadSeasonLog() {
     });
 
     if (schedule && schedule.length) {
+      const eplFolder = 'assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/';
+      const efcFolder = 'assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/256x256/';
+      const opponentCrestMap = {
+        'Arsenal': eplFolder + 'arsenal.football-logos.cc.png',
+        'Aston Villa': eplFolder + 'aston-villa.football-logos.cc.png',
+        'Bournemouth': eplFolder + 'bournemouth.football-logos.cc.png',
+        'Brentford': eplFolder + 'brentford.football-logos.cc.png',
+        'Brighton': eplFolder + 'brighton.football-logos.cc.png',
+        'Chelsea': eplFolder + 'chelsea.football-logos.cc.png',
+        'Crystal Palace': eplFolder + 'crystal-palace.football-logos.cc.png',
+        'Ipswich Town': eplFolder + 'ipswich.football-logos.cc.png',
+        'Leeds United': eplFolder + 'leeds-united.football-logos.cc.png',
+        'Liverpool': eplFolder + 'liverpool.football-logos.cc.png',
+        'Manchester City': eplFolder + 'manchester-city.football-logos.cc.png',
+        'Manchester United': eplFolder + 'manchester-united.football-logos.cc.png',
+        'Newcastle': eplFolder + 'newcastle.football-logos.cc.png',
+        'Nottingham Forest': eplFolder + 'nottingham-forest.football-logos.cc.png',
+        'Sunderland': eplFolder + 'sunderland.football-logos.cc.png',
+        'Tottenham': eplFolder + 'tottenham.football-logos.cc.png',
+        'Sheffield United': efcFolder + 'sheffield-united.football-logos.cc.png',
+        'West Ham': efcFolder + 'west-ham.football-logos.cc.png',
+        'Wolves': efcFolder + 'wolves.football-logos.cc.png',
+      };
+
       const scheduleContainer = document.getElementById('season-schedule-rows');
       scheduleContainer.innerHTML = '';
       schedule.forEach(fx => {
@@ -408,7 +432,11 @@ function loadSeasonLog() {
         } else {
           tagHtml = `<span class="log-tag note">MD${fx.md}</span>`;
         }
-        const eventHtml = `<strong>${fx.home ? 'vs' : '@'} ${fx.opponent}</strong>`;
+        const crest = opponentCrestMap[fx.opponent];
+        const crestTag = crest
+          ? `<img src="${crest}" style="height:16px;width:auto;vertical-align:middle;margin-right:6px;">`
+          : '';
+        const eventHtml = `${crestTag}<strong>${fx.home ? 'vs' : '@'} ${fx.opponent}</strong>`;
         row.innerHTML = `
           <span class="log-event">${eventHtml}</span>
           <span class="log-date">${fx.date}</span>
