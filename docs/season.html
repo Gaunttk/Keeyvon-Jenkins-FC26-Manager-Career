@@ -294,7 +294,7 @@ if ('serviceWorker' in navigator) {
 <!-- ── OVERALL TALLY ── -->
 <div class="record-bar">
   <div class="record-cell">
-    <div class="record-num green">0</div>
+    <div class="record-num green">2</div>
     <div class="record-label">Wins</div>
   </div>
   <div class="record-cell">
@@ -324,6 +324,44 @@ if ('serviceWorker' in navigator) {
      MATCH LOG — grouped by competition, each an accordion
 ══════════════════════════════════════════ -->
 <div class="section-divider">Match Log</div>
+
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
+    <span class="comp-summary-name">European International Cup</span>
+    <span class="comp-summary-stats"><strong>P2 W2 D0 L0</strong> &nbsp;GF6 GA1</span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jul 28, 2026</span>
+    <div><div class="ml-opponent">UD Las Palmas</div><div class="ml-comp">European International Cup</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result w">W 3&ndash;1</span>
+    <span class="ml-mom">J. Belghazi</span>
+    <span class="ml-goals"><strong>Fruk</strong> &times;2 &middot; <strong>Ngumoha</strong></span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Jul 25, 2026</span>
+    <div><div class="ml-opponent">Hamburger SV</div><div class="ml-comp">European International Cup</div></div>
+    <span class="ml-ha">Home</span>
+    <span></span>
+    <span class="ml-result w">W 3&ndash;0</span>
+    <span class="ml-mom">A. Gómez <span style="font-size:10px; color:var(--muted)">2G 1A</span></span>
+    <span class="ml-goals"><strong>Gómez</strong> &times;2 &middot; <strong>Bobadilla</strong></span>
+  </div>
+</details>
 
 <details class="comp-accordion" open>
   <summary class="comp-summary">
@@ -387,8 +425,215 @@ if ('serviceWorker' in navigator) {
      PLAYER SEASON STATS
 ══════════════════════════════════════════ -->
 <div class="section-divider" style="margin-top:8px;">Player Season Stats — Senior Matches</div>
-<div class="log-row">
-  <span class="log-event" style="color:var(--muted); font-style:italic;">No appearances yet this season.</span>
+
+<div class="stats-header">
+  <span>Player</span>
+  <span style="text-align:center">Apps</span>
+  <span style="text-align:center">G</span>
+  <span style="text-align:center">A</span>
+  <span style="text-align:center">MOTM</span>
+  <span style="text-align:center">Rtg</span>
+  <span style="text-align:right">Press Award</span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">A. Gómez</div><div class="s-pos">RW</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">8.1</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">T. Fruk</div><div class="s-pos">CAM</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num highlight">2</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.2</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">R. Ngumoha</div><div class="s-pos">LW</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">6.7</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">D. Bobadilla</div><div class="s-pos">CM</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.2</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">J. Belghazi</div><div class="s-pos">CB</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">★×1</span>
+  <span class="s-rating">7.1</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">J. Mokio</div><div class="s-pos">LB</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.2</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">V. Veleten</div><div class="s-pos">RW</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.6</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">Y. Amrizi</div><div class="s-pos">ST</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num highlight">1</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.5</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">J. Amelia</div><div class="s-pos">LB</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.9</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Cleworth</div><div class="s-pos">CB</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.6</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Webber</div><div class="s-pos">GK</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.1</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Barbieri</div><div class="s-pos">RB</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">5.8</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">B. Gutiérrez</div><div class="s-pos">CAM</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.2</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">C. Obi</div><div class="s-pos">ST</div></div>
+  <span class="s-num">2</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.1</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">C. Doyle</div><div class="s-pos">CB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.1</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">D. Hyam</div><div class="s-pos">CB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.7</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. Cacace</div><div class="s-pos">RB</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.1</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">A. Okonkwo</div><div class="s-pos">GK</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.3</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">M. Vitális</div><div class="s-pos">CM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">6.4</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. O'Brien</div><div class="s-pos">CM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num">0</span>
+  <span class="s-num">0</span>
+  <span class="s-motm">&mdash;</span>
+  <span class="s-rating">7.1</span>
+  <span class="s-award"></span>
 </div>
 
 <div class="footer">

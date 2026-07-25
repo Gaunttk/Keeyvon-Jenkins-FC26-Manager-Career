@@ -50,6 +50,26 @@
       "round": "Quarter Final",
       "notes": "Lord, Vargas, Soria",
       "journal_entry": true
+    },
+    {
+      "date": "2026-07-25",
+      "opponent": "Hamburger SV",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "notes": "Gomez 8', Bobadilla 19', Gomez 32'. MoM: Gomez (2 goals, 1 assist).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-07-28",
+      "opponent": "UD Las Palmas",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "European International Cup",
+      "notes": "Fruk 54', Fruk 61', Ngumoha 86'. MoM: Belghazi. Press working well; young players buying into the training ground approach.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -188,6 +208,30 @@
       "club": "Free Agent",
       "fee": "Free",
       "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Rio Ngumoha",
+      "direction": "in",
+      "club": "Liverpool",
+      "fee": "$22,500,000",
+      "wage": "$38,000/w"
+    },
+    {
+      "date": "2026-07-28",
+      "player": "Elliot Lee",
+      "direction": "out",
+      "club": "Preston North End",
+      "fee": "$1,000,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-28",
+      "player": "Giovanni Leoni",
+      "direction": "in",
+      "club": "Liverpool",
+      "fee": "$4,600,000",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -260,6 +304,14 @@
     {
       "date": "2026-07-25",
       "description": "Squad update — Sebastian Revan sold to NEOM SC ($2.0m), Conor Coady sold to RSC Anderlecht ($910k), and Ryan Hardie sold to Leicester City ($1.8m). Signed Jamal Belghazi (17, CDM/CM, being converted to CB) and Mario Barbieri (17, RB) as free agents."
+    },
+    {
+      "date": "2026-07-25",
+      "description": "Signed Rio Ngumoha (17, LM/LW) from Liverpool for $22.5m."
+    },
+    {
+      "date": "2026-07-28",
+      "description": "Elliot Lee sold to Preston North End ($1.0m); signed Giovanni Leoni (CB) from Liverpool for $4.6m."
     }
   ],
   "fixtures": [
