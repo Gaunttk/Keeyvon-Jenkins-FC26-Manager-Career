@@ -234,6 +234,30 @@
       "club": "Preston North End",
       "fee": "$1,000,000",
       "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Ayden Heaven",
+      "direction": "in",
+      "club": "Manchester United",
+      "fee": "18.4M",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Andy Cannon",
+      "direction": "out",
+      "club": "Grasshopper Club Zurich",
+      "fee": "680K",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Elijah Dijkstra",
+      "direction": "in",
+      "club": "Sunderland",
+      "fee": "3.7M",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -314,6 +338,10 @@
     {
       "date": "2026-07-28",
       "description": "Elliot Lee sold to Preston North End ($1.0m)."
+    },
+    {
+      "date": "2026-07-25",
+      "description": "Ratings / potential reviewed; Roster change"
     }
   ],
   "fixtures": [
