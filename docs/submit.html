@@ -1192,15 +1192,51 @@ function clearForm() {
 }
 
 // ── Copy to clipboard ──
+function copyFallback(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.top = '-9999px';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  ta.setSelectionRange(0, text.length);
+  var ok = false;
+  try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+  document.body.removeChild(ta);
+  return ok;
+}
+
 function copyTo(preId, btnId) {
-  var text = document.getElementById(preId).textContent;
-  navigator.clipboard.writeText(text).then(function() {
-    var btn = document.getElementById(btnId);
-    var orig = btn.textContent;
-    btn.textContent = 'Copied!';
-    btn.classList.add('copied');
-    setTimeout(function() { btn.textContent = orig; btn.classList.remove('copied'); }, 1800);
-  });
+  var el = document.getElementById(preId);
+  var text = el.textContent;
+  var btn = document.getElementById(btnId);
+  var orig = btn.textContent;
+
+  function showResult(ok) {
+    btn.textContent = ok ? 'Copied!' : 'Copy failed — text selected, use Ctrl/Cmd+C';
+    btn.classList.toggle('copied', ok);
+    if (!ok) {
+      // Select the text in the <pre> so the user can copy manually as a last resort.
+      var range = document.createRange();
+      range.selectNodeContents(el);
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    setTimeout(function() { btn.textContent = orig; btn.classList.remove('copied'); }, ok ? 1800 : 3500);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(function() {
+      showResult(true);
+    }).catch(function() {
+      showResult(copyFallback(text));
+    });
+  } else {
+    showResult(copyFallback(text));
+  }
 }
 
 // ── Set today's date as default ──
