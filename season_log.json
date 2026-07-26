@@ -80,6 +80,16 @@
       "competition": "European International Cup",
       "notes": "Ngumoha 8', Amrizi 41'. MoM: Amrizi. Neutral venue. Final preseason friendly.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-08-15",
+      "opponent": "Wolves",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Fruk 13', Ngumoha 49'. MoM: Ngumoha. First Premier League game, first win. Chido Obi declared Wrexham are here to stay and here to win, unafraid of the league's prestige; Keeyvon backed him.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -258,6 +268,22 @@
       "club": "Sunderland",
       "fee": "3.7M",
       "wage": ""
+    },
+    {
+      "date": "2026-08-15",
+      "player": "Andres Cuenca",
+      "direction": "in",
+      "club": "Barcelona",
+      "fee": "$1.9m",
+      "wage": "$14,000/w"
+    },
+    {
+      "date": "2026-08-16",
+      "player": "Harry Ashfield",
+      "direction": "out",
+      "club": "Silkeborg IF",
+      "fee": "$580,000",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -342,6 +368,18 @@
     {
       "date": "2026-07-25",
       "description": "Ratings / potential reviewed; Roster change"
+    },
+    {
+      "date": "2026-08-15",
+      "description": "Squad update — signed Andrés Cuenca (19, CB) from Barcelona for $1.9m."
+    },
+    {
+      "date": "2026-08-15",
+      "description": "First Premier League match: beat Wolves 2-0 at home. First top-flight win in club history."
+    },
+    {
+      "date": "2026-08-16",
+      "description": "Harry Ashfield sold to Silkeborg IF for $580,000."
     }
   ],
   "fixtures": [
