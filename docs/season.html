@@ -95,6 +95,7 @@
       font-size: 20px;
       color: var(--muted);
       flex: 1;
+      min-width: 0;
     }
     .comp-summary-stats strong { color: var(--gold); }
     .comp-summary-arrow {
@@ -244,6 +245,25 @@
       }
       .stats-header > *:nth-child(n+5),
       .stats-row > *:nth-child(n+5) { display: none; }
+
+      .comp-summary {
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        padding: 16px 14px;
+      }
+      .comp-summary-name {
+        white-space: normal;
+        font-size: 20px;
+        flex: 1 1 100%;
+        order: 1;
+      }
+      .comp-summary-stats {
+        font-size: 14px;
+        order: 2;
+      }
+      .comp-summary-arrow {
+        order: 3;
+      }
     }
   </style>
 <link rel="manifest" href="manifest.json">
