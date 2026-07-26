@@ -119,6 +119,61 @@
     .radio-label:has(input:checked) { border-color:var(--red); color:white; background:rgba(200,16,46,0.15); }
     input[type=radio] { display:none; }
     @media(max-width:500px) { .form-group { min-width:100%; } }
+    details.collapser { border: 1px solid var(--mid); margin-bottom: 4px; }
+    details.collapser > summary {
+      cursor: pointer; list-style: none; padding: 12px 14px;
+      font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700;
+      letter-spacing:1.5px; text-transform:uppercase; color:var(--light);
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    details.collapser > summary::-webkit-details-marker { display:none; }
+    details.collapser > summary::after { content:'+'; font-size:16px; color:var(--muted); }
+    details.collapser[open] > summary::after { content:'−'; }
+    details.collapser > summary:hover { color: var(--red); }
+    .collapser-body { padding: 0 14px 16px; }
+
+    /* ── Player Stats table ── */
+    .stats-hint { font-family:'Barlow',sans-serif; font-size:11px; color:var(--muted); margin-bottom:10px; line-height:1.5; }
+    .stats-table-wrap { overflow-x:auto; border:1px solid var(--mid); }
+    .stats-table { width:100%; border-collapse:collapse; font-size:12px; min-width:480px; }
+    .stats-table th {
+      background:var(--charcoal); color:var(--muted); font-family:'Barlow Condensed',sans-serif;
+      font-size:10px; letter-spacing:1.5px; text-transform:uppercase; padding:8px 6px;
+      text-align:center; border-bottom:1px solid var(--mid); white-space:nowrap; position:sticky; top:0;
+    }
+    .stats-table th:first-child { text-align:left; padding-left:10px; }
+    .stats-table td { padding:5px 6px; border-bottom:1px solid rgba(255,255,255,0.05); text-align:center; }
+    .stats-table tr:hover td { background: rgba(255,255,255,0.03); }
+    .stp-name { text-align:left !important; padding-left:10px !important; font-family:'Barlow',sans-serif; font-size:12.5px; color:var(--light); white-space:nowrap; }
+    .stp-pos { color:var(--muted); font-size:10px; font-family:'Barlow Condensed',sans-serif; letter-spacing:1px; margin-left:4px; }
+    .stp-num { width:44px !important; padding:5px 4px !important; text-align:center; font-size:12px !important; }
+    .stats-table input[type=checkbox] { width:auto; }
+    .stats-table input[type=radio] { display:inline-block; width:auto; accent-color: var(--red); }
+    .stats-table tr.on-loan { opacity:0.4; }
+    .stp-loan-tag { color:var(--muted); font-size:9px; font-family:'Barlow Condensed',sans-serif; letter-spacing:1px; margin-left:5px; text-transform:uppercase; }
+
+    /* ── Attribute Editor ── */
+    .attr-picker-row { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; align-items:flex-end; }
+    .attr-group { margin-bottom:14px; }
+    .attr-group-title {
+      font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700;
+      letter-spacing:2px; text-transform:uppercase; color:#4A90C4; margin-bottom:8px;
+    }
+    .attr-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(108px,1fr)); gap:8px; }
+    .attr-field label { display:block; margin-bottom:3px; font-size:9px; }
+    .attr-field input, .attr-field textarea { padding:7px 8px; font-size:12px; }
+    .attr-field textarea { min-height:44px; }
+    .attr-add-btn {
+      background:#4A90C4; border:none; color:#fff; font-family:'Barlow Condensed',sans-serif;
+      font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase;
+      padding:10px 20px; cursor:pointer; width:100%; margin-top:6px;
+    }
+    .attr-add-btn:hover { background:#3d7ab0; }
+    .attr-changes-list .sub-row { align-items:center; }
+    .attr-changes-list .sub-row-text {
+      flex:1; font-family:'Barlow',sans-serif; font-size:13px; color:var(--light);
+      background:var(--charcoal); border:1px solid var(--steel); padding:9px 12px;
+    }
 
     /* ── Batch Queue ── */
     .batch-tray {
@@ -174,6 +229,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Hawk Submit">
 <link rel="apple-touch-icon" href="assets/icons/hawk-submit-192.png">
+<script src="assets/submit_data.js" charset="utf-8"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -201,7 +257,7 @@ if ('serviceWorker' in navigator) {
 
 <div class="masthead">
   <span class="masthead-label">Session Submit</span>
-  <span class="masthead-date">Fill in → Copy → Paste to Claude</span>
+  <span class="masthead-date">Fill in (Tab to move field-to-field) → Copy → Paste to Claude</span>
 </div>
 
 <div class="form-wrap">
@@ -224,6 +280,7 @@ if ('serviceWorker' in navigator) {
         <label>Type</label>
         <div class="radio-group">
           <label class="radio-label"><input type="radio" name="subtype" value="match" checked> Match</label>
+          <label class="radio-label"><input type="radio" name="subtype" value="youth"> Youth Match</label>
           <label class="radio-label"><input type="radio" name="subtype" value="squad"> Squad Update</label>
         </div>
       </div>
@@ -245,13 +302,21 @@ if ('serviceWorker' in navigator) {
           <option value="Play-Offs">Play-Offs</option>
           <option value="Pre-Season Friendly">Pre-Season Friendly</option>
           <option value="European International Cup">European International Cup</option>
-          <option value="Youth Academy Rush Tournament">Youth Academy Rush Tournament</option>
           <option value="Other">Other</option>
         </select>
       </div>
       <div class="form-group" id="round-group" style="display:none;">
         <label for="round">Round</label>
         <input type="text" id="round" placeholder="e.g. Round 2">
+      </div>
+    </div>
+
+    <div class="form-row" id="pl-fixture-group">
+      <div class="form-group full">
+        <label for="pl-fixture">Premier League Fixture (pick to auto-fill date / opponent / venue)</label>
+        <select id="pl-fixture">
+          <option value="">— pick from schedule (optional) —</option>
+        </select>
       </div>
     </div>
 
@@ -265,6 +330,7 @@ if ('serviceWorker' in navigator) {
         <div class="radio-group">
           <label class="radio-label"><input type="radio" name="venue" value="home" checked> Home</label>
           <label class="radio-label"><input type="radio" name="venue" value="away"> Away</label>
+          <label class="radio-label"><input type="radio" name="venue" value="neutral"> Neutral</label>
         </div>
       </div>
     </div>
@@ -317,6 +383,85 @@ if ('serviceWorker' in navigator) {
         <textarea id="notes" placeholder="e.g. Kaboré 16 interceptions. Clean sheet. xG 3.6–0.6."></textarea>
       </div>
     </div>
+
+    <!-- ── First-Team Player Stats ── -->
+    <div style="margin-top:18px;">
+      <label style="display:block; margin-bottom:8px;">Player Stats (mirrors the post-match Player Ratings screen)</label>
+      <div class="stats-hint">Check "Played" for anyone who appeared. Fill Goals/Assists/Rating only where you have them — blank is fine. Tab moves left-to-right across a row, then down to the next player.</div>
+      <div id="stats-table-match"></div>
+    </div>
+  </div>
+
+  <!-- ─── YOUTH MATCH ─── -->
+  <div class="form-section" id="youth-section" style="display:none;">
+    <div class="form-section-label">Youth Academy Match Details</div>
+    <div class="stats-hint">These games usually have no screenshots — fill in whatever you actually remember. Score and stats are optional; Notes is the one field worth always using.</div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="y-competition">Competition</label>
+        <select id="y-competition">
+          <option value="Youth Academy Rush Tournament">Youth Academy Rush Tournament</option>
+          <option value="Youth Academy Friendly">Youth Academy Friendly</option>
+          <option value="Youth League">Youth League</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="y-round">Round</label>
+        <input type="text" id="y-round" placeholder="e.g. Round 2 / Group Stage">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="y-opponent">Opponent</label>
+        <input type="text" id="y-opponent" placeholder="e.g. Man City U18 (if known)">
+      </div>
+      <div class="form-group">
+        <label>Home or Away</label>
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="yvenue" value="home" checked> Home</label>
+          <label class="radio-label"><input type="radio" name="yvenue" value="away"> Away</label>
+          <label class="radio-label"><input type="radio" name="yvenue" value="neutral"> Neutral</label>
+          <label class="radio-label"><input type="radio" name="yvenue" value="unknown"> Unknown</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Score (Their Goals : Our Goals) — optional</label>
+        <div class="score-row">
+          <div id="y-opponent-name-score" style="font-family:'Barlow Condensed',sans-serif; font-size:13px; color:var(--muted); min-width:80px;">Opponent</div>
+          <input type="number" id="y-score-them" class="score-input" value="0" min="0">
+          <span class="score-vs">:</span>
+          <input type="number" id="y-score-us" class="score-input" value="0" min="0">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-size:13px; color:var(--muted);">Wrexham</div>
+          <div id="y-result-pill" class="result-pill result-D">D</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group full">
+        <label for="y-scorers">Goalscorers (comma separated, if known)</label>
+        <input type="text" id="y-scorers" placeholder="e.g. Drouet 22', Soria 60'">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group full">
+        <label for="y-notes">Notes (what you actually remember — standout performers, promotions worth flagging, etc.)</label>
+        <textarea id="y-notes" placeholder="e.g. Drouet looked sharp, scored twice. Result from memory, not 100% on final score."></textarea>
+      </div>
+    </div>
+
+    <!-- ── Academy Player Stats ── -->
+    <div style="margin-top:18px;">
+      <label style="display:block; margin-bottom:8px;">Academy Player Stats (optional)</label>
+      <div id="stats-table-youth"></div>
+    </div>
   </div>
 
   <!-- ─── SQUAD UPDATE ─── -->
@@ -346,6 +491,32 @@ if ('serviceWorker' in navigator) {
       <div class="form-group">
         <label class="checkbox-label" style="text-transform:none;"><input type="checkbox" id="squad-journal"> Write a journal entry for this</label>
       </div>
+    </div>
+
+    <!-- ── Attribute / Stat Editor ── -->
+    <div style="margin-top:8px;">
+      <label style="display:block; margin-bottom:8px;">Attribute / Stat Adjustments</label>
+      <div class="stats-hint">Pick a player — every field pre-fills with their <em>current</em> CSV value, so you can see at a glance what's unchanged. Edit only the fields that actually changed, then add. Repeat for as many players as this update covers. Values are a snapshot from the last time <code>scripts/sync_submit_roster.py</code> was run — if it looks stale, that script needs a re-run first.</div>
+
+      <details class="collapser">
+        <summary>Open Attribute Editor</summary>
+        <div class="collapser-body">
+          <div class="attr-picker-row">
+            <div class="form-group" style="min-width:240px;">
+              <label for="attr-player">Player</label>
+              <select id="attr-player">
+                <option value="">— select player —</option>
+                <optgroup label="First Team" id="attr-player-senior"></optgroup>
+                <optgroup label="Youth Academy" id="attr-player-academy"></optgroup>
+              </select>
+            </div>
+          </div>
+          <div id="attr-fields"></div>
+          <button class="attr-add-btn" onclick="addAttrChange()">+ Add Player's Changes to This Submission</button>
+        </div>
+      </details>
+
+      <div class="attr-changes-list" id="attr-changes-list" style="margin-top:10px;"></div>
     </div>
   </div>
 
@@ -409,7 +580,233 @@ if ('serviceWorker' in navigator) {
 </div><!-- /form-wrap -->
 
 <script>
-// ── Live score → result pill ──
+// ── Roster + attribute snapshot + PL fixtures come from assets/submit_data.js
+//    (ROSTER_SENIOR, ROSTER_ACADEMY, ROSTER_ATTR_DATA, PL_FIXTURES) — regenerate
+//    it with `python3 scripts/sync_submit_roster.py` after any squad/academy/
+//    fixtures change. ──
+
+// ── Player Stats table builder (shared by Match + Youth) ──
+function renderStatsTable(containerId, roster, prefix) {
+  var html = '<div class="stats-table-wrap"><table class="stats-table"><thead><tr>' +
+    '<th>Player</th><th>Played</th><th>G</th><th>A</th><th>Rating</th><th>MOM</th></tr></thead><tbody>';
+  roster.forEach(function(p, i) {
+    var id = prefix + '-' + i;
+    html += '<tr' + (p.loan ? ' class="on-loan"' : '') + '>' +
+      '<td class="stp-name">' + p.name + '<span class="stp-pos">' + p.pos + '</span>' +
+        (p.loan ? '<span class="stp-loan-tag">On Loan</span>' : '') + '</td>' +
+      '<td><input type="checkbox" id="' + id + '-played"></td>' +
+      '<td><input type="number" id="' + id + '-g" min="0" placeholder="0" class="stp-num"></td>' +
+      '<td><input type="number" id="' + id + '-a" min="0" placeholder="0" class="stp-num"></td>' +
+      '<td><input type="number" id="' + id + '-r" min="0" max="10" step="0.1" placeholder="—" class="stp-num"></td>' +
+      '<td><input type="radio" name="' + prefix + '-mom" id="' + id + '-mom" value="' + i + '"></td>' +
+      '</tr>';
+  });
+  html += '</tbody></table></div>';
+  document.getElementById(containerId).innerHTML = html;
+}
+renderStatsTable('stats-table-match', ROSTER_SENIOR, 'ms');
+renderStatsTable('stats-table-youth', ROSTER_ACADEMY, 'ys');
+
+function collectPlayerStats(roster, prefix) {
+  var checked = document.querySelector('input[name="' + prefix + '-mom"]:checked');
+  var momIdx = checked ? parseInt(checked.value) : -1;
+  var lines = [], raw = [];
+  roster.forEach(function(p, i) {
+    var id = prefix + '-' + i;
+    var played = document.getElementById(id + '-played').checked;
+    var g = document.getElementById(id + '-g').value;
+    var a = document.getElementById(id + '-a').value;
+    var r = document.getElementById(id + '-r').value;
+    var isMom = (i === momIdx);
+    raw.push({ played: played, g: g, a: a, r: r, mom: isMom });
+    if (played || g || a || r || isMom) {
+      var parts = [];
+      if (g) parts.push(g + ' G');
+      if (a) parts.push(a + ' A');
+      if (r) parts.push('Rating ' + r);
+      if (isMom) parts.push('MOM');
+      lines.push('- ' + p.name + (parts.length ? ': ' + parts.join(', ') : ' (appeared)'));
+    }
+  });
+  return { lines: lines.join('\n'), raw: raw };
+}
+
+function resetPlayerStatsTable(roster, prefix) {
+  roster.forEach(function(p, i) {
+    var id = prefix + '-' + i;
+    document.getElementById(id + '-played').checked = false;
+    document.getElementById(id + '-g').value = '';
+    document.getElementById(id + '-a').value = '';
+    document.getElementById(id + '-r').value = '';
+    document.getElementById(id + '-mom').checked = false;
+  });
+}
+
+function restorePlayerStats(raw, roster, prefix) {
+  resetPlayerStatsTable(roster, prefix);
+  if (!raw) return;
+  roster.forEach(function(p, i) {
+    var d = raw[i];
+    if (!d) return;
+    var id = prefix + '-' + i;
+    document.getElementById(id + '-played').checked = !!d.played;
+    document.getElementById(id + '-g').value = d.g || '';
+    document.getElementById(id + '-a').value = d.a || '';
+    document.getElementById(id + '-r').value = d.r || '';
+    if (d.mom) document.getElementById(id + '-mom').checked = true;
+  });
+}
+
+// ── Attribute / Stat Editor ── (fields follow the same order as the CSV /
+//    FC26 screen tabs: Status → Stats → Attributes → PlayStyles/Roles → Financial)
+var ATTR_GROUPS = [
+  { title: 'Status Tab', fields: [
+    {key:'Position', label:'Position'}, {key:'Age', label:'Age', type:'number'},
+    {key:'Height', label:'Height'}, {key:'Weight', label:'Weight'},
+    {key:'Pref_Foot', label:'Pref. Foot'}, {key:'Squad_Role', label:'Squad Role'},
+    {key:'Contract_Length', label:'Contract Length'}, {key:'Status', label:'Status Line'}
+  ]},
+  { title: 'Stats Tab — Six-Pack (GK: Pace=Speed, Shooting=Kicking, Passing=Positioning, Dribbling=Reflexes, Defending=Handling, Physical=Diving)', fields: [
+    {key:'OVR', label:'OVR', type:'number'},
+    {key:'Pace', label:'Pace', type:'number'}, {key:'Shooting', label:'Shooting', type:'number'},
+    {key:'Passing', label:'Passing', type:'number'}, {key:'Dribbling', label:'Dribbling', type:'number'},
+    {key:'Defending', label:'Defending', type:'number'}, {key:'Physical', label:'Physical', type:'number'},
+    {key:'Potential', label:'Potential (e.g. 78-84)'}
+  ]},
+  { title: 'Attributes — Physical / Mental', fields: [
+    {key:'Acceleration', label:'Acceleration', type:'number'}, {key:'Agility', label:'Agility', type:'number'},
+    {key:'Balance', label:'Balance', type:'number'}, {key:'Jumping', label:'Jumping', type:'number'},
+    {key:'Sprint_Speed', label:'Sprint Speed', type:'number'}, {key:'Stamina', label:'Stamina', type:'number'},
+    {key:'Strength', label:'Strength', type:'number'}, {key:'Aggression', label:'Aggression', type:'number'},
+    {key:'Att_Position', label:'Att. Position', type:'number'}, {key:'Composure', label:'Composure', type:'number'},
+    {key:'Interceptions', label:'Interceptions', type:'number'}, {key:'Reactions', label:'Reactions', type:'number'},
+    {key:'Vision', label:'Vision', type:'number'}
+  ]},
+  { title: 'Attributes — Technical (blank for GKs)', fields: [
+    {key:'Ball_Control', label:'Ball Control', type:'number'}, {key:'Crossing', label:'Crossing', type:'number'},
+    {key:'Curve', label:'Curve', type:'number'}, {key:'Def_Aware', label:'Def. Awareness', type:'number'},
+    {key:'Dribbling_Tech', label:'Dribbling (Tech)', type:'number'}, {key:'FK_Acc', label:'FK Accuracy', type:'number'},
+    {key:'Finishing', label:'Finishing', type:'number'}, {key:'Heading_Acc', label:'Heading Acc.', type:'number'},
+    {key:'Long_Pass', label:'Long Pass', type:'number'}, {key:'Long_Shots', label:'Long Shots', type:'number'},
+    {key:'Penalties', label:'Penalties', type:'number'}, {key:'Short_Pass', label:'Short Pass', type:'number'},
+    {key:'Shot_Power', label:'Shot Power', type:'number'}, {key:'Slide_Tackle', label:'Slide Tackle', type:'number'},
+    {key:'Stand_Tackle', label:'Stand Tackle', type:'number'}, {key:'Volleys', label:'Volleys', type:'number'}
+  ]},
+  { title: 'Skill Moves / PlayStyles / Roles', fields: [
+    {key:'Skill_Moves', label:'Skill Moves (1-5)', type:'number'}, {key:'Weak_Foot', label:'Weak Foot (1-5)', type:'number'},
+    {key:'PlayStyles', label:'PlayStyles (full list)'}, {key:'Roles', label:'Roles (+/++ count)', type:'number'}
+  ]},
+  { title: 'Financial', fields: [
+    {key:'Wage', label:'Wage'}, {key:'Market_Value', label:'Market Value'}
+  ]},
+  { title: 'Development & Notes', fields: [
+    {key:'Development_Plan', label:'Development Plan'}, {key:'Notes', label:'Notes (append/replace)', type:'textarea'}
+  ]}
+];
+
+function renderAttrFields() {
+  var html = '';
+  ATTR_GROUPS.forEach(function(grp) {
+    html += '<div class="attr-group"><div class="attr-group-title">' + grp.title + '</div><div class="attr-grid">';
+    grp.fields.forEach(function(f) {
+      if (f.type === 'textarea') {
+        html += '<div class="attr-field" style="grid-column:1/-1;"><label>' + f.label + '</label>' +
+          '<textarea id="attrf-' + f.key + '" placeholder="unchanged"></textarea></div>';
+      } else {
+        var typeAttr = f.type === 'number' ? ' type="number"' : ' type="text"';
+        html += '<div class="attr-field"><label>' + f.label + '</label>' +
+          '<input' + typeAttr + ' id="attrf-' + f.key + '" placeholder="unchanged"></div>';
+      }
+    });
+    html += '</div></div>';
+  });
+  document.getElementById('attr-fields').innerHTML = html;
+}
+renderAttrFields();
+
+(function populateAttrPlayerSelect() {
+  var senior = document.getElementById('attr-player-senior');
+  var academy = document.getElementById('attr-player-academy');
+  ROSTER_SENIOR.forEach(function(p) {
+    var o = document.createElement('option'); o.value = p.name;
+    o.textContent = p.name + ' (' + p.pos + ')' + (p.loan ? ' — On Loan' : '');
+    if (p.loan) o.style.color = 'var(--muted)';
+    senior.appendChild(o);
+  });
+  ROSTER_ACADEMY.forEach(function(p) {
+    var o = document.createElement('option'); o.value = p.name;
+    o.textContent = p.name + ' (' + p.pos + ')' + (p.loan ? ' — On Loan' : '');
+    if (p.loan) o.style.color = 'var(--muted)';
+    academy.appendChild(o);
+  });
+})();
+
+// ── Pre-fill attribute fields with the player's current CSV values so blank
+//    vs. changed is obvious at a glance; diff against this snapshot on Add. ──
+var attrOriginalValues = {};
+function loadPlayerAttrs(name) {
+  var data = (typeof ROSTER_ATTR_DATA !== 'undefined' && ROSTER_ATTR_DATA[name]) || {};
+  attrOriginalValues = {};
+  ATTR_GROUPS.forEach(function(grp) {
+    grp.fields.forEach(function(f) {
+      var v = data[f.key] !== undefined && data[f.key] !== null ? String(data[f.key]) : '';
+      attrOriginalValues[f.key] = v;
+      var el = document.getElementById('attrf-' + f.key);
+      if (el) el.value = v;
+    });
+  });
+}
+function clearAttrFields() {
+  attrOriginalValues = {};
+  ATTR_GROUPS.forEach(function(grp) {
+    grp.fields.forEach(function(f) {
+      var el = document.getElementById('attrf-' + f.key);
+      if (el) el.value = '';
+    });
+  });
+}
+document.getElementById('attr-player').addEventListener('change', function() {
+  if (this.value) loadPlayerAttrs(this.value); else clearAttrFields();
+});
+
+var attrChanges = [];
+function addAttrChange() {
+  var player = document.getElementById('attr-player').value;
+  if (!player) { alert('Select a player first.'); return; }
+  var changed = [];
+  ATTR_GROUPS.forEach(function(grp) {
+    grp.fields.forEach(function(f) {
+      var el = document.getElementById('attrf-' + f.key);
+      var v = el.value.trim();
+      var orig = (attrOriginalValues[f.key] || '').trim();
+      if (v !== orig) changed.push(f.label + ': ' + (orig || '(blank)') + ' → ' + (v || '(blank)'));
+    });
+  });
+  if (!changed.length) { alert("Nothing here differs from the player's current values — edit a field first."); return; }
+  attrChanges.push({ player: player, changes: changed });
+  renderAttrChangeChips();
+  clearAttrFields();
+  document.getElementById('attr-player').value = '';
+}
+function removeAttrChange(i) { attrChanges.splice(i, 1); renderAttrChangeChips(); }
+function renderAttrChangeChips() {
+  var wrap = document.getElementById('attr-changes-list');
+  wrap.innerHTML = attrChanges.map(function(c, i) {
+    return '<div class="sub-row"><div class="sub-row-text"><strong>' + c.player + '</strong> — ' +
+      c.changes.length + ' field' + (c.changes.length !== 1 ? 's' : '') + ' changed</div>' +
+      '<button class="btn-remove" onclick="removeAttrChange(' + i + ')">×</button></div>';
+  }).join('');
+}
+function collectAttrChangesText() {
+  if (!attrChanges.length) return '';
+  var out = '\n\n### Attribute / Stat Changes\n';
+  attrChanges.forEach(function(c) {
+    out += '\n**' + c.player + '**\n' + c.changes.map(function(x) { return '- ' + x; }).join('\n') + '\n';
+  });
+  return out;
+}
+
+// ── Live score → result pill (Match) ──
 function updateResult() {
   var them = parseInt(document.getElementById('score-them').value) || 0;
   var us   = parseInt(document.getElementById('score-us').value)   || 0;
@@ -421,21 +818,63 @@ function updateResult() {
 document.getElementById('score-them').addEventListener('input', updateResult);
 document.getElementById('score-us').addEventListener('input', updateResult);
 
+// ── Live score → result pill (Youth) ──
+function updateYouthResult() {
+  var them = parseInt(document.getElementById('y-score-them').value) || 0;
+  var us   = parseInt(document.getElementById('y-score-us').value)   || 0;
+  var pill = document.getElementById('y-result-pill');
+  if (us > them)      { pill.textContent = 'W'; pill.className = 'result-pill result-W'; }
+  else if (us < them) { pill.textContent = 'L'; pill.className = 'result-pill result-L'; }
+  else                { pill.textContent = 'D'; pill.className = 'result-pill result-D'; }
+}
+document.getElementById('y-score-them').addEventListener('input', updateYouthResult);
+document.getElementById('y-score-us').addEventListener('input', updateYouthResult);
+
 // ── Opponent name in score row ──
 document.getElementById('opponent').addEventListener('input', function() {
   document.getElementById('opponent-name-score').textContent = this.value || 'Opponent';
+});
+document.getElementById('y-opponent').addEventListener('input', function() {
+  document.getElementById('y-opponent-name-score').textContent = this.value || 'Opponent';
 });
 
 // ── Competition → show round (non-league only; league matchday is derived, not entered) ──
 document.getElementById('competition').addEventListener('change', function() {
   var isLeague = this.value === 'Premier League' || this.value === 'EFL Championship';
   document.getElementById('round-group').style.display = isLeague ? 'none' : '';
+  document.getElementById('pl-fixture-group').style.display = this.value === 'Premier League' ? '' : 'none';
 });
+document.getElementById('competition').dispatchEvent(new Event('change'));
 
-// ── Submission type → toggle Match vs Squad Update sections ──
+// ── Premier League fixture picker → auto-fill date / opponent / venue ──
+(function populatePlFixtures() {
+  var sel = document.getElementById('pl-fixture');
+  var fixtures = (typeof PL_FIXTURES !== 'undefined') ? PL_FIXTURES : [];
+  fixtures.forEach(function(fx, i) {
+    var d = new Date(fx.date + 'T12:00:00');
+    var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric'}) + ' — ' +
+      (fx.home ? 'vs ' : '@ ') + fx.opponent;
+    var o = document.createElement('option');
+    o.value = String(i);
+    o.textContent = label;
+    sel.appendChild(o);
+  });
+  sel.addEventListener('change', function() {
+    if (this.value === '') return;
+    var fx = fixtures[parseInt(this.value)];
+    if (!fx) return;
+    document.getElementById('date').value = fx.date;
+    document.getElementById('opponent').value = fx.opponent;
+    document.getElementById('opponent-name-score').textContent = fx.opponent;
+    document.querySelector('input[name="venue"][value="' + (fx.home ? 'home' : 'away') + '"]').checked = true;
+  });
+})();
+
+// ── Submission type → toggle Match vs Youth vs Squad Update sections ──
 function updateSubtype() {
   var subtype = document.querySelector('input[name="subtype"]:checked').value;
   document.getElementById('match-section').style.display = subtype === 'match' ? '' : 'none';
+  document.getElementById('youth-section').style.display = subtype === 'youth' ? '' : 'none';
   document.getElementById('squad-section').style.display = subtype === 'squad' ? '' : 'none';
 }
 document.querySelectorAll('input[name="subtype"]').forEach(function(r) {
@@ -522,6 +961,7 @@ function collectSquadEventData() {
 
   var t = collectTransfers(date);
   var inj = collectInjuries(date);
+  var attrText = collectAttrChangesText();
 
   var ssChecked = [];
   if (document.getElementById('ss-table').checked)     ssChecked.push('League table / standings');
@@ -547,7 +987,7 @@ function collectSquadEventData() {
 ${whatChanged.length ? whatChanged.map(function(w){return '- ' + w;}).join('\n') : '(none checked)'}
 
 ### Details
-${squadNotes || '—'}${t.lines || ''}${inj.lines || ''}
+${squadNotes || '—'}${t.lines || ''}${inj.lines || ''}${attrText}
 
 ### Screenshots Pushed
 ${ssLines || '(none checked)'}
@@ -585,7 +1025,8 @@ ${writeJournal ? 'Yes' : 'No'}
       transfers: document.getElementById('ss-transfers').checked
     },
     transfers: t.raw,
-    injuries: inj.raw
+    injuries: inj.raw,
+    attrChanges: JSON.parse(JSON.stringify(attrChanges))
   };
 
   return {
@@ -597,6 +1038,84 @@ ${writeJournal ? 'Yes' : 'No'}
     milestoneJSON: [milestoneEntry],
     transferJSON: t.json,
     injuryJSON: inj.json,
+    raw: raw
+  };
+}
+
+// ── Youth Match event ──
+function collectYouthEventData() {
+  var date        = document.getElementById('date').value;
+  var competition = document.getElementById('y-competition').value;
+  var round       = document.getElementById('y-round').value;
+  var opponent    = document.getElementById('y-opponent').value || 'Unknown';
+  var venue       = document.querySelector('input[name="yvenue"]:checked').value;
+  var scoreThem   = parseInt(document.getElementById('y-score-them').value) || 0;
+  var scoreUs     = parseInt(document.getElementById('y-score-us').value)   || 0;
+  var scorers     = document.getElementById('y-scorers').value;
+  var notes       = document.getElementById('y-notes').value;
+
+  var result   = scoreUs > scoreThem ? 'W' : scoreUs < scoreThem ? 'L' : 'D';
+  var scoreStr = scoreUs + '-' + scoreThem;
+  var dateDisp = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {month:'numeric',day:'numeric',year:'2-digit'}) : '—';
+
+  var stats = collectPlayerStats(ROSTER_ACADEMY, 'ys');
+  var attrText = collectAttrChangesText();
+
+  var venueLabel = venue === 'home' ? 'Home' : venue === 'away' ? 'Away' : 'Unknown';
+  var compExtra = round ? '\n**Round:** ' + round : '';
+
+  var template = `# Session Input Template
+## Wrexham AFC · FC26 Career Mode
+
+---
+
+**DATE:** ${dateDisp}
+**MATCHDAY / EVENT:** Youth Academy Match
+
+---
+
+### Match Result
+- **Opponent:** ${opponent}
+- **Home or Away:** ${venueLabel}
+- **Score:** ${scoreUs}-${scoreThem} (as remembered — verify before treating as exact)
+- **Scorer(s):** ${scorers || '—'}
+- **Competition:** ${competition}${compExtra}
+
+### Notes
+${notes || '—'}
+
+### Academy Player Stats
+${stats.lines || '(none logged)'}
+
+---`;
+
+  var yNotesForLog = notes + (venue === 'neutral' ? (notes ? ' ' : '') + 'Neutral venue.' : '');
+  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreUs + '-' + scoreThem + '", "result": "' + result + '", "competition": "' + competition + '"' + (round ? ', "round": "' + round + '"' : '') + (yNotesForLog ? ', "notes": "' + yNotesForLog.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
+
+  var logEntry = '// Add to season_log.json → "matches" array:\n' + matchEntry + attrText;
+
+  var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
+  var commitMsg = 'Youth Academy: ' + (venue==='away'?'@':'vs') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>';
+
+  var chipLabel = 'Youth · ' + opponent + ' · ' + scoreStr + ' · ' + result;
+
+  var raw = {
+    subtype: 'youth', date: date, competition: competition, round: round,
+    opponent: opponent, venue: venue, scoreThem: scoreThem, scoreUs: scoreUs,
+    scorers: scorers, notes: notes,
+    ysStats: stats.raw,
+    attrChanges: JSON.parse(JSON.stringify(attrChanges))
+  };
+
+  return {
+    label: chipLabel,
+    eventType: 'youth',
+    template: template,
+    logEntry: logEntry,
+    commitMsg: commitMsg,
+    matchJSON: matchEntry,
+    transferJSON: [],
+    injuryJSON: [],
     raw: raw
   };
 }
@@ -616,6 +1135,7 @@ function clearForm() {
 
   document.getElementById('competition').value = 'Premier League';
   document.getElementById('competition').dispatchEvent(new Event('change'));
+  document.getElementById('pl-fixture').value = '';
   document.getElementById('round').value = '';
   document.getElementById('opponent').value = '';
   document.getElementById('opponent-name-score').textContent = 'Opponent';
@@ -627,6 +1147,19 @@ function clearForm() {
   document.getElementById('motm').value = '';
   document.getElementById('vibe').value = '';
   document.getElementById('notes').value = '';
+  resetPlayerStatsTable(ROSTER_SENIOR, 'ms');
+
+  document.getElementById('y-competition').value = 'Youth Academy Rush Tournament';
+  document.getElementById('y-round').value = '';
+  document.getElementById('y-opponent').value = '';
+  document.getElementById('y-opponent-name-score').textContent = 'Opponent';
+  document.querySelector('input[name="yvenue"][value="home"]').checked = true;
+  document.getElementById('y-score-them').value = 0;
+  document.getElementById('y-score-us').value = 0;
+  updateYouthResult();
+  document.getElementById('y-scorers').value = '';
+  document.getElementById('y-notes').value = '';
+  resetPlayerStatsTable(ROSTER_ACADEMY, 'ys');
 
   document.getElementById('ss-table').checked = false;
   document.getElementById('ss-morale').checked = false;
@@ -638,6 +1171,11 @@ function clearForm() {
 
   document.getElementById('transfers-list').innerHTML = '';
   document.getElementById('injuries-list').innerHTML = '';
+
+  attrChanges = [];
+  renderAttrChangeChips();
+  document.getElementById('attr-player').value = '';
+  clearAttrFields();
 
   document.querySelector('input[name="subtype"][value="match"]').checked = true;
   document.getElementById('su-attrs').checked = false;
@@ -680,6 +1218,7 @@ var stagedEvents = [];
 function collectEventData() {
   var subtype = document.querySelector('input[name="subtype"]:checked').value;
   if (subtype === 'squad') return collectSquadEventData();
+  if (subtype === 'youth') return collectYouthEventData();
   return collectMatchEventData();
 }
 
@@ -714,6 +1253,8 @@ function collectMatchEventData() {
   var transferLines = t.lines, transferJSON = t.json;
   var inj = collectInjuries(date);
   var injuryLines = inj.lines, injuryJSON = inj.json;
+  var stats = collectPlayerStats(ROSTER_SENIOR, 'ms');
+  var attrText = collectAttrChangesText();
 
   var compExtra = '';
   if (round) compExtra = '\n**Round:** ' + round;
@@ -744,12 +1285,16 @@ ${ssLines || '(none checked)'}
 ### Transfers / Injuries / Notes
 ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}${injuryLines || ''}
 
+### Player Stats
+${stats.lines || '(none logged)'}${attrText}
+
 ---`;
 
   var logNotesParts = [];
   if (scorers) logNotesParts.push(scorers);
   if (motm)    logNotesParts.push('MoM: ' + motm);
   if (notes)   logNotesParts.push(notes);
+  if (venue === 'neutral') logNotesParts.push('Neutral venue.');
   var logNotes = logNotesParts.join('. ');
 
   var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreUs + '-' + scoreThem + '", "result": "' + result + '", "competition": "' + competition + '"' + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
@@ -759,29 +1304,9 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
   if (injuryJSON.length)   logEntry += '\n\n// Add to "injuries" array:\n' + injuryJSON.join(',\n');
 
   var resultLabel = result === 'W' ? 'WIN' : result === 'L' ? 'LOSS' : 'DRAW';
-  var commitMsg = competition.split(' ').slice(-1)[0] + ' entry: ' + (venue==='home'?'vs':'@') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>';
+  var commitMsg = competition.split(' ').slice(-1)[0] + ' entry: ' + (venue==='away'?'@':'vs') + ' ' + opponent + ' ' + scoreUs + '-' + scoreThem + ' (' + resultLabel + ')\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>';
 
   var chipLabel = competition.split(' ').pop() + ' · ' + opponent + ' · ' + scoreStr + ' · ' + result;
-
-  var transfersRaw = [];
-  document.querySelectorAll('[id^="transfer-"]').forEach(function(row) {
-    var id = row.id.replace('transfer-','');
-    transfersRaw.push({
-      player: (document.getElementById('t-player-'+id)||{}).value || '',
-      dir:    (document.getElementById('t-dir-'+id)||{}).value || 'in',
-      club:   (document.getElementById('t-club-'+id)||{}).value || '',
-      fee:    (document.getElementById('t-fee-'+id)||{}).value || ''
-    });
-  });
-
-  var injuriesRaw = [];
-  document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
-    var id = row.id.replace('injury-','');
-    injuriesRaw.push({
-      player: (document.getElementById('i-player-'+id)||{}).value || '',
-      desc:   (document.getElementById('i-desc-'+id)||{}).value || ''
-    });
-  });
 
   var raw = {
     subtype: 'match',
@@ -797,8 +1322,10 @@ ${motm ? 'MoM: ' + motm : ''}${notes ? '\n' + notes : ''}${transferLines || ''}$
       goal: document.getElementById('ss-goal').checked,
       transfers: document.getElementById('ss-transfers').checked
     },
-    transfers: transfersRaw,
-    injuries: injuriesRaw
+    transfers: t.raw,
+    injuries: inj.raw,
+    msStats: stats.raw,
+    attrChanges: JSON.parse(JSON.stringify(attrChanges))
   };
 
   return {
@@ -853,6 +1380,9 @@ function populateForm(raw) {
   document.querySelector('input[name="subtype"][value="' + subtype + '"]').checked = true;
   updateSubtype();
 
+  attrChanges = JSON.parse(JSON.stringify(raw.attrChanges || []));
+  renderAttrChangeChips();
+
   if (subtype === 'squad') {
     document.getElementById('su-attrs').checked   = !!raw.suAttrs;
     document.getElementById('su-ratings').checked = !!raw.suRatings;
@@ -890,6 +1420,21 @@ function populateForm(raw) {
     return;
   }
 
+  if (subtype === 'youth') {
+    document.getElementById('y-competition').value = raw.competition || 'Youth Academy Rush Tournament';
+    document.getElementById('y-round').value = raw.round || '';
+    document.getElementById('y-opponent').value = raw.opponent || '';
+    document.getElementById('y-opponent-name-score').textContent = raw.opponent || 'Opponent';
+    document.querySelector('input[name="yvenue"][value="' + (raw.venue || 'home') + '"]').checked = true;
+    document.getElementById('y-score-them').value = raw.scoreThem || 0;
+    document.getElementById('y-score-us').value = raw.scoreUs || 0;
+    updateYouthResult();
+    document.getElementById('y-scorers').value = raw.scorers || '';
+    document.getElementById('y-notes').value = raw.notes || '';
+    restorePlayerStats(raw.ysStats, ROSTER_ACADEMY, 'ys');
+    return;
+  }
+
   document.getElementById('competition').value = raw.competition || 'Premier League';
   document.getElementById('competition').dispatchEvent(new Event('change'));
   document.getElementById('opponent').value = raw.opponent || '';
@@ -903,6 +1448,7 @@ function populateForm(raw) {
   document.getElementById('vibe').value = raw.vibe || '';
   document.getElementById('notes').value = raw.notes || '';
   document.getElementById('round').value = raw.round || '';
+  restorePlayerStats(raw.msStats, ROSTER_SENIOR, 'ms');
 
   var ss = raw.ss || {};
   document.getElementById('ss-table').checked     = !!ss.table;
@@ -972,7 +1518,7 @@ function generateBatch() {
     allInjuries  = allInjuries.concat(ev.injuryJSON);
   });
 
-  var allMatches    = stagedEvents.filter(function(ev){ return ev.eventType === 'match'; }).map(function(ev){ return ev.matchJSON; });
+  var allMatches    = stagedEvents.filter(function(ev){ return ev.eventType === 'match' || ev.eventType === 'youth'; }).map(function(ev){ return ev.matchJSON; });
   var allMilestones = stagedEvents.filter(function(ev){ return ev.eventType === 'squad'; })
     .reduce(function(acc, ev){ return acc.concat(ev.milestoneJSON || []); }, []);
 
