@@ -704,6 +704,10 @@ body {
   font-style: italic;
   color: var(--muted);
 }
+@media (max-width: 600px) {
+  .hub-header { padding-right: 96px; }
+  .hub-crest { height: 64px; right: 16px; }
+}
 
 .season-bar {
   background: var(--charcoal);
