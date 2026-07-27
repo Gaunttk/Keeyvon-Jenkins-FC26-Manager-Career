@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-08-15"
+    "last_updated": "2026-08-24"
   },
   "matches": [
     {
@@ -99,6 +99,27 @@
       "result": "D",
       "competition": "Premier League",
       "notes": "Fruk 67'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-24",
+      "opponent": "New Castle",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Soria 1'. MoM: N. Kopp. Neutral venue.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-24",
+      "opponent": "Tottenham Hotspur",
+      "home": false,
+      "score": "8-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Forster, Vargas x2, Collin x2, Bertrand x3. MoM: J. Collin (2G 3A). Does Tottenham even have a youth academy? What a no-show for them. The youth at Wrexham is proving to be a real problem for the rest of the Premier League. Neutral venue.",
       "journal_entry": true
     }
   ],
@@ -318,6 +339,14 @@
       "club": "Club Brugges",
       "fee": "4.1M",
       "wage": ""
+    },
+    {
+      "date": "2026-08-24",
+      "player": "Ben Sheaf",
+      "direction": "out",
+      "club": "Sunderland",
+      "fee": "8.4M",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -435,6 +464,10 @@
     {
       "date": "2026-07-27",
       "description": "Squad update"
+    },
+    {
+      "date": "2026-08-24",
+      "description": "Ben Sheaf sold to Sunderland (£8.4m)."
     }
   ],
   "fixtures": [
