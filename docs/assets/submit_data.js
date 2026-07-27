@@ -91,6 +91,10 @@ var ROSTER_SENIOR = [
     "pos": "CM/CDM"
   },
   {
+    "name": "Mo Faal",
+    "pos": "ST"
+  },
+  {
     "name": "Rio Ngumoha",
     "pos": "LM/LW"
   },
@@ -728,7 +732,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Right",
     "Squad_Role": "Sporadic",
     "Contract_Length": "2y",
-    "Status": "On Loan at Cheltenham Town (back 30 Jun 2026)",
+    "Status": "Returned from loan (Cheltenham Town), Aug 2026",
     "OVR": "64",
     "Pace": "73",
     "Shooting": "62",
@@ -773,7 +777,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "10000",
     "Market_Value": "1100000",
     "Development_Plan": "N/A",
-    "Notes": "On loan at Cheltenham Town, back 30 Jun 2026."
+    "Notes": "Returned from loan at Cheltenham Town, Aug 2026. Started vs Huddersfield Town (Carabao Cup): 1G 1A, rating 8.4."
   },
   "Yacel Amrizi": {
     "Position": "ST/LW",
@@ -2651,11 +2655,6 @@ var PL_FIXTURES = [
     "date": "2026-08-22",
     "opponent": "Sheffield United",
     "home": false
-  },
-  {
-    "date": "2026-08-29",
-    "opponent": "Bournemouth",
-    "home": true
   },
   {
     "date": "2026-09-12",

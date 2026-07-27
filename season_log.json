@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-08-24"
+    "last_updated": "2026-08-29"
   },
   "matches": [
     {
@@ -120,6 +120,26 @@
       "competition": "Youth Academy Rush Tournament",
       "round": "Final",
       "notes": "Forster, Vargas x2, Collin x2, Bertrand x3. MoM: J. Collin (2G 3A). Does Tottenham even have a youth academy? What a no-show for them. The youth at Wrexham is proving to be a real problem for the rest of the Premier League. Neutral venue.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-25",
+      "opponent": "Huddersfield Town",
+      "home": true,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "notes": "Obi 6', Faal 18', Obi 39', O'Brien 45', Veleten 90'. MoM: Veleten (1G 2A). Faal started (not on loan) — 1G 1A, rating 8.4.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-29",
+      "opponent": "Bournemouth",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Fruk 65', 83' (PK). MoM: Cacace.",
       "journal_entry": true
     }
   ],
