@@ -229,7 +229,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Hawk Submit">
 <link rel="apple-touch-icon" href="assets/icons/hawk-submit-192.png">
-<script src="assets/submit_data.js" charset="utf-8"></script>
+<script src="assets/submit_data.js?v=1785174459" charset="utf-8"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -591,9 +591,8 @@ function renderStatsTable(containerId, roster, prefix) {
     '<th>Player</th><th>Played</th><th>G</th><th>A</th><th>Rating</th><th>MOM</th></tr></thead><tbody>';
   roster.forEach(function(p, i) {
     var id = prefix + '-' + i;
-    html += '<tr' + (p.loan ? ' class="on-loan"' : '') + '>' +
-      '<td class="stp-name">' + p.name + '<span class="stp-pos">' + p.pos + '</span>' +
-        (p.loan ? '<span class="stp-loan-tag">On Loan</span>' : '') + '</td>' +
+    html += '<tr>' +
+      '<td class="stp-name">' + p.name + '<span class="stp-pos">' + p.pos + '</span></td>' +
       '<td><input type="checkbox" id="' + id + '-played"></td>' +
       '<td><input type="number" id="' + id + '-g" min="0" placeholder="0" class="stp-num"></td>' +
       '<td><input type="number" id="' + id + '-a" min="0" placeholder="0" class="stp-num"></td>' +
@@ -729,14 +728,12 @@ renderAttrFields();
   var academy = document.getElementById('attr-player-academy');
   ROSTER_SENIOR.forEach(function(p) {
     var o = document.createElement('option'); o.value = p.name;
-    o.textContent = p.name + ' (' + p.pos + ')' + (p.loan ? ' — On Loan' : '');
-    if (p.loan) o.style.color = 'var(--muted)';
+    o.textContent = p.name + ' (' + p.pos + ')';
     senior.appendChild(o);
   });
   ROSTER_ACADEMY.forEach(function(p) {
     var o = document.createElement('option'); o.value = p.name;
-    o.textContent = p.name + ' (' + p.pos + ')' + (p.loan ? ' — On Loan' : '');
-    if (p.loan) o.style.color = 'var(--muted)';
+    o.textContent = p.name + ' (' + p.pos + ')';
     academy.appendChild(o);
   });
 })();

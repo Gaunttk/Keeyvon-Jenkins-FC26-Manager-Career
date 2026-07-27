@@ -1,4 +1,4 @@
-const CACHE = 'wrxm-fc26-v13';
+const CACHE = 'wrxm-fc26-v14';
 
 const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/',
@@ -29,12 +29,14 @@ self.addEventListener('activate', e => {
   );
 });
 
-// Network-first for HTML and CSS (always fresh); cache-first for images/fonts
+// Network-first for HTML, CSS, and JS (always fresh — roster/fixture data
+// lives in submit_data.js and must never go stale behind a service worker
+// cache); cache-first for images/fonts/icons only.
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET') return;
 
-  if (url.pathname.endsWith('.html') || url.pathname.endsWith('/') || url.pathname.endsWith('.css')) {
+  if (url.pathname.endsWith('.html') || url.pathname.endsWith('/') || url.pathname.endsWith('.css') || url.pathname.endsWith('.js')) {
     e.respondWith(
       fetch(e.request)
         .then(res => { caches.open(CACHE).then(c => c.put(e.request, res.clone())); return res; })

@@ -9,6 +9,8 @@ the played fixture drops out of the schedule picker).
 """
 import csv
 import json
+import re
+import time
 
 ATTR_KEYS = [
     'Position', 'Age', 'Height', 'Weight', 'Pref_Foot', 'Squad_Role',
@@ -36,8 +38,13 @@ def load_roster(path):
             continue
         status = (row.get('Status') or '').strip()
         on_loan = status.lower().startswith('on loan')
-        names.append({'name': name, 'pos': (row.get('Position') or '').strip(), 'loan': on_loan})
         attrs[name] = {k: (row.get(k) or '').strip() for k in ATTR_KEYS}
+        if on_loan:
+            # On-loan players aren't training/playing with the first team —
+            # exclude them from the submit sheet's dropdowns and stat tables
+            # entirely rather than just graying them out.
+            continue
+        names.append({'name': name, 'pos': (row.get('Position') or '').strip()})
     names.sort(key=lambda p: p['name'].split()[0].lower())
     return names, attrs
 
@@ -77,6 +84,21 @@ def main():
 
     with open('docs/assets/submit_data.js', 'w', encoding='utf-8') as f:
         f.write('\n'.join(out) + '\n')
+
+    # Cache-bust the script tag so a service-worker cache (or plain browser
+    # cache) can never mask a roster update on submit.html.
+    version = int(time.time())
+    with open('docs/submit.html', encoding='utf-8') as f:
+        html = f.read()
+    html, n = re.subn(
+        r'assets/submit_data\.js(\?v=\d+)?"',
+        f'assets/submit_data.js?v={version}"',
+        html,
+    )
+    if n != 1:
+        raise RuntimeError(f'expected exactly 1 submit_data.js script tag in submit.html, found {n}')
+    with open('docs/submit.html', 'w', encoding='utf-8') as f:
+        f.write(html)
 
     print(f'Wrote docs/assets/submit_data.js — {len(senior_names)} senior, '
           f'{len(academy_names)} academy, {len(pl_fixtures)} remaining PL fixtures.')

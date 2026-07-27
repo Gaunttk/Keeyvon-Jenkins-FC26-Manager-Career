@@ -4,235 +4,173 @@
 var ROSTER_SENIOR = [
   {
     "name": "Aaron James",
-    "pos": "CB/RB",
-    "loan": false
-  },
-  {
-    "name": "Alan Minda",
-    "pos": "ST/RM/CAM",
-    "loan": true
+    "pos": "CB/RB"
   },
   {
     "name": "Andrés Gómez",
-    "pos": "RM/RW",
-    "loan": false
+    "pos": "RM/RW"
   },
   {
     "name": "Andrés Cuenca",
-    "pos": "CB",
-    "loan": false
+    "pos": "CB"
   },
   {
     "name": "Arthur Okonkwo",
-    "pos": "GK",
-    "loan": false
+    "pos": "GK"
   },
   {
     "name": "Ayden Heaven",
-    "pos": "CB",
-    "loan": false
-  },
-  {
-    "name": "Bailey Cadamarteri",
-    "pos": "ST",
-    "loan": true
+    "pos": "CB"
   },
   {
     "name": "Ben Sheaf",
-    "pos": "CDM/CM",
-    "loan": false
+    "pos": "CDM/CM"
   },
   {
     "name": "Brian Gutiérrez",
-    "pos": "CAM/CM/LM",
-    "loan": false
+    "pos": "CAM/CM/LM"
   },
   {
     "name": "Callum Doyle",
-    "pos": "CB/LB",
-    "loan": false
+    "pos": "CB/LB"
   },
   {
     "name": "Chido Obi",
-    "pos": "ST",
-    "loan": false
+    "pos": "ST"
   },
   {
     "name": "Damián Bobadilla",
-    "pos": "CM/CDM",
-    "loan": false
+    "pos": "CM/CDM"
   },
   {
     "name": "Dominic Hyam",
-    "pos": "CB",
-    "loan": false
+    "pos": "CB"
   },
   {
     "name": "Elijah Dijkstra",
-    "pos": "RB/LB/CM",
-    "loan": false
+    "pos": "RB/LB/CM"
   },
   {
     "name": "Jamal Belghazi",
-    "pos": "CDM/CM",
-    "loan": false
+    "pos": "CDM/CM"
   },
   {
     "name": "Joenathan Amelia",
-    "pos": "RB",
-    "loan": false
+    "pos": "RB"
   },
   {
     "name": "Jorthy Mokio",
-    "pos": "CDM/CM/LB",
-    "loan": false
+    "pos": "CDM/CM/LB"
   },
   {
     "name": "Kieffer Moore",
-    "pos": "ST",
-    "loan": false
+    "pos": "ST"
   },
   {
     "name": "Leo Sauer",
-    "pos": "LW/LM",
-    "loan": false
+    "pos": "LW/LM"
   },
   {
     "name": "Lewis O'Brien",
-    "pos": "CM/CDM/RM/CAM",
-    "loan": false
+    "pos": "CM/CDM/RM/CAM"
   },
   {
     "name": "Liberato Cacace",
-    "pos": "RB",
-    "loan": false
+    "pos": "RB"
   },
   {
     "name": "Mario Barbieri",
-    "pos": "RB/CB/RM/CDM",
-    "loan": false
+    "pos": "RB/CB/RM/CDM"
   },
   {
     "name": "Mason Webber",
-    "pos": "GK",
-    "loan": false
+    "pos": "GK"
   },
   {
     "name": "Max Cleworth",
-    "pos": "CB",
-    "loan": false
+    "pos": "CB"
   },
   {
     "name": "Milán Vitális",
-    "pos": "CM/CDM",
-    "loan": false
-  },
-  {
-    "name": "Mo Faal",
-    "pos": "ST",
-    "loan": true
+    "pos": "CM/CDM"
   },
   {
     "name": "Rio Ngumoha",
-    "pos": "LM/LW",
-    "loan": false
-  },
-  {
-    "name": "Santiago Ortega",
-    "pos": "CAM/LW",
-    "loan": true
+    "pos": "LM/LW"
   },
   {
     "name": "Toni Fruk",
-    "pos": "ST/CAM/CM",
-    "loan": false
+    "pos": "ST/CAM/CM"
   },
   {
     "name": "Vladyslav Veleten",
-    "pos": "RW/RM",
-    "loan": false
+    "pos": "RW/RM"
   },
   {
     "name": "Yacel Amrizi",
-    "pos": "ST/LW",
-    "loan": false
+    "pos": "ST/LW"
   }
 ];
 var ROSTER_ACADEMY = [
   {
     "name": "Ben Forster",
-    "pos": "CM",
-    "loan": false
+    "pos": "CM"
   },
   {
     "name": "Emiliano Bianchi",
-    "pos": "CDM",
-    "loan": false
+    "pos": "CDM"
   },
   {
     "name": "Fabricio Sandoval",
-    "pos": "CAM",
-    "loan": false
+    "pos": "CAM"
   },
   {
     "name": "Jamie Lord",
-    "pos": "LB",
-    "loan": false
+    "pos": "LB"
   },
   {
     "name": "Juan Cruz Vargas",
-    "pos": "CAM",
-    "loan": false
+    "pos": "CAM"
   },
   {
     "name": "Jules Collin",
-    "pos": "RW",
-    "loan": false
+    "pos": "RW"
   },
   {
     "name": "Leo Bergmann",
-    "pos": "GK",
-    "loan": false
+    "pos": "GK"
   },
   {
     "name": "Marco Soria",
-    "pos": "LW",
-    "loan": false
+    "pos": "LW"
   },
   {
     "name": "Martin Leon",
-    "pos": "CM",
-    "loan": false
+    "pos": "CM"
   },
   {
     "name": "Mathieu Drouet",
-    "pos": "ST",
-    "loan": false
+    "pos": "ST"
   },
   {
     "name": "Nathaniel Matthews",
-    "pos": "RW",
-    "loan": false
+    "pos": "RW"
   },
   {
     "name": "Nico Kopp",
-    "pos": "GK",
-    "loan": false
+    "pos": "GK"
   },
   {
     "name": "Seun Hak",
-    "pos": "RW",
-    "loan": false
+    "pos": "RW"
   },
   {
     "name": "Stephane Bertrand",
-    "pos": "RW",
-    "loan": false
+    "pos": "RW"
   },
   {
     "name": "Valentino Martini",
-    "pos": "CB",
-    "loan": false
+    "pos": "CB"
   }
 ];
 var ROSTER_ATTR_DATA = {
