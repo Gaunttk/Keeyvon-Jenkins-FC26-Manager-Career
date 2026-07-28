@@ -2292,6 +2292,15 @@ body {
   height: 72px;
   display: block;
 }
+.acad-photo {
+  width: 104px;
+  height: 156px;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--gold);
+}
 .acad-jersey-num {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 9px;
@@ -2491,6 +2500,7 @@ body {
   .acad-family-grid { grid-template-columns: 1fr; }
   .acad-card-top { gap: 10px; }
   .acad-jersey-svg { width: 54px; height: 60px; }
+  .acad-photo { width: 84px; height: 126px; }
   .acad-profile-name { font-size: 17px; }
 }
 
