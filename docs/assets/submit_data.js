@@ -2708,11 +2708,6 @@ var PL_FIXTURES = [
     "home": false
   },
   {
-    "date": "2026-09-12",
-    "opponent": "Tottenham",
-    "home": true
-  },
-  {
     "date": "2026-09-19",
     "opponent": "Chelsea",
     "home": false

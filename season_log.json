@@ -141,6 +141,16 @@
       "competition": "Premier League",
       "notes": "Fruk 65', 83' (PK). MoM: Cacace.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-09-12",
+      "opponent": "Tottenham",
+      "home": true,
+      "score": "0-2",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Kudus 42', Kudus 63'. First home Premier League defeat; first home league defeat of Jenkins's Wrexham tenure (a Carabao Cup loss to Blackburn Rovers, 27 Aug 2025, remains the only earlier home defeat at the Racecourse).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -516,6 +526,11 @@
     {
       "date": "2026-08-31",
       "description": "Transfer window closes. Signed Carlos Macia (CM, 17, from Villarreal, £2.0m) and immediately loaned him to Swansea City for 12 months (70/30 wage split, Wrexham pays 30%). Signed GK Bernt Klaverboer (20, from Burnley, £6.2m) to provide senior cover behind Okonkwo. Sold captain Dominic Hyam to Rangers (£2.6m). Loaned academy GK Mason Webber to Samsunspor for 24 months (70/30 wage split). Window shuts with the club still net spenders across the summer — sustained investment in both first-team depth and academy development pathways is exactly the kind of long-term commitment that tells the Wrexham faithful this club is here to stay.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-09-12",
+      "description": "Wrexham suffer their first Premier League home defeat, 0-2 to Tottenham Hotspur (Kudus 42', 63'). It is the first home league defeat of Jenkins's Wrexham tenure — the club's only previous home loss at the Racecourse came in the Carabao Cup against Blackburn Rovers (27 Aug 2025).",
       "journal_entry": true
     }
   ],
