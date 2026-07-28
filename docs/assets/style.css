@@ -172,6 +172,25 @@ body {
   gap: 8px;
   flex-wrap: wrap;
 }
+.dossier-photo {
+  float: right;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border: 3px solid var(--red);
+  margin: 0 0 16px 20px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 560px) {
+  .dossier-photo {
+    float: none;
+    display: block;
+    width: 148px;
+    height: 148px;
+    margin: 0 auto 18px;
+  }
+}
 .tag {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px;
