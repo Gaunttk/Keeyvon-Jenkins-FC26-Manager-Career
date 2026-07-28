@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-08-29"
+    "last_updated": "2026-08-31"
   },
   "matches": [
     {
@@ -367,6 +367,30 @@
       "club": "Sunderland",
       "fee": "8.4M",
       "wage": ""
+    },
+    {
+      "date": "2026-08-31",
+      "player": "Carlos Macia",
+      "direction": "in",
+      "club": "Villarreal",
+      "fee": "2.0M",
+      "wage": "$8.4K/w"
+    },
+    {
+      "date": "2026-08-31",
+      "player": "Dominic Hyam",
+      "direction": "out",
+      "club": "Rangers",
+      "fee": "2.6M",
+      "wage": ""
+    },
+    {
+      "date": "2026-08-31",
+      "player": "Bernt Klaverboer",
+      "direction": "in",
+      "club": "Burnley",
+      "fee": "6.2M",
+      "wage": "$15K/w"
     }
   ],
   "injuries": [
@@ -488,6 +512,11 @@
     {
       "date": "2026-08-24",
       "description": "Ben Sheaf sold to Sunderland (£8.4m)."
+    },
+    {
+      "date": "2026-08-31",
+      "description": "Transfer window closes. Signed Carlos Macia (CM, 17, from Villarreal, £2.0m) and immediately loaned him to Swansea City for 12 months (70/30 wage split, Wrexham pays 30%). Signed GK Bernt Klaverboer (20, from Burnley, £6.2m) to provide senior cover behind Okonkwo. Sold captain Dominic Hyam to Rangers (£2.6m). Loaned academy GK Mason Webber to Samsunspor for 24 months (70/30 wage split). Window shuts with the club still net spenders across the summer — sustained investment in both first-team depth and academy development pathways is exactly the kind of long-term commitment that tells the Wrexham faithful this club is here to stay.",
+      "journal_entry": true
     }
   ],
   "fixtures": [
