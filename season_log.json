@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-08-31"
+    "last_updated": "2026-09-23"
   },
   "matches": [
     {
@@ -150,6 +150,26 @@
       "result": "L",
       "competition": "Premier League",
       "notes": "Kudus 42', Kudus 63'. First home Premier League defeat; first home league defeat of Jenkins's Wrexham tenure (a Carabao Cup loss to Blackburn Rovers, 27 Aug 2025, remains the only earlier home defeat at the Racecourse).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-09-19",
+      "opponent": "Chelsea",
+      "home": false,
+      "score": "0-0",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Klaverboer made his Wrexham debut in goal, rating 6.9.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-09-23",
+      "opponent": "Bradford City",
+      "home": false,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "notes": "Obi 30', Obi 56', Amelia 61', Amelia 82', Obi 85'. MoM: Obi (3G, 9.1 rating). Debut for Andrés Cuenca.",
       "journal_entry": true
     }
   ],
@@ -401,6 +421,14 @@
       "club": "Burnley",
       "fee": "6.2M",
       "wage": "$15K/w"
+    },
+    {
+      "date": "2026-09-12",
+      "player": "Mo Faal",
+      "direction": "out",
+      "club": "Barracas Central",
+      "fee": "£1.35m",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -408,6 +436,11 @@
       "date": "2026-05-02",
       "player": "Arthur Okonkwo",
       "description": "Tricep muscle — ongoing injury, sidelined for approximately 3 months as of late June 2026 (onset roughly late March 2026; exact date still unconfirmed, carried over from Season 1 rather than a new Season 2 injury)."
+    },
+    {
+      "date": "2026-09-23",
+      "player": "Milán Vitális",
+      "description": "Elbow, 5 days"
     }
   ],
   "milestones": [
@@ -532,6 +565,10 @@
       "date": "2026-09-12",
       "description": "Wrexham suffer their first Premier League home defeat, 0-2 to Tottenham Hotspur (Kudus 42', 63'). It is the first home league defeat of Jenkins's Wrexham tenure — the club's only previous home loss at the Racecourse came in the Carabao Cup against Blackburn Rovers (27 Aug 2025).",
       "journal_entry": true
+    },
+    {
+      "date": "2026-09-12",
+      "description": "Mo Faal sold to Barracas Central (£1.35m)."
     }
   ],
   "fixtures": [

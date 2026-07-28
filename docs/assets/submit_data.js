@@ -87,10 +87,6 @@ var ROSTER_SENIOR = [
     "pos": "CM/CDM"
   },
   {
-    "name": "Mo Faal",
-    "pos": "ST"
-  },
-  {
     "name": "Rio Ngumoha",
     "pos": "LM/LW"
   },
@@ -664,61 +660,6 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "2100000",
     "Development_Plan": "Advanced Forward 68→69 ETA 34w",
     "Notes": "On loan at Boca Juniors (back 15 Jul 2027). Not willing to negotiate. Play Time and Contract sentiment flagged negative. Confirmed no PlayStyles tab."
-  },
-  "Mo Faal": {
-    "Position": "ST",
-    "Age": "23",
-    "Height": "6'3\"",
-    "Weight": "196lbs",
-    "Pref_Foot": "Right",
-    "Squad_Role": "Sporadic",
-    "Contract_Length": "2y",
-    "Status": "Returned from loan (Cheltenham Town), Aug 2026",
-    "OVR": "64",
-    "Pace": "73",
-    "Shooting": "62",
-    "Passing": "46",
-    "Dribbling": "63",
-    "Defending": "26",
-    "Physical": "68",
-    "Potential": "",
-    "Acceleration": "71",
-    "Agility": "62",
-    "Balance": "48",
-    "Jumping": "78",
-    "Sprint_Speed": "74",
-    "Stamina": "64",
-    "Strength": "75",
-    "Aggression": "53",
-    "Att_Position": "62",
-    "Composure": "57",
-    "Interceptions": "17",
-    "Reactions": "62",
-    "Vision": "51",
-    "Ball_Control": "65",
-    "Crossing": "34",
-    "Curve": "41",
-    "Def_Aware": "23",
-    "Dribbling_Tech": "64",
-    "FK_Acc": "40",
-    "Finishing": "61",
-    "Heading_Acc": "65",
-    "Long_Pass": "40",
-    "Long_Shots": "62",
-    "Penalties": "57",
-    "Short_Pass": "54",
-    "Shot_Power": "65",
-    "Slide_Tackle": "21",
-    "Stand_Tackle": "22",
-    "Volleys": "64",
-    "Skill_Moves": "2",
-    "Weak_Foot": "3",
-    "PlayStyles": "Chip Shot",
-    "Roles": "2",
-    "Wage": "10000",
-    "Market_Value": "1100000",
-    "Development_Plan": "N/A",
-    "Notes": "Returned from loan at Cheltenham Town, Aug 2026. Started vs Huddersfield Town (Carabao Cup): 1G 1A, rating 8.4."
   },
   "Yacel Amrizi": {
     "Position": "ST/LW",
@@ -2705,11 +2646,6 @@ var PL_FIXTURES = [
   {
     "date": "2026-08-22",
     "opponent": "Sheffield United",
-    "home": false
-  },
-  {
-    "date": "2026-09-19",
-    "opponent": "Chelsea",
     "home": false
   },
   {
