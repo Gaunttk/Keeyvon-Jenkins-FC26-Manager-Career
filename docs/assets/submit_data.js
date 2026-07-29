@@ -228,7 +228,7 @@ var ROSTER_ATTR_DATA = {
     "Weight": "178lbs",
     "Pref_Foot": "Left",
     "Squad_Role": "Important",
-    "Contract_Length": "2y1m",
+    "Contract_Length": "2y",
     "Status": "At The Club Since 2025",
     "OVR": "74",
     "Pace": "77",
@@ -271,7 +271,7 @@ var ROSTER_ATTR_DATA = {
     "Weak_Foot": "5",
     "PlayStyles": "None",
     "Roles": "5",
-    "Wage": "29500",
+    "Wage": "44000",
     "Market_Value": "5500000",
     "Development_Plan": "Wide Half",
     "Notes": "Willing to negotiate new terms. Dev Wide Half 74→75 ETA 32w. LB Falseback+/Attacking WB/Inverted WB/Fullback/Wingback | LM Winger+/Wide Playmaker/Wide Midfielder/Inside Forward | CAM Half-Winger+/Shadow Striker/Classic 10 Transitioned to RB, 2026-08-15."
@@ -2647,21 +2647,6 @@ var PL_FIXTURES = [
     "date": "2026-08-22",
     "opponent": "Sheffield United",
     "home": false
-  },
-  {
-    "date": "2026-09-27",
-    "opponent": "Brighton",
-    "home": true
-  },
-  {
-    "date": "2026-10-04",
-    "opponent": "Newcastle",
-    "home": false
-  },
-  {
-    "date": "2026-10-17",
-    "opponent": "Manchester United",
-    "home": true
   },
   {
     "date": "2026-10-25",

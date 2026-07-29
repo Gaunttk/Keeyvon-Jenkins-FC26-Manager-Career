@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-09-23"
+    "last_updated": "2026-10-17"
   },
   "matches": [
     {
@@ -170,6 +170,36 @@
       "result": "W",
       "competition": "Carabao Cup",
       "notes": "Obi 30', Obi 56', Amelia 61', Amelia 82', Obi 85'. MoM: Obi (3G, 9.1 rating). Debut for Andrés Cuenca.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-09-27",
+      "opponent": "Brighton",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Bobadilla 60'. MoM: Bobadilla. Ratings not captured for this game.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-04",
+      "opponent": "Newcastle",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Sauer 47', Bobadilla 58', 79', 82'. MoM: Bobadilla (3G, 9.1 rating).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-17",
+      "opponent": "Manchester United",
+      "home": true,
+      "score": "1-2",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Amrizi 32'. Defensive lapses and missed chances (2.9 xG) proved costly.",
       "journal_entry": true
     }
   ],
@@ -569,6 +599,10 @@
     {
       "date": "2026-09-12",
       "description": "Mo Faal sold to Barracas Central (£1.35m)."
+    },
+    {
+      "date": "2026-10-04",
+      "description": "Squad update — Cacace signed a new 2-year contract, £44k/week with a £390k signing bonus."
     }
   ],
   "fixtures": [
