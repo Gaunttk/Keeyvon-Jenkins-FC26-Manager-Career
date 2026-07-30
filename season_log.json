@@ -201,6 +201,37 @@
       "competition": "Premier League",
       "notes": "Amrizi 32'. Defensive lapses and missed chances (2.9 xG) proved costly.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Neutral venue. Jules Collin 1G 1A, Marco Soria 2G 1A, Martin Leon 1G 1A, Valentino Martini 1G, Ben Forster 1A. Fabricio Sandoval appeared.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Unknown",
+      "home": true,
+      "score": "10-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Horn also in GK. Nathaniel Matthews 3G 1A, Stephane Bertrand 3G 1A, Juan Cruz Vargas 1G 1A, Jamie Lord 1G, Martin Leon 2G, Ben Forster 3A, Jules Collin 1A. Mathieu Drouet appeared.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Arsenal",
+      "home": false,
+      "score": "10-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Horn in goal. Fabricio Sandoval 4G, Jules Collin 2G, Mathieu Drouet 1G 2A, Emiliano Bianchi 1G 1A, Juan Cruz Vargas 1G, Stephane Bertrand 1G 1A, Marco Soria 3A, Valentino Martini 1A.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -603,6 +634,10 @@
     {
       "date": "2026-10-04",
       "description": "Squad update — Cacace signed a new 2-year contract, £44k/week with a £390k signing bonus."
+    },
+    {
+      "date": "2026-10-25",
+      "description": "Squad update — Mika Horn (GK, Germany) signed to the Youth Academy; Leo Bergmann and Seun Hak released from the academy."
     }
   ],
   "fixtures": [
