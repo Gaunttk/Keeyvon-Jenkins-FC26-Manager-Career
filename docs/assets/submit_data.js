@@ -2590,11 +2590,6 @@ var PL_FIXTURES = [
     "home": false
   },
   {
-    "date": "2026-10-25",
-    "opponent": "Crystal Palace",
-    "home": false
-  },
-  {
     "date": "2026-10-31",
     "opponent": "Aston Villa",
     "home": true

@@ -214,7 +214,7 @@
     },
     {
       "date": "2026-10-25",
-      "opponent": "Unknown",
+      "opponent": "Brighton",
       "home": true,
       "score": "10-0",
       "result": "W",
@@ -231,6 +231,27 @@
       "competition": "Youth Academy Rush Tournament",
       "round": "Final",
       "notes": "Horn in goal. Fabricio Sandoval 4G, Jules Collin 2G, Mathieu Drouet 1G 2A, Emiliano Bianchi 1G 1A, Juan Cruz Vargas 1G, Stephane Bertrand 1G 1A, Marco Soria 3A, Valentino Martini 1A.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 2G (MoM, 8.4 rating), Fruk 1G 1A, Bobadilla 2A, Vitalis 1A.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-28",
+      "opponent": "Preston North End",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "round": "Round of 16",
+      "notes": "Webber started in goal (has not yet left on his loan), 6.3 rating. Amelia 1G, Mokio 1G, Veleten 1A, Obi 1A.",
       "journal_entry": true
     }
   ],
@@ -638,6 +659,10 @@
     {
       "date": "2026-10-25",
       "description": "Squad update — Mika Horn (GK, Germany) signed to the Youth Academy; Leo Bergmann and Seun Hak released from the academy."
+    },
+    {
+      "date": "2026-10-28",
+      "description": "Fixture reschedule — Manchester City (away) moved from 22 December 2026 to 15 December 2026."
     }
   ],
   "fixtures": [
