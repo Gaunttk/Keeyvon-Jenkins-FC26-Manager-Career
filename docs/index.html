@@ -62,10 +62,13 @@ if ('serviceWorker' in navigator) {
 
 <!-- PREMIER LEAGUE STATS BAR -->
 <div class="league-bar-label">
-  <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League">
-  Premier League
+  <span class="league-bar-title">
+    <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League">
+    Premier League
+  </span>
+  <span class="league-bar-pts"><span id="stat-pts">0</span> Pts</span>
 </div>
-<div class="season-bar">
+<div class="season-bar" style="grid-template-columns: repeat(4,1fr);">
   <div class="stat-cell">
     <span class="stat-number" id="league-p" style="color:var(--muted)">0</span>
     <span class="stat-label">P</span>
@@ -81,10 +84,6 @@ if ('serviceWorker' in navigator) {
   <div class="stat-cell">
     <span class="stat-number" id="stat-l" style="color:var(--red)">0</span>
     <span class="stat-label">L</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="stat-pts">0</span>
-    <span class="stat-label">Pts</span>
   </div>
 </div>
 
