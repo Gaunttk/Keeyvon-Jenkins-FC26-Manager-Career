@@ -5,9 +5,19 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-11-08"
+    "last_updated": "2026-11-22"
   },
   "matches": [
+    {
+      "date": "2026-11-22",
+      "opponent": "Arsenal",
+      "home": true,
+      "score": "1-1",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Amrizi 37', Barcola 49' (Ars). MoM: M. Vitális, rare start.",
+      "journal_entry": true
+    },
     {
       "date": "2026-05-15",
       "opponent": "Ipswich",
@@ -696,6 +706,11 @@
       "date": "2026-11-08",
       "description": "Juan Cruz Vargas (CAM, 17) promoted from the Youth Academy to the first team. Jenkins: \"This kid has the potential to be special — I want him getting minutes with the first team now.\"",
       "journal_entry": true
+    },
+    {
+      "date": "2026-11-22",
+      "description": "Arthur Okonkwo returned from his tricep injury to start in goal against Arsenal (MD12), rating 6.1.",
+      "journal_entry": false
     }
   ],
   "fixtures": [

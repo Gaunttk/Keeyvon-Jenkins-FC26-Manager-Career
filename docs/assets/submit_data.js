@@ -236,7 +236,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "29500",
     "Market_Value": "3800000",
     "Development_Plan": "Ball-Playing Keeper",
-    "Notes": "GK: Div 74/Han 71/Kic 70/Ref 76/Spd 43/Pos 72. Dev Ball-Playing Keeper 73→74 ETA 2w. Willing to negotiate new terms. Injured: Tricep Muscle, out ~6 weeks (date unconfirmed — flagged for user)."
+    "Notes": "GK: Div 74/Han 71/Kic 70/Ref 76/Spd 43/Pos 72. Dev Ball-Playing Keeper 73→74 ETA 2w. Willing to negotiate new terms. Returned from tricep injury, back in the starting XI (started vs Arsenal, MD12)."
   },
   "Liberato Cacace": {
     "Position": "RB",
@@ -2344,7 +2344,7 @@ var ROSTER_ATTR_DATA = {
     "Dribbling": "63",
     "Defending": "68",
     "Physical": "57",
-    "Potential": "71-85",
+    "Potential": "73-93",
     "Acceleration": "39",
     "Agility": "41",
     "Balance": "38",
@@ -2546,7 +2546,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Dynamic",
-    "Notes": "Germany. Signed 2026-10-25. GK: Div 51/Han 56/Kic 61/Ref 67/Spd 35/Pos 57 (Significant Growth across the board). Roles: Ball-Playing Keeper+/Sweeper Keeper+. PlayStyles tab not yet confirmed."
+    "Notes": "Germany. Signed 2026-10-25. GK: Div 51/Han 56/Kic 61/Ref 67/Spd 35/Pos 57 (Significant Growth across the board). Roles: Ball-Playing Keeper+/Sweeper Keeper+. No PlayStyles confirmed on the PlayStyles tab (all diamonds unfilled)."
   }
 };
 var PL_FIXTURES = [
@@ -2554,11 +2554,6 @@ var PL_FIXTURES = [
     "date": "2026-08-22",
     "opponent": "Sheffield United",
     "home": false
-  },
-  {
-    "date": "2026-11-22",
-    "opponent": "Arsenal",
-    "home": true
   },
   {
     "date": "2026-11-28",
