@@ -1,4 +1,4 @@
-const CACHE = 'wrxm-fc26-v14';
+const CACHE = 'wrxm-fc26-v15';
 
 const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/',
@@ -31,7 +31,11 @@ self.addEventListener('activate', e => {
 
 // Network-first for HTML, CSS, and JS (always fresh — roster/fixture data
 // lives in submit_data.js and must never go stale behind a service worker
-// cache); cache-first for images/fonts/icons only.
+// cache). Stale-while-revalidate for images/fonts/icons: serve the cached
+// copy instantly, but always refetch in the background and update the
+// cache, so a photo swapped in on the same filename (e.g. a player's
+// headshot) is fresh on the *next* load instead of stuck forever behind
+// the first cached copy.
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET') return;
@@ -44,7 +48,15 @@ self.addEventListener('fetch', e => {
     );
   } else {
     e.respondWith(
-      caches.match(e.request).then(cached => cached || fetch(e.request))
+      caches.open(CACHE).then(cache =>
+        cache.match(e.request).then(cached => {
+          const fetchPromise = fetch(e.request).then(res => {
+            cache.put(e.request, res.clone());
+            return res;
+          }).catch(() => cached);
+          return cached || fetchPromise;
+        })
+      )
     );
   }
 });
