@@ -4,103 +4,128 @@
 var ROSTER_SENIOR = [
   {
     "name": "Aaron James",
-    "pos": "CB/RB"
+    "pos": "CB/RB",
+    "starter": false
   },
   {
     "name": "Andrés Gómez",
-    "pos": "RM/RW"
+    "pos": "RM/RW",
+    "starter": true
   },
   {
     "name": "Andrés Cuenca",
-    "pos": "CB"
+    "pos": "CB",
+    "starter": false
   },
   {
     "name": "Arthur Okonkwo",
-    "pos": "GK"
+    "pos": "GK",
+    "starter": true
   },
   {
     "name": "Ayden Heaven",
-    "pos": "CB"
+    "pos": "CB",
+    "starter": true
   },
   {
     "name": "Bernt Klaverboer",
-    "pos": "GK"
+    "pos": "GK",
+    "starter": false
   },
   {
     "name": "Brian Gutiérrez",
-    "pos": "CAM/CM/LM"
+    "pos": "CAM/CM/LM",
+    "starter": true
   },
   {
     "name": "Callum Doyle",
-    "pos": "CB/LB"
+    "pos": "CB/LB",
+    "starter": true
   },
   {
     "name": "Chido Obi",
-    "pos": "ST"
+    "pos": "ST",
+    "starter": false
   },
   {
     "name": "Damián Bobadilla",
-    "pos": "CM/CDM"
+    "pos": "CM/CDM",
+    "starter": true
   },
   {
     "name": "Elijah Dijkstra",
-    "pos": "RB/LB/CM"
+    "pos": "RB/LB/CM",
+    "starter": false
   },
   {
     "name": "Jamal Belghazi",
-    "pos": "CDM/CM"
+    "pos": "CDM/CM",
+    "starter": false
   },
   {
     "name": "Joenathan Amelia",
-    "pos": "RB"
+    "pos": "RB",
+    "starter": false
   },
   {
     "name": "Jorthy Mokio",
-    "pos": "CDM/CM/LB"
+    "pos": "CDM/CM/LB",
+    "starter": true
+  },
+  {
+    "name": "Juan Cruz Vargas",
+    "pos": "CAM",
+    "starter": false
   },
   {
     "name": "Kieffer Moore",
-    "pos": "ST"
+    "pos": "ST",
+    "starter": false
   },
   {
     "name": "Leo Sauer",
-    "pos": "LW/LM"
-  },
-  {
-    "name": "Lewis O'Brien",
-    "pos": "CM/CDM/RM/CAM"
+    "pos": "LW/LM",
+    "starter": false
   },
   {
     "name": "Liberato Cacace",
-    "pos": "RB"
+    "pos": "RB",
+    "starter": true
   },
   {
     "name": "Mario Barbieri",
-    "pos": "RB/CB/RM/CDM"
+    "pos": "RB/CB/RM/CDM",
+    "starter": false
   },
   {
     "name": "Max Cleworth",
-    "pos": "CB"
+    "pos": "CB",
+    "starter": false
   },
   {
     "name": "Milán Vitális",
-    "pos": "CM/CDM"
+    "pos": "CM/CDM",
+    "starter": false
   },
   {
     "name": "Rio Ngumoha",
-    "pos": "LM/LW"
+    "pos": "LM/LW",
+    "starter": true
   },
   {
     "name": "Toni Fruk",
-    "pos": "ST/CAM/CM"
+    "pos": "ST/CAM/CM",
+    "starter": true
   },
   {
     "name": "Vladyslav Veleten",
-    "pos": "RW/RM"
+    "pos": "RW/RM",
+    "starter": false
   },
   {
     "name": "Yacel Amrizi",
-    "pos": "ST/LW"
+    "pos": "ST/LW",
+    "starter": true
   }
 ];
 var ROSTER_ACADEMY = [
@@ -119,10 +144,6 @@ var ROSTER_ACADEMY = [
   {
     "name": "Jamie Lord",
     "pos": "LB"
-  },
-  {
-    "name": "Juan Cruz Vargas",
-    "pos": "CAM"
   },
   {
     "name": "Jules Collin",
@@ -491,61 +512,6 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "3600000",
     "Development_Plan": "Wingback 70→71 ETA 33w",
     "Notes": "Happy with current terms. Good form, Match Fit."
-  },
-  "Lewis O'Brien": {
-    "Position": "CM/CDM/RM/CAM",
-    "Age": "27",
-    "Height": "5'8\"",
-    "Weight": "163lbs",
-    "Pref_Foot": "Left",
-    "Squad_Role": "Important",
-    "Contract_Length": "2y1m",
-    "Status": "At The Club Since 2025",
-    "OVR": "73",
-    "Pace": "66",
-    "Shooting": "63",
-    "Passing": "67",
-    "Dribbling": "75",
-    "Defending": "69",
-    "Physical": "71",
-    "Potential": "",
-    "Acceleration": "72",
-    "Agility": "79",
-    "Balance": "85",
-    "Jumping": "66",
-    "Sprint_Speed": "61",
-    "Stamina": "90",
-    "Strength": "60",
-    "Aggression": "78",
-    "Att_Position": "68",
-    "Composure": "72",
-    "Interceptions": "69",
-    "Reactions": "73",
-    "Vision": "72",
-    "Ball_Control": "74",
-    "Crossing": "56",
-    "Curve": "42",
-    "Def_Aware": "67",
-    "Dribbling_Tech": "75",
-    "FK_Acc": "47",
-    "Finishing": "62",
-    "Heading_Acc": "53",
-    "Long_Pass": "68",
-    "Long_Shots": "65",
-    "Penalties": "42",
-    "Short_Pass": "73",
-    "Shot_Power": "67",
-    "Slide_Tackle": "73",
-    "Stand_Tackle": "73",
-    "Volleys": "52",
-    "Skill_Moves": "3",
-    "Weak_Foot": "2",
-    "PlayStyles": "Tiki Taka/Technical",
-    "Roles": "3",
-    "Wage": "36000",
-    "Market_Value": "3800000",
-    "Development_Plan": "Dynamic",
-    "Notes": "Not willing to negotiate. Dev Dynamic 72→73 ETA 12w. CM Half-Winger/Holding/DLP/B2B/Playmaker+ | CDM Box Crasher/Wide Half/Centre-Half+/Holding/DLP | RM Winger+/Wide Playmaker/Wide Midfielder"
   },
   "Kieffer Moore": {
     "Position": "ST",
@@ -1812,6 +1778,61 @@ var ROSTER_ATTR_DATA = {
     "Development_Plan": "Goalkeeper 72→73 ETA 16w",
     "Notes": "Signed from Burnley, 2026-08-31 (£6.2m). Not willing to negotiate new terms. Sell-on clause 8%. GK: Div 70/Han 70/Kic 84/Ref 69/Spd 33/Pos 70. 1 PlayStyle+ confirmed via screenshot; icon unclear from image — name to be confirmed next session."
   },
+  "Juan Cruz Vargas": {
+    "Position": "CAM",
+    "Age": "17",
+    "Height": "5'9\"",
+    "Weight": "149lbs",
+    "Pref_Foot": "Right",
+    "Squad_Role": "Prospect",
+    "Contract_Length": "3y 7m",
+    "Status": "Has Potential To Be Special",
+    "OVR": "65",
+    "Pace": "72",
+    "Shooting": "52",
+    "Passing": "56",
+    "Dribbling": "67",
+    "Defending": "34",
+    "Physical": "51",
+    "Potential": "90-94",
+    "Acceleration": "75",
+    "Agility": "74",
+    "Balance": "70",
+    "Jumping": "51",
+    "Sprint_Speed": "69",
+    "Stamina": "58",
+    "Strength": "49",
+    "Aggression": "47",
+    "Att_Position": "64",
+    "Composure": "50",
+    "Interceptions": "30",
+    "Reactions": "62",
+    "Vision": "65",
+    "Ball_Control": "68",
+    "Crossing": "48",
+    "Curve": "48",
+    "Def_Aware": "34",
+    "Dribbling_Tech": "66",
+    "FK_Acc": "42",
+    "Finishing": "51",
+    "Heading_Acc": "48",
+    "Long_Pass": "58",
+    "Long_Shots": "48",
+    "Penalties": "46",
+    "Short_Pass": "59",
+    "Shot_Power": "57",
+    "Slide_Tackle": "39",
+    "Stand_Tackle": "30",
+    "Volleys": "49",
+    "Skill_Moves": "5",
+    "Weak_Foot": "3",
+    "PlayStyles": "Acrobatic, Technical",
+    "Roles": "3",
+    "Wage": "10000",
+    "Market_Value": "3400000",
+    "Development_Plan": "Shadow Striker",
+    "Notes": "Promoted to first team 2026-11-08. Not willing to negotiate new contract terms."
+  },
   "Jamie Lord": {
     "Position": "LB",
     "Age": "18",
@@ -1976,61 +1997,6 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "",
     "Development_Plan": "Deep-Lying Playmaker",
     "Notes": "Italy. Dev Deep-Lying Playmaker 57→58 ETA 16w. CDM Box Crasher+/Wide Half/Centre-Half+/Holding/Deep-Lying Playmaker."
-  },
-  "Juan Cruz Vargas": {
-    "Position": "CAM",
-    "Age": "17",
-    "Height": "5'9\"",
-    "Weight": "149lbs",
-    "Pref_Foot": "Right",
-    "Squad_Role": "Academy",
-    "Contract_Length": "",
-    "Status": "Academy Player",
-    "OVR": "64",
-    "Pace": "69",
-    "Shooting": "46",
-    "Passing": "56",
-    "Dribbling": "62",
-    "Defending": "33",
-    "Physical": "51",
-    "Potential": "90-94",
-    "Acceleration": "70",
-    "Agility": "74",
-    "Balance": "70",
-    "Jumping": "51",
-    "Sprint_Speed": "69",
-    "Stamina": "58",
-    "Strength": "49",
-    "Aggression": "47",
-    "Att_Position": "57",
-    "Composure": "50",
-    "Interceptions": "30",
-    "Reactions": "55",
-    "Vision": "65",
-    "Ball_Control": "62",
-    "Crossing": "48",
-    "Curve": "48",
-    "Def_Aware": "34",
-    "Dribbling_Tech": "60",
-    "FK_Acc": "42",
-    "Finishing": "43",
-    "Heading_Acc": "40",
-    "Long_Pass": "58",
-    "Long_Shots": "48",
-    "Penalties": "46",
-    "Short_Pass": "59",
-    "Shot_Power": "51",
-    "Slide_Tackle": "39",
-    "Stand_Tackle": "30",
-    "Volleys": "41",
-    "Skill_Moves": "4",
-    "Weak_Foot": "3",
-    "PlayStyles": "Acrobatic, Technical",
-    "Roles": "2",
-    "Wage": "",
-    "Market_Value": "",
-    "Development_Plan": "Shadow Striker",
-    "Notes": "Argentina. Dev Shadow Striker 61→62 ETA 2w. CAM Half-Winger++/Shadow Striker/Classic 10/Playmaker+. PlayStyles: Acrobatic (regular), Technical (regular)."
   },
   "Nathaniel Matthews": {
     "Position": "RW",
@@ -2587,16 +2553,6 @@ var PL_FIXTURES = [
   {
     "date": "2026-08-22",
     "opponent": "Sheffield United",
-    "home": false
-  },
-  {
-    "date": "2026-10-31",
-    "opponent": "Aston Villa",
-    "home": true
-  },
-  {
-    "date": "2026-11-08",
-    "opponent": "Liverpool",
     "home": false
   },
   {

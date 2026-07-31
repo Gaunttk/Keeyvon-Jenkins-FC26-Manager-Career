@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-10-17"
+    "last_updated": "2026-11-08"
   },
   "matches": [
     {
@@ -252,6 +252,26 @@
       "competition": "Carabao Cup",
       "round": "Round of 16",
       "notes": "Webber started in goal (has not yet left on his loan), 6.3 rating. Amelia 1G, Mokio 1G, Veleten 1A, Obi 1A.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-31",
+      "opponent": "Aston Villa",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 48'. Dominant but toothless for long stretches; controlled midfield and defended well, struggled to convert chances until the breakthrough.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-11-08",
+      "opponent": "Liverpool",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Sauer 37', Sauer 43', Obi 90'. MoM: Sauer (8.3). A statement away win at Anfield; Sauer's breakout performance.",
       "journal_entry": true
     }
   ],
@@ -511,6 +531,14 @@
       "club": "Barracas Central",
       "fee": "£1.35m",
       "wage": ""
+    },
+    {
+      "date": "2026-11-08",
+      "player": "Lewis O'Brien",
+      "direction": "out",
+      "club": "Fulham",
+      "fee": "£5.9m",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -663,6 +691,11 @@
     {
       "date": "2026-10-28",
       "description": "Fixture reschedule — Manchester City (away) moved from 22 December 2026 to 15 December 2026."
+    },
+    {
+      "date": "2026-11-08",
+      "description": "Juan Cruz Vargas (CAM, 17) promoted from the Youth Academy to the first team. Jenkins: \"This kid has the potential to be special — I want him getting minutes with the first team now.\"",
+      "journal_entry": true
     }
   ],
   "fixtures": [
