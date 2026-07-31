@@ -11,6 +11,23 @@ import csv
 import json
 import re
 import time
+import unicodedata
+
+# Regular starting XI — used to default the Player Stats "Status" radio to
+# Started on docs/submit.html. Matched against the CSV row's surname
+# (accent-insensitive). Update this set by hand when the first-choice XI
+# changes; there's no other source for it.
+STARTERS = {
+    'gomez', 'okonkwo', 'heaven', 'gutierrez', 'doyle', 'mokio',
+    'cacace', 'ngumoha', 'fruk', 'amrizi', 'bobadilla',
+}
+
+
+def _normalize(s):
+    return ''.join(
+        c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn'
+    ).lower()
+
 
 ATTR_KEYS = [
     'Position', 'Age', 'Height', 'Weight', 'Pref_Foot', 'Squad_Role',
@@ -27,7 +44,7 @@ ATTR_KEYS = [
 ]
 
 
-def load_roster(path):
+def load_roster(path, starters=None):
     with open(path, newline='', encoding='utf-8') as f:
         rows = list(csv.DictReader(f))
     names = []
@@ -44,7 +61,10 @@ def load_roster(path):
             # exclude them from the submit sheet's dropdowns and stat tables
             # entirely rather than just graying them out.
             continue
-        names.append({'name': name, 'pos': (row.get('Position') or '').strip()})
+        entry = {'name': name, 'pos': (row.get('Position') or '').strip()}
+        if starters is not None:
+            entry['starter'] = _normalize(name.split()[-1]) in starters
+        names.append(entry)
     names.sort(key=lambda p: p['name'].split()[0].lower())
     return names, attrs
 
@@ -66,7 +86,7 @@ def load_pl_fixtures(path):
 
 
 def main():
-    senior_names, senior_attrs = load_roster('wrexham_squad.csv')
+    senior_names, senior_attrs = load_roster('wrexham_squad.csv', starters=STARTERS)
     academy_names, academy_attrs = load_roster('youth_academy.csv')
     attrs = {}
     attrs.update(senior_attrs)

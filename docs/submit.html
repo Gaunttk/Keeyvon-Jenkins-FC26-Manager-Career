@@ -150,6 +150,15 @@
     .stats-table input[type=checkbox] { width:auto; }
     .stats-table input[type=radio] { display:inline-block; width:auto; accent-color: var(--red); }
     .stats-table tr.on-loan { opacity:0.4; }
+    .stp-status { display:flex; gap:5px; justify-content:center; align-items:center; white-space:nowrap; }
+    .stp-status label {
+      display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer;
+      font-family:'Barlow Condensed',sans-serif; font-size:8px; letter-spacing:0.5px;
+      color:var(--muted); text-transform:uppercase;
+    }
+    .stp-status input[type=radio] { margin:0; }
+    .stp-rating::-webkit-outer-spin-button, .stp-rating::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
+    .stp-rating { -moz-appearance:textfield; }
     .stp-loan-tag { color:var(--muted); font-size:9px; font-family:'Barlow Condensed',sans-serif; letter-spacing:1px; margin-left:5px; text-transform:uppercase; }
 
     /* ── Attribute Editor ── */
@@ -229,7 +238,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Hawk Submit">
 <link rel="apple-touch-icon" href="assets/icons/hawk-submit-192.png">
-<script src="assets/submit_data.js?v=1785392305" charset="utf-8"></script>
+<script src="assets/submit_data.js?v=1785480771" charset="utf-8"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -387,7 +396,7 @@ if ('serviceWorker' in navigator) {
     <!-- ── First-Team Player Stats ── -->
     <div style="margin-top:18px;">
       <label style="display:block; margin-bottom:8px;">Player Stats (mirrors the post-match Player Ratings screen)</label>
-      <div class="stats-hint">Check "Played" for anyone who appeared. Fill Goals/Assists/Rating only where you have them — blank is fine. Tab moves left-to-right across a row, then down to the next player.</div>
+      <div class="stats-hint">Set Started / Sub / DNP for everyone — regular starters are pre-selected to Started. Fill Goals/Assists/Rating only where you have them — blank is fine. Tab moves left-to-right across a row, then down to the next player.</div>
       <div id="stats-table-match"></div>
     </div>
   </div>
@@ -588,15 +597,20 @@ if ('serviceWorker' in navigator) {
 // ── Player Stats table builder (shared by Match + Youth) ──
 function renderStatsTable(containerId, roster, prefix) {
   var html = '<div class="stats-table-wrap"><table class="stats-table"><thead><tr>' +
-    '<th>Player</th><th>Played</th><th>G</th><th>A</th><th>Rating</th><th>MOM</th></tr></thead><tbody>';
+    '<th>Player</th><th>Status</th><th>G</th><th>A</th><th>Rating</th><th>MOM</th></tr></thead><tbody>';
   roster.forEach(function(p, i) {
     var id = prefix + '-' + i;
+    var def = p.starter ? 'started' : 'dnp';
     html += '<tr>' +
       '<td class="stp-name">' + p.name + '<span class="stp-pos">' + p.pos + '</span></td>' +
-      '<td><input type="checkbox" id="' + id + '-played"></td>' +
+      '<td><div class="stp-status">' +
+        '<label><input type="radio" name="' + id + '-status" value="started"' + (def === 'started' ? ' checked' : '') + '>S</label>' +
+        '<label><input type="radio" name="' + id + '-status" value="subbed">Sub</label>' +
+        '<label><input type="radio" name="' + id + '-status" value="dnp"' + (def === 'dnp' ? ' checked' : '') + '>DNP</label>' +
+      '</div></td>' +
       '<td><input type="number" id="' + id + '-g" min="0" placeholder="0" class="stp-num"></td>' +
       '<td><input type="number" id="' + id + '-a" min="0" placeholder="0" class="stp-num"></td>' +
-      '<td><input type="number" id="' + id + '-r" min="0" max="10" step="0.1" placeholder="—" class="stp-num"></td>' +
+      '<td><input type="number" id="' + id + '-r" min="0" max="10" step="0.1" placeholder="—" class="stp-num stp-rating"></td>' +
       '<td><input type="radio" name="' + prefix + '-mom" id="' + id + '-mom" value="' + i + '"></td>' +
       '</tr>';
   });
@@ -612,14 +626,17 @@ function collectPlayerStats(roster, prefix) {
   var lines = [], raw = [];
   roster.forEach(function(p, i) {
     var id = prefix + '-' + i;
-    var played = document.getElementById(id + '-played').checked;
+    var statusEl = document.querySelector('input[name="' + id + '-status"]:checked');
+    var status = statusEl ? statusEl.value : 'dnp';
+    var played = status !== 'dnp';
     var g = document.getElementById(id + '-g').value;
     var a = document.getElementById(id + '-a').value;
     var r = document.getElementById(id + '-r').value;
     var isMom = (i === momIdx);
-    raw.push({ played: played, g: g, a: a, r: r, mom: isMom });
+    raw.push({ status: status, g: g, a: a, r: r, mom: isMom });
     if (played || g || a || r || isMom) {
       var parts = [];
+      if (status === 'subbed') parts.push('Sub');
       if (g) parts.push(g + ' G');
       if (a) parts.push(a + ' A');
       if (r) parts.push('Rating ' + r);
@@ -633,7 +650,9 @@ function collectPlayerStats(roster, prefix) {
 function resetPlayerStatsTable(roster, prefix) {
   roster.forEach(function(p, i) {
     var id = prefix + '-' + i;
-    document.getElementById(id + '-played').checked = false;
+    var def = p.starter ? 'started' : 'dnp';
+    var defEl = document.querySelector('input[name="' + id + '-status"][value="' + def + '"]');
+    if (defEl) defEl.checked = true;
     document.getElementById(id + '-g').value = '';
     document.getElementById(id + '-a').value = '';
     document.getElementById(id + '-r').value = '';
@@ -648,7 +667,9 @@ function restorePlayerStats(raw, roster, prefix) {
     var d = raw[i];
     if (!d) return;
     var id = prefix + '-' + i;
-    document.getElementById(id + '-played').checked = !!d.played;
+    var status = d.status || (d.played ? 'started' : 'dnp');
+    var el = document.querySelector('input[name="' + id + '-status"][value="' + status + '"]');
+    if (el) el.checked = true;
     document.getElementById(id + '-g').value = d.g || '';
     document.getElementById(id + '-a').value = d.a || '';
     document.getElementById(id + '-r').value = d.r || '';
