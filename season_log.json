@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-12-01"
+    "last_updated": "2026-12-12"
   },
   "matches": [
     {
@@ -312,6 +312,16 @@
       "result": "W",
       "competition": "Premier League",
       "notes": "Amrizi 50', Joseph 87' (Leeds), Vargas 88'. Scraped it away at Elland Road.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-12",
+      "opponent": "Manchester City",
+      "home": true,
+      "score": "1-2",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Haaland 19', Ngumoha 36', Reijnders 90'. Last minute goal crushed the hopes of a Wrexham shocker. But have to hang your heads high after a game like that. We definitely showed them that we were not intimidated by the talent on the other side. We have talent too, and we are here to stay.",
       "journal_entry": true
     }
   ],
@@ -753,6 +763,10 @@
     {
       "date": "2026-12-06",
       "description": "Scraped past Leeds United 2-1 away; Yacel Amrizi opened the scoring, Leeds' Joseph equalized late before substitute Juan Cruz Vargas won it in the 88th minute."
+    },
+    {
+      "date": "2026-12-12",
+      "description": "Lost 1-2 at home to Manchester City (MD16); Rio Ngumoha's 36th-minute equalizer wasn't enough as Reijnders scored a 90th-minute winner for City."
     }
   ],
   "fixtures": [
@@ -844,12 +858,6 @@
       "date": "2026-12-06",
       "opponent": "Leeds United",
       "home": false,
-      "competition": "Premier League"
-    },
-    {
-      "date": "2026-12-12",
-      "opponent": "Manchester City",
-      "home": true,
       "competition": "Premier League"
     },
     {
