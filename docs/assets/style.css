@@ -1296,78 +1296,95 @@ body {
 .dc-legend-item.loa   { color: var(--muted); }
 .dc-legend-item.loa::before   { background: var(--muted); }
 
-/* ─── DEPTH CHART — FORMATION PITCH ─── */
-.pitch {
-  background: #162416;
-  border: 1px solid #243824;
-  padding: 14px 10px;
+/* ─── DEPTH CHART — FORMATION BOARD ─── */
+.formation-board {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+  padding: 4px 0;
 }
-.pitch-row {
+.formation-line {
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--mid);
+}
+.formation-line:last-child { border-bottom: none; padding-bottom: 0; }
+.formation-row {
   display: flex;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
 }
-.pos-chip {
+.formation-col {
   flex: 1;
-  max-width: 148px;
-  background: rgba(0,0,0,0.55);
-  border: 1px solid var(--steel);
-  padding: 7px 6px 5px;
-  text-align: center;
-  position: relative;
+  max-width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
-.pos-chip.dyn  { border-color: rgba(212,168,67,0.55); }
-.pos-chip.cmp  { border-color: rgba(74,144,196,0.55); }
-.pos-chip.dec  { border-color: rgba(200,16,46,0.55); }
-.pos-chip.loa  { border-color: rgba(119,119,119,0.45); border-style: dashed; }
-.pos-chip.gap  { border-color: rgba(200,16,46,0.35); background: rgba(200,16,46,0.04); border-style: dashed; }
-.pos-label {
+.formation-col-label {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 3px;
+  text-align: center;
   color: var(--muted);
-}
-.pos-chip.dyn .pos-label { color: var(--gold); }
-.pos-chip.cmp .pos-label { color: var(--dispatch-blue); }
-.pos-chip.dec .pos-label { color: var(--red); }
-.pos-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  color: var(--white);
-  line-height: 1.1;
   margin-bottom: 2px;
 }
-.pos-chip.gap .pos-name { color: rgba(200,16,46,0.6); font-style: italic; font-size: 10px; }
-.pos-meta {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
-  color: var(--muted);
-  line-height: 1;
-}
-.pos-chip.dyn .pos-meta { color: rgba(212,168,67,0.75); }
-.pos-chip.cmp .pos-meta { color: rgba(74,144,196,0.65); }
-.pos-chip.dec .pos-meta { color: rgba(200,16,46,0.75); }
-.pos-flag {
+.formation-tier-label {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 8px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: 4px;
-  padding: 1px 4px;
-  display: inline-block;
+  margin: 8px 0 4px;
+  padding-left: 2px;
 }
-.pflag-dec  { background: rgba(200,16,46,0.2); color: var(--red); }
-.pflag-loan { background: rgba(119,119,119,0.12); color: var(--muted); }
-.pflag-warn { background: rgba(212,168,67,0.15); color: var(--gold); }
-.pflag-exp  { background: rgba(200,16,46,0.15); color: #ff9966; }
+.formation-tier-label.backup    { color: var(--dispatch-blue); }
+.formation-tier-label.secondary { color: var(--muted); }
+.formation-tier-label.youth     { color: var(--gold); }
+
+.pos-pill {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  padding: 4px 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pos-pill.starter {
+  background: var(--red);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 12.5px;
+  padding: 6px 6px;
+  letter-spacing: 0.5px;
+}
+.pos-pill.backup {
+  background: rgba(74,144,196,0.16);
+  color: var(--dispatch-blue);
+  font-weight: 500;
+}
+.pos-pill.secondary {
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  font-weight: 500;
+  border: 1px dashed rgba(255,255,255,0.14);
+}
+.pos-pill.youth {
+  background: rgba(212,168,67,0.20);
+  color: var(--gold);
+  font-weight: 600;
+}
+.pos-pill.empty {
+  background: transparent;
+  color: rgba(255,255,255,0.28);
+  font-style: italic;
+  font-size: 9.5px;
+  font-weight: 400;
+  border: 1px dashed rgba(255,255,255,0.12);
+}
 
 /* ─── DEPTH CHART — ROWS ─── */
 .depth-section {
@@ -1416,8 +1433,8 @@ body {
 .role-b  { background: var(--off-black); color: var(--steel); border: 1px solid var(--steel); }
 .depth-name {
   font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 13px;
   color: var(--white);
   line-height: 1;
   margin-bottom: 1px;
@@ -1497,7 +1514,7 @@ body {
   list-style: none;
   user-select: none;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 13px;
+  font-size: 19px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -1532,7 +1549,7 @@ body {
   list-style: none;
   user-select: none;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;

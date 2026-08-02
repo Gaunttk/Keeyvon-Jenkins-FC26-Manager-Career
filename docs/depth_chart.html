@@ -49,7 +49,7 @@ if ('serviceWorker' in navigator) {
 <div class="hub-header">
   <div class="hub-eyebrow">Internal Document · Youth Strategy Lens</div>
   <div class="hub-title">SQUAD <span>DEPTH</span></div>
-  <div class="hub-subtitle">4-2-3-1 · Age / OVR / Development Status · Keeyvon Jenkins Era</div>
+  <div class="hub-subtitle">4-3-3 w/ CAM · Age / OVR / Development Status · Keeyvon Jenkins Era</div>
   <img class="hub-crest" src="assets/photos/wrexham-crest.png" alt="Wrexham AFC">
 </div>
 
@@ -77,86 +77,263 @@ if ('serviceWorker' in navigator) {
 </nav>
 
 <!-- ══════════════════════════════════════════
-     FORMATION PITCH
+     FORMATION BOARD
 ══════════════════════════════════════════ -->
 <div class="depth-section">
-  <div class="depth-pos-header">4-3-3 Starting XI</div>
+  <div class="depth-pos-header">4-3-3 w/ CAM Starting XI — Full Formation Depth</div>
 
-  <div class="pitch">
+  <div class="formation-board">
 
-    <!-- FORWARD LINE -->
-    <div class="pitch-row">
-      <div class="pos-chip dyn">
-        <div class="pos-label">LW</div>
-        <div class="pos-name">Rio Ngumoha</div>
-        <div class="pos-meta">17 · OVR 76</div>
+    <!-- ═══ FORWARD LINE (LW / ST / RW) ═══ -->
+    <div class="formation-line">
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-col-label">LW</div>
+          <div class="pos-pill starter">Ngumoha | 17 | 76</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-col-label">ST</div>
+          <div class="pos-pill starter">Amrizi | 21 | 74</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-col-label">RW</div>
+          <div class="pos-pill starter">Sauer | 20 | 76</div>
+        </div>
       </div>
-      <div class="pos-chip dec">
-        <div class="pos-label">ST</div>
-        <div class="pos-name">Kieffer Moore</div>
-        <div class="pos-meta">33 · OVR 71</div>
-        <div class="pos-flag pflag-dec">↓ Declining</div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill empty">No natural backup</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Moore | 33 | 71</div>
+          <div class="pos-pill backup">Obi | 18 | 68</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Gómez | 23 | 75</div>
+        </div>
       </div>
-      <div class="pos-chip dyn">
-        <div class="pos-label">RW</div>
-        <div class="pos-name">Andrés Gómez</div>
-        <div class="pos-meta">23 · OVR 75</div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Amrizi (ST/LW) | 21 | 74</div>
+          <div class="pos-pill secondary">Ortega (loan) | 18 | 63</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Fruk (ST/CAM/CM) | 25 | 79</div>
+          <div class="pos-pill secondary">Cadamarteri (loan) | 20 | 67</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Veleten | 23 | 71</div>
+        </div>
+      </div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Soria | 18 | 65 · POT 74-80</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Drouet | 15 | 50 · POT 82-92</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Matthews | 16 | 60 · POT 75-81</div>
+          <div class="pos-pill youth">Collin | 16 | 61 · POT 74-92</div>
+        </div>
       </div>
     </div>
 
-    <!-- MIDFIELD LINE -->
-    <div class="pitch-row">
-      <div class="pos-chip dyn">
-        <div class="pos-label">CM</div>
-        <div class="pos-name">Brian Gutiérrez</div>
-        <div class="pos-meta">22 · OVR 73</div>
+    <!-- ═══ MIDFIELD LINE (LCM / CAM / RCM) ═══ -->
+    <div class="formation-line">
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-col-label">LCM</div>
+          <div class="pos-pill starter">Bobadilla | 24 | 74</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-col-label">CAM</div>
+          <div class="pos-pill starter">Fruk | 25 | 79</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-col-label">RCM</div>
+          <div class="pos-pill starter">Gutiérrez | 22 | 73</div>
+        </div>
       </div>
-      <div class="pos-chip dyn">
-        <div class="pos-label">CDM</div>
-        <div class="pos-name">Damián Bobadilla</div>
-        <div class="pos-meta">24 · OVR 74</div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Vitális | 24 | 71</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Vargas | 17 | 65</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Vitális | 24 | 71</div>
+        </div>
       </div>
-      <div class="pos-chip dyn">
-        <div class="pos-label">CAM</div>
-        <div class="pos-name">Juan Cruz Vargas</div>
-        <div class="pos-meta">17 · OVR 65</div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Mokio (CDM/CM/LB) | 18 | 73</div>
+          <div class="pos-pill secondary">Belghazi (CDM/CM) | 17 | 71</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Gutiérrez (CAM/CM/LM) | 22 | 73</div>
+          <div class="pos-pill secondary">Ortega (loan) | 18 | 63</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Mokio (CDM/CM/LB) | 18 | 73</div>
+          <div class="pos-pill secondary">Macia (loan) | 17 | 65</div>
+        </div>
+      </div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Forster | 15 | 59 · POT 79-85</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Sandoval | 17 | 61 · POT 74-80</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Leon | 15 | 53 · POT 78-84</div>
+        </div>
       </div>
     </div>
 
-    <!-- DEFENSIVE LINE -->
-    <div class="pitch-row">
-      <div class="pos-chip dyn">
-        <div class="pos-label">LB</div>
-        <div class="pos-name">Jorthy Mokio</div>
-        <div class="pos-meta">18 · OVR 73</div>
+    <!-- ═══ DEFENSIVE LINE (LB / LCB / RCB / RB) ═══ -->
+    <div class="formation-line">
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-col-label">LB</div>
+          <div class="pos-pill starter">Mokio | 18 | 73</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-col-label">LCB</div>
+          <div class="pos-pill starter">Doyle © | 22 | 76</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-col-label">RCB</div>
+          <div class="pos-pill starter">Heaven | 19 | 76</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-col-label">RB</div>
+          <div class="pos-pill starter">Cacace | 25 | 74</div>
+        </div>
       </div>
-      <div class="pos-chip dyn">
-        <div class="pos-label">CB</div>
-        <div class="pos-name">Ayden Heaven</div>
-        <div class="pos-meta">19 · OVR 76</div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Dijkstra | 20 | 69</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Cleworth | 24 | 71</div>
+          <div class="pos-pill backup">Cuenca | 19 | 65</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Cleworth | 24 | 71</div>
+          <div class="pos-pill backup">Cuenca | 19 | 65</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Amelia | 22 | 70</div>
+        </div>
       </div>
-      <div class="pos-chip dyn">
-        <div class="pos-label">CB</div>
-        <div class="pos-name">Callum Doyle</div>
-        <div class="pos-meta">22 · OVR 76 ©</div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Doyle (CB/LB) | 22 | 76</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Belghazi (CDM→CB) | 17 | 71</div>
+          <div class="pos-pill secondary">A. James (CB/RB) | 20 | 56</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Belghazi (CDM→CB) | 17 | 71</div>
+          <div class="pos-pill secondary">A. James (CB/RB) | 20 | 56</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Barbieri (RB/CB/RM/CDM) | 17 | 71</div>
+          <div class="pos-pill secondary">Dijkstra (RB/LB/CM) | 20 | 69</div>
+        </div>
       </div>
-      <div class="pos-chip dyn">
-        <div class="pos-label">RB</div>
-        <div class="pos-name">Liberato Cacace</div>
-        <div class="pos-meta">25 · OVR 74</div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Lord | 18 | 66 · POT 78-84</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Martini | 17 | 60 · POT 75-81</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Martini | 17 | 60 · POT 75-81</div>
+        </div>
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill empty">No academy RB yet</div>
+        </div>
       </div>
     </div>
 
-    <!-- GK -->
-    <div class="pitch-row">
-      <div class="pos-chip dyn">
-        <div class="pos-label">GK</div>
-        <div class="pos-name">Arthur Okonkwo</div>
-        <div class="pos-meta">24 · OVR 74</div>
+    <!-- ═══ GOALKEEPER ═══ -->
+    <div class="formation-line">
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-col-label">GK</div>
+          <div class="pos-pill starter">Okonkwo | 24 | 74</div>
+        </div>
+      </div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label backup">Backup</div>
+          <div class="pos-pill backup">Klaverboer | 20 | 72</div>
+        </div>
+      </div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label secondary">Secondary</div>
+          <div class="pos-pill secondary">Webber (loan) | 17 | 64</div>
+        </div>
+      </div>
+
+      <div class="formation-row">
+        <div class="formation-col">
+          <div class="formation-tier-label youth">Academy</div>
+          <div class="pos-pill youth">Kopp | 17 | 62 · POT 73-93</div>
+          <div class="pos-pill youth">Horn | 16 | 58 · POT 77-94</div>
+        </div>
       </div>
     </div>
 
-  </div><!-- /pitch -->
+  </div><!-- /formation-board -->
 </div>
 
 
@@ -1087,6 +1264,56 @@ if ('serviceWorker' in navigator) {
     <div class="gap-text"><strong>A. James (20)</strong> — contract is down to 1 month; the club has decided NOT to renew and he will leave as a free agent when it expires (he has also submitted a transfer request). OVR 56, dual-pos CB/RB prospect — with Dijkstra now signed as senior RB depth, there's less urgency to reconsider, and as of writing this is the confirmed plan. Also: <strong>Kaboré</strong> and <strong>Jay Rodriguez</strong> have both already departed this window — Kaboré's loan ended with no permanent deal pursued, and Rodriguez left as a free agent for Stade Brestois 29 when his contract expired.</div>
   </div>
 
+</div>
+
+<!-- ══════════════════════════════════════════
+     PLAYER PROFILE CARDS — TEMPLATE PREVIEW
+══════════════════════════════════════════ -->
+<div class="depth-section">
+  <div class="depth-pos-header">Player Profile Cards — Template Preview</div>
+  <p style="font-family:'Barlow Condensed',sans-serif; color:var(--muted); font-size:12px; line-height:1.4; margin-bottom:12px;">
+    Full player-profile cards are coming to every slot in the formation board above — reusing the same template already live on the Academy page (photo/jersey, dev line, expandable bio). One example below to lock in the format before it's rolled out to the full squad.
+  </p>
+
+  <div class="acad-profile-card">
+    <div class="acad-card-top">
+      <div class="acad-jersey-wrap">
+        <svg viewBox="0 0 80 88" xmlns="http://www.w3.org/2000/svg" class="acad-jersey-svg">
+          <defs><clipPath id="jc-preview"><path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z"/></clipPath></defs>
+          <path d="M26,10 L8,14 L0,38 L16,45 L16,82 L64,82 L64,45 L80,38 L72,14 L54,10 L48,12 L40,24 L32,12 Z" fill="#C8102E"/>
+          <rect x="0" y="0" width="80" height="88" fill="#080808" clip-path="url(#jc-preview)" opacity="0.25"/>
+          <path d="M32,12 L40,24 L48,12" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linejoin="round"/>
+          <text x="40" y="65" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="22" fill="white" stroke="#7a0000" stroke-width="3" paint-order="stroke" text-anchor="middle">LW</text>
+        </svg>
+        <div class="acad-jersey-num">Preview</div>
+      </div>
+      <div class="acad-profile-body">
+        <div class="acad-profile-name">Rio Ngumoha</div>
+        <div class="acad-profile-meta">
+          <span class="acad-pos-badge atk">LW</span>Age 17 · Right · 5'7" / 149 lbs · Starter
+        </div>
+        <div class="acad-dev-row">
+          <span class="acad-dev-item"><strong>Dev</strong> Winger role &middot; PAC 93 / DRI 82 / PAS 67</span>
+          <span class="acad-dev-item hi"><strong>PlayStyles</strong> Technical · Quick Step</span>
+        </div>
+      </div>
+      <div class="acad-card-right">
+        <div class="acad-ovr">76</div>
+        <span class="acad-ovr-label">OVR</span>
+        <div class="acad-pot"><strong>ROLE</strong>Crucial</div>
+      </div>
+    </div>
+    <details class="acad-bio">
+      <summary class="acad-bio-summary">
+        <span class="acad-bio-toggle-label">Player Profile</span>
+        <div class="acad-bio-line"></div>
+        <span class="acad-bio-arrow">▼</span>
+      </summary>
+      <div class="acad-bio-content">
+        <p class="acad-bio-text">Template placeholder — full senior-squad bios (transfer history, form notes, contract status) will populate here once this card format is rolled out beyond this preview.</p>
+      </div>
+    </details>
+  </div>
 </div>
 
 <!-- FOOTER -->
