@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-11-22"
+    "last_updated": "2026-12-01"
   },
   "matches": [
     {
@@ -282,6 +282,26 @@
       "result": "W",
       "competition": "Premier League",
       "notes": "Sauer 37', Sauer 43', Obi 90'. MoM: Sauer (8.3). A statement away win at Anfield; Sauer's breakout performance.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-11-28",
+      "opponent": "Nottingham Forest",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Rio 62', Vargas 72'. MoM: Fruk",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-01",
+      "opponent": "Sunderland",
+      "home": true,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 5', Amrizi 7', Amrizi 25', Bobadilla 38', O'Nien 50' (OG). MoM: Amrizi",
       "journal_entry": true
     }
   ],
@@ -711,6 +731,14 @@
       "date": "2026-11-22",
       "description": "Arthur Okonkwo returned from his tricep injury to start in goal against Arsenal (MD12), rating 6.1.",
       "journal_entry": false
+    },
+    {
+      "date": "2026-11-28",
+      "description": "Beat Nottingham Forest 2-0 away; Rio Ngumoha and Juan Cruz Vargas on the scoresheet, Toni Fruk named Man of the Match."
+    },
+    {
+      "date": "2026-12-01",
+      "description": "Thrashed Sunderland 5-0 at home; Yacel Amrizi scored a hat-trick (plus an assist) and was named Man of the Match."
     }
   ],
   "fixtures": [
