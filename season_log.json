@@ -303,6 +303,16 @@
       "competition": "Premier League",
       "notes": "Amrizi 5', Amrizi 7', Amrizi 25', Bobadilla 38', O'Nien 50' (OG). MoM: Amrizi",
       "journal_entry": true
+    },
+    {
+      "date": "2026-12-06",
+      "opponent": "Leeds United",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 50', Joseph 87' (Leeds), Vargas 88'. Scraped it away at Elland Road.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -739,6 +749,10 @@
     {
       "date": "2026-12-01",
       "description": "Thrashed Sunderland 5-0 at home; Yacel Amrizi scored a hat-trick (plus an assist) and was named Man of the Match."
+    },
+    {
+      "date": "2026-12-06",
+      "description": "Scraped past Leeds United 2-1 away; Yacel Amrizi opened the scoring, Leeds' Joseph equalized late before substitute Juan Cruz Vargas won it in the 88th minute."
     }
   ],
   "fixtures": [

@@ -3,6 +3,11 @@
 // or after a Premier League match is added to season_log.json.
 var ROSTER_SENIOR = [
   {
+    "name": "Aaron James",
+    "pos": "CB/RB",
+    "starter": false
+  },
+  {
     "name": "Andrés Gómez",
     "pos": "RM/RW",
     "starter": true
@@ -397,6 +402,61 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "9000000",
     "Development_Plan": "Wide Back 75→76 ETA 17w",
     "Notes": "Happy with current terms. Good form, Match Fit. New club captain, confirmed in-game Aug 2026 following Hyam's departure."
+  },
+  "Aaron James": {
+    "Position": "CB/RB",
+    "Age": "20",
+    "Height": "6'0\"",
+    "Weight": "174lbs",
+    "Pref_Foot": "Right",
+    "Squad_Role": "Prospect",
+    "Contract_Length": "1m",
+    "Status": "Open for new contract talks",
+    "OVR": "56",
+    "Pace": "68",
+    "Shooting": "27",
+    "Passing": "38",
+    "Dribbling": "46",
+    "Defending": "56",
+    "Physical": "64",
+    "Potential": "",
+    "Acceleration": "66",
+    "Agility": "63",
+    "Balance": "67",
+    "Jumping": "66",
+    "Sprint_Speed": "70",
+    "Stamina": "65",
+    "Strength": "69",
+    "Aggression": "51",
+    "Att_Position": "32",
+    "Composure": "48",
+    "Interceptions": "53",
+    "Reactions": "50",
+    "Vision": "40",
+    "Ball_Control": "44",
+    "Crossing": "31",
+    "Curve": "33",
+    "Def_Aware": "56",
+    "Dribbling_Tech": "41",
+    "FK_Acc": "24",
+    "Finishing": "25",
+    "Heading_Acc": "55",
+    "Long_Pass": "37",
+    "Long_Shots": "22",
+    "Penalties": "38",
+    "Short_Pass": "43",
+    "Shot_Power": "34",
+    "Slide_Tackle": "58",
+    "Stand_Tackle": "56",
+    "Volleys": "25",
+    "Skill_Moves": "2",
+    "Weak_Foot": "4",
+    "PlayStyles": "None",
+    "Roles": "1",
+    "Wage": "4100",
+    "Market_Value": "350000",
+    "Development_Plan": "Defender 56→57 ETA 22w",
+    "Notes": "Submitted a transfer request. Contract Length demands not met — contract down to 1 month. Prospect role. Club has decided NOT to renew his contract when it expires — will leave as a free agent."
   },
   "Joenathan Amelia": {
     "Position": "RB",
@@ -2493,21 +2553,6 @@ var PL_FIXTURES = [
   {
     "date": "2026-08-22",
     "opponent": "Sheffield United",
-    "home": false
-  },
-  {
-    "date": "2026-11-28",
-    "opponent": "Nottingham Forest",
-    "home": false
-  },
-  {
-    "date": "2026-12-01",
-    "opponent": "Sunderland",
-    "home": true
-  },
-  {
-    "date": "2026-12-06",
-    "opponent": "Leeds United",
     "home": false
   },
   {
