@@ -9,6 +9,17 @@
   },
   "matches": [
     {
+      "date": "2026-08-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "round": "Quarter Final",
+      "notes": "Vargas 40', Obi 66' (PK). MoM: Obi. City played all their starters, while we played youth, and they still lost — huge win and statement for the club.",
+      "journal_entry": true
+    },
+    {
       "date": "2026-11-22",
       "opponent": "Arsenal",
       "home": true,
@@ -604,6 +615,11 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2026-08-15",
+      "description": "Wrexham beat a full-strength Manchester City side 2-0 away in the Carabao Cup Quarter Final while fielding a youth-heavy XI — a statement result for the club. Chido Obi named Man of the Match (1G 1A).",
+      "journal_entry": false
+    },
     {
       "date": "2026-05-02",
       "description": "Season 1 (2025-26) archived: journal.html -> journal/season-01.html, season.html -> season/season-01.html, season_log.json -> season_logs/season-01.json. Wrexham AFC finished 1st in the EFL Championship (P46 W36 D4 L6, GF111 GA47, GD+64, 112 pts), automatically promoted. Season 2 begins.",
