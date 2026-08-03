@@ -5,18 +5,18 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-12-12"
+    "last_updated": "2026-12-15"
   },
   "matches": [
     {
-      "date": "2026-08-15",
+      "date": "2026-12-15",
       "opponent": "Manchester City",
       "home": false,
       "score": "2-0",
       "result": "W",
       "competition": "Carabao Cup",
       "round": "Quarter Final",
-      "notes": "Vargas 40', Obi 66' (PK). MoM: Obi. City played all their starters, while we played youth, and they still lost — huge win and statement for the club.",
+      "notes": "Vargas 40', Obi 66' (PK). MoM: Obi. Played 3 days after a 1-2 home league defeat to the same club. City played all their starters, while we played youth, and they still lost — huge win and statement for the club.",
       "journal_entry": true
     },
     {
@@ -616,8 +616,8 @@
   ],
   "milestones": [
     {
-      "date": "2026-08-15",
-      "description": "Wrexham beat a full-strength Manchester City side 2-0 away in the Carabao Cup Quarter Final while fielding a youth-heavy XI — a statement result for the club. Chido Obi named Man of the Match (1G 1A).",
+      "date": "2026-12-15",
+      "description": "Wrexham beat a full-strength Manchester City side 2-0 away in the Carabao Cup Quarter Final while fielding a youth-heavy XI, just 3 days after a 1-2 home league defeat to the same club — a statement result for the club. Chido Obi named Man of the Match (1 goal, penalty).",
       "journal_entry": false
     },
     {
