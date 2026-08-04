@@ -150,6 +150,19 @@
     .stats-table input[type=checkbox] { width:auto; }
     .stats-table input[type=radio] { display:inline-block; width:auto; accent-color: var(--red); }
     .stats-table tr.on-loan { opacity:0.4; }
+    .stats-table tr.row-started td { background: rgba(200,16,46,0.14); }
+    .stats-table tr.row-started:hover td { background: rgba(200,16,46,0.20); }
+    .stats-table tr.row-subbed td { background: rgba(212,168,67,0.16); }
+    .stats-table tr.row-subbed:hover td { background: rgba(212,168,67,0.22); }
+    .stp-totals {
+      display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center;
+      background:var(--charcoal); border:1px solid var(--mid); border-bottom:none;
+      padding:8px 12px; font-family:'Barlow Condensed',sans-serif;
+    }
+    .stp-total { font-size:11px; letter-spacing:0.5px; color:var(--muted); text-transform:uppercase; }
+    .stp-total strong { color:var(--light); font-size:13px; margin-right:4px; }
+    .stp-total-started strong { color:var(--red); }
+    .stp-total-subbed strong { color:var(--gold); }
     .stp-status { display:flex; gap:5px; justify-content:center; align-items:center; white-space:nowrap; }
     .stp-status label {
       display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer;
@@ -595,30 +608,66 @@ if ('serviceWorker' in navigator) {
 //    fixtures change. ──
 
 // ── Player Stats table builder (shared by Match + Youth) ──
+var ROSTER_BY_PREFIX = { ms: ROSTER_SENIOR, ys: ROSTER_ACADEMY };
+
 function renderStatsTable(containerId, roster, prefix) {
-  var html = '<div class="stats-table-wrap"><table class="stats-table"><thead><tr>' +
+  var html = '<div class="stp-totals" id="' + prefix + '-totals"></div>' +
+    '<div class="stats-table-wrap"><table class="stats-table"><thead><tr>' +
     '<th>Player</th><th>Status</th><th>G</th><th>A</th><th>Rating</th><th>MOM</th></tr></thead><tbody>';
   roster.forEach(function(p, i) {
     var id = prefix + '-' + i;
     var def = p.starter ? 'started' : 'dnp';
-    html += '<tr>' +
+    var rowClass = def === 'started' ? ' row-started' : '';
+    html += '<tr class="' + rowClass.trim() + '">' +
       '<td class="stp-name">' + p.name + '<span class="stp-pos">' + p.pos + '</span></td>' +
       '<td><div class="stp-status">' +
-        '<label><input type="radio" name="' + id + '-status" value="started"' + (def === 'started' ? ' checked' : '') + '>S</label>' +
-        '<label><input type="radio" name="' + id + '-status" value="subbed">Sub</label>' +
-        '<label><input type="radio" name="' + id + '-status" value="dnp"' + (def === 'dnp' ? ' checked' : '') + '>DNP</label>' +
+        '<label><input type="radio" name="' + id + '-status" value="started"' + (def === 'started' ? ' checked' : '') + ' onchange="onStatsRowChange(this,\'' + prefix + '\')">S</label>' +
+        '<label><input type="radio" name="' + id + '-status" value="subbed" onchange="onStatsRowChange(this,\'' + prefix + '\')">Sub</label>' +
+        '<label><input type="radio" name="' + id + '-status" value="dnp"' + (def === 'dnp' ? ' checked' : '') + ' onchange="onStatsRowChange(this,\'' + prefix + '\')">DNP</label>' +
       '</div></td>' +
-      '<td><input type="number" id="' + id + '-g" min="0" placeholder="0" class="stp-num"></td>' +
-      '<td><input type="number" id="' + id + '-a" min="0" placeholder="0" class="stp-num"></td>' +
+      '<td><input type="number" id="' + id + '-g" min="0" placeholder="0" class="stp-num" oninput="updateTotals(\'' + prefix + '\')"></td>' +
+      '<td><input type="number" id="' + id + '-a" min="0" placeholder="0" class="stp-num" oninput="updateTotals(\'' + prefix + '\')"></td>' +
       '<td><input type="number" id="' + id + '-r" min="0" max="10" step="0.1" placeholder="—" class="stp-num stp-rating"></td>' +
       '<td><input type="radio" name="' + prefix + '-mom" id="' + id + '-mom" value="' + i + '"></td>' +
       '</tr>';
   });
   html += '</tbody></table></div>';
   document.getElementById(containerId).innerHTML = html;
+  updateTotals(prefix);
 }
 renderStatsTable('stats-table-match', ROSTER_SENIOR, 'ms');
 renderStatsTable('stats-table-youth', ROSTER_ACADEMY, 'ys');
+
+function onStatsRowChange(radio, prefix) {
+  var tr = radio.closest('tr');
+  tr.classList.remove('row-started', 'row-subbed');
+  if (radio.value === 'started') tr.classList.add('row-started');
+  else if (radio.value === 'subbed') tr.classList.add('row-subbed');
+  updateTotals(prefix);
+}
+
+function updateTotals(prefix) {
+  var roster = ROSTER_BY_PREFIX[prefix];
+  var el = document.getElementById(prefix + '-totals');
+  if (!roster || !el) return;
+  var g = 0, a = 0, started = 0, subbed = 0, dnp = 0;
+  roster.forEach(function(p, i) {
+    var id = prefix + '-' + i;
+    var statusEl = document.querySelector('input[name="' + id + '-status"]:checked');
+    var status = statusEl ? statusEl.value : 'dnp';
+    if (status === 'started') started++;
+    else if (status === 'subbed') subbed++;
+    else dnp++;
+    g += parseInt(document.getElementById(id + '-g').value) || 0;
+    a += parseInt(document.getElementById(id + '-a').value) || 0;
+  });
+  el.innerHTML =
+    '<span class="stp-total"><strong>' + g + '</strong>Goals</span>' +
+    '<span class="stp-total"><strong>' + a + '</strong>Assists</span>' +
+    '<span class="stp-total stp-total-started"><strong>' + started + '</strong>Started</span>' +
+    '<span class="stp-total stp-total-subbed"><strong>' + subbed + '</strong>Sub</span>' +
+    '<span class="stp-total"><strong>' + dnp + '</strong>DNP</span>';
+}
 
 function collectPlayerStats(roster, prefix) {
   var checked = document.querySelector('input[name="' + prefix + '-mom"]:checked');
@@ -647,6 +696,19 @@ function collectPlayerStats(roster, prefix) {
   return { lines: lines.join('\n'), raw: raw };
 }
 
+function syncStatsRowClasses(roster, prefix) {
+  roster.forEach(function(p, i) {
+    var id = prefix + '-' + i;
+    var statusEl = document.querySelector('input[name="' + id + '-status"]:checked');
+    var status = statusEl ? statusEl.value : 'dnp';
+    var tr = document.getElementById(id + '-g').closest('tr');
+    if (!tr) return;
+    tr.classList.remove('row-started', 'row-subbed');
+    if (status === 'started') tr.classList.add('row-started');
+    else if (status === 'subbed') tr.classList.add('row-subbed');
+  });
+}
+
 function resetPlayerStatsTable(roster, prefix) {
   roster.forEach(function(p, i) {
     var id = prefix + '-' + i;
@@ -658,6 +720,8 @@ function resetPlayerStatsTable(roster, prefix) {
     document.getElementById(id + '-r').value = '';
     document.getElementById(id + '-mom').checked = false;
   });
+  syncStatsRowClasses(roster, prefix);
+  updateTotals(prefix);
 }
 
 function restorePlayerStats(raw, roster, prefix) {
@@ -675,6 +739,8 @@ function restorePlayerStats(raw, roster, prefix) {
     document.getElementById(id + '-r').value = d.r || '';
     if (d.mom) document.getElementById(id + '-mom').checked = true;
   });
+  syncStatsRowClasses(roster, prefix);
+  updateTotals(prefix);
 }
 
 // ── Attribute / Stat Editor ── (fields follow the same order as the CSV /
