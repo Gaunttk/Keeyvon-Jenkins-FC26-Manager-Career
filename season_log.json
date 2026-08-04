@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-12-15"
+    "last_updated": "2026-12-19"
   },
   "matches": [
     {
@@ -333,6 +333,39 @@
       "result": "L",
       "competition": "Premier League",
       "notes": "Haaland 19', Ngumoha 36', Reijnders 90'. Last minute goal crushed the hopes of a Wrexham shocker. But have to hang your heads high after a game like that. We definitely showed them that we were not intimidated by the talent on the other side. We have talent too, and we are here to stay.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "First Round",
+      "notes": "Neutral venue. Jules Collin 2G 1A, Stephane Bertrand 1G 1A, Ben Forster 1A. MoM: Mika Horn (8.0 rating).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Brentford",
+      "home": false,
+      "score": "4-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi",
+      "notes": "Neutral venue. Valentino Martini 3G 1A, Nathan Salaun 1G 2A. MoM: Nico Kopp (9.8 rating).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Wolves",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Neutral venue. Martin Leon 1G, Nathaniel Matthews 1G. MoM: Nico Kopp (7.8 rating).",
       "journal_entry": true
     }
   ],
@@ -787,6 +820,11 @@
     {
       "date": "2026-12-15",
       "description": "New Academy signings from scouting in France: Thierry Besse (RW, POT 80-94) and Nathan Salaun (ST, POT 81-87)."
+    },
+    {
+      "date": "2026-12-19",
+      "description": "Youth Academy Rush Tournament — swept Crystal Palace 3-1, Brentford 4-1, and Wolves 2-0 in a single-day event to win the tournament. Nico Kopp was Man of the Match in both the semi-final (9.8 rating) and the final (7.8 rating); Valentino Martini scored a hat-trick plus an assist in the semi-final.",
+      "journal_entry": true
     }
   ],
   "fixtures": [
