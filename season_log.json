@@ -9,6 +9,16 @@
   },
   "matches": [
     {
+      "date": "2026-12-19",
+      "opponent": "Brentford",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Bobadilla 26', Janelt 63' (Brentford), Obi, Sauer 90' (PK).",
+      "journal_entry": true
+    },
+    {
       "date": "2026-12-15",
       "opponent": "Manchester City",
       "home": false,
@@ -637,6 +647,11 @@
   ],
   "injuries": [
     {
+      "date": "2026-12-19",
+      "player": "Brian Gutiérrez",
+      "description": "Shoulder, 4 days"
+    },
+    {
       "date": "2026-05-02",
       "player": "Arthur Okonkwo",
       "description": "Tricep muscle — ongoing injury, sidelined for approximately 3 months as of late June 2026 (onset roughly late March 2026; exact date still unconfirmed, carried over from Season 1 rather than a new Season 2 injury)."
@@ -648,6 +663,11 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2026-12-19",
+      "description": "Won 3-1 away at Brentford (MD17); Bobadilla, Obi, and a 90th-minute Sauer penalty saw off a Janelt reply. Brian Gutiérrez picked up a shoulder knock, expected out roughly 4 days.",
+      "journal_entry": true
+    },
     {
       "date": "2026-12-15",
       "description": "Wrexham beat a full-strength Manchester City side 2-0 away in the Carabao Cup Quarter Final while fielding a youth-heavy XI, just 3 days after a 1-2 home league defeat to the same club — a statement result for the club. Chido Obi named Man of the Match (1 goal, penalty).",
