@@ -31,6 +31,10 @@ When a session opens, silently load the context below. Do not summarize it back 
 | `scripts/check_roster_sync.py` | Cross-checks `docs/roster.html` (senior section against `wrexham_squad.csv`, academy section against `youth_academy.csv`) and `docs/academy.html` (against `youth_academy.csv`) — name/age/OVR/position/POT. Run after any squad or academy change to catch stale or missing cards |
 | `docs/submit.html` | Session Submit form — user fills this out on their phone/laptop instead of pushing 12-18 match screenshots; generates copy-pasteable text (season_log entries, player stats, attribute diffs) for the next Claude session. See "Session Submit Form" below |
 | `scripts/sync_submit_roster.py` | Regenerates `docs/assets/submit_data.js` (roster names/positions, full attribute snapshot, remaining Premier League fixtures) that powers `docs/submit.html`'s dropdowns and Attribute Editor. Run after any `wrexham_squad.csv` / `youth_academy.csv` change, or after a Premier League match is added to `season_log.json` |
+| `media-personalities.json` | Journalist/author profiles (Owen Meredith, Keeyvon Jenkins, and 6 national/international journalists) powering the Media Centre and `docs/journal.html` |
+| `media-articles.json` | Every article/entry — both Media Centre pieces and Owen's Dispatch / Keeyvon's Hawk's Nest journal entries. Source of truth; never hand-edit the generated HTML it produces |
+| `scripts/generate_media_pages.py` | Regenerates `docs/media/*` and `docs/journal.html`'s entry stream/TOC from the two `media-*.json` files above. Run after any change to either file |
+| `MEDIA_STYLE_GUIDE.md` | JSON schema reference, journalist personas, section/cadence guidance for Media Centre sessions. Read on demand — not loaded automatically |
 
 Old root-level HTML files (`keevyon_jenkins_dossier.html`, `match_journal.html`) are superseded by the `docs/` versions. Do not edit them.
 
@@ -111,7 +115,18 @@ All pages use `docs/assets/style.css`. Never add `<style>` blocks to HTML files.
 
 ### Journal Entries
 
-Writing a journal entry (the two-voice Hawk's Nest / Red Dragon Dispatch pair)? **Read `JOURNAL_STYLE_GUIDE.md` first** — it has the HTML templates for both voices, season markers, the entry divider, the Owen Meredith persona, and the per-session capture checklist. Skip it for squad-only, stats-only, or squad-sync sessions that never touch the journal.
+Writing a journal entry (the two-voice Hawk's Nest / Red Dragon Dispatch pair)? **Read `JOURNAL_STYLE_GUIDE.md` first** — it has the JSON object shapes for both voices, season markers, the entry divider, the Owen Meredith persona, and the per-session capture checklist. Skip it for squad-only, stats-only, or squad-sync sessions that never touch the journal. Note: `docs/journal.html`'s entries and TOC are generated (see "Media Centre" below) — never hand-edit the `<article>` markup there directly.
+
+---
+
+### Media Centre
+
+A persistent fictional media ecosystem — six national/international journalists (plus Owen Meredith and Keeyvon Jenkins, who already lived in the journal) covering the club from different angles: Sky Sports history pieces, BBC breaking news, The Athletic tactical analysis, Gazzetta dello Sport European reaction, ESPN FC's American angle, and a skeptical Sky pundit. Lives at `docs/media/` (Journalist Profiles, Full Archive, and per-article pages), linked from every page's nav.
+
+- **Source of truth:** `media-personalities.json` (profiles) and `media-articles.json` (every article, including Owen's Dispatch and Keeyvon's Hawk's Nest entries). Never hand-edit generated HTML under `docs/media/` or the entry stream/TOC in `docs/journal.html` — run `python3 scripts/generate_media_pages.py` after any change to either JSON file.
+- **Cadence — milestones only.** The six national journalists do not write every session; they appear for genuine milestones (table position, cup progress, a notable transfer, a manager milestone, a moment that invites historical comparison). Most sessions add zero Media Centre articles — that's correct, not a gap. Owen's per-match Dispatch cadence is unchanged.
+- **Read `MEDIA_STYLE_GUIDE.md` first** when writing Media Centre coverage — full JSON schema, each journalist's persona/voice, section↔journalist affinities, and the accent-color palette. Skip it for ordinary match/squad sessions with no milestone to cover.
+- Never fabricate a stat, score, or event for a Media Centre piece that isn't already on the record in `season_log.json` or a prior session — these are interpretation/commentary on results that already happened, not a second source of new facts.
 
 ---
 

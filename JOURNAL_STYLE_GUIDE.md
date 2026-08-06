@@ -2,11 +2,27 @@
 
 Read this file when a session is writing journal entries for `docs/journal.html` (or an archived `docs/journal/season-NN.html`). Not needed for squad-only, stats-only, or squad-sync sessions — see `CLAUDE.md` for those.
 
+**Authoring mechanism (as of the Media Centre build):** `docs/journal.html`'s entry stream and
+sidebar TOC are no longer hand-typed HTML — they're generated from `media-articles.json` by
+`scripts/generate_media_pages.py`, the same system that powers the Media Centre. **Never edit the
+`<article>` markup in `docs/journal.html` directly** — it will be overwritten the next time the
+script runs. Instead: add a new object to `media-articles.json` (at index 0, so it renders newest-first
+— see "Voice 1" / "Voice 2" below for the exact field shapes), then run:
+
+```
+python3 scripts/generate_media_pages.py
+```
+
+Everything else in this guide — cadence, voice, persona, quotes, length — is unchanged. Only the
+*mechanism* for getting an entry onto the page changed, not what a good entry looks like. Full JSON
+schema reference lives in `MEDIA_STYLE_GUIDE.md`; this file keeps the example shapes for Owen and
+Keeyvon's entries specifically since those two voices are this file's whole scope.
+
 ---
 
 ### Journal: "The Hawk's Journey" — Two-Voice System
 
-The journal is styled like a recurring publication. Entries are added **newest first**.
+The journal is styled like a recurring publication. Entries are added **newest first** — meaning new `media-articles.json` objects go at the top of the array (index 0).
 
 **Cadence — read this before writing anything:**
 - **Red Dragon Dispatch (Owen Meredith):** every session, same as always — one per match/session.
@@ -16,66 +32,47 @@ The journal is styled like a recurring publication. Entries are added **newest f
 
 **Quotes — every match entry should carry multiple direct quotes, not just the one `pull-quote`.** Weave at least one additional quote (manager, a player, a club source, an opposition voice, a fan/pressroom line) into the body prose itself, in quotation marks with attribution, alongside the pulled-out `pull-quote` block. Only use quotes consistent with what the screenshots/session input actually show or what a plausible in-universe voice would say post-match — these are dramatized but should never contradict confirmed results or events.
 
-**Voice 1 — The Hawk's Nest (private journal):**
-```html
-<article class="entry journal">
-  <div class="entry-header">
-    <div class="entry-type-badge journal-badge">The Hawk's Nest · Private Journal</div>
-    <div class="entry-number">Entry 003</div>
-    <div class="entry-date">DATE · Wrexham</div>
-    <h2 class="entry-title">TITLE</h2>
-    <p class="entry-dek">DEK — one punchy line.</p>
-  </div>
-  <div class="entry-body">
-    <p>...</p>
-    <div class="pull-quote"><p>QUOTE</p></div>
-    <p><em>— KJ</em></p>
-  </div>
-  <div class="journal-sig">
-    <div class="sig-initials">KJ</div>
-    <div class="sig-text">
-      <strong>Keeyvon Jenkins</strong>
-      Head Coach · Wrexham AFC · DATE
-    </div>
-  </div>
-</article>
+**Voice 1 — The Hawk's Nest (private journal).** Add this shape to `media-articles.json`:
+```json
+{
+  "id": "entry-099",
+  "author_id": "keeyvon-jenkins",
+  "content_type": "diary",
+  "date": "YYYY-MM-DD",
+  "entry_number": "Entry 099",
+  "date_line": "DATE · Wrexham",
+  "sig_date": "DATE",
+  "headline": "TITLE",
+  "dek": "DEK — one punchy line.",
+  "tags": [],
+  "featured": false,
+  "body_html": "<p>...</p><div class=\"pull-quote\"><p>QUOTE</p></div><p><em>— KJ</em></p>"
+}
 ```
+The generator renders this into the exact same `<article class="entry journal">` / `.journal-sig`
+markup the page has always used — only the authoring step moved from hand-typed HTML to this object.
 
-**Voice 2 — The Red Dragon Dispatch (journalist Owen Meredith):**
-```html
-<article class="entry dispatch">
-  <div class="entry-header">
-    <div class="entry-type-badge dispatch-badge">Red Dragon Dispatch · SECTION</div>
-    <div class="entry-date"><img src="assets/photos/crests/LEAGUE-FOLDER/256x256/OPPONENT-SLUG.football-logos.cc.png" class="opponent-crest" alt="OPPONENT"> DATE · LOCATION</div>
-    <h2 class="entry-title dispatch-title">HEADLINE</h2>
-    <p class="entry-dek">DEK</p>
-  </div>
-  <div class="entry-body">
-    <p>...</p>
-    <div class="context-card">
-      <div class="context-card-label">LABEL</div>
-      <div class="context-card-row">
-        <span class="context-card-key">KEY</span>
-        <span class="context-card-val danger|safe|progress">VALUE</span>
-      </div>
-    </div>
-    <div class="pull-quote">
-      <p>QUOTE</p>
-      <span class="pull-quote-attr">— ATTRIBUTION</span>
-    </div>
-  </div>
-  <div class="dispatch-byline">
-    <div class="byline-left">
-      <strong>Owen Meredith · The Red Dragon Dispatch</strong>
-      SECTION LABEL
-    </div>
-    <div class="byline-club">
-      <strong>EFL Championship</strong>
-      Season 2025–26
-    </div>
-  </div>
-</article>
+**Voice 2 — The Red Dragon Dispatch (journalist Owen Meredith).** Add this shape to `media-articles.json`:
+```json
+{
+  "id": "entry-slug",
+  "author_id": "owen-meredith",
+  "content_type": "dispatch",
+  "date": "YYYY-MM-DD",
+  "section": "SECTION",
+  "competition": "EFL Championship",
+  "season": "Season 2025–26",
+  "date_line": "<img src=\"assets/photos/crests/LEAGUE-FOLDER/256x256/OPPONENT-SLUG.football-logos.cc.png\" class=\"opponent-crest\" alt=\"OPPONENT\"> DATE · LOCATION",
+  "headline": "HEADLINE",
+  "dek": "DEK",
+  "tags": [],
+  "featured": false,
+  "body_html": "<p>...</p><div class=\"context-card\">...</div><div class=\"pull-quote\"><p>QUOTE</p><span class=\"pull-quote-attr\">— ATTRIBUTION</span></div>"
+}
 ```
+Same idea: `section` fills the `Red Dragon Dispatch · SECTION` badge and byline, `competition`/`season`
+fill the `byline-club` block, and `body_html` can freely use `context-card` (with `danger`/`safe`/`progress`
+value classes) and `pull-quote` exactly as before — those are just HTML fragments inserted verbatim.
 
 **Opponent crest — every match Dispatch entry gets the opposing club's logo**, inline in the `entry-date` line (see markup above; the `.opponent-crest` CSS rule lives in `docs/assets/style.css`, do not inline-style it). Source the image from the existing crest library at `docs/assets/photos/crests/` (mirrors the convention in `docs/index.html`'s standings table):
 - Premier League clubs: `assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/CLUB-SLUG.football-logos.cc.png`
@@ -84,19 +81,17 @@ The journal is styled like a recurring publication. Entries are added **newest f
 - Non-league opponents (Youth Rush academy sides, friendly opposition without a crest file) — skip the image rather than inventing a path; a missing `<img>` src is worse than no crest.
 - Check the folder before writing the path — filenames don't always match the obvious slug (e.g. `manchester-city`, not `man-city`).
 
-**Season markers** go between date groups:
-```html
-<div class="season-marker">
-  <span class="season-marker-text">Matchday 1 · August 2025</span>
-  <div class="season-marker-line"></div>
-  <span class="season-badge">Aug 9, 2025</span>
-</div>
+**Season markers** go between date groups. Add a `marker` field to the *first* `media-articles.json`
+entry of a new competition/round — the generator renders the divider immediately before that entry:
+```json
+"marker": { "text": "Matchday 1 · August 2025", "date_label": "Aug 9, 2025" }
 ```
+Leave `marker` off every entry after the first in the same group.
 
-**Entry divider** — only needed on the (now less common) sessions where both a Dispatch and a Hawk's Nest entry are published together (the monthly cadence hit). On ordinary sessions there's just a single Dispatch entry with no divider:
-```html
-<div class="entry-divider"></div>
-```
+**Entry divider** — the generator inserts one automatically whenever two adjacent entries (in
+`media-articles.json` array order) share the same `date` but different `content_type` — i.e. a
+Dispatch and a Hawk's Nest entry published together on the (now less common) monthly-cadence
+sessions. Nothing to add by hand; just make sure both entries have the same `date` value.
 
 ---
 
