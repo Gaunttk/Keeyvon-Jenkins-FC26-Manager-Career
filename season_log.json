@@ -5,9 +5,19 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-12-19"
+    "last_updated": "2026-12-25"
   },
   "matches": [
+    {
+      "date": "2026-12-25",
+      "opponent": "West Ham",
+      "home": true,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Castellanos 9' (West Ham), Amrizi 54', Obi 80'. MoM: Gutiérrez. Christmas Day fixture.",
+      "journal_entry": true
+    },
     {
       "date": "2026-12-19",
       "opponent": "Brentford",
@@ -663,6 +673,11 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2026-12-25",
+      "description": "Beat West Ham 2-1 at home on Christmas Day (MD18); Yacel Amrizi and Chido Obi scored either side of half-time after Castellanos had put West Ham ahead early. Brian Gutiérrez, back from his shoulder knock, was named Man of the Match. The win moves Wrexham to 1st in the Premier League table, 39 points from 18 games.",
+      "journal_entry": true
+    },
     {
       "date": "2026-12-19",
       "description": "Won 3-1 away at Brentford (MD17); Bobadilla, Obi, and a 90th-minute Sauer penalty saw off a Janelt reply. Brian Gutiérrez picked up a shoulder knock, expected out roughly 4 days.",
