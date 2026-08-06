@@ -521,7 +521,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "12500",
     "Market_Value": "3600000",
     "Development_Plan": "Wingback 70→71 ETA 33w",
-    "Notes": "Happy with current terms. Good form, Match Fit."
+    "Notes": "Happy with current terms. Good form, Match Fit. Loan-listed 2026-12-29 to get more first-team minutes."
   },
   "Kieffer Moore": {
     "Position": "ST",
@@ -576,7 +576,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "40500",
     "Market_Value": "1600000",
     "Development_Plan": "Target Forward 71→70 ETA 7w",
-    "Notes": "Not willing to negotiate. Full name Kieffer Moore (Wales)."
+    "Notes": "Not willing to negotiate. Full name Kieffer Moore (Wales). Transfer-listed 2026-12-29 — surplus at this phase of his career following the rise in squad talent level."
   },
   "Bailey Cadamarteri": {
     "Position": "ST",
@@ -1621,7 +1621,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "14000",
     "Market_Value": "1900000",
     "Development_Plan": "Dynamic 65→66 ETA 34w",
-    "Notes": "Signed from Barcelona, 2026-08-15. Not willing to negotiate new terms. Sell-on clause 1%. No PlayStyles confirmed yet (all diamonds unfilled on summary tab). CB Defender+ | Ball-Playing Defender."
+    "Notes": "Signed from Barcelona, 2026-08-15. Not willing to negotiate new terms. Sell-on clause 1%. No PlayStyles confirmed yet (all diamonds unfilled on summary tab). CB Defender+ | Ball-Playing Defender. Loan-listed 2026-12-29 to get more first-team minutes."
   },
   "Leo Sauer": {
     "Position": "LW/LM",
@@ -1896,7 +1896,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Wide Playmaker",
-    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots."
+    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots. Loan-listed 2026-12-29 to get more first-team minutes."
   },
   "Emiliano Bianchi": {
     "Position": "CDM",

@@ -663,6 +663,14 @@
       "club": "Fulham",
       "fee": "£5.9m",
       "wage": ""
+    },
+    {
+      "date": "2026-12-29",
+      "player": "Thiago Pitarch",
+      "direction": "in",
+      "club": "Real Madrid",
+      "fee": "TBC — pending screenshots",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -880,6 +888,10 @@
       "date": "2026-12-19",
       "description": "Youth Academy Rush Tournament — swept Crystal Palace 3-1, Brentford 4-1, and Wolves 2-0 in a single-day event to win the tournament. Nico Kopp was Man of the Match in both the semi-final (9.8 rating) and the final (7.8 rating); Valentino Martini scored a hat-trick plus an assist in the semi-final.",
       "journal_entry": true
+    },
+    {
+      "date": "2026-12-29",
+      "description": "Transfer window opened: Thiago Pitarch signed from Real Madrid for CM depth (attributes/fee pending screenshots). Kieffer Moore transfer-listed — last season's Player of the Year, but now surplus as squad talent level has risen. Andrés Cuenca, Joenathan Amelia, and Marco Soria (newly promoted) loan-listed to get more first-team minutes."
     }
   ],
   "fixtures": [
