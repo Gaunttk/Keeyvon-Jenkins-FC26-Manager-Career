@@ -117,6 +117,13 @@ the real outlet's actual branding (per the "avoid copying real outlet branding d
 | Marco Bellini | Gazzetta dello Sport | `var(--bellini-accent)` — terracotta |
 | Tara Bennett | ESPN FC | `var(--bennett-accent)` — teal |
 | Darren Cole | Sky Sports (pundit) | `var(--cole-accent)` — brick red-brown |
+| Gareth Price | BBC Radio Wales | `var(--price-accent)` — indigo |
+
+Headshots live in `docs/assets/journalists/`, one JPEG per `id`. Eight of the nine profiles have
+one; Keeyvon Jenkins' `headshot` field stays `null` on purpose (he's not a press photo). The
+`journalist_avatar()` helper in `scripts/generate_media_pages.py` falls back to a CSS monogram
+automatically whenever a profile's `headshot` is `null` — so adding a new journalist without a
+photo yet is fine, no generator change needed.
 
 ---
 
@@ -158,6 +165,14 @@ than flowing prose (short paragraphs, direct claims, a clear position). The nece
 questions sustainability, revisits his own past predictions, is willing to be proven wrong on air.
 Every few appearances, have him acknowledge (grudgingly) when results have contradicted him — that
 tension is the point, same as the Hawk's Nest/Dispatch friction in `JOURNAL_STYLE_GUIDE.md`.
+
+**Gareth Price (BBC Radio Wales)** — Warm, conversational, built for the ear: short sentences,
+broadcaster's cadence, comfortable thinking aloud rather than filing a polished column. His brief
+is wider than Owen's — he covers Welsh football generally, so his pieces should frame Wrexham's
+moment in terms of what it means for Wales, not just the club (a Welsh international's involvement,
+comparisons to Cardiff/Swansea's own Premier League runs, what it does for grassroots interest in
+Wales). Good for phone-in/fan-reaction color and radio-commentary-style match reaction, distinct
+from Rebecca Holt's neutral wire-service tone and Owen's beat-reporter skepticism.
 
 **Cross-linking:** when a milestone produces both a Dispatch entry in `journal.html` and a Media
 Centre piece the same session, it's fine (not required) for the Dispatch to mention the outside

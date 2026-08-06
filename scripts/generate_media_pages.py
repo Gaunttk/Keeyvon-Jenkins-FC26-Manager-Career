@@ -242,10 +242,11 @@ if ('serviceWorker' in navigator) {{
 """
 
 
-def journalist_avatar(person):
+def journalist_avatar(person, depth=0):
     initials = "".join(w[0] for w in person["name"].split()[:2]).upper()
     if person.get("headshot"):
-        return f'<img class="journalist-avatar" src="{person["headshot"]}" alt="{person["name"]}">'
+        prefix = "../" * depth
+        return f'<img class="journalist-avatar" src="{prefix}{person["headshot"]}" alt="{person["name"]}">'
     return f'<div class="journalist-avatar journalist-avatar-mono" style="background:{person["accent_color"]}">{initials}</div>'
 
 
@@ -325,7 +326,7 @@ def render_journalists_page(people, people_by_id, articles):
         byline_tag = "The Manager's Diary" if not p["is_press"] else p["outlet"]
         specialties = ", ".join(p["specialties"])
         cards.append(f"""<div class="journalist-card">
-  {journalist_avatar(p)}
+  {journalist_avatar(p, depth=1)}
   <div class="journalist-card-body">
     <h3>{p['name']}</h3>
     <div class="journalist-card-outlet">{p['role']} &middot; {byline_tag}</div>
@@ -423,7 +424,7 @@ def render_article_pages(people, people_by_id, articles):
     <h1 class="media-article-title">{a['headline']}</h1>
     <p class="media-article-dek">{a['dek']}</p>
     <div class="media-article-byline">
-      {journalist_avatar(person)}
+      {journalist_avatar(person, depth=2)}
       <div>
         <strong><a href="../journalists.html#{person['id']}">{person['name']}</a></strong>
         <div class="media-article-byline-sub">{a.get('outlet', person['outlet'])} &middot; {_format_toc_date(a['date'])}</div>
