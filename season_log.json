@@ -5,9 +5,19 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-12-25"
+    "last_updated": "2026-12-29"
   },
   "matches": [
+    {
+      "date": "2026-12-29",
+      "opponent": "Ipswich Town",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 5', Keillor-Dunn (Ipswich) 12', Sauer 65'. MoM: Amrizi (1G 1A). Marco Soria made his senior debut, on as a sub in the 66th minute, rating 6.8.",
+      "journal_entry": true
+    },
     {
       "date": "2026-12-25",
       "opponent": "West Ham",
@@ -673,6 +683,16 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2026-12-29",
+      "description": "Won 2-1 away at Ipswich Town (MD19); Yacel Amrizi scored and assisted, Leo Sauer added a second after Keillor-Dunn had equalized for Ipswich. Amrizi named Man of the Match. Marco Soria made his senior debut off the bench in the 66th minute, rating 6.8.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-27",
+      "description": "Marco Soria (18, LW) and Emiliano Bianchi (17, CDM) promoted from the Youth Academy to the first team. Soria's final academy potential was 74-80 (OVR 67); Bianchi's was 72-76 (OVR 61).",
+      "journal_entry": false
+    },
     {
       "date": "2026-12-25",
       "description": "Beat West Ham 2-1 at home on Christmas Day (MD18); Yacel Amrizi and Chido Obi scored either side of half-time after Castellanos had put West Ham ahead early. Brian Gutiérrez, back from his shoulder knock, was named Man of the Match. The win moves Wrexham to 1st in the Premier League table, 39 points from 18 games.",

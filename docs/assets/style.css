@@ -2351,21 +2351,42 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 3px;
+  position: relative;
 }
 .acad-jersey-svg {
-  width: 64px;
-  height: 72px;
+  width: 78px;
+  height: 88px;
   display: block;
 }
 .acad-photo {
-  width: 104px;
-  height: 156px;
+  width: 130px;
+  height: 195px;
   display: block;
   border-radius: 8px;
   object-fit: cover;
   object-position: top;
   border: 2px solid var(--gold);
 }
+.acad-status-icon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1;
+  border: 2px solid var(--charcoal);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  z-index: 3;
+  cursor: default;
+}
+.acad-status-icon.hptbs { background: #FFD700; color: #000; }
+.acad-status-icon.ep { background: #4A90C4; color: #fff; }
+.acad-status-icon.sgp { background: #5BAD72; color: #fff; }
 .acad-jersey-num {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 9px;
@@ -2564,8 +2585,9 @@ body {
 @media (max-width: 480px) {
   .acad-family-grid { grid-template-columns: 1fr; }
   .acad-card-top { gap: 10px; }
-  .acad-jersey-svg { width: 54px; height: 60px; }
-  .acad-photo { width: 84px; height: 126px; }
+  .acad-jersey-svg { width: 64px; height: 72px; }
+  .acad-photo { width: 100px; height: 150px; }
+  .acad-status-icon { width: 21px; height: 21px; font-size: 11px; top: -6px; right: -6px; }
   .acad-profile-name { font-size: 17px; }
 }
 
