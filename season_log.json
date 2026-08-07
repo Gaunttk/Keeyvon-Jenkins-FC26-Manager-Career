@@ -9,6 +9,16 @@
   },
   "matches": [
     {
+      "date": "2027-01-06",
+      "opponent": "Chelsea",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 1G, Ngumoha 1A. MoM: Cacace. Played a more possession-based style for the first time in a long time under Jenkins — 52% possession to Chelsea's 48%, 5 shots to 2, 2.0 xG to 0.3. Need to execute better in the box despite the win.",
+      "journal_entry": true
+    },
+    {
       "date": "2027-01-02",
       "opponent": "Brighton",
       "home": false,
@@ -681,6 +691,14 @@
       "club": "Real Madrid",
       "fee": "Not disclosed",
       "wage": "$52K/w"
+    },
+    {
+      "date": "2027-01-02",
+      "player": "Kieffer Moore",
+      "direction": "out",
+      "club": "West Brom",
+      "fee": "£1.5m",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -701,6 +719,16 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2027-01-06",
+      "description": "Beat Chelsea 1-0 at home (MD21); Yacel Amrizi scored from a Rio Ngumoha assist. Liberato Cacace named Man of the Match. Wrexham controlled possession (52% to 48%) for the first time in a long stretch under Jenkins and out-shot Chelsea 5-2 (2.0 xG to 0.3), though finishing in the box remains a work in progress.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-02",
+      "description": "Kieffer Moore transferred out to West Brom for £1.5m — last season's Player of the Year, moved on after being transfer-listed as squad talent level rose.",
+      "journal_entry": false
+    },
     {
       "date": "2027-01-02",
       "description": "Lost 0-1 away at Brighton (MD20); Al Dawsari's 47th-minute strike settled it. First defeat since Manchester City on 12 December. Wrexham sit 3rd in the Premier League, 42 points from 20 games.",
