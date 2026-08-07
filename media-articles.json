@@ -1,5 +1,38 @@
 [
   {
+    "id": "entry-brighton-away-pl",
+    "author_id": "owen-meredith",
+    "content_type": "dispatch",
+    "date": "2027-01-02",
+    "headline": "Al Dawsari Ends Wrexham's Unbeaten Run as the New Year Begins With a Thud at the Amex",
+    "dek": "Three wins and a Carabao Cup shock of Manchester City had carried Wrexham into January full of momentum. A single second-half strike on the south coast was enough to stop it dead.",
+    "date_line": "<img src=\"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/brighton.football-logos.cc.png\" class=\"opponent-crest\" alt=\"Brighton\"> January 2, 2027 &middot; The Amex, Falmer",
+    "tags": [],
+    "featured": false,
+    "body_html": "<p>There is a particular flatness to a New Year's away trip on the south coast, squad legs still heavy from three matches in eleven days over Christmas, and Wrexham never quite shook it off at the Amex. Brighton, who had lost 1&ndash;0 to these same opponents back in September, set up cagier this time &mdash; deeper block, quicker to put bodies behind the ball whenever Amrizi got a yard of space &mdash; and for an hour it worked well enough to produce very little at either end. \"We knew they'd set up different to the reverse fixture,\" Jenkins said afterward. \"We didn't have an answer for it quickly enough, and against a team with nothing to lose that's usually when you get hurt.\"</p>\n    <p>They got hurt two minutes into the second half. Al Dawsari picked up a loose ball on the edge of the box after a half-cleared corner and curled it past Okonkwo before the visiting back line had reset &mdash; the kind of goal that punishes a slow restart rather than any sustained pressure. Wrexham pushed for an equalizer that never really threatened to arrive; Toni Fruk's half-chance from the edge of the box on the hour was the closest thing to a clear sight of goal all afternoon. \"We didn't create enough to say we deserved something out of it,\" Fruk admitted in the mixed zone. \"Some days the performance isn't there and you have to be honest about that instead of talking about bad luck.\"</p>\n    <div class=\"context-card\">\n      <div class=\"context-card-label\">The Amex, Falmer &middot; Matchday 20</div>\n      <div class=\"context-card-row\"><span class=\"context-card-key\">Result</span><span class=\"context-card-val danger\">Brighton 1&ndash;0 Wrexham</span></div>\n      <div class=\"context-card-row\"><span class=\"context-card-key\">Scorer</span><span class=\"context-card-val danger\">Al Dawsari 47' (opp.)</span></div>\n      <div class=\"context-card-row\"><span class=\"context-card-key\">Premier League Table</span><span class=\"context-card-val progress\">P20 W13 D3 L4, 42 pts &middot; 3rd</span></div>\n    </div>\n    <p>It is the first defeat since Manchester City won 2&ndash;1 at the Racecourse on December 12th &mdash; a run that in between included a genuine statement result, beating a full-strength City side 2&ndash;0 in the Carabao Cup quarter-final with a youth-heavy XI just three days after that league loss. One of the few positives from an otherwise flat afternoon at the Amex was another look at Thiago Pitarch, signed from Real Madrid on transfer deadline eve, who came off the bench for his Wrexham debut and looked composed enough in a difficult half-hour to justify the fee nobody at the club will disclose. \"He's not going to fix today on his own, but you could see the game slow down a little when he had it,\" Jenkins said of the midfielder. \"That's the kind of calm we need more of when things aren't flowing.\"</p>\n    <div class=\"pull-quote\">\n      <p>We didn't create enough to say we deserved something out of it. Some days the performance isn't there and you have to be honest about that instead of talking about bad luck.</p>\n      <span class=\"pull-quote-attr\">&mdash; Toni Fruk, post-match</span>\n    </div>\n    <p>The defeat drops Wrexham to third on goal difference, still very much inside the Champions League places with eighteen games to play, and a nine-day break before Chelsea visit the Racecourse gives Jenkins time to get the squad's legs back before the run resumes in earnest.</p>",
+    "section": "Match Coverage",
+    "competition": "Premier League",
+    "season": "Season 2026&ndash;27",
+    "marker": {
+      "text": "Premier League &middot; Matchday 20",
+      "date_label": "Jan 2, 2027"
+    }
+  },
+  {
+    "id": "entry-099",
+    "author_id": "keeyvon-jenkins",
+    "content_type": "diary",
+    "date": "2027-01-02",
+    "entry_number": "Entry 099",
+    "date_line": "January 2, 2027 &middot; Falmer",
+    "sig_date": "January 2, 2027",
+    "headline": "Three Weeks I'd Take Again, and a Flight Home I Wouldn't",
+    "dek": "From the low of losing to City to the Carabao Cup upset of the same club three days later, three straight league wins, and now a flat one to close it out &mdash; the whole thing in one stretch.",
+    "tags": [],
+    "featured": false,
+    "body_html": "<p>Three weeks ago I wrote in here about the gap between us and City being smaller than people think but still real, and closing it being the whole job. Three days after I wrote that, we went to the Etihad with a team full of kids and beat their first XI 2&ndash;0 in the cup. I'm not going to pretend that result solved anything permanent &mdash; different competition, different stakes, different version of them on the touchline &mdash; but it told this group something true about itself that a league table can't: we're not scared of anybody in this country right now. We backed it up with three straight league wins over Brentford, West Ham, and Ipswich, and for about six days over Christmas we topped the Premier League table. I let myself feel that one properly this time.</p>\n    <p>And then today happened, and it's a useful correction to how good I was feeling. Brighton set up smart, we didn't have an answer quickly enough, and Dawsari punished the one mistake he needed. No City-level individual quality to point to this time &mdash; just a flat performance from a squad that's played a lot of football in a short window, on the road, in January, on the back of a result that maybe let a little air out of everyone without us noticing. Fruk said it best in the mixed zone: the performance wasn't there, and pretending otherwise doesn't help anybody. Pitarch's half-hour was the one thing I'll actually rewatch this week &mdash; calm on the ball in a game that badly needed someone calm on the ball.</p>\n    <div class=\"pull-quote\"><p>We're not scared of anybody in this country right now. That's the real thing I take from the last three weeks &mdash; not the table position, which will move around plenty more before May.</p></div>\n    <p><em>&mdash; KJ</em></p>"
+  },
+  {
     "id": "entry-ipswich-pl",
     "author_id": "owen-meredith",
     "content_type": "dispatch",

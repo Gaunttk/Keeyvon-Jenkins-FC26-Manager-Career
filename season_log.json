@@ -5,9 +5,19 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2026-12-29"
+    "last_updated": "2027-01-02"
   },
   "matches": [
+    {
+      "date": "2027-01-02",
+      "opponent": "Brighton",
+      "home": false,
+      "score": "0-1",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Al Dawsari 47'.",
+      "journal_entry": true
+    },
     {
       "date": "2026-12-29",
       "opponent": "Ipswich Town",
@@ -691,6 +701,11 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2027-01-02",
+      "description": "Lost 0-1 away at Brighton (MD20); Al Dawsari's 47th-minute strike settled it. First defeat since Manchester City on 12 December. Wrexham sit 3rd in the Premier League, 42 points from 20 games.",
+      "journal_entry": true
+    },
     {
       "date": "2026-12-29",
       "description": "Won 2-1 away at Ipswich Town (MD19); Yacel Amrizi scored and assisted, Leo Sauer added a second after Keillor-Dunn had equalized for Ipswich. Amrizi named Man of the Match. Marco Soria made his senior debut off the bench in the 66th minute, rating 6.8.",

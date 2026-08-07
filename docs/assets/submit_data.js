@@ -2736,11 +2736,6 @@ var PL_FIXTURES = [
     "home": false
   },
   {
-    "date": "2027-01-02",
-    "opponent": "Brighton",
-    "home": false
-  },
-  {
     "date": "2027-01-06",
     "opponent": "Chelsea",
     "home": true
