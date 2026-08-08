@@ -53,11 +53,6 @@ var ROSTER_SENIOR = [
     "starter": false
   },
   {
-    "name": "Emiliano Bianchi",
-    "pos": "CDM",
-    "starter": false
-  },
-  {
     "name": "Jamal Belghazi",
     "pos": "CDM/CM",
     "starter": false
@@ -86,11 +81,6 @@ var ROSTER_SENIOR = [
     "name": "Liberato Cacace",
     "pos": "RB",
     "starter": true
-  },
-  {
-    "name": "Marco Soria",
-    "pos": "LW",
-    "starter": false
   },
   {
     "name": "Mario Barbieri",
@@ -1813,7 +1803,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Left",
     "Squad_Role": "Prospect",
     "Contract_Length": "",
-    "Status": "Has Potential To Be Special",
+    "Status": "On Loan at Al Ahli (back 13 Jan 2029)",
     "OVR": "67",
     "Pace": "86",
     "Shooting": "54",
@@ -1858,7 +1848,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Wide Playmaker",
-    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots. Loan-listed 2026-12-29 to get more first-team minutes."
+    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots. Loan-listed 2026-12-29 to get more first-team minutes. Loaned to Al Ahli 2027-01-13 for 2 years (60/40 fee split, Wrexham receives 40%)."
   },
   "Emiliano Bianchi": {
     "Position": "CDM",
@@ -1868,7 +1858,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Left",
     "Squad_Role": "Prospect",
     "Contract_Length": "",
-    "Status": "Has Potential To Be Special",
+    "Status": "On Loan at FC Magdeburg",
     "OVR": "61",
     "Pace": "59",
     "Shooting": "45",
@@ -1913,7 +1903,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Holding Midfielder",
-    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots."
+    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots. Short-term loan to FC Magdeburg from 2027-01-13 (return date not yet confirmed)."
   },
   "Thiago Pitarch": {
     "Position": "CM/CDM/CAM",
@@ -3020,11 +3010,6 @@ var PL_FIXTURES = [
   {
     "date": "2026-08-22",
     "opponent": "Sheffield United",
-    "home": false
-  },
-  {
-    "date": "2027-01-17",
-    "opponent": "West Ham",
     "home": false
   },
   {
