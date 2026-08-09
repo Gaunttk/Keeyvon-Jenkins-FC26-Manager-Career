@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-01-24"
+    "last_updated": "2027-01-30"
   },
   "matches": [
     {
@@ -457,6 +457,16 @@
       "result": "W",
       "competition": "Premier League",
       "notes": "Amrizi 49', Sauer 79'. MoM: Amrizi. Sauer booked in the 19th minute for a brutal tackle, then produced a moment of incredible athleticism for the second goal — towering over Brentford's centre-back to head home.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-30",
+      "opponent": "Sheffield United",
+      "home": true,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Fruk 11', Amrizi 21', Obi 77', Obi 90'. MoM: Vargas (2A).",
       "journal_entry": true
     }
   ],
@@ -994,6 +1004,11 @@
     {
       "date": "2027-01-24",
       "description": "Squad update — Jermaine Lord loaned to AZ, 60/40 transfer fee split with Wrexham receiving 40%."
+    },
+    {
+      "date": "2027-01-30",
+      "description": "Premier League MD24 — thrashed bottom-of-the-table Sheffield United 4-0 at home, avenging the MD2 1-1 draw. Chido Obi came off the bench for a brace; Juan Cruz Vargas produced two assists and Man of the Match.",
+      "journal_entry": true
     }
   ],
   "fixtures": [
