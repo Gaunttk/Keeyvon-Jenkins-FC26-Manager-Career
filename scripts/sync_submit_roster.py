@@ -18,7 +18,7 @@ import unicodedata
 # (accent-insensitive). Update this set by hand when the first-choice XI
 # changes; there's no other source for it.
 STARTERS = {
-    'gomez', 'okonkwo', 'heaven', 'gutierrez', 'doyle', 'mokio',
+    'sauer', 'okonkwo', 'heaven', 'gutierrez', 'doyle', 'mokio',
     'cacace', 'ngumoha', 'fruk', 'amrizi', 'bobadilla',
 }
 
