@@ -10,7 +10,7 @@ var ROSTER_SENIOR = [
   {
     "name": "Andrés Gómez",
     "pos": "RM/RW",
-    "starter": true
+    "starter": false
   },
   {
     "name": "Arthur Okonkwo",
@@ -58,11 +58,6 @@ var ROSTER_SENIOR = [
     "starter": false
   },
   {
-    "name": "Jermaine Lord",
-    "pos": "LB",
-    "starter": false
-  },
-  {
     "name": "Jorthy Mokio",
     "pos": "CDM/CM/LB",
     "starter": true
@@ -75,7 +70,7 @@ var ROSTER_SENIOR = [
   {
     "name": "Leo Sauer",
     "pos": "LW/LM",
-    "starter": false
+    "starter": true
   },
   {
     "name": "Liberato Cacace",
@@ -1968,7 +1963,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Left",
     "Squad_Role": "Sporadic",
     "Contract_Length": "3y5m",
-    "Status": "At The Club Since 2027",
+    "Status": "On Loan at AZ",
     "OVR": "67",
     "Pace": "81",
     "Shooting": "38",
@@ -2013,7 +2008,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "16000",
     "Market_Value": "2700000",
     "Development_Plan": "Attacking Wingback",
-    "Notes": "Promoted from the Youth Academy to the first team 2027-01-13. Goes by Jermaine now (previously listed as Jamie). Willing to negotiate new terms. LB Falseback/Attacking WB++/Inverted WB/Fullback+/Wingback+. CB Defender/Stopper/Wide Back+/Ball-Playing Defender. LW Winger/Wide Playmaker/Inside Forward."
+    "Notes": "Promoted from the Youth Academy to the first team 2027-01-13. Goes by Jermaine now (previously listed as Jamie). Willing to negotiate new terms. LB Falseback/Attacking WB++/Inverted WB/Fullback+/Wingback+. CB Defender/Stopper/Wide Back+/Ball-Playing Defender. LW Winger/Wide Playmaker/Inside Forward. Loaned to AZ 2027-01-24 (60/40 fee split, Wrexham receives 40%)."
   },
   "Vittorio Martini": {
     "Position": "CB",
@@ -3011,11 +3006,6 @@ var PL_FIXTURES = [
     "date": "2026-08-22",
     "opponent": "Sheffield United",
     "home": false
-  },
-  {
-    "date": "2027-01-24",
-    "opponent": "Brentford",
-    "home": true
   },
   {
     "date": "2027-01-30",

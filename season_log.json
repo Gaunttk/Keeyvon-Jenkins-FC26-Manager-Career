@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-01-17"
+    "last_updated": "2027-01-24"
   },
   "matches": [
     {
@@ -447,6 +447,16 @@
       "result": "W",
       "competition": "Premier League",
       "notes": "Bobadilla 4', Sauer 38', Rio 56', Bobadilla 60'. MoM: Bobadilla. Loud booing from the London Stadium crowd throughout — a lot of teams are having a bad day against Wrexham's relentless defensive pressure and quick strike scoring.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-24",
+      "opponent": "Brentford",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 49', Sauer 79'. MoM: Amrizi. Sauer booked in the 19th minute for a brutal tackle, then produced a moment of incredible athleticism for the second goal — towering over Brentford's centre-back to head home.",
       "journal_entry": true
     }
   ],
@@ -980,6 +990,10 @@
     {
       "date": "2027-01-13",
       "description": "Squad update — Marco Soria loaned to Al Ahli for 2 years (2027-01-13 to 2029-01-13), 60/40 transfer fee split with Wrexham receiving 40%. Emiliano Bianchi also loaned out short-term to FC Magdeburg."
+    },
+    {
+      "date": "2027-01-24",
+      "description": "Squad update — Jermaine Lord loaned to AZ, 60/40 transfer fee split with Wrexham receiving 40%."
     }
   ],
   "fixtures": [
