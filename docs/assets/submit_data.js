@@ -1796,8 +1796,8 @@ var ROSTER_ATTR_DATA = {
     "Height": "5'8\"",
     "Weight": "149lbs",
     "Pref_Foot": "Left",
-    "Squad_Role": "Prospect",
-    "Contract_Length": "",
+    "Squad_Role": "Sporadic",
+    "Contract_Length": "3y4m",
     "Status": "On Loan at Al Ahli (back 13 Jan 2029)",
     "OVR": "67",
     "Pace": "86",
@@ -1840,10 +1840,10 @@ var ROSTER_ATTR_DATA = {
     "Weak_Foot": "3",
     "PlayStyles": "Low Driven Shot",
     "Roles": "3",
-    "Wage": "",
-    "Market_Value": "",
+    "Wage": "19000",
+    "Market_Value": "2500000",
     "Development_Plan": "Wide Playmaker",
-    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots. Loan-listed 2026-12-29 to get more first-team minutes. Loaned to Al Ahli 2027-01-13 for 2 years (60/40 fee split, Wrexham receives 40%)."
+    "Notes": "Promoted to first team 2026-12-27. Loan-listed 2026-12-29 to get more first-team minutes. Loaned to Al Ahli 2027-01-13 for 2 years (60/40 fee split, Wrexham receives 40%)."
   },
   "Emiliano Bianchi": {
     "Position": "CDM",
@@ -1852,7 +1852,7 @@ var ROSTER_ATTR_DATA = {
     "Weight": "185lbs",
     "Pref_Foot": "Left",
     "Squad_Role": "Prospect",
-    "Contract_Length": "",
+    "Contract_Length": "3y4m",
     "Status": "On Loan at FC Magdeburg",
     "OVR": "61",
     "Pace": "59",
@@ -1895,10 +1895,10 @@ var ROSTER_ATTR_DATA = {
     "Weak_Foot": "4",
     "PlayStyles": "None",
     "Roles": "2",
-    "Wage": "",
-    "Market_Value": "",
+    "Wage": "6000",
+    "Market_Value": "825000",
     "Development_Plan": "Holding Midfielder",
-    "Notes": "Promoted to first team 2026-12-27. Contract/wage/market value pending screenshots. Short-term loan to FC Magdeburg from 2027-01-13 (return date not yet confirmed)."
+    "Notes": "Promoted to first team 2026-12-27. Short-term loan to FC Magdeburg from 2027-01-13 (return date not yet confirmed)."
   },
   "Thiago Pitarch": {
     "Position": "CM/CDM/CAM",
@@ -3005,16 +3005,6 @@ var PL_FIXTURES = [
   {
     "date": "2026-08-22",
     "opponent": "Sheffield United",
-    "home": false
-  },
-  {
-    "date": "2027-01-30",
-    "opponent": "Sheffield United",
-    "home": true
-  },
-  {
-    "date": "2027-02-06",
-    "opponent": "Wolves",
     "home": false
   },
   {
