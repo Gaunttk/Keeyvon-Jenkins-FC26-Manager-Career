@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-01-30"
+    "last_updated": "2027-02-06"
   },
   "matches": [
     {
@@ -468,6 +468,27 @@
       "competition": "Premier League",
       "notes": "Fruk 11', Amrizi 21', Obi 77', Obi 90'. MoM: Vargas (2A).",
       "journal_entry": true
+    },
+    {
+      "date": "2027-02-03",
+      "opponent": "Chelsea",
+      "home": true,
+      "score": "0-3",
+      "result": "L",
+      "competition": "Carabao Cup",
+      "round": "Semi Final Leg 2 (4-4 AGG)",
+      "notes": "Estevao 21' (Chelsea), Palmer 34' (Chelsea), Palmer 59'. 4-3 on penalties. Absolute collapse — the 4-4 aggregate score went to PKs and the youth-heavy side were outmatched this time. Keeyvon was outcoached and took the blame with the press afterward, ending Wrexham's Carabao Cup run one game short of the final. Bournemouth won the other semi-final against Manchester United 6-4 on aggregate.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-06",
+      "opponent": "Wolves",
+      "home": false,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 7', Ngumoha 9', Gutiérrez 21', Amrizi 72', Ngumoha 84'. MoM: Sauer (3A, 8.7 rating). 14 shots to 1 — Keeyvon didn't want to call it a statement game, but a determined, angry Wrexham (fresh off the Carabao Cup exit) thoroughly outmatched Wolves.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -767,9 +788,24 @@
       "date": "2026-09-23",
       "player": "Milán Vitális",
       "description": "Elbow, 5 days"
+    },
+    {
+      "date": "2027-02-03",
+      "player": "Elijah Dijkstra",
+      "description": "Broken toe, 3 months"
     }
   ],
   "milestones": [
+    {
+      "date": "2027-02-06",
+      "description": "Premier League MD25 — thrashed Wolves 5-0 away; Yacel Amrizi and Rio Ngumoha both scored twice, Brian Gutiérrez added the other. Leo Sauer was Man of the Match with 3 assists (8.7 rating). 14 shots to 1 — Keeyvon didn't want to call it a statement game, but a determined, angry Wrexham responded to the Carabao Cup exit by thoroughly outclassing Wolves.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-03",
+      "description": "Lost the Carabao Cup Semi Final Leg 2 at home to Chelsea 0-3 (Estevao, Palmer x2), with the tie level 4-4 on aggregate after winning Leg 1 4-1. Chelsea won 4-3 on penalties, eliminating Wrexham one game short of the final. Keeyvon was outcoached and took the blame with the press. Elijah Dijkstra suffered a broken toe, expected out roughly 3 months. Bournemouth beat Manchester United 6-4 on aggregate in the other semi-final.",
+      "journal_entry": true
+    },
     {
       "date": "2027-01-13",
       "description": "Nico Kopp (GK), Jermaine Lord (LB/CB/LW — now goes by Jermaine rather than Jamie), and Vittorio Martini (CB) promoted from the Youth Academy to the first team. Signed six new Youth Academy prospects: Martin Bach (GK), Albert Bayer (GK), Victor Cardoso (RB), Guilherme Rosa (CDM), Lilian Faure (RM), Matthieu Brunel (ST).",
