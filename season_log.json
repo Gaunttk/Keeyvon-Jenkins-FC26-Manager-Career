@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-02-06"
+    "last_updated": "2027-02-20"
   },
   "matches": [
     {
@@ -489,6 +489,46 @@
       "competition": "Premier League",
       "notes": "Amrizi 7', Ngumoha 9', Gutiérrez 21', Amrizi 72', Ngumoha 84'. MoM: Sauer (3A, 8.7 rating). 14 shots to 1 — Keeyvon didn't want to call it a statement game, but a determined, angry Wrexham (fresh off the Carabao Cup exit) thoroughly outmatched Wolves.",
       "journal_entry": true
+    },
+    {
+      "date": "2027-02-10",
+      "opponent": "Sunderland",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Rio 68', Rio 74'. MoM: Rio.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-10",
+      "opponent": "Blackburn Rovers",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "notes": "Amrizi 25', Amrizi 56', Amrizi 71'. MoM: Amrizi. Controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-20",
+      "opponent": "Nottingham Forest",
+      "home": true,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 44', Igor Jesus 51' (Forest), Fruk 60' (Pen). MoM: Cacace (1A). Rio Ngumoha earned the penalty.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-20",
+      "opponent": "Liverpool",
+      "home": true,
+      "score": "3-3",
+      "result": "D",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Faure 2G, Leon 1G, Besse 1A. Won 2-0 on penalties.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -796,6 +836,26 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2027-02-20",
+      "description": "Premier League MD27 — beat Nottingham Forest 2-1 at home. Yacel Amrizi opened the scoring, Rio Ngumoha won a penalty that Toni Fruk converted after Forest had briefly levelled through Igor Jesus. Liberato Cacace was Man of the Match with an assist.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-20",
+      "description": "Youth Academy Rush Tournament — drew 3-3 at home with Liverpool's academy (Lilian Faure 2G, Martin Leon 1G), advancing on a 2-0 penalty shootout win.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-10",
+      "description": "Premier League MD26 — beat Sunderland 2-0 away, Rio Ngumoha scoring both (68', 74') and taking Man of the Match. Wrexham move to 60 points, still top of the table.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-10",
+      "description": "FA Cup — beat Blackburn Rovers 3-0 away, a Yacel Amrizi hat-trick (25', 56', 71') earning him Man of the Match in a game controlled from start to finish.",
+      "journal_entry": true
+    },
     {
       "date": "2027-02-06",
       "description": "Premier League MD25 — thrashed Wolves 5-0 away; Yacel Amrizi and Rio Ngumoha both scored twice, Brian Gutiérrez added the other. Leo Sauer was Man of the Match with 3 assists (8.7 rating). 14 shots to 1 — Keeyvon didn't want to call it a statement game, but a determined, angry Wrexham responded to the Carabao Cup exit by thoroughly outclassing Wolves.",
