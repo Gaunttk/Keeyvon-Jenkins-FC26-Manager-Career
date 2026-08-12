@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-02-20"
+    "last_updated": "2027-03-05"
   },
   "matches": [
     {
@@ -529,6 +529,49 @@
       "competition": "Youth Academy Rush Tournament",
       "notes": "Faure 2G, Leon 1G, Besse 1A. Won 2-0 on penalties.",
       "journal_entry": true
+    },
+    {
+      "date": "2027-02-27",
+      "opponent": "Arsenal",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Sauer 24', Sauer 45', Obi 77', Gómez 82'. MoM: Sauer. Wrexham dominated third-place Arsenal on the road. Man City beat Ipswich at the same time, so of the two teams with a realistic shot at catching Wrexham, both won — but a 4-0 statement road win over the league's third-place side stood out.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Brighton and Hove Albion",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Quarters",
+      "notes": "Neutral venue. Goals: Drouet, Salaun (sub), Cardoso.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-04",
+      "opponent": "Nottingham Forest",
+      "home": true,
+      "score": "6-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi",
+      "notes": "Sandoval 2G, Rosa 2G 1A, Matthews 2G, Forster 2A.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-05",
+      "opponent": "Bournemouth",
+      "home": true,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Collin (sub) 1G, Leon 1G 1A, Brunel 1G, Besse (sub) 1G, Cardoso (sub) 1G 2A, Faure 1A, Salaun (sub) 1A. Youth Rush title won.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -833,6 +876,11 @@
       "date": "2027-02-03",
       "player": "Elijah Dijkstra",
       "description": "Broken toe, 3 months"
+    },
+    {
+      "date": "2027-02-27",
+      "player": "Brian Gutierrez",
+      "description": "Elbow, 5 days"
     }
   ],
   "milestones": [

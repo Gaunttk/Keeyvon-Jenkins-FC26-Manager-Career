@@ -3008,11 +3008,6 @@ var PL_FIXTURES = [
     "home": false
   },
   {
-    "date": "2027-02-27",
-    "opponent": "Arsenal",
-    "home": false
-  },
-  {
     "date": "2027-03-03",
     "opponent": "Liverpool",
     "home": true
