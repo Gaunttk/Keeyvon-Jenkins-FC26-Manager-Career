@@ -3624,6 +3624,8 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   margin-top: 28px;
 }
 .player-feature-facts span:nth-child(5) { grid-column: 2 / -1; }
+/* Squad Spotlight has four facts (no Squad Role) — even 2x2, no span needed. */
+.player-feature-facts-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .player-feature-facts span {
   display: flex; flex-direction: column; gap: 6px;
   background: var(--h-panel-2); padding: 16px 18px;

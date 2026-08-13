@@ -323,12 +323,11 @@
       '<div class="player-feature-body">' +
       '<span class="player-feature-kicker">Featured Player</span>' +
       '<h3 class="player-feature-name">' + esc(f.name) + '</h3>' +
-      '<div class="player-feature-facts">' +
+      '<div class="player-feature-facts player-feature-facts-4">' +
       '<span><strong>' + esc(f.position) + '</strong>Position</span>' +
       '<span><strong>' + esc(f.age) + '</strong>Age</span>' +
       '<span><strong>' + esc(f.height) + '</strong>Height</span>' +
       '<span><strong>' + esc(f.ovr) + '</strong>OVR</span>' +
-      '<span><strong>' + esc(f.role) + '</strong>Squad Role</span>' +
       '</div>' +
       '<p class="player-feature-note">Squad data from <code>wrexham_squad.csv</code>. Season appearances, goals and assists are kept on the <a href="season.html">season stats page</a>.</p>' +
       '</div>');
