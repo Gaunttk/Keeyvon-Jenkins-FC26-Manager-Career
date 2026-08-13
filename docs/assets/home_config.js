@@ -28,8 +28,8 @@ const HOME_CONFIG = {
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
     articleId: '2026-12-20-hargreaves-greatest-promoted-seasons',
-    image: 'assets/photos/keeyvon-touchline.png',
-    imageAlt: 'Keeyvon Jenkins on the touchline'
+    image: 'assets/photos/keeyvon-jenkins.png',
+    imageAlt: 'Keeyvon Jenkins pitchside at the Racecourse'
   },
 
   /* Three supporting stories stacked beside the lead. */
