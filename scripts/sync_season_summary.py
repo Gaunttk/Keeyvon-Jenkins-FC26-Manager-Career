@@ -74,7 +74,20 @@ def build_summary(log):
 
     schedule = build_schedule(log, league_name)
 
-    return {"_meta": log.get("_meta", {}), "stats": stats, "recent": recent, "schedule": schedule}
+    # Last five completed FIRST-TEAM competitive matches, oldest -> newest.
+    # Youth/preseason competitions (PRESEASON_COMPS) never count toward form.
+    by_date = sorted(competitive, key=lambda m: m["date"])
+    form = [pick(m, MATCH_FIELDS) for m in by_date[-5:]]
+    latest = form[-1] if form else None
+
+    return {
+        "_meta": log.get("_meta", {}),
+        "stats": stats,
+        "form": form,
+        "latest": latest,
+        "recent": recent,
+        "schedule": schedule,
+    }
 
 
 def build_schedule(log, league_name):

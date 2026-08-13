@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wrexham AFC — Season Hub | Keevyon Jenkins Era</title>
+<title>The Jenkins Era — Wrexham AFC</title>
+<meta name="description" content="The Jenkins Era — Wrexham AFC and the Keevyon Jenkins years. An FC26 career-mode history project.">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#C8102E">
@@ -19,611 +20,257 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 </head>
-<body>
+<body class="home-body">
 
-<!-- SITE NAV -->
-<nav class="site-nav">
-  <div class="site-nav-inner">
-    <a href="index.html" class="snav-brand">WRXM <span>FC26</span></a>
-    <a href="index.html" class="snav-link active">Season Hub</a>
-    <a href="journal.html" class="snav-link">Journal</a>
-    <a href="season.html" class="snav-link">Season Stats</a>
-    <a href="roster.html" class="snav-link">Roster</a>
-    <a href="depth_chart.html" class="snav-link">Depth Chart</a>
-    <a href="academy.html" class="snav-link">Academy</a>
-    <a href="season_preview.html" class="snav-link">Season Preview</a>
-    <a href="dossier.html" class="snav-link">Dossier</a>
-    <a href="history.html" class="snav-link">History</a>
-    <a href="media/index.html" class="snav-link">Media Centre</a>
-    <a href="submit.html" class="snav-link" style="margin-left:auto; color:var(--gold);">⚡ Submit</a>
-  </div>
-</nav>
+<a class="home-skip-link" href="#home-main">Skip to main content</a>
 
-<div class="page-wrap">
-
-<!-- MASTHEAD -->
-<div class="masthead">
-  <span class="masthead-label">Wrexham AFC · FC26 Career</span>
-  <span class="masthead-date">Season 2026–27</span>
-</div>
-
-<!-- HUB HEADER -->
-<div class="hub-header">
-  <div class="hub-eyebrow">The Hawk Era · Season 2026–27</div>
-  <div class="hub-title">Wrexham<br><span>AFC</span></div>
-  <div class="hub-subtitle">Keevyon Jenkins · Head Coach · Premier League (promoted)</div>
-  <img class="hub-crest" src="assets/photos/wrexham-crest.png" alt="Wrexham AFC">
-</div>
-
-<!-- ALL-COMP PLAYED COUNT -->
-<div class="all-comp-bar">
-  <span class="all-comp-label">All Competitions</span>
-  <span class="all-comp-played"><span id="stat-played">0</span> Played</span>
-</div>
-
-<!-- PREMIER LEAGUE STATS BAR -->
-<div class="league-bar-label">
-  <span class="league-bar-title">
-    <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League">
-    Premier League
-  </span>
-  <span class="league-bar-pts"><span id="stat-pts">0</span> Pts</span>
-</div>
-<div class="season-bar" style="grid-template-columns: repeat(4,1fr);">
-  <div class="stat-cell">
-    <span class="stat-number" id="league-p" style="color:var(--muted)">0</span>
-    <span class="stat-label">P</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="stat-w" style="color:#5BAD72">0</span>
-    <span class="stat-label">W</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="stat-d" style="color:var(--gold)">0</span>
-    <span class="stat-label">D</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="stat-l" style="color:var(--red)">0</span>
-    <span class="stat-label">L</span>
-  </div>
-</div>
-
-<!-- FA CUP STATS BAR -->
-<div class="cup-bar-label">
-  <img src="assets/photos/crests/england_emirates-fa-cup_512x512.football-logos.cc.png" class="comp-logo" alt="FA Cup">
-  FA Cup
-</div>
-<div class="season-bar" style="grid-template-columns: repeat(4,1fr);">
-  <div class="stat-cell">
-    <span class="stat-number" id="facup-p" style="color:var(--muted)">0</span>
-    <span class="stat-label">P</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="facup-w" style="color:#5BAD72">0</span>
-    <span class="stat-label">W</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="facup-d" style="color:var(--gold)">0</span>
-    <span class="stat-label">D</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="facup-l" style="color:var(--red)">0</span>
-    <span class="stat-label">L</span>
-  </div>
-</div>
-
-<!-- CARABAO CUP STATS BAR -->
-<div class="cup-bar-label">
-  <img src="assets/photos/carabao-cup.png" class="comp-logo" alt="Carabao Cup">
-  Carabao Cup
-</div>
-<div class="season-bar" style="grid-template-columns: repeat(4,1fr);">
-  <div class="stat-cell">
-    <span class="stat-number" id="cup-p" style="color:var(--muted)">0</span>
-    <span class="stat-label">P</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="cup-w" style="color:#5BAD72">0</span>
-    <span class="stat-label">W</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="cup-d" style="color:var(--gold)">0</span>
-    <span class="stat-label">D</span>
-  </div>
-  <div class="stat-cell">
-    <span class="stat-number" id="cup-l" style="color:var(--red)">0</span>
-    <span class="stat-label">L</span>
-  </div>
-</div>
-
-<!-- SEASON SCHEDULE -->
-<div class="log-section" style="margin-top:24px;">
-  <div class="section-label">
-    <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League" style="height:18px;width:auto;vertical-align:middle;margin-right:6px;opacity:0.85;">
-    Premier League — Season Schedule
-  </div>
-  <div id="season-schedule-rows"></div>
-</div>
-
-<!-- LIVE PL TABLE -->
-<div class="log-section" style="margin-top:24px;">
-  <div class="section-label">
-    <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League" style="height:18px;width:auto;vertical-align:middle;margin-right:6px;opacity:0.85;">
-    Premier League — Standings, 2026/27
-  </div>
-  <table class="standings-table" style="width:100%;margin-top:10px;">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Club</th>
-        <th>P</th>
-        <th>W</th>
-        <th>D</th>
-        <th>L</th>
-        <th>GF</th>
-        <th>GA</th>
-        <th>GD</th>
-        <th>Pts</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="table-gap gap-promo"><td colspan="10">Champion</td></tr>
-      <tr class="table-promo wrexham-row">
-        <td>1</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/wrexham-crest.png" alt="Wrexham">Wrexham ★</div></td><td>28</td><td>21</td><td>3</td><td>4</td><td>61</td><td>14</td><td>+47</td><td>66</td>
-      </tr>
-      <tr class="table-gap gap-playoff"><td colspan="10">UEFA Champions League</td></tr>
-      <tr class="table-promo">
-        <td>2</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/manchester-city.football-logos.cc.png" alt="Man City">Man City</div></td><td>28</td><td>20</td><td>5</td><td>3</td><td>60</td><td>27</td><td>+33</td><td>65</td>
-      </tr>
-      <tr class="table-promo">
-        <td>3</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/manchester-united.football-logos.cc.png" alt="Man Utd">Man Utd</div></td><td>29</td><td>20</td><td>1</td><td>8</td><td>48</td><td>30</td><td>+18</td><td>61</td>
-      </tr>
-      <tr class="table-promo">
-        <td>4</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/arsenal.football-logos.cc.png" alt="Arsenal">Arsenal</div></td><td>28</td><td>15</td><td>11</td><td>2</td><td>53</td><td>35</td><td>+18</td><td>56</td>
-      </tr>
-      <tr class="table-gap gap-playoff"><td colspan="10">UEFA Europa League</td></tr>
-      <tr class="table-playoff">
-        <td>5</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/tottenham.football-logos.cc.png" alt="Spurs">Spurs</div></td><td>29</td><td>16</td><td>6</td><td>7</td><td>46</td><td>32</td><td>+14</td><td>54</td>
-      </tr>
-      <tr class="table-gap gap-playoff"><td colspan="10">UEFA Conference League</td></tr>
-      <tr class="table-playoff">
-        <td>6</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/liverpool.football-logos.cc.png" alt="Liverpool">Liverpool</div></td><td>28</td><td>14</td><td>7</td><td>7</td><td>46</td><td>34</td><td>+12</td><td>49</td>
-      </tr>
-      <tr>
-        <td>7</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/bournemouth.football-logos.cc.png" alt="Bournemouth">AFC Bournemouth</div></td><td>28</td><td>12</td><td>6</td><td>10</td><td>35</td><td>36</td><td>-1</td><td>42</td>
-      </tr>
-      <tr>
-        <td>8</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/newcastle.football-logos.cc.png" alt="Newcastle Utd">Newcastle Utd</div></td><td>29</td><td>10</td><td>10</td><td>9</td><td>44</td><td>40</td><td>+4</td><td>40</td>
-      </tr>
-      <tr>
-        <td>9</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/chelsea.football-logos.cc.png" alt="Chelsea">Chelsea</div></td><td>28</td><td>10</td><td>7</td><td>11</td><td>39</td><td>38</td><td>+1</td><td>37</td>
-      </tr>
-      <tr>
-        <td>10</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/aston-villa.football-logos.cc.png" alt="Aston Villa">Aston Villa</div></td><td>28</td><td>9</td><td>7</td><td>12</td><td>40</td><td>45</td><td>-5</td><td>34</td>
-      </tr>
-      <tr>
-        <td>11</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/crystal-palace.football-logos.cc.png" alt="Crystal Palace">Crystal Palace</div></td><td>28</td><td>10</td><td>4</td><td>14</td><td>37</td><td>42</td><td>-5</td><td>34</td>
-      </tr>
-      <tr>
-        <td>12</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/brighton.football-logos.cc.png" alt="Brighton">Brighton</div></td><td>28</td><td>9</td><td>6</td><td>13</td><td>35</td><td>35</td><td>0</td><td>33</td>
-      </tr>
-      <!-- STALE: Leeds United row scrolled off every 2027-02-27 standings screenshot; still shows P26 pre-Arsenal-match figures. Needs a re-check next session with a screenshot covering their row. -->
-      <tr>
-        <td>13</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/leeds-united.football-logos.cc.png" alt="Leeds United">Leeds United</div></td><td>26</td><td>7</td><td>8</td><td>11</td><td>34</td><td>42</td><td>-8</td><td>29</td>
-      </tr>
-      <tr>
-        <td>14</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/256x256/west-ham.football-logos.cc.png" alt="West Ham">West Ham</div></td><td>28</td><td>8</td><td>8</td><td>12</td><td>33</td><td>38</td><td>-5</td><td>32</td>
-      </tr>
-      <tr>
-        <td>15</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/brentford.football-logos.cc.png" alt="Brentford">Brentford</div></td><td>29</td><td>8</td><td>6</td><td>15</td><td>31</td><td>44</td><td>-13</td><td>30</td>
-      </tr>
-      <tr>
-        <td>16</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/nottingham-forest.football-logos.cc.png" alt="Nott'm Forest">Nott'm Forest</div></td><td>28</td><td>7</td><td>8</td><td>13</td><td>30</td><td>40</td><td>-10</td><td>29</td>
-      </tr>
-      <tr>
-        <td>17</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/sunderland.football-logos.cc.png" alt="Sunderland">Sunderland</div></td><td>28</td><td>7</td><td>7</td><td>14</td><td>32</td><td>49</td><td>-17</td><td>28</td>
-      </tr>
-      <tr class="table-gap gap-relegate"><td colspan="10">▼ Relegation Zone</td></tr>
-      <tr class="table-relegate">
-        <td>18</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/ipswich.football-logos.cc.png" alt="Ipswich">Ipswich</div></td><td>29</td><td>8</td><td>4</td><td>17</td><td>30</td><td>48</td><td>-18</td><td>28</td>
-      </tr>
-      <tr class="table-relegate">
-        <td>19</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/256x256/wolves.football-logos.cc.png" alt="Wolves">Wolves</div></td><td>28</td><td>5</td><td>6</td><td>17</td><td>22</td><td>50</td><td>-28</td><td>21</td>
-      </tr>
-      <tr class="table-relegate">
-        <td>20</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/256x256/sheffield-united.football-logos.cc.png" alt="Sheffield Utd">Sheffield Utd</div></td><td>28</td><td>4</td><td>3</td><td>21</td><td>25</td><td>62</td><td>-37</td><td>15</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- LEAGUE LEADERS -->
-<div class="log-section" style="margin-top:24px;">
-  <div class="section-label">
-    <img src="assets/photos/premier-league-england-white-logo-footylogos.png" class="comp-logo" alt="Premier League" style="height:18px;width:auto;vertical-align:middle;margin-right:6px;opacity:0.85;">
-    Premier League — League Leaders, 2026/27
-  </div>
-  <div class="leaders-grid">
-    <div>
-      <div class="leaders-label">Top Scorers</div>
-      <table class="standings-table" style="width:100%;">
-        <thead><tr><th>#</th><th>Player</th><th>Club</th><th>G</th><th>Apps</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td><div class="st-club">E. Haaland</div></td><td>Man City</td><td>11</td><td>14</td></tr>
-          <tr class="wrexham-row"><td>2</td><td><div class="st-club">Y. Amrizi</div></td><td>Wrexham ★</td><td>8</td><td>13</td></tr>
-          <tr><td>3</td><td><div class="st-club">B. Barcola</div></td><td>Arsenal</td><td>7</td><td>13</td></tr>
-          <tr><td>4</td><td><div class="st-club">B. Šeško</div></td><td>Man Utd</td><td>6</td><td>9</td></tr>
-          <tr><td>4</td><td><div class="st-club">J. Piroe</div></td><td>Leeds United</td><td>6</td><td>12</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div>
-      <div class="leaders-label">Assists</div>
-      <table class="standings-table" style="width:100%;">
-        <thead><tr><th>#</th><th>Player</th><th>Club</th><th>A</th><th>Apps</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td><div class="st-club">N. Woltemade</div></td><td>Newcastle Utd</td><td>5</td><td>13</td></tr>
-          <tr class="wrexham-row"><td>1</td><td><div class="st-club">L. Sauer</div></td><td>Wrexham ★</td><td>5</td><td>13</td></tr>
-          <tr><td>3</td><td><div class="st-club">G. de Arrascaeta</div></td><td>Man City</td><td>4</td><td>6</td></tr>
-          <tr><td>3</td><td><div class="st-club">Amad</div></td><td>Man Utd</td><td>4</td><td>13</td></tr>
-          <tr><td>3</td><td><div class="st-club">N. González</div></td><td>Man City</td><td>4</td><td>13</td></tr>
-        </tbody>
-      </table>
+<!-- ═══════════════ MASTHEAD ═══════════════ -->
+<header class="home-header">
+  <div class="home-header-inner">
+    <a class="home-brand" href="index.html">
+      <img class="home-brand-crest" src="assets/photos/wrexham-crest.png" alt="Wrexham AFC crest">
+      <span class="home-brand-text">
+        <span class="home-brand-title">The Jenkins Era</span>
+        <span class="home-brand-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </span>
+    </a>
+    <div class="home-header-meta">
+      <span class="home-header-season">Season 2026&ndash;27</span>
+      <span class="home-header-comp">Premier League</span>
     </div>
   </div>
-  <div style="font-size:11px;color:var(--muted);margin-top:8px;">Arthur Okonkwo leads the league in clean sheets (7 in 10 apps).</div>
-</div>
 
-<!-- LEAGUE TABLE -->
-<div class="log-section" style="margin-top:24px;">
-  <div class="section-label">
-    <img src="assets/photos/efl-championship-england-logo-footylogos.png" class="comp-logo" alt="EFL Championship" style="height:18px;width:auto;vertical-align:middle;margin-right:6px;opacity:0.85;">
-    EFL Championship — Final Standings, 2025/26 <span style="color:var(--muted);font-weight:400;">(archived · Wrexham now in the Premier League)</span>
-  </div>
-  <table class="standings-table" style="width:100%;margin-top:10px;">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Club</th>
-        <th>P</th>
-        <th>W</th>
-        <th>D</th>
-        <th>L</th>
-        <th>GF</th>
-        <th>GA</th>
-        <th>GD</th>
-        <th>Pts</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="table-gap gap-promo"><td colspan="10">★ CHAMPIONS — title won, promoted to the Premier League</td></tr>
-      <tr class="table-promo wrexham-row">
-        <td>1</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/wrexham-crest.png" alt="Wrexham">Wrexham ★</div></td><td>46</td><td>36</td><td>4</td><td>6</td><td>111</td><td>47</td><td>+64</td><td>112</td>
-      </tr>
-      <tr class="table-gap gap-playoff"><td colspan="10">▲ Automatic Promotion</td></tr>
-      <tr class="table-promo">
-        <td>2</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/ipswich-town-logo-footylogos.png" alt="Ipswich">Ipswich</div></td><td>46</td><td>22</td><td>15</td><td>9</td><td>65</td><td>42</td><td>+23</td><td>81</td>
-      </tr>
-      <tr class="table-gap gap-playoff"><td colspan="10">↑ Promotion Play-offs · 3rd–6th</td></tr>
-      <tr class="table-playoff">
-        <td>3</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/swansea-city-white-crest.png" alt="Swansea City">Swansea City</div></td><td>46</td><td>21</td><td>16</td><td>9</td><td>61</td><td>42</td><td>+19</td><td>79</td>
-      </tr>
-      <tr class="table-playoff">
-        <td>4</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/southampton.png" alt="Southampton">Southampton</div></td><td>46</td><td>20</td><td>16</td><td>10</td><td>74</td><td>55</td><td>+19</td><td>76</td>
-      </tr>
-      <tr class="table-playoff">
-        <td>5</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/sheffield-united-logo-footylogos.png" alt="Sheffield Utd">Sheffield Utd</div></td><td>46</td><td>22</td><td>10</td><td>14</td><td>69</td><td>51</td><td>+18</td><td>76</td>
-      </tr>
-      <tr class="table-playoff">
-        <td>6</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/coventry-city.png" alt="Coventry City">Coventry City</div></td><td>46</td><td>19</td><td>18</td><td>9</td><td>69</td><td>53</td><td>+16</td><td>75</td>
-      </tr>
-      <tr>
-        <td>7</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/hull-city.png" alt="Hull City">Hull City</div></td><td>46</td><td>20</td><td>15</td><td>11</td><td>66</td><td>51</td><td>+15</td><td>75</td>
-      </tr>
-      <tr>
-        <td>8</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/bristol-city-logo-footylogos.png" alt="Bristol City">Bristol City</div></td><td>46</td><td>18</td><td>18</td><td>10</td><td>62</td><td>52</td><td>+10</td><td>72</td>
-      </tr>
-      <tr>
-        <td>9</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/leicester-city.png" alt="Leicester City">Leicester City</div></td><td>46</td><td>18</td><td>17</td><td>11</td><td>67</td><td>54</td><td>+13</td><td>71</td>
-      </tr>
-      <tr>
-        <td>10</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/preston-north-end.png" alt="Preston">Preston</div></td><td>46</td><td>17</td><td>17</td><td>12</td><td>65</td><td>54</td><td>+11</td><td>68</td>
-      </tr>
-      <tr>
-        <td>11</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/middlesbrough.png" alt="Middlesbrough">Middlesbrough</div></td><td>46</td><td>16</td><td>19</td><td>11</td><td>58</td><td>56</td><td>+2</td><td>67</td>
-      </tr>
-      <tr>
-        <td>12</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/millwall.png" alt="Millwall">Millwall</div></td><td>46</td><td>16</td><td>15</td><td>15</td><td>56</td><td>52</td><td>+4</td><td>63</td>
-      </tr>
-      <tr>
-        <td>13</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/birmingham-city.png" alt="Birmingham City">Birmingham City</div></td><td>46</td><td>15</td><td>15</td><td>16</td><td>57</td><td>56</td><td>+1</td><td>60</td>
-      </tr>
-      <tr>
-        <td>14</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/west-brom.png" alt="West Brom">West Brom</div></td><td>46</td><td>15</td><td>14</td><td>17</td><td>52</td><td>68</td><td>-16</td><td>59</td>
-      </tr>
-      <tr>
-        <td>15</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/watford-logo-footylogos.png" alt="Watford">Watford</div></td><td>46</td><td>12</td><td>17</td><td>17</td><td>47</td><td>49</td><td>-2</td><td>53</td>
-      </tr>
-      <tr>
-        <td>16</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/queens-park-rangers.png" alt="QPR">QPR</div></td><td>46</td><td>13</td><td>13</td><td>20</td><td>49</td><td>62</td><td>-13</td><td>52</td>
-      </tr>
-      <tr>
-        <td>17</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/stoke-city.png" alt="Stoke City">Stoke City</div></td><td>46</td><td>12</td><td>15</td><td>19</td><td>44</td><td>53</td><td>-9</td><td>51</td>
-      </tr>
-      <tr>
-        <td>18</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/norwich-city.png" alt="Norwich">Norwich</div></td><td>46</td><td>11</td><td>17</td><td>18</td><td>46</td><td>57</td><td>-11</td><td>50</td>
-      </tr>
-      <tr>
-        <td>19</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/blackburn-rovers.png" alt="Blackburn Rovers">Blackburn Rovers</div></td><td>46</td><td>9</td><td>18</td><td>19</td><td>48</td><td>68</td><td>-20</td><td>45</td>
-      </tr>
-      <tr>
-        <td>20</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/sheffield-wednesday.png" alt="Sheffield Wed">Sheffield Wed</div></td><td>46</td><td>9</td><td>16</td><td>21</td><td>43</td><td>68</td><td>-25</td><td>43</td>
-      </tr>
-      <tr>
-        <td>21</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/portsmouth-logo-footylogos.png" alt="Portsmouth">Portsmouth</div></td><td>46</td><td>9</td><td>16</td><td>21</td><td>37</td><td>64</td><td>-27</td><td>43</td>
-      </tr>
-      <tr class="table-gap gap-relegate"><td colspan="10">▼ Relegated</td></tr>
-      <tr class="table-relegate">
-        <td>22</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/derby-county-white.png" alt="Derby County">Derby County</div></td><td>46</td><td>7</td><td>20</td><td>19</td><td>42</td><td>61</td><td>-19</td><td>41</td>
-      </tr>
-      <tr class="table-relegate">
-        <td>23</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/charlton-athletic-logo-footylogos.png" alt="Charlton Ath">Charlton Ath</div></td><td>46</td><td>9</td><td>11</td><td>26</td><td>43</td><td>72</td><td>-29</td><td>38</td>
-      </tr>
-      <tr class="table-relegate">
-        <td>24</td><td><div class="st-club"><img class="st-crest" src="assets/photos/crests/oxford-united.png" alt="Oxford United">Oxford United</div></td><td>46</td><td>5</td><td>10</td><td>31</td><td>40</td><td>84</td><td>-44</td><td>25</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- NAV CARDS -->
-<div class="nav-grid">
-  <a class="nav-card" href="journal.html">
-    <div class="nav-card-label">Match Journal</div>
-    <div class="nav-card-title">The Red Dragon<br>Chronicles</div>
-    <div class="nav-card-desc">Match reports, post-game thoughts, and narrative dispatches — every game documented.</div>
-  </a>
-  <a class="nav-card" href="dossier.html">
-    <div class="nav-card-label">Manager Profile</div>
-    <div class="nav-card-title">Keevyon<br>Jenkins</div>
-    <div class="nav-card-desc">Playing career, coaching history, tactical identity, and the backstory behind The Hawk.</div>
-  </a>
-  <a class="nav-card" href="depth_chart.html">
-    <div class="nav-card-label">Coaching Tools</div>
-    <div class="nav-card-title">Squad<br>Depth Chart</div>
-    <div class="nav-card-desc">4-2-3-1 formation view, position-by-position depth, youth pipeline, and window priorities.</div>
-  </a>
-  <a class="nav-card" href="academy.html">
-    <div class="nav-card-label">Development</div>
-    <div class="nav-card-title">Youth<br>Academy</div>
-    <div class="nav-card-desc">Scouted prospects, academy squad, development plans, and first-team promotions.</div>
-  </a>
-  <a class="nav-card" href="roster.html">
-    <div class="nav-card-label">Squad Overview</div>
-    <div class="nav-card-title">Full<br>Roster</div>
-    <div class="nav-card-desc">All 30 senior players and 13 academy prospects — Summary stats, ratings, development status, and squad roles.</div>
-  </a>
-  <a class="nav-card" href="history.html">
-    <div class="nav-card-label">The Club</div>
-    <div class="nav-card-title">Wrexham<br>History</div>
-    <div class="nav-card-desc">160 years of the Red Dragon — the fall to non-league, the climb back, the Racecourse, and the records in play this season.</div>
-  </a>
-  <a class="nav-card" href="media/index.html">
-    <div class="nav-card-label">Press Coverage</div>
-    <div class="nav-card-title">Media<br>Centre</div>
-    <div class="nav-card-desc">Sky Sports, BBC Sport, The Athletic, Gazzetta dello Sport, ESPN FC, and more — a fictional press corps covering the Jenkins era.</div>
-  </a>
-</div>
-
-<!-- CLUB HERITAGE + ON THIS DAY -->
-<div class="log-section" style="margin-top:24px;">
-  <a href="history.html" style="text-decoration:none;color:inherit;display:block;">
-    <div class="section-label">Club Heritage · The Long Way Home →</div>
-  </a>
-  <div class="stats-bar" style="grid-template-columns:repeat(4,1fr);border:1px solid var(--mid);">
-    <div class="stat-cell"><span class="stat-number">1864</span><span class="stat-label">Founded</span></div>
-    <div class="stat-cell"><span class="stat-number">×23</span><span class="stat-label">Welsh Cups</span></div>
-    <div class="stat-cell"><span class="stat-number">3</span><span class="stat-label">Promotions in a row</span></div>
-    <div class="stat-cell"><span class="stat-number" style="color:var(--gold)">0</span><span class="stat-label">Top-flight seasons</span></div>
-  </div>
-
-  <a href="history.html" style="text-decoration:none;color:inherit;display:block;margin-top:14px;">
-    <div class="context-card" style="margin:0;border-left:3px solid var(--gold);">
-      <div class="context-card-label" id="otd-label" style="color:var(--gold);">From the Archives</div>
-      <div class="log-event" id="otd-text" style="font-size:14px;line-height:1.65;color:var(--light);">Loading…</div>
+  <nav class="home-primary-nav" aria-label="Primary">
+    <div class="home-primary-nav-inner">
+      <a href="index.html" class="home-nav-link is-active" aria-current="page">Home</a>
+      <a href="media/index.html" class="home-nav-link">News</a>
+      <a href="season.html" class="home-nav-link">Matches</a>
+      <a href="roster.html" class="home-nav-link">Squad</a>
+      <a href="academy.html" class="home-nav-link">Academy</a>
+      <a href="history.html" class="home-nav-link">The Jenkins Era</a>
+      <a href="season.html#player-stats" class="home-nav-link">Stats</a>
     </div>
-  </a>
-</div>
+  </nav>
 
-<!-- RECENT LOG -->
-<div class="log-section">
-  <div class="section-label">Season Log</div>
-  <div id="season-log-entries">
-    <div class="log-row">
-      <span class="log-event" style="color:var(--muted); font-style:italic;">No entries yet — season begins with the first kick-off.</span>
+  <nav class="home-utility-nav" aria-label="Secondary">
+    <div class="home-utility-nav-inner">
+      <a href="depth_chart.html">Depth Chart</a>
+      <a href="dossier.html">Manager Profile</a>
+      <a href="history.html">Season Archive</a>
+      <a href="journal.html">Journal</a>
+      <a href="season_preview.html">Season Preview</a>
+      <a href="submit.html" class="home-utility-submit">Submit Data</a>
     </div>
+  </nav>
+</header>
+
+<main class="home-shell" id="home-main">
+
+  <noscript>
+    <p class="home-noscript">This homepage assembles its lead stories, match pulse and squad panels from
+      the project's own data files with a small script. With JavaScript off, browse directly:
+      <a href="media/index.html">Media Centre</a>, <a href="journal.html">Journal</a>,
+      <a href="season.html">Season</a>, <a href="roster.html">Squad</a>,
+      <a href="academy.html">Academy</a>, <a href="history.html">History</a>.</p>
+  </noscript>
+
+  <!-- ═══════════════ EDITORIAL HERO ═══════════════ -->
+  <section class="home-hero" aria-label="Lead stories">
+    <h1 class="home-visually-hidden">The Jenkins Era — Wrexham AFC</h1>
+    <article class="home-hero-lead" id="home-hero-lead"></article>
+    <div class="home-supporting-stories" id="home-supporting-stories"></div>
+  </section>
+
+  <!-- ═══════════════ MATCH PULSE ═══════════════ -->
+  <section class="home-pulse" aria-label="Match pulse">
+    <div class="home-pulse-cell" id="home-result"></div>
+    <div class="home-pulse-cell" id="home-next-match"></div>
+    <div class="home-pulse-cell" id="home-form"></div>
+    <div class="home-pulse-cell" id="home-current-position"></div>
+  </section>
+
+  <!-- ═══════════════ TITLE RACE ═══════════════ -->
+  <section class="home-section home-title-race" aria-label="Premier League title race">
+    <div class="home-section-head">
+      <h2>The Title Race</h2>
+      <a class="home-section-link" href="#home-record-room">View full table &rarr;</a>
+    </div>
+    <table class="home-race-table">
+      <caption class="home-visually-hidden">Premier League, 2026/27 — top of the table</caption>
+      <thead>
+        <tr><th scope="col">#</th><th scope="col">Club</th><th scope="col">P</th><th scope="col">GD</th><th scope="col">Pts</th></tr>
+      </thead>
+      <tbody id="home-title-race-body"></tbody>
+    </table>
+    <p class="home-race-note">Standings are transcribed from confirmed in-game screenshots. Rows are only
+      changed when a screenshot covers them &mdash; never estimated.</p>
+  </section>
+
+  <!-- ═══════════════ FROM OUR WRITERS ═══════════════ -->
+  <section class="home-section" aria-label="From our writers">
+    <div class="home-section-head">
+      <h2>From Our Writers</h2>
+      <a class="home-section-link" href="media/index.html">Media Centre &rarr;</a>
+    </div>
+    <div class="writer-grid" id="writer-grid"></div>
+    <div class="press-corps">
+      <span class="press-corps-label">The Press Corps</span>
+      <div class="press-corps-list" id="press-corps"></div>
+      <a class="home-section-link" href="media/journalists.html">Journalist profiles &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SQUAD SPOTLIGHT ═══════════════ -->
+  <section class="home-section squad-spotlight" aria-label="Squad spotlight">
+    <div class="home-section-head">
+      <h2>Squad Spotlight</h2>
+      <a class="home-section-link" href="roster.html">View squad &rarr;</a>
+    </div>
+    <div class="squad-spotlight-grid">
+      <article class="player-feature" id="player-feature"></article>
+      <div class="player-mini-grid" id="player-mini-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ACADEMY ═══════════════ -->
+  <section class="home-section academy-section" aria-label="Academy">
+    <div class="home-section-head">
+      <h2>Next Generation</h2>
+      <a class="home-section-link" href="academy.html">Explore academy &rarr;</a>
+    </div>
+    <div class="squad-spotlight-grid">
+      <article class="academy-feature" id="academy-feature"></article>
+      <div class="player-mini-grid academy-mini-grid" id="academy-mini-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ THE JENKINS ERA ═══════════════ -->
+  <section class="home-section jenkins-era" aria-label="The Jenkins era">
+    <div class="home-section-head">
+      <h2>The Jenkins Era</h2>
+      <a class="home-section-link" href="history.html">Explore the full story &rarr;</a>
+    </div>
+    <p class="jenkins-era-intro">From appointment to wherever the story leads. This is the record of the
+      Keevyon Jenkins years at Wrexham.</p>
+
+    <ol class="era-timeline">
+      <li class="era-node">
+        <span class="era-node-date">January 2025</span>
+        <h3 class="era-node-title">Appointed</h3>
+        <p class="era-node-detail">Keevyon Jenkins leaves FC Nordsj&aelig;lland to take over as Head Coach at
+          the Racecourse, with Wrexham newly returned to the second tier.</p>
+      </li>
+      <li class="era-node">
+        <span class="era-node-date">2025&ndash;26</span>
+        <h3 class="era-node-title"><span class="era-trophy" aria-hidden="true">&#9733;</span> Championship Champions</h3>
+        <p class="era-node-detail">First full season, first title: P46 W36 D4 L6, GF111 GA47, <strong>112 points</strong>
+          &mdash; champions of the EFL Championship and promoted automatically.</p>
+      </li>
+      <li class="era-node">
+        <span class="era-node-date">August 2026</span>
+        <h3 class="era-node-title">Into the Top Flight</h3>
+        <p class="era-node-detail">Wrexham kick off their first ever season in the English top flight, more than
+          160 years after the club was founded.</p>
+      </li>
+      <li class="era-node">
+        <span class="era-node-date">February 2027</span>
+        <h3 class="era-node-title">Carabao Cup Semi-Final</h3>
+        <p class="era-node-detail">A youth-heavy side reaches the last four and goes out to Chelsea on penalties
+          with the tie level at 4&ndash;4 on aggregate.</p>
+      </li>
+      <li class="era-node era-node-current">
+        <span class="era-node-date">2026&ndash;27 &middot; Current</span>
+        <h3 class="era-node-title">The Premier League Campaign</h3>
+        <p class="era-node-detail" id="era-current-detail">Season in progress.</p>
+      </li>
+    </ol>
+
+    <a class="era-archive-card" href="history.html">
+      <span class="era-archive-label" id="otd-label">From the Archives</span>
+      <span class="era-archive-text" id="otd-text">160 years of Wrexham AFC &rarr;</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════ RECORD ROOM (detail, collapsed) ═══════════════ -->
+  <section class="home-section home-record-room" id="home-record-room" aria-label="Record room">
+    <div class="home-section-head">
+      <h2>The Record Room</h2>
+      <a class="home-section-link" href="season.html">Full season stats &rarr;</a>
+    </div>
+    <p class="home-record-note">The homepage leads with context; the numbers live here and on the deeper pages.</p>
+
+    <details class="home-details">
+      <summary>Premier League &mdash; full table, 2026/27</summary>
+      <div class="home-table-scroll">
+        <table class="standings-table">
+          <thead>
+            <tr><th>#</th><th>Club</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr>
+          </thead>
+          <tbody id="home-full-table-body"></tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="home-details">
+      <summary>Premier League &mdash; fixtures &amp; results, 2026/27</summary>
+      <div id="home-fixture-list" class="home-fixture-list"></div>
+    </details>
+
+    <details class="home-details">
+      <summary>EFL Championship &mdash; final table, 2025/26 (archived)</summary>
+      <div class="home-table-scroll">
+        <table class="standings-table">
+          <thead>
+            <tr><th>#</th><th>Club</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr>
+          </thead>
+          <tbody id="home-archive-table-body"></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <img class="home-footer-crest" src="assets/photos/wrexham-crest.png" alt="">
+      <div>
+        <span class="home-footer-title">The Jenkins Era</span>
+        <span class="home-footer-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </div>
+    </div>
+    <nav class="home-footer-links" aria-label="Footer">
+      <a href="media/index.html">Media Centre</a>
+      <a href="journal.html">Journal</a>
+      <a href="season.html">Season</a>
+      <a href="roster.html">Squad</a>
+      <a href="depth_chart.html">Depth Chart</a>
+      <a href="academy.html">Academy</a>
+      <a href="history.html">History</a>
+      <a href="dossier.html">Manager Profile</a>
+      <a href="season_preview.html">Season Preview</a>
+      <a href="submit.html">Submit Data</a>
+    </nav>
+    <p class="home-footer-disclosure">An FC26 career-mode history project documenting the fictional managerial
+      career of Keevyon Jenkins at Wrexham AFC. Not affiliated with, endorsed by, or connected to Wrexham AFC,
+      the Premier League, the EFL, EA Sports, or any broadcaster or publication. Journalists, articles and
+      match events on this site are fictional.</p>
   </div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <span class="footer-brand">Wrexham AFC</span>
-  <span class="footer-note">FC26 Career Mode · The Hawk Era</span>
-</div>
-
-</div><!-- end .page-wrap -->
+</footer>
 
 <script>
 // Precomputed season summary — see scripts/sync_season_summary.py. Inlined so
 // this page works as a local file:// (no fetch needed). Do not hand-edit —
 // regenerate with `python3 scripts/sync_season_summary.py` after any change
 // to season_log.json.
-const SEASON_SUMMARY = {"_meta":{"club":"Wrexham AFC","manager":"Keeyvon Jenkins","game":"FC26 Career Mode","season":"2026-27","competition":"Premier League","last_updated":"2027-03-05"},"stats":{"played":36,"league_p":28,"league_w":21,"league_d":3,"league_l":4,"league_pts":66,"cup_p":6,"cup_w":5,"cup_d":0,"cup_l":1,"fa_cup_p":2,"fa_cup_w":2,"fa_cup_d":0,"fa_cup_l":0},"recent":[{"type":"match","date":"2027-03-05","opponent":"Bournemouth","home":true,"score":"5-0","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2027-03-04","opponent":"Nottingham Forest","home":true,"score":"6-1","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2027-03-03","opponent":"Brighton and Hove Albion","home":false,"score":"3-0","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2027-02-27","opponent":"Arsenal","home":false,"score":"4-0","result":"W","competition":"Premier League"},{"type":"injury","date":"2027-02-27","player":"Brian Gutierrez","description":"Elbow, 5 days"},{"type":"match","date":"2027-02-20","opponent":"Nottingham Forest","home":true,"score":"2-1","result":"W","competition":"Premier League"},{"type":"match","date":"2027-02-20","opponent":"Liverpool","home":true,"score":"3-3","result":"D","competition":"Youth Academy Rush Tournament"},{"type":"milestone","date":"2027-02-20","description":"Premier League MD27 — beat Nottingham Forest 2-1 at home. Yacel Amrizi opened the scoring, Rio Ngumoha won a penalty that Toni Fruk converted after Forest had briefly levelled through Igor Jesus. Liberato Cacace was Man of the Match with an assist."},{"type":"milestone","date":"2027-02-20","description":"Youth Academy Rush Tournament — drew 3-3 at home with Liverpool's academy (Lilian Faure 2G, Martin Leon 1G), advancing on a 2-0 penalty shootout win."},{"type":"match","date":"2027-02-10","opponent":"Sunderland","home":false,"score":"2-0","result":"W","competition":"Premier League"},{"type":"match","date":"2027-02-10","opponent":"Blackburn Rovers","home":false,"score":"3-0","result":"W","competition":"FA Cup"},{"type":"milestone","date":"2027-02-10","description":"Premier League MD26 — beat Sunderland 2-0 away, Rio Ngumoha scoring both (68', 74') and taking Man of the Match. Wrexham move to 60 points, still top of the table."}],"schedule":[{"md":1,"date":"2026-08-15","opponent":"Wolves","home":true,"score":"2-0","result":"W"},{"md":2,"date":"2026-08-22","opponent":"Sheffield United","home":false,"score":"1-1","result":"D"},{"md":3,"date":"2026-08-29","opponent":"Bournemouth","home":true,"score":"2-0","result":"W"},{"md":4,"date":"2026-09-12","opponent":"Tottenham","home":true,"score":"0-2","result":"L"},{"md":5,"date":"2026-09-19","opponent":"Chelsea","home":false,"score":"0-0","result":"D"},{"md":6,"date":"2026-09-27","opponent":"Brighton","home":true,"score":"1-0","result":"W"},{"md":7,"date":"2026-10-04","opponent":"Newcastle","home":false,"score":"4-0","result":"W"},{"md":8,"date":"2026-10-17","opponent":"Manchester United","home":true,"score":"1-2","result":"L"},{"md":9,"date":"2026-10-25","opponent":"Crystal Palace","home":false,"score":"4-0","result":"W"},{"md":10,"date":"2026-10-31","opponent":"Aston Villa","home":true,"score":"1-0","result":"W"},{"md":11,"date":"2026-11-08","opponent":"Liverpool","home":false,"score":"3-0","result":"W"},{"md":12,"date":"2026-11-22","opponent":"Arsenal","home":true,"score":"1-1","result":"D"},{"md":13,"date":"2026-11-28","opponent":"Nottingham Forest","home":false,"score":"2-0","result":"W"},{"md":14,"date":"2026-12-01","opponent":"Sunderland","home":true,"score":"5-0","result":"W"},{"md":15,"date":"2026-12-06","opponent":"Leeds United","home":false,"score":"2-1","result":"W"},{"md":16,"date":"2026-12-12","opponent":"Manchester City","home":true,"score":"1-2","result":"L"},{"md":17,"date":"2026-12-19","opponent":"Brentford","home":false,"score":"3-1","result":"W"},{"md":18,"date":"2026-12-25","opponent":"West Ham","home":true,"score":"2-1","result":"W"},{"md":19,"date":"2026-12-29","opponent":"Ipswich Town","home":false,"score":"2-1","result":"W"},{"md":20,"date":"2027-01-02","opponent":"Brighton","home":false,"score":"0-1","result":"L"},{"md":21,"date":"2027-01-06","opponent":"Chelsea","home":true,"score":"1-0","result":"W"},{"md":22,"date":"2027-01-17","opponent":"West Ham","home":false,"score":"4-0","result":"W"},{"md":23,"date":"2027-01-24","opponent":"Brentford","home":true,"score":"2-0","result":"W"},{"md":24,"date":"2027-01-30","opponent":"Sheffield United","home":true,"score":"4-0","result":"W"},{"md":25,"date":"2027-02-06","opponent":"Wolves","home":false,"score":"5-0","result":"W"},{"md":26,"date":"2027-02-10","opponent":"Sunderland","home":false,"score":"2-0","result":"W"},{"md":27,"date":"2027-02-20","opponent":"Nottingham Forest","home":true,"score":"2-1","result":"W"},{"md":28,"date":"2027-02-27","opponent":"Arsenal","home":false,"score":"4-0","result":"W"},{"md":29,"date":"2027-03-03","opponent":"Liverpool","home":true},{"md":30,"date":"2027-03-13","opponent":"Tottenham","home":false},{"md":31,"date":"2027-03-20","opponent":"Bournemouth","home":false},{"md":32,"date":"2027-04-11","opponent":"Aston Villa","home":false},{"md":33,"date":"2027-04-17","opponent":"Crystal Palace","home":true},{"md":34,"date":"2027-04-24","opponent":"Ipswich Town","home":true},{"md":35,"date":"2027-05-01","opponent":"Manchester United","home":false},{"md":36,"date":"2027-05-08","opponent":"Newcastle","home":true},{"md":37,"date":"2027-05-15","opponent":"Manchester City","home":false},{"md":38,"date":"2027-05-23","opponent":"Leeds United","home":true}]};
-
-function loadSeasonLog() {
-  try {
-    // SEASON_SUMMARY is precomputed by scripts/sync_season_summary.py from
-    // season_log.json (the full-history source of truth) so this page never
-    // has to embed the entire growing match/transfer/milestone log.
-    const { stats, recent, schedule } = SEASON_SUMMARY;
-
-    document.getElementById('stat-played').textContent = stats.played;
-    document.getElementById('league-p').textContent = stats.league_p;
-    document.getElementById('stat-w').textContent = stats.league_w;
-    document.getElementById('stat-d').textContent = stats.league_d;
-    document.getElementById('stat-l').textContent = stats.league_l;
-    document.getElementById('stat-pts').textContent = stats.league_pts;
-
-    document.getElementById('cup-p').textContent = stats.cup_p;
-    document.getElementById('cup-w').textContent = stats.cup_w;
-    document.getElementById('cup-d').textContent = stats.cup_d;
-    document.getElementById('cup-l').textContent = stats.cup_l;
-
-    document.getElementById('facup-p').textContent = stats.fa_cup_p;
-    document.getElementById('facup-w').textContent = stats.fa_cup_w;
-    document.getElementById('facup-d').textContent = stats.fa_cup_d;
-    document.getElementById('facup-l').textContent = stats.fa_cup_l;
-
-    if (!recent || recent.length === 0) return;
-
-    const container = document.getElementById('season-log-entries');
-    container.innerHTML = '';
-
-    const compLogoMap = {
-      'Premier League': 'assets/photos/premier-league-england-white-logo-footylogos.png',
-      'EFL Championship': 'assets/photos/efl-championship-england-logo-footylogos.png',
-      'Carabao Cup': 'assets/photos/carabao-cup.png',
-      'FA Cup': 'assets/photos/crests/england_emirates-fa-cup_512x512.football-logos.cc.png'
-    };
-
-    recent.forEach(entry => {
-      const row = document.createElement('div');
-      row.className = 'log-row';
-
-      let tagHtml = '';
-      let eventHtml = '';
-
-      if (entry.type === 'match') {
-        const cls = entry.result === 'W' ? 'win' : entry.result === 'L' ? 'loss' : 'draw';
-        tagHtml = `<span class="log-tag ${cls}">${entry.result} ${entry.score}</span>`;
-        const logoTag = compLogoMap[entry.competition]
-          ? `<img src="${compLogoMap[entry.competition]}" style="height:14px;width:auto;vertical-align:middle;margin-right:4px;opacity:0.85;">`
-          : '';
-        eventHtml = `<strong>${entry.home ? 'vs' : '@'} ${entry.opponent}</strong> · ${logoTag}${entry.competition}`;
-      } else if (entry.type === 'transfer') {
-        tagHtml = `<span class="log-tag ${entry.direction === 'in' ? 'signing' : 'sold'}">${entry.direction === 'in' ? 'SIGNED' : 'SOLD'}</span>`;
-        eventHtml = `<strong>${entry.player}</strong> ${entry.direction === 'in' ? 'joins from' : 'departs to'} ${entry.club}`;
-      } else if (entry.type === 'injury') {
-        tagHtml = `<span class="log-tag injury">INJURY</span>`;
-        eventHtml = `<strong>${entry.player}</strong> — ${entry.description}`;
-      } else if (entry.type === 'milestone') {
-        tagHtml = `<span class="log-tag note">NOTE</span>`;
-        eventHtml = entry.description;
-      }
-
-      row.innerHTML = `
-        <span class="log-event">${eventHtml}</span>
-        <span class="log-date">${entry.date}</span>
-        ${tagHtml}
-      `;
-      container.appendChild(row);
-    });
-
-    if (schedule && schedule.length) {
-      const eplFolder = 'assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/';
-      const efcFolder = 'assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/256x256/';
-      const opponentCrestMap = {
-        'Arsenal': eplFolder + 'arsenal.football-logos.cc.png',
-        'Aston Villa': eplFolder + 'aston-villa.football-logos.cc.png',
-        'Bournemouth': eplFolder + 'bournemouth.football-logos.cc.png',
-        'Brentford': eplFolder + 'brentford.football-logos.cc.png',
-        'Brighton': eplFolder + 'brighton.football-logos.cc.png',
-        'Chelsea': eplFolder + 'chelsea.football-logos.cc.png',
-        'Crystal Palace': eplFolder + 'crystal-palace.football-logos.cc.png',
-        'Ipswich Town': eplFolder + 'ipswich.football-logos.cc.png',
-        'Leeds United': eplFolder + 'leeds-united.football-logos.cc.png',
-        'Liverpool': eplFolder + 'liverpool.football-logos.cc.png',
-        'Manchester City': eplFolder + 'manchester-city.football-logos.cc.png',
-        'Manchester United': eplFolder + 'manchester-united.football-logos.cc.png',
-        'Newcastle': eplFolder + 'newcastle.football-logos.cc.png',
-        'Nottingham Forest': eplFolder + 'nottingham-forest.football-logos.cc.png',
-        'Sunderland': eplFolder + 'sunderland.football-logos.cc.png',
-        'Tottenham': eplFolder + 'tottenham.football-logos.cc.png',
-        'Sheffield United': efcFolder + 'sheffield-united.football-logos.cc.png',
-        'West Ham': efcFolder + 'west-ham.football-logos.cc.png',
-        'Wolves': efcFolder + 'wolves.football-logos.cc.png',
-      };
-
-      const scheduleContainer = document.getElementById('season-schedule-rows');
-      scheduleContainer.innerHTML = '';
-      schedule.forEach(fx => {
-        const row = document.createElement('div');
-        row.className = 'log-row';
-        let tagHtml;
-        if (fx.result) {
-          const cls = fx.result === 'W' ? 'win' : fx.result === 'L' ? 'loss' : 'draw';
-          tagHtml = `<span class="log-tag ${cls}">${fx.result} ${fx.score}</span>`;
-        } else {
-          tagHtml = `<span class="log-tag note">MD${fx.md}</span>`;
-        }
-        const crest = opponentCrestMap[fx.opponent];
-        const crestTag = crest
-          ? `<img src="${crest}" style="height:16px;width:auto;vertical-align:middle;margin-right:6px;">`
-          : '';
-        const eventHtml = `${crestTag}<strong>${fx.home ? 'vs' : '@'} ${fx.opponent}</strong>`;
-        row.innerHTML = `
-          <span class="log-event">${eventHtml}</span>
-          <span class="log-date">${fx.date}</span>
-          ${tagHtml}
-        `;
-        scheduleContainer.appendChild(row);
-      });
-    }
-  } catch (e) { /* silent fail */ }
-}
-
-loadSeasonLog();
-
-// ─── ON THIS DAY / FROM THE ARCHIVES ───
-function renderOnThisDay() {
-  try {
-    const onThisDay = {
-      '10-04': { y: 1864, t: 'Wrexham AFC is founded at the Turf Hotel — the oldest football club in Wales.' },
-      '01-04': { y: 1992, t: 'Wrexham 2–1 Arsenal: bottom of the Football League beat the reigning champions, Mickey Thomas with the free kick.' },
-      '01-26': { y: 1957, t: 'A record 34,445 pack the Racecourse for an FA Cup tie with Manchester United.' },
-      '03-03': { y: 1962, t: 'Wrexham record their biggest ever win, 10–1 against Hartlepools United.' },
-      '03-05': { y: 1877, t: 'Wales play their first home international at the Racecourse — still the oldest international ground in use.' },
-      '10-15': { y: 1963, t: "The club's heaviest defeat, 0–9 away at Brentford." },
-      '09-01': { y: 2022, t: "Wrexham is granted city status in the Platinum Jubilee honours — Wales's seventh city." },
-      '12-26': { y: 1936, t: 'A record league crowd of 29,261 watch Wrexham face Chester City.' }
-    };
-    const archive = [
-      "Tommy Bamford's 51 goals in 1933–34 is still the club's single-season record.",
-      'Arfon Griffiths — "Mr Wrexham" — made a record 592 league appearances.',
-      'The 111 points won in 2022–23 is a record for the top five tiers of English football.',
-      'Wrexham have won the Welsh Cup a record 23 times.',
-      "The 1975–76 Cup Winners' Cup run reached the quarter-finals, beating FC Porto along the way.",
-      'Wrexham spent 15 seasons in non-league (2008–2023) before three straight promotions.',
-      'In 160+ years, Wrexham have never played in the English top flight — a first is in reach this season.',
-      "The Racecourse has staged football since 1864 and is the world's oldest international stadium still in use."
-    ];
-    const now = new Date();
-    const key = String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
-    const labelEl = document.getElementById('otd-label');
-    const textEl = document.getElementById('otd-text');
-    if (!labelEl || !textEl) return;
-    if (onThisDay[key]) {
-      labelEl.textContent = 'On This Day · ' + onThisDay[key].y;
-      textEl.textContent = onThisDay[key].t;
-    } else {
-      const doy = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
-      labelEl.textContent = 'From the Archives';
-      textEl.textContent = archive[doy % archive.length];
-    }
-  } catch (e) { /* silent fail */ }
-}
-renderOnThisDay();
+const SEASON_SUMMARY = {"_meta":{"club":"Wrexham AFC","manager":"Keeyvon Jenkins","game":"FC26 Career Mode","season":"2026-27","competition":"Premier League","last_updated":"2027-03-05"},"stats":{"played":36,"league_p":28,"league_w":21,"league_d":3,"league_l":4,"league_pts":66,"cup_p":6,"cup_w":5,"cup_d":0,"cup_l":1,"fa_cup_p":2,"fa_cup_w":2,"fa_cup_d":0,"fa_cup_l":0},"form":[{"date":"2027-02-06","opponent":"Wolves","home":false,"score":"5-0","result":"W","competition":"Premier League"},{"date":"2027-02-10","opponent":"Sunderland","home":false,"score":"2-0","result":"W","competition":"Premier League"},{"date":"2027-02-10","opponent":"Blackburn Rovers","home":false,"score":"3-0","result":"W","competition":"FA Cup"},{"date":"2027-02-20","opponent":"Nottingham Forest","home":true,"score":"2-1","result":"W","competition":"Premier League"},{"date":"2027-02-27","opponent":"Arsenal","home":false,"score":"4-0","result":"W","competition":"Premier League"}],"latest":{"date":"2027-02-27","opponent":"Arsenal","home":false,"score":"4-0","result":"W","competition":"Premier League"},"recent":[{"type":"match","date":"2027-03-05","opponent":"Bournemouth","home":true,"score":"5-0","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2027-03-04","opponent":"Nottingham Forest","home":true,"score":"6-1","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2027-03-03","opponent":"Brighton and Hove Albion","home":false,"score":"3-0","result":"W","competition":"Youth Academy Rush Tournament"},{"type":"match","date":"2027-02-27","opponent":"Arsenal","home":false,"score":"4-0","result":"W","competition":"Premier League"},{"type":"injury","date":"2027-02-27","player":"Brian Gutierrez","description":"Elbow, 5 days"},{"type":"match","date":"2027-02-20","opponent":"Nottingham Forest","home":true,"score":"2-1","result":"W","competition":"Premier League"},{"type":"match","date":"2027-02-20","opponent":"Liverpool","home":true,"score":"3-3","result":"D","competition":"Youth Academy Rush Tournament"},{"type":"milestone","date":"2027-02-20","description":"Premier League MD27 — beat Nottingham Forest 2-1 at home. Yacel Amrizi opened the scoring, Rio Ngumoha won a penalty that Toni Fruk converted after Forest had briefly levelled through Igor Jesus. Liberato Cacace was Man of the Match with an assist."},{"type":"milestone","date":"2027-02-20","description":"Youth Academy Rush Tournament — drew 3-3 at home with Liverpool's academy (Lilian Faure 2G, Martin Leon 1G), advancing on a 2-0 penalty shootout win."},{"type":"match","date":"2027-02-10","opponent":"Sunderland","home":false,"score":"2-0","result":"W","competition":"Premier League"},{"type":"match","date":"2027-02-10","opponent":"Blackburn Rovers","home":false,"score":"3-0","result":"W","competition":"FA Cup"},{"type":"milestone","date":"2027-02-10","description":"Premier League MD26 — beat Sunderland 2-0 away, Rio Ngumoha scoring both (68', 74') and taking Man of the Match. Wrexham move to 60 points, still top of the table."}],"schedule":[{"md":1,"date":"2026-08-15","opponent":"Wolves","home":true,"score":"2-0","result":"W"},{"md":2,"date":"2026-08-22","opponent":"Sheffield United","home":false,"score":"1-1","result":"D"},{"md":3,"date":"2026-08-29","opponent":"Bournemouth","home":true,"score":"2-0","result":"W"},{"md":4,"date":"2026-09-12","opponent":"Tottenham","home":true,"score":"0-2","result":"L"},{"md":5,"date":"2026-09-19","opponent":"Chelsea","home":false,"score":"0-0","result":"D"},{"md":6,"date":"2026-09-27","opponent":"Brighton","home":true,"score":"1-0","result":"W"},{"md":7,"date":"2026-10-04","opponent":"Newcastle","home":false,"score":"4-0","result":"W"},{"md":8,"date":"2026-10-17","opponent":"Manchester United","home":true,"score":"1-2","result":"L"},{"md":9,"date":"2026-10-25","opponent":"Crystal Palace","home":false,"score":"4-0","result":"W"},{"md":10,"date":"2026-10-31","opponent":"Aston Villa","home":true,"score":"1-0","result":"W"},{"md":11,"date":"2026-11-08","opponent":"Liverpool","home":false,"score":"3-0","result":"W"},{"md":12,"date":"2026-11-22","opponent":"Arsenal","home":true,"score":"1-1","result":"D"},{"md":13,"date":"2026-11-28","opponent":"Nottingham Forest","home":false,"score":"2-0","result":"W"},{"md":14,"date":"2026-12-01","opponent":"Sunderland","home":true,"score":"5-0","result":"W"},{"md":15,"date":"2026-12-06","opponent":"Leeds United","home":false,"score":"2-1","result":"W"},{"md":16,"date":"2026-12-12","opponent":"Manchester City","home":true,"score":"1-2","result":"L"},{"md":17,"date":"2026-12-19","opponent":"Brentford","home":false,"score":"3-1","result":"W"},{"md":18,"date":"2026-12-25","opponent":"West Ham","home":true,"score":"2-1","result":"W"},{"md":19,"date":"2026-12-29","opponent":"Ipswich Town","home":false,"score":"2-1","result":"W"},{"md":20,"date":"2027-01-02","opponent":"Brighton","home":false,"score":"0-1","result":"L"},{"md":21,"date":"2027-01-06","opponent":"Chelsea","home":true,"score":"1-0","result":"W"},{"md":22,"date":"2027-01-17","opponent":"West Ham","home":false,"score":"4-0","result":"W"},{"md":23,"date":"2027-01-24","opponent":"Brentford","home":true,"score":"2-0","result":"W"},{"md":24,"date":"2027-01-30","opponent":"Sheffield United","home":true,"score":"4-0","result":"W"},{"md":25,"date":"2027-02-06","opponent":"Wolves","home":false,"score":"5-0","result":"W"},{"md":26,"date":"2027-02-10","opponent":"Sunderland","home":false,"score":"2-0","result":"W"},{"md":27,"date":"2027-02-20","opponent":"Nottingham Forest","home":true,"score":"2-1","result":"W"},{"md":28,"date":"2027-02-27","opponent":"Arsenal","home":false,"score":"4-0","result":"W"},{"md":29,"date":"2027-03-03","opponent":"Liverpool","home":true},{"md":30,"date":"2027-03-13","opponent":"Tottenham","home":false},{"md":31,"date":"2027-03-20","opponent":"Bournemouth","home":false},{"md":32,"date":"2027-04-11","opponent":"Aston Villa","home":false},{"md":33,"date":"2027-04-17","opponent":"Crystal Palace","home":true},{"md":34,"date":"2027-04-24","opponent":"Ipswich Town","home":true},{"md":35,"date":"2027-05-01","opponent":"Manchester United","home":false},{"md":36,"date":"2027-05-08","opponent":"Newcastle","home":true},{"md":37,"date":"2027-05-15","opponent":"Manchester City","home":false},{"md":38,"date":"2027-05-23","opponent":"Leeds United","home":true}]};
 </script>
+<script src="assets/media_index.js"></script>
+<script src="assets/pl_table.js"></script>
+<script src="assets/home_config.js"></script>
+<script src="assets/home.js"></script>
 
 </body>
 </html>

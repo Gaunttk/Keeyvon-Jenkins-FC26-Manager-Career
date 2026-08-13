@@ -1,4 +1,4 @@
-const CACHE = 'wrxm-fc26-v15';
+const CACHE = 'wrxm-fc26-v16';
 
 const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/',
@@ -10,7 +10,13 @@ const PRECACHE = [
   '/Keeyvon-Jenkins-FC26-Manager-Career/academy.html',
   '/Keeyvon-Jenkins-FC26-Manager-Career/dossier.html',
   '/Keeyvon-Jenkins-FC26-Manager-Career/submit.html',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/history.html',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/media/index.html',
   '/Keeyvon-Jenkins-FC26-Manager-Career/assets/style.css',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/assets/media_index.js',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/assets/pl_table.js',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/assets/home_config.js',
+  '/Keeyvon-Jenkins-FC26-Manager-Career/assets/home.js',
   '/Keeyvon-Jenkins-FC26-Manager-Career/manifest.json',
   '/Keeyvon-Jenkins-FC26-Manager-Career/manifest-submit.json',
 ];

@@ -444,9 +444,75 @@ def render_article_pages(people, people_by_id, articles):
     print(f"Wrote {len(media_articles)} article pages under docs/media/articles/")
 
 
+# ---------------------------------------------------------------------------
+# docs/assets/media_index.js — metadata-only snapshot for the homepage
+# ---------------------------------------------------------------------------
+
+def render_media_index_js(people, people_by_id, articles):
+    """Emit a small generated JS index of article *metadata* (never bodies).
+
+    docs/index.html has to work as a local file:// page, so it cannot fetch
+    media-articles.json at runtime. This gives the homepage headline/dek/byline/
+    URL for any article it wants to feature, keyed by the same ids used in
+    media-articles.json — so docs/assets/home_config.js only ever stores ids.
+
+    Paths in `url` and `headshot` are relative to docs/.
+    """
+    def url_for(a):
+        if a["content_type"] in JOURNAL_CONTENT_TYPES:
+            return f'journal.html#{a["id"]}'
+        return f'media/articles/{a["id"]}.html'
+
+    payload = {
+        "people": {
+            p["id"]: {
+                "name": p["name"],
+                "outlet": p["outlet"],
+                "role": p["role"],
+                "is_press": p["is_press"],
+                "accent_color": p["accent_color"],
+                "headshot": p.get("headshot"),
+            }
+            for p in people
+        },
+        "people_order": [p["id"] for p in people],
+        "articles": {
+            a["id"]: {
+                "id": a["id"],
+                "headline": a["headline"],
+                "dek": a.get("dek", ""),
+                "date": a["date"],
+                "date_label": _format_toc_date(a["date"]),
+                "author_id": a["author_id"],
+                "outlet": a.get("outlet") or people_by_id[a["author_id"]]["outlet"],
+                "section": a.get("section"),
+                "content_type": a["content_type"],
+                "entry_number": a.get("entry_number"),
+                "url": url_for(a),
+            }
+            for a in articles
+        },
+        "recent_ids": [a["id"] for a in sorted(articles, key=lambda a: a["date"], reverse=True)],
+    }
+
+    blob = json.dumps(payload, ensure_ascii=False, indent=1)
+    out = (
+        "/* GENERATED FILE — do not edit by hand.\n"
+        "   Rebuild with: python3 scripts/generate_media_pages.py\n"
+        "   Metadata-only index of media-articles.json / media-personalities.json,\n"
+        "   used by docs/index.html (which cannot fetch JSON over file://).\n"
+        "   Article bodies deliberately live only in media-articles.json. */\n"
+        f"const MEDIA_INDEX = {blob};\n"
+    )
+    path = DOCS / "assets" / "media_index.js"
+    path.write_text(out, encoding="utf-8")
+    print(f"Wrote docs/assets/media_index.js ({len(payload['articles'])} articles, {len(people)} people)")
+
+
 def main():
     people, people_by_id, articles = load_data()
     regenerate_journal_html(articles)
+    render_media_index_js(people, people_by_id, articles)
     render_media_index(people, people_by_id, articles)
     render_journalists_page(people, people_by_id, articles)
     render_archive_page(people, people_by_id, articles)
