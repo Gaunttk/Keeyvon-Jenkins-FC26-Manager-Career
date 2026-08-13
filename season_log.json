@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-03-05"
+    "last_updated": "2027-03-13"
   },
   "matches": [
     {
@@ -571,6 +571,37 @@
       "competition": "Youth Academy Rush Tournament",
       "round": "Final",
       "notes": "Collin (sub) 1G, Leon 1G 1A, Brunel 1G, Besse (sub) 1G, Cardoso (sub) 1G 2A, Faure 1A, Salaun (sub) 1A. Youth Rush title won.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Liverpool",
+      "home": true,
+      "score": "0-0",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "MD29. Dominant but no goal. Ratings not captured for this tie.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Brentford",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "5th round - Round of 16",
+      "notes": "Obi 32', Bobadilla 50', Veleten 90'. MoM: Klaverboer.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "opponent": "Tottenham",
+      "home": false,
+      "score": "2-2",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "MD30. Amrizi 21', Tel 45', Tel 62'. Bad giveaway from a goal kick led to the 62nd-minute equalizer. Next up: Aston Villa in the FA Cup quarterfinals (Round 6).",
       "journal_entry": true
     }
   ],
@@ -1153,6 +1184,10 @@
       "date": "2027-01-30",
       "description": "Premier League MD24 — thrashed bottom-of-the-table Sheffield United 4-0 at home, avenging the MD2 1-1 draw. Chido Obi came off the bench for a brace; Juan Cruz Vargas produced two assists and Man of the Match.",
       "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "description": "Squad update — Vittorio Martini loaned to CD Castellon for 1 year, 55/45 transfer fee split with Wrexham receiving 55%."
     }
   ],
   "fixtures": [
