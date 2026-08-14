@@ -3023,11 +3023,6 @@ var PL_FIXTURES = [
     "home": false
   },
   {
-    "date": "2027-04-11",
-    "opponent": "Aston Villa",
-    "home": false
-  },
-  {
     "date": "2027-04-17",
     "opponent": "Crystal Palace",
     "home": true

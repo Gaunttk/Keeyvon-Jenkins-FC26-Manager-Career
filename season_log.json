@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-03-05"
+    "last_updated": "2027-04-11"
   },
   "matches": [
     {
@@ -635,6 +635,63 @@
       "round": "Final",
       "notes": "Collin (sub) 1G, Leon 1G 1A, Brunel 1G, Besse (sub) 1G, Cardoso (sub) 1G 2A, Faure 1A, Salaun (sub) 1A. Youth Rush title won.",
       "journal_entry": true
+    },
+    {
+      "date": "2027-04-03",
+      "opponent": "Aston Villa",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Quarter Final",
+      "notes": "Ngumoha 30'. MoM: Okonkwo. Very good saves from Okonkwo and good defense towards the end to finish the game and secure the win even though it was a challenge.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 6.1,
+        "A. Okonkwo": 7.1,
+        "A. Heaven": 6.9,
+        "B. Gutiérrez": 6.5,
+        "C. Obi": 6.3,
+        "D. Bobadilla": 7.0,
+        "J. Belghazi": 6.2,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 6.8,
+        "L. Sauer": 6.5,
+        "L. Cacace": 7.0,
+        "M. Barbieri": 6.4,
+        "R. Ngumoha": 6.8,
+        "T. Pitarch": 6.2,
+        "T. Fruk": 5.6,
+        "Y. Amrizi": 6.7
+      }
+    },
+    {
+      "date": "2027-04-11",
+      "opponent": "Aston Villa",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 45', Amrizi 54', Fruk 64', Bobadilla 70'. Score/result corrected from a submitted 0-0 draw, which conflicted with the listed scorers and player stats (Amrizi 2G 1A, Fruk 1G, Bobadilla 1G, Ngumoha 2A) — confirmed 4-0 W with the user.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.5,
+        "A. Heaven": 6.4,
+        "B. Klaverboer": 7.6,
+        "B. Gutiérrez": 6.4,
+        "C. Doyle": 6.9,
+        "C. Obi": 5.7,
+        "D. Bobadilla": 7.1,
+        "J. Mokio": 7.2,
+        "J.C. Vargas": 6.4,
+        "L. Sauer": 5.9,
+        "L. Cacace": 6.0,
+        "M. Barbieri": 6.2,
+        "M. Vitális": 5.8,
+        "R. Ngumoha": 7.4,
+        "T. Fruk": 7.6,
+        "Y. Amrizi": 9.2
+      }
     }
   ],
   "transfers": [
@@ -947,6 +1004,16 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2027-04-11",
+      "description": "Premier League MD29 — beat Aston Villa 4-0 away. Yacel Amrizi scored twice and assisted (9.2 rating), Toni Fruk and Damián Bobadilla also on the scoresheet, Rio Ngumoha with 2 assists. Score corrected during data entry from a submitted 0-0 draw that conflicted with the listed scorers and player stats.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-04-03",
+      "description": "FA Cup Quarter Final — beat Aston Villa 1-0 at home, Rio Ngumoha scoring the only goal (30'). Arthur Okonkwo named Man of the Match (7.1 rating) for a string of strong saves as Wrexham held on under late pressure. Wrexham advance to the semi-final.",
+      "journal_entry": true
+    },
     {
       "date": "2027-02-20",
       "description": "Premier League MD27 — beat Nottingham Forest 2-1 at home. Yacel Amrizi opened the scoring, Rio Ngumoha won a penalty that Toni Fruk converted after Forest had briefly levelled through Igor Jesus. Liberato Cacace was Man of the Match with an assist.",

@@ -90,6 +90,45 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-04-11-pl-aston-villa-away": {
+   "id": "2027-04-11-pl-aston-villa-away",
+   "headline": "Amrizi Runs the Show Again as Wrexham Put Four Past Aston Villa",
+   "dek": "Eight days after needing a goalkeeper to survive Aston Villa in the cup, Wrexham needed nothing of the sort at Villa Park — Yacel Amrizi did the rest himself.",
+   "date": "2027-04-11",
+   "date_label": "Apr 11, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "url": "journal.html#2027-04-11-pl-aston-villa-away"
+  },
+  "entry-102": {
+   "id": "entry-102",
+   "headline": "Entry 102",
+   "dek": "Six weeks since the last one. A cup tie that made me sweat more than it should have, and an away day that reminded me why I don't let myself relax even when we're four goals up.",
+   "date": "2027-04-11",
+   "date_label": "Apr 11, 2027",
+   "author_id": "keeyvon-jenkins",
+   "outlet": "The Hawk's Nest (Private Journal)",
+   "section": null,
+   "content_type": "diary",
+   "entry_number": "Entry 102",
+   "url": "journal.html#entry-102"
+  },
+  "2027-04-03-fa-cup-qtr-aston-villa": {
+   "id": "2027-04-03-fa-cup-qtr-aston-villa",
+   "headline": "Okonkwo Stands Tall as Wrexham Grind Out an FA Cup Semi-Final Berth",
+   "dek": "One goal, one goalkeeper in inspired form, and forty-five minutes of backs-against-the-wall defending. Wrexham didn't need to be pretty to get past Aston Villa — they just needed to survive.",
+   "date": "2027-04-03",
+   "date_label": "Apr 3, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "url": "journal.html#2027-04-03-fa-cup-qtr-aston-villa"
+  },
   "2027-03-06-mcallister-academy-pipeline-fourth-title": {
    "id": "2027-03-06-mcallister-academy-pipeline-fourth-title",
    "headline": "The Conveyor Belt: How Wrexham's Academy Explains a Fourth Straight Youth Rush Title",
@@ -1028,6 +1067,9 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-04-11-pl-aston-villa-away",
+  "entry-102",
+  "2027-04-03-fa-cup-qtr-aston-villa",
   "2027-03-06-mcallister-academy-pipeline-fourth-title",
   "entry-bournemouth-yrt-final",
   "entry-forest-yrt-semi",
