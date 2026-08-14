@@ -36,6 +36,9 @@ When a session opens, silently load the context below. Do not summarize it back 
 | `docs/submit.html` | Session Submit form — user fills this out on their phone/laptop instead of pushing 12-18 match screenshots; generates copy-pasteable text (season_log entries, player stats, attribute diffs) for the next Claude session. See "Session Submit Form" below |
 | `scripts/sync_submit_roster.py` | Regenerates `docs/assets/submit_data.js` (roster names/positions, full attribute snapshot, remaining Premier League fixtures) that powers `docs/submit.html`'s dropdowns and Attribute Editor. Run after any `wrexham_squad.csv` / `youth_academy.csv` change, or after a Premier League match is added to `season_log.json` |
 | `scripts/sync_home_player_stats.py` | Regenerates `docs/assets/player_stats.js` (Apps/Goals/Assists/Avg Rating per senior player, plus a `last5` match-rating sequence for the sparkline) by parsing `docs/season.html`'s "Player Season Stats — Senior Matches" table and `season_log.json`'s `player_ratings` field on each match — there is no other source for either. Powers the homepage Squad Spotlight's featured-player and secondary-card Goals/Assists/Avg Rating and sparkline (Next Generation/academy never shows this). Run after any match session that updates `docs/season.html`'s Player Season Stats table or adds `player_ratings` to a match in `season_log.json` |
+| `player_stat_history.json` | Progression history of player stat snapshots — separate from the CSVs, which only hold *current* values. Written by `scripts/record_stat_snapshot.py`. See "Stat Progression Tracking" below |
+| `scripts/check_stat_snapshot_due.py` | Run at the start of every session (no args). Compares `season_log.json`'s latest in-game date against `player_stat_history.json`'s last recorded snapshot dates and reports whether a monthly base-stat prompt and/or a transfer-window/season full-stat prompt is due |
+| `scripts/record_stat_snapshot.py` | `python3 scripts/record_stat_snapshot.py <base\|full> <YYYY-MM-DD>` — logs a snapshot of current `wrexham_squad.csv` / `youth_academy.csv` values into `player_stat_history.json` under that in-game date. Run only after the CSVs already reflect that round's screenshots — it reads the CSVs, not screenshots |
 | `media-personalities.json` | Journalist/author profiles (Owen Meredith, Keeyvon Jenkins, and 6 national/international journalists) powering the Media Centre and `docs/journal.html` |
 | `media-articles.json` | Every article/entry — both Media Centre pieces and Owen's Dispatch / Keeyvon's Hawk's Nest journal entries. Source of truth; never hand-edit the generated HTML it produces |
 | `scripts/generate_media_pages.py` | Regenerates `docs/media/*`, `docs/journal.html`'s entry stream/TOC, and `docs/assets/media_index.js` from the two `media-*.json` files above. Run after any change to either file |
@@ -230,6 +233,17 @@ For an EFL Championship match, derive its matchday (see "Season Log Schema" belo
 Minutes played is not tracked — not realistically capturable from the screenshots this workflow uses.
 
 A non-match "Squad Update" submission (attribute refresh, ratings/development review, or a roster change with no match that day) uses the Squad Update path on `docs/submit.html` instead of the Match path — it produces a `milestones` entry (not a `matches` entry) and an optional journal entry per the "write a journal entry for this" checkbox.
+
+---
+
+### Stat Progression Tracking (Monthly Base Stats + Transfer Window / Season Full Update)
+
+At the start of every session, run `python3 scripts/check_stat_snapshot_due.py`. It compares `season_log.json`'s latest in-game date against `player_stat_history.json`'s last recorded snapshot dates and tells you what's due:
+
+- **Monthly — base stats.** Once per in-game month, prompt the user to screenshot every current player's base card (Squad Hub → Status tab: OVR + the six Summary stats — Pace/Shooting/Passing/Dribbling/Defending/Physical) for the full senior squad and academy. If any values changed from a screenshot, update the relevant CSV columns as normal. Then log the check-in regardless of whether anything changed: `python3 scripts/record_stat_snapshot.py base <in-game date>`.
+- **Winter transfer window close (Jan 31) and season start/rollover — full update.** Prompt the user for a full round of Attributes tab screenshots (Roles/Summary/Physical/Mental/Technical/PlayStyles, same depth as any other full squad update) for every player, update the CSVs, then log it: `python3 scripts/record_stat_snapshot.py full <in-game date>`. This also satisfies that session's monthly base check-in — don't prompt for both separately in the same session.
+
+`player_stat_history.json` is an append-only progression log — it is never overwritten in place, and it is separate from the CSVs (which only ever hold each player's *current* values). Don't skip a due prompt because the CSVs "look unchanged"; the snapshot is what lets later sessions chart progression over time, so a no-change month still gets logged.
 
 ---
 

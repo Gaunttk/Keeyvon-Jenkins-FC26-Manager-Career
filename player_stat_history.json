@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "description": "Progression history of player stat snapshots, recorded by scripts/record_stat_snapshot.py. 'base' snapshots capture OVR plus the six Summary-tab stats (Pace/Shooting/Passing/Dribbling/Defending/Physical) from a monthly base-card screenshot round. 'full' snapshots capture every detailed attribute column from wrexham_squad.csv / youth_academy.csv, taken at winter transfer window close (Jan 31) and at season start/rollover.",
+    "last_base_snapshot": null,
+    "last_full_snapshot": null
+  },
+  "snapshots": []
+}
