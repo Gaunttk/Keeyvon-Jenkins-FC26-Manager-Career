@@ -5,6 +5,7 @@
      SEASON_SUMMARY        inline in index.html   (scripts/sync_season_summary.py)
      MEDIA_INDEX           assets/media_index.js  (scripts/generate_media_pages.py)
      PREMIER_LEAGUE_TABLE  assets/pl_table.js     (hand-maintained standings)
+     PLAYER_SEASON_STATS   assets/player_stats.js (scripts/sync_home_player_stats.py)
      HOME_CONFIG           assets/home_config.js  (editorial choices only)
 
    Plain classic script, no modules, no fetch — index.html must keep working
@@ -160,8 +161,14 @@
       return false;
     });
     if (next) {
+      var nextComp = (s._meta || {}).competition;
+      var nextCompLogo = COMP_LOGOS[nextComp];
       set('home-next-match',
         '<div class="home-pulse-label">Next Match</div>' +
+        (nextComp ?
+          '<div class="home-result-comp">' +
+          (nextCompLogo ? '<img src="' + esc(nextCompLogo) + '" alt="">' : '') + esc(nextComp) + '</div>'
+          : '') +
         '<div class="home-next-line">' +
         crestImg(next.opponent, 'home-next-crest') +
         '<span class="home-next-opponent">' + esc(next.opponent) + '</span>' +
@@ -303,6 +310,17 @@
   }
 
   /* ── 5. Squad + Academy ────────────────────────────────────────────── */
+  function abbreviatedName(fullName) {
+    var parts = (fullName || '').trim().split(/\s+/);
+    if (parts.length < 2) return fullName;
+    return parts[0].charAt(0) + '. ' + parts.slice(1).join(' ');
+  }
+
+  function seasonStatsFor(fullName) {
+    if (typeof PLAYER_SEASON_STATS === 'undefined') return null;
+    return PLAYER_SEASON_STATS[fullName] || PLAYER_SEASON_STATS[abbreviatedName(fullName)] || null;
+  }
+
   function miniCards(list, cls) {
     return list.map(function (p) {
       return '<div class="player-mini-card">' +
@@ -318,6 +336,7 @@
 
   function renderSquad() {
     var f = HOME_CONFIG.spotlight.featured;
+    var stats = seasonStatsFor(f.name);
     set('player-feature',
       '<div class="player-feature-media"><img src="' + esc(f.image) + '" alt="' + esc(f.name) + '"></div>' +
       '<div class="player-feature-body">' +
@@ -329,7 +348,19 @@
       '<span><strong>' + esc(f.height) + '</strong>Height</span>' +
       '<span><strong>' + esc(f.ovr) + '</strong>OVR</span>' +
       '</div>' +
-      '<p class="player-feature-note">Squad data from <code>wrexham_squad.csv</code>. Season appearances, goals and assists are kept on the <a href="season.html">season stats page</a>.</p>' +
+      (stats ?
+        '<div class="player-feature-season">' +
+        '<span class="player-feature-season-label">2026&ndash;27 Season</span>' +
+        '<div class="player-feature-season-stats">' +
+        '<span><strong>' + esc(stats.goals) + '</strong>Goals</span>' +
+        '<span><strong>' + esc(stats.assists) + '</strong>Assists</span>' +
+        '<span><strong>' + esc(stats.rating.toFixed(1)) + '</strong>Avg Rating</span>' +
+        '</div></div>'
+        : '') +
+      '<p class="player-feature-note">Squad data from <code>wrexham_squad.csv</code>. ' +
+      (stats ? 'Full season detail, including apps and MOTM awards, is on the '
+             : 'Season appearances, goals and assists are kept on the ') +
+      '<a href="season.html">season stats page</a>.</p>' +
       '</div>');
     set('player-mini-grid', miniCards(HOME_CONFIG.spotlight.others, ''));
   }
