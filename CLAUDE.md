@@ -35,7 +35,7 @@ When a session opens, silently load the context below. Do not summarize it back 
 | `scripts/check_roster_sync.py` | Cross-checks `docs/roster.html` (senior section against `wrexham_squad.csv`, academy section against `youth_academy.csv`) and `docs/academy.html` (against `youth_academy.csv`) — name/age/OVR/position/POT. Run after any squad or academy change to catch stale or missing cards |
 | `docs/submit.html` | Session Submit form — user fills this out on their phone/laptop instead of pushing 12-18 match screenshots; generates copy-pasteable text (season_log entries, player stats, attribute diffs) for the next Claude session. See "Session Submit Form" below |
 | `scripts/sync_submit_roster.py` | Regenerates `docs/assets/submit_data.js` (roster names/positions, full attribute snapshot, remaining Premier League fixtures) that powers `docs/submit.html`'s dropdowns and Attribute Editor. Run after any `wrexham_squad.csv` / `youth_academy.csv` change, or after a Premier League match is added to `season_log.json` |
-| `scripts/sync_home_player_stats.py` | Regenerates `docs/assets/player_stats.js` (Apps/Goals/Assists/Avg Rating per senior player) by parsing `docs/season.html`'s "Player Season Stats — Senior Matches" table — the only source for that data, there is no JSON equivalent. Powers the homepage Squad Spotlight's featured-player Goals/Assists/Avg Rating (Next Generation/academy never shows this). Run after any match session that updates `docs/season.html`'s Player Season Stats table |
+| `scripts/sync_home_player_stats.py` | Regenerates `docs/assets/player_stats.js` (Apps/Goals/Assists/Avg Rating per senior player, plus a `last5` match-rating sequence for the sparkline) by parsing `docs/season.html`'s "Player Season Stats — Senior Matches" table and `season_log.json`'s `player_ratings` field on each match — there is no other source for either. Powers the homepage Squad Spotlight's featured-player and secondary-card Goals/Assists/Avg Rating and sparkline (Next Generation/academy never shows this). Run after any match session that updates `docs/season.html`'s Player Season Stats table or adds `player_ratings` to a match in `season_log.json` |
 | `media-personalities.json` | Journalist/author profiles (Owen Meredith, Keeyvon Jenkins, and 6 national/international journalists) powering the Media Centre and `docs/journal.html` |
 | `media-articles.json` | Every article/entry — both Media Centre pieces and Owen's Dispatch / Keeyvon's Hawk's Nest journal entries. Source of truth; never hand-edit the generated HTML it produces |
 | `scripts/generate_media_pages.py` | Regenerates `docs/media/*`, `docs/journal.html`'s entry stream/TOC, and `docs/assets/media_index.js` from the two `media-*.json` files above. Run after any change to either file |
@@ -218,7 +218,7 @@ Whenever `youth_academy.csv` changes (new prospect, attribute refresh, POT/dev-p
 
 Every match session updates all of the following:
 
-- `season_log.json` — a `matches` entry + a `milestones` entry
+- `season_log.json` — a `matches` entry + a `milestones` entry; include `player_ratings` (see "Season Log Schema" below) for every player whose match rating is visible in a screenshot, not just the Man of the Match
 - `docs/season.html` — Match Log row in the right competition accordion; that competition's `comp-summary-stats`; the overall `record-bar` tally; Apps + goal count (and MoM, already tracked via the Match Log row) for every player who appeared, not just scorers; the "Player Season Stats — Senior Matches" table (Apps/G/A/MOTM/Rtg) for every player who appeared
 - `docs/index.html` — run `python3 scripts/sync_season_summary.py` to regenerate the `SEASON_SUMMARY` stat bar, and `python3 scripts/sync_home_player_stats.py` to refresh the homepage Squad Spotlight's Goals/Assists/Avg Rating from the Player Season Stats table you just updated
 - **`docs/assets/pl_table.js` — the full league standings** (`PREMIER_LEAGUE_TABLE`). Hand-maintained, separate from `SEASON_SUMMARY`, and *not* touched by `sync_season_summary.py`. It must be rebuilt from a full league-table screenshot (or screenshots covering all 20 clubs) every time it changes. The homepage renders both the compact title-race snapshot and the full table from this one array, so editing it updates both. **If a match session doesn't include a full-table screenshot, ask the user for one rather than leaving this table stale or guessing at it.** If a club's row isn't visible in the session's screenshots, leave it and add a comment saying so — never estimate movement.
@@ -240,7 +240,8 @@ Add entries to `season_log.json` after each game session:
 ```json
 // Match
 { "date": "YYYY-MM-DD", "opponent": "Club Name", "home": true, "score": "2-1",
-  "result": "W", "competition": "EFL Championship", "journal_entry": true }
+  "result": "W", "competition": "EFL Championship", "journal_entry": true,
+  "player_ratings": { "Y. Amrizi": 7.4, "T. Fruk": 6.8 } }
 
 // Non-league match (FA Cup, Carabao Cup, Youth Academy Rush Tournament, etc.)
 { "date": "YYYY-MM-DD", "opponent": "Club Name", "home": true, "score": "2-1",
@@ -267,6 +268,8 @@ efl = sorted([m for m in d['matches'] if m['competition'] == 'EFL Championship']
 matchday = {m['date'] + m['opponent']: i for i, m in enumerate(efl, start=1)}  # 1-indexed position = matchday
 ```
 Never hand-type an "MD—" label anywhere (journal prose, `season.html`, `index.html` standings header) without deriving it this way first — that's exactly how the drift happened before.
+
+**`player_ratings` (optional, on `matches` entries).** Keyed by `"F. Lastname"` (same abbreviation as `transfers`/`injuries`), value is that player's FC26 match rating from the post-match ratings screen. Only include players actually visible in the screenshot — never estimate or carry a rating forward from a previous match. This field feeds the homepage Squad Spotlight's "last 5 matches" sparkline (`scripts/sync_home_player_stats.py` reads it straight from `season_log.json`, most-recent-5-first per player, in chronological order). It's fine — expected, even — for a player's sparkline to be short or missing entirely for a while: it only fills in as `player_ratings` accumulates across sessions, and the site never fabricates a point that isn't backed by a real screenshot. `docs/season.html`'s Match Log already records the Man of the Match's rating in its `ml-mom` span — when you're filling that in from a screenshot, add the same rating to this match's `player_ratings` too (and any other player's rating visible in the same post-match screen) so it isn't lost.
 
 ---
 

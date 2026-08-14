@@ -3665,6 +3665,17 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 25px; font-weight: 800; letter-spacing: 0.3px; color: var(--gold); line-height: 1.05;
 }
+.player-feature-spark { margin-top: 22px; }
+
+/* Last-5-match rating sparkline (see home.js's sparkline()). Baseline is a
+   flat Rtg of 6; dots read green at/above it, red below. Renders only when
+   scripts/sync_home_player_stats.py found real player_ratings history. */
+.home-spark { display: block; overflow: visible; }
+.home-spark-base { stroke: var(--h-rule); stroke-width: 1; stroke-dasharray: 3 3; }
+.home-spark-line { fill: none; stroke: var(--steel); stroke-width: 1.5; }
+.home-spark-dot { stroke: var(--h-panel); stroke-width: 1.5; }
+.home-spark-dot.is-up { fill: var(--h-win); }
+.home-spark-dot.is-down { fill: var(--red); }
 
 /* Secondary players: full photographic cards in a 2x2, not roster rows. */
 .player-mini-grid {
@@ -3705,6 +3716,7 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   color: var(--muted); margin-top: 8px; text-transform: uppercase;
 }
 .player-mini-stats b { color: var(--gold); font-weight: 800; }
+.player-mini-spark { margin-top: 8px; }
 /* OVR reads as a broadcast corner badge over the photo. */
 .player-mini-ovr {
   position: absolute; top: 0; right: 0;

@@ -321,6 +321,37 @@
     return PLAYER_SEASON_STATS[fullName] || PLAYER_SEASON_STATS[abbreviatedName(fullName)] || null;
   }
 
+  /* Last-5-match rating sparkline. Baseline is a flat Rtg of 6 -- points at
+     or above are green, below are red. Domain is fixed at 5-10 (not
+     autoscaled per player) so cards read consistently against each other.
+     Renders nothing if there's no last5 data yet -- see CLAUDE.md's
+     "player_ratings" note: sparkline points only exist once a session has
+     actually logged a real match rating, so this is expected to be short
+     or missing for most players for a while. */
+  function sparkline(last5, w, h) {
+    if (!last5 || !last5.length) return '';
+    var MIN = 5, MAX = 10, BASE = 6;
+    var pad = 3;
+    var yFor = function (r) {
+      var t = Math.max(0, Math.min(1, (r - MIN) / (MAX - MIN)));
+      return h - pad - t * (h - pad * 2);
+    };
+    var n = last5.length;
+    var xFor = function (i) { return n === 1 ? w / 2 : pad + (i * (w - pad * 2)) / (n - 1); };
+    var baseY = yFor(BASE);
+    var pts = last5.map(function (e, i) { return xFor(i) + ',' + yFor(e.rating); }).join(' ');
+    var dots = last5.map(function (e, i) {
+      var cls = e.rating >= BASE ? 'is-up' : 'is-down';
+      var title = fmtDate(e.date) + ' &middot; Rtg ' + e.rating.toFixed(1);
+      return '<circle class="home-spark-dot ' + cls + '" cx="' + xFor(i) + '" cy="' + yFor(e.rating) + '" r="2.6">' +
+        '<title>' + title + '</title></circle>';
+    }).join('');
+    return '<svg class="home-spark" width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' +
+      '<line class="home-spark-base" x1="0" y1="' + baseY + '" x2="' + w + '" y2="' + baseY + '"></line>' +
+      (n > 1 ? '<polyline class="home-spark-line" points="' + pts + '"></polyline>' : '') +
+      dots + '</svg>';
+  }
+
   function miniCards(list, cls, showStats) {
     return list.map(function (p) {
       var stats = showStats ? seasonStatsFor(p.name) : null;
@@ -336,6 +367,8 @@
           '<b>' + esc(stats.rating.toFixed(1)) + '</b>Rtg' +
           '</span>'
           : '') +
+        (stats && stats.last5 && stats.last5.length ?
+          '<div class="player-mini-spark">' + sparkline(stats.last5, 92, 24) + '</div>' : '') +
         '</div>' +
         '<span class="player-mini-ovr' + (cls ? ' ' + cls : '') + '">' + esc(p.ovr) + '</span>' +
         '</div>';
@@ -364,6 +397,13 @@
         '<span><strong>' + esc(stats.assists) + '</strong>Assists</span>' +
         '<span><strong>' + esc(stats.rating.toFixed(1)) + '</strong>Avg Rating</span>' +
         '</div></div>'
+        : '') +
+      (stats && stats.last5 && stats.last5.length ?
+        '<div class="player-feature-spark">' +
+        '<span class="player-feature-season-label">Last ' + stats.last5.length +
+        (stats.last5.length === 1 ? ' Match' : ' Matches') + ' &middot; Baseline 6.0</span>' +
+        sparkline(stats.last5, 220, 44) +
+        '</div>'
         : '') +
       '<p class="player-feature-note">Squad data from <code>wrexham_squad.csv</code>. ' +
       (stats ? 'Full season detail, including apps and MOTM awards, is on the '
