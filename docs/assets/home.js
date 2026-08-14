@@ -86,6 +86,8 @@
   }
 
   /* ── 1. Editorial hero ─────────────────────────────────────────────── */
+  var HERO_LAYOUTS = { 'subject-right': 1, 'subject-left': 1, 'wide': 1 };
+
   function renderHero() {
     var cfg = HOME_CONFIG.lead;
     var a = article(cfg.articleId);
@@ -95,8 +97,20 @@
     var byline = '<span class="home-byline-name">' + esc(p.name || '') + '</span>' +
       (p.role ? '<span class="home-byline-role">' + esc(p.role) + ' &middot; ' + esc(a.outlet) + '</span>' : '');
 
+    /* Layout variant + focal point: see the "HERO LAYOUT/FOCUS" note atop
+       home_config.js. layout picks which of three CSS gradient/column
+       treatments applies (default subject-right); focusX/focusY and the
+       optional headlineWidth override are passed through as CSS custom
+       properties so no per-article CSS is ever needed. */
+    var layout = HERO_LAYOUTS[cfg.layout] ? cfg.layout : 'subject-right';
+    var cssVars = [];
+    if (cfg.focusX) cssVars.push('--hero-focus-x:' + cfg.focusX);
+    if (cfg.focusY) cssVars.push('--hero-focus-y:' + cfg.focusY);
+    if (cfg.headlineWidth) cssVars.push('--hero-headline-width:' + cfg.headlineWidth);
+    var styleAttr = cssVars.length ? ' style="' + esc(cssVars.join(';')) + '"' : '';
+
     set('home-hero-lead',
-      '<a class="home-hero-link" href="' + esc(a.url) + '">' +
+      '<a class="home-hero-link is-' + layout + '"' + styleAttr + ' href="' + esc(a.url) + '">' +
       '  <div class="home-hero-media">' +
       '    <img src="' + esc(cfg.image) + '" alt="' + esc(cfg.imageAlt) + '">' +
       '    <div class="home-hero-overlay"></div>' +

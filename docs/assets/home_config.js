@@ -21,6 +21,31 @@
    · images: paths under docs/assets/photos/. Prefer the approved portraits
      over raw md*-* match screenshots for anything public-facing.
    · spotlight / academy: names must match wrexham_squad.csv / youth_academy.csv.
+
+   HERO LAYOUT/FOCUS (lead only — see docs/assets/style.css's "Editorial hero"
+   block and home.js's renderHero() for how these are consumed):
+   · layout: 'subject-right' (default) | 'subject-left' | 'wide'.
+     - subject-right: headline column on the left (~55-58% wide), photo
+       subject sits toward the right, gradient darkest on the left.
+     - subject-left: mirrored — headline on the right, subject left,
+       gradient darkest on the right.
+     - wide: for team celebrations / stadium scenes where the whole frame
+       matters. Wider lower-left text block, subject stays nearer center.
+     Pick whichever matches the new hero photo's actual composition — don't
+     force subject-right onto an image where the subject is on the left.
+   · focusX / focusY: CSS object-position values (e.g. '76%', '38%') for the
+     hero <img>. Aim it at the subject's face/action point. Note: object-fit
+     cover only gives real horizontal pan room when the image is wider
+     (relative to its height) than the hero box — a tall, centered portrait
+     like the current Jenkins photo has ~zero horizontal crop slack in a
+     landscape hero box, so focusX will do little for that specific shape;
+     it matters far more for landscape action shots / group photos / stadium
+     scenes. focusY is the one that reliably matters for any portrait.
+   · headlineWidth: optional override of the copy column's width (e.g.
+     '52%') if a layout's default (~55% for subject-right/left, ~62% for
+     wide) doesn't suit a particular headline length. Rarely needed —
+     natural wrapping handles most cases.
+   These are presentation choices only — never put a stat or score here.
    ───────────────────────────────────────────────────────────────────────── */
 
 const HOME_CONFIG = {
@@ -29,7 +54,10 @@ const HOME_CONFIG = {
   lead: {
     articleId: '2026-12-20-hargreaves-greatest-promoted-seasons',
     image: 'assets/photos/keeyvon-jenkins.png',
-    imageAlt: 'Keeyvon Jenkins pitchside at the Racecourse'
+    imageAlt: 'Keeyvon Jenkins pitchside at the Racecourse',
+    layout: 'subject-right',
+    focusX: '76%',
+    focusY: '22%'
   },
 
   /* Three supporting stories stacked beside the lead. */
@@ -49,10 +77,11 @@ const HOME_CONFIG = {
   ],
 
   /* ── Squad Spotlight ──────────────────────────────────────────────────── */
-  /* Fields mirror wrexham_squad.csv columns: Position, Age, Height, OVR,
-     Squad_Role. No season stats here on purpose — per-player goals/assists
-     are not machine-readable in this repo, so the card links to season.html
-     rather than restating numbers that could drift. */
+  /* Fields mirror wrexham_squad.csv columns: Position, Age, Height, OVR.
+     Season Goals/Assists/Avg Rating and the last-5-match sparkline are NOT
+     set here — they're looked up at render time from
+     assets/player_stats.js (scripts/sync_home_player_stats.py) by name, so
+     they never go stale. */
   spotlight: {
     featured: {
       name: 'Yacel Amrizi', position: 'ST / LW', age: 21, height: '6\'2"',
