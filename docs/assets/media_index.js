@@ -90,6 +90,19 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-04-17-pl-crystal-palace-home": {
+   "id": "2027-04-17-pl-crystal-palace-home",
+   "headline": "Kean's Late Strike Spoils Jenkins's 100th Game in Charge",
+   "dek": "Wrexham could not find a way past a stubborn Crystal Palace rearguard, and a Kean header eight minutes from time turned a landmark afternoon into a flat one.",
+   "date": "2027-04-17",
+   "date_label": "Apr 17, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "url": "journal.html#2027-04-17-pl-crystal-palace-home"
+  },
   "2027-04-11-pl-aston-villa-away": {
    "id": "2027-04-11-pl-aston-villa-away",
    "headline": "Amrizi Runs the Show Again as Wrexham Put Four Past Aston Villa",
@@ -1067,6 +1080,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-04-17-pl-crystal-palace-home",
   "2027-04-11-pl-aston-villa-away",
   "entry-102",
   "2027-04-03-fa-cup-qtr-aston-villa",

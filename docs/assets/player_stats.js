@@ -6,7 +6,7 @@
 const PLAYER_SEASON_STATS = {
   "A. Gómez": {
     "position": "RW",
-    "apps": 27,
+    "apps": 28,
     "goals": 4,
     "assists": 5,
     "rating": 6.4,
@@ -18,12 +18,16 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 5.5
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 5.8
       }
     ]
   },
   "T. Fruk": {
     "position": "CAM",
-    "apps": 33,
+    "apps": 34,
     "goals": 11,
     "assists": 9,
     "rating": 6.3,
@@ -35,20 +39,20 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 7.6
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.2
       }
     ]
   },
   "Y. Amrizi": {
     "position": "ST",
-    "apps": 32,
+    "apps": 33,
     "goals": 23,
     "assists": 11,
-    "rating": 7.6,
+    "rating": 7.5,
     "last5": [
-      {
-        "date": "2026-08-01",
-        "rating": 7.8
-      },
       {
         "date": "2026-10-25",
         "rating": 8.4
@@ -64,12 +68,16 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 9.2
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 5.8
       }
     ]
   },
   "R. Ngumoha": {
     "position": "LW",
-    "apps": 33,
+    "apps": 34,
     "goals": 11,
     "assists": 7,
     "rating": 7.0,
@@ -89,12 +97,16 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 7.4
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.2
       }
     ]
   },
   "D. Bobadilla": {
     "position": "CM",
-    "apps": 32,
+    "apps": 33,
     "goals": 11,
     "assists": 5,
     "rating": 6.5,
@@ -110,6 +122,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 7.1
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.6
       }
     ]
   },
@@ -128,7 +144,7 @@ const PLAYER_SEASON_STATS = {
   },
   "J. Mokio": {
     "position": "LB",
-    "apps": 34,
+    "apps": 35,
     "goals": 1,
     "assists": 1,
     "rating": 6.8,
@@ -140,15 +156,25 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 7.2
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.8
       }
     ]
   },
   "V. Veleten": {
     "position": "RW",
-    "apps": 20,
+    "apps": 21,
     "goals": 2,
     "assists": 5,
-    "rating": 6.6
+    "rating": 6.6,
+    "last5": [
+      {
+        "date": "2027-04-17",
+        "rating": 6.0
+      }
+    ]
   },
   "D. Hyam": {
     "position": "CB",
@@ -223,14 +249,20 @@ const PLAYER_SEASON_STATS = {
   },
   "M. Cleworth": {
     "position": "CB",
-    "apps": 14,
+    "apps": 15,
     "goals": 0,
     "assists": 0,
-    "rating": 6.9
+    "rating": 6.9,
+    "last5": [
+      {
+        "date": "2027-04-17",
+        "rating": 7.1
+      }
+    ]
   },
   "A. Okonkwo": {
     "position": "GK",
-    "apps": 24,
+    "apps": 25,
     "goals": 0,
     "assists": 0,
     "rating": 5.7,
@@ -238,6 +270,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-03",
         "rating": 7.1
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.4
       }
     ]
   },
@@ -250,7 +286,7 @@ const PLAYER_SEASON_STATS = {
   },
   "B. Gutiérrez": {
     "position": "CAM",
-    "apps": 31,
+    "apps": 32,
     "goals": 1,
     "assists": 0,
     "rating": 6.9,
@@ -266,20 +302,20 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 6.4
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.7
       }
     ]
   },
   "C. Obi": {
     "position": "ST",
-    "apps": 35,
+    "apps": 36,
     "goals": 18,
     "assists": 5,
     "rating": 6.2,
     "last5": [
-      {
-        "date": "2026-12-15",
-        "rating": 7.6
-      },
       {
         "date": "2027-01-09",
         "rating": 9.3
@@ -295,6 +331,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 5.7
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 5.9
       }
     ]
   },
@@ -307,7 +347,7 @@ const PLAYER_SEASON_STATS = {
   },
   "M. Barbieri": {
     "position": "RB",
-    "apps": 26,
+    "apps": 27,
     "goals": 0,
     "assists": 0,
     "rating": 6.5,
@@ -319,12 +359,16 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 6.2
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.5
       }
     ]
   },
   "A. Heaven": {
     "position": "CB",
-    "apps": 31,
+    "apps": 32,
     "goals": 0,
     "assists": 1,
     "rating": 7.2,
@@ -336,6 +380,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 6.4
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.9
       }
     ]
   },
@@ -408,7 +456,7 @@ const PLAYER_SEASON_STATS = {
   },
   "J.C. Vargas": {
     "position": "CAM",
-    "apps": 23,
+    "apps": 24,
     "goals": 3,
     "assists": 3,
     "rating": 6.6,
@@ -420,6 +468,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-04-11",
         "rating": 6.4
+      },
+      {
+        "date": "2027-04-17",
+        "rating": 6.3
       }
     ]
   },
@@ -432,13 +484,17 @@ const PLAYER_SEASON_STATS = {
   },
   "T. Pitarch": {
     "position": "CM",
-    "apps": 12,
+    "apps": 13,
     "goals": 0,
     "assists": 2,
     "rating": 6.7,
     "last5": [
       {
         "date": "2027-04-03",
+        "rating": 6.2
+      },
+      {
+        "date": "2027-04-17",
         "rating": 6.2
       }
     ]
@@ -452,10 +508,16 @@ const PLAYER_SEASON_STATS = {
   },
   "V. Martini": {
     "position": "CB",
-    "apps": 3,
+    "apps": 4,
     "goals": 0,
     "assists": 0,
-    "rating": 6.3
+    "rating": 6.3,
+    "last5": [
+      {
+        "date": "2027-04-17",
+        "rating": 6.3
+      }
+    ]
   },
   "N. Kopp": {
     "position": "GK",

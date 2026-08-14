@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-04-11"
+    "last_updated": "2027-04-17"
   },
   "matches": [
     {
@@ -692,6 +692,34 @@
         "T. Fruk": 7.6,
         "Y. Amrizi": 9.2
       }
+    },
+    {
+      "date": "2027-04-17",
+      "opponent": "Crystal Palace",
+      "home": true,
+      "score": "0-1",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Kean 79' Crystal Palace.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.8,
+        "A. Okonkwo": 6.4,
+        "A. Heaven": 6.9,
+        "B. Gutiérrez": 6.7,
+        "C. Obi": 5.9,
+        "D. Bobadilla": 6.6,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 6.3,
+        "M. Barbieri": 6.5,
+        "M. Cleworth": 7.1,
+        "R. Ngumoha": 6.2,
+        "T. Pitarch": 6.2,
+        "T. Fruk": 6.2,
+        "V. Martini": 6.3,
+        "V. Veleten": 6.0,
+        "Y. Amrizi": 5.8
+      }
     }
   ],
   "transfers": [
@@ -1283,6 +1311,10 @@
       "date": "2027-01-30",
       "description": "Premier League MD24 — thrashed bottom-of-the-table Sheffield United 4-0 at home, avenging the MD2 1-1 draw. Chido Obi came off the bench for a brace; Juan Cruz Vargas produced two assists and Man of the Match.",
       "journal_entry": true
+    },
+    {
+      "date": "2027-04-17",
+      "description": "Keeyvon Jenkins' 100th match in charge of Wrexham (per broadcast), a 0-1 home defeat to Crystal Palace."
     }
   ],
   "fixtures": [
