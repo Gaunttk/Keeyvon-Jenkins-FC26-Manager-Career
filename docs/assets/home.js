@@ -321,13 +321,21 @@
     return PLAYER_SEASON_STATS[fullName] || PLAYER_SEASON_STATS[abbreviatedName(fullName)] || null;
   }
 
-  function miniCards(list, cls) {
+  function miniCards(list, cls, showStats) {
     return list.map(function (p) {
+      var stats = showStats ? seasonStatsFor(p.name) : null;
       return '<div class="player-mini-card">' +
         '<div class="player-mini-media"><img src="' + esc(p.image) + '" alt="' + esc(p.name) + '"></div>' +
         '<div class="player-mini-body">' +
         '<span class="player-mini-name">' + esc(p.name) + '</span>' +
         '<span class="player-mini-meta">' + esc(p.position) + ' &middot; ' + esc(p.age) + '</span>' +
+        (stats ?
+          '<span class="player-mini-stats">' +
+          '<b>' + esc(stats.goals) + '</b>G &middot; ' +
+          '<b>' + esc(stats.assists) + '</b>A &middot; ' +
+          '<b>' + esc(stats.rating.toFixed(1)) + '</b>Rtg' +
+          '</span>'
+          : '') +
         '</div>' +
         '<span class="player-mini-ovr' + (cls ? ' ' + cls : '') + '">' + esc(p.ovr) + '</span>' +
         '</div>';
@@ -362,7 +370,7 @@
              : 'Season appearances, goals and assists are kept on the ') +
       '<a href="season.html">season stats page</a>.</p>' +
       '</div>');
-    set('player-mini-grid', miniCards(HOME_CONFIG.spotlight.others, ''));
+    set('player-mini-grid', miniCards(HOME_CONFIG.spotlight.others, '', true));
   }
 
   function renderAcademy() {

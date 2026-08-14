@@ -3699,6 +3699,12 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 .player-mini-meta {
   font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--muted); margin-top: 4px;
 }
+/* Season Goals/Assists/Avg Rating -- Squad Spotlight secondary cards only. */
+.player-mini-stats {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; letter-spacing: 0.4px;
+  color: var(--muted); margin-top: 8px; text-transform: uppercase;
+}
+.player-mini-stats b { color: var(--gold); font-weight: 800; }
 /* OVR reads as a broadcast corner badge over the photo. */
 .player-mini-ovr {
   position: absolute; top: 0; right: 0;
@@ -3959,6 +3965,7 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   .academy-mini-grid .player-mini-card:nth-child(3) .player-mini-media { aspect-ratio: 16 / 8; }
   .player-mini-name { font-size: 17px; }
   .player-mini-meta { font-size: 11.5px; }
+  .player-mini-stats { font-size: 11px; margin-top: 6px; }
   .player-mini-ovr { font-size: 22px; min-width: 42px; padding: 5px 9px; }
   .player-mini-body { padding: 12px 13px 14px; }
 
