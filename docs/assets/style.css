@@ -3533,7 +3533,6 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   flex-direction: column;
   background: var(--h-panel);
   border: 1px solid var(--h-rule);
-  border-top: 3px solid var(--writer-accent);
   text-decoration: none;
   color: inherit;
 }
