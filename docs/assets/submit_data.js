@@ -93,11 +93,6 @@ var ROSTER_SENIOR = [
     "starter": false
   },
   {
-    "name": "Nico Kopp",
-    "pos": "GK",
-    "starter": false
-  },
-  {
     "name": "Rio Ngumoha",
     "pos": "LM/LW",
     "starter": true
@@ -140,10 +135,6 @@ var ROSTER_ACADEMY = [
   {
     "name": "Fabricio Sandoval",
     "pos": "CAM"
-  },
-  {
-    "name": "Guilherme Rosa",
-    "pos": "CDM"
   },
   {
     "name": "Jules Collin",
@@ -2073,7 +2064,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Left",
     "Squad_Role": "Prospect",
     "Contract_Length": "3y5m",
-    "Status": "Showing Great Potential — Contract already accepted",
+    "Status": "On Loan at FC Basel (back 20 Mar 2028)",
     "OVR": "63",
     "Pace": "40",
     "Shooting": "53",
@@ -2118,7 +2109,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "4720",
     "Market_Value": "1300000",
     "Development_Plan": "Balanced",
-    "Notes": "Germany. Signed from academy scouting in Germany, 2026-08-15. Promoted from the Youth Academy to the first team 2027-01-13. GK: Div 58/Han 69/Kic 53/Ref 64/Spd 40/Pos 67. Roles: Goalkeeper+/Ball-Playing Keeper+/Sweeper Keeper. PlayStyles: Long Ball Pass (regular), Cross Claimer (regular)."
+    "Notes": "Germany. Signed from academy scouting in Germany, 2026-08-15. Promoted from the Youth Academy to the first team 2027-01-13. GK: Div 58/Han 69/Kic 53/Ref 64/Spd 40/Pos 67. Roles: Goalkeeper+/Ball-Playing Keeper+/Sweeper Keeper. PlayStyles: Long Ball Pass (regular), Cross Claimer (regular). Loaned to FC Basel 2027-03-20 for 1 year (60/40 fee split, Wrexham receives 40%)."
   },
   "Nathaniel Matthews": {
     "Position": "RW",
@@ -2835,61 +2826,6 @@ var ROSTER_ATTR_DATA = {
     "Development_Plan": "Balanced",
     "Notes": "Brazil. Dev Balanced 49→50 ETA 4w. Signed to the Youth Academy, 2027-01-13. RB Falseback+."
   },
-  "Guilherme Rosa": {
-    "Position": "CDM",
-    "Age": "17",
-    "Height": "6'3\"",
-    "Weight": "167lbs",
-    "Pref_Foot": "Right",
-    "Squad_Role": "Academy",
-    "Contract_Length": "",
-    "Status": "Academy Player",
-    "OVR": "56",
-    "Pace": "57",
-    "Shooting": "44",
-    "Passing": "51",
-    "Dribbling": "55",
-    "Defending": "51",
-    "Physical": "58",
-    "Potential": "71-79",
-    "Acceleration": "58",
-    "Agility": "64",
-    "Balance": "66",
-    "Jumping": "52",
-    "Sprint_Speed": "56",
-    "Stamina": "73",
-    "Strength": "51",
-    "Aggression": "55",
-    "Att_Position": "46",
-    "Composure": "48",
-    "Interceptions": "55",
-    "Reactions": "57",
-    "Vision": "46",
-    "Ball_Control": "55",
-    "Crossing": "43",
-    "Curve": "39",
-    "Def_Aware": "47",
-    "Dribbling_Tech": "51",
-    "FK_Acc": "38",
-    "Finishing": "43",
-    "Heading_Acc": "36",
-    "Long_Pass": "56",
-    "Long_Shots": "39",
-    "Penalties": "43",
-    "Short_Pass": "60",
-    "Shot_Power": "46",
-    "Slide_Tackle": "49",
-    "Stand_Tackle": "55",
-    "Volleys": "40",
-    "Skill_Moves": "3",
-    "Weak_Foot": "4",
-    "PlayStyles": "None",
-    "Roles": "1",
-    "Wage": "",
-    "Market_Value": "",
-    "Development_Plan": "Balanced",
-    "Notes": "Brazil. Dev Balanced 56→57 ETA 22w. Signed to the Youth Academy, 2027-01-13. CDM Deep-Lying Playmaker+."
-  },
   "Lilian Faure": {
     "Position": "RM",
     "Age": "17",
@@ -3015,11 +2951,6 @@ var PL_FIXTURES = [
   {
     "date": "2027-03-13",
     "opponent": "Tottenham",
-    "home": false
-  },
-  {
-    "date": "2027-03-20",
-    "opponent": "Bournemouth",
     "home": false
   },
   {

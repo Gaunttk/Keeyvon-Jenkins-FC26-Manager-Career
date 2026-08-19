@@ -637,6 +637,60 @@
       "journal_entry": true
     },
     {
+      "date": "2027-03-20",
+      "opponent": "Bournemouth",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 41', Ngumoha 55', Evanilson 57' (Bournemouth).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Okonkwo": 6.6,
+        "A. Heaven": 7.9,
+        "B. Gutiérrez": 6.0,
+        "C. Doyle": 6.9,
+        "C. Obi": 5.8,
+        "D. Bobadilla": 6.6,
+        "J. Mokio": 7.4,
+        "J.C. Vargas": 6.1,
+        "L. Sauer": 5.8,
+        "L. Cacace": 5.4,
+        "M. Barbieri": 6.1,
+        "R. Ngumoha": 7.5,
+        "T. Pitarch": 6.5,
+        "V. Veleten": 5.6,
+        "Y. Amrizi": 8.3
+      }
+    },
+    {
+      "date": "2027-03-20",
+      "opponent": "Arsenal",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Semi Final",
+      "notes": "Obi 72', Ngumoha 81'. MoM: Ngumoha. Neutral venue. Wrexham advance to the FA Cup Final.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 6.1,
+        "A. Okonkwo": 7.1,
+        "A. Heaven": 6.7,
+        "B. Gutiérrez": 6.7,
+        "C. Doyle": 6.5,
+        "C. Obi": 7.0,
+        "D. Bobadilla": 6.2,
+        "J. Mokio": 6.4,
+        "J.C. Vargas": 6.0,
+        "L. Sauer": 5.4,
+        "L. Cacace": 6.7,
+        "R. Ngumoha": 8.2,
+        "T. Fruk": 7.0,
+        "Y. Amrizi": 5.8
+      }
+    },
+    {
       "date": "2027-04-03",
       "opponent": "Aston Villa",
       "home": true,
@@ -1034,13 +1088,33 @@
   "milestones": [
     {
       "date": "2027-04-11",
-      "description": "Premier League MD29 — beat Aston Villa 4-0 away. Yacel Amrizi scored twice and assisted (9.2 rating), Toni Fruk and Damián Bobadilla also on the scoresheet, Rio Ngumoha with 2 assists. Score corrected during data entry from a submitted 0-0 draw that conflicted with the listed scorers and player stats.",
+      "description": "Premier League MD30 — beat Aston Villa 4-0 away. Yacel Amrizi scored twice and assisted (9.2 rating), Toni Fruk and Damián Bobadilla also on the scoresheet, Rio Ngumoha with 2 assists. Score corrected during data entry from a submitted 0-0 draw that conflicted with the listed scorers and player stats.",
       "journal_entry": true
     },
     {
       "date": "2027-04-03",
       "description": "FA Cup Quarter Final — beat Aston Villa 1-0 at home, Rio Ngumoha scoring the only goal (30'). Arthur Okonkwo named Man of the Match (7.1 rating) for a string of strong saves as Wrexham held on under late pressure. Wrexham advance to the semi-final.",
       "journal_entry": true
+    },
+    {
+      "date": "2027-03-20",
+      "description": "FA Cup Semi Final — beat Arsenal 2-0 at a neutral venue, Chido Obi (72') and Rio Ngumoha (81') on the scoresheet. Ngumoha named Man of the Match (8.2 rating) for the goal and an assist. Wrexham advance to the FA Cup Final.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-20",
+      "description": "Premier League MD29 — beat Bournemouth 2-1 away. Yacel Amrizi (41') and Rio Ngumoha (55') scored either side of an Evanilson reply for Bournemouth (57'). Amrizi (8.3 rating) and Ngumoha (7.5 rating, 1G 1A) both stood out.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-20",
+      "description": "Squad update — Nico Kopp loaned to FC Basel for 1 year, 60/40 transfer fee split with Wrexham receiving 40%.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-03-20",
+      "description": "Squad update — Guilherme Rosa cut from the Youth Academy, likely in preparation for additional youth signings within the 16-player academy roster limit.",
+      "journal_entry": false
     },
     {
       "date": "2027-02-20",
