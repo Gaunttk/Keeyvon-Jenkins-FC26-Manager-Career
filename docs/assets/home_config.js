@@ -14,7 +14,10 @@
    silently. Player entries here carry only slow-moving CSV facts (position,
    age, height, OVR, squad role); refresh them when the CSV changes.
 
-   HOW TO UPDATE EACH SESSION (optional — nothing breaks if you don't):
+   HOW TO UPDATE EACH SESSION (required — see CLAUDE.md's "Match Submission
+   Checklist" and "End-of-Session Page Sync Check"; nothing errors if you
+   skip it, but the homepage silently goes stale, which is exactly what
+   happened for months before this was made a checklist item):
    · lead / supporting / writers: article ids straight out of
      media-articles.json. Any id in there works; run
      `python3 scripts/generate_media_pages.py` first if you just added one.

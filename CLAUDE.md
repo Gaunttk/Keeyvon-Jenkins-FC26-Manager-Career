@@ -222,6 +222,7 @@ Every match session updates all of the following:
 - `docs/season.html` — Match Log row in the right competition accordion; that competition's `comp-summary-stats`; the overall `record-bar` tally; Apps + goal count (and MoM, already tracked via the Match Log row) for every player who appeared, not just scorers; the "Player Season Stats — Senior Matches" table (Apps/G/A/MOTM/Rtg) for every player who appeared
 - `docs/index.html` — run `python3 scripts/sync_season_summary.py` to regenerate the `SEASON_SUMMARY` stat bar, and `python3 scripts/sync_home_player_stats.py` to refresh the homepage Squad Spotlight's Goals/Assists/Avg Rating from the Player Season Stats table you just updated
 - **`docs/assets/pl_table.js` — the full league standings** (`PREMIER_LEAGUE_TABLE`). Hand-maintained, separate from `SEASON_SUMMARY`, and *not* touched by `sync_season_summary.py`. It must be rebuilt from a full league-table screenshot (or screenshots covering all 20 clubs) every time it changes. The homepage renders both the compact title-race snapshot and the full table from this one array, so editing it updates both. **If a match session doesn't include a full-table screenshot, ask the user for one rather than leaving this table stale or guessing at it.** If a club's row isn't visible in the session's screenshots, leave it and add a comment saying so — never estimate movement.
+- `docs/assets/home_config.js` — check whether `lead`/`supporting`/`writers` still point at recent articles (roughly the last month of in-game time). If the match you just logged produced a journal entry or was milestone-worthy enough for a Media Centre piece, or if any of the three sections is pointing at something now more than a few weeks stale, swap in the newer article id(s) and a matching photo from `docs/assets/photos/`. This is a required step, not an optional one — it's easy to update every stat file correctly and still leave the homepage showing months-old headlines, which is exactly what happened for about nine months of in-game time before this line existed.
 - `docs/Screenshots/` — delete processed screenshots (`git rm`) in the same commit
 - A two-voice journal entry (`JOURNAL_STYLE_GUIDE.md`) — write one for every match, not just when asked
 
@@ -230,6 +231,25 @@ For an EFL Championship match, derive its matchday (see "Season Log Schema" belo
 Minutes played is not tracked — not realistically capturable from the screenshots this workflow uses.
 
 A non-match "Squad Update" submission (attribute refresh, ratings/development review, or a roster change with no match that day) uses the Squad Update path on `docs/submit.html` instead of the Match path — it produces a `milestones` entry (not a `matches` entry) and an optional journal entry per the "write a journal entry for this" checkbox.
+
+---
+
+### End-of-Session Page Sync Check
+
+Every session — match, squad update, transfer, academy change, or Media Centre piece — ends by running back through this list and confirming each page either got updated or was correctly left alone. Don't rely on remembering which checklist applies; the itemized checklists above ("Squad Changes," "Academy Changes," "Match Submission Checklist") cover the common triggers, but this is the catch-all so nothing falls through a gap between them:
+
+- `docs/index.html` — `SEASON_SUMMARY` (via `sync_season_summary.py`) and homepage Squad Spotlight stats (via `sync_home_player_stats.py`) if a match was played; `docs/assets/pl_table.js` if a full-table screenshot came in
+- `docs/assets/home_config.js` — lead/supporting/writer article picks (see above), and the Squad Spotlight / Academy blocks if a spotlighted player's CSV facts (position, age, OVR, potential) changed or a spotlighted player departed
+- `docs/roster.html` — senior cards and the embedded academy section, if the squad or academy roster changed
+- `docs/depth_chart.html` — if the squad changed
+- `docs/season.html` — Match Log, competition summary stats, record bar, and Player Season Stats table, if a match was played
+- `docs/academy.html` — if `youth_academy.csv` changed
+- `docs/journal.html` — the two-voice entry stream (regenerated via `generate_media_pages.py` if `media-articles.json` changed)
+- `docs/media/*` and `docs/assets/media_index.js` — regenerate via `generate_media_pages.py` if `media-articles.json` or `media-personalities.json` changed
+- `docs/dossier.html` — rarely touched; only if a manager-profile fact changed
+- `docs/submit.html` (via `docs/assets/submit_data.js`, `sync_submit_roster.py`) — if the squad/academy CSV changed or a Premier League match was added
+
+Run `scripts/check_roster_sync.py` at the end of any session that touched `wrexham_squad.csv` or `youth_academy.csv`, as a final cross-check rather than a substitute for the manual review above.
 
 ---
 
