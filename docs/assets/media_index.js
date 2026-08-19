@@ -90,6 +90,19 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-05-01-pl-manchester-united-away": {
+   "id": "2027-05-01-pl-manchester-united-away",
+   "headline": "Amad Brace Sinks Wrexham as Late Obi-Vargas Flurry Comes Too Late",
+   "dek": "Wrexham fell behind early and never recovered at Old Trafford, with Chido Obi and Juan Cruz Vargas's stoppage-time goals only softening a 3-2 defeat.",
+   "date": "2027-05-01",
+   "date_label": "May 1, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "url": "journal.html#2027-05-01-pl-manchester-united-away"
+  },
   "2027-04-17-pl-crystal-palace-home": {
    "id": "2027-04-17-pl-crystal-palace-home",
    "headline": "Kean's Late Strike Spoils Jenkins's 100th Game in Charge",
@@ -1119,6 +1132,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-05-01-pl-manchester-united-away",
   "2027-04-17-pl-crystal-palace-home",
   "2027-04-11-pl-aston-villa-away",
   "entry-102",

@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-04-17"
+    "last_updated": "2027-05-01"
   },
   "matches": [
     {
@@ -774,6 +774,34 @@
         "V. Veleten": 6.0,
         "Y. Amrizi": 5.8
       }
+    },
+    {
+      "date": "2027-05-01",
+      "opponent": "Manchester United",
+      "home": false,
+      "score": "2-3",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Amad 33', Sesko 39', Amad 69', Obi 87', Vargas 90'. MoM: Amad (Man Utd).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 7.4,
+        "A. Heaven": 6.3,
+        "B. Klaverboer": 6.1,
+        "B. Gutiérrez": 6.6,
+        "C. Obi": 7.3,
+        "D. Bobadilla": 6.8,
+        "E. Dijkstra": 6.4,
+        "J. Belghazi": 7.0,
+        "J. Mokio": 6.1,
+        "J.C. Vargas": 7.3,
+        "L. Sauer": 5.9,
+        "L. Cacace": 6.8,
+        "R. Ngumoha": 6.2,
+        "T. Pitarch": 6.0,
+        "T. Fruk": 6.3,
+        "Y. Amrizi": 6.2
+      }
     }
   ],
   "transfers": [
@@ -1394,6 +1422,10 @@
     {
       "date": "2027-04-17",
       "description": "Keeyvon Jenkins' 100th match in charge of Wrexham (per broadcast), a 0-1 home defeat to Crystal Palace."
+    },
+    {
+      "date": "2027-05-01",
+      "description": "Premier League MD32 — 2-3 away defeat at Manchester United; Amad's brace either side of Chido Obi and Juan Cruz Vargas late strikes proved decisive. Not the side's best performance, but plenty of the season still to play."
     }
   ],
   "fixtures": [
