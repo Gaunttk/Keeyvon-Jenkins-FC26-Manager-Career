@@ -52,7 +52,7 @@ const HOME_CONFIG = {
 
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
-    articleId: '2026-12-20-hargreaves-greatest-promoted-seasons',
+    articleId: '2027-03-20-hargreaves-first-cup-final',
     image: 'assets/photos/keeyvon-jenkins.png',
     imageAlt: 'Keeyvon Jenkins pitchside at the Racecourse',
     layout: 'subject-right',
@@ -62,18 +62,18 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: 'entry-arsenal-away-pl-2', image: 'assets/photos/leo_sauer.png', imageAlt: 'Leo Sauer' },
-    { articleId: 'entry-bournemouth-yrt-final', image: 'assets/photos/faure.png', imageAlt: 'Lilian Faure' },
-    { articleId: 'entry-sunderland-away-pl', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
+    { articleId: '2027-04-11-pl-aston-villa-away', image: 'assets/photos/yacel_amrizi.png', imageAlt: 'Yacel Amrizi' },
+    { articleId: '2027-04-17-pl-crystal-palace-home', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
+    { articleId: '2027-05-01-pl-manchester-united-away', image: 'assets/photos/chido_obi.png', imageAlt: 'Chido Obi' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
   /* The card whose author is Keeyvon Jenkins renders in the Hawk's Nest
      treatment automatically — no flag needed. */
   writers: [
-    { articleId: 'entry-transferwindow-aug31', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' },
-    { articleId: 'entry-blackburn-facup-r5', image: 'assets/photos/yacel_amrizi.png', imageAlt: 'Yacel Amrizi' },
-    { articleId: 'entry-101', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' }
+    { articleId: 'entry-102', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
+    { articleId: '2027-03-06-mcallister-academy-pipeline-fourth-title', image: 'assets/photos/sandoval.png', imageAlt: 'Fabricio Sandoval' },
+    { articleId: '2027-03-20-fa-cup-semi-arsenal', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
   ],
 
   /* ── Squad Spotlight ──────────────────────────────────────────────────── */
