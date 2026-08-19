@@ -23,28 +23,50 @@
    · spotlight / academy: names must match wrexham_squad.csv / youth_academy.csv.
 
    HERO LAYOUT/FOCUS (lead only — see docs/assets/style.css's "Editorial hero"
-   block and home.js's renderHero() for how these are consumed):
-   · layout: 'subject-right' (default) | 'subject-left' | 'wide'.
+   block and home.js's renderHero() for how these are consumed). Missing any
+   of these is always safe: no `lead` composition fields at all renders as
+   subject-center, 50%/50%, full default headline width — never broken.
+
+   · layout: 'subject-right' | 'subject-left' | 'subject-center' (default
+     when omitted or unrecognized).
      - subject-right: headline column on the left (~55-58% wide), photo
-       subject sits toward the right, gradient darkest on the left.
+       subject sits toward the right, gradient darkest on the left fading
+       through the middle and substantially clear over the subject.
      - subject-left: mirrored — headline on the right, subject left,
        gradient darkest on the right.
-     - wide: for team celebrations / stadium scenes where the whole frame
-       matters. Wider lower-left text block, subject stays nearer center.
+     - subject-center: for team celebrations / stadium / wide action scenes
+       where the whole frame matters and there's no single off-center
+       subject to protect. Wider lower text block (~62%), restrained
+       bottom-only scrim, subject stays nearer center.
      Pick whichever matches the new hero photo's actual composition — don't
      force subject-right onto an image where the subject is on the left.
+
+   Examples:
+     lead: { layout: 'subject-right', focusX: '76%', focusY: '42%', ... }   // portrait, subject right
+     lead: { layout: 'subject-left',  focusX: '25%', focusY: '45%', ... }   // portrait, subject left
+     lead: { layout: 'subject-center', focusX: '50%', focusY: '45%', ... }  // team/action, centered
+
    · focusX / focusY: CSS object-position values (e.g. '76%', '38%') for the
-     hero <img>. Aim it at the subject's face/action point. Note: object-fit
-     cover only gives real horizontal pan room when the image is wider
-     (relative to its height) than the hero box — a tall, centered portrait
-     like the current Jenkins photo has ~zero horizontal crop slack in a
-     landscape hero box, so focusX will do little for that specific shape;
-     it matters far more for landscape action shots / group photos / stadium
-     scenes. focusY is the one that reliably matters for any portrait.
+     hero <img> — the subject's face/action point. IMPORTANT CAVEAT:
+     object-fit: cover only gives real horizontal pan room when the source
+     image is proportionally wider (relative to its height) than the hero
+     box. A tall, centered portrait has ~zero horizontal crop slack in our
+     landscape hero box, so focusX alone won't move the subject sideways for
+     that shape — it matters far more for landscape action shots / group
+     photos / stadium scenes. focusY reliably matters for any portrait.
+     To actually reposition a subject within a tall portrait source, crop a
+     hero-specific image (e.g. a "-hero.png" variant alongside the original)
+     so the subject already sits at the desired horizontal fraction before
+     it ever reaches object-fit: cover — see lead.image below for the
+     current example. focusX/focusY still tune the result from there.
+   · mobileFocusX / mobileFocusY: optional override of focusX/focusY used
+     only in the ≤760px stacked mobile layout (see style.css), for when the
+     desktop focal point produces a bad crop in the shorter 16:10 mobile
+     box. Omit to just reuse focusX/focusY on mobile too.
    · headlineWidth: optional override of the copy column's width (e.g.
      '52%') if a layout's default (~55% for subject-right/left, ~62% for
-     wide) doesn't suit a particular headline length. Rarely needed —
-     natural wrapping handles most cases.
+     subject-center) doesn't suit a particular headline length. Rarely
+     needed — natural wrapping handles most cases.
    These are presentation choices only — never put a stat or score here.
    ───────────────────────────────────────────────────────────────────────── */
 
@@ -53,11 +75,17 @@ const HOME_CONFIG = {
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
     articleId: '2026-12-20-hargreaves-greatest-promoted-seasons',
-    image: 'assets/photos/keeyvon-jenkins.png',
+    /* A hero-specific crop of assets/photos/keeyvon-jenkins.png (used as-is
+       elsewhere, e.g. the writer-card thumbnail) — cropped tighter so his
+       face already sits ~74% across the frame before object-fit: cover
+       ever touches it; see the focusX caveat above for why that's necessary
+       for a tall portrait source. Do not repoint this at the original
+       full-body portrait — it will re-center behind the headline. */
+    image: 'assets/photos/keeyvon-jenkins-hero.png',
     imageAlt: 'Keeyvon Jenkins pitchside at the Racecourse',
     layout: 'subject-right',
-    focusX: '76%',
-    focusY: '22%'
+    focusX: '74%',
+    focusY: '48%'
   },
 
   /* Three supporting stories stacked beside the lead. */

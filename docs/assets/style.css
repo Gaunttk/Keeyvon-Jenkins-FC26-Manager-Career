@@ -3259,11 +3259,12 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   width: 100%; height: 100%; object-fit: cover; display: block;
   /* Configurable focal point (docs/assets/home_config.js's lead.focusX/focusY,
      passed through as inline custom properties on .home-hero-link) — never
-     a single hardcoded object-position. Falls back to a slightly-right
-     default per the "subject positioned slightly right of center" guidance;
-     .is-subject-left / .is-wide below set their own layout-appropriate
-     fallbacks so an image with no explicit focus still lands sensibly. */
-  object-position: var(--hero-focus-x, 70%) var(--hero-focus-y, 42%);
+     a single hardcoded object-position. This bare rule is the true
+     no-metadata fallback (centered, per "sensible fallbacks"); the
+     .is-subject-right / .is-subject-left / .is-subject-center rules below
+     set their own layout-appropriate fallbacks so a configured layout with
+     no explicit focusX/focusY still lands sensibly for that layout. */
+  object-position: var(--hero-focus-x, 50%) var(--hero-focus-y, 50%);
   /* Brighter, more photographic treatment — the readability scrim below is
      localized to the headline zone rather than dimming the whole frame. */
   filter: brightness(1.20) contrast(1.04) saturate(1.06);
@@ -3289,15 +3290,17 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
     linear-gradient(to top, rgba(5,5,5,0.75) 0%, rgba(5,5,5,0.32) 30%, rgba(5,5,5,0) 58%),
     linear-gradient(to left, rgba(5,5,5,0.88) 0%, rgba(5,5,5,0.55) 33%, rgba(5,5,5,0.12) 60%, rgba(5,5,5,0) 76%);
 }
-/* wide: team/stadium shots where the whole frame matters — restrained
-   bottom-left scrim only, no strong side gradient cutting across the frame. */
-.home-hero-link.is-wide .home-hero-overlay {
+/* subject-center: team/stadium/wide shots where the whole frame matters —
+   restrained bottom scrim only, no strong side gradient cutting across the
+   frame (a centered composition has no "text side" to protect as heavily). */
+.home-hero-link.is-subject-center .home-hero-overlay {
   background:
     linear-gradient(to top, rgba(5,5,5,0.82) 0%, rgba(5,5,5,0.40) 32%, rgba(5,5,5,0) 62%),
     linear-gradient(to right, rgba(5,5,5,0.35) 0%, rgba(5,5,5,0.06) 40%, rgba(5,5,5,0) 58%);
 }
+.home-hero-link.is-subject-right .home-hero-media img { object-position: var(--hero-focus-x, 70%) var(--hero-focus-y, 42%); }
 .home-hero-link.is-subject-left .home-hero-media img { object-position: var(--hero-focus-x, 30%) var(--hero-focus-y, 42%); }
-.home-hero-link.is-wide .home-hero-media img { object-position: var(--hero-focus-x, 50%) var(--hero-focus-y, 38%); }
+.home-hero-link.is-subject-center .home-hero-media img { object-position: var(--hero-focus-x, 50%) var(--hero-focus-y, 42%); }
 .home-hero-copy {
   position: relative;
   width: var(--hero-headline-width, 100%);
@@ -3312,9 +3315,9 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
    arbitrary ch cap — so long headlines wrap naturally without ever needing
    per-article CSS, and the text block never extends across the subject's
    side of the frame. */
-.home-hero-link.is-subject-right .home-hero-copy { width: var(--hero-headline-width, 55%); }
-.home-hero-link.is-subject-left .home-hero-copy { width: var(--hero-headline-width, 55%); margin-left: auto; }
-.home-hero-link.is-wide .home-hero-copy { width: var(--hero-headline-width, 62%); }
+.home-hero-link.is-subject-right .home-hero-copy { width: var(--hero-headline-width, 58%); }
+.home-hero-link.is-subject-left .home-hero-copy { width: var(--hero-headline-width, 58%); margin-left: auto; }
+.home-hero-link.is-subject-center .home-hero-copy { width: var(--hero-headline-width, 62%); }
 .home-hero-kicker {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 14px;
@@ -3330,8 +3333,9 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 .home-hero-title {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: clamp(32px, 3.1vw, 57px);
-  line-height: 1.06;
+  font-size: clamp(32px, 2.9vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.3px;
   color: var(--white);
   max-width: 100%;
   text-shadow: 0 2px 20px rgba(0,0,0,0.55);
@@ -3948,13 +3952,20 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   .home-hero-copy { padding: 20px 18px 22px; }
   /* Below this width the two-zone composition doesn't help — collapse every
      layout variant back to a plain full-width stacked panel (see the
-     .is-subject-right/.is-subject-left/.is-wide width+margin rules above,
-     which only apply at desktop widths). Configured focusX/focusY on the
-     <img> itself are left alone since they still frame the subject
-     reasonably in the shorter 16:10 mobile crop. */
+     .is-subject-right/.is-subject-left/.is-subject-center width+margin
+     rules above, which only apply at desktop widths). Image above text at
+     this width means the desktop focal point (usually tuned for a wide
+     landscape crop) can produce a bad crop in the shorter 16:10 mobile box,
+     so an optional mobile-specific focal point (lead.mobileFocusX/Y in
+     home_config.js) overrides it here; omit them to keep the desktop values. */
   .home-hero-link.is-subject-right .home-hero-copy,
   .home-hero-link.is-subject-left .home-hero-copy,
-  .home-hero-link.is-wide .home-hero-copy { width: 100%; margin-left: 0; }
+  .home-hero-link.is-subject-center .home-hero-copy { width: 100%; margin-left: 0; }
+  .home-hero-link.is-subject-right .home-hero-media img,
+  .home-hero-link.is-subject-left .home-hero-media img,
+  .home-hero-link.is-subject-center .home-hero-media img {
+    object-position: var(--hero-mobile-focus-x, var(--hero-focus-x, 50%)) var(--hero-mobile-focus-y, var(--hero-focus-y, 30%));
+  }
   .home-hero-title { font-size: 26px; max-width: none; text-shadow: none; }
   .home-hero-deck { font-size: 15px; margin-top: 12px; text-shadow: none; }
   .home-hero-kicker { font-size: 12px; padding: 5px 12px; margin-bottom: 14px; }
