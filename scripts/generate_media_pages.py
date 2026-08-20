@@ -785,24 +785,63 @@ def render_article_pages(people, people_by_id, articles):
         outlet = a.get("outlet") or person["outlet"]
         slug, cat_label = derive_category(a)
 
+        # Image roles (all optional, all backward-compatible):
+        #   image        — the "card" role: feed/lead/related-story thumbnails.
+        #                  Existing articles only ever set this one field.
+        #   hero_image   — dedicated large article-page photo. Falls back to
+        #                  `image` when absent, so older records still render
+        #                  a hero exactly as before.
+        #   hero_focus_x/hero_focus_y — optional object-position for the
+        #                  hero, same focal-point convention as home_config.js
+        #                  and the Media Centre lead card (--mc-focus-x/-y).
+        #   inline_images — optional list of {src, alt, caption?} supporting
+        #                  photos rendered inside the body column (never the
+        #                  breakout-width hero slot). No current article uses
+        #                  this; it's the smallest hook for a future one to.
+        hero_src = a.get("hero_image") or a.get("image")
         hero_html = ""
-        if a.get("image"):
-            hero_html = f"""<figure class="article-hero">
-    <img src="../../{a['image']}" alt="{attr(a.get('image_alt') or a['headline'])}">
+        if hero_src:
+            hero_alt = attr(a.get("hero_image_alt") or a.get("image_alt") or a["headline"])
+            focus_vars = []
+            if a.get("hero_focus_x"):
+                focus_vars.append(f"--mc-focus-x:{a['hero_focus_x']}")
+            if a.get("hero_focus_y"):
+                focus_vars.append(f"--mc-focus-y:{a['hero_focus_y']}")
+            style_attr = f' style="{attr(";".join(focus_vars))}"' if focus_vars else ""
+            hero_html = f"""<figure class="article-hero"{style_attr}>
+    <img src="../../{hero_src}" alt="{hero_alt}">
   </figure>"""
+
+        inline_html = ""
+        for img in a.get("inline_images") or []:
+            if not img.get("src"):
+                continue
+            cap = f'<figcaption>{img["caption"]}</figcaption>' if img.get("caption") else ""
+            inline_html += (
+                f'<figure class="article-inline-figure">'
+                f'<img src="../../{img["src"]}" alt="{attr(img.get("alt") or a["headline"])}">{cap}</figure>'
+            )
 
         byline_avatar = person_avatar(person, 2, "article-byline-face", "article-byline-face-mono")
         related = related_articles(a, media_articles)
         related_html = ""
         if related:
-            links = "\n".join(
-                f'<a class="article-related-link" href="{r["id"]}.html">{r["headline"]}<span>{people_by_id[r["author_id"]]["name"]} &middot; {_format_toc_date(r["date"])}</span></a>'
-                for r in related
-            )
+            # Photographic card when the related story carries a "card" image
+            # (the common case, since only 7 of today's articles have one);
+            # graceful text-only fallback otherwise — never a broken layout.
+            cards = []
+            for r in related:
+                rp = people_by_id[r["author_id"]]
+                media = f'<div class="article-related-media"><img src="../../{r["image"]}" alt="" loading="lazy"></div>' if r.get("image") else ""
+                cards.append(
+                    f'<a class="article-related-card{"" if r.get("image") else " no-media"}" href="{r["id"]}.html">'
+                    f'{media}<span class="article-related-title">{r["headline"]}</span>'
+                    f'<span class="article-related-byline">{rp["name"]} &middot; {_format_toc_date(r["date"])}</span></a>'
+                )
             related_html = f"""<div class="article-related">
     <h3>Related Coverage</h3>
     <div class="article-related-grid">
-{links}
+{"".join(cards)}
     </div>
   </div>"""
 
@@ -833,6 +872,7 @@ def render_article_pages(people, people_by_id, articles):
   {hero_html}
   <div class="article-body">
     {a['body_html']}
+    {inline_html}
   </div>
   {related_html}
   {author_card}
