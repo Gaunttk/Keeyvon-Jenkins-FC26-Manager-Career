@@ -1,8 +1,9 @@
 /* GENERATED FILE — do not edit by hand.
    Rebuild with: python3 scripts/generate_media_pages.py
    Metadata-only index of media-articles.json / media-personalities.json,
-   used by docs/index.html (which cannot fetch JSON over file://).
-   Article bodies deliberately live only in media-articles.json. */
+   used by docs/index.html and docs/media/index.html (neither can fetch
+   JSON over file://). Article bodies deliberately live only in
+   media-articles.json. */
 const MEDIA_INDEX = {
  "people": {
   "owen-meredith": {
@@ -11,7 +12,8 @@ const MEDIA_INDEX = {
    "role": "Wrexham Beat Reporter",
    "is_press": true,
    "accent_color": "var(--dispatch-blue)",
-   "headshot": "assets/journalists/owen-meredith.jpg"
+   "headshot": "assets/journalists/owen-meredith.jpg",
+   "bio": "Wrexham-born, 34. Covered the club since League Two for WalesOnline. Joined The Athletic UK desk in 2023. Has complicated feelings about the Hollywood era: loves what it did for the club financially, quietly mourns something he can't name."
   },
   "keeyvon-jenkins": {
    "name": "Keeyvon Jenkins",
@@ -19,7 +21,8 @@ const MEDIA_INDEX = {
    "role": "Head Coach, Wrexham AFC",
    "is_press": false,
    "accent_color": "var(--journal-accent)",
-   "headshot": null
+   "headshot": null,
+   "bio": "Wrexham's American head coach, in post since January 2025. Keeps a private journal reflecting on the arc of a season rather than any single result — an internal counterpoint to the press coverage, not a piece of media in its own right."
   },
   "oliver-hargreaves": {
    "name": "Oliver Hargreaves",
@@ -27,7 +30,8 @@ const MEDIA_INDEX = {
    "role": "Senior Football Correspondent",
    "is_press": true,
    "accent_color": "var(--hargreaves-accent)",
-   "headshot": "assets/journalists/oliver-hargreaves.jpg"
+   "headshot": "assets/journalists/oliver-hargreaves.jpg",
+   "bio": "Raised in Shrewsbury. Former Guardian Northern Football Correspondent before joining Sky Sports in 2018. Has covered seven World Cups and every Champions League Final since 2003. Specializes in football history and legacy pieces."
   },
   "rebecca-holt": {
    "name": "Rebecca Holt",
@@ -35,7 +39,8 @@ const MEDIA_INDEX = {
    "role": "National Football Reporter",
    "is_press": true,
    "accent_color": "var(--holt-accent)",
-   "headshot": "assets/journalists/rebecca-holt.jpg"
+   "headshot": "assets/journalists/rebecca-holt.jpg",
+   "bio": "A BBC Sport staple for over a decade, known for measured, wire-service-straight reporting that breaks news without editorializing. The reporter other outlets check their facts against."
   },
   "james-mcallister": {
    "name": "James McAllister",
@@ -43,7 +48,8 @@ const MEDIA_INDEX = {
    "role": "Tactical Analyst",
    "is_press": true,
    "accent_color": "var(--mcallister-accent)",
-   "headshot": "assets/journalists/james-mcallister.jpg"
+   "headshot": "assets/journalists/james-mcallister.jpg",
+   "bio": "Former academy coach turned writer, recruited by The Athletic for his ability to explain a back-three rotation to a lay reader without losing the nuance a coach would want. Reads a match through shape and recruitment logic before he reads it through results."
   },
   "marco-bellini": {
    "name": "Marco Bellini",
@@ -51,7 +57,8 @@ const MEDIA_INDEX = {
    "role": "European Football Correspondent",
    "is_press": true,
    "accent_color": "var(--bellini-accent)",
-   "headshot": "assets/journalists/marco-bellini.jpg"
+   "headshot": "assets/journalists/marco-bellini.jpg",
+   "bio": "Turin-based, filing English football for an Italian audience for whom Wrexham's rise reads like a fairy tale imported from another footballing culture. Writes with the romantic tradition of Italian sports journalism — narrative and myth-making over cold analysis."
   },
   "tara-bennett": {
    "name": "Tara Bennett",
@@ -59,7 +66,8 @@ const MEDIA_INDEX = {
    "role": "U.S. Football Correspondent",
    "is_press": true,
    "accent_color": "var(--bennett-accent)",
-   "headshot": "assets/journalists/tara-bennett.jpg"
+   "headshot": "assets/journalists/tara-bennett.jpg",
+   "bio": "Covers the growing footprint of American ownership, coaching, and playing talent in English football for a U.S. audience. Tracks Keeyvon Jenkins' career from his USMNT days through to the Wrexham dugout as a single throughline."
   },
   "darren-cole": {
    "name": "Darren Cole",
@@ -67,7 +75,8 @@ const MEDIA_INDEX = {
    "role": "Television Pundit",
    "is_press": true,
    "accent_color": "var(--cole-accent)",
-   "headshot": "assets/journalists/darren-cole.jpg"
+   "headshot": "assets/journalists/darren-cole.jpg",
+   "bio": "Former Premier League centre-back turned studio pundit, built a career on being the voice in the room willing to say the unfashionable thing. Has been wrong about Wrexham before and isn't shy about revisiting it on air."
   },
   "gareth-price": {
    "name": "Gareth Price",
@@ -75,7 +84,8 @@ const MEDIA_INDEX = {
    "role": "Football Correspondent",
    "is_press": true,
    "accent_color": "var(--price-accent)",
-   "headshot": "assets/journalists/gareth-price.jpg"
+   "headshot": "assets/journalists/gareth-price.jpg",
+   "bio": "A fixture of BBC Radio Wales' sports desk for two decades, calling matches up and down the football pyramid long before Wrexham were a story anyone outside Wales was interested in. Covers the club as part of a wider Welsh football beat, not a Wrexham specialist."
   }
  },
  "people_order": [
@@ -101,6 +111,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#2027-05-01-pl-manchester-united-away"
   },
   "2027-04-17-pl-crystal-palace-home": {
@@ -114,6 +131,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#2027-04-17-pl-crystal-palace-home"
   },
   "2027-04-11-pl-aston-villa-away": {
@@ -127,6 +151,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#2027-04-11-pl-aston-villa-away"
   },
   "entry-102": {
@@ -140,6 +171,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 102",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-102"
   },
   "2027-04-03-fa-cup-qtr-aston-villa": {
@@ -153,6 +191,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#2027-04-03-fa-cup-qtr-aston-villa"
   },
   "2027-03-20-pl-bournemouth-away": {
@@ -166,6 +211,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#2027-03-20-pl-bournemouth-away"
   },
   "2027-03-20-fa-cup-semi-arsenal": {
@@ -179,6 +231,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#2027-03-20-fa-cup-semi-arsenal"
   },
   "2027-03-20-hargreaves-first-cup-final": {
@@ -192,6 +251,17 @@ const MEDIA_INDEX = {
    "section": "Featured Columns",
    "content_type": "feature",
    "entry_number": null,
+   "category": "history",
+   "category_label": "History",
+   "season": "2026/27",
+   "tags": [
+    "history",
+    "fa-cup",
+    "milestone"
+   ],
+   "featured": true,
+   "image": "assets/photos/keeyvon-touchline.png",
+   "image_alt": "Keeyvon Jenkins on the touchline",
    "url": "media/articles/2027-03-20-hargreaves-first-cup-final.html"
   },
   "2027-03-06-mcallister-academy-pipeline-fourth-title": {
@@ -205,6 +275,18 @@ const MEDIA_INDEX = {
    "section": "Tactical Analysis",
    "content_type": "tactical",
    "entry_number": null,
+   "category": "academy",
+   "category_label": "Academy",
+   "season": "2026/27",
+   "tags": [
+    "academy",
+    "development-pathway",
+    "youth-rush",
+    "recruitment"
+   ],
+   "featured": true,
+   "image": "assets/photos/rio_ngumoha.png",
+   "image_alt": "Rio Ngumoha",
    "url": "media/articles/2027-03-06-mcallister-academy-pipeline-fourth-title.html"
   },
   "2027-02-28-mcallister-arsenal-away-statement": {
@@ -218,6 +300,18 @@ const MEDIA_INDEX = {
    "section": "Tactical Analysis",
    "content_type": "tactical",
    "entry_number": null,
+   "category": "academy",
+   "category_label": "Academy",
+   "season": "2026/27",
+   "tags": [
+    "tactics",
+    "high-press",
+    "arsenal",
+    "recruitment"
+   ],
+   "featured": true,
+   "image": "assets/photos/md12-arsenal-amrizi-goal.jpeg",
+   "image_alt": "Yacel Amrizi celebrates at Arsenal",
    "url": "media/articles/2027-02-28-mcallister-arsenal-away-statement.html"
   },
   "2027-02-04-cole-carabao-cup-exit-outcoached": {
@@ -231,6 +325,18 @@ const MEDIA_INDEX = {
    "section": "Television Debate",
    "content_type": "tv-debate",
    "entry_number": null,
+   "category": "opinion",
+   "category_label": "Opinion",
+   "season": "2026/27",
+   "tags": [
+    "carabao-cup",
+    "sustainability",
+    "tv-debate",
+    "press-conference"
+   ],
+   "featured": true,
+   "image": "assets/photos/carabao-cup.png",
+   "image_alt": "Carabao Cup",
    "url": "media/articles/2027-02-04-cole-carabao-cup-exit-outcoached.html"
   },
   "2027-01-31-hargreaves-four-clear-at-the-top": {
@@ -244,6 +350,18 @@ const MEDIA_INDEX = {
    "section": "Featured Columns",
    "content_type": "feature",
    "entry_number": null,
+   "category": "history",
+   "category_label": "History",
+   "season": "2026/27",
+   "tags": [
+    "history",
+    "premier-league",
+    "milestone",
+    "title-race"
+   ],
+   "featured": true,
+   "image": "assets/photos/keeyvon-jenkins.png",
+   "image_alt": "Keeyvon Jenkins",
    "url": "media/articles/2027-01-31-hargreaves-four-clear-at-the-top.html"
   },
   "2026-12-30-holt-pitarch-signing-confirmed": {
@@ -257,6 +375,17 @@ const MEDIA_INDEX = {
    "section": "Press Conferences",
    "content_type": "press-conference",
    "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2026/27",
+   "tags": [
+    "transfers",
+    "breaking-news",
+    "real-madrid"
+   ],
+   "featured": false,
+   "image": "assets/photos/thiago_pitarch.png",
+   "image_alt": "Thiago Pitarch",
    "url": "media/articles/2026-12-30-holt-pitarch-signing-confirmed.html"
   },
   "entry-101": {
@@ -270,6 +399,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 101",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-101"
   },
   "entry-arsenal-away-pl-2": {
@@ -283,6 +419,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-arsenal-away-pl-2"
   },
   "entry-brighton-yrt-quarters": {
@@ -296,6 +439,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-brighton-yrt-quarters"
   },
   "entry-forest-yrt-semi": {
@@ -309,6 +459,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-forest-yrt-semi"
   },
   "entry-bournemouth-yrt-final": {
@@ -322,6 +479,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-bournemouth-yrt-final"
   },
   "entry-liverpool-yrt-new-campaign": {
@@ -335,6 +499,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-liverpool-yrt-new-campaign"
   },
   "entry-forest-home-pl-2": {
@@ -348,6 +519,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-forest-home-pl-2"
   },
   "entry-blackburn-facup-r5": {
@@ -361,6 +539,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-blackburn-facup-r5"
   },
   "entry-sunderland-away-pl": {
@@ -374,6 +559,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-sunderland-away-pl"
   },
   "entry-wolves-away-pl-2": {
@@ -387,6 +579,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-wolves-away-pl-2"
   },
   "entry-chelsea-carabao-semi-leg2": {
@@ -400,6 +599,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-chelsea-carabao-semi-leg2"
   },
   "entry-sheffieldutd-home-pl-2": {
@@ -413,6 +619,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-sheffieldutd-home-pl-2"
   },
   "entry-100": {
@@ -426,6 +639,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 100",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-100"
   },
   "entry-brentford-home-pl-2": {
@@ -439,6 +659,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-brentford-home-pl-2"
   },
   "entry-westham-away-pl": {
@@ -452,6 +679,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-westham-away-pl"
   },
   "entry-chelsea-carabao-semi": {
@@ -465,6 +699,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-chelsea-carabao-semi"
   },
   "entry-forest-facup": {
@@ -478,6 +719,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-forest-facup"
   },
   "entry-chelsea-home-pl": {
@@ -491,6 +739,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-chelsea-home-pl"
   },
   "entry-brighton-away-pl": {
@@ -504,6 +759,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-brighton-away-pl"
   },
   "entry-099": {
@@ -517,6 +779,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 099",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-099"
   },
   "entry-ipswich-pl": {
@@ -530,6 +799,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-ipswich-pl"
   },
   "entry-westham-pl": {
@@ -543,6 +819,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-westham-pl"
   },
   "2026-12-20-hargreaves-greatest-promoted-seasons": {
@@ -556,6 +839,18 @@ const MEDIA_INDEX = {
    "section": "Featured Columns",
    "content_type": "feature",
    "entry_number": null,
+   "category": "history",
+   "category_label": "History",
+   "season": "2026/27",
+   "tags": [
+    "history",
+    "premier-league",
+    "promoted-clubs",
+    "milestone"
+   ],
+   "featured": true,
+   "image": "assets/photos/keeyvon-jenkins.png",
+   "image_alt": "Keeyvon Jenkins",
    "url": "media/articles/2026-12-20-hargreaves-greatest-promoted-seasons.html"
   },
   "entry-wolves-yrt-final": {
@@ -569,6 +864,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-wolves-yrt-final"
   },
   "entry-brentford-yrt-semi": {
@@ -582,6 +884,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-brentford-yrt-semi"
   },
   "entry-crystalpalace-yrt": {
@@ -595,6 +904,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-crystalpalace-yrt"
   },
   "entry-mancity-carabao": {
@@ -608,6 +924,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-mancity-carabao"
   },
   "entry-brentford-pl": {
@@ -621,6 +944,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-brentford-pl"
   },
   "entry-mancity-pl": {
@@ -634,6 +964,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-mancity-pl"
   },
   "entry-098": {
@@ -647,6 +984,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 098",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-098"
   },
   "entry-leeds-pl": {
@@ -660,6 +1004,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-leeds-pl"
   },
   "entry-sunderland-pl": {
@@ -673,6 +1024,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-sunderland-pl"
   },
   "entry-nottinghamforest-pl": {
@@ -686,6 +1044,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-nottinghamforest-pl"
   },
   "entry-arsenal-pl": {
@@ -699,6 +1064,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-arsenal-pl"
   },
   "entry-097": {
@@ -712,6 +1084,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 097",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-097"
   },
   "entry-liverpool-pl": {
@@ -725,6 +1104,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-liverpool-pl"
   },
   "entry-astonvilla-pl": {
@@ -738,6 +1124,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-astonvilla-pl"
   },
   "entry-preston-carabao": {
@@ -751,6 +1144,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-preston-carabao"
   },
   "entry-crystalpalace-pl": {
@@ -764,6 +1164,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-crystalpalace-pl"
   },
   "entry-arsenal-yrt-final": {
@@ -777,6 +1184,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-arsenal-yrt-final"
   },
   "entry-brighton-yrt": {
@@ -790,6 +1204,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-brighton-yrt"
   },
   "entry-palace-yrt": {
@@ -803,6 +1224,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-palace-yrt"
   },
   "entry-manutd-pl": {
@@ -816,6 +1244,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-manutd-pl"
   },
   "entry-096": {
@@ -829,6 +1264,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 096",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-096"
   },
   "entry-newcastle-pl": {
@@ -842,6 +1284,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-newcastle-pl"
   },
   "entry-brighton-pl": {
@@ -855,6 +1304,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-brighton-pl"
   },
   "entry-bradfordcity-carabao": {
@@ -868,6 +1324,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-bradfordcity-carabao"
   },
   "entry-chelsea-pl": {
@@ -881,6 +1344,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-chelsea-pl"
   },
   "entry-tottenham-pl": {
@@ -894,6 +1364,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-tottenham-pl"
   },
   "entry-095": {
@@ -907,6 +1384,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 095",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-095"
   },
   "entry-transferwindow-aug31": {
@@ -920,6 +1404,13 @@ const MEDIA_INDEX = {
    "section": "Transfer Window",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-transferwindow-aug31"
   },
   "entry-bournemouth": {
@@ -933,6 +1424,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-bournemouth"
   },
   "entry-huddersfield": {
@@ -946,6 +1444,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-huddersfield"
   },
   "entry-tottenham-final": {
@@ -959,6 +1464,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-tottenham-final"
   },
   "entry-newcastle-yrt": {
@@ -972,6 +1484,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-newcastle-yrt"
   },
   "entry-sheffield": {
@@ -985,6 +1504,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-sheffield"
   },
   "entry-transferwindow": {
@@ -998,6 +1524,13 @@ const MEDIA_INDEX = {
    "section": "Transfer Window",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-transferwindow"
   },
   "entry-wolves": {
@@ -1011,6 +1544,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-wolves"
   },
   "entry-094": {
@@ -1024,6 +1564,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 094",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-094"
   },
   "entry-levante": {
@@ -1037,6 +1584,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-levante"
   },
   "entry-laspalmas": {
@@ -1050,6 +1604,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-laspalmas"
   },
   "entry-hamburgersv": {
@@ -1063,6 +1624,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-hamburgersv"
   },
   "entry-westham-qf": {
@@ -1076,6 +1644,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-westham-qf"
   },
   "entry-093": {
@@ -1089,6 +1664,13 @@ const MEDIA_INDEX = {
    "section": null,
    "content_type": "diary",
    "entry_number": "Entry 093",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-093"
   },
   "entry-blackburn-final": {
@@ -1102,6 +1684,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2025/26",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-blackburn-final"
   },
   "entry-watford": {
@@ -1115,6 +1704,13 @@ const MEDIA_INDEX = {
    "section": "Match Coverage",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2025/26",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-watford"
   },
   "entry-transfers": {
@@ -1128,6 +1724,13 @@ const MEDIA_INDEX = {
    "section": "Transfer Window",
    "content_type": "dispatch",
    "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2025/26",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
    "url": "journal.html#entry-transfers"
   }
  },
@@ -1212,5 +1815,57 @@ const MEDIA_INDEX = {
   "entry-blackburn-final",
   "entry-watford",
   "entry-transfers"
+ ],
+ "categories": [
+  {
+   "slug": "history",
+   "label": "History",
+   "count": 3
+  },
+  {
+   "slug": "academy",
+   "label": "Academy",
+   "count": 2
+  },
+  {
+   "slug": "opinion",
+   "label": "Opinion",
+   "count": 1
+  },
+  {
+   "slug": "transfers",
+   "label": "Transfers",
+   "count": 1
+  }
+ ],
+ "publications": [
+  {
+   "name": "Sky Sports",
+   "count": 3,
+   "latest_id": "2027-03-20-hargreaves-first-cup-final",
+   "latest_date": "2027-03-20"
+  },
+  {
+   "name": "The Athletic",
+   "count": 2,
+   "latest_id": "2027-03-06-mcallister-academy-pipeline-fourth-title",
+   "latest_date": "2027-03-06"
+  },
+  {
+   "name": "Sky Sports (Studio Pundit)",
+   "count": 1,
+   "latest_id": "2027-02-04-cole-carabao-cup-exit-outcoached",
+   "latest_date": "2027-02-04"
+  },
+  {
+   "name": "BBC Sport",
+   "count": 1,
+   "latest_id": "2026-12-30-holt-pitarch-signing-confirmed",
+   "latest_date": "2026-12-30"
+  }
+ ],
+ "seasons": [
+  "2026/27",
+  "2025/26"
  ]
 };

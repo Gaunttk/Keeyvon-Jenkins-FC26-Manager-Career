@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Journalist Profiles | Media Centre</title>
+<title>The Press Corps | Media Centre</title>
+<meta name="description" content="Every journalist and voice covering Wrexham AFC in The Jenkins Era&#x27;s fictional media ecosystem.">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#C8102E">
@@ -19,150 +20,238 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 </head>
-<body>
+<body class="home-body mc-body">
 
-<!-- SITE NAV -->
-<nav class="site-nav">
-  <div class="site-nav-inner">
-    <a href="../index.html" class="snav-brand">WRXM <span>FC26</span></a>
-    <a href="../index.html" class="snav-link">Season Hub</a>
-    <a href="../journal.html" class="snav-link">Journal</a>
-    <a href="../season.html" class="snav-link">Season Stats</a>
-    <a href="../roster.html" class="snav-link">Roster</a>
-    <a href="../depth_chart.html" class="snav-link">Depth Chart</a>
-    <a href="../academy.html" class="snav-link">Academy</a>
-    <a href="../season_preview.html" class="snav-link">Season Preview</a>
-    <a href="../dossier.html" class="snav-link">Dossier</a>
-    <a href="../history.html" class="snav-link">History</a>
-    <a href="../media/index.html" class="snav-link active">Media Centre</a>
-    <a href="../submit.html" class="snav-link" style="margin-left:auto; color:var(--gold);">⚡ Submit</a>
+<header class="home-header">
+  <div class="home-header-inner">
+    <a class="home-brand" href="../index.html">
+      <img class="home-brand-crest" src="../assets/photos/wrexham-crest.png" alt="Wrexham AFC crest">
+      <span class="home-brand-text">
+        <span class="home-brand-title">The Jenkins Era</span>
+        <span class="home-brand-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </span>
+    </a>
+    <div class="home-header-meta">
+      <span class="home-header-season">Season 2026&ndash;27</span>
+      <span class="home-header-comp">Premier League</span>
+    </div>
   </div>
-</nav>
 
-<div class="page-wrap">
+  <nav class="home-primary-nav" aria-label="Primary">
+    <div class="home-primary-nav-inner">
+      <a href="../index.html" class="home-nav-link">Home</a>
+      <a href="../media/index.html" class="home-nav-link is-active" aria-current="page">News</a>
+      <a href="../season.html" class="home-nav-link">Matches</a>
+      <a href="../roster.html" class="home-nav-link">Squad</a>
+      <a href="../academy.html" class="home-nav-link">Academy</a>
+      <a href="../history.html" class="home-nav-link">The Jenkins Era</a>
+      <a href="../season.html#player-stats" class="home-nav-link">Stats</a>
+    </div>
+  </nav>
 
-<div class="masthead">
-  <span class="masthead-label">Wrexham AFC · Media Centre</span>
-  <span class="masthead-date">Journalist Profiles</span>
-</div>
+  <nav class="home-utility-nav" aria-label="Secondary">
+    <div class="home-utility-nav-inner">
+      <a href="../depth_chart.html">Depth Chart</a>
+      <a href="../dossier.html">Manager Profile</a>
+      <a href="../history.html">Season Archive</a>
+      <a href="../journal.html">Journal</a>
+      <a href="../season_preview.html">Season Preview</a>
+      <a href="../submit.html" class="home-utility-submit">Submit Data</a>
+    </div>
+  </nav>
+</header>
 
-<div class="media-hub-header">
-  <h1 class="hub-title">Journalist <span>Profiles</span></h1>
-  <p class="hub-subtitle">Every recurring voice covering Keeyvon Jenkins' Wrexham, fictional to a person, each with their own outlet, angle, and opinion of the club.</p>
+<main class="mc-shell" id="mc-main">
+<div class="mc-intro">
+  <h1 class="mc-intro-title">The Press <span>Corps</span></h1>
+  <p class="mc-intro-sub">Every recurring voice covering Keeyvon Jenkins' Wrexham, fictional to a person, each with their own outlet, beat, and opinion of the club &mdash; plus Jenkins' own private journal, included here so it can share the same profile system without being mistaken for journalism.</p>
 </div>
-<div class="journalist-grid">
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/owen-meredith.jpg" alt="Owen Meredith">
-  <div class="journalist-card-body">
-    <h3>Owen Meredith</h3>
-    <div class="journalist-card-outlet">Wrexham Beat Reporter &middot; The Red Dragon Dispatch</div>
-    <p>Wrexham-born, 34. Covered the club since League Two for WalesOnline. Joined The Athletic UK desk in 2023. Has complicated feelings about the Hollywood era: loves what it did for the club financially, quietly mourns something he can't name.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Skeptical but fair. Not hostile to Jenkins, but not a cheerleader. Asks the questions the pressroom won't. Opens with a scene, not the result; builds running threads across entries; ends with an open question.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> Match reports, Club news, Injuries, Press conferences, Academy updates</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> The external voice — the outside world's view of Jenkins and Wrexham, filed from inside the town itself. Complicated, not hostile.</p>
-    <a href="archive.html#author-owen-meredith" class="journalist-card-link">63 articles &rarr;</a>
+<section class="mc-section" aria-label="Journalist profiles">
+  <div class="press-corps-grid">
+<a class="press-card" id="owen-meredith" href="archive.html?author=owen-meredith" style="border-top-color:var(--dispatch-blue)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/owen-meredith.jpg" alt="Owen Meredith">
+    <div>
+      <div class="press-card-name">Owen Meredith</div>
+      <div class="press-card-role">Wrexham Beat Reporter &middot; The Red Dragon Dispatch</div>
+    </div>
   </div>
-</div>
-<div class="journalist-card">
-  <div class="journalist-avatar journalist-avatar-mono" style="background:var(--journal-accent)">KJ</div>
-  <div class="journalist-card-body">
-    <h3>Keeyvon Jenkins</h3>
-    <div class="journalist-card-outlet">Head Coach, Wrexham AFC &middot; The Manager's Diary</div>
-    <p>Wrexham's American head coach, in post since January 2025. Keeps a private journal reflecting on the arc of a season rather than any single result — an internal counterpoint to the press coverage, not a piece of media in its own right.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Reflective, candid, unpolished. Written for himself first. Occasionally in quiet tension with what the press is reporting the same week.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> Manager's diary</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> Not a journalist — the club's own voice, included here so his diary can share the same rendering system as the press coverage without being mistaken for it.</p>
-    <a href="archive.html#author-keeyvon-jenkins" class="journalist-card-link">10 articles &rarr;</a>
+  <p class="press-card-bio">Wrexham-born, 34. Covered the club since League Two for WalesOnline. Joined The Athletic UK desk in 2023. Has complicated feelings about the Hollywood era: loves what it did for the club financially, quietly mourns something he can't name.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> Match reports, Club news, Injuries, Press conferences, Academy updates</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> The external voice — the outside world's view of Jenkins and Wrexham, filed from inside the town itself. Complicated, not hostile.</p>
+  
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>0</strong> articles</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
   </div>
-</div>
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/oliver-hargreaves.jpg" alt="Oliver Hargreaves">
-  <div class="journalist-card-body">
-    <h3>Oliver Hargreaves</h3>
-    <div class="journalist-card-outlet">Senior Football Correspondent &middot; Sky Sports</div>
-    <p>Raised in Shrewsbury. Former Guardian Northern Football Correspondent before joining Sky Sports in 2018. Has covered seven World Cups and every Champions League Final since 2003. Specializes in football history and legacy pieces.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Authoritative, historical, measured, thoughtful — never sensational. Connects modern achievements to historical precedents rather than chasing the news cycle.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> Football history, Legacy pieces, Major milestones</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> Appears only for milestones, not routine matches. His role is to explain why an achievement matters historically, placing Wrexham's rise inside the wider story of English football.</p>
-    <a href="archive.html#author-oliver-hargreaves" class="journalist-card-link">3 articles &rarr;</a>
+</a>
+<a class="press-card" id="keeyvon-jenkins" href="archive.html?author=keeyvon-jenkins" style="border-top-color:var(--journal-accent)">
+  <div class="press-card-top">
+    <div class="press-avatar-mono" style="background:var(--journal-accent)">KJ</div>
+    <div>
+      <div class="press-card-name">Keeyvon Jenkins</div>
+      <div class="press-card-role">Head Coach, Wrexham AFC &middot; The Hawk's Nest (Private Journal)</div>
+    </div>
   </div>
-</div>
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/rebecca-holt.jpg" alt="Rebecca Holt">
-  <div class="journalist-card-body">
-    <h3>Rebecca Holt</h3>
-    <div class="journalist-card-outlet">National Football Reporter &middot; BBC Sport</div>
-    <p>A BBC Sport staple for over a decade, known for measured, wire-service-straight reporting that breaks news without editorializing. The reporter other outlets check their facts against.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Objective, plain-spoken, fast. Leads with the fact, not the angle — breaking news and confirmations rather than opinion pieces.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> Breaking news, Transfers, Official confirmations</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> Neutral. Covers Wrexham exactly as she'd cover any Premier League club — no romance, no skepticism, just the facts as they land.</p>
-    <a href="archive.html#author-rebecca-holt" class="journalist-card-link">1 article &rarr;</a>
+  <p class="press-card-bio">Wrexham's American head coach, in post since January 2025. Keeps a private journal reflecting on the arc of a season rather than any single result — an internal counterpoint to the press coverage, not a piece of media in its own right.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> Manager's diary</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> Not a journalist — the club's own voice, included here so his diary can share the same rendering system as the press coverage without being mistaken for it.</p>
+  
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>10</strong> entries</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
   </div>
-</div>
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/james-mcallister.jpg" alt="James McAllister">
-  <div class="journalist-card-body">
-    <h3>James McAllister</h3>
-    <div class="journalist-card-outlet">Tactical Analyst &middot; The Athletic</div>
-    <p>Former academy coach turned writer, recruited by The Athletic for his ability to explain a back-three rotation to a lay reader without losing the nuance a coach would want. Reads a match through shape and recruitment logic before he reads it through results.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Dense but readable. Leans on data and video review; treats squad-building and recruitment strategy as part of the same story as the tactics on the pitch.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> Tactical analysis, Recruitment strategy, Player development pathways</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> Genuinely curious about the club's data-driven approach — an admirer of the process more than a fan of the results, which makes his pieces read as credible rather than cheerleading.</p>
-    <a href="archive.html#author-james-mcallister" class="journalist-card-link">2 articles &rarr;</a>
+</a>
+<a class="press-card" id="oliver-hargreaves" href="archive.html?author=oliver-hargreaves" style="border-top-color:var(--hargreaves-accent)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/oliver-hargreaves.jpg" alt="Oliver Hargreaves">
+    <div>
+      <div class="press-card-name">Oliver Hargreaves</div>
+      <div class="press-card-role">Senior Football Correspondent &middot; Sky Sports</div>
+    </div>
   </div>
-</div>
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/marco-bellini.jpg" alt="Marco Bellini">
-  <div class="journalist-card-body">
-    <h3>Marco Bellini</h3>
-    <div class="journalist-card-outlet">European Football Correspondent &middot; Gazzetta dello Sport</div>
-    <p>Turin-based, filing English football for an Italian audience for whom Wrexham's rise reads like a fairy tale imported from another footballing culture. Writes with the romantic tradition of Italian sports journalism — narrative and myth-making over cold analysis.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Romantic, literary, prone to grand comparisons with continental football history. Writes Wrexham's story as a story, not a results service.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> European reaction, Continental comparisons, Narrative features</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> An enchanted outsider. Loves the storybook version of the club and leans into it more than any domestic writer would allow himself to.</p>
-    <a href="archive.html#author-marco-bellini" class="journalist-card-link">0 articles &rarr;</a>
+  <p class="press-card-bio">Raised in Shrewsbury. Former Guardian Northern Football Correspondent before joining Sky Sports in 2018. Has covered seven World Cups and every Champions League Final since 2003. Specializes in football history and legacy pieces.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> Football history, Legacy pieces, Major milestones</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> Appears only for milestones, not routine matches. His role is to explain why an achievement matters historically, placing Wrexham's rise inside the wider story of English football.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Latest:</strong> A Fifth-Tier Club Fifteen Years Ago Is Ninety Minutes From an FA Cup Final</p>
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>3</strong> articles</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
   </div>
-</div>
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/tara-bennett.jpg" alt="Tara Bennett">
-  <div class="journalist-card-body">
-    <h3>Tara Bennett</h3>
-    <div class="journalist-card-outlet">U.S. Football Correspondent &middot; ESPN FC</div>
-    <p>Covers the growing footprint of American ownership, coaching, and playing talent in English football for a U.S. audience. Tracks Keeyvon Jenkins' career from his USMNT days through to the Wrexham dugout as a single throughline.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Warm, promotional in tone without being uncritical — writes for readers who are discovering this world through American eyes, translating context a UK audience would take for granted.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> The American angle, Keeyvon Jenkins profile pieces, U.S. talent pipeline</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> Personally invested in Jenkins' story as an American succeeding in England's top flight — the most sympathetic of the national voices, though not blind to setbacks.</p>
-    <a href="archive.html#author-tara-bennett" class="journalist-card-link">0 articles &rarr;</a>
+</a>
+<a class="press-card" id="rebecca-holt" href="archive.html?author=rebecca-holt" style="border-top-color:var(--holt-accent)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/rebecca-holt.jpg" alt="Rebecca Holt">
+    <div>
+      <div class="press-card-name">Rebecca Holt</div>
+      <div class="press-card-role">National Football Reporter &middot; BBC Sport</div>
+    </div>
   </div>
-</div>
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/darren-cole.jpg" alt="Darren Cole">
-  <div class="journalist-card-body">
-    <h3>Darren Cole</h3>
-    <div class="journalist-card-outlet">Television Pundit &middot; Sky Sports (Studio Pundit)</div>
-    <p>Former Premier League centre-back turned studio pundit, built a career on being the voice in the room willing to say the unfashionable thing. Has been wrong about Wrexham before and isn't shy about revisiting it on air.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Blunt, combative, built for television debate rather than prose — direct quotes and hot-take framing over measured analysis.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> Television debate, Sustainability questions, Contrarian analysis</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> The skeptic. Questions whether the rise is sustainable, whether the model survives a bad transfer window or a manager departure — the necessary counterweight to the romantic coverage elsewhere in the Media Centre.</p>
-    <a href="archive.html#author-darren-cole" class="journalist-card-link">1 article &rarr;</a>
+  <p class="press-card-bio">A BBC Sport staple for over a decade, known for measured, wire-service-straight reporting that breaks news without editorializing. The reporter other outlets check their facts against.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> Breaking news, Transfers, Official confirmations</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> Neutral. Covers Wrexham exactly as she'd cover any Premier League club — no romance, no skepticism, just the facts as they land.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Latest:</strong> Wrexham Confirm Signing of Real Madrid Midfielder Thiago Pitarch</p>
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>1</strong> article</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
   </div>
-</div>
-<div class="journalist-card">
-  <img class="journalist-avatar" src="../assets/journalists/gareth-price.jpg" alt="Gareth Price">
-  <div class="journalist-card-body">
-    <h3>Gareth Price</h3>
-    <div class="journalist-card-outlet">Football Correspondent &middot; BBC Radio Wales</div>
-    <p>A fixture of BBC Radio Wales' sports desk for two decades, calling matches up and down the football pyramid long before Wrexham were a story anyone outside Wales was interested in. Covers the club as part of a wider Welsh football beat, not a Wrexham specialist.</p>
-    <p class="journalist-card-voice"><strong>Voice:</strong> Warm, conversational, built for the ear rather than the page — short sentences, a broadcaster's instinct for pace, comfortable thinking aloud on air. Less interested in a single club's fortunes than in what they mean for the Welsh game as a whole.</p>
-    <p class="journalist-card-specialties"><strong>Covers:</strong> Radio commentary, Welsh football, Fan and phone-in reaction</p>
-    <p class="journalist-card-relationship"><strong>On Wrexham:</strong> Proudly local, but with a wider brief than Owen Meredith's — Wrexham's rise matters to him as much for what it does for Wales' standing in English football as for the club itself.</p>
-    <a href="archive.html#author-gareth-price" class="journalist-card-link">0 articles &rarr;</a>
+</a>
+<a class="press-card" id="james-mcallister" href="archive.html?author=james-mcallister" style="border-top-color:var(--mcallister-accent)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/james-mcallister.jpg" alt="James McAllister">
+    <div>
+      <div class="press-card-name">James McAllister</div>
+      <div class="press-card-role">Tactical Analyst &middot; The Athletic</div>
+    </div>
   </div>
-</div>
-</div>
+  <p class="press-card-bio">Former academy coach turned writer, recruited by The Athletic for his ability to explain a back-three rotation to a lay reader without losing the nuance a coach would want. Reads a match through shape and recruitment logic before he reads it through results.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> Tactical analysis, Recruitment strategy, Player development pathways</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> Genuinely curious about the club's data-driven approach — an admirer of the process more than a fan of the results, which makes his pieces read as credible rather than cheerleading.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Latest:</strong> The Conveyor Belt: How Wrexham's Academy Explains a Fourth Straight Youth Rush Title</p>
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>2</strong> articles</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
+  </div>
+</a>
+<a class="press-card" id="marco-bellini" href="archive.html?author=marco-bellini" style="border-top-color:var(--bellini-accent)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/marco-bellini.jpg" alt="Marco Bellini">
+    <div>
+      <div class="press-card-name">Marco Bellini</div>
+      <div class="press-card-role">European Football Correspondent &middot; Gazzetta dello Sport</div>
+    </div>
+  </div>
+  <p class="press-card-bio">Turin-based, filing English football for an Italian audience for whom Wrexham's rise reads like a fairy tale imported from another footballing culture. Writes with the romantic tradition of Italian sports journalism — narrative and myth-making over cold analysis.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> European reaction, Continental comparisons, Narrative features</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> An enchanted outsider. Loves the storybook version of the club and leans into it more than any domestic writer would allow himself to.</p>
+  
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>0</strong> articles</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
+  </div>
+</a>
+<a class="press-card" id="tara-bennett" href="archive.html?author=tara-bennett" style="border-top-color:var(--bennett-accent)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/tara-bennett.jpg" alt="Tara Bennett">
+    <div>
+      <div class="press-card-name">Tara Bennett</div>
+      <div class="press-card-role">U.S. Football Correspondent &middot; ESPN FC</div>
+    </div>
+  </div>
+  <p class="press-card-bio">Covers the growing footprint of American ownership, coaching, and playing talent in English football for a U.S. audience. Tracks Keeyvon Jenkins' career from his USMNT days through to the Wrexham dugout as a single throughline.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> The American angle, Keeyvon Jenkins profile pieces, U.S. talent pipeline</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> Personally invested in Jenkins' story as an American succeeding in England's top flight — the most sympathetic of the national voices, though not blind to setbacks.</p>
+  
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>0</strong> articles</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
+  </div>
+</a>
+<a class="press-card" id="darren-cole" href="archive.html?author=darren-cole" style="border-top-color:var(--cole-accent)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/darren-cole.jpg" alt="Darren Cole">
+    <div>
+      <div class="press-card-name">Darren Cole</div>
+      <div class="press-card-role">Television Pundit &middot; Sky Sports (Studio Pundit)</div>
+    </div>
+  </div>
+  <p class="press-card-bio">Former Premier League centre-back turned studio pundit, built a career on being the voice in the room willing to say the unfashionable thing. Has been wrong about Wrexham before and isn't shy about revisiting it on air.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> Television debate, Sustainability questions, Contrarian analysis</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> The skeptic. Questions whether the rise is sustainable, whether the model survives a bad transfer window or a manager departure — the necessary counterweight to the romantic coverage elsewhere in the Media Centre.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Latest:</strong> Cole: "Outcoached" Isn't a Word You Get to Use Once and Move On From</p>
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>1</strong> article</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
+  </div>
+</a>
+<a class="press-card" id="gareth-price" href="archive.html?author=gareth-price" style="border-top-color:var(--price-accent)">
+  <div class="press-card-top">
+    <img class="press-avatar" src="../assets/journalists/gareth-price.jpg" alt="Gareth Price">
+    <div>
+      <div class="press-card-name">Gareth Price</div>
+      <div class="press-card-role">Football Correspondent &middot; BBC Radio Wales</div>
+    </div>
+  </div>
+  <p class="press-card-bio">A fixture of BBC Radio Wales' sports desk for two decades, calling matches up and down the football pyramid long before Wrexham were a story anyone outside Wales was interested in. Covers the club as part of a wider Welsh football beat, not a Wrexham specialist.</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">Covers:</strong> Radio commentary, Welsh football, Fan and phone-in reaction</p>
+  <p class="press-card-bio"><strong style="color:var(--white)">On Wrexham:</strong> Proudly local, but with a wider brief than Owen Meredith's — Wrexham's rise matters to him as much for what it does for Wales' standing in English football as for the club itself.</p>
+  
+  <div class="press-card-foot">
+    <span class="press-card-count"><strong>0</strong> articles</span>
+    <span class="press-card-cta">View coverage &rarr;</span>
+  </div>
+</a>
+  </div>
+</section>
+</main>
 
-
-</div>
+<footer class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <img class="home-footer-crest" src="../assets/photos/wrexham-crest.png" alt="">
+      <div>
+        <span class="home-footer-title">The Jenkins Era</span>
+        <span class="home-footer-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </div>
+    </div>
+    <nav class="home-footer-links" aria-label="Footer">
+      <a href="../media/index.html">Media Centre</a>
+      <a href="../journal.html">Journal</a>
+      <a href="../season.html">Season</a>
+      <a href="../roster.html">Squad</a>
+      <a href="../depth_chart.html">Depth Chart</a>
+      <a href="../academy.html">Academy</a>
+      <a href="../history.html">History</a>
+      <a href="../dossier.html">Manager Profile</a>
+      <a href="../season_preview.html">Season Preview</a>
+      <a href="../submit.html">Submit Data</a>
+    </nav>
+    <p class="home-footer-disclosure">An FC26 career-mode history project documenting the fictional managerial
+      career of Keevyon Jenkins at Wrexham AFC. Not affiliated with, endorsed by, or connected to Wrexham AFC,
+      the Premier League, the EFL, EA Sports, or any broadcaster or publication. Journalists, articles and
+      match events on this site are fictional.</p>
+  </div>
+</footer>
 
 </body>
 </html>
