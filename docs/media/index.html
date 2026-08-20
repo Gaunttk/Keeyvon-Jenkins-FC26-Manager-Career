@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Centre | Wrexham AFC</title>
+<title>Media Centre | The Jenkins Era</title>
+<meta name="description" content="The newsroom behind The Jenkins Era — reporting, analysis and opinion on Keevyon Jenkins&#x27; Wrexham from a fictional football press corps.">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#C8102E">
@@ -19,123 +20,141 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 </head>
-<body>
+<body class="home-body mc-body">
 
-<!-- SITE NAV -->
-<nav class="site-nav">
-  <div class="site-nav-inner">
-    <a href="../index.html" class="snav-brand">WRXM <span>FC26</span></a>
-    <a href="../index.html" class="snav-link">Season Hub</a>
-    <a href="../journal.html" class="snav-link">Journal</a>
-    <a href="../season.html" class="snav-link">Season Stats</a>
-    <a href="../roster.html" class="snav-link">Roster</a>
-    <a href="../depth_chart.html" class="snav-link">Depth Chart</a>
-    <a href="../academy.html" class="snav-link">Academy</a>
-    <a href="../season_preview.html" class="snav-link">Season Preview</a>
-    <a href="../dossier.html" class="snav-link">Dossier</a>
-    <a href="../history.html" class="snav-link">History</a>
-    <a href="../media/index.html" class="snav-link active">Media Centre</a>
-    <a href="../submit.html" class="snav-link" style="margin-left:auto; color:var(--gold);">⚡ Submit</a>
+<header class="home-header">
+  <div class="home-header-inner">
+    <a class="home-brand" href="../index.html">
+      <img class="home-brand-crest" src="../assets/photos/wrexham-crest.png" alt="Wrexham AFC crest">
+      <span class="home-brand-text">
+        <span class="home-brand-title">The Jenkins Era</span>
+        <span class="home-brand-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </span>
+    </a>
+    <div class="home-header-meta">
+      <span class="home-header-season">Season 2026&ndash;27</span>
+      <span class="home-header-comp">Premier League</span>
+    </div>
   </div>
-</nav>
 
-<div class="page-wrap">
+  <nav class="home-primary-nav" aria-label="Primary">
+    <div class="home-primary-nav-inner">
+      <a href="../index.html" class="home-nav-link">Home</a>
+      <a href="../media/index.html" class="home-nav-link is-active" aria-current="page">News</a>
+      <a href="../season.html" class="home-nav-link">Matches</a>
+      <a href="../roster.html" class="home-nav-link">Squad</a>
+      <a href="../academy.html" class="home-nav-link">Academy</a>
+      <a href="../history.html" class="home-nav-link">The Jenkins Era</a>
+      <a href="../season.html#player-stats" class="home-nav-link">Stats</a>
+    </div>
+  </nav>
 
-<div class="masthead">
-  <span class="masthead-label">Wrexham AFC · Media Centre</span>
-  <span class="masthead-date">Season 2026–27</span>
+  <nav class="home-utility-nav" aria-label="Secondary">
+    <div class="home-utility-nav-inner">
+      <a href="../depth_chart.html">Depth Chart</a>
+      <a href="../dossier.html">Manager Profile</a>
+      <a href="../history.html">Season Archive</a>
+      <a href="../journal.html">Journal</a>
+      <a href="../season_preview.html">Season Preview</a>
+      <a href="../submit.html" class="home-utility-submit">Submit Data</a>
+    </div>
+  </nav>
+</header>
+
+<main class="mc-shell" id="mc-main">
+<div class="mc-intro">
+  <div class="mc-intro-eyebrow"><span class="mc-live-dot" aria-hidden="true"></span>Season 2026&ndash;27 &middot; Live Coverage</div>
+  <h1 class="mc-intro-title">Media <span>Centre</span></h1>
+  <p class="mc-intro-sub">Reporting, analysis and opinion from across the football world documenting the Keevyon Jenkins era at Wrexham &mdash; Sky Sports, BBC Sport, The Athletic, Gazzetta dello Sport, ESPN FC, BBC Radio Wales, and the Racecourse's own Red Dragon Dispatch.</p>
 </div>
 
-<div class="media-hub-header">
-  <div class="hub-eyebrow">An Alternate-History Football Timeline &middot; FC26 Career Mode</div>
-  <h1 class="hub-title">Media <span>Centre</span></h1>
-  <p class="hub-subtitle">Wrexham AFC as covered by a fictional press corps &mdash; Sky Sports, BBC Sport, The Athletic, Gazzetta dello Sport, ESPN FC, and the Racecourse's own Red Dragon Dispatch. None of this is real journalism about a real event; it's this career's story, told by recurring voices.</p>
-  <div class="media-hub-links">
-    <a class="media-hub-link" href="journalists.html">Journalist Profiles &rarr;</a>
-    <a class="media-hub-link" href="archive.html">Full Archive &rarr;</a>
+<section class="mc-section" aria-label="Lead stories">
+  <div class="mc-lead-grid" id="mc-lead-grid"></div>
+</section>
+
+<section class="mc-section" aria-label="Coverage categories">
+  <div class="mc-section-head"><h2>Coverage</h2></div>
+  <div class="mc-cat-grid" id="mc-cat-grid"></div>
+</section>
+
+<section class="mc-section" aria-label="Latest from the newsroom">
+  <div class="mc-section-head">
+    <h2>Latest From the Newsroom</h2>
+    <a class="mc-section-link" href="archive.html">Full archive &rarr;</a>
   </div>
-</div>
+  <div class="mc-filter-bar" id="mc-filter-bar" role="group" aria-label="Filter the newsroom feed by category"></div>
+  <div class="mc-feed" id="mc-feed"></div>
+  <div class="mc-feed-more"><a href="archive.html">View Full Archive &rarr;</a></div>
+</section>
 
-<div class="media-section-header"><h2>Featured Columns</h2></div>
-<div class="media-grid">
-<a class="media-card" href="articles/2027-03-20-hargreaves-first-cup-final.html" style="border-top:3px solid var(--hargreaves-accent)">
-  <div class="media-card-outlet">Sky Sports</div>
-  <h3 class="media-card-title">A Fifth-Tier Club Fifteen Years Ago Is Ninety Minutes From an FA Cup Final</h3>
-  <p class="media-card-dek">Wrexham's 2-0 win over Arsenal puts Keeyvon Jenkins one game from a first major domestic final in the club's history. That sentence alone is worth pausing on.</p>
-  <div class="media-card-byline">Oliver Hargreaves &middot; Mar 20, 2027</div>
-</a>
-<a class="media-card" href="articles/2027-01-31-hargreaves-four-clear-at-the-top.html" style="border-top:3px solid var(--hargreaves-accent)">
-  <div class="media-card-outlet">Sky Sports</div>
-  <h3 class="media-card-title">Christmas Top, a Wobble, Four Clear: Wrexham's January Answered the Only Question Left</h3>
-  <p class="media-card-dek">Six weeks ago I wrote that Wrexham's opening seventeen games already belonged in the history books regardless of how the season finished. January is the month that started answering how it finishes.</p>
-  <div class="media-card-byline">Oliver Hargreaves &middot; Jan 31, 2027</div>
-</a>
-<a class="media-card" href="articles/2026-12-20-hargreaves-greatest-promoted-seasons.html" style="border-top:3px solid var(--hargreaves-accent)">
-  <div class="media-card-outlet">Sky Sports</div>
-  <h3 class="media-card-title">Second Place After Seventeen Matches: Why Wrexham's First Premier League Campaign Already Belongs in the History Books</h3>
-  <p class="media-card-dek">Whatever happens between now and May, what Keeyvon Jenkins has built in barely eighteen months at the Racecourse has already crossed a threshold English football rarely sees from a newly promoted club.</p>
-  <div class="media-card-byline">Oliver Hargreaves &middot; Dec 20, 2026</div>
-</a>
-</div>
-<div class="media-section-header"><h2>Match Coverage</h2></div>
-<div class="media-grid">
-<a class="media-card media-card-teaser" href="../journal.html#2027-05-01-pl-manchester-united-away">
-  <div class="media-card-outlet">Red Dragon Dispatch</div>
-  <h3 class="media-card-title">Amad Brace Sinks Wrexham as Late Obi-Vargas Flurry Comes Too Late</h3>
-  <p class="media-card-dek">Wrexham fell behind early and never recovered at Old Trafford, with Chido Obi and Juan Cruz Vargas's stoppage-time goals only softening a 3-2 defeat.</p>
-  <div class="media-card-byline">Owen Meredith &middot; May 1, 2027</div>
-</a>
-<a class="media-card media-card-teaser" href="../journal.html#2027-04-17-pl-crystal-palace-home">
-  <div class="media-card-outlet">Red Dragon Dispatch</div>
-  <h3 class="media-card-title">Kean's Late Strike Spoils Jenkins's 100th Game in Charge</h3>
-  <p class="media-card-dek">Wrexham could not find a way past a stubborn Crystal Palace rearguard, and a Kean header eight minutes from time turned a landmark afternoon into a flat one.</p>
-  <div class="media-card-byline">Owen Meredith &middot; Apr 17, 2027</div>
-</a>
-<a class="media-card media-card-teaser" href="../journal.html#2027-04-11-pl-aston-villa-away">
-  <div class="media-card-outlet">Red Dragon Dispatch</div>
-  <h3 class="media-card-title">Amrizi Runs the Show Again as Wrexham Put Four Past Aston Villa</h3>
-  <p class="media-card-dek">Eight days after needing a goalkeeper to survive Aston Villa in the cup, Wrexham needed nothing of the sort at Villa Park — Yacel Amrizi did the rest himself.</p>
-  <div class="media-card-byline">Owen Meredith &middot; Apr 11, 2027</div>
-</a>
-</div>
-<div class="media-section-header"><h2>Tactical Analysis</h2></div>
-<div class="media-grid">
-<a class="media-card" href="articles/2027-03-06-mcallister-academy-pipeline-fourth-title.html" style="border-top:3px solid var(--mcallister-accent)">
-  <div class="media-card-outlet">The Athletic</div>
-  <h3 class="media-card-title">The Conveyor Belt: How Wrexham's Academy Explains a Fourth Straight Youth Rush Title</h3>
-  <p class="media-card-dek">A 5-0 rout of Bournemouth in the Youth Rush final is not really the story. The story is how many names from that competition are already playing first-team minutes in the Premier League and the Carabao Cup.</p>
-  <div class="media-card-byline">James McAllister &middot; Mar 6, 2027</div>
-</a>
-<a class="media-card" href="articles/2027-02-28-mcallister-arsenal-away-statement.html" style="border-top:3px solid var(--mcallister-accent)">
-  <div class="media-card-outlet">The Athletic</div>
-  <h3 class="media-card-title">Four at the Emirates: What Wrexham's Demolition of Arsenal Actually Showed</h3>
-  <p class="media-card-dek">A 4-0 away win over the league's third-place side is a result. The pattern behind it — pace in behind, a compressed press, and a front line built almost entirely from cut-price or academy talent — is the more durable story.</p>
-  <div class="media-card-byline">James McAllister &middot; Feb 28, 2027</div>
-</a>
-</div>
-<div class="media-section-header"><h2>Television Debate</h2></div>
-<div class="media-grid">
-<a class="media-card" href="articles/2027-02-04-cole-carabao-cup-exit-outcoached.html" style="border-top:3px solid var(--cole-accent)">
-  <div class="media-card-outlet">Sky Sports (Studio Pundit)</div>
-  <h3 class="media-card-title">Cole: "Outcoached" Isn't a Word You Get to Use Once and Move On From</h3>
-  <p class="media-card-dek">Jenkins used it himself after Chelsea ended Wrexham's Carabao Cup run on penalties. Darren Cole thinks the manager was right to say it — and that it's the first real crack in a story that's had none.</p>
-  <div class="media-card-byline">Darren Cole &middot; Feb 4, 2027</div>
-</a>
-</div>
-<div class="media-section-header"><h2>International Reaction</h2></div>
-<p class="media-empty">More coverage coming as the season develops.</p>
-<div class="media-section-header"><h2>Press Conferences</h2></div>
-<div class="media-grid">
-<a class="media-card" href="articles/2026-12-30-holt-pitarch-signing-confirmed.html" style="border-top:3px solid var(--holt-accent)">
-  <div class="media-card-outlet">BBC Sport</div>
-  <h3 class="media-card-title">Wrexham Confirm Signing of Real Madrid Midfielder Thiago Pitarch</h3>
-  <p class="media-card-dek">The Premier League leaders have added midfield depth on the opening day of the winter window, while last season's Player of the Year has been placed on the transfer list.</p>
-  <div class="media-card-byline">Rebecca Holt &middot; Dec 30, 2026</div>
-</a>
-</div>
+<section class="mc-section" aria-label="The Press Corps">
+  <div class="mc-section-head">
+    <h2>The Press Corps</h2>
+    <a class="mc-section-link" href="journalists.html">All profiles &rarr;</a>
+  </div>
+  <div class="press-corps-grid" id="press-corps-grid"></div>
+</section>
 
+<section class="mc-section" aria-label="The Hawk's Nest">
+  <div class="hawk-section">
+    <div class="hawk-head">
+      <h2>The Hawk&rsquo;s Nest</h2>
+      <span class="hawk-tag">Private Journal &middot; Keeyvon Jenkins</span>
+    </div>
+    <p class="hawk-note">Not journalism &mdash; the manager's own record of the season, kept for himself.</p>
+    <div class="hawk-entries" id="hawk-entries"></div>
+    <a class="mc-section-link" href="../journal.html" style="display:inline-block;margin-top:18px;">Read the full journal &rarr;</a>
+  </div>
+</section>
 
-</div>
+<section class="mc-section" aria-label="Voices across football">
+  <div class="mc-section-head"><h2>Voices Across Football</h2></div>
+  <div class="mc-pub-grid" id="mc-pub-grid"></div>
+</section>
 
+<section class="mc-section" aria-label="Media archive">
+  <div class="mc-section-head">
+    <h2>Media Archive</h2>
+    <a class="mc-section-link" href="archive.html">Browse all &rarr;</a>
+  </div>
+  <div class="mc-archive-teaser" id="mc-archive-teaser"></div>
+</section>
+
+<noscript>
+  <p class="mc-empty">This page assembles its lead stories and feed from the project's own data files with a
+    small script. With JavaScript off, browse directly: <a href="archive.html">Full Archive</a>,
+    <a href="journalists.html">Journalist Profiles</a>.</p>
+</noscript>
+</main>
+
+<footer class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <img class="home-footer-crest" src="../assets/photos/wrexham-crest.png" alt="">
+      <div>
+        <span class="home-footer-title">The Jenkins Era</span>
+        <span class="home-footer-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </div>
+    </div>
+    <nav class="home-footer-links" aria-label="Footer">
+      <a href="../media/index.html">Media Centre</a>
+      <a href="../journal.html">Journal</a>
+      <a href="../season.html">Season</a>
+      <a href="../roster.html">Squad</a>
+      <a href="../depth_chart.html">Depth Chart</a>
+      <a href="../academy.html">Academy</a>
+      <a href="../history.html">History</a>
+      <a href="../dossier.html">Manager Profile</a>
+      <a href="../season_preview.html">Season Preview</a>
+      <a href="../submit.html">Submit Data</a>
+    </nav>
+    <p class="home-footer-disclosure">An FC26 career-mode history project documenting the fictional managerial
+      career of Keevyon Jenkins at Wrexham AFC. Not affiliated with, endorsed by, or connected to Wrexham AFC,
+      the Premier League, the EFL, EA Sports, or any broadcaster or publication. Journalists, articles and
+      match events on this site are fictional.</p>
+  </div>
+</footer>
+<script src="../assets/media_index.js"></script>
+<script src="../assets/media.js"></script>
 </body>
 </html>

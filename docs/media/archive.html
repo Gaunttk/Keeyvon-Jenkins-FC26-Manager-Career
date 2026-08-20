@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Archive | Media Centre</title>
+<title>Media Archive | Media Centre</title>
+<meta name="description" content="Every article and journal entry published this career, filterable by category, journalist and season.">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="manifest" href="../manifest.json">
 <meta name="theme-color" content="#C8102E">
@@ -19,463 +20,555 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 </head>
-<body>
+<body class="home-body mc-body">
 
-<!-- SITE NAV -->
-<nav class="site-nav">
-  <div class="site-nav-inner">
-    <a href="../index.html" class="snav-brand">WRXM <span>FC26</span></a>
-    <a href="../index.html" class="snav-link">Season Hub</a>
-    <a href="../journal.html" class="snav-link">Journal</a>
-    <a href="../season.html" class="snav-link">Season Stats</a>
-    <a href="../roster.html" class="snav-link">Roster</a>
-    <a href="../depth_chart.html" class="snav-link">Depth Chart</a>
-    <a href="../academy.html" class="snav-link">Academy</a>
-    <a href="../season_preview.html" class="snav-link">Season Preview</a>
-    <a href="../dossier.html" class="snav-link">Dossier</a>
-    <a href="../history.html" class="snav-link">History</a>
-    <a href="../media/index.html" class="snav-link active">Media Centre</a>
-    <a href="../submit.html" class="snav-link" style="margin-left:auto; color:var(--gold);">⚡ Submit</a>
+<header class="home-header">
+  <div class="home-header-inner">
+    <a class="home-brand" href="../index.html">
+      <img class="home-brand-crest" src="../assets/photos/wrexham-crest.png" alt="Wrexham AFC crest">
+      <span class="home-brand-text">
+        <span class="home-brand-title">The Jenkins Era</span>
+        <span class="home-brand-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </span>
+    </a>
+    <div class="home-header-meta">
+      <span class="home-header-season">Season 2026&ndash;27</span>
+      <span class="home-header-comp">Premier League</span>
+    </div>
   </div>
-</nav>
 
-<div class="page-wrap">
+  <nav class="home-primary-nav" aria-label="Primary">
+    <div class="home-primary-nav-inner">
+      <a href="../index.html" class="home-nav-link">Home</a>
+      <a href="../media/index.html" class="home-nav-link is-active" aria-current="page">News</a>
+      <a href="../season.html" class="home-nav-link">Matches</a>
+      <a href="../roster.html" class="home-nav-link">Squad</a>
+      <a href="../academy.html" class="home-nav-link">Academy</a>
+      <a href="../history.html" class="home-nav-link">The Jenkins Era</a>
+      <a href="../season.html#player-stats" class="home-nav-link">Stats</a>
+    </div>
+  </nav>
 
-<div class="masthead">
-  <span class="masthead-label">Wrexham AFC · Media Centre</span>
-  <span class="masthead-date">Full Archive</span>
-</div>
+  <nav class="home-utility-nav" aria-label="Secondary">
+    <div class="home-utility-nav-inner">
+      <a href="../depth_chart.html">Depth Chart</a>
+      <a href="../dossier.html">Manager Profile</a>
+      <a href="../history.html">Season Archive</a>
+      <a href="../journal.html">Journal</a>
+      <a href="../season_preview.html">Season Preview</a>
+      <a href="../submit.html" class="home-utility-submit">Submit Data</a>
+    </div>
+  </nav>
+</header>
 
-<div class="media-hub-header">
-  <h1 class="hub-title">Full <span>Archive</span></h1>
-  <p class="hub-subtitle">Every article and entry published this season, browsable by author.</p>
+<main class="mc-shell" id="mc-main">
+<div class="mc-intro">
+  <h1 class="mc-intro-title">Media <span>Archive</span></h1>
+  <p class="mc-intro-sub">Every article and journal entry published so far, filterable by category, journalist and season &mdash; the historical record of how Wrexham's rise was reported at the time.</p>
 </div>
-<div class="media-filter-bar">
-<button class="jf-btn active" onclick="filterArchive('all',this)">All</button>
-<button class="jf-btn" onclick="filterArchive('owen-meredith',this)">Owen Meredith</button>
-<button class="jf-btn" onclick="filterArchive('keeyvon-jenkins',this)">Keeyvon Jenkins</button>
-<button class="jf-btn" onclick="filterArchive('oliver-hargreaves',this)">Oliver Hargreaves</button>
-<button class="jf-btn" onclick="filterArchive('rebecca-holt',this)">Rebecca Holt</button>
-<button class="jf-btn" onclick="filterArchive('james-mcallister',this)">James McAllister</button>
-<button class="jf-btn" onclick="filterArchive('marco-bellini',this)">Marco Bellini</button>
-<button class="jf-btn" onclick="filterArchive('tara-bennett',this)">Tara Bennett</button>
-<button class="jf-btn" onclick="filterArchive('darren-cole',this)">Darren Cole</button>
-<button class="jf-btn" onclick="filterArchive('gareth-price',this)">Gareth Price</button>
+<div class="mc-archive-controls">
+  <div class="mc-archive-group" id="mc-archive-cat-group">
+      <span class="mc-archive-group-label">Category</span>
+      <button type="button" class="mc-filter-btn is-active" data-value="all" aria-pressed="true">All</button><button type="button" class="mc-filter-btn" data-value="match-reports" aria-pressed="false">Match Reports (60)</button><button type="button" class="mc-filter-btn" data-value="hawks-nest" aria-pressed="false">Hawk's Nest (10)</button><button type="button" class="mc-filter-btn" data-value="history" aria-pressed="false">History (3)</button><button type="button" class="mc-filter-btn" data-value="academy" aria-pressed="false">Academy (2)</button><button type="button" class="mc-filter-btn" data-value="opinion" aria-pressed="false">Opinion (1)</button><button type="button" class="mc-filter-btn" data-value="transfers" aria-pressed="false">Transfers (4)</button>
+    </div>
+  <div class="mc-archive-group" id="mc-archive-author-group">
+      <span class="mc-archive-group-label">Journalist</span>
+      <button type="button" class="mc-filter-btn is-active" data-value="all" aria-pressed="true">All</button><button type="button" class="mc-filter-btn" data-value="owen-meredith" aria-pressed="false">Owen Meredith</button><button type="button" class="mc-filter-btn" data-value="keeyvon-jenkins" aria-pressed="false">Keeyvon Jenkins</button><button type="button" class="mc-filter-btn" data-value="oliver-hargreaves" aria-pressed="false">Oliver Hargreaves</button><button type="button" class="mc-filter-btn" data-value="rebecca-holt" aria-pressed="false">Rebecca Holt</button><button type="button" class="mc-filter-btn" data-value="james-mcallister" aria-pressed="false">James McAllister</button><button type="button" class="mc-filter-btn" data-value="marco-bellini" aria-pressed="false">Marco Bellini</button><button type="button" class="mc-filter-btn" data-value="tara-bennett" aria-pressed="false">Tara Bennett</button><button type="button" class="mc-filter-btn" data-value="darren-cole" aria-pressed="false">Darren Cole</button><button type="button" class="mc-filter-btn" data-value="gareth-price" aria-pressed="false">Gareth Price</button>
+    </div>
+  <div class="mc-archive-group" id="mc-archive-season-group">
+      <span class="mc-archive-group-label">Season</span>
+      <button type="button" class="mc-filter-btn is-active" data-value="all" aria-pressed="true">All</button><button type="button" class="mc-filter-btn" data-value="2026/27" aria-pressed="false">2026/27</button><button type="button" class="mc-filter-btn" data-value="2025/26" aria-pressed="false">2025/26</button>
+    </div>
+  <input type="search" id="mc-archive-search" class="mc-search" placeholder="Search headlines, authors, outlets&hellip;" aria-label="Search the archive">
 </div>
-<div class="archive-list">
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#2027-05-01-pl-manchester-united-away">
-  <span class="archive-row-date">May 1, 2027</span>
-  <span class="archive-row-title">Amad Brace Sinks Wrexham as Late Obi-Vargas Flurry Comes Too Late</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#2027-04-17-pl-crystal-palace-home">
-  <span class="archive-row-date">Apr 17, 2027</span>
-  <span class="archive-row-title">Kean's Late Strike Spoils Jenkins's 100th Game in Charge</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#2027-04-11-pl-aston-villa-away">
-  <span class="archive-row-date">Apr 11, 2027</span>
-  <span class="archive-row-title">Amrizi Runs the Show Again as Wrexham Put Four Past Aston Villa</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-102">
-  <span class="archive-row-date">Apr 11, 2027</span>
-  <span class="archive-row-title">Entry 102</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#2027-04-03-fa-cup-qtr-aston-villa">
-  <span class="archive-row-date">Apr 3, 2027</span>
-  <span class="archive-row-title">Okonkwo Stands Tall as Wrexham Grind Out an FA Cup Semi-Final Berth</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#2027-03-20-pl-bournemouth-away">
-  <span class="archive-row-date">Mar 20, 2027</span>
-  <span class="archive-row-title">Amrizi and Ngumoha Answer Every Bournemouth Punch on the South Coast</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#2027-03-20-fa-cup-semi-arsenal">
-  <span class="archive-row-date">Mar 20, 2027</span>
-  <span class="archive-row-title">Obi and Ngumoha Send Wrexham Through to the FA Cup Final</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="oliver-hargreaves" href="articles/2027-03-20-hargreaves-first-cup-final.html">
-  <span class="archive-row-date">Mar 20, 2027</span>
-  <span class="archive-row-title">A Fifth-Tier Club Fifteen Years Ago Is Ninety Minutes From an FA Cup Final</span>
-  <span class="archive-row-byline">Oliver Hargreaves &middot; Sky Sports</span>
-</a>
-<a class="archive-row" data-author="james-mcallister" href="articles/2027-03-06-mcallister-academy-pipeline-fourth-title.html">
-  <span class="archive-row-date">Mar 6, 2027</span>
-  <span class="archive-row-title">The Conveyor Belt: How Wrexham's Academy Explains a Fourth Straight Youth Rush Title</span>
-  <span class="archive-row-byline">James McAllister &middot; The Athletic</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-bournemouth-yrt-final">
-  <span class="archive-row-date">Mar 5, 2027</span>
-  <span class="archive-row-title">Wrexham's Academy Wins a Fourth Straight Youth Rush Title, Routing Bournemouth in the Final</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-forest-yrt-semi">
-  <span class="archive-row-date">Mar 4, 2027</span>
-  <span class="archive-row-title">Sandoval and Rosa Braces Send Wrexham's Academy Into the Final in a Rout</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-brighton-yrt-quarters">
-  <span class="archive-row-date">Mar 3, 2027</span>
-  <span class="archive-row-title">Cardoso and Drouet Ease Wrexham's Academy Past Brighton Into the Semis</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="james-mcallister" href="articles/2027-02-28-mcallister-arsenal-away-statement.html">
-  <span class="archive-row-date">Feb 28, 2027</span>
-  <span class="archive-row-title">Four at the Emirates: What Wrexham's Demolition of Arsenal Actually Showed</span>
-  <span class="archive-row-byline">James McAllister &middot; The Athletic</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-101">
-  <span class="archive-row-date">Feb 27, 2027</span>
-  <span class="archive-row-title">Entry 101</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-arsenal-away-pl-2">
-  <span class="archive-row-date">Feb 27, 2027</span>
-  <span class="archive-row-title">Sauer Brace Headlines Wrexham's Statement Demolition of Third-Place Arsenal</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-liverpool-yrt-new-campaign">
-  <span class="archive-row-date">Feb 20, 2027</span>
-  <span class="archive-row-title">New Rush Campaign Opens With a Penalty Shootout as Faure Brace Isn't Quite Enough</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-forest-home-pl-2">
-  <span class="archive-row-date">Feb 20, 2027</span>
-  <span class="archive-row-title">Cacace Sets Up Fruk's Winning Penalty as Wrexham Grind Past Forest</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-blackburn-facup-r5">
-  <span class="archive-row-date">Feb 10, 2027</span>
-  <span class="archive-row-title">Amrizi Hat-Trick Sends Wrexham's Kids Through at Ewood Park</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-sunderland-away-pl">
-  <span class="archive-row-date">Feb 10, 2027</span>
-  <span class="archive-row-title">Ngumoha Brace Ends Sunderland's Resistance as Wrexham Push On to 60 Points</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-wolves-away-pl-2">
-  <span class="archive-row-date">Feb 6, 2027</span>
-  <span class="archive-row-title">Amrizi and Ngumoha Score Twice as Wrexham Answer the Carabao Cup Exit With a Statement Away From Home</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="darren-cole" href="articles/2027-02-04-cole-carabao-cup-exit-outcoached.html">
-  <span class="archive-row-date">Feb 4, 2027</span>
-  <span class="archive-row-title">Cole: "Outcoached" Isn't a Word You Get to Use Once and Move On From</span>
-  <span class="archive-row-byline">Darren Cole &middot; Sky Sports (Studio Pundit)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-chelsea-carabao-semi-leg2">
-  <span class="archive-row-date">Feb 3, 2027</span>
-  <span class="archive-row-title">Wrexham's Kids Run Out of Road as Chelsea Win a Carabao Cup Shootout to Level the Tie and Go Through</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="oliver-hargreaves" href="articles/2027-01-31-hargreaves-four-clear-at-the-top.html">
-  <span class="archive-row-date">Jan 31, 2027</span>
-  <span class="archive-row-title">Christmas Top, a Wobble, Four Clear: Wrexham's January Answered the Only Question Left</span>
-  <span class="archive-row-byline">Oliver Hargreaves &middot; Sky Sports</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-sheffieldutd-home-pl-2">
-  <span class="archive-row-date">Jan 30, 2027</span>
-  <span class="archive-row-title">Vargas Off the Bench Tears Sheffield United Apart as Wrexham Go Four Clear at the Top</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-100">
-  <span class="archive-row-date">Jan 30, 2027</span>
-  <span class="archive-row-title">Entry 100</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-brentford-home-pl-2">
-  <span class="archive-row-date">Jan 24, 2027</span>
-  <span class="archive-row-title">Amrizi and Sauer See Off Brentford as Wrexham Make Home Comfort Look Routine</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-westham-away-pl">
-  <span class="archive-row-date">Jan 17, 2027</span>
-  <span class="archive-row-title">Bobadilla Brace Sends Wrexham Past a Booed-Off West Ham, 4-0</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-chelsea-carabao-semi">
-  <span class="archive-row-date">Jan 13, 2027</span>
-  <span class="archive-row-title">Chido Obi Tears Through Chelsea as Wrexham's Kids Reach Another Final</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-forest-facup">
-  <span class="archive-row-date">Jan 9, 2027</span>
-  <span class="archive-row-title">Chido Obi's First Senior Hat-Trick — Actually a Four — Sinks Nottingham Forest</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-chelsea-home-pl">
-  <span class="archive-row-date">Jan 6, 2027</span>
-  <span class="archive-row-title">Wrexham Finally Play Like Themselves Again, and It's Enough to Beat Chelsea</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-brighton-away-pl">
-  <span class="archive-row-date">Jan 2, 2027</span>
-  <span class="archive-row-title">Al Dawsari Ends Wrexham's Unbeaten Run as the New Year Begins With a Thud at the Amex</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-099">
-  <span class="archive-row-date">Jan 2, 2027</span>
-  <span class="archive-row-title">Three Weeks I'd Take Again, and a Flight Home I Wouldn't</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="rebecca-holt" href="articles/2026-12-30-holt-pitarch-signing-confirmed.html">
-  <span class="archive-row-date">Dec 30, 2026</span>
-  <span class="archive-row-title">Wrexham Confirm Signing of Real Madrid Midfielder Thiago Pitarch</span>
-  <span class="archive-row-byline">Rebecca Holt &middot; BBC Sport</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-ipswich-pl">
-  <span class="archive-row-date">Dec 29, 2026</span>
-  <span class="archive-row-title">Amrizi and Sauer See Off Ipswich as a Teenager Named Soria Gets His First Taste</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-westham-pl">
-  <span class="archive-row-date">Dec 25, 2026</span>
-  <span class="archive-row-title">A Christmas Day Scare, Then Amrizi and Obi Send Wrexham Top of the Premier League</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="oliver-hargreaves" href="articles/2026-12-20-hargreaves-greatest-promoted-seasons.html">
-  <span class="archive-row-date">Dec 20, 2026</span>
-  <span class="archive-row-title">Second Place After Seventeen Matches: Why Wrexham's First Premier League Campaign Already Belongs in the History Books</span>
-  <span class="archive-row-byline">Oliver Hargreaves &middot; Sky Sports</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-wolves-yrt-final">
-  <span class="archive-row-date">Dec 19, 2026</span>
-  <span class="archive-row-title">Nico Kopp Man of the Match Again as Wrexham's Kids See Off Wolves to Win a Third Straight Youth Rush Title</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-brentford-yrt-semi">
-  <span class="archive-row-date">Dec 19, 2026</span>
-  <span class="archive-row-title">Valentino Martini's Hat-Trick From Centre-Back Sends Wrexham's Kids Past Brentford and Into the Final</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-crystalpalace-yrt">
-  <span class="archive-row-date">Dec 19, 2026</span>
-  <span class="archive-row-title">Jules Collin's Brace Opens a New Youth Rush Campaign With a 3&ndash;1 Win Over Crystal Palace</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-brentford-pl">
-  <span class="archive-row-date">Dec 19, 2026</span>
-  <span class="archive-row-title">Sauer's Stoppage-Time Penalty Seals It as Wrexham Survive a Scare at Brentford to Go Second</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-mancity-carabao">
-  <span class="archive-row-date">Dec 15, 2026</span>
-  <span class="archive-row-title">Three Days After Reijnders Broke Their Hearts, Wrexham's Kids Go to the Etihad and Beat Manchester City's Best</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-mancity-pl">
-  <span class="archive-row-date">Dec 12, 2026</span>
-  <span class="archive-row-title">Reijnders' 90th-Minute Winner Denies Wrexham a Famous Night as Manchester City Reclaim Top Spot</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-098">
-  <span class="archive-row-date">Dec 12, 2026</span>
-  <span class="archive-row-title">The Ninety Minutes I'll Think About All Week</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-leeds-pl">
-  <span class="archive-row-date">Dec 6, 2026</span>
-  <span class="archive-row-title">Vargas Strikes Late Again as Wrexham Scrape Past Leeds and Reach the Top of the Table</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-sunderland-pl">
-  <span class="archive-row-date">Dec 1, 2026</span>
-  <span class="archive-row-title">Yacel Amrizi's Hat-Trick Buries Sunderland as Wrexham Cruise to a 5&ndash;0 Rout</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-nottinghamforest-pl">
-  <span class="archive-row-date">Nov 28, 2026</span>
-  <span class="archive-row-title">A Substitute's First Senior Goal Seals It as Wrexham Ease Past Nottingham Forest</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-arsenal-pl">
-  <span class="archive-row-date">Nov 22, 2026</span>
-  <span class="archive-row-title">Milán Vitális's Rare Start Delivers a Point as Wrexham and Arsenal Share the Spoils at the Racecourse</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-097">
-  <span class="archive-row-date">Nov 22, 2026</span>
-  <span class="archive-row-title">The Ones Who Don't Start</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-liverpool-pl">
-  <span class="archive-row-date">Nov 8, 2026</span>
-  <span class="archive-row-title">Leo Sauer's Brace at Anfield Sends Wrexham Third as Liverpool Are Swept Aside 3&ndash;0</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-astonvilla-pl">
-  <span class="archive-row-date">Oct 31, 2026</span>
-  <span class="archive-row-title">Yacel Amrizi's Second-Half Strike Is Enough as Wrexham Grind Past Aston Villa</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-preston-carabao">
-  <span class="archive-row-date">Oct 28, 2026</span>
-  <span class="archive-row-title">A Recalled Loanee's Farewell Cameo Helps Wrexham Ease Past Preston North End</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-crystalpalace-pl">
-  <span class="archive-row-date">Oct 25, 2026</span>
-  <span class="archive-row-title">Amrizi's Brace Sends Wrexham Fourth as Crystal Palace Are Swept Aside at Selhurst Park</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-arsenal-yrt-final">
-  <span class="archive-row-date">Oct 25, 2026</span>
-  <span class="archive-row-title">Sandoval's Four Goals Cap a 10&ndash;0 Final as Wrexham's Kids Retain the Youth Rush Title</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-brighton-yrt">
-  <span class="archive-row-date">Oct 25, 2026</span>
-  <span class="archive-row-title">Matthews and Bertrand Both Hit Hat-Tricks as Wrexham's Kids Put Ten Past Brighton</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-palace-yrt">
-  <span class="archive-row-date">Oct 25, 2026</span>
-  <span class="archive-row-title">Soria and Collin Combine as Wrexham's Kids Open the New Rush Campaign With a 5&ndash;0 Win Over Crystal Palace</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-manutd-pl">
-  <span class="archive-row-date">Oct 17, 2026</span>
-  <span class="archive-row-title">Wasteful Wrexham Made to Pay for Defensive Lapses as Manchester United Leave the Racecourse with All Three Points</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-096">
-  <span class="archive-row-date">Oct 17, 2026</span>
-  <span class="archive-row-title">One Step Forward, Then Back Again</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-newcastle-pl">
-  <span class="archive-row-date">Oct 4, 2026</span>
-  <span class="archive-row-title">Damián Bobadilla's Hat-Trick Runs Riot as Wrexham Put Four Past Newcastle at St James' Park</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-brighton-pl">
-  <span class="archive-row-date">Sep 27, 2026</span>
-  <span class="archive-row-title">Bobadilla's Second-Half Strike Edges Wrexham Past Brighton in a Match That Never Found Its Rhythm</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-bradfordcity-carabao">
-  <span class="archive-row-date">Sep 23, 2026</span>
-  <span class="archive-row-title">Chido Obi Helps Himself to a Hat-Trick as Wrexham Put Five Past Bradford City</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-chelsea-pl">
-  <span class="archive-row-date">Sep 19, 2026</span>
-  <span class="archive-row-title">A New Goalkeeper's Quiet Debut Steadies Wrexham to a Point at Stamford Bridge</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-tottenham-pl">
-  <span class="archive-row-date">Sep 12, 2026</span>
-  <span class="archive-row-title">Kudus Silences the Racecourse Twice as Wrexham Suffer Their First Premier League Defeat</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-095">
-  <span class="archive-row-date">Sep 12, 2026</span>
-  <span class="archive-row-title">The First One That Hurts</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-transferwindow-aug31">
-  <span class="archive-row-date">Aug 31, 2026</span>
-  <span class="archive-row-title">The Armband Changes Hands as Wrexham Close Out a Window That Sent Its Kids Out to Learn</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-bournemouth">
-  <span class="archive-row-date">Aug 29, 2026</span>
-  <span class="archive-row-title">Fruk's Brace and a Cacace Masterclass Keep Wrexham Unbeaten Against Bournemouth</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-huddersfield">
-  <span class="archive-row-date">Aug 25, 2026</span>
-  <span class="archive-row-title">Veleten Runs the Show and a Loan Returnee Announces Himself as Wrexham Thump Huddersfield 5&ndash;0</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-tottenham-final">
-  <span class="archive-row-date">Aug 24, 2026</span>
-  <span class="archive-row-title">Wrexham's Teenagers Make It Back-to-Back Youth Rush Titles With an 8&ndash;0 Demolition of Tottenham</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-newcastle-yrt">
-  <span class="archive-row-date">Aug 24, 2026</span>
-  <span class="archive-row-title">Soria's Early Strike and a New German Goalkeeper's Debut Send Wrexham Past New Castle</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-sheffield">
-  <span class="archive-row-date">Aug 15, 2026</span>
-  <span class="archive-row-title">Fruk Cancels Out Bramall Lane Roar as Wrexham Hold Sheffield United to a Draw</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-transferwindow">
-  <span class="archive-row-date">Aug 15, 2026</span>
-  <span class="archive-row-title">The Ledger and the Long Game: Inside Wrexham's Youth-First Summer</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-wolves">
-  <span class="archive-row-date">Aug 15, 2026</span>
-  <span class="archive-row-title">Fruk and Ngumoha Sink Wolves as Wrexham Win Their First Premier League Match</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-094">
-  <span class="archive-row-date">Aug 15, 2026</span>
-  <span class="archive-row-title">The Top Flight, For Real This Time</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-levante">
-  <span class="archive-row-date">Aug 1, 2026</span>
-  <span class="archive-row-title">Unbeaten Summer Wrapped Up as Amrizi Steals the Show Against Levante</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-laspalmas">
-  <span class="archive-row-date">Jul 28, 2026</span>
-  <span class="archive-row-title">Ngumoha Off the Mark as Wrexham Cruise Past Las Palmas</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-hamburgersv">
-  <span class="archive-row-date">Jul 25, 2026</span>
-  <span class="archive-row-title">£22.5m Kid Watches From the Bench as Gómez Does the Talking</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-westham-qf">
-  <span class="archive-row-date">Jul 7, 2026</span>
-  <span class="archive-row-title">Old Names, New Money: Wrexham's Kids Win Again as the Club Writes an &pound;8.7m Cheque</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="keeyvon-jenkins" href="../journal.html#entry-093">
-  <span class="archive-row-date">Jul 7, 2026</span>
-  <span class="archive-row-title">Two Months, One Chequebook, One Name We Still Can't Get Right</span>
-  <span class="archive-row-byline">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-blackburn-final">
-  <span class="archive-row-date">Jun 19, 2026</span>
-  <span class="archive-row-title">Vargas Does It All as Wrexham's Kids Lift the Rush Tournament</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-watford">
-  <span class="archive-row-date">Jun 4, 2026</span>
-  <span class="archive-row-title">Vargas Off the Bench, Lord on the Scoresheet Again — Watford Swept Aside</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
-</a>
-<a class="archive-row" data-author="owen-meredith" href="../journal.html#entry-transfers">
-  <span class="archive-row-date">May 15, 2026</span>
-  <span class="archive-row-title">Five Out the Door, One Kid Sent Packing — and Somewhere in There, a Golden Goal</span>
-  <span class="archive-row-byline">Owen Meredith &middot; The Red Dragon Dispatch</span>
+<div class="mc-archive-list">
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amad brace sinks wrexham as late obi-vargas flurry comes too late wrexham fell behind early and never recovered at old trafford, with chido obi and juan cruz vargas&#x27;s stoppage-time goals only softening a 3-2 defeat. owen meredith the red dragon dispatch match reports" href="../journal.html#2027-05-01-pl-manchester-united-away">
+  <span class="mc-archive-row-date">May 1, 2027</span>
+  <span class="mc-archive-row-title">Amad Brace Sinks Wrexham as Late Obi-Vargas Flurry Comes Too Late</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="kean&#x27;s late strike spoils jenkins&#x27;s 100th game in charge wrexham could not find a way past a stubborn crystal palace rearguard, and a kean header eight minutes from time turned a landmark afternoon into a flat one. owen meredith the red dragon dispatch match reports" href="../journal.html#2027-04-17-pl-crystal-palace-home">
+  <span class="mc-archive-row-date">Apr 17, 2027</span>
+  <span class="mc-archive-row-title">Kean's Late Strike Spoils Jenkins's 100th Game in Charge</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amrizi runs the show again as wrexham put four past aston villa eight days after needing a goalkeeper to survive aston villa in the cup, wrexham needed nothing of the sort at villa park — yacel amrizi did the rest himself. owen meredith the red dragon dispatch match reports" href="../journal.html#2027-04-11-pl-aston-villa-away">
+  <span class="mc-archive-row-date">Apr 11, 2027</span>
+  <span class="mc-archive-row-title">Amrizi Runs the Show Again as Wrexham Put Four Past Aston Villa</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="entry 102 six weeks since the last one. a cup tie that made me sweat more than it should have, and an away day that reminded me why i don&#x27;t let myself relax even when we&#x27;re four goals up. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-102">
+  <span class="mc-archive-row-date">Apr 11, 2027</span>
+  <span class="mc-archive-row-title">Entry 102</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="okonkwo stands tall as wrexham grind out an fa cup semi-final berth one goal, one goalkeeper in inspired form, and forty-five minutes of backs-against-the-wall defending. wrexham didn&#x27;t need to be pretty to get past aston villa — they just needed to survive. owen meredith the red dragon dispatch match reports" href="../journal.html#2027-04-03-fa-cup-qtr-aston-villa">
+  <span class="mc-archive-row-date">Apr 3, 2027</span>
+  <span class="mc-archive-row-title">Okonkwo Stands Tall as Wrexham Grind Out an FA Cup Semi-Final Berth</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amrizi and ngumoha answer every bournemouth punch on the south coast evanilson&#x27;s reply made the final ten minutes nervier than the scoreline suggested it needed to be, but wrexham&#x27;s front two had already done enough by then. owen meredith the red dragon dispatch match reports" href="../journal.html#2027-03-20-pl-bournemouth-away">
+  <span class="mc-archive-row-date">Mar 20, 2027</span>
+  <span class="mc-archive-row-title">Amrizi and Ngumoha Answer Every Bournemouth Punch on the South Coast</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="obi and ngumoha send wrexham through to the fa cup final a composed, controlled semi-final performance against a premier league heavyweight puts jenkins one win away from a first major cup in the club&#x27;s hollywood era. owen meredith the red dragon dispatch match reports" href="../journal.html#2027-03-20-fa-cup-semi-arsenal">
+  <span class="mc-archive-row-date">Mar 20, 2027</span>
+  <span class="mc-archive-row-title">Obi and Ngumoha Send Wrexham Through to the FA Cup Final</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="oliver-hargreaves" data-category="history" data-season="2026/27" data-search="a fifth-tier club fifteen years ago is ninety minutes from an fa cup final wrexham&#x27;s 2-0 win over arsenal puts keeyvon jenkins one game from a first major domestic final in the club&#x27;s history. that sentence alone is worth pausing on. oliver hargreaves sky sports history" href="articles/2027-03-20-hargreaves-first-cup-final.html">
+  <span class="mc-archive-row-date">Mar 20, 2027</span>
+  <span class="mc-archive-row-title">A Fifth-Tier Club Fifteen Years Ago Is Ninety Minutes From an FA Cup Final</span>
+  <span class="mc-archive-row-meta">Oliver Hargreaves &middot; Sky Sports</span>
+</a>
+<a class="mc-archive-row" data-author="james-mcallister" data-category="academy" data-season="2026/27" data-search="the conveyor belt: how wrexham&#x27;s academy explains a fourth straight youth rush title a 5-0 rout of bournemouth in the youth rush final is not really the story. the story is how many names from that competition are already playing first-team minutes in the premier league and the carabao cup. james mcallister the athletic academy" href="articles/2027-03-06-mcallister-academy-pipeline-fourth-title.html">
+  <span class="mc-archive-row-date">Mar 6, 2027</span>
+  <span class="mc-archive-row-title">The Conveyor Belt: How Wrexham's Academy Explains a Fourth Straight Youth Rush Title</span>
+  <span class="mc-archive-row-meta">James McAllister &middot; The Athletic</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="wrexham&#x27;s academy wins a fourth straight youth rush title, routing bournemouth in the final a campaign that opened with a nervy penalty shootout draw against liverpool ends, three matches later, exactly the way the last three campaigns did — with a trophy. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-bournemouth-yrt-final">
+  <span class="mc-archive-row-date">Mar 5, 2027</span>
+  <span class="mc-archive-row-title">Wrexham's Academy Wins a Fourth Straight Youth Rush Title, Routing Bournemouth in the Final</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="sandoval and rosa braces send wrexham&#x27;s academy into the final in a rout one day after the club&#x27;s senior side beat nottingham forest&#x27;s parent club at racecourse, the academy side did the exact same thing to forest&#x27;s kids — rather more emphatically. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-forest-yrt-semi">
+  <span class="mc-archive-row-date">Mar 4, 2027</span>
+  <span class="mc-archive-row-title">Sandoval and Rosa Braces Send Wrexham's Academy Into the Final in a Rout</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="cardoso and drouet ease wrexham&#x27;s academy past brighton into the semis after a shaky group-stage draw against liverpool needed penalties to settle, the new youth rush campaign found a more convincing gear in the quarter-final. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-brighton-yrt-quarters">
+  <span class="mc-archive-row-date">Mar 3, 2027</span>
+  <span class="mc-archive-row-title">Cardoso and Drouet Ease Wrexham's Academy Past Brighton Into the Semis</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="james-mcallister" data-category="academy" data-season="2026/27" data-search="four at the emirates: what wrexham&#x27;s demolition of arsenal actually showed a 4-0 away win over the league&#x27;s third-place side is a result. the pattern behind it — pace in behind, a compressed press, and a front line built almost entirely from cut-price or academy talent — is the more durable story. james mcallister the athletic academy" href="articles/2027-02-28-mcallister-arsenal-away-statement.html">
+  <span class="mc-archive-row-date">Feb 28, 2027</span>
+  <span class="mc-archive-row-title">Four at the Emirates: What Wrexham's Demolition of Arsenal Actually Showed</span>
+  <span class="mc-archive-row-meta">James McAllister &middot; The Athletic</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="entry 101 four weeks since the last one, and every result in between has gone our way. i&#x27;m trying not to let that make me nervous, and mostly failing. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-101">
+  <span class="mc-archive-row-date">Feb 27, 2027</span>
+  <span class="mc-archive-row-title">Entry 101</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="sauer brace headlines wrexham&#x27;s statement demolition of third-place arsenal two months ago the question in the london press box was whether wrexham could survive a run of fixtures against the league&#x27;s genuine heavyweights. on a chastening night at the emirates, that question answered itself. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-arsenal-away-pl-2">
+  <span class="mc-archive-row-date">Feb 27, 2027</span>
+  <span class="mc-archive-row-title">Sauer Brace Headlines Wrexham's Statement Demolition of Third-Place Arsenal</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="new rush campaign opens with a penalty shootout as faure brace isn&#x27;t quite enough three straight titles ended with a whimper of a group-stage draw against liverpool&#x27;s kids — until the shootout reminded everyone why this academy keeps winning things. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-liverpool-yrt-new-campaign">
+  <span class="mc-archive-row-date">Feb 20, 2027</span>
+  <span class="mc-archive-row-title">New Rush Campaign Opens With a Penalty Shootout as Faure Brace Isn't Quite Enough</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="cacace sets up fruk&#x27;s winning penalty as wrexham grind past forest ten days after cruising past sunderland and blackburn in the space of one afternoon, wrexham needed a scrappier route back to winning ways at home to nottingham forest. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-forest-home-pl-2">
+  <span class="mc-archive-row-date">Feb 20, 2027</span>
+  <span class="mc-archive-row-title">Cacace Sets Up Fruk's Winning Penalty as Wrexham Grind Past Forest</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amrizi hat-trick sends wrexham&#x27;s kids through at ewood park four days after two hard-fought premier league points, jenkins turned to his fringe players for an fa cup night at ewood park — and yacel amrizi made the decision look easy. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-blackburn-facup-r5">
+  <span class="mc-archive-row-date">Feb 10, 2027</span>
+  <span class="mc-archive-row-title">Amrizi Hat-Trick Sends Wrexham's Kids Through at Ewood Park</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="ngumoha brace ends sunderland&#x27;s resistance as wrexham push on to 60 points a stubborn stadium of light rearguard held for the best part of an hour before rio ngumoha did what he has done all season — find the moment a game actually turns. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-sunderland-away-pl">
+  <span class="mc-archive-row-date">Feb 10, 2027</span>
+  <span class="mc-archive-row-title">Ngumoha Brace Ends Sunderland's Resistance as Wrexham Push On to 60 Points</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amrizi and ngumoha score twice as wrexham answer the carabao cup exit with a statement away from home three days after a penalty-shootout exit from the carabao cup semi-final, wrexham responded with the most one-sided ninety minutes of their premier league season, outshooting wolves fourteen to one at molineux. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-wolves-away-pl-2">
+  <span class="mc-archive-row-date">Feb 6, 2027</span>
+  <span class="mc-archive-row-title">Amrizi and Ngumoha Score Twice as Wrexham Answer the Carabao Cup Exit With a Statement Away From Home</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="darren-cole" data-category="opinion" data-season="2026/27" data-search="cole: &quot;outcoached&quot; isn&#x27;t a word you get to use once and move on from jenkins used it himself after chelsea ended wrexham&#x27;s carabao cup run on penalties. darren cole thinks the manager was right to say it — and that it&#x27;s the first real crack in a story that&#x27;s had none. darren cole sky sports (studio pundit) opinion" href="articles/2027-02-04-cole-carabao-cup-exit-outcoached.html">
+  <span class="mc-archive-row-date">Feb 4, 2027</span>
+  <span class="mc-archive-row-title">Cole: "Outcoached" Isn't a Word You Get to Use Once and Move On From</span>
+  <span class="mc-archive-row-meta">Darren Cole &middot; Sky Sports (Studio Pundit)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="wrexham&#x27;s kids run out of road as chelsea win a carabao cup shootout to level the tie and go through a four-goal aggregate cushion from the first leg evaporated inside ninety minutes at the racecourse, and a youth-heavy wrexham side that had carried this cup run all the way to the semi-final&#x27;s second leg were undone on penalties. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-chelsea-carabao-semi-leg2">
+  <span class="mc-archive-row-date">Feb 3, 2027</span>
+  <span class="mc-archive-row-title">Wrexham's Kids Run Out of Road as Chelsea Win a Carabao Cup Shootout to Level the Tie and Go Through</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="oliver-hargreaves" data-category="history" data-season="2026/27" data-search="christmas top, a wobble, four clear: wrexham&#x27;s january answered the only question left six weeks ago i wrote that wrexham&#x27;s opening seventeen games already belonged in the history books regardless of how the season finished. january is the month that started answering how it finishes. oliver hargreaves sky sports history" href="articles/2027-01-31-hargreaves-four-clear-at-the-top.html">
+  <span class="mc-archive-row-date">Jan 31, 2027</span>
+  <span class="mc-archive-row-title">Christmas Top, a Wobble, Four Clear: Wrexham's January Answered the Only Question Left</span>
+  <span class="mc-archive-row-meta">Oliver Hargreaves &middot; Sky Sports</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="vargas off the bench tears sheffield united apart as wrexham go four clear at the top the side that held wrexham to a draw back in august left the racecourse thrashed 4-0, with a fringe midfielder&#x27;s two assists doing more to change the title conversation than the scoreline alone. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-sheffieldutd-home-pl-2">
+  <span class="mc-archive-row-date">Jan 30, 2027</span>
+  <span class="mc-archive-row-title">Vargas Off the Bench Tears Sheffield United Apart as Wrexham Go Four Clear at the Top</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="entry 100 four weeks since i last wrote one of these &amp;mdash; a cup upset, a flat league loss, a proper response, and now this. a hundred of these and i still don&#x27;t know what to do with a month like the last one. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-100">
+  <span class="mc-archive-row-date">Jan 30, 2027</span>
+  <span class="mc-archive-row-title">Entry 100</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amrizi and sauer see off brentford as wrexham make home comfort look routine a tidy 2-0 at the racecourse, one bruising yellow card, and a header that had the away bench asking how a winger got that far off the ground. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-brentford-home-pl-2">
+  <span class="mc-archive-row-date">Jan 24, 2027</span>
+  <span class="mc-archive-row-title">Amrizi and Sauer See Off Brentford as Wrexham Make Home Comfort Look Routine</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="bobadilla brace sends wrexham past a booed-off west ham, 4-0 four goals, four different threats, and a pressroom question that won&#x27;t go away: is jenkins&#x27;s system a masterpiece, or is everyone just having a bad day against it? owen meredith the red dragon dispatch match reports" href="../journal.html#entry-westham-away-pl">
+  <span class="mc-archive-row-date">Jan 17, 2027</span>
+  <span class="mc-archive-row-title">Bobadilla Brace Sends Wrexham Past a Booed-Off West Ham, 4-0</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="chido obi tears through chelsea as wrexham&#x27;s kids reach another final a brace and an assist from the eighteen-year-old, plus full debuts in all but name for three of the club&#x27;s newest academy graduates, and wrexham are one match from a first major cup final in this ownership era. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-chelsea-carabao-semi">
+  <span class="mc-archive-row-date">Jan 13, 2027</span>
+  <span class="mc-archive-row-title">Chido Obi Tears Through Chelsea as Wrexham's Kids Reach Another Final</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="chido obi&#x27;s first senior hat-trick — actually a four — sinks nottingham forest a controlled afternoon at the racecourse turned into a rout once obi found his range, and a full debut for academy graduate emiliano bianchi added a second story to a comfortable fa cup evening. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-forest-facup">
+  <span class="mc-archive-row-date">Jan 9, 2027</span>
+  <span class="mc-archive-row-title">Chido Obi's First Senior Hat-Trick — Actually a Four — Sinks Nottingham Forest</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="wrexham finally play like themselves again, and it&#x27;s enough to beat chelsea a week after the brighton defeat threatened to sour the new year, jenkins&#x27;s side found a different gear entirely — more the ball, fewer chances conceded, and a first win of 2027 built on patience rather than transition. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-chelsea-home-pl">
+  <span class="mc-archive-row-date">Jan 6, 2027</span>
+  <span class="mc-archive-row-title">Wrexham Finally Play Like Themselves Again, and It's Enough to Beat Chelsea</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="al dawsari ends wrexham&#x27;s unbeaten run as the new year begins with a thud at the amex three wins and a carabao cup shock of manchester city had carried wrexham into january full of momentum. a single second-half strike on the south coast was enough to stop it dead. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-brighton-away-pl">
+  <span class="mc-archive-row-date">Jan 2, 2027</span>
+  <span class="mc-archive-row-title">Al Dawsari Ends Wrexham's Unbeaten Run as the New Year Begins With a Thud at the Amex</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="three weeks i&#x27;d take again, and a flight home i wouldn&#x27;t from the low of losing to city to the carabao cup upset of the same club three days later, three straight league wins, and now a flat one to close it out &amp;mdash; the whole thing in one stretch. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-099">
+  <span class="mc-archive-row-date">Jan 2, 2027</span>
+  <span class="mc-archive-row-title">Three Weeks I'd Take Again, and a Flight Home I Wouldn't</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="rebecca-holt" data-category="transfers" data-season="2026/27" data-search="wrexham confirm signing of real madrid midfielder thiago pitarch the premier league leaders have added midfield depth on the opening day of the winter window, while last season&#x27;s player of the year has been placed on the transfer list. rebecca holt bbc sport transfers" href="articles/2026-12-30-holt-pitarch-signing-confirmed.html">
+  <span class="mc-archive-row-date">Dec 30, 2026</span>
+  <span class="mc-archive-row-title">Wrexham Confirm Signing of Real Madrid Midfielder Thiago Pitarch</span>
+  <span class="mc-archive-row-meta">Rebecca Holt &middot; BBC Sport</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amrizi and sauer see off ipswich as a teenager named soria gets his first taste wrexham survived a scare at portman road to stay in the champions league places, while forty minutes down the touchline a home-grown eighteen-year-old made a first-team debut that cost the club nothing but four years of patience. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-ipswich-pl">
+  <span class="mc-archive-row-date">Dec 29, 2026</span>
+  <span class="mc-archive-row-title">Amrizi and Sauer See Off Ipswich as a Teenager Named Soria Gets His First Taste</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="a christmas day scare, then amrizi and obi send wrexham top of the premier league two days after oliver hargreaves compared this campaign to ipswich &#x27;62 and forest &#x27;78, wrexham went and did something neither of those sides could claim at christmas — top spot, in their first-ever top-flight season. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-westham-pl">
+  <span class="mc-archive-row-date">Dec 25, 2026</span>
+  <span class="mc-archive-row-title">A Christmas Day Scare, Then Amrizi and Obi Send Wrexham Top of the Premier League</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="oliver-hargreaves" data-category="history" data-season="2026/27" data-search="second place after seventeen matches: why wrexham&#x27;s first premier league campaign already belongs in the history books whatever happens between now and may, what keeyvon jenkins has built in barely eighteen months at the racecourse has already crossed a threshold english football rarely sees from a newly promoted club. oliver hargreaves sky sports history" href="articles/2026-12-20-hargreaves-greatest-promoted-seasons.html">
+  <span class="mc-archive-row-date">Dec 20, 2026</span>
+  <span class="mc-archive-row-title">Second Place After Seventeen Matches: Why Wrexham's First Premier League Campaign Already Belongs in the History Books</span>
+  <span class="mc-archive-row-meta">Oliver Hargreaves &middot; Sky Sports</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="nico kopp man of the match again as wrexham&#x27;s kids see off wolves to win a third straight youth rush title a tighter final than the last two, but the same result — and, remarkably, the same name topping the ratings sheet at full-time as it had four hours earlier in the semi. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-wolves-yrt-final">
+  <span class="mc-archive-row-date">Dec 19, 2026</span>
+  <span class="mc-archive-row-title">Nico Kopp Man of the Match Again as Wrexham's Kids See Off Wolves to Win a Third Straight Youth Rush Title</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="valentino martini&#x27;s hat-trick from centre-back sends wrexham&#x27;s kids past brentford and into the final a centre-back doesn&#x27;t usually headline a semi-final report. today, nobody in the press box was arguing with the exception. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-brentford-yrt-semi">
+  <span class="mc-archive-row-date">Dec 19, 2026</span>
+  <span class="mc-archive-row-title">Valentino Martini's Hat-Trick From Centre-Back Sends Wrexham's Kids Past Brentford and Into the Final</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="jules collin&#x27;s brace opens a new youth rush campaign with a 3&amp;ndash;1 win over crystal palace a tighter opener than the last one, with mika horn called into real action for the first time all campaign — and answering the call. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-crystalpalace-yrt">
+  <span class="mc-archive-row-date">Dec 19, 2026</span>
+  <span class="mc-archive-row-title">Jules Collin's Brace Opens a New Youth Rush Campaign With a 3&ndash;1 Win Over Crystal Palace</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="sauer&#x27;s stoppage-time penalty seals it as wrexham survive a scare at brentford to go second a week after the city heartbreak, wrexham needed a nervy, error-strewn ninety to keep pace at the top — and got the job done in exactly the manner jenkins didn&#x27;t want them to. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-brentford-pl">
+  <span class="mc-archive-row-date">Dec 19, 2026</span>
+  <span class="mc-archive-row-title">Sauer's Stoppage-Time Penalty Seals It as Wrexham Survive a Scare at Brentford to Go Second</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="three days after reijnders broke their hearts, wrexham&#x27;s kids go to the etihad and beat manchester city&#x27;s best saturday&#x27;s ninetieth-minute sucker-punch was still fresh when the teamsheets went up for a carabao cup quarter-final nobody outside the building expected wrexham to take seriously. city took it seriously. wrexham took the result. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-mancity-carabao">
+  <span class="mc-archive-row-date">Dec 15, 2026</span>
+  <span class="mc-archive-row-title">Three Days After Reijnders Broke Their Hearts, Wrexham's Kids Go to the Etihad and Beat Manchester City's Best</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="reijnders&#x27; 90th-minute winner denies wrexham a famous night as manchester city reclaim top spot six days after owen meredith wrote that manchester city&#x27;s visit would answer the season&#x27;s real question, the racecourse got ninety minutes of an answer it didn&#x27;t want — settled, cruelly, in the final minute of stoppage time. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-mancity-pl">
+  <span class="mc-archive-row-date">Dec 12, 2026</span>
+  <span class="mc-archive-row-title">Reijnders' 90th-Minute Winner Denies Wrexham a Famous Night as Manchester City Reclaim Top Spot</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="the ninety minutes i&#x27;ll think about all week four matchdays since the last one of these — three wins and now a loss that stings more than any of the wins felt good. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-098">
+  <span class="mc-archive-row-date">Dec 12, 2026</span>
+  <span class="mc-archive-row-title">The Ninety Minutes I'll Think About All Week</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="vargas strikes late again as wrexham scrape past leeds and reach the top of the table a near-hour of stalemate, a goal that should have settled it, a sucker-punch equalizer with three minutes left — and then, for the second time in three matches, juan cruz vargas came off the bench to be the last man standing at the final whistle. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-leeds-pl">
+  <span class="mc-archive-row-date">Dec 6, 2026</span>
+  <span class="mc-archive-row-title">Vargas Strikes Late Again as Wrexham Scrape Past Leeds and Reach the Top of the Table</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="yacel amrizi&#x27;s hat-trick buries sunderland as wrexham cruise to a 5&amp;ndash;0 rout three days after a workmanlike win at the city ground, wrexham needed five minutes at the racecourse to remind everyone what this squad looks like when yacel amrizi decides a game is going to be about him. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-sunderland-pl">
+  <span class="mc-archive-row-date">Dec 1, 2026</span>
+  <span class="mc-archive-row-title">Yacel Amrizi's Hat-Trick Buries Sunderland as Wrexham Cruise to a 5&ndash;0 Rout</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="a substitute&#x27;s first senior goal seals it as wrexham ease past nottingham forest jenkins warned before kickoff that forest was &quot;the sort of fixture i&#x27;ve found trickier than the ones against the giants.&quot; for an hour, his own words looked prophetic — until a teenager just out of the academy changed the mood entirely. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-nottinghamforest-pl">
+  <span class="mc-archive-row-date">Nov 28, 2026</span>
+  <span class="mc-archive-row-title">A Substitute's First Senior Goal Seals It as Wrexham Ease Past Nottingham Forest</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="milán vitális&#x27;s rare start delivers a point as wrexham and arsenal share the spoils at the racecourse the teamsheet went up an hour before kickoff and the loudest reaction in the press box wasn&#x27;t about arsenal&#x27;s front line. it was one name in wrexham&#x27;s midfield that hardly anyone had seen there since august. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-arsenal-pl">
+  <span class="mc-archive-row-date">Nov 22, 2026</span>
+  <span class="mc-archive-row-title">Milán Vitális's Rare Start Delivers a Point as Wrexham and Arsenal Share the Spoils at the Racecourse</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="the ones who don&#x27;t start five matchdays since the last one of these, and the stretch has been the best five-game run of my time here — with today&#x27;s team sheet the part i keep coming back to. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-097">
+  <span class="mc-archive-row-date">Nov 22, 2026</span>
+  <span class="mc-archive-row-title">The Ones Who Don't Start</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="leo sauer&#x27;s brace at anfield sends wrexham third as liverpool are swept aside 3&amp;ndash;0 twenty minutes before kickoff, the kop was still doing what the kop does — scarves up, &quot;you&#x27;ll never walk alone&quot; rolling down from the stands like weather. by full time it had gone quiet enough to hear the away end sing every one of leo sauer&#x27;s name three times over. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-liverpool-pl">
+  <span class="mc-archive-row-date">Nov 8, 2026</span>
+  <span class="mc-archive-row-title">Leo Sauer's Brace at Anfield Sends Wrexham Third as Liverpool Are Swept Aside 3&ndash;0</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="yacel amrizi&#x27;s second-half strike is enough as wrexham grind past aston villa for sixty-eight minutes the racecourse watched a wrexham side dominate territory, possession and every underlying number that matters without once making a villa goalkeeper work for a living. then yacel amrizi found the finish the afternoon had been missing, and none of that mattered anymore. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-astonvilla-pl">
+  <span class="mc-archive-row-date">Oct 31, 2026</span>
+  <span class="mc-archive-row-title">Yacel Amrizi's Second-Half Strike Is Enough as Wrexham Grind Past Aston Villa</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="a recalled loanee&#x27;s farewell cameo helps wrexham ease past preston north end controlled from start to finish, this one was memorable less for the scoreline than for who was standing in goal — a reminder that not every squad decision this window has actually taken effect yet. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-preston-carabao">
+  <span class="mc-archive-row-date">Oct 28, 2026</span>
+  <span class="mc-archive-row-title">A Recalled Loanee's Farewell Cameo Helps Wrexham Ease Past Preston North End</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="amrizi&#x27;s brace sends wrexham fourth as crystal palace are swept aside at selhurst park eight days after a defeat that exposed everything wasteful about this wrexham side, selhurst park got the version that finishes its chances — and picked up an 8.4-rated man of the match in the process. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-crystalpalace-pl">
+  <span class="mc-archive-row-date">Oct 25, 2026</span>
+  <span class="mc-archive-row-title">Amrizi's Brace Sends Wrexham Fourth as Crystal Palace Are Swept Aside at Selhurst Park</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="sandoval&#x27;s four goals cap a 10&amp;ndash;0 final as wrexham&#x27;s kids retain the youth rush title a second straight rush final ended the same way as the first one did — as a procession — with a new german goalkeeper watching most of it from thirty yards back with nothing to do. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-arsenal-yrt-final">
+  <span class="mc-archive-row-date">Oct 25, 2026</span>
+  <span class="mc-archive-row-title">Sandoval's Four Goals Cap a 10&ndash;0 Final as Wrexham's Kids Retain the Youth Rush Title</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="matthews and bertrand both hit hat-tricks as wrexham&#x27;s kids put ten past brighton brighton&#x27;s academy arrived at the neutral venue with a reputation for producing tidy, well-drilled sides. none of that survived the first half-hour against a wrexham team that has stopped treating semi-finals as anything but a formality. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-brighton-yrt">
+  <span class="mc-archive-row-date">Oct 25, 2026</span>
+  <span class="mc-archive-row-title">Matthews and Bertrand Both Hit Hat-Tricks as Wrexham's Kids Put Ten Past Brighton</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="soria and collin combine as wrexham&#x27;s kids open the new rush campaign with a 5&amp;ndash;0 win over crystal palace a tidy opener rather than a statement result, but the group-stage win over crystal palace set the tone for a day that would end with wrexham&#x27;s academy retaining its youth rush crown. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-palace-yrt">
+  <span class="mc-archive-row-date">Oct 25, 2026</span>
+  <span class="mc-archive-row-title">Soria and Collin Combine as Wrexham's Kids Open the New Rush Campaign With a 5&ndash;0 Win Over Crystal Palace</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="wasteful wrexham made to pay for defensive lapses as manchester united leave the racecourse with all three points wrexham created more against manchester united than they had in any match all season and have nothing to show for it beyond a losing scoreline — the kind of afternoon that flatters an opponent&#x27;s ruthlessness far more than it exposes any real gulf in class. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-manutd-pl">
+  <span class="mc-archive-row-date">Oct 17, 2026</span>
+  <span class="mc-archive-row-title">Wasteful Wrexham Made to Pay for Defensive Lapses as Manchester United Leave the Racecourse with All Three Points</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="one step forward, then back again a month since the last one of these, and the shape of it looks like a staircase — up, up, up, and then a stumble right back to where we started worrying. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-096">
+  <span class="mc-archive-row-date">Oct 17, 2026</span>
+  <span class="mc-archive-row-title">One Step Forward, Then Back Again</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="damián bobadilla&#x27;s hat-trick runs riot as wrexham put four past newcastle at st james&#x27; park this was not a smash-and-grab. from the first whistle to the last, wrexham controlled a match against a side that finished last season in europe, and by the time damián bobadilla completed his hat-trick the away end had long since stopped believing anyone in black and white was going to spoil it. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-newcastle-pl">
+  <span class="mc-archive-row-date">Oct 4, 2026</span>
+  <span class="mc-archive-row-title">Damián Bobadilla's Hat-Trick Runs Riot as Wrexham Put Four Past Newcastle at St James' Park</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="bobadilla&#x27;s second-half strike edges wrexham past brighton in a match that never found its rhythm nobody at the racecourse will remember this one for the football. they&#x27;ll remember it for the hour wrexham spent scrapping for a foothold against a well-organized brighton side, and for the single moment damián bobadilla supplied to make sure all that scrapping wasn&#x27;t for nothing. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-brighton-pl">
+  <span class="mc-archive-row-date">Sep 27, 2026</span>
+  <span class="mc-archive-row-title">Bobadilla's Second-Half Strike Edges Wrexham Past Brighton in a Match That Never Found Its Rhythm</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="chido obi helps himself to a hat-trick as wrexham put five past bradford city a rotated side away at bradford barely broke stride, and by the time joenathan amelia added a second of his own the only real question left was whether obi&#x27;s teenage strike partner would grab a headline of his own before the final whistle. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-bradfordcity-carabao">
+  <span class="mc-archive-row-date">Sep 23, 2026</span>
+  <span class="mc-archive-row-title">Chido Obi Helps Himself to a Hat-Trick as Wrexham Put Five Past Bradford City</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="a new goalkeeper&#x27;s quiet debut steadies wrexham to a point at stamford bridge a week after the first home league defeat of the jenkins era, wrexham didn&#x27;t need a hero at stamford bridge — just a goalkeeper who&#x27;d never played a competitive minute for the club making the saves he needed to make. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-chelsea-pl">
+  <span class="mc-archive-row-date">Sep 19, 2026</span>
+  <span class="mc-archive-row-title">A New Goalkeeper's Quiet Debut Steadies Wrexham to a Point at Stamford Bridge</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="kudus silences the racecourse twice as wrexham suffer their first premier league defeat four matchdays into the top flight, the unbeaten run and the perfect home record both ended on the same friday night — and one of them had never happened to keeyvon jenkins in the league before, home or away. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-tottenham-pl">
+  <span class="mc-archive-row-date">Sep 12, 2026</span>
+  <span class="mc-archive-row-title">Kudus Silences the Racecourse Twice as Wrexham Suffer Their First Premier League Defeat</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="the first one that hurts four matchdays of a perfect home record, and then a friday night that reminded me what this league is actually for. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-095">
+  <span class="mc-archive-row-date">Sep 12, 2026</span>
+  <span class="mc-archive-row-title">The First One That Hurts</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="transfers" data-season="2026/27" data-search="the armband changes hands as wrexham close out a window that sent its kids out to learn deadline day brought a new goalkeeper, a captain nobody voted for but everybody expected, and two teenagers packed off to wales&#x27;s near neighbours to find out what they&#x27;re actually made of. owen meredith the red dragon dispatch transfers" href="../journal.html#entry-transferwindow-aug31">
+  <span class="mc-archive-row-date">Aug 31, 2026</span>
+  <span class="mc-archive-row-title">The Armband Changes Hands as Wrexham Close Out a Window That Sent Its Kids Out to Learn</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="fruk&#x27;s brace and a cacace masterclass keep wrexham unbeaten against bournemouth three premier league games, seven points, and a full-back still finding his feet in a new position who just delivered the best ninety minutes anyone in this building has seen from him. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-bournemouth">
+  <span class="mc-archive-row-date">Aug 29, 2026</span>
+  <span class="mc-archive-row-title">Fruk's Brace and a Cacace Masterclass Keep Wrexham Unbeaten Against Bournemouth</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="veleten runs the show and a loan returnee announces himself as wrexham thump huddersfield 5&amp;ndash;0 a second-string xi took huddersfield apart in the carabao cup, and the afternoon&#x27;s headline wasn&#x27;t the two chido obi goals — it was the striker who&#x27;d spent the summer at cheltenham town reminding everyone he still exists. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-huddersfield">
+  <span class="mc-archive-row-date">Aug 25, 2026</span>
+  <span class="mc-archive-row-title">Veleten Runs the Show and a Loan Returnee Announces Himself as Wrexham Thump Huddersfield 5&ndash;0</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="wrexham&#x27;s teenagers make it back-to-back youth rush titles with an 8&amp;ndash;0 demolition of tottenham a semi-final squeaked past new castle in the morning. by the evening final, wrexham&#x27;s academy had turned into the most one-sided story in the whole competition. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-tottenham-final">
+  <span class="mc-archive-row-date">Aug 24, 2026</span>
+  <span class="mc-archive-row-title">Wrexham's Teenagers Make It Back-to-Back Youth Rush Titles With an 8&ndash;0 Demolition of Tottenham</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="soria&#x27;s early strike and a new german goalkeeper&#x27;s debut send wrexham past new castle a tight, low-key semi-final produced one goal, one clean sheet, and a first standout performance from a seventeen-year-old signed nine days earlier. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-newcastle-yrt">
+  <span class="mc-archive-row-date">Aug 24, 2026</span>
+  <span class="mc-archive-row-title">Soria's Early Strike and a New German Goalkeeper's Debut Send Wrexham Past New Castle</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="fruk cancels out bramall lane roar as wrexham hold sheffield united to a draw a point on the road against a team that hasn&#x27;t finished outside the top six in living memory. unspectacular, unbeaten, and — on the evidence of the summer&#x27;s business — exactly the kind of result this new-look wrexham is built to grind out. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-sheffield">
+  <span class="mc-archive-row-date">Aug 15, 2026</span>
+  <span class="mc-archive-row-title">Fruk Cancels Out Bramall Lane Roar as Wrexham Hold Sheffield United to a Draw</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="transfers" data-season="2026/27" data-search="the ledger and the long game: inside wrexham&#x27;s youth-first summer every deal this window has pointed the same direction. follow the paper trail and a philosophy starts to look less like an accident and more like a plan. owen meredith the red dragon dispatch transfers" href="../journal.html#entry-transferwindow">
+  <span class="mc-archive-row-date">Aug 15, 2026</span>
+  <span class="mc-archive-row-title">The Ledger and the Long Game: Inside Wrexham's Youth-First Summer</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="fruk and ngumoha sink wolves as wrexham win their first premier league match a hundred and sixty-two years after the club was founded, wrexham beat wolves 2&amp;ndash;0 at the racecourse. the scoreline was the easy part. believing it happened at all is the harder one. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-wolves">
+  <span class="mc-archive-row-date">Aug 15, 2026</span>
+  <span class="mc-archive-row-title">Fruk and Ngumoha Sink Wolves as Wrexham Win Their First Premier League Match</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="the top flight, for real this time five weeks, five departures, six new faces, and one final whistle nobody in this building will forget. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-094">
+  <span class="mc-archive-row-date">Aug 15, 2026</span>
+  <span class="mc-archive-row-title">The Top Flight, For Real This Time</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="unbeaten summer wrapped up as amrizi steals the show against levante three friendlies, three wins, and it was the free-agent forward everybody let go, not the £22.5m kid, who closed out preseason with the best number on the board. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-levante">
+  <span class="mc-archive-row-date">Aug 1, 2026</span>
+  <span class="mc-archive-row-title">Unbeaten Summer Wrapped Up as Amrizi Steals the Show Against Levante</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="ngumoha off the mark as wrexham cruise past las palmas three days after watching from the bench, the £22.5m teenager scored his first goal in red. fruk got the other two. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-laspalmas">
+  <span class="mc-archive-row-date">Jul 28, 2026</span>
+  <span class="mc-archive-row-title">Ngumoha Off the Mark as Wrexham Cruise Past Las Palmas</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="£22.5m kid watches from the bench as gómez does the talking wrexham unveiled rio ngumoha and beat hamburger sv 3&amp;ndash;0 in the same afternoon. it was andrés gómez, not the new signing, who left with the match ball. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-hamburgersv">
+  <span class="mc-archive-row-date">Jul 25, 2026</span>
+  <span class="mc-archive-row-title">£22.5m Kid Watches From the Bench as Gómez Does the Talking</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2026/27" data-search="old names, new money: wrexham&#x27;s kids win again as the club writes an &amp;pound;8.7m cheque lord, vargas and soria have scored in every knockout match this summer. this week, the club paid more for a teenager they&#x27;ve never played than it&#x27;s paid the three of them combined. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-westham-qf">
+  <span class="mc-archive-row-date">Jul 7, 2026</span>
+  <span class="mc-archive-row-title">Old Names, New Money: Wrexham's Kids Win Again as the Club Writes an &pound;8.7m Cheque</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="keeyvon-jenkins" data-category="hawks-nest" data-season="2026/27" data-search="two months, one chequebook, one name we still can&#x27;t get right the board finally spent it. the goalkeeper we signed twice still didn&#x27;t have a face until this week. keeyvon jenkins the hawk&#x27;s nest (private journal) hawk&#x27;s nest" href="../journal.html#entry-093">
+  <span class="mc-archive-row-date">Jul 7, 2026</span>
+  <span class="mc-archive-row-title">Two Months, One Chequebook, One Name We Still Can't Get Right</span>
+  <span class="mc-archive-row-meta">Keeyvon Jenkins &middot; The Hawk's Nest (Private Journal)</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2025/26" data-search="vargas does it all as wrexham&#x27;s kids lift the rush tournament a goal, two assists, and a trophy for a sixteen-year-old who has now had a better summer than half the first team. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-blackburn-final">
+  <span class="mc-archive-row-date">Jun 19, 2026</span>
+  <span class="mc-archive-row-title">Vargas Does It All as Wrexham's Kids Lift the Rush Tournament</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="match-reports" data-season="2025/26" data-search="vargas off the bench, lord on the scoresheet again — watford swept aside three weeks after a summer of upheaval, the kids wrexham kept are the ones doing the talking. owen meredith the red dragon dispatch match reports" href="../journal.html#entry-watford">
+  <span class="mc-archive-row-date">Jun 4, 2026</span>
+  <span class="mc-archive-row-title">Vargas Off the Bench, Lord on the Scoresheet Again — Watford Swept Aside</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
+</a>
+<a class="mc-archive-row" data-author="owen-meredith" data-category="transfers" data-season="2025/26" data-search="five out the door, one kid sent packing — and somewhere in there, a golden goal jenkins clears the goalkeeping logjam and cashes in on last season&#x27;s fringe players in the same afternoon wrexham needed extra time to beat ipswich&#x27;s kids. owen meredith the red dragon dispatch transfers" href="../journal.html#entry-transfers">
+  <span class="mc-archive-row-date">May 15, 2026</span>
+  <span class="mc-archive-row-title">Five Out the Door, One Kid Sent Packing — and Somewhere in There, a Golden Goal</span>
+  <span class="mc-archive-row-meta">Owen Meredith &middot; The Red Dragon Dispatch</span>
 </a>
 </div>
+<p class="mc-archive-empty" id="mc-archive-empty" style="display:none;">No coverage matches these filters yet.</p>
 <script>
-function filterArchive(authorId, btn) {
-  document.querySelectorAll('.jf-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.archive-row').forEach(row => {
-    row.style.display = (authorId === 'all' || row.dataset.author === authorId) ? '' : 'none';
-  });
-}
+(function () {
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.mc-archive-row'));
+  var state = { category: 'all', author: 'all', season: 'all', q: '' };
+
+  function apply() {
+    var any = false;
+    rows.forEach(function (r) {
+      var show = (state.category === 'all' || r.dataset.category === state.category) &&
+        (state.author === 'all' || r.dataset.author === state.author) &&
+        (state.season === 'all' || r.dataset.season === state.season) &&
+        (!state.q || r.dataset.search.indexOf(state.q) !== -1);
+      r.style.display = show ? '' : 'none';
+      if (show) any = true;
+    });
+    var empty = document.getElementById('mc-archive-empty');
+    if (empty) empty.style.display = any ? 'none' : '';
+  }
+
+  function wireGroup(groupId, key) {
+    var group = document.getElementById(groupId);
+    if (!group) return;
+    var btns = Array.prototype.slice.call(group.querySelectorAll('.mc-filter-btn'));
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        btns.forEach(function (x) { x.classList.remove('is-active'); x.setAttribute('aria-pressed', 'false'); });
+        b.classList.add('is-active');
+        b.setAttribute('aria-pressed', 'true');
+        state[key] = b.dataset.value;
+        apply();
+      });
+    });
+  }
+  wireGroup('mc-archive-cat-group', 'category');
+  wireGroup('mc-archive-author-group', 'author');
+  wireGroup('mc-archive-season-group', 'season');
+
+  var search = document.getElementById('mc-archive-search');
+  if (search) {
+    search.addEventListener('input', function () {
+      state.q = search.value.trim().toLowerCase();
+      apply();
+    });
+  }
+
+  try {
+    var params = new URLSearchParams(window.location.search);
+    ['author', 'category', 'season'].forEach(function (key) {
+      var val = params.get(key);
+      if (!val) return;
+      var btn = document.querySelector('#mc-archive-' + key + '-group .mc-filter-btn[data-value="' + val + '"]');
+      if (btn) btn.click();
+    });
+  } catch (e) { /* URLSearchParams unsupported — filters still work manually */ }
+})();
 </script>
+</main>
 
-
-</div>
+<footer class="home-footer">
+  <div class="home-footer-inner">
+    <div class="home-footer-brand">
+      <img class="home-footer-crest" src="../assets/photos/wrexham-crest.png" alt="">
+      <div>
+        <span class="home-footer-title">The Jenkins Era</span>
+        <span class="home-footer-sub">Wrexham AFC &middot; The Keevyon Jenkins Years</span>
+      </div>
+    </div>
+    <nav class="home-footer-links" aria-label="Footer">
+      <a href="../media/index.html">Media Centre</a>
+      <a href="../journal.html">Journal</a>
+      <a href="../season.html">Season</a>
+      <a href="../roster.html">Squad</a>
+      <a href="../depth_chart.html">Depth Chart</a>
+      <a href="../academy.html">Academy</a>
+      <a href="../history.html">History</a>
+      <a href="../dossier.html">Manager Profile</a>
+      <a href="../season_preview.html">Season Preview</a>
+      <a href="../submit.html">Submit Data</a>
+    </nav>
+    <p class="home-footer-disclosure">An FC26 career-mode history project documenting the fictional managerial
+      career of Keevyon Jenkins at Wrexham AFC. Not affiliated with, endorsed by, or connected to Wrexham AFC,
+      the Premier League, the EFL, EA Sports, or any broadcaster or publication. Journalists, articles and
+      match events on this site are fictional.</p>
+  </div>
+</footer>
 
 </body>
 </html>
