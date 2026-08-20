@@ -77,12 +77,23 @@
     // Automatic pick — no per-session curation needed, so a brand new
     // article is compatible with the redesign the moment it's generated.
     // Prefer an explicitly `featured` article, else the most recent
-    // "premium" (non-dispatch) piece, else fall back to the latest dispatch.
+    // "premium" (non-dispatch) piece, else fall back to the latest dispatch —
+    // but within each of those tiers, prefer a candidate that actually
+    // carries approved photography over one that would fall back to the
+    // generic crest graphic. A dispatch/feature sharing a `featured` flag
+    // and a publish date is common (e.g. Owen's dispatch and a Sky Sports
+    // column both covering the same match), and the photographic one should
+    // win the dominant lead slot; the crest fallback stays reserved for the
+    // genuine case where nothing in contention has an image at all.
     var featured = pool.filter(function (a) { return a.featured; });
     var premium = pool.filter(function (a) { return a.content_type !== 'dispatch'; });
-    var lead = featured[0] || premium[0] || pool[0];
+    var withImage = function (list) { return list.filter(function (a) { return a.image; }); };
+    var lead = withImage(featured)[0] || withImage(premium)[0] || featured[0] || premium[0] || pool[0];
     var rest = pool.filter(function (a) { return a.id !== lead.id; });
-    var supporting = (premium.length > 1 ? premium.filter(function (a) { return a.id !== lead.id; }) : rest).slice(0, 3);
+    var supportPool = (premium.length > 1 ? premium.filter(function (a) { return a.id !== lead.id; }) : rest);
+    // Same preference within the supporting rail: photographic candidates
+    // first, then fill any remaining slots with whatever's left.
+    var supporting = withImage(supportPool).concat(supportPool.filter(function (a) { return !a.image; })).slice(0, 3);
     if (supporting.length < 3) {
       rest.forEach(function (a) {
         if (supporting.length >= 3) return;
@@ -91,6 +102,8 @@
     }
 
     var lp = person(lead.author_id);
+    // Graceful fallback for a story genuinely lacking photography — never
+    // reached when any contending story above has real photography.
     var leadImg = lead.image || 'assets/photos/wrexham-crest.png';
     var leadHtml = '<a class="mc-lead-link" href="' + esc(url(lead)) + '">' +
       '<div class="mc-lead-media"><img src="../' + esc(leadImg) + '" alt="' + esc(lead.image_alt || lead.headline) + '"></div>' +
@@ -133,20 +146,29 @@
   var FEED_LIMIT = 24;
 
   /* Three visual treatments, assigned deterministically from data already on
-     hand (image presence + position) — never a per-article hardcoded flag.
-     Exactly one row becomes "major" (the first story carrying a curated
-     image); every other image-bearing story is "standard"; anything with no
-     curated image falls back to the compact "wire" treatment, letting
-     typography carry the row instead of a stretched-thumbnail placeholder. */
-  function feedRow(a, idx, majorState) {
+     hand (image presence + a running "how long since the last visual break"
+     count) — never a per-article hardcoded flag:
+       wire     no curated image — typography carries the row
+       standard has a curated image, rendered as a normal thumbnail row
+       major    has a curated image AND arrives after a run of ~5+ wire rows
+                (or is the very first image-bearing story), so it gets the
+                full photo-with-overlay "hero" treatment (shared with the
+                lead card, see .mc-lead-link / .mc-feed-item.is-major in
+                style.css) instead of just a bigger thumbnail — that's what
+                actually breaks up a long wall of compact stories. */
+  var MAJOR_WIRE_GAP = 5;
+
+  function feedRow(a, idx, state) {
     var sp = person(a.author_id);
     var img = a.image;
-    var tier = 'standard';
+    var tier;
     if (!img) {
       tier = 'wire';
-    } else if (!majorState.used) {
-      tier = 'major';
-      majorState.used = true;
+      state.wireStreak++;
+    } else {
+      tier = (!state.majorUsed || state.wireStreak >= MAJOR_WIRE_GAP) ? 'major' : 'standard';
+      state.majorUsed = true;
+      state.wireStreak = 0;
     }
     var cls = 'mc-feed-item is-' + tier + (img ? '' : ' no-media');
     return '<a class="' + cls + '" href="' + esc(url(a)) + '" data-category="' + esc(a.category) + '">' +
@@ -161,8 +183,8 @@
 
   function renderFeed() {
     var pool = newsroomArticles().slice(0, FEED_LIMIT);
-    var majorState = { used: false };
-    set('mc-feed', pool.map(function (a, idx) { return feedRow(a, idx, majorState); }).join(''));
+    var tierState = { majorUsed: false, wireStreak: 0 };
+    set('mc-feed', pool.map(function (a, idx) { return feedRow(a, idx, tierState); }).join(''));
 
     var cats = MEDIA_INDEX.categories || [];
     var btns = ['<button type="button" class="mc-filter-btn is-active" data-value="all" aria-pressed="true">All</button>'];
@@ -249,6 +271,30 @@
     set('mc-archive-teaser', html);
   }
 
+  /* ── Intro stat line ──────────────────────────────────────────────────
+     Fills the unused desktop space beside the masthead intro with a small
+     newsroom-stat line, e.g. "70 STORIES · 8 JOURNALISTS · 4 OUTLETS ·
+     2026/27". Every number is counted from MEDIA_INDEX at render time —
+     nothing here is a hardcoded figure, so it can never drift out of sync
+     with the data the way a hand-typed count would. Renders nothing (rather
+     than a stat with a zero or blank) if the underlying data isn't there. */
+  function renderIntroStats() {
+    var stories = newsroomArticles().length;
+    var journalists = (MEDIA_INDEX.people_order || []).filter(function (id) {
+      return MEDIA_INDEX.people[id].is_press;
+    }).length;
+    var outlets = (MEDIA_INDEX.publications || []).length;
+    var season = (MEDIA_INDEX.seasons || [])[0];
+    if (!stories || !journalists || !outlets || !season) return;
+    var stats = [
+      stories + (stories === 1 ? ' Story' : ' Stories'),
+      journalists + (journalists === 1 ? ' Journalist' : ' Journalists'),
+      outlets + (outlets === 1 ? ' Outlet' : ' Outlets'),
+      season
+    ];
+    set('mc-intro-stats', stats.map(function (s) { return '<span>' + esc(s) + '</span>'; }).join('<i aria-hidden="true">&middot;</i>'));
+  }
+
   try { renderLead(); } catch (e) { }
   try { renderCategories(); } catch (e) { }
   try { renderFeed(); } catch (e) { }
@@ -256,4 +302,5 @@
   try { renderHawksNest(); } catch (e) { }
   try { renderPublications(); } catch (e) { }
   try { renderArchiveTeaser(); } catch (e) { }
+  try { renderIntroStats(); } catch (e) { }
 })();

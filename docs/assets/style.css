@@ -3824,6 +3824,33 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   color: var(--light);
   max-width: 840px;
 }
+.mc-intro-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+}
+.mc-intro-main { min-width: 0; flex: 1 1 auto; }
+/* Newsroom-stat line — fills the desktop space beside the intro text that
+   would otherwise sit empty. Populated by media.js's renderIntroStats()
+   from MEDIA_INDEX; renders nothing (no empty box) if that data is missing,
+   so this never shows a hardcoded or stale count. */
+.mc-intro-stats {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  padding-bottom: 6px;
+}
+.mc-intro-stats span { color: var(--white); }
+.mc-intro-stats i { font-style: normal; color: var(--steel); }
 
 /* ─── Section heads (denser than the homepage's, but still substantial) ─── */
 .mc-section { margin-top: 66px; }
@@ -4016,9 +4043,12 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 
 /* ─── Latest From the Newsroom — three deterministic visual treatments ───
    Tier is assigned in media.js purely from data already on hand (image
-   presence + position), never hand-authored per article:
-     .is-major    the single most prominent image-bearing story
-     .is-standard every other image-bearing story (the default)
+   presence + a running wire-streak count), never hand-authored per article:
+     .is-major    a "hero" card — reuses the same photo+gradient-overlay
+                  language as .mc-lead-link above, at newsroom-row scale, so
+                  it reads as a real visual break rather than a bigger
+                  thumbnail. Recurs roughly every 5+ wire rows, not just once.
+     .is-standard every other image-bearing story — a normal thumbnail row
      .is-wire     stories with no curated image — typography carries the row
    ─────────────────────────────────────────────────────────────────────── */
 .mc-feed { display: flex; flex-direction: column; }
@@ -4071,20 +4101,56 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   letter-spacing: 0.3px;
 }
 
-/* Major — the single dominant newsroom row beneath the lead/supporting block. */
+/* Major — a hero-style card, the same photo/gradient/overlaid-headline
+   language as .mc-lead-link (see "Lead + supporting" above), just shorter.
+   Reusable by construction: feedRow() in media.js emits the exact same
+   markup for every tier — only this CSS modifier changes how it looks. */
 .mc-feed-item.is-major {
-  grid-template-columns: minmax(280px, 38%) 1fr;
-  gap: 30px;
-  padding: 32px 0;
+  display: block;
+  position: relative;
+  grid-template-columns: none;
+  padding: 0;
+  margin: 6px 0 30px;
+  min-height: 360px;
+  border-bottom: none;
+  overflow: hidden;
+  background: var(--h-panel);
 }
-.mc-feed-item.is-major .mc-feed-kicker { font-size: 12.5px; }
-.mc-feed-item.is-major .mc-feed-title { font-size: 28px; line-height: 1.16; margin-bottom: 10px; }
+.mc-feed-item.is-major .mc-feed-media {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto;
+}
+.mc-feed-item.is-major .mc-feed-media img { filter: brightness(1.1) saturate(1.04); }
+.mc-feed-item.is-major .mc-feed-media::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(6,6,6,0.95) 12%, rgba(6,6,6,0.55) 46%, rgba(6,6,6,0.1) 74%);
+}
+.mc-feed-item.is-major .mc-feed-copy {
+  position: relative;
+  z-index: 1;
+  min-height: 360px;
+  padding: 32px 34px 28px;
+  justify-content: flex-end;
+}
+.mc-feed-item.is-major .mc-feed-kicker { color: var(--gold); font-size: 13px; }
+.mc-feed-item.is-major .mc-feed-title {
+  font-size: 30px;
+  line-height: 1.14;
+  margin-bottom: 12px;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
+  max-width: 780px;
+}
 .mc-feed-item.is-major .mc-feed-dek {
   font-size: 15.5px;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   margin-bottom: 10px;
+  color: rgba(240,240,240,0.88);
+  max-width: 640px;
 }
-.mc-feed-item.is-major .mc-feed-meta { font-size: 12.5px; }
+.mc-feed-item.is-major .mc-feed-meta { font-size: 12.5px; color: rgba(240,240,240,0.65); }
 
 /* Wire — routine/lower-priority stories; typography carries the row. */
 .mc-feed-item.is-wire {
@@ -4378,18 +4444,22 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 @media (max-width: 880px) {
   .mc-shell { padding: 0 20px 52px; }
   .mc-intro-title { font-size: 38px; }
+  .mc-intro-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .mc-intro-stats { font-size: 12.5px; gap: 8px; padding-bottom: 0; }
   .mc-section-head h2 { font-size: 24px; }
   .mc-support-media { width: 108px; }
   .mc-support-title { font-size: 16.5px; }
   .press-corps-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
   .press-avatar, .press-avatar-mono { width: 90px; height: 90px; }
-  .mc-feed-item.is-major { grid-template-columns: minmax(220px, 40%) 1fr; gap: 20px; padding: 24px 0; }
-  .mc-feed-item.is-major .mc-feed-title { font-size: 22px; }
+  .mc-feed-item.is-major { min-height: 300px; }
+  .mc-feed-item.is-major .mc-feed-copy { min-height: 300px; padding: 26px 26px 22px; }
+  .mc-feed-item.is-major .mc-feed-title { font-size: 24px; }
   .hawk-section { padding: 32px 26px; }
 }
 @media (max-width: 600px) {
   .mc-intro-title { font-size: 30px; }
   .mc-intro-sub { font-size: 15px; }
+  .mc-intro-stats { display: none; }
   .mc-lead-link, .mc-lead-copy { min-height: 320px; }
   .mc-lead-copy { padding: 24px 20px 22px; }
   .mc-lead-title { font-size: 25px; }
@@ -4399,9 +4469,10 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   .mc-feed-item, .mc-feed-item.is-standard { grid-template-columns: 78px 1fr; gap: 12px; padding: 16px 0; }
   .mc-feed-item .mc-feed-title { font-size: 15.5px; }
   .mc-feed-item .mc-feed-dek { display: none; }
-  .mc-feed-item.is-major { grid-template-columns: 1fr; gap: 12px; padding: 20px 0; }
-  .mc-feed-item.is-major .mc-feed-media { aspect-ratio: 16 / 9; }
-  .mc-feed-item.is-major .mc-feed-title { font-size: 20px; }
+  .mc-feed-item.is-major { min-height: 220px; margin: 4px 0 22px; }
+  .mc-feed-item.is-major .mc-feed-copy { min-height: 220px; padding: 20px 18px 18px; }
+  .mc-feed-item.is-major .mc-feed-title { font-size: 20px; max-width: none; }
+  .mc-feed-item.is-major .mc-feed-dek { -webkit-line-clamp: 2; }
   .mc-feed-item.is-wire { grid-template-columns: 60px 1fr; padding: 12px 0; }
   .mc-feed-item.is-wire .mc-feed-title { font-size: 14.5px; }
   .press-corps-grid { grid-template-columns: 1fr; }
