@@ -132,11 +132,23 @@
   /* ── Latest From the Newsroom (filterable wire feed) ─────────────────── */
   var FEED_LIMIT = 24;
 
-  function feedRow(a, idx) {
+  /* Three visual treatments, assigned deterministically from data already on
+     hand (image presence + position) — never a per-article hardcoded flag.
+     Exactly one row becomes "major" (the first story carrying a curated
+     image); every other image-bearing story is "standard"; anything with no
+     curated image falls back to the compact "wire" treatment, letting
+     typography carry the row instead of a stretched-thumbnail placeholder. */
+  function feedRow(a, idx, majorState) {
     var sp = person(a.author_id);
     var img = a.image;
-    var major = idx < 2 && !!img;
-    var cls = 'mc-feed-item' + (major ? ' is-major' : '') + (img ? '' : ' no-media');
+    var tier = 'standard';
+    if (!img) {
+      tier = 'wire';
+    } else if (!majorState.used) {
+      tier = 'major';
+      majorState.used = true;
+    }
+    var cls = 'mc-feed-item is-' + tier + (img ? '' : ' no-media');
     return '<a class="' + cls + '" href="' + esc(url(a)) + '" data-category="' + esc(a.category) + '">' +
       (img ? '<div class="mc-feed-media"><img src="../' + esc(img) + '" alt="' + esc(a.image_alt || a.headline) + '" loading="' + (idx < 3 ? 'eager' : 'lazy') + '"></div>' : '') +
       '<div class="mc-feed-copy">' +
@@ -149,7 +161,8 @@
 
   function renderFeed() {
     var pool = newsroomArticles().slice(0, FEED_LIMIT);
-    set('mc-feed', pool.map(feedRow).join(''));
+    var majorState = { used: false };
+    set('mc-feed', pool.map(function (a, idx) { return feedRow(a, idx, majorState); }).join(''));
 
     var cats = MEDIA_INDEX.categories || [];
     var btns = ['<button type="button" class="mc-filter-btn is-active" data-value="all" aria-pressed="true">All</button>'];
