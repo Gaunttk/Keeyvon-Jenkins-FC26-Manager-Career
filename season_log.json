@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-05-11"
+    "last_updated": "2027-05-20"
   },
   "matches": [
     {
@@ -889,6 +889,63 @@
       "round": "Round of 16",
       "notes": "Obi 32', Bobadilla 50', Veleten 90'. MoM: Klaverboer (clean sheet, 7.5 rating), deputising for a rested Okonkwo. Into the quarterfinals, will face Aston Villa.",
       "journal_entry": true
+    },
+    {
+      "date": "2027-05-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Final",
+      "notes": "Fruk 20', 53'. Despite the early goal, City controlled the game with their relentless high press, causing several turnovers. We settled in after halftime and moved the ball more comfortably. Fruk's second goal allowed fresh legs to come on. Once again Wrexham is not afraid to play their young players in the highest-stakes games in front of the biggest crowds. Played at Wembley (neutral venue).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.9,
+        "A. Okonkwo": 7.4,
+        "A. Heaven": 7.0,
+        "B. Gutiérrez": 6.5,
+        "C. Doyle": 7.4,
+        "C. Obi": 6.0,
+        "D. Bobadilla": 6.3,
+        "E. Dijkstra": 6.8,
+        "J. Mokio": 6.7,
+        "L. Sauer": 6.7,
+        "L. Cacace": 6.7,
+        "R. Ngumoha": 5.9,
+        "T. Pitarch": 6.9,
+        "T. Fruk": 7.2,
+        "Y. Amrizi": 6.7,
+        "J.C. Vargas": 6.5
+      }
+    },
+    {
+      "date": "2027-05-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "3-2",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Haaland 32', Ait Nouri 38' (Manchester City). Sauer 59', Gómez 63', 68' (Wrexham). MoM: Gómez. With Wrexham 3 points behind coming into the match, a win here put the club in an amazing position with only one game left after. Both City and Wrexham have easier fixtures on decision day. Several starters practiced poorly and seemed complacent in the buildup — a message went out to the squad that effort and attitude are non-negotiable. Amrizi went off with an apparent serious leg injury in the 9th minute; Obi came on. Incredible, incredible, INCREDIBLE game — one for the ages.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 7.9,
+        "B. Klaverboer": 7.0,
+        "B. Gutiérrez": 6.5,
+        "C. Doyle": 6.9,
+        "C. Obi": 7.4,
+        "D. Bobadilla": 7.1,
+        "J. Belghazi": 7.0,
+        "J. Mokio": 7.1,
+        "L. Sauer": 7.3,
+        "L. Cacace": 6.9,
+        "M. Barbieri": 6.3,
+        "M. Cleworth": 5.2,
+        "T. Pitarch": 5.3,
+        "T. Fruk": 7.5,
+        "V. Veleten": 6.2,
+        "Y. Amrizi": 5.9
+      }
     }
   ],
   "transfers": [
@@ -1198,6 +1255,11 @@
       "date": "2027-02-27",
       "player": "Brian Gutierrez",
       "description": "Elbow, 5 days"
+    },
+    {
+      "date": "2027-05-15",
+      "player": "Y. Amrizi",
+      "description": "Torn Quad Muscle - 3 Months"
     }
   ],
   "milestones": [
@@ -1547,6 +1609,26 @@
     {
       "date": "2027-05-01",
       "description": "Premier League MD34 — 2-3 away defeat at Manchester United; Amad's brace either side of Chido Obi and Juan Cruz Vargas late strikes proved decisive. Not the side's best performance, but plenty of the season still to play."
+    },
+    {
+      "date": "2027-05-15",
+      "description": "FA Cup won at Wembley — Wrexham beat Manchester City 2-0 in the final (Fruk 2)."
+    },
+    {
+      "date": "2027-05-15",
+      "description": "Beat Manchester City 3-2 away in the Premier League title race, moving into a strong position with one game remaining. Gómez scored twice and was Man of the Match; Amrizi went off with a torn quad muscle (3 months) in the 9th minute."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Squad update — Fabricio Sandoval loaned to Hull City for 2 years."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Squad update — Matthieu Brunel (ST) promoted from the Youth Academy to the first team as Prospect squad role."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Squad update — two new Youth Academy signings from Norway: Knut Inge Bakke (17, RM, POT 69-94) and Even Jensen (17, LB/RB, POT 69-94). Status/Financial (contract, wage, market value) not yet confirmed for either — only Academy Development-plan attribute screens available so far."
     }
   ],
   "fixtures": [

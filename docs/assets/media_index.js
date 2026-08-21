@@ -100,6 +100,70 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-05-15-fa-cup-final-manchester-city": {
+   "id": "2027-05-15-fa-cup-final-manchester-city",
+   "headline": "Fruk Brace Wins Wrexham's First Major Trophy as City's Press Finally Breaks",
+   "dek": "Two goals from Toni Fruk either side of a first half Wrexham mostly survived were enough to beat Manchester City 2-0 and end 165 years of waiting for a major domestic trophy.",
+   "date": "2027-05-15",
+   "date_label": "May 15, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-05-15-fa-cup-final-manchester-city"
+  },
+  "2027-05-15-pl-manchester-city-away": {
+   "id": "2027-05-15-pl-manchester-city-away",
+   "headline": "Gómez Brace Downs Manchester City in a Five-Goal Title-Race Thriller",
+   "dek": "Three points behind before kickoff, Wrexham beat Manchester City 3-2 away from home to move into a commanding position with one game of the season left — but the day was overshadowed by a serious-looking injury to Yacel Amrizi.",
+   "date": "2027-05-15",
+   "date_label": "May 15, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-05-15-pl-manchester-city-away"
+  },
+  "2027-05-15-hargreaves-first-trophy": {
+   "id": "2027-05-15-hargreaves-first-trophy",
+   "headline": "165 Years in the Making: Wrexham Finally Have Their First Major Trophy",
+   "dek": "Two months ago I wrote that Wrexham's cup run needed no borrowed history to make its point. Beating Manchester City 2-0 at Wembley to actually lift the thing has made that point for me.",
+   "date": "2027-05-15",
+   "date_label": "May 15, 2027",
+   "author_id": "oliver-hargreaves",
+   "outlet": "Sky Sports",
+   "section": "Featured Columns",
+   "content_type": "feature",
+   "entry_number": null,
+   "category": "history",
+   "category_label": "History",
+   "season": "2026/27",
+   "tags": [
+    "history",
+    "fa-cup",
+    "milestone"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-05-15-hargreaves-first-trophy.html"
+  },
   "2027-05-11-pl-ipswich-town-home": {
    "id": "2027-05-11-pl-ipswich-town-home",
    "headline": "Cacace Masterclass Sees Off Ipswich as Wrexham Steady the Ship",
@@ -1855,6 +1919,9 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-05-15-fa-cup-final-manchester-city",
+  "2027-05-15-pl-manchester-city-away",
+  "2027-05-15-hargreaves-first-trophy",
   "2027-05-11-pl-ipswich-town-home",
   "entry-103",
   "2027-05-08-pl-newcastle-home",
@@ -1946,7 +2013,7 @@ const MEDIA_INDEX = {
   {
    "slug": "history",
    "label": "History",
-   "count": 3
+   "count": 4
   },
   {
    "slug": "academy",
@@ -1967,9 +2034,9 @@ const MEDIA_INDEX = {
  "publications": [
   {
    "name": "Sky Sports",
-   "count": 3,
-   "latest_id": "2027-03-20-hargreaves-first-cup-final",
-   "latest_date": "2027-03-20"
+   "count": 4,
+   "latest_id": "2027-05-15-hargreaves-first-trophy",
+   "latest_date": "2027-05-15"
   },
   {
    "name": "The Athletic",

@@ -55,9 +55,9 @@ const HOME_CONFIG = {
 
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
-    articleId: '2027-05-11-pl-ipswich-town-home',
-    image: 'assets/photos/liberato_cacace.png',
-    imageAlt: 'Liberato Cacace',
+    articleId: '2027-05-15-fa-cup-final-manchester-city',
+    image: 'assets/photos/toni_fruk.png',
+    imageAlt: 'Toni Fruk',
     layout: 'subject-right',
     focusX: '76%',
     focusY: '22%'
@@ -65,9 +65,9 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-05-08-pl-newcastle-home', image: 'assets/photos/chido_obi.png', imageAlt: 'Chido Obi' },
-    { articleId: '2027-04-17-pl-crystal-palace-home', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
-    { articleId: '2027-05-01-pl-manchester-united-away', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
+    { articleId: '2027-05-15-pl-manchester-city-away', image: 'assets/photos/andres_gomez.png', imageAlt: 'Andrés Gómez' },
+    { articleId: '2027-05-15-hargreaves-first-trophy', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
+    { articleId: '2027-05-11-pl-ipswich-town-home', image: 'assets/photos/liberato_cacace.png', imageAlt: 'Liberato Cacace' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
@@ -75,7 +75,7 @@ const HOME_CONFIG = {
      treatment automatically — no flag needed. */
   writers: [
     { articleId: 'entry-103', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
-    { articleId: '2027-03-06-mcallister-academy-pipeline-fourth-title', image: 'assets/photos/sandoval.png', imageAlt: 'Fabricio Sandoval' },
+    { articleId: '2027-05-08-pl-newcastle-home', image: 'assets/photos/chido_obi.png', imageAlt: 'Chido Obi' },
     { articleId: '2027-03-20-fa-cup-semi-arsenal', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
   ],
 
@@ -104,12 +104,12 @@ const HOME_CONFIG = {
      the head of that player's Notes column — nothing inferred. */
   academy: {
     featured: {
-      name: 'Matthieu Brunel', position: 'ST', age: 17, ovr: 64, potential: '74-88',
+      name: 'Jules Collin', position: 'RW', age: 17, ovr: 62, potential: '81-87',
       nationality: 'France',
-      image: 'assets/photos/brunel.png'
+      image: 'assets/photos/collin.png'
     },
     others: [
-      { name: 'Jules Collin', position: 'RW', age: 17, ovr: 62, potential: '81-87', image: 'assets/photos/collin.png' },
+      { name: 'Nathaniel Matthews', position: 'RW', age: 16, ovr: 62, potential: '75-81', image: 'assets/photos/matthews.png' },
       { name: 'Stephane Bertrand', position: 'RW', age: 16, ovr: 60, potential: '91-94', image: 'assets/photos/bertrand.png' },
       { name: 'Ben Forster', position: 'CM', age: 16, ovr: 62, potential: '79-85', image: 'assets/photos/forster.png' }
     ]
