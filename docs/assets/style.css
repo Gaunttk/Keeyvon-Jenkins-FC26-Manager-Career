@@ -2764,9 +2764,12 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 
    Everything below is namespaced to the homepage: it lives inside `.home-body`
    or under `home-*` / `writer-*` / `player-*` / `academy-*` / `era-*` classes
-   that no other page uses. Legacy reading pages (journal, roster, academy,
-   dossier, season, history, media) keep their 960px `.page-wrap` behaviour and
-   are deliberately untouched by this block.
+   that no other page uses. Legacy reading pages (journal, academy, dossier,
+   season, history, media) keep their 960px `.page-wrap` behaviour and are
+   deliberately untouched by this block. docs/roster.html (Phase 3A, "Squad")
+   is the one other page that opts into the wide `.home-body` masthead/footer
+   and `--h-*` tokens — its own rules live in the "SQUAD LANDING PAGE" block
+   near the end of this file, same pattern as Media Centre below.
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .home-body {
@@ -3640,11 +3643,16 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 
 @media (max-width: 760px) {
   .home-body { --h-gutter: 16px; --h-gap: 16px; --h-section-gap: 44px; }
-  .home-header-inner { padding: 16px var(--h-gutter) 14px; align-items: flex-start; gap: 12px; }
+  /* flex-wrap keeps the season/competition meta from overflowing the
+     viewport at very narrow widths -- the brand block alone can exceed
+     ~340px even at the shrunk mobile sizes below, so without wrapping the
+     meta block gets pushed off-screen to the right instead of dropping
+     to its own line. */
+  .home-header-inner { padding: 16px var(--h-gutter) 14px; align-items: flex-start; gap: 8px 12px; flex-wrap: wrap; }
   .home-brand-crest { width: 40px; height: 40px; }
   .home-brand-title { font-size: 26px; }
   .home-brand-sub { font-size: 10px; letter-spacing: 2px; margin-top: 4px; }
-  .home-header-meta { text-align: right; }
+  .home-header-meta { text-align: left; }
   .home-header-season { font-size: 11px; }
   .home-header-comp { font-size: 10px; }
   .home-nav-link { font-size: 13px; padding: 12px 13px; letter-spacing: 2px; border-bottom-width: 3px; }
@@ -4724,4 +4732,277 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 }
 @media (max-width: 430px) {
   .article-related-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SQUAD LANDING PAGE (docs/roster.html) — body class "home-body squad-page"
+
+   Reuses the approved homepage masthead/footer (.home-header / .home-footer
+   and their `--h-*` tokens, defined under `.home-body` above) and reuses the
+   homepage's own `.player-feature` / `.player-mini-*` Squad Spotlight
+   components unchanged for the Featured Player block. Everything else below
+   is new, namespaced `squad-*` / `loan-watch-*`, and does not touch any
+   `.home-*` or `.player-*` selector. The embedded Youth Academy section
+   further down the page keeps its original `.page-wrap` / `.acad-*` markup
+   completely untouched — Academy is out of scope for this redesign.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.squad-shell { max-width: var(--h-max); margin: 0 auto; padding: 0 var(--h-gutter) var(--h-section-gap); }
+
+/* ─── Squad title block ─── */
+.squad-title-block { padding: 48px 0 30px; border-bottom: 1px solid var(--h-rule); }
+.squad-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--red);
+}
+.squad-title {
+  font-family: 'Playfair Display', serif; font-weight: 900; font-size: 58px;
+  line-height: 1; color: var(--white); margin-top: 10px;
+}
+.squad-subtitle {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--light); margin-top: 12px;
+}
+
+/* ─── Hero ─── */
+.squad-hero {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: var(--h-gap); align-items: stretch; margin-top: 34px;
+}
+.squad-hero-copy { display: flex; flex-direction: column; justify-content: center; }
+.squad-hero-copy p {
+  font-family: 'Barlow', sans-serif; font-size: 17px; line-height: 1.75; color: var(--light);
+  max-width: 46ch;
+}
+.squad-hero-media { min-height: 380px; overflow: hidden; background: var(--charcoal); position: relative; }
+.squad-hero-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  object-position: var(--squad-hero-focus-x, 50%) var(--squad-hero-focus-y, 30%);
+  filter: brightness(1.08) saturate(1.05);
+}
+.squad-hero-media::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0) 45%);
+}
+.squad-hero-caption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 18px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; letter-spacing: 1.2px;
+  text-transform: uppercase; color: rgba(240,240,240,0.85); z-index: 2;
+}
+
+/* ─── Squad At a Glance ─── */
+.squad-glance {
+  margin-top: var(--h-section-gap);
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px; background: var(--h-rule); border: 1px solid var(--h-rule);
+}
+.squad-glance-stat {
+  background: var(--h-panel); padding: 22px 18px; display: flex; flex-direction: column; gap: 8px;
+}
+.squad-glance-value {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px;
+  letter-spacing: 0.3px; color: var(--white); line-height: 1;
+}
+.squad-glance-value.is-gold { color: var(--gold); }
+.squad-glance-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 11.5px; font-weight: 700;
+  letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted);
+}
+.squad-glance-sub { font-family: 'Barlow', sans-serif; font-size: 12.5px; color: var(--light); }
+
+/* ─── Featured Player (reuses .player-feature from the homepage block) ─── */
+.squad-feature-wrap { margin-top: var(--h-section-gap); }
+
+/* ─── Section scaffolding ─── */
+.squad-section { margin-top: var(--h-section-gap); }
+.squad-section-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 20px;
+  margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid var(--h-rule);
+}
+.squad-section-head h2 {
+  font-family: 'Playfair Display', serif; font-weight: 900; font-size: 28px; color: var(--white);
+}
+.squad-section-note { font-family: 'Barlow', sans-serif; font-size: 13.5px; color: var(--muted); }
+
+/* ─── Position groups ─── */
+.squad-group { margin-top: 40px; }
+.squad-group:first-child { margin-top: 0; }
+.squad-group-head {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
+}
+.squad-group-head h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 20px;
+  letter-spacing: 2.5px; text-transform: uppercase; color: var(--white); white-space: nowrap;
+}
+.squad-group-count {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--muted);
+}
+.squad-group-line { flex: 1; height: 1px; background: var(--h-rule); }
+
+.squad-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px;
+}
+
+.squad-card {
+  display: flex; flex-direction: column; background: var(--h-panel); border: 1px solid var(--h-rule);
+  min-width: 0;
+}
+.squad-card-media { position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: var(--charcoal); }
+.squad-card-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  object-position: var(--card-focus-x, 50%) var(--card-focus-y, 22%);
+  filter: brightness(1.08) saturate(1.03);
+}
+.squad-card-placeholder {
+  width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+  background: var(--charcoal); color: var(--steel);
+}
+.squad-card-placeholder svg { width: 46%; height: 46%; }
+.squad-card-ovr {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px;
+  color: var(--white); background: rgba(8,8,8,0.72); border: 1px solid rgba(212,168,67,0.4);
+  padding: 3px 8px;
+}
+.squad-card-ovr.is-elite { color: var(--gold); border-color: var(--gold); }
+.squad-card-captain {
+  position: absolute; top: 10px; left: 10px; z-index: 2;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 12px;
+  color: var(--black); background: var(--gold); width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center; border-radius: 50%;
+}
+.squad-card-body { padding: 14px 16px 16px; border-top: 2px solid var(--red); display: flex; flex-direction: column; gap: 6px; }
+.squad-card-status {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 10.5px; font-weight: 700;
+  letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); align-self: flex-start;
+}
+.squad-card-name {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px;
+  letter-spacing: 0.4px; color: var(--white); line-height: 1.15;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.squad-card-meta { font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--light); }
+.squad-card-bio { font-family: 'Barlow', sans-serif; font-size: 12.5px; color: var(--muted); }
+.squad-card-stats {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; letter-spacing: 0.4px;
+  color: var(--gold); text-transform: uppercase; margin-top: 2px;
+}
+
+/* ─── Loan Watch ─── */
+.loan-watch-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.loan-watch-card {
+  display: flex; flex-direction: column; background: var(--h-panel-2); border: 1px solid var(--h-rule); min-width: 0;
+}
+.loan-watch-media { width: 100%; aspect-ratio: 4 / 5; overflow: hidden; background: var(--charcoal); filter: saturate(0.75) brightness(0.92); }
+.loan-watch-media img { width: 100%; height: 100%; object-fit: cover; display: block; object-position: center 22%; }
+.loan-watch-body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 4px; }
+.loan-watch-name {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16.5px; color: var(--white);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.loan-watch-meta { font-family: 'Barlow', sans-serif; font-size: 12px; color: var(--muted); }
+.loan-watch-club {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: 0.5px;
+  color: var(--dispatch-blue); margin-top: 2px;
+}
+.loan-watch-back { font-family: 'Barlow', sans-serif; font-size: 11.5px; color: var(--muted); }
+
+/* ─── Squad Intelligence ─── */
+.squad-intel-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--h-gap); }
+.squad-intel-card { background: var(--h-panel); border: 1px solid var(--h-rule); padding: 22px 24px; }
+.squad-intel-title {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--red); margin-bottom: 16px;
+}
+.squad-intel-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.squad-intel-row:last-child { margin-bottom: 0; }
+.squad-intel-row-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; letter-spacing: 0.5px;
+  text-transform: uppercase; color: var(--light); width: 64px; flex-shrink: 0;
+}
+.squad-intel-bar { flex: 1; height: 8px; background: var(--h-rule); position: relative; overflow: hidden; }
+.squad-intel-bar-fill { height: 100%; background: var(--red); }
+.squad-intel-row-count {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; color: var(--muted); width: 26px; text-align: right; flex-shrink: 0;
+}
+.squad-intel-fact { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.squad-intel-fact:last-child { margin-bottom: 0; }
+.squad-intel-fact-label {
+  font-family: 'Barlow', sans-serif; font-size: 13.5px; color: var(--light);
+}
+.squad-intel-fact-value {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 17px; color: var(--white);
+}
+.squad-intel-fact-value.is-gold { color: var(--gold); }
+.squad-intel-dev-list { display: flex; flex-direction: column; gap: 12px; }
+.squad-intel-dev-item { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.squad-intel-dev-name { font-family: 'Barlow', sans-serif; font-size: 13.5px; color: var(--white); }
+.squad-intel-dev-pot { font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; color: var(--gold); white-space: nowrap; }
+.squad-intel-empty { font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--muted); }
+
+/* ─── Squad Leaders ─── */
+.squad-leaders-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--h-gap); }
+.squad-leaders-col { background: var(--h-panel); border: 1px solid var(--h-rule); }
+.squad-leaders-col-head {
+  padding: 14px 18px; border-bottom: 1px solid var(--h-rule);
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold);
+}
+.squad-leader-row {
+  display: flex; align-items: center; gap: 12px; padding: 11px 18px; border-bottom: 1px solid var(--h-rule);
+}
+.squad-leader-row:last-child { border-bottom: none; }
+.squad-leader-rank {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 14px; color: var(--muted); width: 16px;
+}
+.squad-leader-photo { width: 38px; height: 38px; border-radius: 50%; overflow: hidden; background: var(--charcoal); flex-shrink: 0; }
+.squad-leader-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.squad-leader-name { flex: 1; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.squad-leader-pos { font-family: 'Barlow Condensed', sans-serif; font-size: 11.5px; color: var(--muted); }
+.squad-leader-value { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; color: var(--gold); }
+
+/* ─── Depth Chart CTA ─── */
+.squad-depth-cta {
+  margin-top: var(--h-section-gap); display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding: 34px 38px; background: var(--h-panel); border: 1px solid var(--h-rule); border-left: 3px solid var(--red);
+}
+.squad-depth-cta-copy h2 {
+  font-family: 'Playfair Display', serif; font-weight: 900; font-size: 26px; color: var(--white);
+}
+.squad-depth-cta-copy p { font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--light); margin-top: 8px; max-width: 56ch; }
+.squad-depth-cta-link {
+  flex-shrink: 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px;
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--black); background: var(--gold);
+  padding: 14px 26px; text-decoration: none; white-space: nowrap;
+}
+.squad-depth-cta-link:hover { background: #E6BE5C; }
+
+/* ─── Academy embed divider ─── */
+.squad-academy-embed { margin-top: var(--h-section-gap); }
+.squad-academy-embed .squad-section-head { max-width: var(--h-max); margin-left: auto; margin-right: auto; padding-left: var(--h-gutter); padding-right: var(--h-gutter); }
+
+@media (max-width: 1300px) {
+  .squad-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .loan-watch-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .squad-glance { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 1100px) {
+  .squad-hero { grid-template-columns: 1fr; }
+  .squad-hero-media { min-height: 300px; order: -1; }
+  .squad-intel-grid { grid-template-columns: 1fr; }
+  .squad-leaders-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .squad-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .loan-watch-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .squad-title { font-size: 40px; }
+  .squad-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .squad-depth-cta { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .squad-grid { grid-template-columns: minmax(0, 1fr); }
+  .loan-watch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .squad-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
