@@ -55,9 +55,9 @@ const HOME_CONFIG = {
 
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
-    articleId: '2027-03-20-hargreaves-first-cup-final',
-    image: 'assets/photos/keeyvon-jenkins.png',
-    imageAlt: 'Keeyvon Jenkins pitchside at the Racecourse',
+    articleId: '2027-05-11-pl-ipswich-town-home',
+    image: 'assets/photos/liberato_cacace.png',
+    imageAlt: 'Liberato Cacace',
     layout: 'subject-right',
     focusX: '76%',
     focusY: '22%'
@@ -65,16 +65,16 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-04-11-pl-aston-villa-away', image: 'assets/photos/yacel_amrizi.png', imageAlt: 'Yacel Amrizi' },
+    { articleId: '2027-05-08-pl-newcastle-home', image: 'assets/photos/chido_obi.png', imageAlt: 'Chido Obi' },
     { articleId: '2027-04-17-pl-crystal-palace-home', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
-    { articleId: '2027-05-01-pl-manchester-united-away', image: 'assets/photos/chido_obi.png', imageAlt: 'Chido Obi' }
+    { articleId: '2027-05-01-pl-manchester-united-away', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
   /* The card whose author is Keeyvon Jenkins renders in the Hawk's Nest
      treatment automatically — no flag needed. */
   writers: [
-    { articleId: 'entry-102', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
+    { articleId: 'entry-103', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
     { articleId: '2027-03-06-mcallister-academy-pipeline-fourth-title', image: 'assets/photos/sandoval.png', imageAlt: 'Fabricio Sandoval' },
     { articleId: '2027-03-20-fa-cup-semi-arsenal', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
   ],
@@ -104,14 +104,14 @@ const HOME_CONFIG = {
      the head of that player's Notes column — nothing inferred. */
   academy: {
     featured: {
-      name: 'Lilian Faure', position: 'RM', age: 17, ovr: 63, potential: '70-90',
+      name: 'Matthieu Brunel', position: 'ST', age: 17, ovr: 64, potential: '74-88',
       nationality: 'France',
-      image: 'assets/photos/faure.png'
+      image: 'assets/photos/brunel.png'
     },
     others: [
-      { name: 'Matthieu Brunel', position: 'ST', age: 17, ovr: 63, potential: '67-91', image: 'assets/photos/brunel.png' },
-      { name: 'Fabricio Sandoval', position: 'CAM', age: 17, ovr: 62, potential: '74-80', image: 'assets/photos/sandoval.png' },
-      { name: 'Ben Forster', position: 'CM', age: 15, ovr: 60, potential: '79-85', image: 'assets/photos/forster.png' }
+      { name: 'Jules Collin', position: 'RW', age: 17, ovr: 62, potential: '81-87', image: 'assets/photos/collin.png' },
+      { name: 'Stephane Bertrand', position: 'RW', age: 16, ovr: 60, potential: '91-94', image: 'assets/photos/bertrand.png' },
+      { name: 'Ben Forster', position: 'CM', age: 16, ovr: 62, potential: '79-85', image: 'assets/photos/forster.png' }
     ]
   }
 };

@@ -96,6 +96,8 @@ PHOTO_MAP = {
     "Jermaine Lord": "assets/photos/lord.png",
     "Vittorio Martini": "assets/photos/martini.png",
     "Nico Kopp": "assets/photos/kopp.png",
+    "Fabricio Sandoval": "assets/photos/sandoval.png",
+    "Lilian Faure": "assets/photos/faure.png",
 }
 
 

@@ -5,9 +5,65 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-05-01"
+    "last_updated": "2027-05-11"
   },
   "matches": [
+    {
+      "date": "2027-05-11",
+      "opponent": "Ipswich Town",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Ngumoha 56', Obi 90' (sub). Vargas and Fruk with assists. MoM: Cacace (8.0 rating). Rescheduled from 24 April to 11 May.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.6,
+        "A. Okonkwo": 7.1,
+        "A. Heaven": 7.4,
+        "C. Obi": 6.5,
+        "D. Bobadilla": 6.3,
+        "J. Belghazi": 6.6,
+        "J. Mokio": 6.0,
+        "J.C. Vargas": 6.4,
+        "L. Sauer": 6.1,
+        "L. Cacace": 8.0,
+        "M. Barbieri": 6.3,
+        "R. Ngumoha": 6.9,
+        "T. Pitarch": 6.7,
+        "T. Fruk": 6.3,
+        "V. Veleten": 5.8,
+        "Y. Amrizi": 5.9
+      }
+    },
+    {
+      "date": "2027-05-08",
+      "opponent": "Newcastle",
+      "home": true,
+      "score": "1-1",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Ramsey 54' (Newcastle), Obi 82'.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 6.0,
+        "A. Okonkwo": 6.2,
+        "B. Gutiérrez": 6.9,
+        "C. Doyle": 6.8,
+        "C. Obi": 7.0,
+        "E. Dijkstra": 7.0,
+        "J. Belghazi": 6.1,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 5.8,
+        "L. Sauer": 6.9,
+        "M. Cleworth": 6.7,
+        "R. Ngumoha": 6.6,
+        "T. Pitarch": 6.9,
+        "T. Fruk": 6.3,
+        "V. Veleten": 5.9,
+        "Y. Amrizi": 6.0
+      }
+    },
     {
       "date": "2027-01-13",
       "opponent": "Chelsea",
@@ -1115,6 +1171,21 @@
   ],
   "milestones": [
     {
+      "date": "2027-05-11",
+      "description": "Premier League MD34 — beat Ipswich Town 2-0 at home (rescheduled from 24 April to 11 May). Rio Ngumoha (56') and a substitute Chido Obi (90') scored, with Juan Cruz Vargas and Toni Fruk both picking up assists. Liberato Cacace was Man of the Match (8.0 rating).",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-05-08",
+      "description": "Premier League MD33 — drew 1-1 at home with Newcastle United. Chido Obi equalised in the 82nd minute after Ramsey had put Newcastle ahead in the 54th.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-05-08",
+      "description": "Squad update — Fabricio Sandoval (CAM/LW) and Lilian Faure (RM) promoted from the Youth Academy to the first team as Prospect squad role. Two new Youth Academy signings from the Netherlands: Jayden Van Vliet (17, LB, POT 74-90) and Huub Driessen (17, CB, POT 72-94). Contract/wage/market value not yet confirmed for the two new academy signings — only Development-plan attribute screens available so far.",
+      "journal_entry": false
+    },
+    {
       "date": "2027-04-11",
       "description": "Premier League MD30 — beat Aston Villa 4-0 away. Yacel Amrizi scored twice and assisted (9.2 rating), Toni Fruk and Damián Bobadilla also on the scoresheet, Rio Ngumoha with 2 assists. Score corrected during data entry from a submitted 0-0 draw that conflicted with the listed scorers and player stats.",
       "journal_entry": true
@@ -1628,21 +1699,9 @@
       "competition": "Premier League"
     },
     {
-      "date": "2027-04-24",
-      "opponent": "Ipswich Town",
-      "home": true,
-      "competition": "Premier League"
-    },
-    {
       "date": "2027-05-01",
       "opponent": "Manchester United",
       "home": false,
-      "competition": "Premier League"
-    },
-    {
-      "date": "2027-05-08",
-      "opponent": "Newcastle",
-      "home": true,
       "competition": "Premier League"
     },
     {
