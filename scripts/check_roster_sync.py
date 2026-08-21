@@ -36,7 +36,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SQUAD_CSV = ROOT / "wrexham_squad.csv"
 ACADEMY_CSV = ROOT / "youth_academy.csv"
-ROSTER_HTML = ROOT / "docs" / "roster.html"
 ACADEMY_HTML = ROOT / "docs" / "academy.html"
 SQUAD_DATA_JS = ROOT / "docs" / "assets" / "squad_data.js"
 
@@ -108,12 +107,6 @@ def parse_cards(html_slice, with_pot=False):
     return players
 
 
-def load_roster_academy_html():
-    html = ROSTER_HTML.read_text(encoding="utf-8")
-    academy_start = html.find('id="sec-academy"')
-    return html[academy_start:] if academy_start != -1 else ""
-
-
 def load_squad_data_players():
     """Senior-squad players as embedded in docs/assets/squad_data.js (generated
     by scripts/sync_squad_page.py from wrexham_squad.csv) -- the roster.html
@@ -182,17 +175,18 @@ def diff_squad_data(csv_players, squad_data_players):
 
 
 def main():
-    roster_academy_html = load_roster_academy_html()
-
     squad_csv_players = load_squad_csv_players()
     squad_data_players = load_squad_data_players()
     problems = diff_squad_data(squad_csv_players, squad_data_players)
 
     academy_csv_players = load_academy_csv_players()
 
-    roster_academy_html_players = parse_cards(roster_academy_html, with_pot=True)
-    problems += diff_group("roster.html academy", academy_csv_players, roster_academy_html_players, check_pot=True)
-
+    # Since the Phase 3B Squad-page fix, roster.html no longer embeds the full
+    # academy.html roster (that was a duplication problem, not a preview) --
+    # it shows four editorial picks from home_config.js's `academy` block
+    # instead, which isn't something this mechanical CSV-vs-markup checker
+    # can usefully validate (there's no "the right four" to check against).
+    # academy.html itself remains fully checked below.
     academy_html = ACADEMY_HTML.read_text(encoding="utf-8")
     academy_page_players = parse_cards(academy_html, with_pot=True)
     problems += diff_group("academy.html", academy_csv_players, academy_page_players, check_pot=True)
@@ -200,7 +194,7 @@ def main():
     if not problems:
         print(
             f"OK — {len(squad_csv_players)} senior players and {len(academy_csv_players)} academy players "
-            f"match roster.html and academy.html"
+            f"match squad_data.js and academy.html"
         )
         return 0
 

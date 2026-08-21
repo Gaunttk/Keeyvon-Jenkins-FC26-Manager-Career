@@ -47,7 +47,19 @@
   function seasonLine(player) {
     if (!player.season) return null;
     var s = player.season;
-    return s.apps + ' APP' + (s.apps === 1 ? '' : 'S') + ' &middot; ' + s.goals + ' G &middot; ' + s.assists + ' A';
+    var appsLabel = s.apps + ' APP' + (s.apps === 1 ? '' : 'S');
+    if (s.isGk) {
+      // Outfield stats (goals/assists) never occupy a goalkeeper's primary
+      // stat line -- Apps + Avg Rating are the only figures tracked for
+      // every appearance; Clean Sheets/GA are a partial (tracked-apps-only)
+      // sample, so they stay off the compact card and live on the dossier.
+      return appsLabel + ' &middot; ' + s.rating.toFixed(1) + ' AVG RTG';
+    }
+    return appsLabel + ' &middot; ' + s.goals + ' G &middot; ' + s.assists + ' A';
+  }
+
+  function playerHref(p) {
+    return 'players/' + p.slug + '.html';
   }
 
   /* ── Squad At a Glance ─────────────────────────────────────────────── */
@@ -80,7 +92,8 @@
     var p = data.featured;
     if (!p) { root.style.display = 'none'; return; }
 
-    var feature = el('div', 'player-feature');
+    var feature = el('a', 'player-feature');
+    feature.href = playerHref(p);
     feature.appendChild(media('player-feature-media', p, true));
 
     var body = el('div', 'player-feature-body');
@@ -105,7 +118,11 @@
       var seasonWrap = el('div', 'player-feature-season');
       seasonWrap.appendChild(el('span', 'player-feature-season-label', data.season + ' Season'));
       var seasonStats = el('div', 'player-feature-season-stats');
-      [['Goals', p.season.goals], ['Assists', p.season.assists], ['Avg Rating', p.season.rating]].forEach(function (f) {
+      var seasonFields = p.season.isGk
+        ? [['Appearances', p.season.apps], ['Clean Sheets', p.season.trackedApps ? p.season.cleanSheets : null],
+           ['Avg Rating', p.season.rating]]
+        : [['Goals', p.season.goals], ['Assists', p.season.assists], ['Avg Rating', p.season.rating]];
+      seasonFields.filter(function (f) { return f[1] !== null && f[1] !== undefined; }).forEach(function (f) {
         seasonStats.appendChild(el('span', null, '<strong>' + esc(f[1]) + '</strong>' + esc(f[0])));
       });
       seasonWrap.appendChild(seasonStats);
@@ -120,7 +137,8 @@
   var GROUP_ORDER = ['Goalkeepers', 'Defenders', 'Midfielders', 'Forwards'];
 
   function squadCard(p) {
-    var card = el('div', 'squad-card');
+    var card = el('a', 'squad-card');
+    card.href = playerHref(p);
     var m = media('squad-card-media', p, false);
     var ovrClass = 'squad-card-ovr' + (p.ovr >= 74 ? ' is-elite' : '');
     m.appendChild(el('span', ovrClass, esc(p.ovr)));
@@ -292,6 +310,25 @@
     section.appendChild(grid);
   }
 
+  /* ── Youth Academy preview ─────────────────────────────────────────── */
+  function renderAcademyPreview(root, data) {
+    var picks = data.academyPreview || [];
+    if (!picks.length) { root.style.display = 'none'; return; }
+    picks.forEach(function (p) {
+      var card = el('div', 'academy-preview-card');
+      card.appendChild(media('academy-preview-media', p, false));
+      var body = el('div', 'academy-preview-body');
+      body.appendChild(el('div', 'academy-preview-name', esc(p.name)));
+      var metaBits = [esc(p.position), p.age + ' yrs'];
+      body.appendChild(el('div', 'academy-preview-meta', metaBits.join(' &middot; ')));
+      var ovrBits = [p.ovr + ' OVR'];
+      if (p.potential) ovrBits.push('POT ' + esc(p.potential));
+      body.appendChild(el('div', 'academy-preview-ovr', ovrBits.join(' &middot; ')));
+      card.appendChild(body);
+      root.appendChild(card);
+    });
+  }
+
   /* ── Boot ───────────────────────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', function () {
     if (typeof SQUAD_DATA === 'undefined') return;
@@ -336,5 +373,8 @@
 
     var leadersSection = document.getElementById('squad-leaders-section');
     if (leadersSection) renderLeaders(leadersSection, data);
+
+    var academyRoot = document.getElementById('academy-preview-grid');
+    if (academyRoot) renderAcademyPreview(academyRoot, data);
   });
 })();

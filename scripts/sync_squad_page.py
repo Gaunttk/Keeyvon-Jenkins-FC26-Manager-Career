@@ -31,6 +31,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SQUAD_CSV = ROOT / "wrexham_squad.csv"
 PLAYER_STATS_JS = ROOT / "docs" / "assets" / "player_stats.js"
 PL_TABLE_JS = ROOT / "docs" / "assets" / "pl_table.js"
+SEASON_LOG = ROOT / "season_log.json"
+HOME_CONFIG_JS = ROOT / "docs" / "assets" / "home_config.js"
 OUT = ROOT / "docs" / "assets" / "squad_data.js"
 
 # name -> photo path under docs/assets/. Players without an entry here get
@@ -97,6 +99,11 @@ def last_name_key(name):
     return strip_accents(token).lower()
 
 
+def slugify(name):
+    ascii_name = strip_accents(name).lower()
+    return re.sub(r"[^a-z0-9]+", "-", ascii_name).strip("-")
+
+
 LOAN_RE = re.compile(r"On Loan at ([^(]+?)\s*(?:\(back ([^)]+)\))?$")
 
 
@@ -112,6 +119,68 @@ def load_season_context():
     return m.group(1) if m else None
 
 
+def load_gk_match_log():
+    """Per-goalkeeper defensive log derived from season_log.json's
+    player_ratings (only matches with a captured ratings screenshot) joined
+    to that match's score (always "Wrexham-Opponent"). Partial-coverage by
+    construction -- see the Squad At a Glance / card note this feeds. Mirrors
+    the identical derivation in scripts/generate_player_pages.py."""
+    d = json.loads(SEASON_LOG.read_text(encoding="utf-8"))
+    by_lastname = {}
+    for m in d["matches"]:
+        score = m.get("score")
+        pr = m.get("player_ratings")
+        if not score or not pr:
+            continue
+        wg, og = (int(x) for x in score.split("-"))
+        for pkey in pr:
+            lk = last_name_key(pkey)
+            entry = by_lastname.setdefault(lk, {"trackedApps": 0, "cleanSheets": 0, "goalsConceded": 0})
+            entry["trackedApps"] += 1
+            entry["goalsConceded"] += og
+            if og == 0:
+                entry["cleanSheets"] += 1
+    return by_lastname
+
+
+ACADEMY_SECTION_RE = re.compile(r"academy:\s*\{(.*)\}\s*;", re.DOTALL)
+ACADEMY_ENTRY_RE = re.compile(r"\{([^{}]*name:\s*'[^{}]*)\}")
+ACADEMY_FIELD_RES = {
+    "name": re.compile(r"name:\s*'([^']*)'"),
+    "position": re.compile(r"position:\s*'([^']*)'"),
+    "age": re.compile(r"age:\s*(\d+)"),
+    "ovr": re.compile(r"ovr:\s*(\d+)"),
+    "potential": re.compile(r"potential:\s*'([^']*)'"),
+    "image": re.compile(r"image:\s*'([^']*)'"),
+}
+
+
+def load_academy_preview():
+    """Reuses the homepage's own editorial academy picks (home_config.js's
+    `academy.featured`/`academy.others`) as the Squad page's Youth Academy
+    preview -- same four prospects already surfaced on the homepage, so the
+    Squad page isn't inventing a second, competing "who's the best prospect"
+    judgment call, and isn't duplicating the full academy.html roster.
+    Parsed with small field-level regexes (each academy entry is a flat
+    object, no nesting) rather than a JS-literal eval, since this is
+    hand-authored JS, not JSON."""
+    text = HOME_CONFIG_JS.read_text(encoding="utf-8")
+    section_m = ACADEMY_SECTION_RE.search(text)
+    if not section_m:
+        return []
+    picks = []
+    for entry_m in ACADEMY_ENTRY_RE.finditer(section_m.group(1)):
+        block = entry_m.group(1)
+        pick = {}
+        for field, field_re in ACADEMY_FIELD_RES.items():
+            fm = field_re.search(block)
+            if fm:
+                pick[field] = int(fm.group(1)) if field in ("age", "ovr") else fm.group(1)
+        if pick.get("name"):
+            picks.append(pick)
+    return picks
+
+
 def load_players():
     with open(SQUAD_CSV, newline="", encoding="utf-8") as f:
         rows = list(csv.reader(f))
@@ -121,6 +190,7 @@ def load_players():
 def build():
     rows = load_players()
     stats_by_lastname = {last_name_key(k): v for k, v in load_player_stats().items()}
+    gk_log = load_gk_match_log()
     season = load_season_context() or "2026/27"
 
     players = []
@@ -145,10 +215,22 @@ def build():
 
         is_captain = bool(re.search(r"\bclub captain\b", notes, re.IGNORECASE))
 
-        stats = stats_by_lastname.get(last_name_key(name))
+        lk = last_name_key(name)
+        stats = stats_by_lastname.get(lk)
         season_stats = None
-        if stats:
+        if stats and group == GK:
+            gk = gk_log.get(lk, {"trackedApps": 0, "cleanSheets": 0, "goalsConceded": 0})
             season_stats = {
+                "isGk": True,
+                "apps": stats["apps"],
+                "rating": stats["rating"],
+                "trackedApps": gk["trackedApps"],
+                "cleanSheets": gk["cleanSheets"],
+                "goalsConceded": gk["goalsConceded"],
+            }
+        elif stats:
+            season_stats = {
+                "isGk": False,
                 "apps": stats["apps"],
                 "goals": stats["goals"],
                 "assists": stats["assists"],
@@ -157,6 +239,7 @@ def build():
 
         players.append({
             "name": name,
+            "slug": slugify(name),
             "positions": positions,
             "group": group,
             "age": age,
@@ -190,8 +273,9 @@ def build():
         "captain": next((p["name"] for p in players if p["captain"]), None),
     }
 
-    top_scorer = top_by(lambda p: p["season"]["goals"] if p["season"] else None, players)
-    top_assist = top_by(lambda p: p["season"]["assists"] if p["season"] else None, players)
+    outfield_with_season = [p for p in players if p["season"] and not p["season"]["isGk"]]
+    top_scorer = top_by(lambda p: p["season"]["goals"], outfield_with_season)
+    top_assist = top_by(lambda p: p["season"]["assists"], outfield_with_season)
     if top_scorer and top_scorer["season"]["goals"] > 0:
         glance["topScorer"] = top_scorer["name"]
         glance["topScorerGoals"] = top_scorer["season"]["goals"]
@@ -200,12 +284,12 @@ def build():
         glance["mostAssistsValue"] = top_assist["season"]["assists"]
 
     leaders = {
-        "goals": sorted([p for p in players if p["season"] and p["season"]["goals"] > 0],
+        "goals": sorted([p for p in outfield_with_season if p["season"]["goals"] > 0],
                          key=lambda p: -p["season"]["goals"])[:5],
-        "assists": sorted([p for p in players if p["season"] and p["season"]["assists"] > 0],
+        "assists": sorted([p for p in outfield_with_season if p["season"]["assists"] > 0],
                            key=lambda p: -p["season"]["assists"])[:5],
         "apps": sorted([p for p in players if p["season"]], key=lambda p: -p["season"]["apps"])[:5],
-        "rating": sorted([p for p in players if p["season"] and p["season"]["apps"] >= 5],
+        "rating": sorted([p for p in outfield_with_season if p["season"]["apps"] >= 5],
                           key=lambda p: -p["season"]["rating"])[:5],
     }
 
@@ -221,8 +305,6 @@ def build():
 
     featured = next((p for p in players if p["name"] == FEATURED_PLAYER), None)
 
-    nationalities_note = None  # not reliably stored across the squad -- intentionally omitted
-
     return {
         "season": season,
         "competition": "Premier League",
@@ -230,6 +312,7 @@ def build():
         "featured": featured,
         "glance": glance,
         "leaders": leaders_out,
+        "academyPreview": load_academy_preview(),
     }
 
 
