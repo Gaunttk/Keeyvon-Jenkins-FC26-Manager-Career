@@ -118,11 +118,6 @@ var ROSTER_SENIOR = [
     "starter": true
   },
   {
-    "name": "Vittorio Martini",
-    "pos": "CB",
-    "starter": false
-  },
-  {
     "name": "Vladyslav Veleten",
     "pos": "RW/RM",
     "starter": false
@@ -2019,7 +2014,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Left",
     "Squad_Role": "Prospect",
     "Contract_Length": "3y5m",
-    "Status": "At The Club Since 2027",
+    "Status": "On Loan at CD Castellon (back Mar 2028)",
     "OVR": "61",
     "Pace": "60",
     "Shooting": "30",
@@ -2064,7 +2059,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "7600",
     "Market_Value": "925000",
     "Development_Plan": "Ball-Playing Defender",
-    "Notes": "Italy. Promoted from the Youth Academy to the first team 2027-01-13. Not willing to negotiate new terms. CB Defender+/Stopper/Wide Back/Ball-Playing Defender++. PlayStyles: Whipped Pass (regular), Anticipate (regular)."
+    "Notes": "Italy. Promoted from the Youth Academy to the first team 2027-01-13. Not willing to negotiate new terms. CB Defender+/Stopper/Wide Back/Ball-Playing Defender++. PlayStyles: Whipped Pass (regular), Anticipate (regular). Loaned to CD Castellon 2027-03-13 for 1 year (55/45 fee split, Wrexham receives 55%)."
   },
   "Nico Kopp": {
     "Position": "GK",

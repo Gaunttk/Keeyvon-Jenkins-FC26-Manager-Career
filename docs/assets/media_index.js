@@ -324,10 +324,10 @@ const MEDIA_INDEX = {
    "image_alt": "Keeyvon Jenkins on the touchline",
    "url": "media/articles/2027-03-20-hargreaves-first-cup-final.html"
   },
-  "2027-03-13-pl-tottenham-away": {
-   "id": "2027-03-13-pl-tottenham-away",
-   "headline": "Wrexham Share the Points in a Four-Goal North London Thriller",
-   "dek": "A back-and-forth afternoon at Tottenham Hotspur Stadium ended level, the two sides trading blows in a game too open for either manager's liking.",
+  "entry-tottenham-away-pl": {
+   "id": "entry-tottenham-away-pl",
+   "headline": "A Goal-Kick Giveaway Costs Wrexham Two Points at Spurs — But Somehow Leaves Them Top of the League",
+   "dek": "Yacel Amrizi's early strike had Wrexham cruising toward a third London away win in three weeks. Then a rushed pass from the back gifted Mathys Tel his second of the night — and, in the strangest of consolations, the draw still put Wrexham first on goal difference.",
    "date": "2027-03-13",
    "date_label": "Mar 13, 2027",
    "author_id": "owen-meredith",
@@ -339,10 +339,10 @@ const MEDIA_INDEX = {
    "category_label": "Match Reports",
    "season": "2026/27",
    "tags": [],
-   "featured": false,
+   "featured": true,
    "image": null,
    "image_alt": null,
-   "url": "journal.html#2027-03-13-pl-tottenham-away"
+   "url": "journal.html#entry-tottenham-away-pl"
   },
   "2027-03-06-mcallister-academy-pipeline-fourth-title": {
    "id": "2027-03-06-mcallister-academy-pipeline-fourth-title",
@@ -369,10 +369,10 @@ const MEDIA_INDEX = {
    "image_alt": "Rio Ngumoha",
    "url": "media/articles/2027-03-06-mcallister-academy-pipeline-fourth-title.html"
   },
-  "2027-03-03-pl-liverpool-home": {
-   "id": "2027-03-03-pl-liverpool-home",
-   "headline": "Wrexham and Liverpool Play Out a Stalemate at the Racecourse",
-   "dek": "Two of the division's in-form sides cancelled each other out at the Racecourse, neither able to find a way through in a tense, goalless afternoon.",
+  "entry-brentford-facup-r5": {
+   "id": "entry-brentford-facup-r5",
+   "headline": "Klaverboer's Afternoon Off Sends Wrexham Into the FA Cup Quarterfinals",
+   "dek": "A brace of second-half goals from Damián Bobadilla and Chido Obi did the heavy lifting on the scoresheet, but it was backup goalkeeper Bernt Klaverboer, deputising for a rested Arthur Okonkwo, who made the difference at the other end.",
    "date": "2027-03-03",
    "date_label": "Mar 3, 2027",
    "author_id": "owen-meredith",
@@ -387,7 +387,27 @@ const MEDIA_INDEX = {
    "featured": false,
    "image": null,
    "image_alt": null,
-   "url": "journal.html#2027-03-03-pl-liverpool-home"
+   "url": "journal.html#entry-brentford-facup-r5"
+  },
+  "entry-liverpool-home-pl": {
+   "id": "entry-liverpool-home-pl",
+   "headline": "Wrexham Dominate but Can't Find a Way Past Liverpool in Scoreless Racecourse Draw",
+   "dek": "Twenty-one shots, one clean sheet apiece, and not a single goal to show for either side's afternoon — a frustrating stalemate against a top-six visitor that leaves the title race exactly where it was.",
+   "date": "2027-03-03",
+   "date_label": "Mar 3, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#entry-liverpool-home-pl"
   },
   "2027-02-28-mcallister-arsenal-away-statement": {
    "id": "2027-02-28-mcallister-arsenal-away-statement",
@@ -1846,11 +1866,12 @@ const MEDIA_INDEX = {
   "2027-03-20-pl-bournemouth-away",
   "2027-03-20-fa-cup-semi-arsenal",
   "2027-03-20-hargreaves-first-cup-final",
-  "2027-03-13-pl-tottenham-away",
+  "entry-tottenham-away-pl",
   "2027-03-06-mcallister-academy-pipeline-fourth-title",
   "entry-bournemouth-yrt-final",
   "entry-forest-yrt-semi",
-  "2027-03-03-pl-liverpool-home",
+  "entry-brentford-facup-r5",
+  "entry-liverpool-home-pl",
   "entry-brighton-yrt-quarters",
   "2027-02-28-mcallister-arsenal-away-statement",
   "entry-101",

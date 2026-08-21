@@ -866,7 +866,7 @@
       "score": "0-0",
       "result": "D",
       "competition": "Premier League",
-      "notes": "Goalless draw. Individual scorer/lineup detail not captured this session.",
+      "notes": "Dominant performance, hit the frame of the goal twice, but no goal. Okonkwo clean sheet (league-leading 14th of the season).",
       "journal_entry": true
     },
     {
@@ -876,7 +876,18 @@
       "score": "2-2",
       "result": "D",
       "competition": "Premier League",
-      "notes": "Score-only entry — individual scorer/lineup detail not captured this session.",
+      "notes": "Amrizi 21'. Tel 45', 62' (Tottenham) — the second an Okonkwo goal-kick giveaway. Draw puts Wrexham 1st on goal difference.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Brentford",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Round of 16",
+      "notes": "Obi 32', Bobadilla 50', Veleten 90'. MoM: Klaverboer (clean sheet, 7.5 rating), deputising for a rested Okonkwo. Into the quarterfinals, will face Aston Villa.",
       "journal_entry": true
     }
   ],
@@ -1190,6 +1201,15 @@
     }
   ],
   "milestones": [
+    {
+      "date": "2027-03-03",
+      "description": "FA Cup Round of 16 — beat Brentford 3-0 away (Obi, Bobadilla, Veleten). Bernt Klaverboer, deputising for a rested Arthur Okonkwo, named Man of the Match for a clean sheet. Wrexham advance to the quarterfinals, will face Aston Villa.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "description": "Squad update — Vittorio Martini loaned to CD Castellon for 1 year, 55/45 transfer fee split with Wrexham receiving 55%."
+    },
     {
       "date": "2027-03-03",
       "description": "Premier League MD29 — drew 0-0 at home with Liverpool. Backfilled this session from a gap discovered in the match log; no individual stats captured.",
