@@ -858,6 +858,26 @@
         "T. Fruk": 6.3,
         "Y. Amrizi": 6.2
       }
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Liverpool",
+      "home": true,
+      "score": "0-0",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Goalless draw. Individual scorer/lineup detail not captured this session.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "opponent": "Tottenham",
+      "home": false,
+      "score": "2-2",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Score-only entry — individual scorer/lineup detail not captured this session.",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -1171,13 +1191,23 @@
   ],
   "milestones": [
     {
+      "date": "2027-03-03",
+      "description": "Premier League MD29 — drew 0-0 at home with Liverpool. Backfilled this session from a gap discovered in the match log; no individual stats captured.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "description": "Premier League MD30 — drew 2-2 away at Tottenham. Backfilled this session from a gap discovered in the match log; individual scorers/lineup not captured.",
+      "journal_entry": true
+    },
+    {
       "date": "2027-05-11",
-      "description": "Premier League MD34 — beat Ipswich Town 2-0 at home (rescheduled from 24 April to 11 May). Rio Ngumoha (56') and a substitute Chido Obi (90') scored, with Juan Cruz Vargas and Toni Fruk both picking up assists. Liberato Cacace was Man of the Match (8.0 rating).",
+      "description": "Premier League MD36 — beat Ipswich Town 2-0 at home (rescheduled from 24 April to 11 May). Rio Ngumoha (56') and a substitute Chido Obi (90') scored, with Juan Cruz Vargas and Toni Fruk both picking up assists. Liberato Cacace was Man of the Match (8.0 rating).",
       "journal_entry": true
     },
     {
       "date": "2027-05-08",
-      "description": "Premier League MD33 — drew 1-1 at home with Newcastle United. Chido Obi equalised in the 82nd minute after Ramsey had put Newcastle ahead in the 54th.",
+      "description": "Premier League MD35 — drew 1-1 at home with Newcastle United. Chido Obi equalised in the 82nd minute after Ramsey had put Newcastle ahead in the 54th.",
       "journal_entry": true
     },
     {
@@ -1187,7 +1217,7 @@
     },
     {
       "date": "2027-04-11",
-      "description": "Premier League MD30 — beat Aston Villa 4-0 away. Yacel Amrizi scored twice and assisted (9.2 rating), Toni Fruk and Damián Bobadilla also on the scoresheet, Rio Ngumoha with 2 assists. Score corrected during data entry from a submitted 0-0 draw that conflicted with the listed scorers and player stats.",
+      "description": "Premier League MD32 — beat Aston Villa 4-0 away. Yacel Amrizi scored twice and assisted (9.2 rating), Toni Fruk and Damián Bobadilla also on the scoresheet, Rio Ngumoha with 2 assists. Score corrected during data entry from a submitted 0-0 draw that conflicted with the listed scorers and player stats.",
       "journal_entry": true
     },
     {
@@ -1207,7 +1237,7 @@
     },
     {
       "date": "2027-03-20",
-      "description": "Premier League MD29 — beat Bournemouth 2-1 away. Yacel Amrizi (41') and Rio Ngumoha (55') scored either side of an Evanilson reply for Bournemouth (57'). Amrizi (8.3 rating) and Ngumoha (7.5 rating, 1G 1A) both stood out.",
+      "description": "Premier League MD31 — beat Bournemouth 2-1 away. Yacel Amrizi (41') and Rio Ngumoha (55') scored either side of an Evanilson reply for Bournemouth (57'). Amrizi (8.3 rating) and Ngumoha (7.5 rating, 1G 1A) both stood out.",
       "journal_entry": true
     },
     {
@@ -1496,7 +1526,7 @@
     },
     {
       "date": "2027-05-01",
-      "description": "Premier League MD32 — 2-3 away defeat at Manchester United; Amad's brace either side of Chido Obi and Juan Cruz Vargas late strikes proved decisive. Not the side's best performance, but plenty of the season still to play."
+      "description": "Premier League MD34 — 2-3 away defeat at Manchester United; Amad's brace either side of Chido Obi and Juan Cruz Vargas late strikes proved decisive. Not the side's best performance, but plenty of the season still to play."
     }
   ],
   "fixtures": [
@@ -1665,18 +1695,6 @@
     {
       "date": "2027-02-27",
       "opponent": "Arsenal",
-      "home": false,
-      "competition": "Premier League"
-    },
-    {
-      "date": "2027-03-03",
-      "opponent": "Liverpool",
-      "home": true,
-      "competition": "Premier League"
-    },
-    {
-      "date": "2027-03-13",
-      "opponent": "Tottenham",
       "home": false,
       "competition": "Premier League"
     },
