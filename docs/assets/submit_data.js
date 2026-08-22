@@ -178,15 +178,7 @@ var ROSTER_ACADEMY = [
     "pos": "GK"
   },
   {
-    "name": "Nathan Salaun",
-    "pos": "ST"
-  },
-  {
     "name": "Nathaniel Matthews",
-    "pos": "RW"
-  },
-  {
-    "name": "Stephane Bertrand",
     "pos": "RW"
   },
   {
@@ -2572,7 +2564,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Right",
     "Squad_Role": "Academy",
     "Contract_Length": "",
-    "Status": "Academy Player",
+    "Status": "On Loan at Carrarese Calcio (back 2028-05-23)",
     "OVR": "60",
     "Pace": "76",
     "Shooting": "54",
@@ -2617,7 +2609,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Balanced",
-    "Notes": "France. Dev Balanced 60→61 ETA 20w. Signed from academy scouting in France, 2026-08-15. RW Winger+/Wide Playmaker/Inside Forward. One PlayStyle icon shown but name not legible in screenshot -- left unconfirmed."
+    "Notes": "France. Dev Balanced 60→61 ETA 20w. Signed from academy scouting in France, 2026-08-15. RW Winger+/Wide Playmaker/Inside Forward. One PlayStyle icon shown but name not legible in screenshot -- left unconfirmed. Loaned to Carrarese Calcio for one year (2027-05-23 to 2028-05-23) to get first-team minutes."
   },
   "Mika Horn": {
     "Position": "GK",
@@ -2737,7 +2729,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Right",
     "Squad_Role": "Academy",
     "Contract_Length": "",
-    "Status": "Academy Player",
+    "Status": "On Loan at Barnet (back 2029-05-23)",
     "OVR": "54",
     "Pace": "64",
     "Shooting": "53",
@@ -2782,7 +2774,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Balanced",
-    "Notes": "France. Dev Balanced 54→55 ETA 30w. Signed from academy scouting in France, 2026-12-15, alongside fellow countryman Thierry Besse. ST Target Forward/False 9/Poacher+/Advanced Forward. No PlayStyles confirmed on the PlayStyles tab (all diamonds unfilled)."
+    "Notes": "France. Dev Balanced 54→55 ETA 30w. Signed from academy scouting in France, 2026-12-15, alongside fellow countryman Thierry Besse. ST Target Forward/False 9/Poacher+/Advanced Forward. No PlayStyles confirmed on the PlayStyles tab (all diamonds unfilled). Loaned to Barnet for 2 years (2027-05-23 to 2029-05-23), 60/40 wage split."
   },
   "Martin Bach": {
     "Position": "GK",

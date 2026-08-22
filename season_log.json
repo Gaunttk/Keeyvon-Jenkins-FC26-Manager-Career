@@ -17,7 +17,24 @@
       "competition": "Premier League",
       "notes": "Bobadilla 26', Obi 49'. MoM: Okonkwo. Wrexham champions of the Premier League — a maiden top-flight title completing the domestic double alongside the FA Cup won eight days earlier. Ayden Heaven sent off in the 68th minute; Wrexham played out the final 22 minutes a man down but held the clean sheet. Matthieu Brunel (ST) and academy winger Stephane Bertrand both made their senior debuts, coming on together in the 69th minute.",
       "journal_entry": true,
-      "player_ratings": { "A. Okonkwo": 8.1, "A. Heaven": 6.2, "B. Gutiérrez": 7.4, "C. Doyle": 7.0, "C. Obi": 7.9, "D. Bobadilla": 7.0, "J. Mokio": 6.8, "J.C. Vargas": 5.9, "L. Sauer": 7.9, "L. Cacace": 7.5, "M. Barbieri": 6.0, "R. Ngumoha": 6.4, "T. Pitarch": 6.3, "T. Fruk": 7.7, "M. Brunel": 5.9, "S. Bertrand": 5.9 }
+      "player_ratings": {
+        "A. Okonkwo": 8.1,
+        "A. Heaven": 6.2,
+        "B. Gutiérrez": 7.4,
+        "C. Doyle": 7.0,
+        "C. Obi": 7.9,
+        "D. Bobadilla": 7.0,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 5.9,
+        "L. Sauer": 7.9,
+        "L. Cacace": 7.5,
+        "M. Barbieri": 6.0,
+        "R. Ngumoha": 6.4,
+        "T. Pitarch": 6.3,
+        "T. Fruk": 7.7,
+        "M. Brunel": 5.9,
+        "S. Bertrand": 5.9
+      }
     },
     {
       "date": "2027-05-11",
@@ -1656,6 +1673,10 @@
     {
       "date": "2027-05-23",
       "description": "Matthieu Brunel (ST) and academy winger Stephane Bertrand made their senior debuts together, coming on in the 69th minute of the title-winning win over Leeds United. Ayden Heaven was sent off in the 68th minute; Wrexham held the clean sheet a man down for the final 22 minutes."
+    },
+    {
+      "date": "2027-05-23",
+      "description": "Squad update — academy prospects loaned out for first-team minutes: Nathan Salaun to Barnet for 2 years (60/40 wage split), and Stephane Bertrand to Carrarese Calcio for one year."
     }
   ],
   "fixtures": [
