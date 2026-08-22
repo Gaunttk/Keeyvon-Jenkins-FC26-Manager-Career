@@ -25,10 +25,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/arthur_okonkwo.png",
       "season": {
         "isGk": true,
-        "apps": 32,
-        "rating": 5.9,
-        "trackedApps": 7,
-        "cleanSheets": 4,
+        "apps": 33,
+        "rating": 6.0,
+        "trackedApps": 8,
+        "cleanSheets": 5,
         "goalsConceded": 3
       }
     },
@@ -50,7 +50,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/liberato_cacace.png",
       "season": {
         "isGk": false,
-        "apps": 40,
+        "apps": 41,
         "goals": 0,
         "assists": 2,
         "rating": 6.4
@@ -99,7 +99,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/callum_doyle.png",
       "season": {
         "isGk": false,
-        "apps": 34,
+        "apps": 35,
         "goals": 0,
         "assists": 0,
         "rating": 7.3
@@ -223,7 +223,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/brian_gutierrez.png",
       "season": {
         "isGk": false,
-        "apps": 40,
+        "apps": 41,
         "goals": 1,
         "assists": 0,
         "rating": 6.9
@@ -248,8 +248,8 @@ const SQUAD_DATA = {
       "image": "assets/photos/damian_bobadilla.png",
       "season": {
         "isGk": false,
-        "apps": 42,
-        "goals": 12,
+        "apps": 43,
+        "goals": 13,
         "assists": 6,
         "rating": 6.5
       }
@@ -395,8 +395,8 @@ const SQUAD_DATA = {
       "image": "assets/photos/chido_obi.png",
       "season": {
         "isGk": false,
-        "apps": 46,
-        "goals": 24,
+        "apps": 47,
+        "goals": 25,
         "assists": 6,
         "rating": 6.2
       }
@@ -421,7 +421,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/jorthy_mokio.png",
       "season": {
         "isGk": false,
-        "apps": 45,
+        "apps": 46,
         "goals": 1,
         "assists": 1,
         "rating": 6.8
@@ -447,9 +447,9 @@ const SQUAD_DATA = {
       "image": "assets/photos/toni_fruk.png",
       "season": {
         "isGk": false,
-        "apps": 43,
+        "apps": 44,
         "goals": 13,
-        "assists": 13,
+        "assists": 15,
         "rating": 6.3
       }
     },
@@ -499,7 +499,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/mario_barbieri.png",
       "season": {
         "isGk": false,
-        "apps": 32,
+        "apps": 33,
         "goals": 0,
         "assists": 0,
         "rating": 6.5
@@ -524,7 +524,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/rio_ngumoha.png",
       "season": {
         "isGk": false,
-        "apps": 43,
+        "apps": 44,
         "goals": 14,
         "assists": 9,
         "rating": 6.9
@@ -548,7 +548,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/ayden_heaven.png",
       "season": {
         "isGk": false,
-        "apps": 40,
+        "apps": 41,
         "goals": 0,
         "assists": 1,
         "rating": 7.2
@@ -626,7 +626,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/leo_sauer.png",
       "season": {
         "isGk": false,
-        "apps": 41,
+        "apps": 42,
         "goals": 10,
         "assists": 11,
         "rating": 6.7
@@ -697,7 +697,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/vargas.png",
       "season": {
         "isGk": false,
-        "apps": 33,
+        "apps": 34,
         "goals": 4,
         "assists": 6,
         "rating": 6.6
@@ -777,7 +777,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/thiago_pitarch.png",
       "season": {
         "isGk": false,
-        "apps": 21,
+        "apps": 22,
         "goals": 0,
         "assists": 2,
         "rating": 6.6
@@ -914,7 +914,13 @@ const SQUAD_DATA = {
       "captain": false,
       "loan": null,
       "image": null,
-      "season": null
+      "season": {
+        "isGk": false,
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "rating": 5.9
+      }
     }
   ],
   "featured": {
@@ -954,8 +960,8 @@ const SQUAD_DATA = {
     "captain": "Callum Doyle",
     "topScorer": "Yacel Amrizi",
     "topScorerGoals": 25,
-    "mostAssists": "Yacel Amrizi",
-    "mostAssistsValue": 13
+    "mostAssists": "Toni Fruk",
+    "mostAssistsValue": 15
   },
   "leaders": {
     "goals": [
@@ -974,7 +980,7 @@ const SQUAD_DATA = {
         "positions": [
           "ST"
         ],
-        "value": 24
+        "value": 25
       },
       {
         "name": "Rio Ngumoha",
@@ -986,33 +992,12 @@ const SQUAD_DATA = {
         "value": 14
       },
       {
-        "name": "Toni Fruk",
-        "image": "assets/photos/toni_fruk.png",
-        "positions": [
-          "ST",
-          "CAM",
-          "CM"
-        ],
-        "value": 13
-      },
-      {
         "name": "Damián Bobadilla",
         "image": "assets/photos/damian_bobadilla.png",
         "positions": [
           "CM",
           "CDM"
         ],
-        "value": 12
-      }
-    ],
-    "assists": [
-      {
-        "name": "Yacel Amrizi",
-        "image": "assets/photos/yacel_amrizi.png",
-        "positions": [
-          "ST",
-          "LW"
-        ],
         "value": 13
       },
       {
@@ -1022,6 +1007,27 @@ const SQUAD_DATA = {
           "ST",
           "CAM",
           "CM"
+        ],
+        "value": 13
+      }
+    ],
+    "assists": [
+      {
+        "name": "Toni Fruk",
+        "image": "assets/photos/toni_fruk.png",
+        "positions": [
+          "ST",
+          "CAM",
+          "CM"
+        ],
+        "value": 15
+      },
+      {
+        "name": "Yacel Amrizi",
+        "image": "assets/photos/yacel_amrizi.png",
+        "positions": [
+          "ST",
+          "LW"
         ],
         "value": 13
       },
@@ -1060,7 +1066,7 @@ const SQUAD_DATA = {
         "positions": [
           "ST"
         ],
-        "value": 46
+        "value": 47
       },
       {
         "name": "Jorthy Mokio",
@@ -1070,7 +1076,7 @@ const SQUAD_DATA = {
           "CM",
           "LB"
         ],
-        "value": 45
+        "value": 46
       },
       {
         "name": "Toni Fruk",
@@ -1080,7 +1086,7 @@ const SQUAD_DATA = {
           "CAM",
           "CM"
         ],
-        "value": 43
+        "value": 44
       },
       {
         "name": "Rio Ngumoha",
@@ -1089,16 +1095,16 @@ const SQUAD_DATA = {
           "LM",
           "LW"
         ],
-        "value": 43
+        "value": 44
       },
       {
-        "name": "Yacel Amrizi",
-        "image": "assets/photos/yacel_amrizi.png",
+        "name": "Damián Bobadilla",
+        "image": "assets/photos/damian_bobadilla.png",
         "positions": [
-          "ST",
-          "LW"
+          "CM",
+          "CDM"
         ],
-        "value": 42
+        "value": 43
       }
     ],
     "rating": [
