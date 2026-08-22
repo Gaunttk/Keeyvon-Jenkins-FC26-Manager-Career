@@ -1228,6 +1228,14 @@
       "club": "West Brom",
       "fee": "£1.5m",
       "wage": ""
+    },
+    {
+      "date": "2027-05-20",
+      "player": "Aaron James",
+      "direction": "out",
+      "club": "Free agent",
+      "fee": "Free (contract expired)",
+      "wage": ""
     }
   ],
   "injuries": [
@@ -1637,6 +1645,14 @@
     {
       "date": "2027-05-20",
       "description": "Squad update — new Youth Academy signing from Norway: Avram Lien (14, RB/CB/LB/RW, POT 83-94). Status/Financial (contract, wage, market value) not yet confirmed — only Academy Development-plan attribute screens available so far."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Aaron James left as a free agent when his contract expired, as the club had already decided not to renew — the raw dual-pos CB/RB prospect (20, OVR 56) never made a first-team appearance."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Nathaniel Matthews (16, RW, OVR 62) cut from the Youth Academy, keeping the academy roster within its 16-player limit after the Bakke/Jensen/Lien signings."
     }
   ],
   "fixtures": [

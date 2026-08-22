@@ -106,25 +106,6 @@ const SQUAD_DATA = {
       }
     },
     {
-      "name": "Aaron James",
-      "slug": "aaron-james",
-      "positions": [
-        "CB",
-        "RB"
-      ],
-      "group": "Defenders",
-      "age": 20,
-      "ovr": 56,
-      "height": "6'0\"",
-      "foot": "Right",
-      "squadRole": "Prospect",
-      "potential": null,
-      "captain": false,
-      "loan": null,
-      "image": null,
-      "season": null
-    },
-    {
       "name": "Joenathan Amelia",
       "slug": "joenathan-amelia",
       "positions": [
@@ -962,9 +943,9 @@ const SQUAD_DATA = {
     }
   },
   "glance": {
-    "squadSize": 38,
+    "squadSize": 37,
     "avgAge": 19.9,
-    "avgOvr": 69.3,
+    "avgOvr": 69.7,
     "highestOvr": "Toni Fruk",
     "highestOvrValue": 79,
     "youngest": "Mason Webber",
@@ -1178,12 +1159,12 @@ const SQUAD_DATA = {
       "image": "assets/photos/collin.png"
     },
     {
-      "name": "Nathaniel Matthews",
-      "position": "RW",
-      "age": 16,
-      "ovr": 62,
-      "potential": "75-81",
-      "image": "assets/photos/matthews.png"
+      "name": "Victor Cardoso",
+      "position": "RB",
+      "age": 14,
+      "ovr": 50,
+      "potential": "77-85",
+      "image": "assets/photos/cardoso.png"
     },
     {
       "name": "Stephane Bertrand",
