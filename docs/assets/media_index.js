@@ -100,6 +100,147 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-05-23-pl-leeds-united-home": {
+   "id": "2027-05-23-pl-leeds-united-home",
+   "headline": "Champions: Wrexham Beat Leeds 2-0 to Win the Premier League",
+   "dek": "Bobadilla and Obi scored either side of half-time, Ayden Heaven saw red in the 68th minute, and two academy players made their senior debuts in front of a Racecourse Ground that has waited its entire history for this afternoon.",
+   "date": "2027-05-23",
+   "date_label": "May 23, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2026/27",
+   "tags": [
+    "premier-league",
+    "champions",
+    "final-day"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-05-23-pl-leeds-united-home"
+  },
+  "entry-104": {
+   "id": "entry-104",
+   "headline": "Entry 104",
+   "dek": "Twelve days since the last one, and I'm breaking my own rule about writing these monthly, because some nights you don't get to choose when you need to put it down on paper.",
+   "date": "2027-05-23",
+   "date_label": "May 23, 2027",
+   "author_id": "keeyvon-jenkins",
+   "outlet": "The Hawk's Nest (Private Journal)",
+   "section": null,
+   "content_type": "diary",
+   "entry_number": "Entry 104",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2026/27",
+   "tags": [],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#entry-104"
+  },
+  "2027-05-23-hargreaves-pl-champions": {
+   "id": "2027-05-23-hargreaves-pl-champions",
+   "headline": "The Fastest Rise in Modern English Football History Just Reached the Top",
+   "dek": "Wrexham have won the Premier League less than a year and a half after leaving the Championship. There is no comparable case in the modern game — and I've spent all week looking for one.",
+   "date": "2027-05-23",
+   "date_label": "May 23, 2027",
+   "author_id": "oliver-hargreaves",
+   "outlet": "Sky Sports",
+   "section": "Featured Columns",
+   "content_type": "feature",
+   "entry_number": null,
+   "category": "history",
+   "category_label": "History",
+   "season": "2026/27",
+   "tags": [
+    "history",
+    "premier-league",
+    "champions"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-05-23-hargreaves-pl-champions.html"
+  },
+  "2027-05-23-holt-title-confirmed": {
+   "id": "2027-05-23-holt-title-confirmed",
+   "headline": "Confirmed: Wrexham Are Premier League Champions",
+   "dek": "A 2-0 win over Leeds United on the final day secures the title on 84 points, two clear of Manchester City. Here is what we know.",
+   "date": "2027-05-23",
+   "date_label": "May 23, 2027",
+   "author_id": "rebecca-holt",
+   "outlet": "BBC Sport",
+   "section": "Press Conferences",
+   "content_type": "breaking",
+   "entry_number": null,
+   "category": "coverage",
+   "category_label": "Coverage",
+   "season": "2026/27",
+   "tags": [
+    "breaking",
+    "premier-league",
+    "champions"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-05-23-holt-title-confirmed.html"
+  },
+  "2027-05-23-bennett-jenkins-american-champion": {
+   "id": "2027-05-23-bennett-jenkins-american-champion",
+   "headline": "An American Coach Just Won the Premier League. Let That Sink In.",
+   "dek": "Keeyvon Jenkins went from a career-ending injury at Swansea to USMNT retirement to MLS punditry to this: the first American-born manager to win the English top flight. Tara Bennett on what it means back home.",
+   "date": "2027-05-23",
+   "date_label": "May 23, 2027",
+   "author_id": "tara-bennett",
+   "outlet": "ESPN FC",
+   "section": "International Reaction",
+   "content_type": "international",
+   "entry_number": null,
+   "category": "coverage",
+   "category_label": "Coverage",
+   "season": "2026/27",
+   "tags": [
+    "american-angle",
+    "premier-league",
+    "champions",
+    "keeyvon-jenkins"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-05-23-bennett-jenkins-american-champion.html"
+  },
+  "2027-05-23-cole-title-debate": {
+   "id": "2027-05-23-cole-title-debate",
+   "headline": "Cole: \"I Was Wrong. Say It Plainly, I Was Wrong.\"",
+   "dek": "Darren Cole spent the season predicting Wrexham's model would eventually crack under Premier League pressure. On the night they won the title, he used his slot to admit it hasn't.",
+   "date": "2027-05-23",
+   "date_label": "May 23, 2027",
+   "author_id": "darren-cole",
+   "outlet": "Sky Sports (Studio Pundit)",
+   "section": "Television Debate",
+   "content_type": "tv-debate",
+   "entry_number": null,
+   "category": "opinion",
+   "category_label": "Opinion",
+   "season": "2026/27",
+   "tags": [
+    "tv-debate",
+    "premier-league",
+    "champions"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-05-23-cole-title-debate.html"
+  },
   "2027-05-15-fa-cup-final-manchester-city": {
    "id": "2027-05-15-fa-cup-final-manchester-city",
    "headline": "Fruk Brace Wins Wrexham's First Major Trophy as City's Press Finally Breaks",
@@ -1919,6 +2060,12 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-05-23-pl-leeds-united-home",
+  "entry-104",
+  "2027-05-23-hargreaves-pl-champions",
+  "2027-05-23-holt-title-confirmed",
+  "2027-05-23-bennett-jenkins-american-champion",
+  "2027-05-23-cole-title-debate",
   "2027-05-15-fa-cup-final-manchester-city",
   "2027-05-15-pl-manchester-city-away",
   "2027-05-15-hargreaves-first-trophy",
@@ -2013,17 +2160,22 @@ const MEDIA_INDEX = {
   {
    "slug": "history",
    "label": "History",
-   "count": 4
+   "count": 5
   },
   {
-   "slug": "academy",
-   "label": "Academy",
+   "slug": "coverage",
+   "label": "Coverage",
    "count": 2
   },
   {
    "slug": "opinion",
    "label": "Opinion",
-   "count": 1
+   "count": 2
+  },
+  {
+   "slug": "academy",
+   "label": "Academy",
+   "count": 2
   },
   {
    "slug": "transfers",
@@ -2034,27 +2186,33 @@ const MEDIA_INDEX = {
  "publications": [
   {
    "name": "Sky Sports",
-   "count": 4,
-   "latest_id": "2027-05-15-hargreaves-first-trophy",
-   "latest_date": "2027-05-15"
+   "count": 5,
+   "latest_id": "2027-05-23-hargreaves-pl-champions",
+   "latest_date": "2027-05-23"
+  },
+  {
+   "name": "BBC Sport",
+   "count": 2,
+   "latest_id": "2027-05-23-holt-title-confirmed",
+   "latest_date": "2027-05-23"
+  },
+  {
+   "name": "Sky Sports (Studio Pundit)",
+   "count": 2,
+   "latest_id": "2027-05-23-cole-title-debate",
+   "latest_date": "2027-05-23"
+  },
+  {
+   "name": "ESPN FC",
+   "count": 1,
+   "latest_id": "2027-05-23-bennett-jenkins-american-champion",
+   "latest_date": "2027-05-23"
   },
   {
    "name": "The Athletic",
    "count": 2,
    "latest_id": "2027-03-06-mcallister-academy-pipeline-fourth-title",
    "latest_date": "2027-03-06"
-  },
-  {
-   "name": "Sky Sports (Studio Pundit)",
-   "count": 1,
-   "latest_id": "2027-02-04-cole-carabao-cup-exit-outcoached",
-   "latest_date": "2027-02-04"
-  },
-  {
-   "name": "BBC Sport",
-   "count": 1,
-   "latest_id": "2026-12-30-holt-pitarch-signing-confirmed",
-   "latest_date": "2026-12-30"
   }
  ],
  "seasons": [
