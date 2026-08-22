@@ -62,6 +62,19 @@
     return 'players/' + p.slug + '.html';
   }
 
+  var DEV_STATUS_TITLES = {
+    HPTBS: 'Has Potential To Be Special',
+    EP: 'Exciting Prospect',
+    SGP: 'Showing Great Potential',
+  };
+
+  function devStatusBadge(p) {
+    if (!p.devStatus) return null;
+    var badge = el('span', 'dev-status-badge dev-status-' + p.devStatus.code.toLowerCase(), esc(p.devStatus.code));
+    badge.title = DEV_STATUS_TITLES[p.devStatus.code] || p.devStatus.label;
+    return badge;
+  }
+
   /* ── Squad At a Glance ─────────────────────────────────────────────── */
   function renderGlance(root, data) {
     var g = data.glance;
@@ -147,7 +160,11 @@
 
     var body = el('div', 'squad-card-body');
     if (p.squadRole) body.appendChild(el('span', 'squad-card-status', esc(p.squadRole)));
-    body.appendChild(el('div', 'squad-card-name', esc(p.name) + (p.captain ? ' <span style="color:var(--gold)">(C)</span>' : '')));
+    var nameRow = el('div', 'squad-card-name-row');
+    nameRow.appendChild(el('span', 'squad-card-name', esc(p.name) + (p.captain ? ' <span style="color:var(--gold)">(C)</span>' : '')));
+    var badge = devStatusBadge(p);
+    if (badge) nameRow.appendChild(badge);
+    body.appendChild(nameRow);
     body.appendChild(el('div', 'squad-card-meta', esc(positionLabel(p))));
 
     var bioBits = [p.age + ' yrs'];

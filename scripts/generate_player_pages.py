@@ -242,6 +242,24 @@ def load_gk_match_log():
 
 PROMOTED_RE = re.compile(r"Promoted to the first team on ([^.,]+)")
 CAPTAIN_RE = re.compile(r"\bclub captain\b", re.IGNORECASE)
+
+# FC26's development-status classification, stored as free text at the front
+# of the Status column (col 11). Same source/logic as
+# scripts/sync_squad_page.py's parse_dev_status -- kept in sync manually
+# since these are small standalone scripts with no shared module.
+DEV_STATUS_MAP = [
+    ("Has Potential To Be Special", "HPTBS"),
+    ("An Exciting Prospect", "EP"),
+    ("Showing Great Potential", "SGP"),
+]
+DEV_STATUS_TITLES = {"HPTBS": "Has Potential To Be Special", "EP": "Exciting Prospect", "SGP": "Showing Great Potential"}
+
+
+def parse_dev_status(status_text):
+    for phrase, code in DEV_STATUS_MAP:
+        if phrase in status_text:
+            return {"code": code, "label": DEV_STATUS_TITLES[code]}
+    return None
 CONTEXT_KEY_RE = re.compile(r'<span class="context-card-key">([^<]+)</span>')
 PLAYER_TAG_RE = re.compile(r"^[A-ZÀ-Ý]{1,2}\.(?:[A-ZÀ-Ý]\.)?\s+[A-ZÀ-Ý]")
 
@@ -297,6 +315,7 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
         loan_m = re.search(r"On Loan at ([^(]+?)\s*(?:\(back ([^)]+)\))?$", status)
         loan = {"club": loan_m.group(1).strip(), "back": loan_m.group(2)} if loan_m else None
         is_captain = bool(CAPTAIN_RE.search(notes))
+        dev_status = parse_dev_status(status)
 
         lk = last_name_key(name)
         stats = current_stats.get(name) or next(
@@ -358,7 +377,7 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
             "name": name, "slug": slugify(name), "positions": positions, "group": group,
             "age": age, "height": height, "foot": foot, "ovr": ovr, "potential": potential,
             "squad_role": squad_role, "contract_length": contract_length, "captain": is_captain,
-            "loan": loan, "dev_plan": dev_plan, "image": PHOTO_MAP.get(name),
+            "loan": loan, "dev_status": dev_status, "dev_plan": dev_plan, "image": PHOTO_MAP.get(name),
             "season": season, "last5": last5, "career": career, "bio": bio,
             "pathway": pathway, "transfer": transfer, "news": news,
         }
@@ -591,7 +610,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       {hero_img}
     </div>
     <div class="player-identity">
-      {captain_badge}
+      {identity_badges}
       <div class="player-name">{name_html}</div>
       <div class="player-position">{positions}</div>
       <div class="player-fact-row">{facts}</div>
@@ -667,6 +686,16 @@ def render_player_page(p, by_group, season_label):
     role_line = f'<div class="player-role-line">{" &middot; ".join(esc(b) for b in role_bits)}</div>' if role_bits else ""
 
     captain_badge = '<span class="player-captain-badge">Club Captain</span>' if p["captain"] else ""
+    dev_status_badge = ""
+    if p["dev_status"]:
+        code, label = p["dev_status"]["code"], p["dev_status"]["label"]
+        dev_status_badge = (
+            f'<span class="dev-status-badge dev-status-{code.lower()}" title="{esc(label)}">{esc(code)}</span>'
+        )
+    identity_badges = (
+        f'<div class="player-badges">{captain_badge}{dev_status_badge}</div>'
+        if (captain_badge or dev_status_badge) else ""
+    )
 
     bio_paras = "".join(f'<p>{esc(b)}</p>' for b in p["bio"][:2]) if p["bio"] else ""
     bio_section = f'''
@@ -677,7 +706,7 @@ def render_player_page(p, by_group, season_label):
 
     return PAGE_TEMPLATE.format(
         name=esc(p["name"]), name_html=esc(p["name"]),
-        hero_img=hero_img, captain_badge=captain_badge, positions=esc("/".join(p["positions"])),
+        hero_img=hero_img, identity_badges=identity_badges, positions=esc("/".join(p["positions"])),
         facts=facts, role_line=role_line, bio_section=bio_section,
         season_section=render_season_block(p, season_label), form_section=render_form(p),
         career_section=render_career(p), movement_section=render_movement(p),
