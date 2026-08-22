@@ -1269,132 +1269,7 @@ body {
 }
 .how-to-text { font-size: 12px; color: var(--muted); line-height: 1.6; }
 
-/* ─── DEPTH CHART — LEGEND ─── */
-.dc-legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  background: var(--charcoal);
-  border-bottom: 1px solid var(--mid);
-  padding: 9px 20px;
-}
-.dc-legend-item {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.dc-legend-item::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.dc-legend-item.dyn   { color: var(--gold); }
-.dc-legend-item.dyn::before   { background: var(--gold); }
-.dc-legend-item.cmp   { color: var(--dispatch-blue); }
-.dc-legend-item.cmp::before   { background: var(--dispatch-blue); }
-.dc-legend-item.dec   { color: var(--red); }
-.dc-legend-item.dec::before   { background: var(--red); }
-.dc-legend-item.loa   { color: var(--muted); }
-.dc-legend-item.loa::before   { background: var(--muted); }
-
-/* ─── DEPTH CHART — FORMATION BOARD ─── */
-.formation-board {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 4px 0;
-}
-.formation-line {
-  padding: 10px 0;
-  border-bottom: 1px dashed var(--mid);
-}
-.formation-line:last-child { border-bottom: none; padding-bottom: 0; }
-.formation-row {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-.formation-col {
-  flex: 1;
-  max-width: 160px;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.formation-col-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--muted);
-  margin-bottom: 2px;
-}
-.formation-tier-label {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 8px 0 4px;
-  padding-left: 2px;
-}
-.formation-tier-label.backup    { color: var(--dispatch-blue); }
-.formation-tier-label.secondary { color: var(--muted); }
-.formation-tier-label.youth     { color: var(--gold); }
-
-.pos-pill {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.3px;
-  padding: 4px 6px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.pos-pill.starter {
-  background: var(--red);
-  color: var(--white);
-  font-weight: 800;
-  font-size: 12.5px;
-  padding: 6px 6px;
-  letter-spacing: 0.5px;
-}
-.pos-pill.backup {
-  background: rgba(74,144,196,0.16);
-  color: var(--dispatch-blue);
-  font-weight: 500;
-}
-.pos-pill.secondary {
-  background: rgba(255,255,255,0.04);
-  color: var(--muted);
-  font-weight: 500;
-  border: 1px dashed rgba(255,255,255,0.14);
-}
-.pos-pill.youth {
-  background: rgba(212,168,67,0.20);
-  color: var(--gold);
-  font-weight: 600;
-}
-.pos-pill.empty {
-  background: transparent;
-  color: rgba(255,255,255,0.28);
-  font-style: italic;
-  font-size: 9.5px;
-  font-weight: 400;
-  border: 1px dashed rgba(255,255,255,0.12);
-}
-
-/* ─── DEPTH CHART — ROWS ─── */
+/* ─── DEPTH CHART / TACTICAL CENTRE — SHARED SECTION CHROME ─── */
 .depth-section {
   padding: 18px 24px;
   border-bottom: 1px solid var(--mid);
@@ -1417,99 +1292,8 @@ body {
   height: 1px;
   background: var(--mid);
 }
-.depth-row {
-  display: grid;
-  grid-template-columns: 68px 1fr 36px 90px;
-  gap: 8px;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--mid);
-}
-.depth-row:last-child { border-bottom: none; }
-.depth-role {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 3px 0;
-  text-align: center;
-}
-.role-s  { background: var(--red); color: white; }
-.role-r  { background: var(--mid); color: var(--muted); border: 1px solid var(--steel); }
-.role-p  { background: rgba(212,168,67,0.12); color: var(--gold); border: 1px solid rgba(212,168,67,0.3); }
-.role-b  { background: var(--off-black); color: var(--steel); border: 1px solid var(--steel); }
-.depth-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--white);
-  line-height: 1;
-  margin-bottom: 1px;
-}
-.depth-sub {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.3px;
-  line-height: 1.3;
-}
-.depth-sub .pt { color: var(--light); }
-.depth-ovr {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 1;
-  text-align: center;
-}
-.depth-ovr.dyn  { color: var(--gold); }
-.depth-ovr.cmp  { color: var(--dispatch-blue); }
-.depth-ovr.dec  { color: var(--red); }
-.depth-ovr.loa  { color: var(--muted); }
-.depth-status { text-align: right; }
-.dev-badge {
-  display: inline-block;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 2px 5px;
-  margin-bottom: 3px;
-}
-.dev-badge.dyn  { background: rgba(212,168,67,0.14); color: var(--gold); }
-.dev-badge.cmp  { background: rgba(74,144,196,0.14); color: var(--dispatch-blue); }
-.dev-badge.dec  { background: rgba(200,16,46,0.15); color: var(--red); }
-.dev-badge.loa  { background: var(--mid); color: var(--muted); }
-.dev-eta {
-  display: block;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px;
-  color: var(--muted);
-  letter-spacing: 0.3px;
-  line-height: 1.2;
-}
-.depth-flags {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-top: 2px;
-}
-.dflag {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 1px 5px;
-  display: inline-block;
-}
-.dflag-r  { background: rgba(200,16,46,0.2); color: #ff6b6b; }
-.dflag-g  { background: rgba(212,168,67,0.14); color: var(--gold); }
-.dflag-b  { background: rgba(74,144,196,0.14); color: var(--dispatch-blue); }
-.dflag-x  { background: var(--mid); color: var(--muted); }
 
-/* ─── DEPTH CHART — POSITION ACCORDION ─── */
+/* ─── DEPTH CHART — POSITION ACCORDION (also used by roster.html / academy.html) ─── */
 .dc-group {
   padding: 18px 24px;
   border-bottom: 1px solid var(--mid);
@@ -1544,133 +1328,512 @@ body {
 .dc-group:not([open]) .dc-group-arrow { transform: rotate(-90deg); }
 .dc-group-body { margin-top: 12px; }
 
-.dc-subsection {
-  margin-bottom: 16px;
-}
-.dc-subsection:last-child { margin-bottom: 0; }
-.dc-subsection-summary {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 0;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.dc-subsection-summary::-webkit-details-marker { display: none; }
-.dc-subsection-summary::marker { content: ''; }
-.dc-subsection-count {
-  font-weight: 400;
-  color: var(--muted);
-  letter-spacing: 0.3px;
-}
-.dc-subsection-line {
-  flex: 1;
-  height: 1px;
-  background: var(--mid);
-}
-.dc-subsection-arrow {
-  font-size: 10px;
-  color: var(--muted);
-  transition: transform 0.15s ease;
-  flex-shrink: 0;
-}
-.dc-subsection:not([open]) .dc-subsection-arrow { transform: rotate(-90deg); }
-.dc-subsection-body { padding-top: 4px; }
+/* ═══════════════════════════════════════════════════════════════════════
+   TACTICAL CENTRE (docs/depth_chart.html) — namespaced `tactical-*` /
+   `formation-*` / `xi-*` / `depth-position*` / `tac-*` families below.
+   Reuses .depth-section / .depth-pos-header / .dc-group* above; everything
+   else here is new and scoped to this page only.
+   ═══════════════════════════════════════════════════════════════════════ */
 
-/* ─── DEPTH CHART — YOUTH PIPELINE ─── */
-.youth-card {
+.tactical-page { padding-bottom: 0; }
+
+.tactical-header .hub-subtitle { max-width: 60ch; }
+
+/* ── Tactical Summary ─────────────────────────────────────────────────── */
+.tactical-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1px;
+  background: var(--mid);
+  border-bottom: 1px solid var(--mid);
+}
+.tac-summary-stat {
   background: var(--charcoal);
-  border-left: 3px solid var(--gold);
-  padding: 12px 14px;
-  margin-bottom: 8px;
+  padding: 14px 12px;
+  text-align: center;
 }
-.youth-card:last-child { margin-bottom: 0; }
-.youth-card.loan-ret { border-left-color: var(--muted); }
-.youth-card.flag-exp { border-left-color: #ff6b6b; }
-.youth-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 5px;
-}
-.youth-name {
+.tac-summary-value {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
   font-size: 17px;
-  color: var(--white);
-  line-height: 1;
-}
-.youth-pos-age {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 2px;
-  letter-spacing: 0.3px;
-}
-.youth-right { text-align: right; }
-.youth-ovr {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 26px;
   color: var(--gold);
-  line-height: 1;
+  line-height: 1.15;
 }
-.youth-card.loan-ret .youth-ovr { color: var(--muted); }
-.youth-card.flag-exp .youth-ovr { color: #ff6b6b; }
-.youth-ovr-label {
+.tac-summary-label {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 9px;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--muted);
+  margin-top: 4px;
 }
-.youth-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
+
+/* ── Formation layout (pitch + Preferred XI) ─────────────────────────── */
+.formation-layout {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  border-bottom: 1px solid var(--mid);
 }
-.youth-detail {
+.formation-pitch-wrap {
+  padding: 18px 20px 24px;
+  border-right: 1px solid var(--mid);
+}
+.formation-pitch-label,
+.preferred-xi-label {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px;
-  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 10px;
 }
-.youth-detail strong { color: var(--light); }
-.youth-detail.warn { color: var(--red); }
-.youth-detail.warn strong { color: var(--red); }
-.youth-detail.alert { color: var(--gold); }
-.youth-detail.alert strong { color: var(--gold); }
+.preferred-xi-wrap { padding: 18px 20px; }
 
-/* ─── DEPTH CHART — GAP ALERT ─── */
-.gap-alert {
-  background: rgba(200,16,46,0.07);
-  border: 1px solid rgba(200,16,46,0.22);
-  border-left: 3px solid var(--red);
-  padding: 11px 14px;
-  margin-bottom: 8px;
+.formation-pitch {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(rgba(255,255,255,0.03) 0 50%, rgba(255,255,255,0) 50%),
+    repeating-linear-gradient(180deg, #14261b 0 10%, #122318 10% 20%);
+  border: 2px solid rgba(240,240,240,0.18);
+  overflow: hidden;
 }
-.gap-alert:last-child { margin-bottom: 0; }
-.gap-pos {
+.pitch-markings { position: absolute; inset: 0; }
+.pitch-halfway {
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 1px;
+  background: rgba(240,240,240,0.18);
+}
+.pitch-centre-circle {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 17%; aspect-ratio: 1;
+  border: 1px solid rgba(240,240,240,0.18);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.pitch-box {
+  position: absolute;
+  left: 50%;
+  width: 46%;
+  height: 15%;
+  border: 1px solid rgba(240,240,240,0.18);
+  border-top: none;
+  transform: translateX(-50%);
+}
+.pitch-box-top { top: 0; height: 13%; border-top: none; }
+.pitch-box-bottom { bottom: 0; border-bottom: none; }
+
+.formation-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 128px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+}
+.formation-marker:hover .formation-player-photo,
+.formation-marker:focus-visible .formation-player-photo {
+  border-color: var(--gold);
+}
+.formation-player-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--charcoal);
+  border: 3px solid var(--red);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.formation-player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.formation-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 18px; color: var(--steel); }
+.formation-player-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
+.formation-player-label {
+  margin-top: 3px;
+  background: rgba(8,8,8,0.72);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+.formation-player-name {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1.2;
+}
+.formation-player-meta {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+/* ── Preferred XI ─────────────────────────────────────────────────────── */
+.preferred-xi { display: flex; flex-direction: column; gap: 16px; }
+.xi-col-head {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--mid);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+.xi-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 28px;
+  gap: 8px;
+  align-items: center;
+  padding: 5px 2px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.xi-row:hover { background: rgba(255,255,255,0.03); }
+.xi-slot {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+.xi-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.xi-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.xi-ovr {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--gold);
+  text-align: right;
+}
+
+@media (max-width: 880px) {
+  .formation-layout { grid-template-columns: 1fr; }
+  .formation-pitch-wrap { border-right: none; border-bottom: 1px solid var(--mid); }
+  .formation-pitch { aspect-ratio: 3 / 4; }
+}
+@media (max-width: 480px) {
+  .formation-marker { width: 92px; }
+  .formation-player-photo { width: 68px; height: 68px; border-width: 2px; }
+  .formation-player-name { font-size: 9px; }
+  .formation-player-meta { display: none; }
+}
+
+/* ── Positional Depth ─────────────────────────────────────────────────── */
+.tac-section-note {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+  margin: -4px 0 14px;
+  line-height: 1.4;
+}
+.depth-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.depth-position {
+  background: var(--charcoal);
+  border: 1px solid var(--mid);
+}
+.depth-position-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--mid);
+}
+.depth-position-head h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0;
+}
+.depth-position-count {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  color: var(--muted);
+}
+.depth-position-list { padding: 4px 0; }
+.depth-player-row {
+  display: grid;
+  grid-template-columns: 20px 60px 1fr 40px;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.depth-player-row:last-child { border-bottom: none; }
+.depth-player-row:hover { background: rgba(255,255,255,0.03); }
+.depth-player-row.is-loan { opacity: 0.6; }
+.depth-player-rank {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+.depth-player-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--off-black);
+  flex-shrink: 0;
+}
+.depth-player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.depth-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 11px; color: var(--steel); }
+.depth-player-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
+.depth-player-tier-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+.depth-player-tier {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1px 5px;
+}
+.tier-starter  { background: var(--red); color: white; }
+.tier-rotation { background: rgba(74,144,196,0.16); color: var(--dispatch-blue); }
+.tier-prospect { background: rgba(212,168,67,0.14); color: var(--gold); }
+.on-loan-badge {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  color: var(--light);
+  border: 1px solid var(--steel);
+}
+.depth-player-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--white);
+  line-height: 1.15;
+}
+.depth-player-cap { color: var(--gold); }
+.depth-player-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10.5px;
+  color: var(--muted);
+}
+.depth-player-right { text-align: right; }
+.depth-player-ovr {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--gold);
+}
+.depth-player-sub2 {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 8px;
+  color: var(--muted);
+}
+
+/* ── Tactical Flexibility ─────────────────────────────────────────────── */
+.tac-flex-summary { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+.tac-flex-count {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--gold);
+  line-height: 1;
+}
+.tac-flex-count-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  color: var(--muted);
+}
+.tac-flex-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 16px; }
+.tac-flex-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  text-decoration: none;
+  color: inherit;
+}
+.tac-flex-name { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; color: var(--white); }
+.tac-flex-positions { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; color: var(--muted); }
+
+/* ── Depth Health / Pressure Points ───────────────────────────────────── */
+.depth-health { display: flex; flex-direction: column; gap: 8px; }
+.depth-health-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 28px;
+  gap: 10px;
+  align-items: center;
+}
+.depth-health-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: var(--light);
+}
+.depth-health-bar { height: 8px; background: var(--mid); position: relative; }
+.depth-health-fill { height: 100%; background: var(--gold); }
+.depth-health-fill.is-thin { background: var(--red); }
+.depth-health-count {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--white);
+  text-align: right;
+}
+.pressure-points { display: flex; flex-direction: column; gap: 6px; }
+.pressure-point {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: rgba(200,16,46,0.07);
+  border-left: 3px solid var(--red);
+  padding: 8px 12px;
+}
+.pressure-point-pos {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   color: var(--red);
+}
+.pressure-point-detail {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--light);
+}
+
+/* ── Tactical Leaders ──────────────────────────────────────────────────── */
+.tac-leaders { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.tac-leader-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--charcoal);
+  border: 1px solid var(--mid);
+  padding: 10px 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.tac-leader-card:hover { border-color: var(--gold); }
+.tac-leader-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--off-black);
+  flex-shrink: 0;
+}
+.tac-leader-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.tac-leader-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 15px; color: var(--steel); }
+.tac-leader-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
+.tac-leader-label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.tac-leader-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--white);
+  line-height: 1.2;
+}
+.tac-leader-meta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ── Squad Notes ───────────────────────────────────────────────────────── */
+.squad-notes { display: flex; flex-direction: column; gap: 8px; }
+.squad-note {
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--steel);
+  padding: 11px 14px;
+}
+.squad-note-heading {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
   margin-bottom: 3px;
 }
-.gap-text {
-  font-size: 13px;
-  color: var(--light);
-  line-height: 1.5;
+.squad-note-text { font-size: 13px; color: var(--light); line-height: 1.5; }
+
+/* ── Navigate on ───────────────────────────────────────────────────────── */
+.tac-nav-out {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--mid);
 }
-.gap-text strong { color: var(--white); }
+.tac-nav-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--red);
+  text-decoration: none;
+}
+.tac-nav-link:hover { color: var(--gold); }
+
+@media (prefers-reduced-motion: reduce) {
+  .dc-group-arrow, .depth-health-fill { transition: none; }
+}
 
 /* ─── JOURNAL FILTER TABS ─── */
 .journal-filters {
@@ -4879,12 +5042,39 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   font-family: 'Barlow Condensed', sans-serif; font-size: 10.5px; font-weight: 700;
   letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); align-self: flex-start;
 }
+.squad-card-name-row { display: flex; align-items: center; gap: 6px; min-width: 0; }
 .squad-card-name {
   font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px;
   letter-spacing: 0.4px; color: var(--white); line-height: 1.15;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0;
 }
 .squad-card-meta { font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--light); }
+
+/* ─── Development-status badge (HPTBS / EP / SGP) ───
+   Reused wherever a player row appears: Squad cards above, and the
+   Tactical Centre's positional-depth rows / Preferred XI (tactical.js).
+   Source of truth is wrexham_squad.csv's Status column, parsed by
+   scripts/sync_squad_page.py into SQUAD_DATA[n].devStatus. A restrained
+   scouting-note pill, not another Starter/Rotation/Prospect badge -- the
+   abbreviation is always visible; color is a secondary cue, not the only
+   one, and `title` carries the full phrase for a hover tooltip. */
+.dev-status-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border: 1px solid;
+  border-radius: 2px;
+  line-height: 1.3;
+  cursor: default;
+}
+.dev-status-hptbs { color: var(--gold); border-color: rgba(212,168,67,0.5); background: rgba(212,168,67,0.10); }
+.dev-status-ep     { color: var(--dispatch-blue); border-color: rgba(74,144,196,0.5); background: rgba(74,144,196,0.10); }
+.dev-status-sgp    { color: var(--holt-accent); border-color: rgba(79,138,99,0.5); background: rgba(79,138,99,0.12); }
 .squad-card-bio { font-family: 'Barlow', sans-serif; font-size: 12.5px; color: var(--muted); }
 .squad-card-stats {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; letter-spacing: 0.4px;
@@ -5047,11 +5237,15 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   display: flex; flex-direction: column; justify-content: center;
   padding: 32px 8px; border-bottom: 3px solid var(--red);
 }
-.player-captain-badge {
-  align-self: flex-start; font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
-  font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--black);
-  background: var(--gold); padding: 5px 12px; margin-bottom: 14px;
+.player-badges {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
 }
+.player-captain-badge {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--black);
+  background: var(--gold); padding: 5px 12px;
+}
+.player-badges .dev-status-badge { font-size: 10.5px; padding: 5px 10px; }
 .player-name {
   font-family: 'Playfair Display', serif; font-weight: 900; font-size: 52px;
   line-height: 1.02; color: var(--white);

@@ -108,6 +108,25 @@ def slugify(name):
 
 LOAN_RE = re.compile(r"On Loan at ([^(]+?)\s*(?:\(back ([^)]+)\))?$")
 
+# FC26's development-status classification, stored as free text at the front
+# of the Status column (col 11) -- e.g. "Showing Great Potential — Contract
+# already accepted (signed from Ajax)". Order matters: check the more
+# specific "Potential To Be Special" phrase before "Great Potential" since
+# neither substring is a prefix of the other, but keep this ordered by
+# specificity for safety if the game ever varies the wording.
+DEV_STATUS_MAP = [
+    ("Has Potential To Be Special", "HPTBS"),
+    ("An Exciting Prospect", "EP"),
+    ("Showing Great Potential", "SGP"),
+]
+
+
+def parse_dev_status(status_text):
+    for phrase, code in DEV_STATUS_MAP:
+        if phrase in status_text:
+            return {"code": code, "label": phrase}
+    return None
+
 
 def load_player_stats():
     text = PLAYER_STATS_JS.read_text(encoding="utf-8")
@@ -215,6 +234,8 @@ def build():
         if loan_m:
             loan = {"club": loan_m.group(1).strip(), "back": loan_m.group(2) or None}
 
+        dev_status = parse_dev_status(status)
+
         is_captain = bool(re.search(r"\bclub captain\b", notes, re.IGNORECASE))
 
         lk = last_name_key(name)
@@ -252,6 +273,7 @@ def build():
             "potential": potential or None,
             "captain": is_captain,
             "loan": loan,
+            "devStatus": dev_status,
             "image": PHOTO_MAP.get(name),
             "season": season_stats,
         })

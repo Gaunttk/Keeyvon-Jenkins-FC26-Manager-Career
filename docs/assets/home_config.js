@@ -55,28 +55,28 @@ const HOME_CONFIG = {
 
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
-    articleId: '2027-05-15-fa-cup-final-manchester-city',
-    image: 'assets/photos/toni_fruk.png',
-    imageAlt: 'Toni Fruk',
-    layout: 'subject-right',
-    focusX: '76%',
-    focusY: '22%'
+    articleId: '2027-05-23-hargreaves-pl-champions',
+    image: 'assets/photos/md38-leeds-pl-trophy.jpg',
+    imageAlt: 'Wrexham players celebrate with the Premier League trophy at the Racecourse Ground',
+    layout: 'wide',
+    focusX: '50%',
+    focusY: '45%'
   },
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-05-15-pl-manchester-city-away', image: 'assets/photos/andres_gomez.png', imageAlt: 'Andrés Gómez' },
-    { articleId: '2027-05-15-hargreaves-first-trophy', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
-    { articleId: '2027-05-11-pl-ipswich-town-home', image: 'assets/photos/liberato_cacace.png', imageAlt: 'Liberato Cacace' }
+    { articleId: '2027-05-23-pl-leeds-united-home', image: 'assets/photos/md38-leeds-pl-title-scoreboard.jpg', imageAlt: 'Callum Doyle carries the Premier League trophy past the full-time scoreboard reading Wrexham 2-0 Leeds United' },
+    { articleId: '2027-05-23-holt-title-confirmed', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' },
+    { articleId: '2027-05-15-hargreaves-first-trophy', image: 'assets/photos/toni_fruk.png', imageAlt: 'Toni Fruk' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
   /* The card whose author is Keeyvon Jenkins renders in the Hawk's Nest
      treatment automatically — no flag needed. */
   writers: [
-    { articleId: 'entry-103', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
-    { articleId: '2027-05-08-pl-newcastle-home', image: 'assets/photos/chido_obi.png', imageAlt: 'Chido Obi' },
-    { articleId: '2027-03-20-fa-cup-semi-arsenal', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
+    { articleId: 'entry-104', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
+    { articleId: '2027-05-23-bennett-jenkins-american-champion', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
+    { articleId: '2027-05-23-cole-title-debate', image: 'assets/photos/damian_bobadilla.png', imageAlt: 'Damián Bobadilla' }
   ],
 
   /* ── Squad Spotlight ──────────────────────────────────────────────────── */
