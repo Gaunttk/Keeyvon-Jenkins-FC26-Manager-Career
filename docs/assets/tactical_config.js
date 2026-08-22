@@ -63,13 +63,11 @@ const TACTICAL_CONFIG = {
       { slug: 'joenathan-amelia',tier: 'rotation' },
       { slug: 'elijah-dijkstra', tier: 'rotation' },
       { slug: 'mario-barbieri',  tier: 'rotation' },
-      { slug: 'aaron-james',     tier: 'prospect' },
     ],
     'Centre Back': [
       { slug: 'callum-doyle',    tier: 'starter' },
       { slug: 'ayden-heaven',    tier: 'starter' },
       { slug: 'max-cleworth',    tier: 'rotation' },
-      { slug: 'aaron-james',     tier: 'prospect' },
       { slug: 'andres-cuenca',   tier: 'prospect' },
       { slug: 'vittorio-martini',tier: 'prospect' },
     ],
