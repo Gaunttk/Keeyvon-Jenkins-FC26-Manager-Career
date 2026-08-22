@@ -3230,10 +3230,5 @@ var PL_FIXTURES = [
     "date": "2026-08-22",
     "opponent": "Sheffield United",
     "home": false
-  },
-  {
-    "date": "2027-05-23",
-    "opponent": "Leeds United",
-    "home": true
   }
 ];
