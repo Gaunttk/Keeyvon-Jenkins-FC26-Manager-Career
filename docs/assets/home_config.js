@@ -55,9 +55,9 @@ const HOME_CONFIG = {
 
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
-    articleId: '2027-05-15-holt-premier-league-champions',
-    image: 'assets/photos/andres_gomez.png',
-    imageAlt: 'Andrés Gómez',
+    articleId: '2027-05-15-fa-cup-final-manchester-city',
+    image: 'assets/photos/toni_fruk.png',
+    imageAlt: 'Toni Fruk',
     layout: 'subject-right',
     focusX: '76%',
     focusY: '22%'
@@ -65,9 +65,9 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-05-15-fa-cup-final-manchester-city', image: 'assets/photos/toni_fruk.png', imageAlt: 'Toni Fruk' },
+    { articleId: '2027-05-15-pl-manchester-city-away', image: 'assets/photos/andres_gomez.png', imageAlt: 'Andrés Gómez' },
     { articleId: '2027-05-15-hargreaves-first-trophy', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
-    { articleId: '2027-05-15-pl-manchester-city-away', image: 'assets/photos/liberato_cacace.png', imageAlt: 'Liberato Cacace' }
+    { articleId: '2027-05-11-pl-ipswich-town-home', image: 'assets/photos/liberato_cacace.png', imageAlt: 'Liberato Cacace' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */

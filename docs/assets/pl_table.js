@@ -21,7 +21,7 @@ const PREMIER_LEAGUE_TABLE = {
   season: '2026/27',
   // Zone divider rows, keyed by the position they appear ABOVE.
   markers: {
-    1: { label: '\u2605 Champion \u2014 title clinched on goal difference with 1 game left', cls: 'promo' },
+    1: { label: 'Title race \u2014 Wrexham lead on goal difference, 1 game left', cls: 'promo' },
     2: { label: 'UEFA Champions League', cls: 'playoff' },
     5: { label: 'UEFA Europa League', cls: 'playoff' },
     6: { label: 'UEFA Conference League', cls: 'playoff' },
