@@ -1434,7 +1434,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 76px;
+  width: 128px;
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -1445,16 +1445,16 @@ body {
   border-color: var(--gold);
 }
 .formation-player-photo {
-  width: 52px;
-  height: 52px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--charcoal);
-  border: 2px solid var(--red);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  border: 3px solid var(--red);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
-.formation-player-photo img { width: 100%; height: 100%; object-fit: cover; }
-.formation-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 10px; color: var(--steel); }
+.formation-player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.formation-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 18px; color: var(--steel); }
 .formation-player-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
 .formation-player-label {
   margin-top: 3px;
@@ -1531,8 +1531,8 @@ body {
   .formation-pitch { aspect-ratio: 3 / 4; }
 }
 @media (max-width: 480px) {
-  .formation-marker { width: 60px; }
-  .formation-player-photo { width: 38px; height: 38px; border-width: 1.5px; }
+  .formation-marker { width: 92px; }
+  .formation-player-photo { width: 68px; height: 68px; border-width: 2px; }
   .formation-player-name { font-size: 9px; }
   .formation-player-meta { display: none; }
 }
@@ -1578,10 +1578,10 @@ body {
 .depth-position-list { padding: 4px 0; }
 .depth-player-row {
   display: grid;
-  grid-template-columns: 20px 34px 1fr 40px;
-  gap: 8px;
+  grid-template-columns: 20px 60px 1fr 40px;
+  gap: 10px;
   align-items: center;
-  padding: 6px 12px;
+  padding: 8px 12px;
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -1597,15 +1597,15 @@ body {
   text-align: center;
 }
 .depth-player-photo {
-  width: 34px;
-  height: 34px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--off-black);
   flex-shrink: 0;
 }
-.depth-player-photo img { width: 100%; height: 100%; object-fit: cover; }
-.depth-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 6px; color: var(--steel); }
+.depth-player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.depth-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 11px; color: var(--steel); }
 .depth-player-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
 .depth-player-tier {
   display: inline-block;
@@ -1735,15 +1735,15 @@ body {
 }
 .tac-leader-card:hover { border-color: var(--gold); }
 .tac-leader-photo {
-  width: 44px;
-  height: 44px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--off-black);
   flex-shrink: 0;
 }
-.tac-leader-photo img { width: 100%; height: 100%; object-fit: cover; }
-.tac-leader-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 8px; color: var(--steel); }
+.tac-leader-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.tac-leader-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 15px; color: var(--steel); }
 .tac-leader-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
 .tac-leader-label {
   display: block;
