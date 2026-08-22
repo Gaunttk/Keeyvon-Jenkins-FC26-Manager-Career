@@ -1511,11 +1511,21 @@ body {
   color: var(--muted);
   letter-spacing: 0.5px;
 }
+.xi-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
 .xi-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: var(--white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 .xi-ovr {
   font-family: 'Barlow Condensed', sans-serif;
@@ -1607,6 +1617,13 @@ body {
 .depth-player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
 .depth-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 11px; color: var(--steel); }
 .depth-player-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
+.depth-player-tier-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
 .depth-player-tier {
   display: inline-block;
   font-family: 'Barlow Condensed', sans-serif;
@@ -1615,11 +1632,21 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 1px 5px;
-  margin-bottom: 2px;
 }
 .tier-starter  { background: var(--red); color: white; }
 .tier-rotation { background: rgba(74,144,196,0.16); color: var(--dispatch-blue); }
 .tier-prospect { background: rgba(212,168,67,0.14); color: var(--gold); }
+.on-loan-badge {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  color: var(--light);
+  border: 1px solid var(--steel);
+}
 .depth-player-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 600;
@@ -5015,12 +5042,39 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   font-family: 'Barlow Condensed', sans-serif; font-size: 10.5px; font-weight: 700;
   letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); align-self: flex-start;
 }
+.squad-card-name-row { display: flex; align-items: center; gap: 6px; min-width: 0; }
 .squad-card-name {
   font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px;
   letter-spacing: 0.4px; color: var(--white); line-height: 1.15;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0;
 }
 .squad-card-meta { font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--light); }
+
+/* ─── Development-status badge (HPTBS / EP / SGP) ───
+   Reused wherever a player row appears: Squad cards above, and the
+   Tactical Centre's positional-depth rows / Preferred XI (tactical.js).
+   Source of truth is wrexham_squad.csv's Status column, parsed by
+   scripts/sync_squad_page.py into SQUAD_DATA[n].devStatus. A restrained
+   scouting-note pill, not another Starter/Rotation/Prospect badge -- the
+   abbreviation is always visible; color is a secondary cue, not the only
+   one, and `title` carries the full phrase for a hover tooltip. */
+.dev-status-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border: 1px solid;
+  border-radius: 2px;
+  line-height: 1.3;
+  cursor: default;
+}
+.dev-status-hptbs { color: var(--gold); border-color: rgba(212,168,67,0.5); background: rgba(212,168,67,0.10); }
+.dev-status-ep     { color: var(--dispatch-blue); border-color: rgba(74,144,196,0.5); background: rgba(74,144,196,0.10); }
+.dev-status-sgp    { color: var(--holt-accent); border-color: rgba(79,138,99,0.5); background: rgba(79,138,99,0.12); }
 .squad-card-bio { font-family: 'Barlow', sans-serif; font-size: 12.5px; color: var(--muted); }
 .squad-card-stats {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; letter-spacing: 0.4px;
@@ -5183,11 +5237,15 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   display: flex; flex-direction: column; justify-content: center;
   padding: 32px 8px; border-bottom: 3px solid var(--red);
 }
-.player-captain-badge {
-  align-self: flex-start; font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
-  font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--black);
-  background: var(--gold); padding: 5px 12px; margin-bottom: 14px;
+.player-badges {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
 }
+.player-captain-badge {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--black);
+  background: var(--gold); padding: 5px 12px;
+}
+.player-badges .dev-status-badge { font-size: 10.5px; padding: 5px 10px; }
 .player-name {
   font-family: 'Playfair Display', serif; font-weight: 900; font-size: 52px;
   line-height: 1.02; color: var(--white);
