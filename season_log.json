@@ -5,9 +5,20 @@
     "game": "FC26 Career Mode",
     "season": "2026-27",
     "competition": "Premier League",
-    "last_updated": "2027-05-20"
+    "last_updated": "2027-05-23"
   },
   "matches": [
+    {
+      "date": "2027-05-23",
+      "opponent": "Leeds United",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Bobadilla 26', Obi 49'. MoM: Okonkwo. Wrexham champions of the Premier League — a maiden top-flight title completing the domestic double alongside the FA Cup won eight days earlier. Ayden Heaven sent off in the 68th minute; Wrexham played out the final 22 minutes a man down but held the clean sheet. Matthieu Brunel (ST) and academy winger Stephane Bertrand both made their senior debuts, coming on together in the 69th minute.",
+      "journal_entry": true,
+      "player_ratings": { "A. Okonkwo": 8.1, "A. Heaven": 6.2, "B. Gutiérrez": 7.4, "C. Doyle": 7.0, "C. Obi": 7.9, "D. Bobadilla": 7.0, "J. Mokio": 6.8, "J.C. Vargas": 5.9, "L. Sauer": 7.9, "L. Cacace": 7.5, "M. Barbieri": 6.0, "R. Ngumoha": 6.4, "T. Pitarch": 6.3, "T. Fruk": 7.7, "M. Brunel": 5.9, "S. Bertrand": 5.9 }
+    },
     {
       "date": "2027-05-11",
       "opponent": "Ipswich Town",
@@ -1653,6 +1664,14 @@
     {
       "date": "2027-05-20",
       "description": "Nathaniel Matthews (16, RW, OVR 62) cut from the Youth Academy, keeping the academy roster within its 16-player limit after the Bakke/Jensen/Lien signings."
+    },
+    {
+      "date": "2027-05-23",
+      "description": "WREXHAM WIN THE PREMIER LEAGUE — a maiden top-flight title, completing the domestic double with the FA Cup won eight days earlier. Beat Leeds United 2-0 at home (Bobadilla, Obi) on the final day to finish top with 84 points, two clear of runners-up Manchester City. First-ever Premier League title in the club's history."
+    },
+    {
+      "date": "2027-05-23",
+      "description": "Matthieu Brunel (ST) and academy winger Stephane Bertrand made their senior debuts together, coming on in the 69th minute of the title-winning win over Leeds United. Ayden Heaven was sent off in the 68th minute; Wrexham held the clean sheet a man down for the final 22 minutes."
     }
   ],
   "fixtures": [
