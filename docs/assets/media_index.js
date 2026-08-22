@@ -100,6 +100,31 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-05-15-holt-premier-league-champions": {
+   "id": "2027-05-15-holt-premier-league-champions",
+   "headline": "Wrexham Confirmed as Premier League Champions",
+   "dek": "A 3-2 win at Manchester City leaves both clubs level on 81 points with one match remaining, but Wrexham's goal difference cannot be overhauled in a single game — sealing the title in the club's first season in the competition.",
+   "date": "2027-05-15",
+   "date_label": "May 15, 2027",
+   "author_id": "rebecca-holt",
+   "outlet": "BBC Sport",
+   "section": "Press Conferences",
+   "content_type": "breaking",
+   "entry_number": null,
+   "category": "coverage",
+   "category_label": "Coverage",
+   "season": "2026/27",
+   "tags": [
+    "breaking-news",
+    "premier-league",
+    "title",
+    "milestone"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-05-15-holt-premier-league-champions.html"
+  },
   "2027-05-15-fa-cup-final-manchester-city": {
    "id": "2027-05-15-fa-cup-final-manchester-city",
    "headline": "Fruk Brace Wins Wrexham's First Major Trophy as City's Press Finally Breaks",
@@ -1919,6 +1944,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-05-15-holt-premier-league-champions",
   "2027-05-15-fa-cup-final-manchester-city",
   "2027-05-15-pl-manchester-city-away",
   "2027-05-15-hargreaves-first-trophy",
@@ -2011,6 +2037,11 @@ const MEDIA_INDEX = {
  ],
  "categories": [
   {
+   "slug": "coverage",
+   "label": "Coverage",
+   "count": 1
+  },
+  {
    "slug": "history",
    "label": "History",
    "count": 4
@@ -2039,6 +2070,12 @@ const MEDIA_INDEX = {
    "latest_date": "2027-05-15"
   },
   {
+   "name": "BBC Sport",
+   "count": 2,
+   "latest_id": "2027-05-15-holt-premier-league-champions",
+   "latest_date": "2027-05-15"
+  },
+  {
    "name": "The Athletic",
    "count": 2,
    "latest_id": "2027-03-06-mcallister-academy-pipeline-fourth-title",
@@ -2049,12 +2086,6 @@ const MEDIA_INDEX = {
    "count": 1,
    "latest_id": "2027-02-04-cole-carabao-cup-exit-outcoached",
    "latest_date": "2027-02-04"
-  },
-  {
-   "name": "BBC Sport",
-   "count": 1,
-   "latest_id": "2026-12-30-holt-pitarch-signing-confirmed",
-   "latest_date": "2026-12-30"
   }
  ],
  "seasons": [
