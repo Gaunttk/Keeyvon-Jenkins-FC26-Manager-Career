@@ -15,8 +15,9 @@ When a session opens, silently load the context below. Do not summarize it back 
 
 | File | Purpose |
 |------|---------|
-| `wrexham_squad.csv` | Source of truth for all first-team squad players (54 columns) |
+| `wrexham_squad.csv` | Source of truth for all first-team squad players (54 columns) — always reflects each player's CURRENT/latest attributes |
 | `youth_academy.csv` | Academy players — same 54-column schema; promoted players move to `wrexham_squad.csv` |
+| `player_history.csv` | **Append-only** attribute snapshot log — same schema as `wrexham_squad.csv` plus a leading `Snapshot_Date` column. Every time a player's attributes are refreshed from screenshots (an end-of-season review, a monthly check-in), append a new dated row per player here **in addition to** updating their live row in `wrexham_squad.csv`/`youth_academy.csv` — never overwrite a prior snapshot. This is how attribute progression gets tracked over time (filter by `Name` to see a player's history). One row per player per `Snapshot_Date`; if you re-run the same date for a player (e.g. patching in a field you missed), replace that row rather than duplicating it. |
 | `season_log.json` | Structured record of matches, transfers, injuries, milestones |
 | `docs/index.html` | **The Jenkins Era** homepage (GitHub Pages root) — editorial front door. Its sections are assembled at load time by `docs/assets/home.js` from the four data files below; the HTML itself holds no football numbers except the inline `SEASON_SUMMARY` block |
 | `docs/assets/home.js` | Homepage rendering logic (plain script, no build step). Reads `SEASON_SUMMARY`, `MEDIA_INDEX`, `PREMIER_LEAGUE_TABLE`, `HOME_CONFIG` |
