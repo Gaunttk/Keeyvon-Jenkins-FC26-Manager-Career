@@ -65,7 +65,7 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-05-23-pl-leeds-united-home', image: 'assets/photos/md38-leeds-pl-title-scoreboard.jpg', imageAlt: 'Callum Doyle carries the Premier League trophy past the full-time scoreboard reading Wrexham 2-0 Leeds United' },
+    { articleId: '2027-08-24-meredith-callens-signing', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
     { articleId: '2027-05-23-holt-title-confirmed', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' },
     { articleId: '2027-05-15-hargreaves-first-trophy', image: 'assets/photos/toni_fruk.png', imageAlt: 'Toni Fruk' }
   ],
@@ -74,7 +74,7 @@ const HOME_CONFIG = {
   /* The card whose author is Keeyvon Jenkins renders in the Hawk's Nest
      treatment automatically — no flag needed. */
   writers: [
-    { articleId: 'entry-104', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
+    { articleId: 'entry-001', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
     { articleId: '2027-05-23-bennett-jenkins-american-champion', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
     { articleId: '2027-05-23-cole-title-debate', image: 'assets/photos/damian_bobadilla.png', imageAlt: 'Damián Bobadilla' }
   ],
@@ -87,15 +87,15 @@ const HOME_CONFIG = {
      they never go stale. */
   spotlight: {
     featured: {
-      name: 'Yacel Amrizi', position: 'ST / LW', age: 21, height: '6\'2"',
-      ovr: 74, role: 'Important',
+      name: 'Yacel Amrizi', position: 'ST / LW', age: 23, height: '6\'2"',
+      ovr: 76, role: 'Important',
       image: 'assets/photos/yacel_amrizi.png'
     },
     others: [
-      { name: 'Toni Fruk', position: 'ST / CAM', age: 25, ovr: 79, image: 'assets/photos/toni_fruk.png' },
-      { name: 'Rio Ngumoha', position: 'LM / LW', age: 17, ovr: 76, image: 'assets/photos/rio_ngumoha.png' },
-      { name: 'Leo Sauer', position: 'LW / LM', age: 20, ovr: 76, image: 'assets/photos/leo_sauer.png' },
-      { name: 'Arthur Okonkwo', position: 'GK', age: 24, ovr: 74, image: 'assets/photos/arthur_okonkwo.png' }
+      { name: 'Toni Fruk', position: 'ST / CAM', age: 26, ovr: 81, image: 'assets/photos/toni_fruk.png' },
+      { name: 'Rio Ngumoha', position: 'LM / LW', age: 18, ovr: 79, image: 'assets/photos/rio_ngumoha.png' },
+      { name: 'Leo Sauer', position: 'LW / LM', age: 21, ovr: 80, image: 'assets/photos/leo_sauer.png' },
+      { name: 'Arthur Okonkwo', position: 'GK', age: 25, ovr: 76, image: 'assets/photos/arthur_okonkwo.png' }
     ]
   },
 

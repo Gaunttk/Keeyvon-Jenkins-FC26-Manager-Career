@@ -985,6 +985,30 @@ const SQUAD_DATA = {
         "assists": 0,
         "rating": 5.9
       }
+    },
+    {
+      "name": "Yanis Callens",
+      "slug": "yanis-callens",
+      "positions": [
+        "CAM",
+        "CM",
+        "CDM"
+      ],
+      "group": "Midfielders",
+      "age": 20,
+      "ovr": 78,
+      "height": "5'7\"",
+      "foot": "Left",
+      "squadRole": "Important",
+      "potential": null,
+      "captain": false,
+      "loan": null,
+      "devStatus": {
+        "code": "SGP",
+        "label": "Showing Great Potential"
+      },
+      "image": null,
+      "season": null
     }
   ],
   "featured": {
@@ -1014,9 +1038,9 @@ const SQUAD_DATA = {
     }
   },
   "glance": {
-    "squadSize": 37,
+    "squadSize": 38,
     "avgAge": 20.7,
-    "avgOvr": 72.2,
+    "avgOvr": 72.3,
     "highestOvr": "Toni Fruk",
     "highestOvrValue": 81,
     "youngest": "Juan Cruz Vargas",
