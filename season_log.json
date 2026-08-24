@@ -5,11 +5,15 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-05-23"
+    "last_updated": "2027-08-24"
   },
   "matches": [],
-  "transfers": [],
+  "transfers": [
+    { "date": "2027-08-24", "player": "Y. Callens", "direction": "in", "club": "Free Agent", "fee": "£0 (Free Transfer)", "wage": "$54k/w" }
+  ],
   "injuries": [],
-  "milestones": [],
+  "milestones": [
+    { "date": "2027-08-24", "description": "Wrexham AFC sign Belgian CAM Yanis Callens (20) on a free transfer, agreeing a 4-year deal worth $54,000/week. The 78-rated playmaker arrives with no fee, only a $470,000 signing bonus, adding depth and quality behind the front line as the club begins its first full season in the Premier League." }
+  ],
   "fixtures": []
 }

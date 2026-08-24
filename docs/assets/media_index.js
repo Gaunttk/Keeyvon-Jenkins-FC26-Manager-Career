@@ -100,6 +100,54 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-08-24-meredith-callens-signing": {
+   "id": "2027-08-24-meredith-callens-signing",
+   "headline": "No Fee, No Fuss: Wrexham Add Belgian Playmaker Callens on a Free",
+   "dek": "Yanis Callens arrives from nowhere in particular — out of contract, twenty years old, and already wearing the number 35 — as the reigning champions quietly start filling in the gaps a title-winning squad doesn't advertise.",
+   "date": "2027-08-24",
+   "date_label": "Aug 24, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Transfer Window",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2027/28",
+   "tags": [
+    "transfer-window",
+    "free-transfer",
+    "premier-league",
+    "pre-season"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-24-meredith-callens-signing"
+  },
+  "entry-001": {
+   "id": "entry-001",
+   "headline": "The Hardest Thing We'll Do Is Stay Hungry",
+   "dek": "A full squad review, a new signing, and the strange feeling of preparing to defend something for the first time in my career.",
+   "date": "2027-08-24",
+   "date_label": "Aug 24, 2027",
+   "author_id": "keeyvon-jenkins",
+   "outlet": "The Hawk's Nest (Private Journal)",
+   "section": null,
+   "content_type": "diary",
+   "entry_number": "Entry 001",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2027/28",
+   "tags": [
+    "season-preview",
+    "squad-review"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#entry-001"
+  },
   "2027-05-23-pl-leeds-united-home": {
    "id": "2027-05-23-pl-leeds-united-home",
    "headline": "Champions: Wrexham Beat Leeds 2-0 to Win the Premier League",
@@ -2060,6 +2108,8 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-08-24-meredith-callens-signing",
+  "entry-001",
   "2027-05-23-pl-leeds-united-home",
   "entry-104",
   "2027-05-23-hargreaves-pl-champions",
@@ -2216,6 +2266,7 @@ const MEDIA_INDEX = {
   }
  ],
  "seasons": [
+  "2027/28",
   "2026/27",
   "2025/26"
  ]
