@@ -577,7 +577,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "26500",
     "Market_Value": "14000000",
     "Development_Plan": "Winger 76→77 ETA 133w",
-    "Notes": "ST: Poacher++/Advanced Forward++. Injury icon shown next to name in squad list but no detail confirmed this cycle -- needs a dedicated Status-tab screenshot of Amrizi himself. Not willing to negotiate new terms. End-of-season review 2027-05-23."
+    "Notes": "Injured: Torn Quad Muscle, 3 months (from 2027-05-15 vs Man City, per season_log.json) -- explains the injury icon seen in every squad-hub screenshot this cycle. ST: Poacher++/Advanced Forward++. Injury icon shown next to name in squad list but no detail confirmed this cycle -- needs a dedicated Status-tab screenshot of Amrizi himself. Not willing to negotiate new terms. End-of-season review 2027-05-23."
   },
   "Andrés Gómez": {
     "Position": "RM/RW",
@@ -3165,10 +3165,4 @@ var ROSTER_ATTR_DATA = {
     "Notes": "Norway. Dev Dynamic 53→54 ETA 9w. RB: Attacking Wingback+. CB: Defender/Stopper/Wide Back/Ball-Playing Defender. LB: Falseback/Attacking Wingback (RW slots not screenshotted). PlayStyles: Relentless (regular); 3 further PlayStyle slots not yet revealed. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
   }
 };
-var PL_FIXTURES = [
-  {
-    "date": "2026-08-22",
-    "opponent": "Sheffield United",
-    "home": false
-  }
-];
+var PL_FIXTURES = [];

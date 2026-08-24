@@ -28,9 +28,9 @@ const SQUAD_DATA = {
         "isGk": true,
         "apps": 33,
         "rating": 6.0,
-        "trackedApps": 8,
-        "cleanSheets": 5,
-        "goalsConceded": 3
+        "trackedApps": 0,
+        "cleanSheets": 0,
+        "goalsConceded": 0
       }
     },
     {
@@ -719,9 +719,9 @@ const SQUAD_DATA = {
         "isGk": true,
         "apps": 15,
         "rating": 6.5,
-        "trackedApps": 4,
-        "cleanSheets": 2,
-        "goalsConceded": 5
+        "trackedApps": 0,
+        "cleanSheets": 0,
+        "goalsConceded": 0
       }
     },
     {
@@ -912,9 +912,9 @@ const SQUAD_DATA = {
         "isGk": true,
         "apps": 1,
         "rating": 6.7,
-        "trackedApps": 2,
-        "cleanSheets": 1,
-        "goalsConceded": 1
+        "trackedApps": 0,
+        "cleanSheets": 0,
+        "goalsConceded": 0
       }
     },
     {
