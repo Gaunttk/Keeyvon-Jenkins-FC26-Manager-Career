@@ -18,6 +18,7 @@ When a session opens, silently load the context below. Do not summarize it back 
 | `wrexham_squad.csv` | Source of truth for all first-team squad players (54 columns) — always reflects each player's CURRENT/latest attributes |
 | `youth_academy.csv` | Academy players — same 54-column schema; promoted players move to `wrexham_squad.csv` |
 | `player_history.csv` | **Append-only** attribute snapshot log — same schema as `wrexham_squad.csv` plus a leading `Snapshot_Date` column. Every time a player's attributes are refreshed from screenshots (an end-of-season review, a monthly check-in), append a new dated row per player here **in addition to** updating their live row in `wrexham_squad.csv`/`youth_academy.csv` — never overwrite a prior snapshot. This is how attribute progression gets tracked over time (filter by `Name` to see a player's history). One row per player per `Snapshot_Date`; if you re-run the same date for a player (e.g. patching in a field you missed), replace that row rather than duplicating it. |
+| `scripts/sync_squad_page.py` | Regenerates `docs/assets/squad_data.js` from `wrexham_squad.csv` (+ current-season Apps/G/A/Rating joined in from `docs/assets/player_stats.js`). **`docs/roster.html`'s senior-squad section and all of `docs/depth_chart.html` are rendered client-side from `squad_data.js`** (via `docs/assets/squad.js` / `docs/assets/tactical.js`) — they are no longer static hand-edited cards. Run this after **any** `wrexham_squad.csv` change, attribute refresh included, or OVR/attributes on those two pages silently go stale (this happened for real — see git history around 2026-08). |
 | `season_log.json` | Structured record of matches, transfers, injuries, milestones |
 | `docs/index.html` | **The Jenkins Era** homepage (GitHub Pages root) — editorial front door. Its sections are assembled at load time by `docs/assets/home.js` from the four data files below; the HTML itself holds no football numbers except the inline `SEASON_SUMMARY` block |
 | `docs/assets/home.js` | Homepage rendering logic (plain script, no build step). Reads `SEASON_SUMMARY`, `MEDIA_INDEX`, `PREMIER_LEAGUE_TABLE`, `HOME_CONFIG` |
@@ -193,8 +194,7 @@ All HTML must also work as local `file://` files (no server needed). The `season
 Whenever a signing or departure is confirmed (screenshot or explicit user input), update **all** of the following in the same session, not just `wrexham_squad.csv`:
 
 - `wrexham_squad.csv` — add/remove the row
-- `docs/roster.html` — add/remove the player card (check for dual-position players who may appear in two position sections, e.g. a RB/RM listed under both Right Backs and Wide Attack). Run `python3 scripts/check_roster_sync.py` afterward — it catches missing/stale cards and name/age/OVR drift against the CSV (mechanical fields only; it does not touch or check the dev-status prose, which stays hand-written)
-- `docs/depth_chart.html` — add/remove the player row in every position section they appear in; re-check any `gap-text` analysis notes that reference the player (e.g. "fallback option" language naming a player who has since left)
+- Run `python3 scripts/sync_squad_page.py` to regenerate `docs/assets/squad_data.js` — this is what actually adds/removes/updates the player on `docs/roster.html`'s senior section and `docs/depth_chart.html`, since both are rendered from that file, not hand-edited HTML. Re-check any `gap-text` analysis notes in `depth_chart.html` that reference the player (e.g. "fallback option" language naming someone who has since left) — those stay hand-written and the script won't touch them. Then run `python3 scripts/check_roster_sync.py` — it catches remaining name/age/OVR/position drift against the CSV (mechanical fields only; it does not touch or check the dev-status prose, which stays hand-written)
 - `season_log.json` — add a `transfers` entry and a `milestones` entry
 - `docs/season.html` — update Match Log / Player Stats table if the player has appeared in a match
 - `docs/assets/home_config.js` — only if the player appears in the homepage Squad Spotlight (`spotlight.featured` / `spotlight.others`) or Academy block. A departed player must not stay spotlighted on the homepage; their OVR/age/position there also mirror the CSV and go stale if the CSV changes
@@ -246,8 +246,8 @@ Every session — match, squad update, transfer, academy change, or Media Centre
 
 - `docs/index.html` — `SEASON_SUMMARY` (via `sync_season_summary.py`) and homepage Squad Spotlight stats (via `sync_home_player_stats.py`) if a match was played; `docs/assets/pl_table.js` if a full-table screenshot came in
 - `docs/assets/home_config.js` — lead/supporting/writer article picks (see above), and the Squad Spotlight / Academy blocks if a spotlighted player's CSV facts (position, age, OVR, potential) changed or a spotlighted player departed
-- `docs/roster.html` — senior cards and the embedded academy section, if the squad or academy roster changed
-- `docs/depth_chart.html` — if the squad changed
+- `docs/roster.html` — senior section (run `sync_squad_page.py` to regenerate `squad_data.js`, not a hand-edit) and the embedded academy section (hand-edited), if the squad or academy roster or attributes changed
+- `docs/depth_chart.html` — run `sync_squad_page.py` if the squad changed (also rendered from `squad_data.js`)
 - `docs/season.html` — Match Log, competition summary stats, record bar, and Player Season Stats table, if a match was played
 - `docs/academy.html` — if `youth_academy.csv` changed
 - `docs/journal.html` — the two-voice entry stream (regenerated via `generate_media_pages.py` if `media-articles.json` changed)
