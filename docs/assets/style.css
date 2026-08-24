@@ -1271,7 +1271,7 @@ body {
 
 /* ─── DEPTH CHART / TACTICAL CENTRE — SHARED SECTION CHROME ─── */
 .depth-section {
-  padding: 18px 24px;
+  padding: 18px var(--h-gutter);
   border-bottom: 1px solid var(--mid);
 }
 .depth-pos-header {
@@ -1335,8 +1335,28 @@ body {
    else here is new and scoped to this page only.
    ═══════════════════════════════════════════════════════════════════════ */
 
-.tactical-page { padding-bottom: 0; }
-
+/* Wide canvas: reuses the --h-max / --h-gutter tokens the redesigned
+   Homepage/Squad/Media Centre/Player Dossiers already define on
+   `.home-body` (docs/depth_chart.html's <body> carries that class too, for
+   the tokens only -- its .site-nav top bar and masthead/footer chrome are
+   untouched, so navigation architecture doesn't change). Only this page's
+   own descendants are targeted below, so nothing here reaches the other
+   .page-wrap legacy pages that still share .masthead/.hub-header/.footer. */
+.tactical-page {
+  max-width: var(--h-max);
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+.tactical-page .masthead,
+.tactical-page .footer {
+  padding-left: var(--h-gutter);
+  padding-right: var(--h-gutter);
+}
+.tactical-header.hub-header {
+  padding-left: var(--h-gutter);
+  padding-right: var(--h-gutter);
+}
+.tactical-header .hub-crest { right: var(--h-gutter); }
 .tactical-header .hub-subtitle { max-width: 60ch; }
 
 /* ── Tactical Summary ─────────────────────────────────────────────────── */
@@ -1376,7 +1396,7 @@ body {
   border-bottom: 1px solid var(--mid);
 }
 .formation-pitch-wrap {
-  padding: 18px 20px 24px;
+  padding: 18px var(--h-gutter) 24px;
   border-right: 1px solid var(--mid);
 }
 .formation-pitch-label,
@@ -1389,11 +1409,13 @@ body {
   color: var(--red);
   margin-bottom: 10px;
 }
-.preferred-xi-wrap { padding: 18px 20px; }
+.preferred-xi-wrap { padding: 18px var(--h-gutter); }
 
 .formation-pitch {
   position: relative;
   width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
   aspect-ratio: 4 / 5;
   background:
     linear-gradient(rgba(255,255,255,0.03) 0 50%, rgba(255,255,255,0) 50%),
@@ -1472,6 +1494,18 @@ body {
   color: var(--white);
   line-height: 1.2;
 }
+.formation-player-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.formation-player-meta-row .dev-status-badge {
+  font-size: 6.5px;
+  padding: 1px 3px;
+  border-width: 1px;
+  letter-spacing: 0.5px;
+}
 .formation-player-meta {
   display: block;
   font-family: 'Barlow Condensed', sans-serif;
@@ -1482,6 +1516,14 @@ body {
 
 /* ── Preferred XI ─────────────────────────────────────────────────────── */
 .preferred-xi { display: flex; flex-direction: column; gap: 16px; }
+@media (min-width: 1560px) {
+  /* Wide canvas: enough room in the 35% Preferred XI column to lay its
+     four position buckets 2x2 instead of stacked -- uses the width without
+     growing the section any taller. Gated to very wide viewports only --
+     at 1440px the 35% column isn't quite wide enough for two sub-columns
+     without truncating longer names (e.g. "Rio Ngumoha"). */
+  .preferred-xi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; }
+}
 .xi-col-head {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 10px;
@@ -1544,7 +1586,7 @@ body {
   .formation-marker { width: 92px; }
   .formation-player-photo { width: 68px; height: 68px; border-width: 2px; }
   .formation-player-name { font-size: 9px; }
-  .formation-player-meta { display: none; }
+  .formation-player-meta-row { display: none; }
 }
 
 /* ── Positional Depth ─────────────────────────────────────────────────── */
@@ -1557,7 +1599,7 @@ body {
 }
 .depth-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 16px;
 }
 .depth-position {
@@ -1817,7 +1859,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 24px;
-  padding: 18px 24px;
+  padding: 18px var(--h-gutter);
   border-bottom: 1px solid var(--mid);
 }
 .tac-nav-link {
