@@ -52,6 +52,48 @@ def load_current_season_label():
     m = re.search(r"season:\s*'([^']+)'", text)
     return m.group(1) if m else "2026/27"
 
+# Column indices into wrexham_squad.csv / youth_academy.csv rows -- see
+# CLAUDE.md's "squad CSV -- Column Index" for the authoritative reference.
+COL = {
+    "Pace": 12, "Shooting": 13, "Passing": 14, "Dribbling": 15, "Defending": 16, "Physical": 17,
+    "Acceleration": 18, "Agility": 19, "Balance": 20, "Jumping": 21, "Sprint_Speed": 22,
+    "Stamina": 23, "Strength": 24,
+    "Aggression": 25, "Att_Position": 26, "Composure": 27, "Interceptions": 28,
+    "Reactions": 29, "Vision": 30,
+    "Ball_Control": 31, "Crossing": 32, "Curve": 33, "Def_Aware": 34, "Dribbling_Tech": 35,
+    "FK_Acc": 36, "Finishing": 37, "Heading_Acc": 38, "Long_Pass": 39, "Long_Shots": 40,
+    "Penalties": 41, "Short_Pass": 42, "Shot_Power": 43, "Slide_Tackle": 44, "Stand_Tackle": 45,
+    "Volleys": 46,
+    "Skill_Moves": 47, "Weak_Foot": 48, "PlayStyles": 49, "Roles": 50,
+}
+
+# Labels for the main-six tiles -- GKs (see CLAUDE.md's "GK mapping") reuse
+# the same six CSV columns for different real-world stats.
+MAIN_SIX_OUTFIELD = [("Pace", "PAC"), ("Shooting", "SHO"), ("Passing", "PAS"),
+                     ("Dribbling", "DRI"), ("Defending", "DEF"), ("Physical", "PHY")]
+MAIN_SIX_GK = [("Pace", "DIV"), ("Shooting", "HAN"), ("Passing", "KIC"),
+              ("Dribbling", "REF"), ("Defending", "SPD"), ("Physical", "POS")]
+MAIN_SIX_GK_LABELS = {"Pace": "Diving", "Shooting": "Handling", "Passing": "Kicking",
+                      "Dribbling": "Reflexes", "Defending": "Speed", "Physical": "Positioning"}
+
+PHYSICAL_ATTRS = ["Acceleration", "Agility", "Balance", "Jumping", "Sprint_Speed", "Stamina", "Strength"]
+MENTAL_ATTRS = ["Aggression", "Att_Position", "Composure", "Interceptions", "Reactions", "Vision"]
+TECHNICAL_ATTRS = ["Ball_Control", "Crossing", "Curve", "Def_Aware", "Dribbling_Tech", "FK_Acc",
+                   "Finishing", "Heading_Acc", "Long_Pass", "Long_Shots", "Penalties",
+                   "Short_Pass", "Shot_Power", "Slide_Tackle", "Stand_Tackle", "Volleys"]
+ATTR_LABELS = {
+    "Att_Position": "Att. Position", "Def_Aware": "Def. Awareness", "Dribbling_Tech": "Dribbling",
+    "FK_Acc": "FK Accuracy", "Heading_Acc": "Heading Acc.", "Sprint_Speed": "Sprint Speed",
+    "Ball_Control": "Ball Control", "Long_Pass": "Long Pass", "Long_Shots": "Long Shots",
+    "Short_Pass": "Short Pass", "Shot_Power": "Shot Power", "Slide_Tackle": "Slide Tackle",
+    "Stand_Tackle": "Stand Tackle",
+}
+
+
+def attr_label(key):
+    return ATTR_LABELS.get(key, key.replace("_", " "))
+
+
 GK, DEF, MID, FWD = "Goalkeepers", "Defenders", "Midfielders", "Forwards"
 GROUP_MAP = {
     "GK": GK, "CB": DEF, "RB": DEF, "LB": DEF,
@@ -312,6 +354,30 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
         notes = row[52]
         potential = row[53].strip() or None
 
+        def cell(key):
+            v = row[COL[key]].strip() if COL[key] < len(row) else ""
+            return int(v) if v.isdigit() else None
+
+        main_six_defs = MAIN_SIX_GK if group == GK else MAIN_SIX_OUTFIELD
+        main_six = [{"label": lbl, "value": cell(key)} for key, lbl in main_six_defs]
+        if group == GK:
+            main_six = [m for m in main_six if m["value"] is not None]
+
+        def sub_group(keys):
+            out = [{"label": attr_label(k), "value": cell(k)} for k in keys]
+            return [o for o in out if o["value"] is not None]
+
+        attributes = {
+            "main_six": main_six,
+            "physical": sub_group(PHYSICAL_ATTRS),
+            "mental": sub_group(MENTAL_ATTRS),
+            "technical": sub_group(TECHNICAL_ATTRS),
+            "skill_moves": cell("Skill_Moves"),
+            "weak_foot": cell("Weak_Foot"),
+            "playstyles": [s.strip() for s in re.split(r"[,/]", row[COL["PlayStyles"]]) if s.strip() and s.strip().lower() != "none"],
+            "roles": cell("Roles"),
+        }
+
         loan_m = re.search(r"On Loan at ([^(]+?)\s*(?:\(back ([^)]+)\))?$", status)
         loan = {"club": loan_m.group(1).strip(), "back": loan_m.group(2)} if loan_m else None
         is_captain = bool(CAPTAIN_RE.search(notes))
@@ -379,7 +445,7 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
             "squad_role": squad_role, "contract_length": contract_length, "captain": is_captain,
             "loan": loan, "dev_status": dev_status, "dev_plan": dev_plan, "image": PHOTO_MAP.get(name),
             "season": season, "last5": last5, "career": career, "bio": bio,
-            "pathway": pathway, "transfer": transfer, "news": news,
+            "pathway": pathway, "transfer": transfer, "news": news, "attributes": attributes,
         }
         players.append(player)
         by_group[group].append(player)
@@ -433,6 +499,55 @@ def render_season_block(p, season_label):
     <div class="player-section-head"><h2>{esc(season_label)} Season</h2></div>
     <div class="player-stat-grid">{''.join(stats)}</div>
     {note}
+  </section>'''
+
+
+def render_attributes(p):
+    a = p["attributes"]
+    if not a["main_six"] and not a["physical"] and not a["mental"] and not a["technical"]:
+        return ""
+
+    tiles = "".join(render_stat(m["label"], m["value"], gold=True) for m in a["main_six"] if m["value"] is not None)
+    main_six_html = f'<div class="player-stat-grid">{tiles}</div>' if tiles else ""
+
+    def sub_block(title, items):
+        if not items:
+            return ""
+        rows = "".join(
+            f'<div class="context-card-row"><span class="context-card-key">{esc(i["label"])}</span>'
+            f'<span class="context-card-val">{esc(i["value"])}</span></div>'
+            for i in items
+        )
+        return f'<div class="context-card"><div class="context-card-label">{esc(title)}</div>{rows}</div>'
+
+    sub_html = (
+        sub_block("Physical", a["physical"])
+        + sub_block("Mental", a["mental"])
+        + sub_block("Technical", a["technical"])
+    )
+    sub_wrap = f'<div class="player-attr-subgrid">{sub_html}</div>' if sub_html else ""
+
+    extras = []
+    if a["skill_moves"]:
+        extras.append(f'<div class="context-card-row"><span class="context-card-key">Skill Moves</span><span class="context-card-val">{"★" * a["skill_moves"]}{"☆" * (5 - a["skill_moves"])}</span></div>')
+    if a["weak_foot"]:
+        extras.append(f'<div class="context-card-row"><span class="context-card-key">Weak Foot</span><span class="context-card-val">{"★" * a["weak_foot"]}{"☆" * (5 - a["weak_foot"])}</span></div>')
+    if a["roles"] is not None:
+        extras.append(f'<div class="context-card-row"><span class="context-card-key">Roles (+/++)</span><span class="context-card-val">{a["roles"]}</span></div>')
+    extras_html = f'<div class="context-card">{"".join(extras)}</div>' if extras else ""
+
+    playstyles_html = ""
+    if a["playstyles"]:
+        chips = "".join(f'<span class="player-playstyle-chip">{esc(ps)}</span>' for ps in a["playstyles"])
+        playstyles_html = f'<div class="player-playstyles"><span class="context-card-key">PlayStyles</span><div class="player-playstyle-list">{chips}</div></div>'
+
+    return f'''
+  <section class="player-section player-attributes" aria-label="Attributes">
+    <div class="player-section-head"><h2>Attributes</h2></div>
+    {main_six_html}
+    {sub_wrap}
+    {extras_html}
+    {playstyles_html}
   </section>'''
 
 
@@ -619,6 +734,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   </section>
 
   {bio_section}
+  {attributes_section}
   {season_section}
   {form_section}
   {career_section}
@@ -708,6 +824,7 @@ def render_player_page(p, by_group, season_label):
         name=esc(p["name"]), name_html=esc(p["name"]),
         hero_img=hero_img, identity_badges=identity_badges, positions=esc("/".join(p["positions"])),
         facts=facts, role_line=role_line, bio_section=bio_section,
+        attributes_section=render_attributes(p),
         season_section=render_season_block(p, season_label), form_section=render_form(p),
         career_section=render_career(p), movement_section=render_movement(p),
         news_section=render_news(p), teammates_section=render_teammates(p, by_group),

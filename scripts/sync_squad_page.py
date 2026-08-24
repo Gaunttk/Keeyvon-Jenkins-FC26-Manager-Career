@@ -19,11 +19,15 @@ correct automatically.
 
 Run this after any change to wrexham_squad.csv, or after player_stats.js is
 regenerated following a match session (see CLAUDE.md's "Squad Changes" /
-"Match Submission Checklist").
+"Match Submission Checklist"). Also chains scripts/generate_player_pages.py
+at the end, so a single run of this script keeps docs/players/*.html (each
+player's full attribute breakdown) in sync too -- no separate step needed.
 """
 import csv
 import json
 import re
+import subprocess
+import sys
 import unicodedata
 from pathlib import Path
 
@@ -352,6 +356,13 @@ def main():
     )
     OUT.write_text(js, encoding="utf-8")
     print(f"Wrote {OUT} — {len(data['players'])} senior players, season {data['season']}")
+
+    # Every senior player's individual dossier page (docs/players/<slug>.html,
+    # via scripts/generate_player_pages.py) reads the same wrexham_squad.csv
+    # attribute columns this script does. Chaining it here means a squad/attribute
+    # update can never leave those detail pages stale just because this script
+    # ran without the other one -- see CLAUDE.md's "Squad Changes" checklist.
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "generate_player_pages.py")], check=True)
 
 
 if __name__ == "__main__":
