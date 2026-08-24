@@ -111,12 +111,17 @@
       marker.href = playerHref(p);
       marker.style.left = s.x + '%';
       marker.style.top = s.y + '%';
-      marker.setAttribute('aria-label', p.name + ', ' + s.slot + ', OVR ' + p.ovr);
+      marker.setAttribute('aria-label', p.name + ', ' + s.slot + ', OVR ' + p.ovr +
+        (p.devStatus ? ', ' + (DEV_STATUS_TITLES[p.devStatus.code] || p.devStatus.label) : ''));
 
       marker.appendChild(byPhoto('formation-player-photo', p, true));
       var label = el('div', 'formation-player-label');
       label.appendChild(el('span', 'formation-player-name', esc(p.name.split(' ').slice(-1)[0])));
-      label.appendChild(el('span', 'formation-player-meta', esc(s.slot) + ' &middot; ' + p.ovr));
+      var metaRow = el('div', 'formation-player-meta-row');
+      metaRow.appendChild(el('span', 'formation-player-meta', esc(s.slot) + ' &middot; ' + p.ovr));
+      var badge = devStatusBadge(p);
+      if (badge) metaRow.appendChild(badge);
+      label.appendChild(metaRow);
       marker.appendChild(label);
 
       root.appendChild(marker);
