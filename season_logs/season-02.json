@@ -1,0 +1,1896 @@
+{
+  "_meta": {
+    "club": "Wrexham AFC",
+    "manager": "Keeyvon Jenkins",
+    "game": "FC26 Career Mode",
+    "season": "2026-27",
+    "competition": "Premier League",
+    "last_updated": "2027-05-23"
+  },
+  "matches": [
+    {
+      "date": "2027-05-23",
+      "opponent": "Leeds United",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Bobadilla 26', Obi 49'. MoM: Okonkwo. Wrexham champions of the Premier League — a maiden top-flight title completing the domestic double alongside the FA Cup won eight days earlier. Ayden Heaven sent off in the 68th minute; Wrexham played out the final 22 minutes a man down but held the clean sheet. Matthieu Brunel (ST) and academy winger Stephane Bertrand both made their senior debuts, coming on together in the 69th minute.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Okonkwo": 8.1,
+        "A. Heaven": 6.2,
+        "B. Gutiérrez": 7.4,
+        "C. Doyle": 7.0,
+        "C. Obi": 7.9,
+        "D. Bobadilla": 7.0,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 5.9,
+        "L. Sauer": 7.9,
+        "L. Cacace": 7.5,
+        "M. Barbieri": 6.0,
+        "R. Ngumoha": 6.4,
+        "T. Pitarch": 6.3,
+        "T. Fruk": 7.7,
+        "M. Brunel": 5.9,
+        "S. Bertrand": 5.9
+      }
+    },
+    {
+      "date": "2027-05-11",
+      "opponent": "Ipswich Town",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Ngumoha 56', Obi 90' (sub). Vargas and Fruk with assists. MoM: Cacace (8.0 rating). Rescheduled from 24 April to 11 May.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.6,
+        "A. Okonkwo": 7.1,
+        "A. Heaven": 7.4,
+        "C. Obi": 6.5,
+        "D. Bobadilla": 6.3,
+        "J. Belghazi": 6.6,
+        "J. Mokio": 6.0,
+        "J.C. Vargas": 6.4,
+        "L. Sauer": 6.1,
+        "L. Cacace": 8.0,
+        "M. Barbieri": 6.3,
+        "R. Ngumoha": 6.9,
+        "T. Pitarch": 6.7,
+        "T. Fruk": 6.3,
+        "V. Veleten": 5.8,
+        "Y. Amrizi": 5.9
+      }
+    },
+    {
+      "date": "2027-05-08",
+      "opponent": "Newcastle",
+      "home": true,
+      "score": "1-1",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Ramsey 54' (Newcastle), Obi 82'.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 6.0,
+        "A. Okonkwo": 6.2,
+        "B. Gutiérrez": 6.9,
+        "C. Doyle": 6.8,
+        "C. Obi": 7.0,
+        "E. Dijkstra": 7.0,
+        "J. Belghazi": 6.1,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 5.8,
+        "L. Sauer": 6.9,
+        "M. Cleworth": 6.7,
+        "R. Ngumoha": 6.6,
+        "T. Pitarch": 6.9,
+        "T. Fruk": 6.3,
+        "V. Veleten": 5.9,
+        "Y. Amrizi": 6.0
+      }
+    },
+    {
+      "date": "2027-01-13",
+      "opponent": "Chelsea",
+      "home": false,
+      "score": "4-1",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "round": "Semi Final Match 1",
+      "notes": "Obi 3', Fruk 40', Obi 45', Vlahovic 48' (Chelsea), Veleten 51'. MoM: Obi (2G 1A, 8.8 rating). Recent Youth Academy promotions Kopp, Lord, and Martini all entered the game.",
+      "journal_entry": true,
+      "player_ratings": {
+        "C. Obi": 8.8
+      }
+    },
+    {
+      "date": "2027-01-09",
+      "opponent": "Nottingham Forest",
+      "home": true,
+      "score": "4-1",
+      "result": "W",
+      "competition": "FA Cup",
+      "notes": "Obi 12', 56', 85', 90', Kalimuendo 82' (Forest). MoM: Obi (4G, 9.3 rating). Debut for Emiliano Bianchi.",
+      "journal_entry": true,
+      "player_ratings": {
+        "C. Obi": 9.3
+      }
+    },
+    {
+      "date": "2027-01-06",
+      "opponent": "Chelsea",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 1G, Ngumoha 1A. MoM: Cacace. Played a more possession-based style for the first time in a long time under Jenkins — 52% possession to Chelsea's 48%, 5 shots to 2, 2.0 xG to 0.3. Need to execute better in the box despite the win.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-02",
+      "opponent": "Brighton",
+      "home": false,
+      "score": "0-1",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Al Dawsari 47'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-29",
+      "opponent": "Ipswich Town",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 5', Keillor-Dunn (Ipswich) 12', Sauer 65'. MoM: Amrizi (1G 1A). Marco Soria made his senior debut, on as a sub in the 66th minute, rating 6.8.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-25",
+      "opponent": "West Ham",
+      "home": true,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Castellanos 9' (West Ham), Amrizi 54', Obi 80'. MoM: Gutiérrez. Christmas Day fixture.",
+      "journal_entry": true,
+      "player_ratings": {
+        "B. Gutiérrez": 7.8
+      }
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Brentford",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Bobadilla 26', Janelt 63' (Brentford), Obi, Sauer 90' (PK).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "round": "Quarter Final",
+      "notes": "Vargas 40', Obi 66' (PK). MoM: Obi. Played 3 days after a 1-2 home league defeat to the same club. City played all their starters, while we played youth, and they still lost — huge win and statement for the club.",
+      "journal_entry": true,
+      "player_ratings": {
+        "C. Obi": 7.6
+      }
+    },
+    {
+      "date": "2026-11-22",
+      "opponent": "Arsenal",
+      "home": true,
+      "score": "1-1",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Amrizi 37', Barcola 49' (Ars). MoM: M. Vitális, rare start.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-05-15",
+      "opponent": "Ipswich",
+      "home": true,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Round 1",
+      "notes": "Lord, Matthews. Scored in extra time with golden goal. Anton Gassner (youth academy GK) was released from the academy after believing he was good enough for the senior squad.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-06-04",
+      "opponent": "Watford",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Soria, Lord, Vargas",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-06-19",
+      "opponent": "Blackburn",
+      "home": true,
+      "score": "4-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Matthews (2), Bianchi, Vargas. MoM: Vargas (1 goal, 2 assists). Controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-07-07",
+      "opponent": "West Ham",
+      "home": true,
+      "score": "3-2",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Quarter Final",
+      "notes": "Lord, Vargas, Soria",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-07-25",
+      "opponent": "Hamburger SV",
+      "home": true,
+      "score": "3-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "notes": "Gomez 8', Bobadilla 19', Gomez 32'. MoM: Gomez (2 goals, 1 assist).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-07-28",
+      "opponent": "UD Las Palmas",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "European International Cup",
+      "notes": "Fruk 54', Fruk 61', Ngumoha 86'. MoM: Belghazi. Press working well; young players buying into the training ground approach.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-01",
+      "opponent": "Levante",
+      "home": null,
+      "score": "2-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "notes": "Ngumoha 8', Amrizi 41'. MoM: Amrizi. Neutral venue. Final preseason friendly.",
+      "journal_entry": true,
+      "player_ratings": {
+        "Y. Amrizi": 7.8
+      }
+    },
+    {
+      "date": "2026-08-15",
+      "opponent": "Wolves",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Fruk 13', Ngumoha 49'. MoM: Ngumoha. First Premier League game, first win. Chido Obi declared Wrexham are here to stay and here to win, unafraid of the league's prestige; Keeyvon backed him.",
+      "journal_entry": true,
+      "player_ratings": {
+        "R. Ngumoha": 7.5
+      }
+    },
+    {
+      "date": "2026-08-22",
+      "opponent": "Sheffield United",
+      "home": false,
+      "score": "1-1",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Fruk 67'.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-24",
+      "opponent": "New Castle",
+      "home": false,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Soria 1'. MoM: N. Kopp. Neutral venue.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-24",
+      "opponent": "Tottenham Hotspur",
+      "home": false,
+      "score": "8-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Forster, Vargas x2, Collin x2, Bertrand x3. MoM: J. Collin (2G 3A). Does Tottenham even have a youth academy? What a no-show for them. The youth at Wrexham is proving to be a real problem for the rest of the Premier League. Neutral venue.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-25",
+      "opponent": "Huddersfield Town",
+      "home": true,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "notes": "Obi 6', Faal 18', Obi 39', O'Brien 45', Veleten 90'. MoM: Veleten (1G 2A). Faal started (not on loan) — 1G 1A, rating 8.4.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-08-29",
+      "opponent": "Bournemouth",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Fruk 65', 83' (PK). MoM: Cacace.",
+      "journal_entry": true,
+      "player_ratings": {
+        "L. Cacace": 7.9
+      }
+    },
+    {
+      "date": "2026-09-12",
+      "opponent": "Tottenham",
+      "home": true,
+      "score": "0-2",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Kudus 42', Kudus 63'. First home Premier League defeat; first home league defeat of Jenkins's Wrexham tenure (a Carabao Cup loss to Blackburn Rovers, 27 Aug 2025, remains the only earlier home defeat at the Racecourse).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-09-19",
+      "opponent": "Chelsea",
+      "home": false,
+      "score": "0-0",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Klaverboer made his Wrexham debut in goal, rating 6.9.",
+      "journal_entry": true,
+      "player_ratings": {
+        "B. Klaverboer": 6.9
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "opponent": "Bradford City",
+      "home": false,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "notes": "Obi 30', Obi 56', Amelia 61', Amelia 82', Obi 85'. MoM: Obi (3G, 9.1 rating). Debut for Andrés Cuenca.",
+      "journal_entry": true,
+      "player_ratings": {
+        "C. Obi": 9.1
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "opponent": "Brighton",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Bobadilla 60'. MoM: Bobadilla. Ratings not captured for this game.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-04",
+      "opponent": "Newcastle",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Sauer 47', Bobadilla 58', 79', 82'. MoM: Bobadilla (3G, 9.1 rating).",
+      "journal_entry": true,
+      "player_ratings": {
+        "D. Bobadilla": 9.1
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "opponent": "Manchester United",
+      "home": true,
+      "score": "1-2",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Amrizi 32'. Defensive lapses and missed chances (2.9 xG) proved costly.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Neutral venue. Jules Collin 1G 1A, Marco Soria 2G 1A, Martin Leon 1G 1A, Valentino Martini 1G, Ben Forster 1A. Fabricio Sandoval appeared.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Brighton",
+      "home": true,
+      "score": "10-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Horn also in GK. Nathaniel Matthews 3G 1A, Stephane Bertrand 3G 1A, Juan Cruz Vargas 1G 1A, Jamie Lord 1G, Martin Leon 2G, Ben Forster 3A, Jules Collin 1A. Mathieu Drouet appeared.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Arsenal",
+      "home": false,
+      "score": "10-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Horn in goal. Fabricio Sandoval 4G, Jules Collin 2G, Mathieu Drouet 1G 2A, Emiliano Bianchi 1G 1A, Juan Cruz Vargas 1G, Stephane Bertrand 1G 1A, Marco Soria 3A, Valentino Martini 1A.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 2G (MoM, 8.4 rating), Fruk 1G 1A, Bobadilla 2A, Vitalis 1A.",
+      "journal_entry": true,
+      "player_ratings": {
+        "Y. Amrizi": 8.4
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "opponent": "Preston North End",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Carabao Cup",
+      "round": "Round of 16",
+      "notes": "Webber started in goal (has not yet left on his loan), 6.3 rating. Amelia 1G, Mokio 1G, Veleten 1A, Obi 1A.",
+      "journal_entry": true,
+      "player_ratings": {
+        "J. Amelia": 7.6
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "opponent": "Aston Villa",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 48'. Dominant but toothless for long stretches; controlled midfield and defended well, struggled to convert chances until the breakthrough.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-11-08",
+      "opponent": "Liverpool",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Sauer 37', Sauer 43', Obi 90'. MoM: Sauer (8.3). A statement away win at Anfield; Sauer's breakout performance.",
+      "journal_entry": true,
+      "player_ratings": {
+        "L. Sauer": 8.3
+      }
+    },
+    {
+      "date": "2026-11-28",
+      "opponent": "Nottingham Forest",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Rio 62', Vargas 72'. MoM: Fruk",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-01",
+      "opponent": "Sunderland",
+      "home": true,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 5', Amrizi 7', Amrizi 25', Bobadilla 38', O'Nien 50' (OG). MoM: Amrizi",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-06",
+      "opponent": "Leeds United",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 50', Joseph 87' (Leeds), Vargas 88'. Scraped it away at Elland Road.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-12",
+      "opponent": "Manchester City",
+      "home": true,
+      "score": "1-2",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Haaland 19', Ngumoha 36', Reijnders 90'. Last minute goal crushed the hopes of a Wrexham shocker. But have to hang your heads high after a game like that. We definitely showed them that we were not intimidated by the talent on the other side. We have talent too, and we are here to stay.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "First Round",
+      "notes": "Neutral venue. Jules Collin 2G 1A, Stephane Bertrand 1G 1A, Ben Forster 1A. MoM: Mika Horn (8.0 rating).",
+      "journal_entry": true,
+      "player_ratings": {
+        "M. Horn": 8.0
+      }
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Brentford",
+      "home": false,
+      "score": "4-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi",
+      "notes": "Neutral venue. Valentino Martini 3G 1A, Nathan Salaun 1G 2A. MoM: Nico Kopp (9.8 rating).",
+      "journal_entry": true,
+      "player_ratings": {
+        "N. Kopp": 9.8
+      }
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Wolves",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Neutral venue. Martin Leon 1G, Nathaniel Matthews 1G. MoM: Nico Kopp (7.8 rating).",
+      "journal_entry": true,
+      "player_ratings": {
+        "N. Kopp": 7.8
+      }
+    },
+    {
+      "date": "2027-01-17",
+      "opponent": "West Ham",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Bobadilla 4', Sauer 38', Rio 56', Bobadilla 60'. MoM: Bobadilla. Loud booing from the London Stadium crowd throughout — a lot of teams are having a bad day against Wrexham's relentless defensive pressure and quick strike scoring.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-24",
+      "opponent": "Brentford",
+      "home": true,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 49', Sauer 79'. MoM: Amrizi. Sauer booked in the 19th minute for a brutal tackle, then produced a moment of incredible athleticism for the second goal — towering over Brentford's centre-back to head home.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-30",
+      "opponent": "Sheffield United",
+      "home": true,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Fruk 11', Amrizi 21', Obi 77', Obi 90'. MoM: Vargas (2A).",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-03",
+      "opponent": "Chelsea",
+      "home": true,
+      "score": "0-3",
+      "result": "L",
+      "competition": "Carabao Cup",
+      "round": "Semi Final Leg 2 (4-4 AGG)",
+      "notes": "Estevao 21' (Chelsea), Palmer 34' (Chelsea), Palmer 59'. 4-3 on penalties. Absolute collapse — the 4-4 aggregate score went to PKs and the youth-heavy side were outmatched this time. Keeyvon was outcoached and took the blame with the press afterward, ending Wrexham's Carabao Cup run one game short of the final. Bournemouth won the other semi-final against Manchester United 6-4 on aggregate.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-06",
+      "opponent": "Wolves",
+      "home": false,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 7', Ngumoha 9', Gutiérrez 21', Amrizi 72', Ngumoha 84'. MoM: Sauer (3A, 8.7 rating). 14 shots to 1 — Keeyvon didn't want to call it a statement game, but a determined, angry Wrexham (fresh off the Carabao Cup exit) thoroughly outmatched Wolves.",
+      "journal_entry": true,
+      "player_ratings": {
+        "L. Sauer": 8.7
+      }
+    },
+    {
+      "date": "2027-02-10",
+      "opponent": "Sunderland",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Rio 68', Rio 74'. MoM: Rio.",
+      "journal_entry": true,
+      "player_ratings": {
+        "R. Ngumoha": 8.1
+      }
+    },
+    {
+      "date": "2027-02-10",
+      "opponent": "Blackburn Rovers",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "notes": "Amrizi 25', Amrizi 56', Amrizi 71'. MoM: Amrizi. Controlled from start to finish.",
+      "journal_entry": true,
+      "player_ratings": {
+        "Y. Amrizi": 8.2
+      }
+    },
+    {
+      "date": "2027-02-20",
+      "opponent": "Nottingham Forest",
+      "home": true,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 44', Igor Jesus 51' (Forest), Fruk 60' (Pen). MoM: Cacace (1A). Rio Ngumoha earned the penalty.",
+      "journal_entry": true,
+      "player_ratings": {
+        "L. Cacace": 7.6
+      }
+    },
+    {
+      "date": "2027-02-20",
+      "opponent": "Liverpool",
+      "home": true,
+      "score": "3-3",
+      "result": "D",
+      "competition": "Youth Academy Rush Tournament",
+      "notes": "Faure 2G, Leon 1G, Besse 1A. Won 2-0 on penalties.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-27",
+      "opponent": "Arsenal",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Sauer 24', Sauer 45', Obi 77', Gómez 82'. MoM: Sauer. Wrexham dominated third-place Arsenal on the road. Man City beat Ipswich at the same time, so of the two teams with a realistic shot at catching Wrexham, both won — but a 4-0 statement road win over the league's third-place side stood out.",
+      "journal_entry": true,
+      "player_ratings": {
+        "Leo Sauer": 6.9
+      }
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Brighton and Hove Albion",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Quarters",
+      "notes": "Neutral venue. Goals: Drouet, Salaun (sub), Cardoso.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-04",
+      "opponent": "Nottingham Forest",
+      "home": true,
+      "score": "6-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi",
+      "notes": "Sandoval 2G, Rosa 2G 1A, Matthews 2G, Forster 2A.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-05",
+      "opponent": "Bournemouth",
+      "home": true,
+      "score": "5-0",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Collin (sub) 1G, Leon 1G 1A, Brunel 1G, Besse (sub) 1G, Cardoso (sub) 1G 2A, Faure 1A, Salaun (sub) 1A. Youth Rush title won.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-20",
+      "opponent": "Bournemouth",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 41', Ngumoha 55', Evanilson 57' (Bournemouth).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Okonkwo": 6.6,
+        "A. Heaven": 7.9,
+        "B. Gutiérrez": 6.0,
+        "C. Doyle": 6.9,
+        "C. Obi": 5.8,
+        "D. Bobadilla": 6.6,
+        "J. Mokio": 7.4,
+        "J.C. Vargas": 6.1,
+        "L. Sauer": 5.8,
+        "L. Cacace": 5.4,
+        "M. Barbieri": 6.1,
+        "R. Ngumoha": 7.5,
+        "T. Pitarch": 6.5,
+        "V. Veleten": 5.6,
+        "Y. Amrizi": 8.3
+      }
+    },
+    {
+      "date": "2027-03-20",
+      "opponent": "Arsenal",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Semi Final",
+      "notes": "Obi 72', Ngumoha 81'. MoM: Ngumoha. Neutral venue. Wrexham advance to the FA Cup Final.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 6.1,
+        "A. Okonkwo": 7.1,
+        "A. Heaven": 6.7,
+        "B. Gutiérrez": 6.7,
+        "C. Doyle": 6.5,
+        "C. Obi": 7.0,
+        "D. Bobadilla": 6.2,
+        "J. Mokio": 6.4,
+        "J.C. Vargas": 6.0,
+        "L. Sauer": 5.4,
+        "L. Cacace": 6.7,
+        "R. Ngumoha": 8.2,
+        "T. Fruk": 7.0,
+        "Y. Amrizi": 5.8
+      }
+    },
+    {
+      "date": "2027-04-03",
+      "opponent": "Aston Villa",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Quarter Final",
+      "notes": "Ngumoha 30'. MoM: Okonkwo. Very good saves from Okonkwo and good defense towards the end to finish the game and secure the win even though it was a challenge.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 6.1,
+        "A. Okonkwo": 7.1,
+        "A. Heaven": 6.9,
+        "B. Gutiérrez": 6.5,
+        "C. Obi": 6.3,
+        "D. Bobadilla": 7.0,
+        "J. Belghazi": 6.2,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 6.8,
+        "L. Sauer": 6.5,
+        "L. Cacace": 7.0,
+        "M. Barbieri": 6.4,
+        "R. Ngumoha": 6.8,
+        "T. Pitarch": 6.2,
+        "T. Fruk": 5.6,
+        "Y. Amrizi": 6.7
+      }
+    },
+    {
+      "date": "2027-04-11",
+      "opponent": "Aston Villa",
+      "home": false,
+      "score": "4-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Amrizi 45', Amrizi 54', Fruk 64', Bobadilla 70'. Score/result corrected from a submitted 0-0 draw, which conflicted with the listed scorers and player stats (Amrizi 2G 1A, Fruk 1G, Bobadilla 1G, Ngumoha 2A) — confirmed 4-0 W with the user.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.5,
+        "A. Heaven": 6.4,
+        "B. Klaverboer": 7.6,
+        "B. Gutiérrez": 6.4,
+        "C. Doyle": 6.9,
+        "C. Obi": 5.7,
+        "D. Bobadilla": 7.1,
+        "J. Mokio": 7.2,
+        "J.C. Vargas": 6.4,
+        "L. Sauer": 5.9,
+        "L. Cacace": 6.0,
+        "M. Barbieri": 6.2,
+        "M. Vitális": 5.8,
+        "R. Ngumoha": 7.4,
+        "T. Fruk": 7.6,
+        "Y. Amrizi": 9.2
+      }
+    },
+    {
+      "date": "2027-04-17",
+      "opponent": "Crystal Palace",
+      "home": true,
+      "score": "0-1",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Kean 79' Crystal Palace.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.8,
+        "A. Okonkwo": 6.4,
+        "A. Heaven": 6.9,
+        "B. Gutiérrez": 6.7,
+        "C. Obi": 5.9,
+        "D. Bobadilla": 6.6,
+        "J. Mokio": 6.8,
+        "J.C. Vargas": 6.3,
+        "M. Barbieri": 6.5,
+        "M. Cleworth": 7.1,
+        "R. Ngumoha": 6.2,
+        "T. Pitarch": 6.2,
+        "T. Fruk": 6.2,
+        "V. Martini": 6.3,
+        "V. Veleten": 6.0,
+        "Y. Amrizi": 5.8
+      }
+    },
+    {
+      "date": "2027-05-01",
+      "opponent": "Manchester United",
+      "home": false,
+      "score": "2-3",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Amad 33', Sesko 39', Amad 69', Obi 87', Vargas 90'. MoM: Amad (Man Utd).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 7.4,
+        "A. Heaven": 6.3,
+        "B. Klaverboer": 6.1,
+        "B. Gutiérrez": 6.6,
+        "C. Obi": 7.3,
+        "D. Bobadilla": 6.8,
+        "E. Dijkstra": 6.4,
+        "J. Belghazi": 7.0,
+        "J. Mokio": 6.1,
+        "J.C. Vargas": 7.3,
+        "L. Sauer": 5.9,
+        "L. Cacace": 6.8,
+        "R. Ngumoha": 6.2,
+        "T. Pitarch": 6.0,
+        "T. Fruk": 6.3,
+        "Y. Amrizi": 6.2
+      }
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Liverpool",
+      "home": true,
+      "score": "0-0",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Dominant performance, hit the frame of the goal twice, but no goal. Okonkwo clean sheet (league-leading 14th of the season).",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "opponent": "Tottenham",
+      "home": false,
+      "score": "2-2",
+      "result": "D",
+      "competition": "Premier League",
+      "notes": "Amrizi 21'. Tel 45', 62' (Tottenham) — the second an Okonkwo goal-kick giveaway. Draw puts Wrexham 1st on goal difference.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-03",
+      "opponent": "Brentford",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Round of 16",
+      "notes": "Obi 32', Bobadilla 50', Veleten 90'. MoM: Klaverboer (clean sheet, 7.5 rating), deputising for a rested Okonkwo. Into the quarterfinals, will face Aston Villa.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-05-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "FA Cup",
+      "round": "Final",
+      "notes": "Fruk 20', 53'. Despite the early goal, City controlled the game with their relentless high press, causing several turnovers. We settled in after halftime and moved the ball more comfortably. Fruk's second goal allowed fresh legs to come on. Once again Wrexham is not afraid to play their young players in the highest-stakes games in front of the biggest crowds. Played at Wembley (neutral venue).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.9,
+        "A. Okonkwo": 7.4,
+        "A. Heaven": 7.0,
+        "B. Gutiérrez": 6.5,
+        "C. Doyle": 7.4,
+        "C. Obi": 6.0,
+        "D. Bobadilla": 6.3,
+        "E. Dijkstra": 6.8,
+        "J. Mokio": 6.7,
+        "L. Sauer": 6.7,
+        "L. Cacace": 6.7,
+        "R. Ngumoha": 5.9,
+        "T. Pitarch": 6.9,
+        "T. Fruk": 7.2,
+        "Y. Amrizi": 6.7,
+        "J.C. Vargas": 6.5
+      }
+    },
+    {
+      "date": "2027-05-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "3-2",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Haaland 32', Ait Nouri 38' (Manchester City). Sauer 59', Gómez 63', 68' (Wrexham). MoM: Gómez. With Wrexham 3 points behind coming into the match, a win here put the club in an amazing position with only one game left after. Both City and Wrexham have easier fixtures on decision day. Several starters practiced poorly and seemed complacent in the buildup — a message went out to the squad that effort and attitude are non-negotiable. Amrizi went off with an apparent serious leg injury in the 9th minute; Obi came on. Incredible, incredible, INCREDIBLE game — one for the ages.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 7.9,
+        "B. Klaverboer": 7.0,
+        "B. Gutiérrez": 6.5,
+        "C. Doyle": 6.9,
+        "C. Obi": 7.4,
+        "D. Bobadilla": 7.1,
+        "J. Belghazi": 7.0,
+        "J. Mokio": 7.1,
+        "L. Sauer": 7.3,
+        "L. Cacace": 6.9,
+        "M. Barbieri": 6.3,
+        "M. Cleworth": 5.2,
+        "T. Pitarch": 5.3,
+        "T. Fruk": 7.5,
+        "V. Veleten": 6.2,
+        "Y. Amrizi": 5.9
+      }
+    }
+  ],
+  "transfers": [
+    {
+      "date": "2026-05-15",
+      "player": "Danny Ward",
+      "direction": "out",
+      "club": "Utrecht",
+      "fee": "$1.3m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Josh Windass",
+      "direction": "out",
+      "club": "Wolves",
+      "fee": "$2.6m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Nathan Broadhead",
+      "direction": "out",
+      "club": "Olympique Lyonnais",
+      "fee": "$4.5m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Zak Vyner",
+      "direction": "out",
+      "club": "SC Braga",
+      "fee": "$2.4m",
+      "wage": ""
+    },
+    {
+      "date": "2026-05-15",
+      "player": "Davis Keillor-Dunn",
+      "direction": "out",
+      "club": "Levante UD",
+      "fee": "$2.55m",
+      "wage": ""
+    },
+    {
+      "date": "2026-06-04",
+      "player": "George Dobson",
+      "direction": "out",
+      "club": "Besiktas JK",
+      "fee": "$2.55m",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-23",
+      "player": "Chido Obi",
+      "direction": "in",
+      "club": "Manchester United",
+      "fee": "",
+      "wage": "$22,000"
+    },
+    {
+      "date": "2026-07-23",
+      "player": "Issa Kabore",
+      "direction": "out",
+      "club": "Manchester City",
+      "fee": "Loan return",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-23",
+      "player": "Jay Rodriguez",
+      "direction": "out",
+      "club": "Stade Brestois 29",
+      "fee": "Free (contract expired)",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-07",
+      "player": "Jorthy Mokio",
+      "direction": "in",
+      "club": "Ajax",
+      "fee": "£8.7m",
+      "wage": "$26,000"
+    },
+    {
+      "date": "2026-07-07",
+      "player": "Toni Fruk",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "Free",
+      "wage": "$67,000"
+    },
+    {
+      "date": "2026-07-16",
+      "player": "José Luis Rodríguez",
+      "direction": "out",
+      "club": "Al Qadsiah",
+      "fee": "$6,400,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Sebastian Revan",
+      "direction": "out",
+      "club": "NEOM SC",
+      "fee": "$2,000,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Conor Coady",
+      "direction": "out",
+      "club": "RSC Anderlecht",
+      "fee": "$910,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Ryan Hardie",
+      "direction": "out",
+      "club": "Leicester City",
+      "fee": "$1,800,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Jamal Belghazi",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "Free",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Mario Barbieri",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "Free",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Rio Ngumoha",
+      "direction": "in",
+      "club": "Liverpool",
+      "fee": "$22,500,000",
+      "wage": "$38,000/w"
+    },
+    {
+      "date": "2026-07-28",
+      "player": "Elliot Lee",
+      "direction": "out",
+      "club": "Preston North End",
+      "fee": "$1,000,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Ayden Heaven",
+      "direction": "in",
+      "club": "Manchester United",
+      "fee": "18.4M",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Andy Cannon",
+      "direction": "out",
+      "club": "Grasshopper Club Zurich",
+      "fee": "680K",
+      "wage": ""
+    },
+    {
+      "date": "2026-07-25",
+      "player": "Elijah Dijkstra",
+      "direction": "in",
+      "club": "Sunderland",
+      "fee": "3.7M",
+      "wage": ""
+    },
+    {
+      "date": "2026-08-15",
+      "player": "Andres Cuenca",
+      "direction": "in",
+      "club": "Barcelona",
+      "fee": "$1.9m",
+      "wage": "$14,000/w"
+    },
+    {
+      "date": "2026-08-16",
+      "player": "Harry Ashfield",
+      "direction": "out",
+      "club": "Silkeborg IF",
+      "fee": "$580,000",
+      "wage": ""
+    },
+    {
+      "date": "2026-08-15",
+      "player": "Paul Mullin",
+      "direction": "out",
+      "club": "Caykur Rizespor",
+      "fee": "740K",
+      "wage": ""
+    },
+    {
+      "date": "2026-08-15",
+      "player": "Leo Sauer",
+      "direction": "in",
+      "club": "Athletic Bilbao",
+      "fee": "22.1M",
+      "wage": "$45,000/w"
+    },
+    {
+      "date": "2026-08-15",
+      "player": "George Thomason",
+      "direction": "out",
+      "club": "Club Brugges",
+      "fee": "4.1M",
+      "wage": ""
+    },
+    {
+      "date": "2026-08-24",
+      "player": "Ben Sheaf",
+      "direction": "out",
+      "club": "Sunderland",
+      "fee": "8.4M",
+      "wage": ""
+    },
+    {
+      "date": "2026-08-31",
+      "player": "Carlos Macia",
+      "direction": "in",
+      "club": "Villarreal",
+      "fee": "2.0M",
+      "wage": "$8.4K/w"
+    },
+    {
+      "date": "2026-08-31",
+      "player": "Dominic Hyam",
+      "direction": "out",
+      "club": "Rangers",
+      "fee": "2.6M",
+      "wage": ""
+    },
+    {
+      "date": "2026-08-31",
+      "player": "Bernt Klaverboer",
+      "direction": "in",
+      "club": "Burnley",
+      "fee": "6.2M",
+      "wage": "$15K/w"
+    },
+    {
+      "date": "2026-09-12",
+      "player": "Mo Faal",
+      "direction": "out",
+      "club": "Barracas Central",
+      "fee": "£1.35m",
+      "wage": ""
+    },
+    {
+      "date": "2026-11-08",
+      "player": "Lewis O'Brien",
+      "direction": "out",
+      "club": "Fulham",
+      "fee": "£5.9m",
+      "wage": ""
+    },
+    {
+      "date": "2026-12-29",
+      "player": "Thiago Pitarch",
+      "direction": "in",
+      "club": "Real Madrid",
+      "fee": "Not disclosed",
+      "wage": "$52K/w"
+    },
+    {
+      "date": "2027-01-02",
+      "player": "Kieffer Moore",
+      "direction": "out",
+      "club": "West Brom",
+      "fee": "£1.5m",
+      "wage": ""
+    },
+    {
+      "date": "2027-05-23",
+      "player": "A. James",
+      "direction": "out",
+      "club": "Free agent",
+      "fee": "Free (contract expired)",
+      "wage": ""
+    }
+  ],
+  "injuries": [
+    {
+      "date": "2026-12-19",
+      "player": "Brian Gutiérrez",
+      "description": "Shoulder, 4 days"
+    },
+    {
+      "date": "2026-05-02",
+      "player": "Arthur Okonkwo",
+      "description": "Tricep muscle — ongoing injury, sidelined for approximately 3 months as of late June 2026 (onset roughly late March 2026; exact date still unconfirmed, carried over from Season 1 rather than a new Season 2 injury)."
+    },
+    {
+      "date": "2026-09-23",
+      "player": "Milán Vitális",
+      "description": "Elbow, 5 days"
+    },
+    {
+      "date": "2027-02-03",
+      "player": "Elijah Dijkstra",
+      "description": "Broken toe, 3 months"
+    },
+    {
+      "date": "2027-02-27",
+      "player": "Brian Gutierrez",
+      "description": "Elbow, 5 days"
+    },
+    {
+      "date": "2027-05-15",
+      "player": "Y. Amrizi",
+      "description": "Torn Quad Muscle - 3 Months"
+    }
+  ],
+  "milestones": [
+    {
+      "date": "2027-03-03",
+      "description": "FA Cup Round of 16 — beat Brentford 3-0 away (Obi, Bobadilla, Veleten). Bernt Klaverboer, deputising for a rested Arthur Okonkwo, named Man of the Match for a clean sheet. Wrexham advance to the quarterfinals, will face Aston Villa.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "description": "Squad update — Vittorio Martini loaned to CD Castellon for 1 year, 55/45 transfer fee split with Wrexham receiving 55%."
+    },
+    {
+      "date": "2027-03-03",
+      "description": "Premier League MD29 — drew 0-0 at home with Liverpool. Backfilled this session from a gap discovered in the match log; no individual stats captured.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-13",
+      "description": "Premier League MD30 — drew 2-2 away at Tottenham. Backfilled this session from a gap discovered in the match log; individual scorers/lineup not captured.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-05-11",
+      "description": "Premier League MD36 — beat Ipswich Town 2-0 at home (rescheduled from 24 April to 11 May). Rio Ngumoha (56') and a substitute Chido Obi (90') scored, with Juan Cruz Vargas and Toni Fruk both picking up assists. Liberato Cacace was Man of the Match (8.0 rating).",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-05-08",
+      "description": "Premier League MD35 — drew 1-1 at home with Newcastle United. Chido Obi equalised in the 82nd minute after Ramsey had put Newcastle ahead in the 54th.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-05-08",
+      "description": "Squad update — Fabricio Sandoval (CAM/LW) and Lilian Faure (RM) promoted from the Youth Academy to the first team as Prospect squad role. Two new Youth Academy signings from the Netherlands: Jayden Van Vliet (17, LB, POT 74-90) and Huub Driessen (17, CB, POT 72-94). Contract/wage/market value not yet confirmed for the two new academy signings — only Development-plan attribute screens available so far.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-04-11",
+      "description": "Premier League MD32 — beat Aston Villa 4-0 away. Yacel Amrizi scored twice and assisted (9.2 rating), Toni Fruk and Damián Bobadilla also on the scoresheet, Rio Ngumoha with 2 assists. Score corrected during data entry from a submitted 0-0 draw that conflicted with the listed scorers and player stats.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-04-03",
+      "description": "FA Cup Quarter Final — beat Aston Villa 1-0 at home, Rio Ngumoha scoring the only goal (30'). Arthur Okonkwo named Man of the Match (7.1 rating) for a string of strong saves as Wrexham held on under late pressure. Wrexham advance to the semi-final.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-04-20",
+      "description": "FA Cup Final opponent confirmed: Manchester City (beat Liverpool in the other semi-final). The final at Wembley Stadium was rescheduled from Saturday 15 May to Wednesday 19 May 2027.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-03-20",
+      "description": "FA Cup Semi Final — beat Arsenal 2-0 at a neutral venue, Chido Obi (72') and Rio Ngumoha (81') on the scoresheet. Ngumoha named Man of the Match (8.2 rating) for the goal and an assist. Wrexham advance to the FA Cup Final.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-20",
+      "description": "Premier League MD31 — beat Bournemouth 2-1 away. Yacel Amrizi (41') and Rio Ngumoha (55') scored either side of an Evanilson reply for Bournemouth (57'). Amrizi (8.3 rating) and Ngumoha (7.5 rating, 1G 1A) both stood out.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-03-20",
+      "description": "Squad update — Nico Kopp loaned to FC Basel for 1 year, 60/40 transfer fee split with Wrexham receiving 40%.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-03-20",
+      "description": "Squad update — Guilherme Rosa cut from the Youth Academy, likely in preparation for additional youth signings within the 16-player academy roster limit.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-02-20",
+      "description": "Premier League MD27 — beat Nottingham Forest 2-1 at home. Yacel Amrizi opened the scoring, Rio Ngumoha won a penalty that Toni Fruk converted after Forest had briefly levelled through Igor Jesus. Liberato Cacace was Man of the Match with an assist.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-20",
+      "description": "Youth Academy Rush Tournament — drew 3-3 at home with Liverpool's academy (Lilian Faure 2G, Martin Leon 1G), advancing on a 2-0 penalty shootout win.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-10",
+      "description": "Premier League MD26 — beat Sunderland 2-0 away, Rio Ngumoha scoring both (68', 74') and taking Man of the Match. Wrexham move to 60 points, still top of the table.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-10",
+      "description": "FA Cup — beat Blackburn Rovers 3-0 away, a Yacel Amrizi hat-trick (25', 56', 71') earning him Man of the Match in a game controlled from start to finish.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-06",
+      "description": "Premier League MD25 — thrashed Wolves 5-0 away; Yacel Amrizi and Rio Ngumoha both scored twice, Brian Gutiérrez added the other. Leo Sauer was Man of the Match with 3 assists (8.7 rating). 14 shots to 1 — Keeyvon didn't want to call it a statement game, but a determined, angry Wrexham responded to the Carabao Cup exit by thoroughly outclassing Wolves.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-02-03",
+      "description": "Lost the Carabao Cup Semi Final Leg 2 at home to Chelsea 0-3 (Estevao, Palmer x2), with the tie level 4-4 on aggregate after winning Leg 1 4-1. Chelsea won 4-3 on penalties, eliminating Wrexham one game short of the final. Keeyvon was outcoached and took the blame with the press. Elijah Dijkstra suffered a broken toe, expected out roughly 3 months. Bournemouth beat Manchester United 6-4 on aggregate in the other semi-final.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-13",
+      "description": "Nico Kopp (GK), Jermaine Lord (LB/CB/LW — now goes by Jermaine rather than Jamie), and Vittorio Martini (CB) promoted from the Youth Academy to the first team. Signed six new Youth Academy prospects: Martin Bach (GK), Albert Bayer (GK), Victor Cardoso (RB), Guilherme Rosa (CDM), Lilian Faure (RM), Matthieu Brunel (ST).",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-01-09",
+      "description": "Squad update — Joenathan Amelia loaned to Real Betis for 2 years; Andrés Cuenca loaned to Ipswich Town for 6 months.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-01-06",
+      "description": "Beat Chelsea 1-0 at home (MD21); Yacel Amrizi scored from a Rio Ngumoha assist. Liberato Cacace named Man of the Match. Wrexham controlled possession (52% to 48%) for the first time in a long stretch under Jenkins and out-shot Chelsea 5-2 (2.0 xG to 0.3), though finishing in the box remains a work in progress.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-01-02",
+      "description": "Kieffer Moore transferred out to West Brom for £1.5m — last season's Player of the Year, moved on after being transfer-listed as squad talent level rose.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-01-02",
+      "description": "Lost 0-1 away at Brighton (MD20); Al Dawsari's 47th-minute strike settled it. First defeat since Manchester City on 12 December. Wrexham sit 3rd in the Premier League, 42 points from 20 games.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-29",
+      "description": "Won 2-1 away at Ipswich Town (MD19); Yacel Amrizi scored and assisted, Leo Sauer added a second after Keillor-Dunn had equalized for Ipswich. Amrizi named Man of the Match. Marco Soria made his senior debut off the bench in the 66th minute, rating 6.8.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-27",
+      "description": "Marco Soria (18, LW) and Emiliano Bianchi (17, CDM) promoted from the Youth Academy to the first team. Soria's final academy potential was 74-80 (OVR 67); Bianchi's was 72-76 (OVR 61).",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-12-25",
+      "description": "Beat West Ham 2-1 at home on Christmas Day (MD18); Yacel Amrizi and Chido Obi scored either side of half-time after Castellanos had put West Ham ahead early. Brian Gutiérrez, back from his shoulder knock, was named Man of the Match. The win moves Wrexham to 1st in the Premier League table, 39 points from 18 games.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-19",
+      "description": "Won 3-1 away at Brentford (MD17); Bobadilla, Obi, and a 90th-minute Sauer penalty saw off a Janelt reply. Brian Gutiérrez picked up a shoulder knock, expected out roughly 4 days.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-15",
+      "description": "Wrexham beat a full-strength Manchester City side 2-0 away in the Carabao Cup Quarter Final while fielding a youth-heavy XI, just 3 days after a 1-2 home league defeat to the same club — a statement result for the club. Chido Obi named Man of the Match (1 goal, penalty).",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-05-02",
+      "description": "Season 1 (2025-26) archived: journal.html -> journal/season-01.html, season.html -> season/season-01.html, season_log.json -> season_logs/season-01.json. Wrexham AFC finished 1st in the EFL Championship (P46 W36 D4 L6, GF111 GA47, GD+64, 112 pts), automatically promoted. Season 2 begins.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-05-02",
+      "description": "Arthur Okonkwo picked up a tricep muscle injury (~6 weeks), sidelining him early in Season 2 preparations. Mason Webber (17) is next in line in goal.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-05-02",
+      "description": "Danny Ward (32, GK) has submitted a transfer request and is unhappy despite dev being complete at OVR 71 — first squad-management decision of Season 2. Both Ward and Arthur Okonkwo flipped from 'not willing' to 'willing to negotiate new terms' in this review; Mason Webber (17) also now willing to negotiate.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-05-15",
+      "description": "Youth academy roster change — Dijkgraaf and Horne terminated their youth contracts, both wanted out and were not yet good enough for the senior squad. Anton Gassner released from the academy after believing he was good enough for the senior squad — no ultimatums. Added Lenny Kuhn (GK) to the academy."
+    },
+    {
+      "date": "2026-05-02",
+      "description": "Danny Ward (32, GK) placed on the transfer list by manager decision — Arthur Okonkwo is returning from injury and Mason Webber (17) is being prioritized for development, leaving Ward surplus to the goalkeeping plans."
+    },
+    {
+      "date": "2026-07-23",
+      "description": "Aaron James (20, CB/RB, academy prospect) has submitted a transfer request — contract length demands not met and his deal is down to just 1 month remaining. Needs a squad-management decision (renew, extend, or let him go)."
+    },
+    {
+      "date": "2026-06-04",
+      "description": "Squad update — Andres Gomez returns from his broken toe injury. Aaron James will not be offered a new contract and will leave as a free agent when his deal expires. The club will try to sign Issa Kabore permanently when his Man City loan expires, though affordability is uncertain. George Dobson transferred out to Besiktas JK for $2.55m. Signed academy goalkeeper (Germany), initially misreported as Lenny Kuhn, then as Finn Richter — real identity confirmed 2026-07-07 as Leo Bergmann."
+    },
+    {
+      "date": "2026-07-23",
+      "description": "Signed Chido Obi (18, ST) from the Manchester United academy — a striker prospect, contract accepted with no negotiation friction."
+    },
+    {
+      "date": "2026-07-23",
+      "description": "Issa Kabore returned to Manchester City at the end of his loan - the club decided not to pursue a permanent deal. Jay Rodriguez left as a free agent, joining Stade Brestois 29 on the pre-agreed pre-contract move flagged earlier in the summer. Harry Ashfield is back from his Cheltenham Town loan spell. Right-back depth is now thin behind Amelia and A. James."
+    },
+    {
+      "date": "2026-07-07",
+      "description": "Signed Jorthy Mokio (18, CDM/CM/LB) from Ajax for £8.7m and Toni Fruk (25, ST/CAM/CM) as a free agent. Fruk slots straight in as the squad's top-rated striker (OVR 79) as Kieffer Moore's decline continues."
+    },
+    {
+      "date": "2026-07-07",
+      "description": "Academy: signed 14-year-old French striker Mathieu Drouet (POT 80–94). Also corrected the identity of the German academy goalkeeper signed 2026-06-04 — previously misreported as Lenny Kuhn, then as Finn Richter — the real player is Leo Bergmann (16, POT 71–89)."
+    },
+    {
+      "date": "2026-07-15",
+      "description": "Alan Minda loaned out to Real Betis (2 years) and Bailey Cadamarteri loaned out to Boca Juniors (12 months). Both recallable early for an agreed fee."
+    },
+    {
+      "date": "2026-07-16",
+      "description": "José Luis Rodríguez sold to Al Qadsiah for $6,400,000. Transfer budget now stands at $4,936,320."
+    },
+    {
+      "date": "2026-07-17",
+      "description": "Santiago Ortega loaned out to Birmingham City for 12 months, recallable for an agreed fee."
+    },
+    {
+      "date": "2026-07-25",
+      "description": "Squad update — Sebastian Revan sold to NEOM SC ($2.0m), Conor Coady sold to RSC Anderlecht ($910k), and Ryan Hardie sold to Leicester City ($1.8m). Signed Jamal Belghazi (17, CDM/CM, being converted to CB) and Mario Barbieri (17, RB) as free agents."
+    },
+    {
+      "date": "2026-07-25",
+      "description": "Signed Rio Ngumoha (17, LM/LW) from Liverpool for $22.5m."
+    },
+    {
+      "date": "2026-07-28",
+      "description": "Elliot Lee sold to Preston North End ($1.0m)."
+    },
+    {
+      "date": "2026-07-25",
+      "description": "Ratings / potential reviewed; Roster change"
+    },
+    {
+      "date": "2026-08-15",
+      "description": "Squad update — signed Andrés Cuenca (19, CB) from Barcelona for $1.9m."
+    },
+    {
+      "date": "2026-08-15",
+      "description": "First Premier League match: beat Wolves 2-0 at home. First top-flight win in club history."
+    },
+    {
+      "date": "2026-08-16",
+      "description": "Harry Ashfield sold to Silkeborg IF for $580,000."
+    },
+    {
+      "date": "2026-08-15",
+      "description": "Paul Mullin sold to Caykur Rizespor ($740K)."
+    },
+    {
+      "date": "2026-08-15",
+      "description": "Leo Sauer signed from Athletic Bilbao ($22.1m), LW/LM."
+    },
+    {
+      "date": "2026-08-15",
+      "description": "George Thomason sold to Club Brugges ($4.1m)."
+    },
+    {
+      "date": "2026-08-15",
+      "description": "Roster change — Cacace made transition to RB. Next article should do a very deep dive, longer than normal piece based on that every move Wrexham have made this year so far has been with one thing in mind - get younger, get more raw talent. They have made serious investments into the young prodigal player from several world football publications, Jenkins is willing to make a gamble that some of these players turn out to be top class. These same publications have raved at how shrewd of a business man Jenkins has proved to be. Nearly every deal has been under market on buys, and he seems to get the most out of every transfer out. New Academy players from scouting in France and Germany: Stephane Bertrand, Jules Collin, Nico Kopp",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-07-27",
+      "description": "Squad update"
+    },
+    {
+      "date": "2026-08-24",
+      "description": "Ben Sheaf sold to Sunderland (£8.4m)."
+    },
+    {
+      "date": "2026-08-31",
+      "description": "Transfer window closes. Signed Carlos Macia (CM, 17, from Villarreal, £2.0m) and immediately loaned him to Swansea City for 12 months (70/30 wage split, Wrexham pays 30%). Signed GK Bernt Klaverboer (20, from Burnley, £6.2m) to provide senior cover behind Okonkwo. Sold captain Dominic Hyam to Rangers (£2.6m). Loaned academy GK Mason Webber to Samsunspor for 24 months (70/30 wage split). Window shuts with the club still net spenders across the summer — sustained investment in both first-team depth and academy development pathways is exactly the kind of long-term commitment that tells the Wrexham faithful this club is here to stay.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-09-12",
+      "description": "Wrexham suffer their first Premier League home defeat, 0-2 to Tottenham Hotspur (Kudus 42', 63'). It is the first home league defeat of Jenkins's Wrexham tenure — the club's only previous home loss at the Racecourse came in the Carabao Cup against Blackburn Rovers (27 Aug 2025).",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-09-12",
+      "description": "Mo Faal sold to Barracas Central (£1.35m)."
+    },
+    {
+      "date": "2026-10-04",
+      "description": "Squad update — Cacace signed a new 2-year contract, £44k/week with a £390k signing bonus."
+    },
+    {
+      "date": "2026-10-25",
+      "description": "Squad update — Mika Horn (GK, Germany) signed to the Youth Academy; Leo Bergmann and Seun Hak released from the academy."
+    },
+    {
+      "date": "2026-10-28",
+      "description": "Fixture reschedule — Manchester City (away) moved from 22 December 2026 to 15 December 2026."
+    },
+    {
+      "date": "2026-11-08",
+      "description": "Juan Cruz Vargas (CAM, 17) promoted from the Youth Academy to the first team. Jenkins: \"This kid has the potential to be special — I want him getting minutes with the first team now.\"",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-11-22",
+      "description": "Arthur Okonkwo returned from his tricep injury to start in goal against Arsenal (MD12), rating 6.1.",
+      "journal_entry": false
+    },
+    {
+      "date": "2026-11-28",
+      "description": "Beat Nottingham Forest 2-0 away; Rio Ngumoha and Juan Cruz Vargas on the scoresheet, Toni Fruk named Man of the Match."
+    },
+    {
+      "date": "2026-12-01",
+      "description": "Thrashed Sunderland 5-0 at home; Yacel Amrizi scored a hat-trick (plus an assist) and was named Man of the Match."
+    },
+    {
+      "date": "2026-12-06",
+      "description": "Scraped past Leeds United 2-1 away; Yacel Amrizi opened the scoring, Leeds' Joseph equalized late before substitute Juan Cruz Vargas won it in the 88th minute."
+    },
+    {
+      "date": "2026-12-12",
+      "description": "Lost 1-2 at home to Manchester City (MD16); Rio Ngumoha's 36th-minute equalizer wasn't enough as Reijnders scored a 90th-minute winner for City."
+    },
+    {
+      "date": "2026-12-15",
+      "description": "New Academy signings from scouting in France: Thierry Besse (RW, POT 80-94) and Nathan Salaun (ST, POT 81-87)."
+    },
+    {
+      "date": "2026-12-19",
+      "description": "Youth Academy Rush Tournament — swept Crystal Palace 3-1, Brentford 4-1, and Wolves 2-0 in a single-day event to win the tournament. Nico Kopp was Man of the Match in both the semi-final (9.8 rating) and the final (7.8 rating); Valentino Martini scored a hat-trick plus an assist in the semi-final.",
+      "journal_entry": true
+    },
+    {
+      "date": "2026-12-29",
+      "description": "Transfer window opened: Thiago Pitarch (19, CM/CDM/CAM, OVR 73) signed from Real Madrid for CM depth — fee not disclosed, $52K/w wage, 4y6m contract, Rotation squad role. Kieffer Moore transfer-listed — last season's Player of the Year, but now surplus as squad talent level has risen. Andrés Cuenca, Joenathan Amelia, and Marco Soria (newly promoted) loan-listed to get more first-team minutes."
+    },
+    {
+      "date": "2027-01-13",
+      "description": "Squad update — Marco Soria loaned to Al Ahli for 2 years (2027-01-13 to 2029-01-13), 60/40 transfer fee split with Wrexham receiving 40%. Emiliano Bianchi also loaned out short-term to FC Magdeburg."
+    },
+    {
+      "date": "2027-01-24",
+      "description": "Squad update — Jermaine Lord loaned to AZ, 60/40 transfer fee split with Wrexham receiving 40%."
+    },
+    {
+      "date": "2027-01-30",
+      "description": "Premier League MD24 — thrashed bottom-of-the-table Sheffield United 4-0 at home, avenging the MD2 1-1 draw. Chido Obi came off the bench for a brace; Juan Cruz Vargas produced two assists and Man of the Match.",
+      "journal_entry": true
+    },
+    {
+      "date": "2027-04-17",
+      "description": "Keeyvon Jenkins' 100th match in charge of Wrexham (per broadcast), a 0-1 home defeat to Crystal Palace."
+    },
+    {
+      "date": "2027-05-01",
+      "description": "Premier League MD34 — 2-3 away defeat at Manchester United; Amad's brace either side of Chido Obi and Juan Cruz Vargas late strikes proved decisive. Not the side's best performance, but plenty of the season still to play."
+    },
+    {
+      "date": "2027-05-15",
+      "description": "FA Cup won at Wembley — Wrexham beat Manchester City 2-0 in the final (Fruk 2)."
+    },
+    {
+      "date": "2027-05-15",
+      "description": "Beat Manchester City 3-2 away in the Premier League title race, moving into a strong position with one game remaining. Gómez scored twice and was Man of the Match; Amrizi went off with a torn quad muscle (3 months) in the 9th minute."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Squad update — Fabricio Sandoval loaned to Hull City for 2 years."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Squad update — Matthieu Brunel (ST) promoted from the Youth Academy to the first team as Prospect squad role."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Squad update — two new Youth Academy signings from Norway: Knut Inge Bakke (17, RM, POT 69-94) and Even Jensen (17, LB/RB, POT 69-94). Status/Financial (contract, wage, market value) not yet confirmed for either — only Academy Development-plan attribute screens available so far."
+    },
+    {
+      "date": "2027-05-15",
+      "description": "Premier League title race — Wrexham's 3-2 win at Manchester City leaves both clubs level on 81 points with one match remaining. Wrexham lead the table on goal difference (+53 to City's +39), but the title is not yet decided: a Manchester City win combined with a Wrexham defeat on the final day would still hand City the title on points. Wrexham have already secured the FA Cup, their first major trophy, on the same day."
+    },
+    {
+      "date": "2027-05-20",
+      "description": "Squad update — new Youth Academy signing from Norway: Avram Lien (14, RB/CB/LB/RW, POT 83-94). Status/Financial (contract, wage, market value) not yet confirmed — only Academy Development-plan attribute screens available so far."
+    },
+    {
+      "date": "2027-05-23",
+      "description": "WREXHAM WIN THE PREMIER LEAGUE — a maiden top-flight title, completing the domestic double with the FA Cup won eight days earlier. Beat Leeds United 2-0 at home (Bobadilla, Obi) on the final day to finish top with 84 points, two clear of runners-up Manchester City. First-ever Premier League title in the club's history."
+    },
+    {
+      "date": "2027-05-23",
+      "description": "Matthieu Brunel (ST) and academy winger Stephane Bertrand made their senior debuts together, coming on in the 69th minute of the title-winning win over Leeds United. Ayden Heaven was sent off in the 68th minute; Wrexham held the clean sheet a man down for the final 22 minutes."
+    },
+    {
+      "date": "2027-05-23",
+      "description": "Aaron James (CB/RB) left the club as a free agent after his contract expired -- the club had already decided not to renew following his transfer request earlier in the season."
+    }
+  ],
+  "fixtures": [
+    {
+      "date": "2026-08-15",
+      "opponent": "Wolves",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-08-22",
+      "opponent": "Sheffield United",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-08-29",
+      "opponent": "Bournemouth",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-09-12",
+      "opponent": "Tottenham",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-09-19",
+      "opponent": "Chelsea",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-09-27",
+      "opponent": "Brighton",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-04",
+      "opponent": "Newcastle",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-17",
+      "opponent": "Manchester United",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-25",
+      "opponent": "Crystal Palace",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-10-31",
+      "opponent": "Aston Villa",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-11-08",
+      "opponent": "Liverpool",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-11-22",
+      "opponent": "Arsenal",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-11-28",
+      "opponent": "Nottingham Forest",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-01",
+      "opponent": "Sunderland",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-06",
+      "opponent": "Leeds United",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-12",
+      "opponent": "Manchester City",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-19",
+      "opponent": "Brentford",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-25",
+      "opponent": "West Ham",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2026-12-29",
+      "opponent": "Ipswich Town",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-02",
+      "opponent": "Brighton",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-06",
+      "opponent": "Chelsea",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-17",
+      "opponent": "West Ham",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-24",
+      "opponent": "Brentford",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-01-30",
+      "opponent": "Sheffield United",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-06",
+      "opponent": "Wolves",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-10",
+      "opponent": "Sunderland",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-20",
+      "opponent": "Nottingham Forest",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-02-27",
+      "opponent": "Arsenal",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-03-20",
+      "opponent": "Bournemouth",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-04-11",
+      "opponent": "Aston Villa",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-04-17",
+      "opponent": "Crystal Palace",
+      "home": true,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-05-01",
+      "opponent": "Manchester United",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-05-15",
+      "opponent": "Manchester City",
+      "home": false,
+      "competition": "Premier League"
+    },
+    {
+      "date": "2027-05-23",
+      "opponent": "Leeds United",
+      "home": true,
+      "competition": "Premier League"
+    }
+  ]
+}
