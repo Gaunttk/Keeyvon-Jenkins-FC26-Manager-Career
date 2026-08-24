@@ -164,16 +164,16 @@ const SQUAD_DATA = {
         "ST"
       ],
       "group": "Forwards",
-      "age": 20,
-      "ovr": 67,
+      "age": 22,
+      "ovr": 71,
       "height": "6'0\"",
       "foot": "Right",
-      "squadRole": "Rotation",
+      "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
       "loan": {
         "club": "Boca Juniors",
-        "back": "15 Jul 2027"
+        "back": "01 Jul 2027"
       },
       "devStatus": null,
       "image": "assets/photos/bailey_cadamarteri.png",
@@ -397,16 +397,16 @@ const SQUAD_DATA = {
         "CAM"
       ],
       "group": "Forwards",
-      "age": 22,
-      "ovr": 72,
+      "age": 24,
+      "ovr": 75,
       "height": "5'7\"",
       "foot": "Right",
-      "squadRole": "Important",
+      "squadRole": "Rotation",
       "potential": null,
       "captain": false,
       "loan": {
         "club": "Real Betis",
-        "back": "15 Jul 2028"
+        "back": "01 Jul 2028"
       },
       "devStatus": null,
       "image": "assets/photos/alan_minda.png",
@@ -1035,8 +1035,8 @@ const SQUAD_DATA = {
   },
   "glance": {
     "squadSize": 38,
-    "avgAge": 20.4,
-    "avgOvr": 71.1,
+    "avgAge": 20.5,
+    "avgOvr": 71.3,
     "highestOvr": "Brian Gutiérrez",
     "highestOvrValue": 79,
     "youngest": "Juan Cruz Vargas",
