@@ -110,26 +110,6 @@ const SQUAD_DATA = {
       }
     },
     {
-      "name": "Aaron James",
-      "slug": "aaron-james",
-      "positions": [
-        "CB",
-        "RB"
-      ],
-      "group": "Defenders",
-      "age": 20,
-      "ovr": 56,
-      "height": "6'0\"",
-      "foot": "Right",
-      "squadRole": "Prospect",
-      "potential": null,
-      "captain": false,
-      "loan": null,
-      "devStatus": null,
-      "image": null,
-      "season": null
-    },
-    {
       "name": "Joenathan Amelia",
       "slug": "joenathan-amelia",
       "positions": [
@@ -1034,9 +1014,9 @@ const SQUAD_DATA = {
     }
   },
   "glance": {
-    "squadSize": 38,
+    "squadSize": 37,
     "avgAge": 20.5,
-    "avgOvr": 71.3,
+    "avgOvr": 71.7,
     "highestOvr": "Brian Gutiérrez",
     "highestOvrValue": 79,
     "youngest": "Juan Cruz Vargas",
