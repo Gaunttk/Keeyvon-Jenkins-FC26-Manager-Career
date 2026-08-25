@@ -181,8 +181,8 @@ All HTML must also work as local `file://` files (no server needed). The `season
 - Gray filled diamond = Regular PlayStyle
 - Outlined/empty diamond = unknown; do not include
 - Players with no PlayStyles tab: set to `None`
-- Players confirmed no PlayStyles tab: L. Cacace, S. Revan, T. O'Connor, D. Scarr, L. Brunt, A. James, B. Cadamarteri
-- The PlayStyles tab only exists for a player at all if they have at least one PlayStyle (confirmed 2026-08-25) — not every player gets it, which is why a blank `PlayStyles` cell is ambiguous: it could mean "tab not screenshotted yet" or "player has no PlayStyles, tab doesn't exist." Don't infer which from the blank alone — the two need different fixes (get the screenshot vs. set `None`) so a blank still needs a session where that player's Attributes tabs are actually opened once to tell them apart, then it's confirmed for good.
+- Players confirmed no PlayStyles tab: L. Cacace, S. Revan, T. O'Connor, D. Scarr, L. Brunt, A. James, B. Cadamarteri, J. Amelia, Y. Amrizi, B. Gutiérrez, M. Vitális, V. Veleten, C. Obi, M. Barbieri, A. Heaven, E. Dijkstra, C. Macia, T. Pitarch, J. Collin, M. Horn, N. Salaun
+- The PlayStyles tab only exists for a player at all if they have at least one PlayStyle (confirmed 2026-08-25) — not every player gets it, which is why a blank `PlayStyles` cell is ambiguous: it could mean "tab not screenshotted yet" or "player has no PlayStyles, tab doesn't exist." Don't infer which from the blank alone. **Default assumption going forward: treat a genuinely blank `PlayStyles` cell (nothing recorded at all) as no tab and set it to `None`** rather than carrying it as an open item across sessions — this was flagged repeatedly and confirmed by the user 2026-08-25 as the standing rule, not a one-off. This does NOT apply to a player who already has at least one confirmed PlayStyle on file with more slots possibly unrevealed (e.g. Notes saying "N further PlayStyle slots not yet revealed") — that player has a real tab, just an incomplete read of it, and stays open for a follow-up screenshot.
 
 **Roles (col 50):** Count of `+` and `++` symbols across all role sub-tabs combined.
 
