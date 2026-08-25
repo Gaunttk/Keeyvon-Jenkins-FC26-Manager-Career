@@ -4,7 +4,7 @@
    Squad landing page (docs/roster.html + docs/assets/squad.js).
    Re-run after any wrexham_squad.csv change or player_stats.js refresh. */
 const SQUAD_DATA = {
-  "season": "2026/27",
+  "season": "2027/28",
   "competition": "Premier League",
   "players": [
     {
@@ -987,19 +987,17 @@ const SQUAD_DATA = {
       }
     },
     {
-      "name": "Yanis Callens",
-      "slug": "yanis-callens",
+      "name": "Musa Tine",
+      "slug": "musa-tine",
       "positions": [
-        "CAM",
-        "CM",
-        "CDM"
+        "ST"
       ],
-      "group": "Midfielders",
-      "age": 20,
-      "ovr": 78,
-      "height": "5'7\"",
-      "foot": "Left",
-      "squadRole": "Important",
+      "group": "Forwards",
+      "age": 17,
+      "ovr": 68,
+      "height": "6'2\"",
+      "foot": "Right",
+      "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
       "loan": null,
@@ -1039,8 +1037,8 @@ const SQUAD_DATA = {
   },
   "glance": {
     "squadSize": 38,
-    "avgAge": 20.7,
-    "avgOvr": 72.3,
+    "avgAge": 20.6,
+    "avgOvr": 72.1,
     "highestOvr": "Toni Fruk",
     "highestOvrValue": 81,
     "youngest": "Juan Cruz Vargas",

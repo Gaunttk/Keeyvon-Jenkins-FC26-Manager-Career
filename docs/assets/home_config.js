@@ -65,7 +65,7 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-08-24-meredith-callens-signing', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
+    { articleId: '2027-08-25-meredith-tine-signing', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
     { articleId: '2027-05-23-holt-title-confirmed', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' },
     { articleId: '2027-05-15-hargreaves-first-trophy', image: 'assets/photos/toni_fruk.png', imageAlt: 'Toni Fruk' }
   ],

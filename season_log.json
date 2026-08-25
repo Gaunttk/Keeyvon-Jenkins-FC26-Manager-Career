@@ -9,11 +9,25 @@
   },
   "matches": [],
   "transfers": [
-    { "date": "2027-08-24", "player": "Y. Callens", "direction": "in", "club": "Free Agent", "fee": "£0 (Free Transfer)", "wage": "$54k/w" }
+    {
+      "date": "2027-08-25",
+      "player": "M. Tine",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "£0 (Free Transfer)",
+      "wage": "$17k/w"
+    }
   ],
   "injuries": [],
   "milestones": [
-    { "date": "2027-08-24", "description": "Wrexham AFC sign Belgian CAM Yanis Callens (20) on a free transfer, agreeing a 4-year deal worth $54,000/week. The 78-rated playmaker arrives with no fee, only a $470,000 signing bonus, adding depth and quality behind the front line as the club begins its first full season in the Premier League." }
+    {
+      "date": "2027-08-25",
+      "description": "Wrexham AFC sign Gabonese striker Musa Tine (17) as a free agent, agreeing a 4-year deal worth $17,000/week plus a $175,000 signing bonus. The 68-rated forward gives the club a genuine young No. 9 option behind Obi while Yacel Amrizi continues his recovery from injury."
+    },
+    {
+      "date": "2027-08-25",
+      "description": "FA Community Shield final confirmed: Wrexham AFC (Premier League champions) vs Manchester City (FA Cup holders), Wembley Stadium, Saturday 7 August 2027, kickoff 5:00 PM — the club's first-ever Community Shield appearance."
+    }
   ],
   "fixtures": []
 }

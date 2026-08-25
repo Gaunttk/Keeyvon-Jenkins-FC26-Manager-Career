@@ -102,8 +102,8 @@ const MEDIA_INDEX = {
  "articles": {
   "2027-08-24-meredith-callens-signing": {
    "id": "2027-08-24-meredith-callens-signing",
-   "headline": "No Fee, No Fuss: Wrexham Add Belgian Playmaker Callens on a Free",
-   "dek": "Yanis Callens arrives from nowhere in particular — out of contract, twenty years old, and already wearing the number 35 — as the reigning champions quietly start filling in the gaps a title-winning squad doesn't advertise.",
+   "headline": "Deal Collapses: Wrexham Miss Out on Callens, Move Fast on a Different Kind of Bet",
+   "dek": "A free-transfer move for Belgian playmaker Yanis Callens fell apart in its final stretch when a rival matched Wrexham's terms and won on wages — and within a day, the champions had pivoted to a very different kind of signing entirely.",
    "date": "2027-08-24",
    "date_label": "Aug 24, 2027",
    "author_id": "owen-meredith",
@@ -116,7 +116,6 @@ const MEDIA_INDEX = {
    "season": "2027/28",
    "tags": [
     "transfer-window",
-    "free-transfer",
     "premier-league",
     "pre-season"
    ],
@@ -2105,9 +2104,36 @@ const MEDIA_INDEX = {
    "image": null,
    "image_alt": null,
    "url": "journal.html#entry-transfers"
+  },
+  "2027-08-25-meredith-tine-signing": {
+   "id": "2027-08-25-meredith-tine-signing",
+   "headline": "From a Documentary Shoot to a Four-Year Deal: Wrexham Sign Gabon Teenager Musa Tine",
+   "dek": "A day after missing out on Yanis Callens, Wrexham moved on a seventeen-year-old striker discovered almost by accident — no academy pedigree, no scouting report, just two weeks of training that convinced a football club to bet on him anyway.",
+   "date": "2027-08-25",
+   "date_label": "Aug 25, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Transfer Window",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2027/28",
+   "tags": [
+    "transfer-window",
+    "free-transfer",
+    "premier-league",
+    "pre-season",
+    "academy"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-25-meredith-tine-signing"
   }
  },
  "recent_ids": [
+  "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",
   "entry-001",
   "2027-05-23-pl-leeds-united-home",
