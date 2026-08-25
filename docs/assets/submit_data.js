@@ -2971,7 +2971,7 @@ var ROSTER_ATTR_DATA = {
     "Balance": "66",
     "Jumping": "63",
     "Sprint_Speed": "79",
-    "Stamina": "",
+    "Stamina": "68",
     "Strength": "62",
     "Aggression": "65",
     "Att_Position": "50",
@@ -3026,7 +3026,7 @@ var ROSTER_ATTR_DATA = {
     "Balance": "54",
     "Jumping": "64",
     "Sprint_Speed": "63",
-    "Stamina": "",
+    "Stamina": "61",
     "Strength": "76",
     "Aggression": "58",
     "Att_Position": "38",
@@ -3108,11 +3108,11 @@ var ROSTER_ATTR_DATA = {
     "Skill_Moves": "3",
     "Weak_Foot": "2",
     "PlayStyles": "Dead Ball+, Technical+",
-    "Roles": "",
+    "Roles": "2",
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Balanced",
-    "Notes": "Norway. Dev Balanced 65→66 ETA 33w. RM: 2 roles flagged with a + per Summary tab (Roles sub-tab detail not screenshotted this session). PlayStyles: Dead Ball+, Technical+; 2 further PlayStyle slots not yet revealed. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
+    "Notes": "Norway. Dev Balanced 65→66 ETA 33w. RM: Winger+/Wide Playmaker+/Wide Midfielder/Inside Forward. PlayStyles: Dead Ball+, Technical+; 2 further PlayStyle slots not yet revealed. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
   },
   "Even Jensen": {
     "Position": "LB",

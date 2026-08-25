@@ -35,7 +35,7 @@ When a session opens, silently load the context below. Do not summarize it back 
 | `docs/season/` | Frozen archives of past seasons' Match Log / Player Stats (`season-01.html`, ...) — see "Season Rollover" |
 | `scripts/sync_season_summary.py` | Regenerates the `SEASON_SUMMARY` block in `docs/index.html` from `season_log.json`. Run after any change to `season_log.json` |
 | `JOURNAL_STYLE_GUIDE.md` | HTML templates, Owen Meredith persona, and capture checklist for journal-writing sessions. Read on demand — not loaded automatically |
-| `scripts/check_roster_sync.py` | Cross-checks `docs/roster.html` (senior section against `wrexham_squad.csv`, academy section against `youth_academy.csv`) and `docs/academy.html` (against `youth_academy.csv`) — name/age/OVR/position/POT. Run after any squad or academy change to catch stale or missing cards |
+| `scripts/check_roster_sync.py` | Cross-checks `docs/roster.html`'s senior section against `wrexham_squad.csv` and `docs/academy.html` (the full 17-player academy roster) against `youth_academy.csv` — name/age/OVR/position/POT. `docs/roster.html` no longer carries a full academy section of its own (see "Academy Changes" below) so it isn't part of the academy check. Run after any squad or academy change to catch stale or missing cards |
 | `docs/submit.html` | Session Submit form — user fills this out on their phone/laptop instead of pushing 12-18 match screenshots; generates copy-pasteable text (season_log entries, player stats, attribute diffs) for the next Claude session. See "Session Submit Form" below |
 | `scripts/sync_submit_roster.py` | Regenerates `docs/assets/submit_data.js` (roster names/positions, full attribute snapshot, remaining Premier League fixtures) that powers `docs/submit.html`'s dropdowns and Attribute Editor. Run after any `wrexham_squad.csv` / `youth_academy.csv` change, or after a Premier League match is added to `season_log.json` |
 | `scripts/sync_home_player_stats.py` | Regenerates `docs/assets/player_stats.js` (Apps/Goals/Assists/Avg Rating per senior player, plus a `last5` match-rating sequence for the sparkline) by parsing `docs/season.html`'s "Player Season Stats — Senior Matches" table and `season_log.json`'s `player_ratings` field on each match — there is no other source for either. Powers the homepage Squad Spotlight's featured-player and secondary-card Goals/Assists/Avg Rating and sparkline (Next Generation/academy never shows this). Run after any match session that updates `docs/season.html`'s Player Season Stats table or adds `player_ratings` to a match in `season_log.json` |
@@ -92,6 +92,8 @@ Always work on: `claude/wrexham-fc26-career-dx9xgx`
 **GK mapping (cols 12–17):** Pace=Speed, Shooting=Kicking, Passing=Positioning, Dribbling=Reflexes, Defending=Handling, Physical=Diving. GKs have blank cols 31–46 (outfield Technical).
 
 **Potential (col 53):** range string, e.g. `78-84`. Blank for players with no known potential range. This is a real column, not text embedded in `Notes` — never write `POT XX-XX` back into `Notes`. **When promoting a player from `youth_academy.csv` to `wrexham_squad.csv`, always carry this column's value across in the same session** — it has no other source and is easy to drop silently (it was buried in free-text `Notes` and got dropped on every promotion until 2026-07-22, when it was pulled out into this dedicated column).
+
+A blank Potential on a **senior** player is usually expected, not a gap: FC26 narrows a player's Potential range as they get fully scouted, and once a player is fully scouted the range stops being shown at all (confirmed 2026-08-25) — there's no screen left to screenshot. If a Potential value was ever captured for that player (at signing, promotion, or an earlier scouting stage), keep that last-known value in the CSV rather than clearing it; don't chase a re-screenshot for senior players who never had one captured.
 
 **Python write pattern (always use this):**
 ```python
@@ -180,6 +182,7 @@ All HTML must also work as local `file://` files (no server needed). The `season
 - Outlined/empty diamond = unknown; do not include
 - Players with no PlayStyles tab: set to `None`
 - Players confirmed no PlayStyles tab: L. Cacace, S. Revan, T. O'Connor, D. Scarr, L. Brunt, A. James, B. Cadamarteri
+- The PlayStyles tab only exists for a player at all if they have at least one PlayStyle (confirmed 2026-08-25) — not every player gets it, which is why a blank `PlayStyles` cell is ambiguous: it could mean "tab not screenshotted yet" or "player has no PlayStyles, tab doesn't exist." Don't infer which from the blank alone — the two need different fixes (get the screenshot vs. set `None`) so a blank still needs a session where that player's Attributes tabs are actually opened once to tell them apart, then it's confirmed for good.
 
 **Roles (col 50):** Count of `+` and `++` symbols across all role sub-tabs combined.
 
@@ -209,15 +212,17 @@ A departed player should not be removed from `wrexham_squad.csv` until their tra
 
 ### Academy Changes — Keep Pages in Sync
 
-`youth_academy.csv` is duplicated into **two** HTML pages, not one: the dedicated `docs/academy.html` (full cards with bio detail) and a condensed card set embedded in `docs/roster.html` under `id="sec-academy"` (grouped into GK/DEF/MID/FWD `dc-group` sections, same card markup minus the `<details class="acad-bio">` block). It is easy to update `academy.html` from a screenshot and forget that `roster.html` carries its own separate copy of the same cards — this has caused real drift (roster.html academy section going stale for months while `academy.html` stayed current).
+`docs/academy.html` is the one full academy roster (all players, full cards with bio detail), driven straight from `youth_academy.csv`. `docs/roster.html` no longer carries a duplicate copy — its `academy-preview-grid` is a small, editorial 4-player preview (`home_config.js`'s `academy.featured`/`academy.others`, the same picks the homepage Spotlight uses), rendered client-side by `docs/assets/squad.js` from `docs/assets/squad_data.js`. (Prior to the Phase 3B Squad-page fix this file described a second, full 17-card academy section hand-embedded in `roster.html` under `id="sec-academy"` — that duplication was removed; don't recreate it.) So a roster change only needs a `roster.html` edit when the player involved is one of those 4 featured picks — see "Squad Changes" above's `home_config.js` line.
 
 Whenever `youth_academy.csv` changes (new prospect, attribute refresh, POT/dev-plan update, promotion, position change), update **all** of the following in the same session:
 
 - `youth_academy.csv` — add/remove/update the row
 - `docs/academy.html` — add/remove/update the full card (+ bio for new signings, if known)
-- `docs/roster.html`'s academy section — add/remove/update the matching condensed card in the correct position group (GK/DEF/MID/FWD). A position change (e.g. a converted CAM) means moving the card to a different `dc-group`, not just editing the badge text in place.
-- If a player is promoted to the first team, move their row from `youth_academy.csv` to `wrexham_squad.csv` and follow "Squad Changes — Keep All Pages in Sync" above; remove their academy card from both `academy.html` and `roster.html`.
-- Run `python3 scripts/check_roster_sync.py` afterward — it now checks name/age/OVR/position/POT for the academy section of both `roster.html` and `academy.html` against `youth_academy.csv`, not just the senior roster.
+- `docs/assets/home_config.js`'s `academy.featured`/`academy.others` — only if the player changed is one of the 4 currently featured there (mirrors "Squad Changes"' Squad Spotlight rule); this is what keeps `roster.html`'s academy preview in sync, since it's rendered from this data, not hand-edited.
+- If a player is promoted to the first team, move their row from `youth_academy.csv` to `wrexham_squad.csv` and follow "Squad Changes — Keep All Pages in Sync" above; remove their academy card from `academy.html`, and from `home_config.js`'s academy block if they were featured there.
+- Run `python3 scripts/check_roster_sync.py` afterward — it checks name/age/OVR/position/POT for `academy.html` against `youth_academy.csv`.
+
+**Contract/Wage/Market Value (cols 8–10) are expected blank for every academy player** (confirmed 2026-08-25) — FC26 doesn't show a Status/Financial screen for a prospect until they're signed into the senior team, so there's no screenshot to take. This isn't a gap to chase; it resolves itself automatically the session a player is promoted (see "Squad Changes" above).
 
 ---
 
@@ -247,7 +252,7 @@ Every session — match, squad update, transfer, academy change, or Media Centre
 
 - `docs/index.html` — `SEASON_SUMMARY` (via `sync_season_summary.py`) and homepage Squad Spotlight stats (via `sync_home_player_stats.py`) if a match was played; `docs/assets/pl_table.js` if a full-table screenshot came in
 - `docs/assets/home_config.js` — lead/supporting/writer article picks (see above), and the Squad Spotlight / Academy blocks if a spotlighted player's CSV facts (position, age, OVR, potential) changed or a spotlighted player departed
-- `docs/roster.html` — senior section (run `sync_squad_page.py` to regenerate `squad_data.js`, not a hand-edit) and the embedded academy section (hand-edited), if the squad or academy roster or attributes changed
+- `docs/roster.html` — senior section, run `sync_squad_page.py` to regenerate `squad_data.js`, not a hand-edit, if the squad changed. Its academy preview is likewise rendered from `home_config.js`'s `academy.featured`/`academy.others` — no hand-edit there either, just keep that config current per "Academy Changes" above
 - `docs/players/*.html` — every senior player's full dossier/attribute page; regenerated automatically as part of `sync_squad_page.py` (it chains `scripts/generate_player_pages.py`), so this is covered by the `docs/roster.html` step above and needs no separate action
 - `docs/depth_chart.html` — run `sync_squad_page.py` if the squad changed (also rendered from `squad_data.js`)
 - `docs/season.html` — Match Log, competition summary stats, record bar, and Player Season Stats table, if a match was played

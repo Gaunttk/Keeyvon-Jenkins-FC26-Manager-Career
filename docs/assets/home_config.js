@@ -92,7 +92,7 @@ const HOME_CONFIG = {
       image: 'assets/photos/yacel_amrizi.png'
     },
     others: [
-      { name: 'Toni Fruk', position: 'ST / CAM', age: 26, ovr: 81, image: 'assets/photos/toni_fruk.png' },
+      { name: 'Toni Fruk', position: 'ST / CAM / CM', age: 26, ovr: 81, image: 'assets/photos/toni_fruk.png' },
       { name: 'Rio Ngumoha', position: 'LM / LW', age: 18, ovr: 79, image: 'assets/photos/rio_ngumoha.png' },
       { name: 'Leo Sauer', position: 'LW / LM', age: 21, ovr: 80, image: 'assets/photos/leo_sauer.png' },
       { name: 'Arthur Okonkwo', position: 'GK', age: 25, ovr: 76, image: 'assets/photos/arthur_okonkwo.png' }
