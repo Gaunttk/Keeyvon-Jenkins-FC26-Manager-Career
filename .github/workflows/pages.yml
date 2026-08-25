@@ -1,11 +1,15 @@
 name: Deploy Pages
 
 on:
-  push:
-    branches:
-      - claude/wrexham-fc26-career-dx9xgx
-    paths:
-      - "docs/**"
+  # Auto-deploy-on-push temporarily disabled to avoid GitHub Actions billing
+  # after the account's included minutes were used up for this cycle.
+  # Re-enable the `push` trigger below once minutes reset (Sept 1, 2026),
+  # or run this workflow manually via workflow_dispatch in the meantime.
+  # push:
+  #   branches:
+  #     - claude/wrexham-fc26-career-dx9xgx
+  #   paths:
+  #     - "docs/**"
   workflow_dispatch:
 
 permissions:
