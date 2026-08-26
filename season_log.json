@@ -5,9 +5,43 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-08-24"
+    "last_updated": "2027-08-25"
   },
-  "matches": [],
+  "matches": [
+    {
+      "date": "2027-07-24",
+      "opponent": "Mallorca",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Round 1",
+      "notes": "Gómez 73', Tine 82' (sub). MOTM: M. Tine (7.5 rating, highest on the pitch). Macia started at CM. Tine subbed on at ST and scored the second goal. Cuenca subbed on at CB, Kaczmarek subbed on at GK (for Klaverboer, 56'). Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
+      "journal_entry": true,
+      "player_ratings": {
+        "R. Ngumoha": 7.1,
+        "M. Tine": 7.5,
+        "C. Obi": 6.0,
+        "A. Gómez": 7.0,
+        "L. Sauer": 6.9,
+        "J. Vargas": 6.3,
+        "T. Fruk": 6.7,
+        "T. Pitarch": 6.7,
+        "D. Bobadilla": 6.8,
+        "M. Vitális": 6.0,
+        "C. Macia": 7.2,
+        "M. Barbieri": 7.0,
+        "J. Mokio": 6.3,
+        "A. Cuenca": 6.0,
+        "C. Doyle": 6.9,
+        "J. Belghazi": 7.0,
+        "A. Heaven": 6.3,
+        "E. Dijkstra": 7.2,
+        "A. Kaczmarek": 6.9,
+        "B. Klaverboer": 6.6
+      }
+    }
+  ],
   "transfers": [
     {
       "date": "2027-08-25",
@@ -72,6 +106,30 @@
       "club": "Bristol City",
       "fee": "One-year Loan",
       "wage": ""
+    },
+    {
+      "date": "2027-07-12",
+      "player": "Santiago Ortega",
+      "direction": "out",
+      "club": "Watford",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-14",
+      "player": "Emiliano Bianchi",
+      "direction": "out",
+      "club": "Jagiellonia",
+      "fee": "Two-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-15",
+      "player": "Bailey Cadamarteri",
+      "direction": "out",
+      "club": "Fulham",
+      "fee": "Two-year Loan",
+      "wage": ""
     }
   ],
   "injuries": [],
@@ -91,6 +149,14 @@
     {
       "date": "2027-08-24",
       "description": "Wrexham AFC sign Polish goalkeeper Adrian Kaczmarek (17) from Club Atlético Vélez Sarsfield for $12.7M, agreeing a 4-year deal at $6,200/week. Tagged 'World Class Prospect Goalkeeper' by the club's scouting network (Potential 84-90), he slots in as rotation depth behind Okonkwo and Klaverboer."
+    },
+    {
+      "date": "2027-07-15",
+      "description": "Pre-season loan business continues: Santiago Ortega loaned to Watford (1yr, 12 Jul), Emiliano Bianchi loaned to Jagiellonia (2yr, 14 Jul), and Bailey Cadamarteri loaned to Fulham (2yr, 15 Jul, after an initial loan proposal was rejected)."
+    },
+    {
+      "date": "2027-05-26",
+      "description": "Premier League Team of the Season announced — no Wrexham player named, despite the club winning the title. XI: Donnarumma (GK); Mauro Jr, Gvardiol, Thiaw, Frimpong; B. Barcola, B. Fernandes, Traoré, Saka; Gyökeres, Haaland."
     }
   ],
   "fixtures": []
