@@ -96,7 +96,7 @@ if ('serviceWorker' in navigator) {
       <a class="home-section-link" href="#home-record-room">View full table &rarr;</a>
     </div>
     <table class="home-race-table">
-      <caption class="home-visually-hidden">Premier League, 2026/27 — top of the table</caption>
+      <caption class="home-visually-hidden">Premier League, 2027/28 — top of the table</caption>
       <thead>
         <tr><th scope="col">#</th><th scope="col">Club</th><th scope="col">P</th><th scope="col">GD</th><th scope="col">Pts</th></tr>
       </thead>
@@ -200,7 +200,7 @@ if ('serviceWorker' in navigator) {
     <p class="home-record-note">The homepage leads with context; the numbers live here and on the deeper pages.</p>
 
     <details class="home-details">
-      <summary>Premier League &mdash; full table, 2026/27</summary>
+      <summary>Premier League &mdash; full table, 2027/28</summary>
       <div class="home-table-scroll">
         <table class="standings-table">
           <thead>
@@ -212,8 +212,20 @@ if ('serviceWorker' in navigator) {
     </details>
 
     <details class="home-details">
-      <summary>Premier League &mdash; fixtures &amp; results, 2026/27</summary>
+      <summary>Premier League &mdash; fixtures &amp; results, 2027/28</summary>
       <div id="home-fixture-list" class="home-fixture-list"></div>
+    </details>
+
+    <details class="home-details">
+      <summary>Premier League &mdash; final table, 2026/27 (archived)</summary>
+      <div class="home-table-scroll">
+        <table class="standings-table">
+          <thead>
+            <tr><th>#</th><th>Club</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr>
+          </thead>
+          <tbody id="home-archive-table-body-2026-27"></tbody>
+        </table>
+      </div>
     </details>
 
     <details class="home-details">
@@ -265,7 +277,7 @@ if ('serviceWorker' in navigator) {
 // this page works as a local file:// (no fetch needed). Do not hand-edit —
 // regenerate with `python3 scripts/sync_season_summary.py` after any change
 // to season_log.json.
-const SEASON_SUMMARY = {"_meta":{"club":"Wrexham AFC","manager":"Keeyvon Jenkins","game":"FC26 Career Mode","season":"2027-28","competition":"Premier League","last_updated":"2027-08-24"},"stats":{"played":0,"league_p":0,"league_w":0,"league_d":0,"league_l":0,"league_pts":0,"cup_p":0,"cup_w":0,"cup_d":0,"cup_l":0,"fa_cup_p":0,"fa_cup_w":0,"fa_cup_d":0,"fa_cup_l":0},"form":[],"latest":null,"recent":[{"type":"transfer","date":"2027-08-24","player":"Y. Callens","direction":"in","club":"Free Agent"},{"type":"milestone","date":"2027-08-24","description":"Wrexham AFC sign Belgian CAM Yanis Callens (20) on a free transfer, agreeing a 4-year deal worth $54,000/week. The 78-rated playmaker arrives with no fee, only a $470,000 signing bonus, adding depth and quality behind the front line as the club begins its first full season in the Premier League."}],"schedule":[]};
+const SEASON_SUMMARY = {"_meta":{"club":"Wrexham AFC","manager":"Keeyvon Jenkins","game":"FC26 Career Mode","season":"2027-28","competition":"Premier League","last_updated":"2027-08-24"},"stats":{"played":0,"league_p":0,"league_w":0,"league_d":0,"league_l":0,"league_pts":0,"cup_p":0,"cup_w":0,"cup_d":0,"cup_l":0,"fa_cup_p":0,"fa_cup_w":0,"fa_cup_d":0,"fa_cup_l":0},"form":[],"latest":null,"recent":[{"type":"transfer","date":"2027-08-25","player":"M. Tine","direction":"in","club":"Free Agent"},{"type":"milestone","date":"2027-08-25","description":"Wrexham AFC sign Gabonese striker Musa Tine (17) as a free agent, agreeing a 4-year deal worth $17,000/week plus a $175,000 signing bonus. The 68-rated forward gives the club a genuine young No. 9 option behind Obi while Yacel Amrizi continues his recovery from injury."},{"type":"milestone","date":"2027-08-25","description":"FA Community Shield final confirmed: Wrexham AFC (Premier League champions) vs Manchester City (FA Cup holders), Wembley Stadium, Saturday 7 August 2027, kickoff 5:00 PM — the club's first-ever Community Shield appearance."},{"type":"milestone","date":"2027-08-24","description":"Wrexham AFC sign Polish goalkeeper Adrian Kaczmarek (17) from Club Atlético Vélez Sarsfield for $12.7M, agreeing a 4-year deal at $6,200/week. Tagged 'World Class Prospect Goalkeeper' by the club's scouting network (Potential 84-90), he slots in as rotation depth behind Okonkwo and Klaverboer."},{"type":"transfer","date":"2027-07-01","player":"Stephane Bertrand","direction":"out","club":"Carrarese Calcio"},{"type":"transfer","date":"2027-07-01","player":"Nathan Salaun","direction":"out","club":"Barnet"},{"type":"transfer","date":"2027-07-01","player":"Fabricio Sandoval","direction":"out","club":"Hull City"},{"type":"transfer","date":"2027-07-01","player":"Nico Kopp","direction":"out","club":"FC Basel 1893"},{"type":"transfer","date":"2027-07-01","player":"Vittorio Martini","direction":"out","club":"CD Castellon"},{"type":"transfer","date":"2027-07-01","player":"Matthieu Brunel","direction":"out","club":"West Brom"},{"type":"transfer","date":"2027-07-01","player":"Lilian Faure","direction":"out","club":"Bristol City"},{"type":"milestone","date":"2027-07-01","description":"Pre-season loan business: seven players sent out for 2027-28 development minutes, including academy graduates Stephane Bertrand (Carrarese Calcio, 1yr) and Nathan Salaun (Barnet, 2yr), both promoted to the senior squad and loaned out the same day. Also out: Fabricio Sandoval (Hull City, 2yr), Nico Kopp (FC Basel 1893, 1yr), Vittorio Martini (CD Castellon, 1yr), Matthieu Brunel (West Brom, 1yr), and Lilian Faure (Bristol City, 1yr)."}],"schedule":[]};
 </script>
 <script src="assets/media_index.js"></script>
 <script src="assets/pl_table.js"></script>

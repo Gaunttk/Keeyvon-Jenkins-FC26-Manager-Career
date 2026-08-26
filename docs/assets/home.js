@@ -532,6 +532,7 @@
   try { renderPulse(); } catch (e) { }
   try { renderTitleRace(); } catch (e) { }
   try { renderFullTable('home-full-table-body', PREMIER_LEAGUE_TABLE); } catch (e) { }
+  try { renderFullTable('home-archive-table-body-2026-27', PREMIER_LEAGUE_2026_27_FINAL); } catch (e) { }
   try { renderFullTable('home-archive-table-body', CHAMPIONSHIP_2025_26_FINAL); } catch (e) { }
   try { renderWriters(); } catch (e) { }
   try { renderSquad(); } catch (e) { }

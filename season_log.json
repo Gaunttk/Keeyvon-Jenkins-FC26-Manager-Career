@@ -9,11 +9,89 @@
   },
   "matches": [],
   "transfers": [
-    { "date": "2027-08-24", "player": "Y. Callens", "direction": "in", "club": "Free Agent", "fee": "£0 (Free Transfer)", "wage": "$54k/w" }
+    {
+      "date": "2027-08-25",
+      "player": "M. Tine",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "£0 (Free Transfer)",
+      "wage": "$17k/w"
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Stephane Bertrand",
+      "direction": "out",
+      "club": "Carrarese Calcio",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Nathan Salaun",
+      "direction": "out",
+      "club": "Barnet",
+      "fee": "Two-Year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Fabricio Sandoval",
+      "direction": "out",
+      "club": "Hull City",
+      "fee": "Two-Year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Nico Kopp",
+      "direction": "out",
+      "club": "FC Basel 1893",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Vittorio Martini",
+      "direction": "out",
+      "club": "CD Castellon",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Matthieu Brunel",
+      "direction": "out",
+      "club": "West Brom",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Lilian Faure",
+      "direction": "out",
+      "club": "Bristol City",
+      "fee": "One-year Loan",
+      "wage": ""
+    }
   ],
   "injuries": [],
   "milestones": [
-    { "date": "2027-08-24", "description": "Wrexham AFC sign Belgian CAM Yanis Callens (20) on a free transfer, agreeing a 4-year deal worth $54,000/week. The 78-rated playmaker arrives with no fee, only a $470,000 signing bonus, adding depth and quality behind the front line as the club begins its first full season in the Premier League." }
+    {
+      "date": "2027-08-25",
+      "description": "Wrexham AFC sign Gabonese striker Musa Tine (17) as a free agent, agreeing a 4-year deal worth $17,000/week plus a $175,000 signing bonus. The 68-rated forward gives the club a genuine young No. 9 option behind Obi while Yacel Amrizi continues his recovery from injury."
+    },
+    {
+      "date": "2027-08-25",
+      "description": "FA Community Shield final confirmed: Wrexham AFC (Premier League champions) vs Manchester City (FA Cup holders), Wembley Stadium, Saturday 7 August 2027, kickoff 5:00 PM — the club's first-ever Community Shield appearance."
+    },
+    {
+      "date": "2027-07-01",
+      "description": "Pre-season loan business: seven players sent out for 2027-28 development minutes, including academy graduates Stephane Bertrand (Carrarese Calcio, 1yr) and Nathan Salaun (Barnet, 2yr), both promoted to the senior squad and loaned out the same day. Also out: Fabricio Sandoval (Hull City, 2yr), Nico Kopp (FC Basel 1893, 1yr), Vittorio Martini (CD Castellon, 1yr), Matthieu Brunel (West Brom, 1yr), and Lilian Faure (Bristol City, 1yr)."
+    },
+    {
+      "date": "2027-08-24",
+      "description": "Wrexham AFC sign Polish goalkeeper Adrian Kaczmarek (17) from Club Atlético Vélez Sarsfield for $12.7M, agreeing a 4-year deal at $6,200/week. Tagged 'World Class Prospect Goalkeeper' by the club's scouting network (Potential 84-90), he slots in as rotation depth behind Okonkwo and Klaverboer."
+    }
   ],
   "fixtures": []
 }
