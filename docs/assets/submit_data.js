@@ -3,6 +3,11 @@
 // or after a Premier League match is added to season_log.json.
 var ROSTER_SENIOR = [
   {
+    "name": "Adrian Kaczmarek",
+    "pos": "GK",
+    "starter": false
+  },
+  {
     "name": "Andrés Gómez",
     "pos": "RM/RW",
     "starter": false
@@ -2319,12 +2324,12 @@ var ROSTER_ATTR_DATA = {
     "Volleys": "51",
     "Skill_Moves": "5",
     "Weak_Foot": "4",
-    "PlayStyles": "",
+    "PlayStyles": "Technical",
     "Roles": "2",
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Balanced",
-    "Notes": "France. Dev Balanced 60→61 ETA 20w. Signed from academy scouting in France, 2026-08-15. RW Winger+/Wide Playmaker/Inside Forward. One PlayStyle icon shown but name not legible in screenshot -- left unconfirmed. Promoted to the senior squad 2027-07-01 and immediately loaned to Carrarese Calcio for the 2027-28 season (1-year loan, back Jul 2028). Carries the \"Has Potential to be Special\" scouting tag. Contract/wage/market value not yet screenshotted since promotion."
+    "Notes": "France. Dev Balanced 60→61 ETA 20w. Signed from academy scouting in France, 2026-08-15. RW Winger+/Wide Playmaker/Inside Forward. One PlayStyle icon shown but name not legible in screenshot -- left unconfirmed. Promoted to the senior squad 2027-07-01 and immediately loaned to Carrarese Calcio for the 2027-28 season (1-year loan, back Jul 2028). Carries the \"Has Potential to be Special\" scouting tag. Contract/wage/market value not yet screenshotted since promotion. PlayStyles confirmed 2027-08-25: Technical (regular); remaining 3 slots show as Unknown per the game's own legend."
   },
   "Nathan Salaun": {
     "Position": "ST",
@@ -2380,6 +2385,61 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "",
     "Development_Plan": "Balanced",
     "Notes": "France. Dev Balanced 54→55 ETA 30w. Signed from academy scouting in France, 2026-12-15, alongside fellow countryman Thierry Besse. ST Target Forward/False 9/Poacher+/Advanced Forward. Confirmed no PlayStyles tab. Promoted to the senior squad 2027-07-01 and immediately loaned to Barnet for two seasons (back Jul 2029). Contract/wage/market value not yet screenshotted since promotion."
+  },
+  "Adrian Kaczmarek": {
+    "Position": "GK",
+    "Age": "17",
+    "Height": "6'5\"",
+    "Weight": "178lbs",
+    "Pref_Foot": "Left",
+    "Squad_Role": "Rotation",
+    "Contract_Length": "4y",
+    "Status": "An Exciting Prospect — Contract already accepted (signed from Club Atlético Vélez Sarsfield, $12.7M)",
+    "OVR": "72",
+    "Pace": "43",
+    "Shooting": "60",
+    "Passing": "70",
+    "Dribbling": "73",
+    "Defending": "70",
+    "Physical": "77",
+    "Potential": "84-90",
+    "Acceleration": "42",
+    "Agility": "42",
+    "Balance": "46",
+    "Jumping": "64",
+    "Sprint_Speed": "45",
+    "Stamina": "35",
+    "Strength": "60",
+    "Aggression": "31",
+    "Att_Position": "7",
+    "Composure": "46",
+    "Interceptions": "14",
+    "Reactions": "55",
+    "Vision": "46",
+    "Ball_Control": "",
+    "Crossing": "",
+    "Curve": "",
+    "Def_Aware": "",
+    "Dribbling_Tech": "",
+    "FK_Acc": "",
+    "Finishing": "",
+    "Heading_Acc": "",
+    "Long_Pass": "",
+    "Long_Shots": "",
+    "Penalties": "",
+    "Short_Pass": "",
+    "Shot_Power": "",
+    "Slide_Tackle": "",
+    "Stand_Tackle": "",
+    "Volleys": "",
+    "Skill_Moves": "2",
+    "Weak_Foot": "3",
+    "PlayStyles": "Far Reach, Deflector",
+    "Roles": "1",
+    "Wage": "6200",
+    "Market_Value": "6000000",
+    "Development_Plan": "Dynamic",
+    "Notes": "Poland. GK: Div 77/Han 70/Kic 60/Ref 73/Spd 43/Pos 70. Roles: Goalkeeper+/Ball-Playing Keeper/Sweeper Keeper. Signed from Club Atlético Vélez Sarsfield for $12.7M, 2027-08-2X. Contract already accepted, willing to negotiate new terms. Appearance clause: $62,000 per 10 appearances. Global Transfer Network scouting tag: World Class Prospect Goalkeeper."
   },
   "Nathaniel Matthews": {
     "Position": "RW",
@@ -2984,7 +3044,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Dynamic",
-    "Notes": "Netherlands. Dev Dynamic 63→64 ETA 28w. Signed to the Youth Academy, 2027-05-08. LB: Falseback/Attacking Wingback/Inverted Wingback/Fullback+/Wingback. PlayStyles: Dead Ball (regular), Whipped Pass (regular); 2 further PlayStyle slots not yet revealed. Physical/Mental attributes and Potential confirmed 2027-08-24. Status/Financial (contract, wage, market value) not shown — no Financial screen exists for academy players pre-promotion."
+    "Notes": "Netherlands. Dev Dynamic 63→64 ETA 28w. Signed to the Youth Academy, 2027-05-08. LB: Falseback/Attacking Wingback/Inverted Wingback/Fullback+/Wingback. PlayStyles confirmed complete 2027-08-25: Dead Ball (regular), Whipped Pass (regular); remaining 2 slots show as Unknown per the game's own legend. Physical/Mental attributes and Potential confirmed 2027-08-24. Status/Financial (contract, wage, market value) not shown — no Financial screen exists for academy players pre-promotion."
   },
   "Huub Driessen": {
     "Position": "CB",
@@ -3039,7 +3099,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Dynamic",
-    "Notes": "Netherlands. Dev Dynamic 61→62 ETA 21w. Signed to the Youth Academy, 2027-05-08. CB: Defender/Stopper/Wide Back+/Ball-Playing Defender+. PlayStyles: Intercept (regular); 3 further PlayStyle slots not yet revealed. Physical/Mental attributes and Potential confirmed 2027-08-24. Status/Financial (contract, wage, market value) not shown — no Financial screen exists for academy players pre-promotion."
+    "Notes": "Netherlands. Dev Dynamic 61→62 ETA 21w. Signed to the Youth Academy, 2027-05-08. CB: Defender/Stopper/Wide Back+/Ball-Playing Defender+. PlayStyles confirmed complete 2027-08-25: Intercept (regular); remaining 3 slots show as Unknown per the game's own legend. Physical/Mental attributes and Potential confirmed 2027-08-24. Status/Financial (contract, wage, market value) not shown — no Financial screen exists for academy players pre-promotion."
   },
   "Knut Inge Bakke": {
     "Position": "RM",
@@ -3089,12 +3149,12 @@ var ROSTER_ATTR_DATA = {
     "Volleys": "47",
     "Skill_Moves": "3",
     "Weak_Foot": "2",
-    "PlayStyles": "Dead Ball+, Technical+",
+    "PlayStyles": "Dead Ball, Technical",
     "Roles": "2",
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Balanced",
-    "Notes": "Norway. Dev Balanced 65→66 ETA 33w. RM: Winger+/Wide Playmaker+/Wide Midfielder/Inside Forward. PlayStyles: Dead Ball+, Technical+; 2 further PlayStyle slots not yet revealed. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
+    "Notes": "Norway. Dev Balanced 65→66 ETA 33w. RM: Winger+/Wide Playmaker+/Wide Midfielder/Inside Forward. PlayStyles confirmed 2027-08-25: Dead Ball (regular), Technical (regular); remaining 2 slots show as Unknown per the game's own legend, not simply unrevealed. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
   },
   "Even Jensen": {
     "Position": "LB",
@@ -3149,7 +3209,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Balanced",
-    "Notes": "Norway. Dev Balanced 63→64 ETA 25w. LB: Wingback+. RB: Wingback. PlayStyles: Whipped Pass (regular), Jockey (regular), Block (regular); 1 further PlayStyle slot not yet revealed. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
+    "Notes": "Norway. Dev Balanced 63→64 ETA 25w. LB: Wingback+. RB: Wingback. PlayStyles confirmed complete 2027-08-25: Whipped Pass (regular), Jockey (regular), Block (regular); remaining 1 slot shows as Unknown per the game's own legend. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
   },
   "Avram Lien": {
     "Position": "RB",
@@ -3204,7 +3264,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "",
     "Market_Value": "",
     "Development_Plan": "Dynamic",
-    "Notes": "Norway. Dev Dynamic 53→54 ETA 9w. RB: Attacking Wingback+. CB: Defender/Stopper/Wide Back/Ball-Playing Defender. LB: Falseback/Attacking Wingback (RW slots not screenshotted). PlayStyles: Relentless (regular); 3 further PlayStyle slots not yet revealed. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
+    "Notes": "Norway. Dev Dynamic 53→54 ETA 9w. RB: Attacking Wingback+. CB: Defender/Stopper/Wide Back/Ball-Playing Defender. LB: Falseback/Attacking Wingback (RW slots not screenshotted). PlayStyles confirmed complete 2027-08-25: Relentless (regular); remaining 3 slots show as Unknown per the game's own legend. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
   }
 };
 var PL_FIXTURES = [];

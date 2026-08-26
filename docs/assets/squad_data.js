@@ -4,7 +4,7 @@
    Squad landing page (docs/roster.html + docs/assets/squad.js).
    Re-run after any wrexham_squad.csv change or player_stats.js refresh. */
 const SQUAD_DATA = {
-  "season": "2026/27",
+  "season": "2027/28",
   "competition": "Premier League",
   "players": [
     {
@@ -711,7 +711,7 @@ const SQUAD_DATA = {
       "captain": false,
       "loan": {
         "club": "CD Castellon",
-        "back": "Mar 2028"
+        "back": "Jul 2028"
       },
       "devStatus": null,
       "image": "assets/photos/martini.png",
@@ -732,8 +732,8 @@ const SQUAD_DATA = {
       "potential": "77-83",
       "captain": false,
       "loan": {
-        "club": "FC Basel",
-        "back": "20 Mar 2028"
+        "club": "FC Basel 1893",
+        "back": "Jul 2028"
       },
       "devStatus": null,
       "image": "assets/photos/kopp.png",
@@ -755,7 +755,7 @@ const SQUAD_DATA = {
       "captain": false,
       "loan": {
         "club": "Hull City",
-        "back": "May 2029"
+        "back": "Jul 2029"
       },
       "devStatus": null,
       "image": "assets/photos/sandoval.png",
@@ -775,7 +775,10 @@ const SQUAD_DATA = {
       "squadRole": "Prospect",
       "potential": "76-84",
       "captain": false,
-      "loan": null,
+      "loan": {
+        "club": "Bristol City",
+        "back": "Jul 2028"
+      },
       "devStatus": null,
       "image": "assets/photos/faure.png",
       "season": null
@@ -794,6 +797,28 @@ const SQUAD_DATA = {
       "squadRole": "Prospect",
       "potential": "74-88",
       "captain": false,
+      "loan": {
+        "club": "West Brom",
+        "back": "Jul 2028"
+      },
+      "devStatus": null,
+      "image": null,
+      "season": null
+    },
+    {
+      "name": "Musa Tine",
+      "slug": "musa-tine",
+      "positions": [
+        "ST"
+      ],
+      "group": "Forwards",
+      "age": 17,
+      "ovr": 68,
+      "height": "6'2\"",
+      "foot": "Right",
+      "squadRole": "Sporadic",
+      "potential": null,
+      "captain": false,
       "loan": null,
       "devStatus": {
         "code": "SGP",
@@ -803,25 +828,67 @@ const SQUAD_DATA = {
       "season": null
     },
     {
-      "name": "Yanis Callens",
-      "slug": "yanis-callens",
+      "name": "Stephane Bertrand",
+      "slug": "stephane-bertrand",
       "positions": [
-        "CAM",
-        "CM",
-        "CDM"
+        "RW"
       ],
-      "group": "Midfielders",
-      "age": 20,
-      "ovr": 78,
-      "height": "5'7\"",
+      "group": "Forwards",
+      "age": 16,
+      "ovr": 60,
+      "height": "5'6\"",
+      "foot": "Right",
+      "squadRole": "Prospect",
+      "potential": "91-94",
+      "captain": false,
+      "loan": {
+        "club": "Carrarese Calcio",
+        "back": "Jul 2028"
+      },
+      "devStatus": null,
+      "image": null,
+      "season": null
+    },
+    {
+      "name": "Nathan Salaun",
+      "slug": "nathan-salaun",
+      "positions": [
+        "ST"
+      ],
+      "group": "Forwards",
+      "age": 16,
+      "ovr": 54,
+      "height": "5'10\"",
+      "foot": "Right",
+      "squadRole": "Prospect",
+      "potential": "81-87",
+      "captain": false,
+      "loan": {
+        "club": "Barnet",
+        "back": "Jul 2029"
+      },
+      "devStatus": null,
+      "image": null,
+      "season": null
+    },
+    {
+      "name": "Adrian Kaczmarek",
+      "slug": "adrian-kaczmarek",
+      "positions": [
+        "GK"
+      ],
+      "group": "Goalkeepers",
+      "age": 17,
+      "ovr": 72,
+      "height": "6'5\"",
       "foot": "Left",
-      "squadRole": "Important",
-      "potential": null,
+      "squadRole": "Rotation",
+      "potential": "84-90",
       "captain": false,
       "loan": null,
       "devStatus": {
-        "code": "SGP",
-        "label": "Showing Great Potential"
+        "code": "EP",
+        "label": "An Exciting Prospect"
       },
       "image": null,
       "season": null
@@ -848,14 +915,14 @@ const SQUAD_DATA = {
     "season": null
   },
   "glance": {
-    "squadSize": 38,
-    "avgAge": 20.7,
-    "avgOvr": 72.3,
+    "squadSize": 41,
+    "avgAge": 20.3,
+    "avgOvr": 71.3,
     "highestOvr": "Toni Fruk",
     "highestOvrValue": 81,
-    "youngest": "Juan Cruz Vargas",
-    "youngestAge": 17,
-    "onLoan": 13,
+    "youngest": "Stephane Bertrand",
+    "youngestAge": 16,
+    "onLoan": 17,
     "captain": "Callum Doyle"
   },
   "leaders": {
