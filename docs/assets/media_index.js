@@ -147,6 +147,30 @@ const MEDIA_INDEX = {
    "image_alt": null,
    "url": "journal.html#entry-001"
   },
+  "2027-07-24-meredith-mallorca-euro-cup": {
+   "id": "2027-07-24-meredith-mallorca-euro-cup",
+   "headline": "Snubbed by the Team of the Season, Wrexham Answer with a Trialist's Winner in Germany",
+   "dek": "A youth-tournament run-out turned into the Musa Tine show as Wrexham opened their European International Cup campaign with a 2-0 win over Mallorca — days after the champions were shut out of the Premier League's official Team of the Season.",
+   "date": "2027-07-24",
+   "date_label": "Jul 24, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "european-international-cup",
+    "pre-season",
+    "match-coverage"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-07-24-meredith-mallorca-euro-cup"
+  },
   "2027-05-23-pl-leeds-united-home": {
    "id": "2027-05-23-pl-leeds-united-home",
    "headline": "Champions: Wrexham Beat Leeds 2-0 to Win the Premier League",
@@ -2136,6 +2160,7 @@ const MEDIA_INDEX = {
   "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",
   "entry-001",
+  "2027-07-24-meredith-mallorca-euro-cup",
   "2027-05-23-pl-leeds-united-home",
   "entry-104",
   "2027-05-23-hargreaves-pl-champions",
