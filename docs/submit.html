@@ -251,7 +251,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Hawk Submit">
 <link rel="apple-touch-icon" href="assets/icons/hawk-submit-192.png">
-<script src="assets/submit_data.js?v=1787723801" charset="utf-8"></script>
+<script src="assets/submit_data.js?v=1787724130" charset="utf-8"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -943,10 +943,11 @@ function populateFixturePicker(competition) {
 
   fixtures.forEach(function(fx, i) {
     var d = new Date(fx.date + 'T12:00:00');
+    var prefix = fx.venue === 'home' ? 'vs ' : fx.venue === 'neutral' ? 'v ' : '@ ';
     var opt = document.createElement('option');
     opt.value = String(i);
     opt.textContent = d.toLocaleDateString('en-US', {month:'short', day:'numeric'}) + ' — ' +
-      (fx.home ? 'vs ' : '@ ') + fx.opponent;
+      prefix + fx.opponent + (fx.venue === 'neutral' ? ' (neutral)' : '');
     sel.appendChild(opt);
   });
 
@@ -960,7 +961,7 @@ function populateFixturePicker(competition) {
     document.getElementById('date').value = fx.date;
     document.getElementById('opponent').value = fx.opponent;
     document.getElementById('opponent-name-score').textContent = fx.opponent;
-    document.querySelector('input[name="venue"][value="' + (fx.home ? 'home' : 'away') + '"]').checked = true;
+    document.querySelector('input[name="venue"][value="' + fx.venue + '"]').checked = true;
   };
 }
 

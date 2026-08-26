@@ -79,7 +79,11 @@ def load_fixtures(path):
         (m['date'], m.get('competition')) for m in d.get('matches', [])
     }
     fixtures = [
-        {'date': fx['date'], 'opponent': fx['opponent'], 'home': fx['home'], 'competition': fx.get('competition', '')}
+        {
+            'date': fx['date'], 'opponent': fx['opponent'],
+            'venue': fx.get('venue') or ('home' if fx.get('home') else 'away'),
+            'competition': fx.get('competition', ''),
+        }
         for fx in d.get('fixtures', [])
         if (fx['date'], fx.get('competition')) not in played
     ]

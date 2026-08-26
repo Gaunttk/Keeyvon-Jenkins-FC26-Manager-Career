@@ -3269,9 +3269,255 @@ var ROSTER_ATTR_DATA = {
 };
 var SCHEDULED_FIXTURES = [
   {
+    "date": "2027-07-24",
+    "opponent": "Mallorca",
+    "venue": "neutral",
+    "competition": "European International Cup"
+  },
+  {
+    "date": "2027-07-27",
+    "opponent": "M'gladbach",
+    "venue": "neutral",
+    "competition": "European International Cup"
+  },
+  {
+    "date": "2027-07-31",
+    "opponent": "Espanyol",
+    "venue": "neutral",
+    "competition": "European International Cup"
+  },
+  {
     "date": "2027-08-07",
     "opponent": "Manchester City",
-    "home": false,
+    "venue": "neutral",
     "competition": "FA Community Shield"
+  },
+  {
+    "date": "2027-08-15",
+    "opponent": "Aston Villa",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-08-21",
+    "opponent": "Brentford",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-08-28",
+    "opponent": "Liverpool",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-09-11",
+    "opponent": "Sunderland",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-09-18",
+    "opponent": "Man City",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-09-25",
+    "opponent": "Newcastle Utd",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-10-02",
+    "opponent": "Brighton",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-10-16",
+    "opponent": "Leeds United",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-10-23",
+    "opponent": "Crystal Palace",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-10-30",
+    "opponent": "AFC Bournemouth",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-11-06",
+    "opponent": "Everton",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-11-20",
+    "opponent": "Fulham",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-11-27",
+    "opponent": "Burnley",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-11-30",
+    "opponent": "Arsenal",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-12-04",
+    "opponent": "Nott'm Forest",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-12-11",
+    "opponent": "Spurs",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-12-18",
+    "opponent": "West Ham",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-12-25",
+    "opponent": "Man Utd",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2027-12-28",
+    "opponent": "Chelsea",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-01-01",
+    "opponent": "Man Utd",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-01-04",
+    "opponent": "West Ham",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-01-15",
+    "opponent": "Spurs",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-01-23",
+    "opponent": "Nott'm Forest",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-01-29",
+    "opponent": "Arsenal",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-02-05",
+    "opponent": "Burnley",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-02-09",
+    "opponent": "Brentford",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-02-20",
+    "opponent": "Aston Villa",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-02-27",
+    "opponent": "AFC Bournemouth",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-03-01",
+    "opponent": "Crystal Palace",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-03-11",
+    "opponent": "Chelsea",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-03-18",
+    "opponent": "Newcastle Utd",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-04-08",
+    "opponent": "Man City",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-04-15",
+    "opponent": "Sunderland",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-04-22",
+    "opponent": "Liverpool",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-04-29",
+    "opponent": "Leeds United",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-05-07",
+    "opponent": "Brighton",
+    "venue": "home",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-05-14",
+    "opponent": "Fulham",
+    "venue": "away",
+    "competition": "Premier League"
+  },
+  {
+    "date": "2028-05-21",
+    "opponent": "Everton",
+    "venue": "home",
+    "competition": "Premier League"
   }
 ];
