@@ -876,7 +876,7 @@ const SQUAD_DATA = {
       "captain": false,
       "loan": {
         "club": "CD Castellon",
-        "back": "Mar 2028"
+        "back": "Jul 2028"
       },
       "devStatus": null,
       "image": "assets/photos/martini.png",
@@ -903,8 +903,8 @@ const SQUAD_DATA = {
       "potential": "77-83",
       "captain": false,
       "loan": {
-        "club": "FC Basel",
-        "back": "20 Mar 2028"
+        "club": "FC Basel 1893",
+        "back": "Jul 2028"
       },
       "devStatus": null,
       "image": "assets/photos/kopp.png",
@@ -933,7 +933,7 @@ const SQUAD_DATA = {
       "captain": false,
       "loan": {
         "club": "Hull City",
-        "back": "May 2029"
+        "back": "Jul 2029"
       },
       "devStatus": null,
       "image": "assets/photos/sandoval.png",
@@ -953,7 +953,10 @@ const SQUAD_DATA = {
       "squadRole": "Prospect",
       "potential": "76-84",
       "captain": false,
-      "loan": null,
+      "loan": {
+        "club": "Bristol City",
+        "back": "Jul 2028"
+      },
       "devStatus": null,
       "image": "assets/photos/faure.png",
       "season": null
@@ -972,11 +975,11 @@ const SQUAD_DATA = {
       "squadRole": "Prospect",
       "potential": "74-88",
       "captain": false,
-      "loan": null,
-      "devStatus": {
-        "code": "SGP",
-        "label": "Showing Great Potential"
+      "loan": {
+        "club": "West Brom",
+        "back": "Jul 2028"
       },
+      "devStatus": null,
       "image": null,
       "season": {
         "isGk": false,
@@ -1005,6 +1008,56 @@ const SQUAD_DATA = {
         "code": "SGP",
         "label": "Showing Great Potential"
       },
+      "image": null,
+      "season": null
+    },
+    {
+      "name": "Stephane Bertrand",
+      "slug": "stephane-bertrand",
+      "positions": [
+        "RW"
+      ],
+      "group": "Forwards",
+      "age": 16,
+      "ovr": 60,
+      "height": "5'6\"",
+      "foot": "Right",
+      "squadRole": "Prospect",
+      "potential": "91-94",
+      "captain": false,
+      "loan": {
+        "club": "Carrarese Calcio",
+        "back": "Jul 2028"
+      },
+      "devStatus": null,
+      "image": null,
+      "season": {
+        "isGk": false,
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "rating": 5.9
+      }
+    },
+    {
+      "name": "Nathan Salaun",
+      "slug": "nathan-salaun",
+      "positions": [
+        "ST"
+      ],
+      "group": "Forwards",
+      "age": 16,
+      "ovr": 54,
+      "height": "5'10\"",
+      "foot": "Right",
+      "squadRole": "Prospect",
+      "potential": "81-87",
+      "captain": false,
+      "loan": {
+        "club": "Barnet",
+        "back": "Jul 2029"
+      },
+      "devStatus": null,
       "image": null,
       "season": null
     }
@@ -1036,14 +1089,14 @@ const SQUAD_DATA = {
     }
   },
   "glance": {
-    "squadSize": 38,
-    "avgAge": 20.6,
-    "avgOvr": 72.1,
+    "squadSize": 40,
+    "avgAge": 20.4,
+    "avgOvr": 71.3,
     "highestOvr": "Toni Fruk",
     "highestOvrValue": 81,
-    "youngest": "Juan Cruz Vargas",
-    "youngestAge": 17,
-    "onLoan": 13,
+    "youngest": "Stephane Bertrand",
+    "youngestAge": 16,
+    "onLoan": 17,
     "captain": "Callum Doyle",
     "topScorer": "Yacel Amrizi",
     "topScorerGoals": 25,

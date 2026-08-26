@@ -16,6 +16,62 @@
       "club": "Free Agent",
       "fee": "£0 (Free Transfer)",
       "wage": "$17k/w"
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Stephane Bertrand",
+      "direction": "out",
+      "club": "Carrarese Calcio",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Nathan Salaun",
+      "direction": "out",
+      "club": "Barnet",
+      "fee": "Two-Year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Fabricio Sandoval",
+      "direction": "out",
+      "club": "Hull City",
+      "fee": "Two-Year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Nico Kopp",
+      "direction": "out",
+      "club": "FC Basel 1893",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Vittorio Martini",
+      "direction": "out",
+      "club": "CD Castellon",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Matthieu Brunel",
+      "direction": "out",
+      "club": "West Brom",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Lilian Faure",
+      "direction": "out",
+      "club": "Bristol City",
+      "fee": "One-year Loan",
+      "wage": ""
     }
   ],
   "injuries": [],
@@ -27,6 +83,10 @@
     {
       "date": "2027-08-25",
       "description": "FA Community Shield final confirmed: Wrexham AFC (Premier League champions) vs Manchester City (FA Cup holders), Wembley Stadium, Saturday 7 August 2027, kickoff 5:00 PM — the club's first-ever Community Shield appearance."
+    },
+    {
+      "date": "2027-07-01",
+      "description": "Pre-season loan business: seven players sent out for 2027-28 development minutes, including academy graduates Stephane Bertrand (Carrarese Calcio, 1yr) and Nathan Salaun (Barnet, 2yr), both promoted to the senior squad and loaned out the same day. Also out: Fabricio Sandoval (Hull City, 2yr), Nico Kopp (FC Basel 1893, 1yr), Vittorio Martini (CD Castellon, 1yr), Matthieu Brunel (West Brom, 1yr), and Lilian Faure (Bristol City, 1yr)."
     }
   ],
   "fixtures": []
