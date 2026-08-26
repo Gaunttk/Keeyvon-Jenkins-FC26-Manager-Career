@@ -72,6 +72,30 @@
       "club": "Bristol City",
       "fee": "One-year Loan",
       "wage": ""
+    },
+    {
+      "date": "2027-07-12",
+      "player": "Santiago Ortega",
+      "direction": "out",
+      "club": "Watford",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-12",
+      "player": "Emiliano Bianchi",
+      "direction": "out",
+      "club": "Jagiellonia",
+      "fee": "Two-Year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-12",
+      "player": "Bailey Cadamarteri",
+      "direction": "out",
+      "club": "Fulham",
+      "fee": "Two-Year Loan",
+      "wage": ""
     }
   ],
   "injuries": [],
@@ -91,7 +115,18 @@
     {
       "date": "2027-08-24",
       "description": "Wrexham AFC sign Polish goalkeeper Adrian Kaczmarek (17) from Club Atlético Vélez Sarsfield for $12.7M, agreeing a 4-year deal at $6,200/week. Tagged 'World Class Prospect Goalkeeper' by the club's scouting network (Potential 84-90), he slots in as rotation depth behind Okonkwo and Klaverboer."
+    },
+    {
+      "date": "2027-07-12",
+      "description": "Squad update: three more loan moves for the new season. Santiago Ortega to Watford (1yr), Emiliano Bianchi to Jagiellonia (2yr), and Bailey Cadamarteri to Fulham (2yr) — all three returning from their previous loan spells this summer before being sent straight back out."
     }
   ],
-  "fixtures": []
+  "fixtures": [
+    {
+      "date": "2027-08-07",
+      "opponent": "Manchester City",
+      "competition": "FA Community Shield",
+      "home": false
+    }
+  ]
 }

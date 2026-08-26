@@ -121,8 +121,8 @@ const SQUAD_DATA = {
       "potential": null,
       "captain": false,
       "loan": {
-        "club": "Boca Juniors",
-        "back": "01 Jul 2027"
+        "club": "Fulham",
+        "back": "Jul 2029"
       },
       "devStatus": null,
       "image": "assets/photos/bailey_cadamarteri.png",
@@ -247,8 +247,8 @@ const SQUAD_DATA = {
       "potential": null,
       "captain": false,
       "loan": {
-        "club": "Birmingham City",
-        "back": "01 Jul 2027"
+        "club": "Watford",
+        "back": "Jul 2028"
       },
       "devStatus": null,
       "image": null,
@@ -642,8 +642,8 @@ const SQUAD_DATA = {
       "potential": "72-76",
       "captain": false,
       "loan": {
-        "club": "FC Magdeburg",
-        "back": null
+        "club": "Jagiellonia",
+        "back": "Jul 2029"
       },
       "devStatus": null,
       "image": "assets/photos/bianchi.png",
