@@ -137,7 +137,7 @@ Writing a journal entry (the two-voice Hawk's Nest / Red Dragon Dispatch pair)? 
 A persistent fictional media ecosystem — six national/international journalists (plus Owen Meredith and Keeyvon Jenkins, who already lived in the journal) covering the club from different angles: Sky Sports history pieces, BBC breaking news, The Athletic tactical analysis, Gazzetta dello Sport European reaction, ESPN FC's American angle, and a skeptical Sky pundit. Lives at `docs/media/` (Journalist Profiles, Full Archive, and per-article pages), linked from every page's nav.
 
 - **Source of truth:** `media-personalities.json` (profiles) and `media-articles.json` (every article, including Owen's Dispatch and Keeyvon's Hawk's Nest entries). Never hand-edit generated HTML under `docs/media/` or the entry stream/TOC in `docs/journal.html` — run `python3 scripts/generate_media_pages.py` after any change to either JSON file.
-- **Cadence — milestones only.** The six national journalists do not write every session; they appear for genuine milestones (table position, cup progress, a notable transfer, a manager milestone, a moment that invites historical comparison). Most sessions add zero Media Centre articles — that's correct, not a gap. Owen's per-match Dispatch cadence is unchanged.
+- **Cadence — milestones only, except James McAllister.** Five of the six national journalists do not write every session; they appear for genuine milestones (table position, cup progress, a notable transfer, a manager milestone, a moment that invites historical comparison). Most sessions add zero articles from them — that's correct, not a gap. **James McAllister (The Athletic, Tactical Analyst) instead writes on a monthly cadence** — roughly every 4-5 matches of in-game time, whether or not there's a milestone — using `team_stats` accumulated in `season_log.json` since his last piece (possession/shots/pass accuracy/tackles trends) plus `player_ratings`/Apps/G/A from `docs/assets/player_stats.js`, per his "data and video review" voice in `media-personalities.json`. If a month has gone by (check his most recent article's date in `media-articles.json`) and no piece from him exists yet, that's a gap to fill, not an optional extra. Owen's per-match Dispatch cadence is unchanged.
 - **Read `MEDIA_STYLE_GUIDE.md` first** when writing Media Centre coverage — full JSON schema, each journalist's persona/voice, section↔journalist affinities, and the accent-color palette. Skip it for ordinary match/squad sessions with no milestone to cover.
 - Never fabricate a stat, score, or event for a Media Centre piece that isn't already on the record in `season_log.json` or a prior session — these are interpretation/commentary on results that already happened, not a second source of new facts.
 
@@ -191,7 +191,23 @@ All HTML must also work as local `file://` files (no server needed). The `season
 **Notes (col 52):** Only record what is confirmed from screenshots:
 - Contract willingness: "Not willing to negotiate." or "Willing to negotiate."
 - GK stats if relevant: `GK: Div XX/Han XX/Kic XX/Ref XX/Spd XX/Pos XX`
-- Development plan ETA if shown
+
+Development plan (col 51) is not actively tracked — leave it as-is unless the user explicitly calls out a change.
+
+---
+
+### Monthly Ratings Update — Cheap, One-Screenshot Refresh
+
+Most attribute-refresh sessions should be this lightweight path, not a full breakdown. The full 40+ sub-attribute refresh (skill moves, PlayStyles, roles, all Technical/Physical/Mental sub-attributes) only happens **twice a year, at each transfer window close** — see "Full Transfer-Window Refresh" below. Every other month, do the cheap version:
+
+- **Source:** one squad-wide screenshot (or a couple scrolled) from the Squad Hub's Stats tab list view — the one showing every player's row with OVR + the six-pack (Pace/Shooting/Passing/Dribbling/Defending/Physical) at a glance. This is a different screen from the per-player Development screen (which shows the sub-attributes that roll up into the six-pack, but not the six-pack/OVR numbers themselves) — don't open per-player screens for this pass.
+- **What to write:** for each player whose OVR or six-pack changed, update `wrexham_squad.csv` cols 3 (OVR) and 12-17 (the six-pack) only. Append a `player_history.csv` snapshot row per changed player (same `Snapshot_Date`, full row copied from the live CSV row — the snapshot log schema doesn't support partial rows, but the source data for this pass genuinely is just those 7 fields changing). Leave every sub-attribute, PlayStyle, Role, and Development_Plan column untouched.
+- **In `docs/submit.html`:** use the existing Attribute Editor (Squad Update tab) per player, but only touch the OVR/Pace/Shooting/Passing/Dribbling/Defending/Physical/Potential fields in the "Stats Tab" group — leave every other field blank/unedited. The editor only outputs a diff for fields you actually changed, so this already works without any extra UI.
+- **Then:** `python3 scripts/sync_squad_page.py` (chains `generate_player_pages.py`) and `python3 scripts/check_roster_sync.py`, same as any squad change.
+
+### Full Transfer-Window Refresh — Twice a Year Only
+
+At the close of each transfer window (winter and summer), do the full per-player attribute breakdown as before: Technical/Physical/Mental sub-attributes, Skill Moves, Weak Foot, PlayStyles, Roles, Potential — one screenshot set per player's Attributes tabs. This is the expensive pass; it's why it's now scoped to twice a year instead of every session. Follow the existing "Large screenshot batches" extraction/application split (under "Workflow" above) if the window produces more than ~20-25 images.
 
 ---
 
@@ -232,7 +248,7 @@ Whenever `youth_academy.csv` changes (new prospect, attribute refresh, POT/dev-p
 
 Every match session updates all of the following:
 
-- `season_log.json` — a `matches` entry + a `milestones` entry; include `player_ratings` (see "Season Log Schema" below) for every player whose match rating is visible in a screenshot, not just the Man of the Match
+- `season_log.json` — a `matches` entry + a `milestones` entry; include `player_ratings` (see "Season Log Schema" below) for every player whose match rating is visible in a screenshot, not just the Man of the Match; include `team_stats` (possession/shots/shots on target/pass accuracy/tackles) whenever the Team Stats screen was screenshotted — this is the data source for match analytics, so don't skip it just because it's optional
 - `docs/season.html` — Match Log row in the right competition accordion; that competition's `comp-summary-stats`; the overall `record-bar` tally; Apps + goal count (and MoM, already tracked via the Match Log row) for every player who appeared, not just scorers; the "Player Season Stats — Senior Matches" table (Apps/G/A/MOTM/Rtg) for every player who appeared. This table's G/A columns stay `0` for goalkeepers — their real defensive record (Clean Sheets/Goals Conceded) is derived separately from `player_ratings` + the match score, not typed in here
 - `docs/index.html` — run `python3 scripts/sync_season_summary.py` to regenerate the `SEASON_SUMMARY` stat bar, and `python3 scripts/sync_home_player_stats.py` to refresh the homepage Squad Spotlight's Goals/Assists/Avg Rating (Clean Sheets/Goals Against, for a spotlighted GK) from the Player Season Stats table you just updated
 - **`docs/assets/pl_table.js` — the full league standings** (`PREMIER_LEAGUE_TABLE`). Hand-maintained, separate from `SEASON_SUMMARY`, and *not* touched by `sync_season_summary.py`. It must be rebuilt from a full league-table screenshot (or screenshots covering all 20 clubs) every time it changes. The homepage renders both the compact title-race snapshot and the full table from this one array, so editing it updates both. **If a match session doesn't include a full-table screenshot, ask the user for one rather than leaving this table stale or guessing at it.** If a club's row isn't visible in the session's screenshots, leave it and add a comment saying so — never estimate movement.
@@ -311,6 +327,12 @@ matchday = {m['date'] + m['opponent']: i for i, m in enumerate(efl, start=1)}  #
 Never hand-type an "MD—" label anywhere (journal prose, `season.html`, `index.html` standings header) without deriving it this way first — that's exactly how the drift happened before.
 
 **`player_ratings` (optional, on `matches` entries).** Keyed by `"F. Lastname"` (same abbreviation as `transfers`/`injuries`), value is that player's FC26 match rating from the post-match ratings screen. Only include players actually visible in the screenshot — never estimate or carry a rating forward from a previous match. This field feeds the homepage Squad Spotlight's "last 5 matches" sparkline (`scripts/sync_home_player_stats.py` reads it straight from `season_log.json`, most-recent-5-first per player, in chronological order). It's fine — expected, even — for a player's sparkline to be short or missing entirely for a while: it only fills in as `player_ratings` accumulates across sessions, and the site never fabricates a point that isn't backed by a real screenshot. `docs/season.html`'s Match Log already records the Man of the Match's rating in its `ml-mom` span — when you're filling that in from a screenshot, add the same rating to this match's `player_ratings` too (and any other player's rating visible in the same post-match screen) so it isn't lost.
+
+**`team_stats` (optional, on `matches` entries).** Team-level stats from the post-match Team Stats screen — the data-analytics angle for match reviews. Shape:
+```json
+"team_stats": { "possession": 58, "shots": "14-9", "shots_on_target": "6-3", "pass_accuracy": 87, "tackles": 18 }
+```
+`possession` and `pass_accuracy` are Wrexham-only percentages (integers). `shots` and `shots_on_target` are `"Wrexham-Opponent"` strings. `tackles` is Wrexham's count. Only include fields actually visible in the screenshot — never estimate. `docs/submit.html`'s Match tab has a "Team Stats" block (all fields optional) that writes this straight into the `matches` JSON — no separate step needed when the user fills it in there. This is the main fuel for James McAllister's data-driven Athletic pieces (see "Media Centre" below) and for any season-long possession/shots/tackles trend analysis.
 
 ---
 

@@ -412,6 +412,35 @@ if ('serviceWorker' in navigator) {
       </div>
     </div>
 
+    <!-- ── Team Match Stats (analytics) ── -->
+    <div style="margin-top:18px;">
+      <label style="display:block; margin-bottom:8px;">Team Stats (from the post-match Team Stats screen — optional, leave blank if not screenshotted)</label>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ts-poss">Possession % (Wrexham)</label>
+          <input type="number" id="ts-poss" min="0" max="100" placeholder="e.g. 58">
+        </div>
+        <div class="form-group">
+          <label for="ts-shots">Shots (Wrexham–Opp)</label>
+          <input type="text" id="ts-shots" placeholder="e.g. 14-9">
+        </div>
+        <div class="form-group">
+          <label for="ts-sot">Shots on Target (Wrexham–Opp)</label>
+          <input type="text" id="ts-sot" placeholder="e.g. 6-3">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ts-passacc">Pass Accuracy % (Wrexham)</label>
+          <input type="number" id="ts-passacc" min="0" max="100" placeholder="e.g. 87">
+        </div>
+        <div class="form-group">
+          <label for="ts-tackles">Tackles (Wrexham)</label>
+          <input type="number" id="ts-tackles" min="0" placeholder="e.g. 18">
+        </div>
+      </div>
+    </div>
+
     <!-- ── First-Team Player Stats ── -->
     <div style="margin-top:18px;">
       <label style="display:block; margin-bottom:8px;">Player Stats (mirrors the post-match Player Ratings screen)</label>
@@ -502,7 +531,6 @@ if ('serviceWorker' in navigator) {
         <div class="checkbox-group">
           <label class="checkbox-label"><input type="checkbox" id="su-attrs"> Attributes updated (wrexham_squad.csv)</label>
           <label class="checkbox-label"><input type="checkbox" id="su-ratings"> Overall ratings / potential reviewed</label>
-          <label class="checkbox-label"><input type="checkbox" id="su-dev"> Development plan progress</label>
           <label class="checkbox-label"><input type="checkbox" id="su-roster"> Roster change (see Transfers below)</label>
         </div>
       </div>
@@ -1154,7 +1182,6 @@ function collectSquadEventData() {
   var whatChanged = [];
   if (document.getElementById('su-attrs').checked)   whatChanged.push('Attributes updated');
   if (document.getElementById('su-ratings').checked) whatChanged.push('Ratings / potential reviewed');
-  if (document.getElementById('su-dev').checked)     whatChanged.push('Development plan progress');
   if (document.getElementById('su-roster').checked)  whatChanged.push('Roster change');
   var squadNotes = document.getElementById('squad-notes').value;
   var writeJournal = document.getElementById('squad-journal').checked;
@@ -1212,7 +1239,6 @@ ${writeJournal ? 'Yes' : 'No'}
     subtype: 'squad', date: date,
     suAttrs: document.getElementById('su-attrs').checked,
     suRatings: document.getElementById('su-ratings').checked,
-    suDev: document.getElementById('su-dev').checked,
     suRoster: document.getElementById('su-roster').checked,
     squadNotes: squadNotes, squadJournal: writeJournal,
     ss: {
@@ -1348,6 +1374,11 @@ function clearForm() {
   document.getElementById('motm').value = '';
   document.getElementById('vibe').value = '';
   document.getElementById('notes').value = '';
+  document.getElementById('ts-poss').value = '';
+  document.getElementById('ts-shots').value = '';
+  document.getElementById('ts-sot').value = '';
+  document.getElementById('ts-passacc').value = '';
+  document.getElementById('ts-tackles').value = '';
   resetPlayerStatsTable(ROSTER_SENIOR, 'ms');
 
   document.getElementById('y-competition').value = 'Youth Academy Rush Tournament';
@@ -1381,7 +1412,6 @@ function clearForm() {
   document.querySelector('input[name="subtype"][value="match"]').checked = true;
   document.getElementById('su-attrs').checked = false;
   document.getElementById('su-ratings').checked = false;
-  document.getElementById('su-dev').checked = false;
   document.getElementById('su-roster').checked = false;
   document.getElementById('squad-notes').value = '';
   document.getElementById('squad-journal').checked = false;
@@ -1493,6 +1523,26 @@ function collectMatchEventData() {
   var stats = collectPlayerStats(ROSTER_SENIOR, 'ms');
   var attrText = collectAttrChangesText();
 
+  var tsPoss    = document.getElementById('ts-poss').value.trim();
+  var tsShots   = document.getElementById('ts-shots').value.trim();
+  var tsSot     = document.getElementById('ts-sot').value.trim();
+  var tsPassAcc = document.getElementById('ts-passacc').value.trim();
+  var tsTackles = document.getElementById('ts-tackles').value.trim();
+  var teamStatsLines = [];
+  if (tsPoss)    teamStatsLines.push('- **Possession:** ' + tsPoss + '% (Wrexham)');
+  if (tsShots)   teamStatsLines.push('- **Shots:** ' + tsShots + ' (Wrexham–Opp)');
+  if (tsSot)     teamStatsLines.push('- **Shots on Target:** ' + tsSot + ' (Wrexham–Opp)');
+  if (tsPassAcc) teamStatsLines.push('- **Pass Accuracy:** ' + tsPassAcc + '% (Wrexham)');
+  if (tsTackles) teamStatsLines.push('- **Tackles:** ' + tsTackles + ' (Wrexham)');
+  var teamStatsText = teamStatsLines.length ? '\n\n### Team Stats\n' + teamStatsLines.join('\n') : '';
+  var teamStatsJSONParts = [];
+  if (tsPoss)    teamStatsJSONParts.push('"possession": ' + JSON.stringify(parseInt(tsPoss)));
+  if (tsShots)   teamStatsJSONParts.push('"shots": ' + JSON.stringify(tsShots));
+  if (tsSot)     teamStatsJSONParts.push('"shots_on_target": ' + JSON.stringify(tsSot));
+  if (tsPassAcc) teamStatsJSONParts.push('"pass_accuracy": ' + JSON.stringify(parseInt(tsPassAcc)));
+  if (tsTackles) teamStatsJSONParts.push('"tackles": ' + JSON.stringify(parseInt(tsTackles)));
+  var teamStatsJSON = teamStatsJSONParts.length ? ', "team_stats": { ' + teamStatsJSONParts.join(', ') + ' }' : '';
+
   var compExtra = '';
   if (round) compExtra = '\n**Round:** ' + round;
 
@@ -1515,6 +1565,7 @@ function collectMatchEventData() {
 
 ### Vibe
 ${vibe || '—'}
+${teamStatsText}
 
 ### Screenshots Pushed
 ${ssLines || '(none checked)'}
@@ -1534,7 +1585,7 @@ ${stats.lines || '(none logged)'}${attrText}
   if (venue === 'neutral') logNotesParts.push('Neutral venue.');
   var logNotes = logNotesParts.join('. ');
 
-  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreUs + '-' + scoreThem + '", "result": "' + result + '", "competition": "' + competition + '"' + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + ', "journal_entry": true }';
+  var matchEntry = '{ "date": "' + date + '", "opponent": "' + opponent + '", "home": ' + (venue==='home') + ', "score": "' + scoreUs + '-' + scoreThem + '", "result": "' + result + '", "competition": "' + competition + '"' + (round ? ', "round": "' + round + '"' : '') + (logNotes ? ', "notes": "' + logNotes.replace(/"/g,'\\"') + '"' : '') + teamStatsJSON + ', "journal_entry": true }';
 
   var logEntry = '// Add to season_log.json → "matches" array:\n' + matchEntry;
   if (transferJSON.length) logEntry += '\n\n// Add to "transfers" array:\n' + transferJSON.join(',\n');
@@ -1550,6 +1601,7 @@ ${stats.lines || '(none logged)'}${attrText}
     date: date, competition: competition, opponent: document.getElementById('opponent').value,
     venue: venue, scoreThem: scoreThem, scoreUs: scoreUs, scorers: scorers,
     motm: motm, vibe: vibe, notes: notes, round: round,
+    teamStats: { poss: tsPoss, shots: tsShots, sot: tsSot, passAcc: tsPassAcc, tackles: tsTackles },
     ss: {
       table: document.getElementById('ss-table').checked,
       morale: document.getElementById('ss-morale').checked,
@@ -1624,7 +1676,6 @@ function populateForm(raw) {
   if (subtype === 'squad') {
     document.getElementById('su-attrs').checked   = !!raw.suAttrs;
     document.getElementById('su-ratings').checked = !!raw.suRatings;
-    document.getElementById('su-dev').checked     = !!raw.suDev;
     document.getElementById('su-roster').checked  = !!raw.suRoster;
     document.getElementById('squad-notes').value  = raw.squadNotes || '';
     document.getElementById('squad-journal').checked = !!raw.squadJournal;
@@ -1687,6 +1738,12 @@ function populateForm(raw) {
   document.getElementById('vibe').value = raw.vibe || '';
   document.getElementById('notes').value = raw.notes || '';
   document.getElementById('round').value = raw.round || '';
+  var ts = raw.teamStats || {};
+  document.getElementById('ts-poss').value    = ts.poss || '';
+  document.getElementById('ts-shots').value   = ts.shots || '';
+  document.getElementById('ts-sot').value     = ts.sot || '';
+  document.getElementById('ts-passacc').value = ts.passAcc || '';
+  document.getElementById('ts-tackles').value = ts.tackles || '';
   restorePlayerStats(raw.msStats, ROSTER_SENIOR, 'ms');
   restoreManualRows(raw.msManual, 'ms');
 
