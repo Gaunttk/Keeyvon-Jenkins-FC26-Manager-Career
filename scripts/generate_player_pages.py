@@ -157,6 +157,8 @@ PHOTO_MAP = {
     "Nico Kopp": "assets/photos/kopp.png",
     "Fabricio Sandoval": "assets/photos/sandoval.png",
     "Lilian Faure": "assets/photos/faure.png",
+    "Stephane Bertrand": "assets/photos/bertrand.png",
+    "Adrian Kaczmarek": "assets/photos/adrian_kaczmarek.png",
 }
 
 

@@ -955,7 +955,7 @@ const SQUAD_DATA = {
         "back": "Jul 2028"
       },
       "devStatus": null,
-      "image": null,
+      "image": "assets/photos/bertrand.png",
       "season": null
     },
     {
@@ -999,7 +999,7 @@ const SQUAD_DATA = {
         "code": "EP",
         "label": "An Exciting Prospect"
       },
-      "image": null,
+      "image": "assets/photos/adrian_kaczmarek.png",
       "season": {
         "isGk": true,
         "apps": 1,
