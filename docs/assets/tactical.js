@@ -59,6 +59,19 @@
 
   var TIER_LABEL = { starter: 'Starter', rotation: 'Rotation', prospect: 'Prospect' };
 
+  var DEV_STATUS_TITLES = {
+    HPTBS: 'Has Potential To Be Special',
+    EP: 'Exciting Prospect',
+    SGP: 'Showing Great Potential',
+  };
+
+  function devStatusBadge(p) {
+    if (!p.devStatus) return null;
+    var badge = el('span', 'dev-status-badge dev-status-' + p.devStatus.code.toLowerCase(), esc(p.devStatus.code));
+    badge.title = DEV_STATUS_TITLES[p.devStatus.code] || p.devStatus.label;
+    return badge;
+  }
+
   function buildPlayerIndex(data) {
     var idx = {};
     data.players.forEach(function (p) { idx[p.slug] = p; });
@@ -98,12 +111,17 @@
       marker.href = playerHref(p);
       marker.style.left = s.x + '%';
       marker.style.top = s.y + '%';
-      marker.setAttribute('aria-label', p.name + ', ' + s.slot + ', OVR ' + p.ovr);
+      marker.setAttribute('aria-label', p.name + ', ' + s.slot + ', OVR ' + p.ovr +
+        (p.devStatus ? ', ' + (DEV_STATUS_TITLES[p.devStatus.code] || p.devStatus.label) : ''));
 
       marker.appendChild(byPhoto('formation-player-photo', p, true));
       var label = el('div', 'formation-player-label');
       label.appendChild(el('span', 'formation-player-name', esc(p.name.split(' ').slice(-1)[0])));
-      label.appendChild(el('span', 'formation-player-meta', esc(s.slot) + ' &middot; ' + p.ovr));
+      var metaRow = el('div', 'formation-player-meta-row');
+      metaRow.appendChild(el('span', 'formation-player-meta', esc(s.slot) + ' &middot; ' + p.ovr));
+      var badge = devStatusBadge(p);
+      if (badge) metaRow.appendChild(badge);
+      label.appendChild(metaRow);
       marker.appendChild(label);
 
       root.appendChild(marker);
@@ -124,7 +142,11 @@
         var row = el('a', 'xi-row');
         row.href = playerHref(p);
         row.appendChild(el('span', 'xi-slot', esc(s.slot)));
-        row.appendChild(el('span', 'xi-name', esc(p.name)));
+        var nameWrap = el('span', 'xi-name-wrap');
+        nameWrap.appendChild(el('span', 'xi-name', esc(p.name)));
+        var badge = devStatusBadge(p);
+        if (badge) nameWrap.appendChild(badge);
+        row.appendChild(nameWrap);
         row.appendChild(el('span', 'xi-ovr', p.ovr));
         col.appendChild(row);
       });
@@ -143,10 +165,15 @@
     row.appendChild(byPhoto('depth-player-photo', p, false));
 
     var body = el('div', 'depth-player-body');
-    body.appendChild(el('span', 'depth-player-tier tier-' + entry.tier, TIER_LABEL[entry.tier] || entry.tier));
+    var tierRow = el('div', 'depth-player-tier-row');
+    tierRow.appendChild(el('span', 'depth-player-tier tier-' + entry.tier, TIER_LABEL[entry.tier] || entry.tier));
+    if (p.loan) tierRow.appendChild(el('span', 'on-loan-badge', 'On Loan'));
+    var badge = devStatusBadge(p);
+    if (badge) tierRow.appendChild(badge);
+    body.appendChild(tierRow);
     body.appendChild(el('div', 'depth-player-name', esc(p.name) + (p.captain ? ' <span class="depth-player-cap">C</span>' : '')));
     var subBits = [esc(p.positions.join(' / ')), p.age + ' yrs'];
-    if (p.loan) subBits.push('On loan: ' + esc(p.loan.club));
+    if (p.loan) subBits.push('On loan: ' + esc(p.loan.club) + (p.loan.back ? ' &middot; back ' + esc(p.loan.back) : ''));
     body.appendChild(el('div', 'depth-player-sub', subBits.join(' &middot; ')));
     row.appendChild(body);
 

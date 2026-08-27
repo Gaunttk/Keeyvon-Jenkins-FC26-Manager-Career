@@ -5,10 +5,12 @@ Phase 3B. Data-driven, like scripts/generate_media_pages.py -- every player page
 is regenerated from source data, never hand-edited. Sources (never invented):
 
   wrexham_squad.csv          identity/attributes/dev-plan (also drives squad_data.js)
-  docs/assets/player_stats.js current-season (2026/27) Apps/Goals/Assists/Rating + last5
-  docs/season/season-01.html  archived season (2025/26) Player Season Stats table --
+  docs/assets/player_stats.js current-season Apps/Goals/Assists/Rating + last5
+  docs/season/season-NN.html  every archived season's Player Season Stats table --
                                parsed with the same regex sync_home_player_stats.py uses,
-                               giving a real second Wrexham season for the career timeline
+                               one career-timeline row per rolled-over season (season
+                               label/competition read from docs/season.html's own
+                               "Past Seasons" links, so nothing is hand-typed per season)
   player_career_history.csv   real pre-Wrexham club career (season/club/competition/apps/goals)
   player_bios.json            recovered "Player Profile" prose (see extraction note below)
   season_log.json             transfers (direction=in), for Movement
@@ -31,6 +33,7 @@ import html
 import json
 import re
 import unicodedata
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,8 +41,8 @@ SQUAD_CSV = ROOT / "wrexham_squad.csv"
 CAREER_CSV = ROOT / "player_career_history.csv"
 BIOS_JSON = ROOT / "player_bios.json"
 SEASON_LOG = ROOT / "season_log.json"
-SEASON01_JSON = ROOT / "season_logs" / "season-01.json"
-SEASON01_HTML = ROOT / "docs" / "season" / "season-01.html"
+SEASON_HTML = ROOT / "docs" / "season.html"
+SEASON_LOGS_DIR = ROOT / "season_logs"
 PLAYER_STATS_JS = ROOT / "docs" / "assets" / "player_stats.js"
 MEDIA_ARTICLES_JSON = ROOT / "media-articles.json"
 MEDIA_INDEX_JS = ROOT / "docs" / "assets" / "media_index.js"
@@ -51,6 +54,62 @@ def load_current_season_label():
     text = PL_TABLE_JS.read_text(encoding="utf-8")
     m = re.search(r"season:\s*'([^']+)'", text)
     return m.group(1) if m else "2026/27"
+
+
+def load_current_competition():
+    """Most-frequent competition among this season's logged matches, so the
+    live-season career row doesn't hard-code a competition name that goes
+    stale on promotion/relegation. No matches logged yet (start of season)
+    falls back to "Premier League" -- the current top-flight status."""
+    if not SEASON_LOG.exists():
+        return "Premier League"
+    d = json.loads(SEASON_LOG.read_text(encoding="utf-8"))
+    comps = [m["competition"] for m in d.get("matches", []) if m.get("competition")]
+    if not comps:
+        return "Premier League"
+    return Counter(comps).most_common(1)[0][0]
+
+# Column indices into wrexham_squad.csv / youth_academy.csv rows -- see
+# CLAUDE.md's "squad CSV -- Column Index" for the authoritative reference.
+COL = {
+    "Pace": 12, "Shooting": 13, "Passing": 14, "Dribbling": 15, "Defending": 16, "Physical": 17,
+    "Acceleration": 18, "Agility": 19, "Balance": 20, "Jumping": 21, "Sprint_Speed": 22,
+    "Stamina": 23, "Strength": 24,
+    "Aggression": 25, "Att_Position": 26, "Composure": 27, "Interceptions": 28,
+    "Reactions": 29, "Vision": 30,
+    "Ball_Control": 31, "Crossing": 32, "Curve": 33, "Def_Aware": 34, "Dribbling_Tech": 35,
+    "FK_Acc": 36, "Finishing": 37, "Heading_Acc": 38, "Long_Pass": 39, "Long_Shots": 40,
+    "Penalties": 41, "Short_Pass": 42, "Shot_Power": 43, "Slide_Tackle": 44, "Stand_Tackle": 45,
+    "Volleys": 46,
+    "Skill_Moves": 47, "Weak_Foot": 48, "PlayStyles": 49, "Roles": 50,
+}
+
+# Labels for the main-six tiles -- GKs (see CLAUDE.md's "GK mapping") reuse
+# the same six CSV columns for different real-world stats.
+MAIN_SIX_OUTFIELD = [("Pace", "PAC"), ("Shooting", "SHO"), ("Passing", "PAS"),
+                     ("Dribbling", "DRI"), ("Defending", "DEF"), ("Physical", "PHY")]
+MAIN_SIX_GK = [("Pace", "DIV"), ("Shooting", "HAN"), ("Passing", "KIC"),
+              ("Dribbling", "REF"), ("Defending", "SPD"), ("Physical", "POS")]
+MAIN_SIX_GK_LABELS = {"Pace": "Diving", "Shooting": "Handling", "Passing": "Kicking",
+                      "Dribbling": "Reflexes", "Defending": "Speed", "Physical": "Positioning"}
+
+PHYSICAL_ATTRS = ["Acceleration", "Agility", "Balance", "Jumping", "Sprint_Speed", "Stamina", "Strength"]
+MENTAL_ATTRS = ["Aggression", "Att_Position", "Composure", "Interceptions", "Reactions", "Vision"]
+TECHNICAL_ATTRS = ["Ball_Control", "Crossing", "Curve", "Def_Aware", "Dribbling_Tech", "FK_Acc",
+                   "Finishing", "Heading_Acc", "Long_Pass", "Long_Shots", "Penalties",
+                   "Short_Pass", "Shot_Power", "Slide_Tackle", "Stand_Tackle", "Volleys"]
+ATTR_LABELS = {
+    "Att_Position": "Att. Position", "Def_Aware": "Def. Awareness", "Dribbling_Tech": "Dribbling",
+    "FK_Acc": "FK Accuracy", "Heading_Acc": "Heading Acc.", "Sprint_Speed": "Sprint Speed",
+    "Ball_Control": "Ball Control", "Long_Pass": "Long Pass", "Long_Shots": "Long Shots",
+    "Short_Pass": "Short Pass", "Shot_Power": "Shot Power", "Slide_Tackle": "Slide Tackle",
+    "Stand_Tackle": "Stand Tackle",
+}
+
+
+def attr_label(key):
+    return ATTR_LABELS.get(key, key.replace("_", " "))
+
 
 GK, DEF, MID, FWD = "Goalkeepers", "Defenders", "Midfielders", "Forwards"
 GROUP_MAP = {
@@ -98,6 +157,8 @@ PHOTO_MAP = {
     "Nico Kopp": "assets/photos/kopp.png",
     "Fabricio Sandoval": "assets/photos/sandoval.png",
     "Lilian Faure": "assets/photos/faure.png",
+    "Stephane Bertrand": "assets/photos/bertrand.png",
+    "Adrian Kaczmarek": "assets/photos/adrian_kaczmarek.png",
 }
 
 
@@ -157,7 +218,7 @@ def load_current_season_stats():
     return json.loads(m.group(1)) if m else {}
 
 
-SEASON01_ROW_RE = re.compile(
+SEASON_ARCHIVE_ROW_RE = re.compile(
     r'<div class="stats-row">\s*'
     r'<div><div class="s-name">(?P<name>.*?)</div><div class="s-pos">(?P<pos>.*?)</div></div>\s*'
     r'<span class="s-num">(?P<apps>\d+)</span>\s*'
@@ -168,37 +229,65 @@ SEASON01_ROW_RE = re.compile(
     re.S,
 )
 
+PAST_SEASON_LINK_RE = re.compile(
+    r'<a href="season/(season-(?P<num>\d+)\.html)"[^>]*>'
+    r'Season \d+ ·\s*(?P<year>[\d&;a-z]+?)\s*&middot;\s*(?P<desc>.*?)\s*\(',
+    re.S,
+)
 
-def load_season01_stats():
-    """Archived 2025/26 EFL Championship Player Season Stats -- same table
-    shape docs/season.html uses for the current season, just frozen in the
-    season-01 archive. Gives the career timeline a real second Wrexham season."""
-    if not SEASON01_HTML.exists():
-        return {}
-    text = SEASON01_HTML.read_text(encoding="utf-8")
-    start = text.find("PLAYER SEASON STATS")
-    if start == -1:
-        return {}
-    end = text.find('<div class="footer">', start)
-    table_html = text[start: end if end != -1 else len(text)]
-    out = {}
-    for m in SEASON01_ROW_RE.finditer(table_html):
-        name = html.unescape(m.group("name")).strip()
-        out[last_name_key(name)] = {
-            "apps": int(m.group("apps")), "goals": int(m.group("goals")),
-        }
-    return out
+
+def load_archived_seasons_stats():
+    """Every archived Wrexham season (docs/season/season-NN.html), not just
+    Season 1 -- each rolled-over season must keep contributing a real row to
+    every player's career timeline on their dossier, or the timeline silently
+    stops the moment a season is archived (this happened for real: Season 2,
+    2026/27, the Premier League + FA Cup double, was missing entirely from
+    every dossier until this generalization). Season label/competition text
+    is read from docs/season.html's "Past Seasons" links so nothing here is
+    hand-typed per season; table shape is the same one docs/season.html uses
+    for the live season, just frozen in each archive file.
+
+    Returns {season_num: {"season": "2025/26", "competition": "...",
+                           "stats": {last_name_key: {"apps", "goals"}}}}
+    """
+    seasons = {}
+    if not SEASON_HTML.exists():
+        return seasons
+    index_text = SEASON_HTML.read_text(encoding="utf-8")
+    for lm in PAST_SEASON_LINK_RE.finditer(index_text):
+        num = int(lm.group("num"))
+        year = html.unescape(lm.group("year")).replace("–", "/").replace("-", "/").strip()
+        desc = html.unescape(lm.group("desc")).strip()
+        competition = desc.split(",", 1)[1].strip() if "," in desc else desc
+
+        archive_path = ROOT / "docs" / "season" / f"season-{num:02d}.html"
+        if not archive_path.exists():
+            continue
+        text = archive_path.read_text(encoding="utf-8")
+        start = text.find("PLAYER SEASON STATS")
+        if start == -1:
+            continue
+        end = text.find('<div class="footer">', start)
+        table_html = text[start: end if end != -1 else len(text)]
+        stats = {}
+        for m in SEASON_ARCHIVE_ROW_RE.finditer(table_html):
+            name = html.unescape(m.group("name")).strip()
+            stats[last_name_key(name)] = {
+                "apps": int(m.group("apps")), "goals": int(m.group("goals")),
+            }
+        seasons[num] = {"season": year, "competition": competition, "stats": stats}
+    return seasons
 
 
 def load_transfers_in(squad_names):
     """Joined-Wrexham transfer, keyed by last-name -- merges the current
-    season_log.json (full player names) with the archived season-01.json
-    (which used abbreviated "F. Lastname" names for this field), taking the
-    earliest "in" transfer on record per player."""
+    season_log.json (full player names) with every archived season_logs/
+    season-NN.json (which used abbreviated "F. Lastname" names for this
+    field), taking the earliest "in" transfer on record per player."""
     by_lastname = {}
     sources = [SEASON_LOG]
-    if SEASON01_JSON.exists():
-        sources.append(SEASON01_JSON)
+    if SEASON_LOGS_DIR.exists():
+        sources.extend(sorted(SEASON_LOGS_DIR.glob("season-*.json")))
     for src in sources:
         d = json.loads(src.read_text(encoding="utf-8"))
         for t in d.get("transfers", []):
@@ -242,6 +331,24 @@ def load_gk_match_log():
 
 PROMOTED_RE = re.compile(r"Promoted to the first team on ([^.,]+)")
 CAPTAIN_RE = re.compile(r"\bclub captain\b", re.IGNORECASE)
+
+# FC26's development-status classification, stored as free text at the front
+# of the Status column (col 11). Same source/logic as
+# scripts/sync_squad_page.py's parse_dev_status -- kept in sync manually
+# since these are small standalone scripts with no shared module.
+DEV_STATUS_MAP = [
+    ("Has Potential To Be Special", "HPTBS"),
+    ("An Exciting Prospect", "EP"),
+    ("Showing Great Potential", "SGP"),
+]
+DEV_STATUS_TITLES = {"HPTBS": "Has Potential To Be Special", "EP": "Exciting Prospect", "SGP": "Showing Great Potential"}
+
+
+def parse_dev_status(status_text):
+    for phrase, code in DEV_STATUS_MAP:
+        if phrase in status_text:
+            return {"code": code, "label": DEV_STATUS_TITLES[code]}
+    return None
 CONTEXT_KEY_RE = re.compile(r'<span class="context-card-key">([^<]+)</span>')
 PLAYER_TAG_RE = re.compile(r"^[A-ZÀ-Ý]{1,2}\.(?:[A-ZÀ-Ý]\.)?\s+[A-ZÀ-Ý]")
 
@@ -276,8 +383,9 @@ def opponent_tag(opponent):
     return first[:3].upper()
 
 
-def build_players(rows, career_history, bios, current_stats, season01_stats,
-                   transfers_in, gk_log, media_matches, media_index):
+def build_players(rows, career_history, bios, current_stats, archived_seasons,
+                   transfers_in, gk_log, media_matches, media_index,
+                   current_season_label, current_competition):
     players = []
     by_group = {GK: [], DEF: [], MID: [], FWD: []}
     for row in rows:
@@ -294,9 +402,34 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
         notes = row[52]
         potential = row[53].strip() or None
 
+        def cell(key):
+            v = row[COL[key]].strip() if COL[key] < len(row) else ""
+            return int(v) if v.isdigit() else None
+
+        main_six_defs = MAIN_SIX_GK if group == GK else MAIN_SIX_OUTFIELD
+        main_six = [{"label": lbl, "value": cell(key)} for key, lbl in main_six_defs]
+        if group == GK:
+            main_six = [m for m in main_six if m["value"] is not None]
+
+        def sub_group(keys):
+            out = [{"label": attr_label(k), "value": cell(k)} for k in keys]
+            return [o for o in out if o["value"] is not None]
+
+        attributes = {
+            "main_six": main_six,
+            "physical": sub_group(PHYSICAL_ATTRS),
+            "mental": sub_group(MENTAL_ATTRS),
+            "technical": sub_group(TECHNICAL_ATTRS),
+            "skill_moves": cell("Skill_Moves"),
+            "weak_foot": cell("Weak_Foot"),
+            "playstyles": [s.strip() for s in re.split(r"[,/]", row[COL["PlayStyles"]]) if s.strip() and s.strip().lower() != "none"],
+            "roles": cell("Roles"),
+        }
+
         loan_m = re.search(r"On Loan at ([^(]+?)\s*(?:\(back ([^)]+)\))?$", status)
         loan = {"club": loan_m.group(1).strip(), "back": loan_m.group(2)} if loan_m else None
         is_captain = bool(CAPTAIN_RE.search(notes))
+        dev_status = parse_dev_status(status)
 
         lk = last_name_key(name)
         stats = current_stats.get(name) or next(
@@ -328,12 +461,15 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
                 last5.append({"tag": opponent_tag(opp) if opp else "—", "rating": pt["rating"]})
 
         career = list(career_history.get(name, []))
-        s01 = season01_stats.get(lk)
-        if s01:
-            career.append({"season": "2025/26", "club": "Wrexham", "competition": "EFL Championship",
-                            "apps": s01["apps"], "goals": None if group == GK else s01["goals"]})
+        for num in sorted(archived_seasons):
+            archived = archived_seasons[num]
+            s = archived["stats"].get(lk)
+            if not s:
+                continue
+            career.append({"season": archived["season"], "club": "Wrexham", "competition": archived["competition"],
+                            "apps": s["apps"], "goals": None if group == GK else s["goals"]})
         if season.get("apps"):
-            career.append({"season": "2026/27", "club": "Wrexham", "competition": "Premier League",
+            career.append({"season": current_season_label, "club": "Wrexham", "competition": current_competition,
                             "apps": season["apps"], "goals": None if group == GK else season.get("goals")})
 
         bio = bios.get(name, {}).get("paragraphs", [])
@@ -358,9 +494,9 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
             "name": name, "slug": slugify(name), "positions": positions, "group": group,
             "age": age, "height": height, "foot": foot, "ovr": ovr, "potential": potential,
             "squad_role": squad_role, "contract_length": contract_length, "captain": is_captain,
-            "loan": loan, "dev_plan": dev_plan, "image": PHOTO_MAP.get(name),
+            "loan": loan, "dev_status": dev_status, "dev_plan": dev_plan, "image": PHOTO_MAP.get(name),
             "season": season, "last5": last5, "career": career, "bio": bio,
-            "pathway": pathway, "transfer": transfer, "news": news,
+            "pathway": pathway, "transfer": transfer, "news": news, "attributes": attributes,
         }
         players.append(player)
         by_group[group].append(player)
@@ -414,6 +550,55 @@ def render_season_block(p, season_label):
     <div class="player-section-head"><h2>{esc(season_label)} Season</h2></div>
     <div class="player-stat-grid">{''.join(stats)}</div>
     {note}
+  </section>'''
+
+
+def render_attributes(p):
+    a = p["attributes"]
+    if not a["main_six"] and not a["physical"] and not a["mental"] and not a["technical"]:
+        return ""
+
+    tiles = "".join(render_stat(m["label"], m["value"], gold=True) for m in a["main_six"] if m["value"] is not None)
+    main_six_html = f'<div class="player-stat-grid">{tiles}</div>' if tiles else ""
+
+    def sub_block(title, items):
+        if not items:
+            return ""
+        rows = "".join(
+            f'<div class="context-card-row"><span class="context-card-key">{esc(i["label"])}</span>'
+            f'<span class="context-card-val">{esc(i["value"])}</span></div>'
+            for i in items
+        )
+        return f'<div class="context-card"><div class="context-card-label">{esc(title)}</div>{rows}</div>'
+
+    sub_html = (
+        sub_block("Physical", a["physical"])
+        + sub_block("Mental", a["mental"])
+        + sub_block("Technical", a["technical"])
+    )
+    sub_wrap = f'<div class="player-attr-subgrid">{sub_html}</div>' if sub_html else ""
+
+    extras = []
+    if a["skill_moves"]:
+        extras.append(f'<div class="context-card-row"><span class="context-card-key">Skill Moves</span><span class="context-card-val">{"★" * a["skill_moves"]}{"☆" * (5 - a["skill_moves"])}</span></div>')
+    if a["weak_foot"]:
+        extras.append(f'<div class="context-card-row"><span class="context-card-key">Weak Foot</span><span class="context-card-val">{"★" * a["weak_foot"]}{"☆" * (5 - a["weak_foot"])}</span></div>')
+    if a["roles"] is not None:
+        extras.append(f'<div class="context-card-row"><span class="context-card-key">Roles (+/++)</span><span class="context-card-val">{a["roles"]}</span></div>')
+    extras_html = f'<div class="context-card">{"".join(extras)}</div>' if extras else ""
+
+    playstyles_html = ""
+    if a["playstyles"]:
+        chips = "".join(f'<span class="player-playstyle-chip">{esc(ps)}</span>' for ps in a["playstyles"])
+        playstyles_html = f'<div class="player-playstyles"><span class="context-card-key">PlayStyles</span><div class="player-playstyle-list">{chips}</div></div>'
+
+    return f'''
+  <section class="player-section player-attributes" aria-label="Attributes">
+    <div class="player-section-head"><h2>Attributes</h2></div>
+    {main_six_html}
+    {sub_wrap}
+    {extras_html}
+    {playstyles_html}
   </section>'''
 
 
@@ -591,7 +776,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       {hero_img}
     </div>
     <div class="player-identity">
-      {captain_badge}
+      {identity_badges}
       <div class="player-name">{name_html}</div>
       <div class="player-position">{positions}</div>
       <div class="player-fact-row">{facts}</div>
@@ -600,6 +785,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   </section>
 
   {bio_section}
+  {attributes_section}
   {season_section}
   {form_section}
   {career_section}
@@ -667,6 +853,16 @@ def render_player_page(p, by_group, season_label):
     role_line = f'<div class="player-role-line">{" &middot; ".join(esc(b) for b in role_bits)}</div>' if role_bits else ""
 
     captain_badge = '<span class="player-captain-badge">Club Captain</span>' if p["captain"] else ""
+    dev_status_badge = ""
+    if p["dev_status"]:
+        code, label = p["dev_status"]["code"], p["dev_status"]["label"]
+        dev_status_badge = (
+            f'<span class="dev-status-badge dev-status-{code.lower()}" title="{esc(label)}">{esc(code)}</span>'
+        )
+    identity_badges = (
+        f'<div class="player-badges">{captain_badge}{dev_status_badge}</div>'
+        if (captain_badge or dev_status_badge) else ""
+    )
 
     bio_paras = "".join(f'<p>{esc(b)}</p>' for b in p["bio"][:2]) if p["bio"] else ""
     bio_section = f'''
@@ -677,8 +873,9 @@ def render_player_page(p, by_group, season_label):
 
     return PAGE_TEMPLATE.format(
         name=esc(p["name"]), name_html=esc(p["name"]),
-        hero_img=hero_img, captain_badge=captain_badge, positions=esc("/".join(p["positions"])),
+        hero_img=hero_img, identity_badges=identity_badges, positions=esc("/".join(p["positions"])),
         facts=facts, role_line=role_line, bio_section=bio_section,
+        attributes_section=render_attributes(p),
         season_section=render_season_block(p, season_label), form_section=render_form(p),
         career_section=render_career(p), movement_section=render_movement(p),
         news_section=render_news(p), teammates_section=render_teammates(p, by_group),
@@ -690,16 +887,18 @@ def main():
     career_history = load_career_history()
     bios = load_bios()
     current_stats = load_current_season_stats()
-    season01_stats = load_season01_stats()
+    archived_seasons = load_archived_seasons_stats()
     transfers_in = load_transfers_in([r[0] for r in rows])
     gk_log = load_gk_match_log()
     media_matches = build_media_matches()
     media_index = load_media_index()
     season_label = load_current_season_label()
+    current_competition = load_current_competition()
 
     players, by_group = build_players(
-        rows, career_history, bios, current_stats, season01_stats,
+        rows, career_history, bios, current_stats, archived_seasons,
         transfers_in, gk_log, media_matches, media_index,
+        season_label, current_competition,
     )
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)

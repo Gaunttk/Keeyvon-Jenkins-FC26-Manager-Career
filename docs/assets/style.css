@@ -1271,7 +1271,7 @@ body {
 
 /* ─── DEPTH CHART / TACTICAL CENTRE — SHARED SECTION CHROME ─── */
 .depth-section {
-  padding: 18px 24px;
+  padding: 18px var(--h-gutter);
   border-bottom: 1px solid var(--mid);
 }
 .depth-pos-header {
@@ -1335,8 +1335,28 @@ body {
    else here is new and scoped to this page only.
    ═══════════════════════════════════════════════════════════════════════ */
 
-.tactical-page { padding-bottom: 0; }
-
+/* Wide canvas: reuses the --h-max / --h-gutter tokens the redesigned
+   Homepage/Squad/Media Centre/Player Dossiers already define on
+   `.home-body` (docs/depth_chart.html's <body> carries that class too, for
+   the tokens only -- its .site-nav top bar and masthead/footer chrome are
+   untouched, so navigation architecture doesn't change). Only this page's
+   own descendants are targeted below, so nothing here reaches the other
+   .page-wrap legacy pages that still share .masthead/.hub-header/.footer. */
+.tactical-page {
+  max-width: var(--h-max);
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+.tactical-page .masthead,
+.tactical-page .footer {
+  padding-left: var(--h-gutter);
+  padding-right: var(--h-gutter);
+}
+.tactical-header.hub-header {
+  padding-left: var(--h-gutter);
+  padding-right: var(--h-gutter);
+}
+.tactical-header .hub-crest { right: var(--h-gutter); }
 .tactical-header .hub-subtitle { max-width: 60ch; }
 
 /* ── Tactical Summary ─────────────────────────────────────────────────── */
@@ -1376,7 +1396,7 @@ body {
   border-bottom: 1px solid var(--mid);
 }
 .formation-pitch-wrap {
-  padding: 18px 20px 24px;
+  padding: 18px var(--h-gutter) 24px;
   border-right: 1px solid var(--mid);
 }
 .formation-pitch-label,
@@ -1389,11 +1409,13 @@ body {
   color: var(--red);
   margin-bottom: 10px;
 }
-.preferred-xi-wrap { padding: 18px 20px; }
+.preferred-xi-wrap { padding: 18px var(--h-gutter); }
 
 .formation-pitch {
   position: relative;
   width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
   aspect-ratio: 4 / 5;
   background:
     linear-gradient(rgba(255,255,255,0.03) 0 50%, rgba(255,255,255,0) 50%),
@@ -1434,7 +1456,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 76px;
+  width: 128px;
   text-align: center;
   text-decoration: none;
   color: inherit;
@@ -1445,16 +1467,16 @@ body {
   border-color: var(--gold);
 }
 .formation-player-photo {
-  width: 52px;
-  height: 52px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--charcoal);
-  border: 2px solid var(--red);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  border: 3px solid var(--red);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
-.formation-player-photo img { width: 100%; height: 100%; object-fit: cover; }
-.formation-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 10px; color: var(--steel); }
+.formation-player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.formation-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 18px; color: var(--steel); }
 .formation-player-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
 .formation-player-label {
   margin-top: 3px;
@@ -1472,6 +1494,18 @@ body {
   color: var(--white);
   line-height: 1.2;
 }
+.formation-player-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.formation-player-meta-row .dev-status-badge {
+  font-size: 6.5px;
+  padding: 1px 3px;
+  border-width: 1px;
+  letter-spacing: 0.5px;
+}
 .formation-player-meta {
   display: block;
   font-family: 'Barlow Condensed', sans-serif;
@@ -1482,6 +1516,14 @@ body {
 
 /* ── Preferred XI ─────────────────────────────────────────────────────── */
 .preferred-xi { display: flex; flex-direction: column; gap: 16px; }
+@media (min-width: 1560px) {
+  /* Wide canvas: enough room in the 35% Preferred XI column to lay its
+     four position buckets 2x2 instead of stacked -- uses the width without
+     growing the section any taller. Gated to very wide viewports only --
+     at 1440px the 35% column isn't quite wide enough for two sub-columns
+     without truncating longer names (e.g. "Rio Ngumoha"). */
+  .preferred-xi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; }
+}
 .xi-col-head {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 10px;
@@ -1511,11 +1553,21 @@ body {
   color: var(--muted);
   letter-spacing: 0.5px;
 }
+.xi-name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
 .xi-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: var(--white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 .xi-ovr {
   font-family: 'Barlow Condensed', sans-serif;
@@ -1531,10 +1583,10 @@ body {
   .formation-pitch { aspect-ratio: 3 / 4; }
 }
 @media (max-width: 480px) {
-  .formation-marker { width: 60px; }
-  .formation-player-photo { width: 38px; height: 38px; border-width: 1.5px; }
+  .formation-marker { width: 92px; }
+  .formation-player-photo { width: 68px; height: 68px; border-width: 2px; }
   .formation-player-name { font-size: 9px; }
-  .formation-player-meta { display: none; }
+  .formation-player-meta-row { display: none; }
 }
 
 /* ── Positional Depth ─────────────────────────────────────────────────── */
@@ -1547,7 +1599,7 @@ body {
 }
 .depth-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 16px;
 }
 .depth-position {
@@ -1578,10 +1630,10 @@ body {
 .depth-position-list { padding: 4px 0; }
 .depth-player-row {
   display: grid;
-  grid-template-columns: 20px 34px 1fr 40px;
-  gap: 8px;
+  grid-template-columns: 20px 60px 1fr 40px;
+  gap: 10px;
   align-items: center;
-  padding: 6px 12px;
+  padding: 8px 12px;
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -1597,16 +1649,23 @@ body {
   text-align: center;
 }
 .depth-player-photo {
-  width: 34px;
-  height: 34px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--off-black);
   flex-shrink: 0;
 }
-.depth-player-photo img { width: 100%; height: 100%; object-fit: cover; }
-.depth-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 6px; color: var(--steel); }
+.depth-player-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.depth-player-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 11px; color: var(--steel); }
 .depth-player-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
+.depth-player-tier-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
 .depth-player-tier {
   display: inline-block;
   font-family: 'Barlow Condensed', sans-serif;
@@ -1615,11 +1674,21 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 1px 5px;
-  margin-bottom: 2px;
 }
 .tier-starter  { background: var(--red); color: white; }
 .tier-rotation { background: rgba(74,144,196,0.16); color: var(--dispatch-blue); }
 .tier-prospect { background: rgba(212,168,67,0.14); color: var(--gold); }
+.on-loan-badge {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  color: var(--light);
+  border: 1px solid var(--steel);
+}
 .depth-player-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 600;
@@ -1735,15 +1804,15 @@ body {
 }
 .tac-leader-card:hover { border-color: var(--gold); }
 .tac-leader-photo {
-  width: 44px;
-  height: 44px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
   background: var(--off-black);
   flex-shrink: 0;
 }
-.tac-leader-photo img { width: 100%; height: 100%; object-fit: cover; }
-.tac-leader-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 8px; color: var(--steel); }
+.tac-leader-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.tac-leader-photo .tac-photo-placeholder { width: 100%; height: 100%; padding: 15px; color: var(--steel); }
 .tac-leader-photo .tac-photo-placeholder svg { width: 100%; height: 100%; }
 .tac-leader-label {
   display: block;
@@ -1790,7 +1859,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 24px;
-  padding: 18px 24px;
+  padding: 18px var(--h-gutter);
   border-bottom: 1px solid var(--mid);
 }
 .tac-nav-link {
@@ -5015,12 +5084,39 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   font-family: 'Barlow Condensed', sans-serif; font-size: 10.5px; font-weight: 700;
   letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); align-self: flex-start;
 }
+.squad-card-name-row { display: flex; align-items: center; gap: 6px; min-width: 0; }
 .squad-card-name {
   font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px;
   letter-spacing: 0.4px; color: var(--white); line-height: 1.15;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0;
 }
 .squad-card-meta { font-family: 'Barlow', sans-serif; font-size: 13px; color: var(--light); }
+
+/* ─── Development-status badge (HPTBS / EP / SGP) ───
+   Reused wherever a player row appears: Squad cards above, and the
+   Tactical Centre's positional-depth rows / Preferred XI (tactical.js).
+   Source of truth is wrexham_squad.csv's Status column, parsed by
+   scripts/sync_squad_page.py into SQUAD_DATA[n].devStatus. A restrained
+   scouting-note pill, not another Starter/Rotation/Prospect badge -- the
+   abbreviation is always visible; color is a secondary cue, not the only
+   one, and `title` carries the full phrase for a hover tooltip. */
+.dev-status-badge {
+  display: inline-block;
+  flex-shrink: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border: 1px solid;
+  border-radius: 2px;
+  line-height: 1.3;
+  cursor: default;
+}
+.dev-status-hptbs { color: var(--gold); border-color: rgba(212,168,67,0.5); background: rgba(212,168,67,0.10); }
+.dev-status-ep     { color: var(--dispatch-blue); border-color: rgba(74,144,196,0.5); background: rgba(74,144,196,0.10); }
+.dev-status-sgp    { color: var(--holt-accent); border-color: rgba(79,138,99,0.5); background: rgba(79,138,99,0.12); }
 .squad-card-bio { font-family: 'Barlow', sans-serif; font-size: 12.5px; color: var(--muted); }
 .squad-card-stats {
   font-family: 'Barlow Condensed', sans-serif; font-size: 12.5px; letter-spacing: 0.4px;
@@ -5183,11 +5279,15 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
   display: flex; flex-direction: column; justify-content: center;
   padding: 32px 8px; border-bottom: 3px solid var(--red);
 }
-.player-captain-badge {
-  align-self: flex-start; font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
-  font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--black);
-  background: var(--gold); padding: 5px 12px; margin-bottom: 14px;
+.player-badges {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px;
 }
+.player-captain-badge {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
+  font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--black);
+  background: var(--gold); padding: 5px 12px;
+}
+.player-badges .dev-status-badge { font-size: 10.5px; padding: 5px 10px; }
 .player-name {
   font-family: 'Playfair Display', serif; font-weight: 900; font-size: 52px;
   line-height: 1.02; color: var(--white);
@@ -5226,6 +5326,16 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 .player-stat.gold .player-stat-value { color: var(--gold); }
 .player-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); }
 .player-season-note { margin-top: 14px; font-family: 'Barlow', sans-serif; font-size: 12.5px; color: var(--muted); max-width: 70ch; }
+
+/* ─── Full attribute breakdown ─── */
+.player-attr-subgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; }
+.player-playstyles { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.player-playstyle-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.player-playstyle-chip {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--gold); border: 1px solid var(--gold); border-radius: 3px;
+  padding: 4px 10px;
+}
 
 /* ─── Recent form ─── */
 .player-form { display: flex; gap: 10px; flex-wrap: wrap; }

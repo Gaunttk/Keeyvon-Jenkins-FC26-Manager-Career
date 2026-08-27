@@ -16,6 +16,11 @@ only gets filled in when a screenshot actually shows a player's match
 rating, so a player's `last5` list may be short or absent -- the homepage
 never fabricates a point that isn't there.
 
+Goals/Assists are meaningless for goalkeepers, so GK entries additionally
+carry `trackedApps`/`cleanSheets`/`goalsConceded` (same partial-coverage
+derivation as sync_squad_page.py's load_gk_match_log) and docs/assets/home.js
+renders those instead wherever a GK is spotlighted.
+
 Senior matches only, matching the table's own scope -- youth academy players
 have no rows here and none are generated, which is intentional: the homepage
 Next Generation section never shows season stats or a sparkline.
@@ -47,10 +52,18 @@ ROW_RE = re.compile(
 )
 
 
+NOT_YET_BEGUN_MARKER = "has not yet begun"
+
+
 def extract_table(html_text):
     marker = 'id="player-stats"'
     start = html_text.find(marker)
     if start == -1:
+        if NOT_YET_BEGUN_MARKER in html_text:
+            # Legitimate empty state right after a Season Rollover, before the
+            # new season's first match is logged -- docs/season.html shows the
+            # "Season N has not yet begun" placeholder instead of the table.
+            return None
         raise SystemExit('Could not find id="player-stats" section in docs/season.html')
     end = html_text.find('<div class="footer">', start)
     if end == -1:
@@ -70,6 +83,8 @@ def last_name_key(name):
 def build_players():
     text = SEASON_HTML.read_text(encoding="utf-8")
     table_html = extract_table(text)
+    if table_html is None:
+        return {}
 
     players = {}
     for m in ROW_RE.finditer(table_html):
@@ -85,6 +100,46 @@ def build_players():
     if not players:
         raise SystemExit("Parsed zero player rows -- season.html markup may have changed; check ROW_RE.")
     return players
+
+
+def attach_gk_defensive_stats(players):
+    """For goalkeepers, Goals/Assists are meaningless -- replace them with
+    Clean Sheets / Goals Conceded, derived from season_log.json's
+    player_ratings (only matches with a captured ratings screenshot) joined
+    to that match's score. Partial-coverage by construction, same as the
+    identical derivation in scripts/sync_squad_page.py's load_gk_match_log
+    and scripts/generate_player_pages.py."""
+    if not SEASON_LOG.exists():
+        return
+    log = json.loads(SEASON_LOG.read_text(encoding="utf-8"))
+    by_last_name = {}
+    for canonical in players:
+        by_last_name.setdefault(last_name_key(canonical), canonical)
+
+    gk_log = {}
+    for m in log.get("matches", []):
+        score = m.get("score")
+        pr = m.get("player_ratings")
+        if not score or not pr:
+            continue
+        wg, og = (int(x) for x in score.split("-"))
+        for raw_name in pr:
+            canonical = by_last_name.get(last_name_key(raw_name))
+            if not canonical or players[canonical]["position"] != "GK":
+                continue
+            entry = gk_log.setdefault(canonical, {"trackedApps": 0, "cleanSheets": 0, "goalsConceded": 0})
+            entry["trackedApps"] += 1
+            entry["goalsConceded"] += og
+            if og == 0:
+                entry["cleanSheets"] += 1
+
+    for canonical, player in players.items():
+        if player["position"] != "GK":
+            continue
+        gk = gk_log.get(canonical, {"trackedApps": 0, "cleanSheets": 0, "goalsConceded": 0})
+        player["trackedApps"] = gk["trackedApps"]
+        player["cleanSheets"] = gk["cleanSheets"]
+        player["goalsConceded"] = gk["goalsConceded"]
 
 
 def attach_last5(players):
@@ -111,6 +166,7 @@ def attach_last5(players):
 
 def main():
     players = build_players()
+    attach_gk_defensive_stats(players)
     attach_last5(players)
 
     body = (

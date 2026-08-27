@@ -4,7 +4,7 @@
    Squad landing page (docs/roster.html + docs/assets/squad.js).
    Re-run after any wrexham_squad.csv change or player_stats.js refresh. */
 const SQUAD_DATA = {
-  "season": "2026/27",
+  "season": "2027/28",
   "competition": "Premier League",
   "players": [
     {
@@ -14,22 +14,23 @@ const SQUAD_DATA = {
         "GK"
       ],
       "group": "Goalkeepers",
-      "age": 24,
-      "ovr": 74,
+      "age": 25,
+      "ovr": 76,
       "height": "6'5\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/arthur_okonkwo.png",
       "season": {
         "isGk": true,
-        "apps": 33,
-        "rating": 6.0,
-        "trackedApps": 8,
-        "cleanSheets": 5,
-        "goalsConceded": 3
+        "apps": 1,
+        "rating": 6.2,
+        "trackedApps": 1,
+        "cleanSheets": 1,
+        "goalsConceded": 0
       }
     },
     {
@@ -39,21 +40,22 @@ const SQUAD_DATA = {
         "RB"
       ],
       "group": "Defenders",
-      "age": 25,
-      "ovr": 74,
+      "age": 26,
+      "ovr": 78,
       "height": "6'0\"",
       "foot": "Left",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/liberato_cacace.png",
       "season": {
         "isGk": false,
-        "apps": 41,
+        "apps": 1,
         "goals": 0,
-        "assists": 2,
-        "rating": 6.4
+        "assists": 0,
+        "rating": 7.5
       }
     },
     {
@@ -64,21 +66,16 @@ const SQUAD_DATA = {
       ],
       "group": "Defenders",
       "age": 24,
-      "ovr": 71,
+      "ovr": 72,
       "height": "6'3\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/max_cleworth.png",
-      "season": {
-        "isGk": false,
-        "apps": 18,
-        "goals": 0,
-        "assists": 0,
-        "rating": 6.8
-      }
+      "season": null
     },
     {
       "name": "Callum Doyle",
@@ -88,21 +85,22 @@ const SQUAD_DATA = {
         "LB"
       ],
       "group": "Defenders",
-      "age": 22,
-      "ovr": 76,
+      "age": 23,
+      "ovr": 77,
       "height": "6'3\"",
       "foot": "Left",
       "squadRole": "Important",
       "potential": null,
       "captain": true,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/callum_doyle.png",
       "season": {
         "isGk": false,
-        "apps": 35,
+        "apps": 2,
         "goals": 0,
         "assists": 0,
-        "rating": 7.3
+        "rating": 6.6
       }
     },
     {
@@ -112,8 +110,8 @@ const SQUAD_DATA = {
         "RB"
       ],
       "group": "Defenders",
-      "age": 22,
-      "ovr": 70,
+      "age": 23,
+      "ovr": 74,
       "height": "5'10\"",
       "foot": "Right",
       "squadRole": "Rotation",
@@ -123,14 +121,9 @@ const SQUAD_DATA = {
         "club": "Real Betis",
         "back": "09 Jan 2029"
       },
+      "devStatus": null,
       "image": "assets/photos/joenathan_amelia.png",
-      "season": {
-        "isGk": false,
-        "apps": 14,
-        "goals": 3,
-        "assists": 0,
-        "rating": 6.8
-      }
+      "season": null
     },
     {
       "name": "Bailey Cadamarteri",
@@ -139,17 +132,18 @@ const SQUAD_DATA = {
         "ST"
       ],
       "group": "Forwards",
-      "age": 20,
-      "ovr": 67,
+      "age": 22,
+      "ovr": 71,
       "height": "6'0\"",
       "foot": "Right",
-      "squadRole": "Rotation",
+      "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
       "loan": {
-        "club": "Boca Juniors",
-        "back": "15 Jul 2027"
+        "club": "Fulham",
+        "back": "15 Jul 2029"
       },
+      "devStatus": null,
       "image": "assets/photos/bailey_cadamarteri.png",
       "season": null
     },
@@ -161,22 +155,17 @@ const SQUAD_DATA = {
         "LW"
       ],
       "group": "Forwards",
-      "age": 21,
-      "ovr": 74,
+      "age": 23,
+      "ovr": 76,
       "height": "6'2\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/yacel_amrizi.png",
-      "season": {
-        "isGk": false,
-        "apps": 42,
-        "goals": 25,
-        "assists": 13,
-        "rating": 7.3
-      }
+      "season": null
     },
     {
       "name": "Andrés Gómez",
@@ -186,21 +175,22 @@ const SQUAD_DATA = {
         "RW"
       ],
       "group": "Midfielders",
-      "age": 23,
-      "ovr": 75,
+      "age": 24,
+      "ovr": 78,
       "height": "5'7\"",
       "foot": "Right",
       "squadRole": "Crucial",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/andres_gomez.png",
       "season": {
         "isGk": false,
-        "apps": 37,
-        "goals": 6,
-        "assists": 8,
-        "rating": 6.3
+        "apps": 3,
+        "goals": 2,
+        "assists": 0,
+        "rating": 6.7
       }
     },
     {
@@ -212,21 +202,22 @@ const SQUAD_DATA = {
         "LM"
       ],
       "group": "Midfielders",
-      "age": 22,
-      "ovr": 73,
+      "age": 23,
+      "ovr": 79,
       "height": "5'10\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/brian_gutierrez.png",
       "season": {
         "isGk": false,
-        "apps": 41,
-        "goals": 1,
+        "apps": 3,
+        "goals": 0,
         "assists": 0,
-        "rating": 6.9
+        "rating": 6.2
       }
     },
     {
@@ -237,21 +228,22 @@ const SQUAD_DATA = {
         "CDM"
       ],
       "group": "Midfielders",
-      "age": 24,
-      "ovr": 74,
+      "age": 25,
+      "ovr": 78,
       "height": "5'11\"",
       "foot": "Right",
       "squadRole": "Crucial",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/damian_bobadilla.png",
       "season": {
         "isGk": false,
-        "apps": 43,
-        "goals": 13,
-        "assists": 6,
-        "rating": 6.5
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "rating": 6.4
       }
     },
     {
@@ -261,8 +253,8 @@ const SQUAD_DATA = {
         "GK"
       ],
       "group": "Goalkeepers",
-      "age": 17,
-      "ovr": 64,
+      "age": 18,
+      "ovr": 66,
       "height": "6'2\"",
       "foot": "Right",
       "squadRole": "Prospect",
@@ -272,15 +264,9 @@ const SQUAD_DATA = {
         "club": "Samsunspor",
         "back": "31 Aug 2028"
       },
+      "devStatus": null,
       "image": "assets/photos/mason_webber.png",
-      "season": {
-        "isGk": true,
-        "apps": 6,
-        "rating": 6.2,
-        "trackedApps": 0,
-        "cleanSheets": 0,
-        "goalsConceded": 0
-      }
+      "season": null
     },
     {
       "name": "Santiago Ortega",
@@ -290,17 +276,18 @@ const SQUAD_DATA = {
         "LW"
       ],
       "group": "Midfielders",
-      "age": 18,
-      "ovr": 63,
+      "age": 19,
+      "ovr": 67,
       "height": "5'10\"",
       "foot": "Left",
-      "squadRole": "Prospect",
+      "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
       "loan": {
-        "club": "Birmingham City",
-        "back": "17 Jul 2027"
+        "club": "Watford",
+        "back": "12 Jul 2028"
       },
+      "devStatus": null,
       "image": null,
       "season": null
     },
@@ -312,21 +299,22 @@ const SQUAD_DATA = {
         "CDM"
       ],
       "group": "Midfielders",
-      "age": 24,
-      "ovr": 71,
+      "age": 25,
+      "ovr": 74,
       "height": "5'10\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/milan_vitalis.png",
       "season": {
         "isGk": false,
-        "apps": 29,
-        "goals": 1,
-        "assists": 2,
-        "rating": 6.6
+        "apps": 3,
+        "goals": 0,
+        "assists": 1,
+        "rating": 6.5
       }
     },
     {
@@ -337,21 +325,22 @@ const SQUAD_DATA = {
         "RM"
       ],
       "group": "Forwards",
-      "age": 23,
-      "ovr": 71,
+      "age": 24,
+      "ovr": 74,
       "height": "5'8\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/vladyslav_veleten.png",
       "season": {
         "isGk": false,
-        "apps": 26,
-        "goals": 3,
-        "assists": 5,
-        "rating": 6.5
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "rating": 6.1
       }
     },
     {
@@ -363,17 +352,18 @@ const SQUAD_DATA = {
         "CAM"
       ],
       "group": "Forwards",
-      "age": 22,
-      "ovr": 72,
+      "age": 24,
+      "ovr": 75,
       "height": "5'7\"",
       "foot": "Right",
-      "squadRole": "Important",
+      "squadRole": "Rotation",
       "potential": null,
       "captain": false,
       "loan": {
         "club": "Real Betis",
-        "back": "15 Jul 2028"
+        "back": "01 Jul 2028"
       },
+      "devStatus": null,
       "image": "assets/photos/alan_minda.png",
       "season": null
     },
@@ -384,21 +374,25 @@ const SQUAD_DATA = {
         "ST"
       ],
       "group": "Forwards",
-      "age": 18,
-      "ovr": 68,
+      "age": 19,
+      "ovr": 72,
       "height": "6'2\"",
       "foot": "Right",
       "squadRole": "Rotation",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "SGP",
+        "label": "Showing Great Potential"
+      },
       "image": "assets/photos/chido_obi.png",
       "season": {
         "isGk": false,
-        "apps": 47,
-        "goals": 25,
-        "assists": 6,
-        "rating": 6.2
+        "apps": 3,
+        "goals": 2,
+        "assists": 0,
+        "rating": 6.6
       }
     },
     {
@@ -410,21 +404,25 @@ const SQUAD_DATA = {
         "LB"
       ],
       "group": "Midfielders",
-      "age": 18,
-      "ovr": 73,
+      "age": 19,
+      "ovr": 75,
       "height": "6'0\"",
       "foot": "Left",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "SGP",
+        "label": "Showing Great Potential"
+      },
       "image": "assets/photos/jorthy_mokio.png",
       "season": {
         "isGk": false,
-        "apps": 46,
-        "goals": 1,
-        "assists": 1,
-        "rating": 6.8
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "rating": 6.5
       }
     },
     {
@@ -436,21 +434,22 @@ const SQUAD_DATA = {
         "CM"
       ],
       "group": "Forwards",
-      "age": 25,
-      "ovr": 79,
+      "age": 26,
+      "ovr": 81,
       "height": "5'10\"",
       "foot": "Right",
       "squadRole": "Crucial",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/toni_fruk.png",
       "season": {
         "isGk": false,
-        "apps": 44,
-        "goals": 13,
-        "assists": 15,
-        "rating": 6.3
+        "apps": 3,
+        "goals": 0,
+        "assists": 0,
+        "rating": 6.5
       }
     },
     {
@@ -461,21 +460,22 @@ const SQUAD_DATA = {
         "CM"
       ],
       "group": "Midfielders",
-      "age": 17,
-      "ovr": 71,
+      "age": 18,
+      "ovr": 75,
       "height": "6'0\"",
       "foot": "Right",
       "squadRole": "Rotation",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/jamal_belghazi.png",
       "season": {
         "isGk": false,
-        "apps": 27,
+        "apps": 3,
         "goals": 0,
         "assists": 0,
-        "rating": 6.3
+        "rating": 6.8
       }
     },
     {
@@ -488,21 +488,22 @@ const SQUAD_DATA = {
         "CDM"
       ],
       "group": "Defenders",
-      "age": 17,
-      "ovr": 71,
+      "age": 18,
+      "ovr": 73,
       "height": "5'7\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/mario_barbieri.png",
       "season": {
         "isGk": false,
-        "apps": 33,
+        "apps": 3,
         "goals": 0,
         "assists": 0,
-        "rating": 6.5
+        "rating": 7.0
       }
     },
     {
@@ -513,21 +514,25 @@ const SQUAD_DATA = {
         "LW"
       ],
       "group": "Midfielders",
-      "age": 17,
-      "ovr": 76,
+      "age": 18,
+      "ovr": 79,
       "height": "5'7\"",
       "foot": "Right",
       "squadRole": "Crucial",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "EP",
+        "label": "An Exciting Prospect"
+      },
       "image": "assets/photos/rio_ngumoha.png",
       "season": {
         "isGk": false,
-        "apps": 44,
-        "goals": 14,
-        "assists": 9,
-        "rating": 6.9
+        "apps": 3,
+        "goals": 0,
+        "assists": 2,
+        "rating": 6.5
       }
     },
     {
@@ -537,21 +542,25 @@ const SQUAD_DATA = {
         "CB"
       ],
       "group": "Defenders",
-      "age": 19,
-      "ovr": 76,
+      "age": 20,
+      "ovr": 79,
       "height": "6'2\"",
       "foot": "Left",
       "squadRole": "Crucial",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "EP",
+        "label": "An Exciting Prospect"
+      },
       "image": "assets/photos/ayden_heaven.png",
       "season": {
         "isGk": false,
-        "apps": 41,
+        "apps": 3,
         "goals": 0,
-        "assists": 1,
-        "rating": 7.2
+        "assists": 0,
+        "rating": 6.4
       }
     },
     {
@@ -564,20 +573,24 @@ const SQUAD_DATA = {
       ],
       "group": "Defenders",
       "age": 20,
-      "ovr": 69,
+      "ovr": 70,
       "height": "5'8\"",
       "foot": "Right",
       "squadRole": "Rotation",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "SGP",
+        "label": "Showing Great Potential"
+      },
       "image": "assets/photos/elijah_dijkstra.png",
       "season": {
         "isGk": false,
-        "apps": 20,
+        "apps": 3,
         "goals": 0,
-        "assists": 3,
-        "rating": 6.6
+        "assists": 0,
+        "rating": 6.8
       }
     },
     {
@@ -588,22 +601,20 @@ const SQUAD_DATA = {
       ],
       "group": "Defenders",
       "age": 19,
-      "ovr": 65,
+      "ovr": 68,
       "height": "6'0\"",
       "foot": "Left",
       "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
-      "loan": {
-        "club": "Ipswich Town",
-        "back": "09 Jul 2027"
-      },
+      "loan": null,
+      "devStatus": null,
       "image": "assets/photos/andres_cuenca.png",
       "season": {
         "isGk": false,
-        "apps": 9,
+        "apps": 3,
         "goals": 0,
-        "assists": 1,
+        "assists": 0,
         "rating": 6.7
       }
     },
@@ -615,21 +626,25 @@ const SQUAD_DATA = {
         "LM"
       ],
       "group": "Forwards",
-      "age": 20,
-      "ovr": 76,
+      "age": 21,
+      "ovr": 80,
       "height": "6'0\"",
       "foot": "Right",
       "squadRole": "Crucial",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "SGP",
+        "label": "Showing Great Potential"
+      },
       "image": "assets/photos/leo_sauer.png",
       "season": {
         "isGk": false,
-        "apps": 42,
-        "goals": 10,
-        "assists": 11,
-        "rating": 6.7
+        "apps": 2,
+        "goals": 1,
+        "assists": 0,
+        "rating": 7.4
       }
     },
     {
@@ -640,19 +655,23 @@ const SQUAD_DATA = {
         "CDM"
       ],
       "group": "Midfielders",
-      "age": 17,
-      "ovr": 65,
+      "age": 18,
+      "ovr": 67,
       "height": "6'3\"",
       "foot": "Right",
-      "squadRole": "Prospect",
+      "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
-      "loan": {
-        "club": "Swansea City",
-        "back": "31 Aug 2027"
-      },
+      "loan": null,
+      "devStatus": null,
       "image": "assets/photos/carlos_macia.png",
-      "season": null
+      "season": {
+        "isGk": false,
+        "apps": 3,
+        "goals": 0,
+        "assists": 0,
+        "rating": 7.0
+      }
     },
     {
       "name": "Bernt Klaverboer",
@@ -661,22 +680,23 @@ const SQUAD_DATA = {
         "GK"
       ],
       "group": "Goalkeepers",
-      "age": 20,
-      "ovr": 72,
+      "age": 21,
+      "ovr": 75,
       "height": "6'3\"",
       "foot": "Right",
       "squadRole": "Important",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": null,
       "image": "assets/photos/bernt_klaverboer.png",
       "season": {
         "isGk": true,
-        "apps": 15,
-        "rating": 6.5,
-        "trackedApps": 4,
+        "apps": 2,
+        "rating": 6.4,
+        "trackedApps": 2,
         "cleanSheets": 2,
-        "goalsConceded": 5
+        "goalsConceded": 0
       }
     },
     {
@@ -687,20 +707,24 @@ const SQUAD_DATA = {
       ],
       "group": "Midfielders",
       "age": 17,
-      "ovr": 65,
+      "ovr": 68,
       "height": "5'9\"",
       "foot": "Right",
       "squadRole": "Prospect",
       "potential": "90-94",
       "captain": false,
-      "loan": null,
+      "loan": {
+        "club": "Ipswich Town",
+        "back": "31 Jul 2028"
+      },
+      "devStatus": null,
       "image": "assets/photos/vargas.png",
       "season": {
         "isGk": false,
-        "apps": 34,
-        "goals": 4,
-        "assists": 6,
-        "rating": 6.6
+        "apps": 2,
+        "goals": 0,
+        "assists": 0,
+        "rating": 6.0
       }
     },
     {
@@ -710,8 +734,8 @@ const SQUAD_DATA = {
         "LW"
       ],
       "group": "Forwards",
-      "age": 18,
-      "ovr": 67,
+      "age": 19,
+      "ovr": 70,
       "height": "5'8\"",
       "foot": "Left",
       "squadRole": "Sporadic",
@@ -721,14 +745,9 @@ const SQUAD_DATA = {
         "club": "Al Ahli",
         "back": "13 Jan 2029"
       },
+      "devStatus": null,
       "image": "assets/photos/soria.png",
-      "season": {
-        "isGk": false,
-        "apps": 2,
-        "goals": 0,
-        "assists": 0,
-        "rating": 6.7
-      }
+      "season": null
     },
     {
       "name": "Emiliano Bianchi",
@@ -738,24 +757,19 @@ const SQUAD_DATA = {
       ],
       "group": "Midfielders",
       "age": 17,
-      "ovr": 61,
+      "ovr": 62,
       "height": "6'3\"",
       "foot": "Left",
       "squadRole": "Prospect",
       "potential": "72-76",
       "captain": false,
       "loan": {
-        "club": "FC Magdeburg",
-        "back": null
+        "club": "Jagiellonia",
+        "back": "14 Jul 2029"
       },
+      "devStatus": null,
       "image": "assets/photos/bianchi.png",
-      "season": {
-        "isGk": false,
-        "apps": 1,
-        "goals": 0,
-        "assists": 0,
-        "rating": 6.0
-      }
+      "season": null
     },
     {
       "name": "Thiago Pitarch",
@@ -767,20 +781,24 @@ const SQUAD_DATA = {
       ],
       "group": "Midfielders",
       "age": 19,
-      "ovr": 73,
+      "ovr": 74,
       "height": "5'10\"",
       "foot": "Right",
       "squadRole": "Rotation",
       "potential": null,
       "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "EP",
+        "label": "An Exciting Prospect"
+      },
       "image": "assets/photos/thiago_pitarch.png",
       "season": {
         "isGk": false,
-        "apps": 22,
+        "apps": 3,
         "goals": 0,
-        "assists": 2,
-        "rating": 6.6
+        "assists": 0,
+        "rating": 6.3
       }
     },
     {
@@ -790,8 +808,8 @@ const SQUAD_DATA = {
         "LB"
       ],
       "group": "Defenders",
-      "age": 18,
-      "ovr": 67,
+      "age": 19,
+      "ovr": 70,
       "height": "5'7\"",
       "foot": "Left",
       "squadRole": "Sporadic",
@@ -801,6 +819,7 @@ const SQUAD_DATA = {
         "club": "AZ",
         "back": null
       },
+      "devStatus": null,
       "image": "assets/photos/lord.png",
       "season": null
     },
@@ -812,7 +831,7 @@ const SQUAD_DATA = {
       ],
       "group": "Defenders",
       "age": 18,
-      "ovr": 61,
+      "ovr": 62,
       "height": "5'11\"",
       "foot": "Left",
       "squadRole": "Prospect",
@@ -820,16 +839,11 @@ const SQUAD_DATA = {
       "captain": false,
       "loan": {
         "club": "CD Castellon",
-        "back": "Mar 2028"
+        "back": "Jul 2028"
       },
+      "devStatus": null,
       "image": "assets/photos/martini.png",
-      "season": {
-        "isGk": false,
-        "apps": 4,
-        "goals": 0,
-        "assists": 0,
-        "rating": 6.3
-      }
+      "season": null
     },
     {
       "name": "Nico Kopp",
@@ -839,25 +853,19 @@ const SQUAD_DATA = {
       ],
       "group": "Goalkeepers",
       "age": 18,
-      "ovr": 63,
+      "ovr": 64,
       "height": "6'7\"",
       "foot": "Left",
       "squadRole": "Prospect",
       "potential": "77-83",
       "captain": false,
       "loan": {
-        "club": "FC Basel",
-        "back": "20 Mar 2028"
+        "club": "FC Basel 1893",
+        "back": "Jul 2028"
       },
+      "devStatus": null,
       "image": "assets/photos/kopp.png",
-      "season": {
-        "isGk": true,
-        "apps": 1,
-        "rating": 6.7,
-        "trackedApps": 2,
-        "cleanSheets": 1,
-        "goalsConceded": 1
-      }
+      "season": null
     },
     {
       "name": "Fabricio Sandoval",
@@ -875,8 +883,9 @@ const SQUAD_DATA = {
       "captain": false,
       "loan": {
         "club": "Hull City",
-        "back": "May 2029"
+        "back": "Jul 2029"
       },
+      "devStatus": null,
       "image": "assets/photos/sandoval.png",
       "season": null
     },
@@ -894,7 +903,11 @@ const SQUAD_DATA = {
       "squadRole": "Prospect",
       "potential": "76-84",
       "captain": false,
-      "loan": null,
+      "loan": {
+        "club": "Bristol City",
+        "back": "Jul 2028"
+      },
+      "devStatus": null,
       "image": "assets/photos/faure.png",
       "season": null
     },
@@ -912,14 +925,113 @@ const SQUAD_DATA = {
       "squadRole": "Prospect",
       "potential": "74-88",
       "captain": false,
+      "loan": {
+        "club": "West Brom",
+        "back": "Jul 2028"
+      },
+      "devStatus": null,
+      "image": null,
+      "season": null
+    },
+    {
+      "name": "Musa Tine",
+      "slug": "musa-tine",
+      "positions": [
+        "ST"
+      ],
+      "group": "Forwards",
+      "age": 17,
+      "ovr": 68,
+      "height": "6'2\"",
+      "foot": "Right",
+      "squadRole": "Sporadic",
+      "potential": null,
+      "captain": false,
       "loan": null,
+      "devStatus": {
+        "code": "SGP",
+        "label": "Showing Great Potential"
+      },
       "image": null,
       "season": {
         "isGk": false,
-        "apps": 1,
-        "goals": 0,
+        "apps": 3,
+        "goals": 2,
         "assists": 0,
-        "rating": 5.9
+        "rating": 6.7
+      }
+    },
+    {
+      "name": "Stephane Bertrand",
+      "slug": "stephane-bertrand",
+      "positions": [
+        "RW"
+      ],
+      "group": "Forwards",
+      "age": 16,
+      "ovr": 60,
+      "height": "5'6\"",
+      "foot": "Right",
+      "squadRole": "Prospect",
+      "potential": "91-94",
+      "captain": false,
+      "loan": {
+        "club": "Carrarese Calcio",
+        "back": "Jul 2028"
+      },
+      "devStatus": null,
+      "image": "assets/photos/bertrand.png",
+      "season": null
+    },
+    {
+      "name": "Nathan Salaun",
+      "slug": "nathan-salaun",
+      "positions": [
+        "ST"
+      ],
+      "group": "Forwards",
+      "age": 16,
+      "ovr": 54,
+      "height": "5'10\"",
+      "foot": "Right",
+      "squadRole": "Prospect",
+      "potential": "81-87",
+      "captain": false,
+      "loan": {
+        "club": "Barnet",
+        "back": "Jul 2029"
+      },
+      "devStatus": null,
+      "image": null,
+      "season": null
+    },
+    {
+      "name": "Adrian Kaczmarek",
+      "slug": "adrian-kaczmarek",
+      "positions": [
+        "GK"
+      ],
+      "group": "Goalkeepers",
+      "age": 17,
+      "ovr": 72,
+      "height": "6'5\"",
+      "foot": "Left",
+      "squadRole": "Rotation",
+      "potential": "84-90",
+      "captain": false,
+      "loan": null,
+      "devStatus": {
+        "code": "EP",
+        "label": "An Exciting Prospect"
+      },
+      "image": "assets/photos/adrian_kaczmarek.png",
+      "season": {
+        "isGk": true,
+        "apps": 3,
+        "rating": 6.3,
+        "trackedApps": 3,
+        "cleanSheets": 3,
+        "goalsConceded": 0
       }
     }
   ],
@@ -931,48 +1043,43 @@ const SQUAD_DATA = {
       "LW"
     ],
     "group": "Forwards",
-    "age": 21,
-    "ovr": 74,
+    "age": 23,
+    "ovr": 76,
     "height": "6'2\"",
     "foot": "Right",
     "squadRole": "Important",
     "potential": null,
     "captain": false,
     "loan": null,
+    "devStatus": null,
     "image": "assets/photos/yacel_amrizi.png",
-    "season": {
-      "isGk": false,
-      "apps": 42,
-      "goals": 25,
-      "assists": 13,
-      "rating": 7.3
-    }
+    "season": null
   },
   "glance": {
-    "squadSize": 37,
-    "avgAge": 19.9,
-    "avgOvr": 69.7,
+    "squadSize": 41,
+    "avgAge": 20.3,
+    "avgOvr": 71.3,
     "highestOvr": "Toni Fruk",
-    "highestOvrValue": 79,
-    "youngest": "Mason Webber",
-    "youngestAge": 17,
-    "onLoan": 13,
+    "highestOvrValue": 81,
+    "youngest": "Stephane Bertrand",
+    "youngestAge": 16,
+    "onLoan": 16,
     "captain": "Callum Doyle",
-    "topScorer": "Yacel Amrizi",
-    "topScorerGoals": 25,
-    "mostAssists": "Toni Fruk",
-    "mostAssistsValue": 15
+    "topScorer": "Andrés Gómez",
+    "topScorerGoals": 2,
+    "mostAssists": "Rio Ngumoha",
+    "mostAssistsValue": 2
   },
   "leaders": {
     "goals": [
       {
-        "name": "Yacel Amrizi",
-        "image": "assets/photos/yacel_amrizi.png",
+        "name": "Andrés Gómez",
+        "image": "assets/photos/andres_gomez.png",
         "positions": [
-          "ST",
-          "LW"
+          "RM",
+          "RW"
         ],
-        "value": 25
+        "value": 2
       },
       {
         "name": "Chido Obi",
@@ -980,56 +1087,15 @@ const SQUAD_DATA = {
         "positions": [
           "ST"
         ],
-        "value": 25
+        "value": 2
       },
       {
-        "name": "Rio Ngumoha",
-        "image": "assets/photos/rio_ngumoha.png",
+        "name": "Musa Tine",
+        "image": null,
         "positions": [
-          "LM",
-          "LW"
+          "ST"
         ],
-        "value": 14
-      },
-      {
-        "name": "Damián Bobadilla",
-        "image": "assets/photos/damian_bobadilla.png",
-        "positions": [
-          "CM",
-          "CDM"
-        ],
-        "value": 13
-      },
-      {
-        "name": "Toni Fruk",
-        "image": "assets/photos/toni_fruk.png",
-        "positions": [
-          "ST",
-          "CAM",
-          "CM"
-        ],
-        "value": 13
-      }
-    ],
-    "assists": [
-      {
-        "name": "Toni Fruk",
-        "image": "assets/photos/toni_fruk.png",
-        "positions": [
-          "ST",
-          "CAM",
-          "CM"
-        ],
-        "value": 15
-      },
-      {
-        "name": "Yacel Amrizi",
-        "image": "assets/photos/yacel_amrizi.png",
-        "positions": [
-          "ST",
-          "LW"
-        ],
-        "value": 13
+        "value": 2
       },
       {
         "name": "Leo Sauer",
@@ -1038,8 +1104,10 @@ const SQUAD_DATA = {
           "LW",
           "LM"
         ],
-        "value": 11
-      },
+        "value": 1
+      }
+    ],
+    "assists": [
       {
         "name": "Rio Ngumoha",
         "image": "assets/photos/rio_ngumoha.png",
@@ -1047,8 +1115,19 @@ const SQUAD_DATA = {
           "LM",
           "LW"
         ],
-        "value": 9
+        "value": 2
       },
+      {
+        "name": "Milán Vitális",
+        "image": "assets/photos/milan_vitalis.png",
+        "positions": [
+          "CM",
+          "CDM"
+        ],
+        "value": 1
+      }
+    ],
+    "apps": [
       {
         "name": "Andrés Gómez",
         "image": "assets/photos/andres_gomez.png",
@@ -1056,83 +1135,7 @@ const SQUAD_DATA = {
           "RM",
           "RW"
         ],
-        "value": 8
-      }
-    ],
-    "apps": [
-      {
-        "name": "Chido Obi",
-        "image": "assets/photos/chido_obi.png",
-        "positions": [
-          "ST"
-        ],
-        "value": 47
-      },
-      {
-        "name": "Jorthy Mokio",
-        "image": "assets/photos/jorthy_mokio.png",
-        "positions": [
-          "CDM",
-          "CM",
-          "LB"
-        ],
-        "value": 46
-      },
-      {
-        "name": "Toni Fruk",
-        "image": "assets/photos/toni_fruk.png",
-        "positions": [
-          "ST",
-          "CAM",
-          "CM"
-        ],
-        "value": 44
-      },
-      {
-        "name": "Rio Ngumoha",
-        "image": "assets/photos/rio_ngumoha.png",
-        "positions": [
-          "LM",
-          "LW"
-        ],
-        "value": 44
-      },
-      {
-        "name": "Damián Bobadilla",
-        "image": "assets/photos/damian_bobadilla.png",
-        "positions": [
-          "CM",
-          "CDM"
-        ],
-        "value": 43
-      }
-    ],
-    "rating": [
-      {
-        "name": "Callum Doyle",
-        "image": "assets/photos/callum_doyle.png",
-        "positions": [
-          "CB",
-          "LB"
-        ],
-        "value": 7.3
-      },
-      {
-        "name": "Yacel Amrizi",
-        "image": "assets/photos/yacel_amrizi.png",
-        "positions": [
-          "ST",
-          "LW"
-        ],
-        "value": 7.3
-      },
-      {
-        "name": "Ayden Heaven",
-        "image": "assets/photos/ayden_heaven.png",
-        "positions": [
-          "CB"
-        ],
-        "value": 7.2
+        "value": 3
       },
       {
         "name": "Brian Gutiérrez",
@@ -1142,18 +1145,37 @@ const SQUAD_DATA = {
           "CM",
           "LM"
         ],
-        "value": 6.9
+        "value": 3
       },
       {
-        "name": "Rio Ngumoha",
-        "image": "assets/photos/rio_ngumoha.png",
+        "name": "Milán Vitális",
+        "image": "assets/photos/milan_vitalis.png",
         "positions": [
-          "LM",
-          "LW"
+          "CM",
+          "CDM"
         ],
-        "value": 6.9
+        "value": 3
+      },
+      {
+        "name": "Chido Obi",
+        "image": "assets/photos/chido_obi.png",
+        "positions": [
+          "ST"
+        ],
+        "value": 3
+      },
+      {
+        "name": "Toni Fruk",
+        "image": "assets/photos/toni_fruk.png",
+        "positions": [
+          "ST",
+          "CAM",
+          "CM"
+        ],
+        "value": 3
       }
-    ]
+    ],
+    "rating": []
   },
   "academyPreview": [
     {
@@ -1165,12 +1187,12 @@ const SQUAD_DATA = {
       "image": "assets/photos/collin.png"
     },
     {
-      "name": "Victor Cardoso",
-      "position": "RB",
-      "age": 14,
-      "ovr": 50,
-      "potential": "77-85",
-      "image": "assets/photos/cardoso.png"
+      "name": "Nathaniel Matthews",
+      "position": "RW",
+      "age": 16,
+      "ovr": 62,
+      "potential": "75-81",
+      "image": "assets/photos/matthews.png"
     },
     {
       "name": "Stephane Bertrand",

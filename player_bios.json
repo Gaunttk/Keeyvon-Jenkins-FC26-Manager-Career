@@ -61,12 +61,6 @@
     ],
     "had_career_table": true
   },
-  "Aaron James": {
-    "paragraphs": [
-      "A homegrown Wrexham product, James rose through the club's youth ranks to become youth-team captain, signing his first professional contract at 16 in December 2021. His EFL debut came in October 2023, deputising amid injuries elsewhere in defence, and he was part of the squad that won back-to-back promotions from the National League. To gain regular first-team minutes, Wrexham loaned him to National League North side Warrington Town for the second half of 2024–25, where he featured regularly at centre-back or right-back."
-    ],
-    "had_career_table": true
-  },
   "Ayden Heaven": {
     "paragraphs": [
       "English centre-back, 19, signed from Manchester United for a reported $18.4m. Willing to negotiate new terms. Real-world career detail not yet confirmed for this save."
@@ -217,5 +211,41 @@
       "Croatian forward, 25, signed as a free agent, willing to negotiate new terms. PlayStyles: Dead Ball, Incisive Pass, Long Ball Pass. Real-world career detail not yet confirmed for this save."
     ],
     "had_career_table": false
+  },
+  "Fabricio Sandoval": {
+    "had_career_table": false,
+    "paragraphs": [
+      "Sandoval grew up three streets from Boca Juniors' Casa Amarilla in La Boca, and his earliest football memory is being lifted onto his uncle's shoulders inside La Bombonera for a Superclásico he was really too young to remember clearly — he swears he does anyway. He joined Boca's own academy at seven, a left-footed No. 10 who could thread a pass through spaces that didn't look like they existed, and stayed until fifteen, when a coaching change upstream tightened the pathway to the first team and his family made the harder call: better development minutes somewhere else than a bench seat at the biggest club in Argentina. A trial arranged through a former Boca youth-team physio who'd relocated to Wales brought him to Colliers Park at sixteen, and homesickness nearly won in the first month — he still calls his grandmother in La Boca every single Sunday without fail. What kept him there was simple: nobody in Wrexham's academy had ever asked him to stop trying the pass that only works one time in five. Two years on, it's starting to work more than one time in five."
+    ]
+  },
+  "Lilian Faure": {
+    "had_career_table": false,
+    "paragraphs": [
+      "Faure was born in Nantes and spent his whole childhood a ten-minute walk from the Stade de la Beaujoire, close enough that on European nights the crowd noise used to drift over the rooftops into his bedroom. He joined FC Nantes' academy at eight and was considered one of the better wide players in his age group until a serious ankle injury at fourteen cost him the better part of a season — by the time he was fit again, the club had moved on to a younger intake and there was no path back. Wrexham's French scouting network, the same one that would later bring in Bertrand and Collin, picked him up on the recommendation of a Nantes youth coach who'd stayed in touch out of guilt as much as belief. He signed without ever having watched a full Wrexham match, on the strength of one phone call and a highlight reel. His father, a dockworker at the Port of Nantes, has since become fluent in reading a Welsh football form guide he cannot pronounce a word of, purely so he has something to argue about with his son over video calls."
+    ]
+  },
+  "Matthieu Brunel": {
+    "had_career_table": false,
+    "paragraphs": [
+      "Brunel grew up in Lille's Vieux-Lille district in a family with no real football pedigree — his mother ran a bakery, his father drove regional trains — and discovered the game almost by accident, filling in for a five-a-side team a cousin's friend needed one player short for. He was spotted at twelve playing street football in a car park near the Grand Place by a LOSC Lille academy scout doing nothing more official than picking up his own kid from practice, and spent four years in Lille's youth setup before a growth spurt that arrived a year later than his coaches had banked on cost him his place in the intake. Wrexham signed him at seventeen off a single trial week, mostly on the strength of a poacher's instinct inside the box that scouts kept describing as \"older than his legs.\" He still helps out behind the counter at his mother's bakery every visit home, and swears the muscle memory of kneading dough for years is the real source of his shot power — nobody on the coaching staff has found a way to disprove it."
+    ]
+  },
+  "Musa Tine": {
+    "had_career_table": false,
+    "paragraphs": [
+      "Tine's unlikely path to the Racecourse starts on a dirt pitch outside Port-Gentil, Gabon, where he was first noticed not by a scout but by a Wrexham content producer filming B-roll for a documentary about the club's global academy scouting trips — a fifteen-year-old outjumping and outmuscling boys three years older for every ball in a pickup match happening on the edge of the shoot. The footage got forwarded up the chain almost as a joke; nobody expected it to end with a signing. It did. Wrexham flew him to Wales for a two-week trial that turned into a four-year contract, and within his first month of first-team training, staff were already comparing his combination of raw power and finishing instinct to strikers a decade further into their careers. He arrives with almost no football pedigree on paper — no famous academy, no viral highlight reel before that one — and every bit of upside a club could hope to find for nothing. His signing bonus went straight into a savings account for his mother, who still runs a fish stall in Port-Gentil's central market and has not, as of this writing, agreed to stop."
+    ]
+  },
+  "Stephane Bertrand": {
+    "had_career_table": false,
+    "paragraphs": [
+      "Stephane grew up in Marseille's Le Panier district, where street football on cobbled, sloped alleys shaped a close, low center of gravity that coaches now point to as the source of his footwork. He joined Olympique de Marseille's academy at 9 and stayed until 14, when a philosophy shift toward taller, more physical wingers left him without a contract. Wrexham's French scout Marc Delacroix saw him at the same regional trial that produced Jules Collin, and both signed on 2026-08-15 in the window that also brought Germany's Nico Kopp. His five-star dribbling and a POT ceiling among the highest in the academy made him a name the coaching staff mentioned unprompted well before his sixteenth birthday, and the promotion to the senior squad — with an immediate loan to Carrarese Calcio to get first-team minutes his own dressing room couldn't offer yet — came with the club's 'Has Potential to be Special' scouting tag attached. His father Antoine, a dockworker at the Port of Marseille, has started rearranging his shift pattern around kickoff times in Italy instead of Wales."
+    ]
+  },
+  "Nathan Salaun": {
+    "had_career_table": false,
+    "paragraphs": [
+      "Nathan grew up in Brest, on Brittany's Atlantic coast, in a family that has fished out of the same harbor for three generations — his father Yann still expected him to join the boats until a growth spurt at 14 made football the more obvious calling. He came through Stade Brestois' academy before being released at 15 when the club's recruitment turned toward physically bigger forwards from elsewhere in France. Wrexham's French scout Marc Delacroix found him at the same December 2026 regional showcase that produced Thierry Besse, and both signed on 2026-12-15. Genuinely comfortable off either foot — five stars each way, a rarity even at senior level — he was promoted to the first team and loaned straight to Barnet for two seasons to get the minutes a title-winning squad can't offer an eighteen-year-old yet. Yann has made peace with the football career, on one condition: Nathan still has to help haul nets whenever he's home."
+    ]
   }
 }

@@ -19,11 +19,15 @@ correct automatically.
 
 Run this after any change to wrexham_squad.csv, or after player_stats.js is
 regenerated following a match session (see CLAUDE.md's "Squad Changes" /
-"Match Submission Checklist").
+"Match Submission Checklist"). Also chains scripts/generate_player_pages.py
+at the end, so a single run of this script keeps docs/players/*.html (each
+player's full attribute breakdown) in sync too -- no separate step needed.
 """
 import csv
 import json
 import re
+import subprocess
+import sys
 import unicodedata
 from pathlib import Path
 
@@ -75,6 +79,8 @@ PHOTO_MAP = {
     "Nico Kopp": "assets/photos/kopp.png",
     "Fabricio Sandoval": "assets/photos/sandoval.png",
     "Lilian Faure": "assets/photos/faure.png",
+    "Stephane Bertrand": "assets/photos/bertrand.png",
+    "Adrian Kaczmarek": "assets/photos/adrian_kaczmarek.png",
     # Aaron James: no approved photo -- falls back to placeholder.
 }
 
@@ -107,6 +113,25 @@ def slugify(name):
 
 
 LOAN_RE = re.compile(r"On Loan at ([^(]+?)\s*(?:\(back ([^)]+)\))?$")
+
+# FC26's development-status classification, stored as free text at the front
+# of the Status column (col 11) -- e.g. "Showing Great Potential — Contract
+# already accepted (signed from Ajax)". Order matters: check the more
+# specific "Potential To Be Special" phrase before "Great Potential" since
+# neither substring is a prefix of the other, but keep this ordered by
+# specificity for safety if the game ever varies the wording.
+DEV_STATUS_MAP = [
+    ("Has Potential To Be Special", "HPTBS"),
+    ("An Exciting Prospect", "EP"),
+    ("Showing Great Potential", "SGP"),
+]
+
+
+def parse_dev_status(status_text):
+    for phrase, code in DEV_STATUS_MAP:
+        if phrase in status_text:
+            return {"code": code, "label": phrase}
+    return None
 
 
 def load_player_stats():
@@ -215,6 +240,8 @@ def build():
         if loan_m:
             loan = {"club": loan_m.group(1).strip(), "back": loan_m.group(2) or None}
 
+        dev_status = parse_dev_status(status)
+
         is_captain = bool(re.search(r"\bclub captain\b", notes, re.IGNORECASE))
 
         lk = last_name_key(name)
@@ -252,6 +279,7 @@ def build():
             "potential": potential or None,
             "captain": is_captain,
             "loan": loan,
+            "devStatus": dev_status,
             "image": PHOTO_MAP.get(name),
             "season": season_stats,
         })
@@ -330,6 +358,13 @@ def main():
     )
     OUT.write_text(js, encoding="utf-8")
     print(f"Wrote {OUT} — {len(data['players'])} senior players, season {data['season']}")
+
+    # Every senior player's individual dossier page (docs/players/<slug>.html,
+    # via scripts/generate_player_pages.py) reads the same wrexham_squad.csv
+    # attribute columns this script does. Chaining it here means a squad/attribute
+    # update can never leave those detail pages stale just because this script
+    # ran without the other one -- see CLAUDE.md's "Squad Changes" checklist.
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "generate_player_pages.py")], check=True)
 
 
 if __name__ == "__main__":

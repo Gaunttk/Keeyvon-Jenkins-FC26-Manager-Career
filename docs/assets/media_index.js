@@ -100,6 +100,125 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-08-24-meredith-callens-signing": {
+   "id": "2027-08-24-meredith-callens-signing",
+   "headline": "Deal Collapses: Wrexham Miss Out on Callens, Move Fast on a Different Kind of Bet",
+   "dek": "A free-transfer move for Belgian playmaker Yanis Callens fell apart in its final stretch when a rival matched Wrexham's terms and won on wages — and within a day, the champions had pivoted to a very different kind of signing entirely.",
+   "date": "2027-08-24",
+   "date_label": "Aug 24, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Transfer Window",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2027/28",
+   "tags": [
+    "transfer-window",
+    "premier-league",
+    "pre-season"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-24-meredith-callens-signing"
+  },
+  "entry-001": {
+   "id": "entry-001",
+   "headline": "The Hardest Thing We'll Do Is Stay Hungry",
+   "dek": "A full squad review, a new signing, and the strange feeling of preparing to defend something for the first time in my career.",
+   "date": "2027-08-24",
+   "date_label": "Aug 24, 2027",
+   "author_id": "keeyvon-jenkins",
+   "outlet": "The Hawk's Nest (Private Journal)",
+   "section": null,
+   "content_type": "diary",
+   "entry_number": "Entry 001",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2027/28",
+   "tags": [
+    "season-preview",
+    "squad-review"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#entry-001"
+  },
+  "2027-07-31-meredith-espanyol-euro-cup": {
+   "id": "2027-07-31-meredith-espanyol-euro-cup",
+   "headline": "Sauer's Man of the Match Turn Seals a Perfect Group Stage as Wrexham Rout Espanyol",
+   "dek": "Leo Sauer's early strike, an Espanyol own goal, and a late Musa Tine finish complete a 3-0 win and a flawless three-from-three group stage — Wrexham's cleanest fortnight of the summer.",
+   "date": "2027-07-31",
+   "date_label": "Jul 31, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "european-international-cup",
+    "pre-season",
+    "match-coverage"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-07-31-meredith-espanyol-euro-cup"
+  },
+  "2027-07-27-meredith-gladbach-euro-cup": {
+   "id": "2027-07-27-meredith-gladbach-euro-cup",
+   "headline": "Gómez and Obi Get Wrexham Out of First Gear as Gladbach Are Beaten 2-0",
+   "dek": "A tournament that started as a look at the squad's fringes is starting to look like something Wrexham actually want to win, as second-half goals from Andrés Gómez and Chido Obi make it two wins from two in Germany.",
+   "date": "2027-07-27",
+   "date_label": "Jul 27, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "european-international-cup",
+    "pre-season",
+    "match-coverage"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-07-27-meredith-gladbach-euro-cup"
+  },
+  "2027-07-24-meredith-mallorca-euro-cup": {
+   "id": "2027-07-24-meredith-mallorca-euro-cup",
+   "headline": "Snubbed by the Team of the Season, Wrexham Answer with a Trialist's Winner in Germany",
+   "dek": "A youth-tournament run-out turned into the Musa Tine show as Wrexham opened their European International Cup campaign with a 2-0 win over Mallorca — days after the champions were shut out of the Premier League's official Team of the Season.",
+   "date": "2027-07-24",
+   "date_label": "Jul 24, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "european-international-cup",
+    "pre-season",
+    "match-coverage"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-07-24-meredith-mallorca-euro-cup"
+  },
   "2027-05-23-pl-leeds-united-home": {
    "id": "2027-05-23-pl-leeds-united-home",
    "headline": "Champions: Wrexham Beat Leeds 2-0 to Win the Premier League",
@@ -2057,9 +2176,41 @@ const MEDIA_INDEX = {
    "image": null,
    "image_alt": null,
    "url": "journal.html#entry-transfers"
+  },
+  "2027-08-25-meredith-tine-signing": {
+   "id": "2027-08-25-meredith-tine-signing",
+   "headline": "From a Documentary Shoot to a Four-Year Deal: Wrexham Sign Gabon Teenager Musa Tine",
+   "dek": "A day after missing out on Yanis Callens, Wrexham moved on a seventeen-year-old striker discovered almost by accident — no academy pedigree, no scouting report, just two weeks of training that convinced a football club to bet on him anyway.",
+   "date": "2027-08-25",
+   "date_label": "Aug 25, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Transfer Window",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "transfers",
+   "category_label": "Transfers",
+   "season": "2027/28",
+   "tags": [
+    "transfer-window",
+    "free-transfer",
+    "premier-league",
+    "pre-season",
+    "academy"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-25-meredith-tine-signing"
   }
  },
  "recent_ids": [
+  "2027-08-25-meredith-tine-signing",
+  "2027-08-24-meredith-callens-signing",
+  "entry-001",
+  "2027-07-31-meredith-espanyol-euro-cup",
+  "2027-07-27-meredith-gladbach-euro-cup",
+  "2027-07-24-meredith-mallorca-euro-cup",
   "2027-05-23-pl-leeds-united-home",
   "entry-104",
   "2027-05-23-hargreaves-pl-champions",
@@ -2216,6 +2367,7 @@ const MEDIA_INDEX = {
   }
  ],
  "seasons": [
+  "2027/28",
   "2026/27",
   "2025/26"
  ]
