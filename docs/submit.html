@@ -254,7 +254,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Hawk Submit">
 <link rel="apple-touch-icon" href="assets/icons/hawk-submit-192.png">
-<script src="assets/submit_data.js?v=1787817981" charset="utf-8"></script>
+<script src="assets/submit_data.js?v=1787818329" charset="utf-8"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -323,8 +323,10 @@ if ('serviceWorker' in navigator) {
         <select id="competition">
           <option value="Premier League">Premier League</option>
           <option value="EFL Championship">EFL Championship</option>
+          <option value="UEFA Champions League">UEFA Champions League</option>
           <option value="Carabao Cup">Carabao Cup</option>
           <option value="FA Cup">FA Cup</option>
+          <option value="FA Community Shield">FA Community Shield</option>
           <option value="Play-Offs">Play-Offs</option>
           <option value="Pre-Season Friendly">Pre-Season Friendly</option>
           <option value="European International Cup">European International Cup</option>
@@ -337,9 +339,9 @@ if ('serviceWorker' in navigator) {
       </div>
     </div>
 
-    <div class="form-row" id="pl-fixture-group">
+    <div class="form-row" id="pl-fixture-group" style="display:none;">
       <div class="form-group full">
-        <label for="pl-fixture">Premier League Fixture (pick to auto-fill date / opponent / venue)</label>
+        <label for="pl-fixture" id="pl-fixture-label">Fixture (pick to auto-fill date / opponent / venue)</label>
         <select id="pl-fixture">
           <option value="">— pick from schedule (optional) —</option>
         </select>
@@ -635,7 +637,7 @@ if ('serviceWorker' in navigator) {
 
 <script>
 // ── Roster + attribute snapshot + PL fixtures come from assets/submit_data.js
-//    (ROSTER_SENIOR, ROSTER_ACADEMY, ROSTER_ATTR_DATA, PL_FIXTURES) — regenerate
+//    (ROSTER_SENIOR, ROSTER_ACADEMY, ROSTER_ATTR_DATA, SCHEDULED_FIXTURES) — regenerate
 //    it with `python3 scripts/sync_submit_roster.py` after any squad/academy/
 //    fixtures change. ──
 
@@ -1050,36 +1052,51 @@ document.getElementById('y-opponent').addEventListener('input', function() {
 });
 
 // ── Competition → show round (non-league only; league matchday is derived, not entered) ──
-document.getElementById('competition').addEventListener('change', function() {
-  var isLeague = this.value === 'Premier League' || this.value === 'EFL Championship';
-  document.getElementById('round-group').style.display = isLeague ? 'none' : '';
-  document.getElementById('pl-fixture-group').style.display = this.value === 'Premier League' ? '' : 'none';
-});
-document.getElementById('competition').dispatchEvent(new Event('change'));
+// and re-filter the schedule picker to that competition's own fixtures.
+var ALL_SCHEDULED_FIXTURES = (typeof SCHEDULED_FIXTURES !== 'undefined') ? SCHEDULED_FIXTURES : [];
 
-// ── Premier League fixture picker → auto-fill date / opponent / venue ──
-(function populatePlFixtures() {
+function populateFixturePicker(competition) {
+  var group = document.getElementById('pl-fixture-group');
   var sel = document.getElementById('pl-fixture');
-  var fixtures = (typeof PL_FIXTURES !== 'undefined') ? PL_FIXTURES : [];
+  var label = document.getElementById('pl-fixture-label');
+  var fixtures = ALL_SCHEDULED_FIXTURES.filter(function(fx) { return fx.competition === competition; });
+
+  sel.innerHTML = '';
+  var placeholder = document.createElement('option');
+  placeholder.value = '';
+  placeholder.textContent = '— pick from schedule (optional) —';
+  sel.appendChild(placeholder);
+
   fixtures.forEach(function(fx, i) {
     var d = new Date(fx.date + 'T12:00:00');
-    var label = d.toLocaleDateString('en-US', {month:'short', day:'numeric'}) + ' — ' +
-      (fx.home ? 'vs ' : '@ ') + fx.opponent;
-    var o = document.createElement('option');
-    o.value = String(i);
-    o.textContent = label;
-    sel.appendChild(o);
+    var prefix = fx.venue === 'home' ? 'vs ' : fx.venue === 'neutral' ? 'v ' : '@ ';
+    var opt = document.createElement('option');
+    opt.value = String(i);
+    opt.textContent = d.toLocaleDateString('en-US', {month:'short', day:'numeric'}) + ' — ' +
+      prefix + fx.opponent + (fx.venue === 'neutral' ? ' (neutral)' : '');
+    sel.appendChild(opt);
   });
-  sel.addEventListener('change', function() {
+
+  group.style.display = fixtures.length ? '' : 'none';
+  label.textContent = competition + ' Fixture (pick to auto-fill date / opponent / venue)';
+
+  sel.onchange = function() {
     if (this.value === '') return;
     var fx = fixtures[parseInt(this.value)];
     if (!fx) return;
     document.getElementById('date').value = fx.date;
     document.getElementById('opponent').value = fx.opponent;
     document.getElementById('opponent-name-score').textContent = fx.opponent;
-    document.querySelector('input[name="venue"][value="' + (fx.home ? 'home' : 'away') + '"]').checked = true;
-  });
-})();
+    document.querySelector('input[name="venue"][value="' + fx.venue + '"]').checked = true;
+  };
+}
+
+document.getElementById('competition').addEventListener('change', function() {
+  var isLeague = this.value === 'Premier League' || this.value === 'EFL Championship';
+  document.getElementById('round-group').style.display = isLeague ? 'none' : '';
+  populateFixturePicker(this.value);
+});
+document.getElementById('competition').dispatchEvent(new Event('change'));
 
 // ── Submission type → toggle Match vs Youth vs Squad Update sections ──
 function updateSubtype() {
