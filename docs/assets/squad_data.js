@@ -582,10 +582,7 @@ const SQUAD_DATA = {
       "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
-      "loan": {
-        "club": "Ipswich Town",
-        "back": "09 Jul 2027"
-      },
+      "loan": null,
       "devStatus": null,
       "image": "assets/photos/andres_cuenca.png",
       "season": {
@@ -640,10 +637,7 @@ const SQUAD_DATA = {
       "squadRole": "Sporadic",
       "potential": null,
       "captain": false,
-      "loan": {
-        "club": "Swansea City",
-        "back": "01 Jul 2027"
-      },
+      "loan": null,
       "devStatus": null,
       "image": "assets/photos/carlos_macia.png",
       "season": {
@@ -1044,7 +1038,7 @@ const SQUAD_DATA = {
     "highestOvrValue": 81,
     "youngest": "Stephane Bertrand",
     "youngestAge": 16,
-    "onLoan": 17,
+    "onLoan": 15,
     "captain": "Callum Doyle",
     "topScorer": "Andrés Gómez",
     "topScorerGoals": 1,

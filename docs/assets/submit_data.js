@@ -13,6 +13,11 @@ var ROSTER_SENIOR = [
     "starter": false
   },
   {
+    "name": "Andrés Cuenca",
+    "pos": "CB",
+    "starter": false
+  },
+  {
     "name": "Arthur Okonkwo",
     "pos": "GK",
     "starter": true
@@ -36,6 +41,11 @@ var ROSTER_SENIOR = [
     "name": "Callum Doyle",
     "pos": "CB/LB",
     "starter": true
+  },
+  {
+    "name": "Carlos Macia",
+    "pos": "CM/CDM",
+    "starter": false
   },
   {
     "name": "Chido Obi",
@@ -1459,7 +1469,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Left",
     "Squad_Role": "Sporadic",
     "Contract_Length": "3y10m",
-    "Status": "On Loan at Ipswich Town (back 09 Jul 2027)",
+    "Status": "Returned from loan at Ipswich Town (09 Jul 2027) — back in first-team contention.",
     "OVR": "68",
     "Pace": "78",
     "Shooting": "43",
@@ -1569,7 +1579,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Right",
     "Squad_Role": "Sporadic",
     "Contract_Length": "4y1m",
-    "Status": "On Loan at Swansea City (back 01 Jul 2027)",
+    "Status": "Returned from loan at Swansea City (01 Jul 2027) — back in first-team contention.",
     "OVR": "67",
     "Pace": "66",
     "Shooting": "61",
