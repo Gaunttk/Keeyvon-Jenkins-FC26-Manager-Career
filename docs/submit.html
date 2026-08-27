@@ -173,6 +173,9 @@
     .stp-rating::-webkit-outer-spin-button, .stp-rating::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
     .stp-rating { -moz-appearance:textfield; }
     .stp-loan-tag { color:var(--muted); font-size:9px; font-family:'Barlow Condensed',sans-serif; letter-spacing:1px; margin-left:5px; text-transform:uppercase; }
+    .stp-name input[type=text] { padding:5px 6px; font-size:12.5px; width:100%; }
+    .stp-mom-cell { display:flex; align-items:center; justify-content:center; gap:4px; }
+    tr.manual-row .stp-name { padding-left:6px !important; }
 
     /* ── Attribute Editor ── */
     .attr-picker-row { display:flex; gap:10px; margin-bottom:14px; flex-wrap:wrap; align-items:flex-end; }
@@ -251,7 +254,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Hawk Submit">
 <link rel="apple-touch-icon" href="assets/icons/hawk-submit-192.png">
-<script src="assets/submit_data.js?v=1787549915" charset="utf-8"></script>
+<script src="assets/submit_data.js?v=1787814755" charset="utf-8"></script>
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -660,10 +663,69 @@ function renderStatsTable(containerId, roster, prefix) {
       '<td><input type="radio" name="' + prefix + '-mom" id="' + id + '-mom" value="' + i + '"></td>' +
       '</tr>';
   });
-  html += '</tbody></table></div>';
+  html += '</tbody></table></div>' +
+    '<button type="button" class="btn-add" style="margin-top:8px;" onclick="addManualRow(\'' + prefix + '\')">+ Add Player Not In Roster (loan return, trial, one-off)</button>';
   document.getElementById(containerId).innerHTML = html;
   updateTotals(prefix);
 }
+
+// ── Manual entry rows — same fields as the roster table, for a player not
+//    yet on the roster snapshot (e.g. just back from loan before the next
+//    sync_submit_roster.py run, a trialist, a one-off academy call-up). ──
+var manualRowIds = { ms: [], ys: [] };
+var manualCounters = { ms: 0, ys: 0 };
+var MANUAL_CONTAINER = { ms: 'stats-table-match', ys: 'stats-table-youth' };
+
+function escapeAttr(s) {
+  return (s || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function renderManualRow(prefix, idx, data) {
+  data = data || {};
+  var id = prefix + '-man-' + idx;
+  var status = data.status || 'started';
+  var rowClass = status === 'started' ? ' row-started' : status === 'subbed' ? ' row-subbed' : '';
+  return '<tr class="manual-row' + rowClass + '">' +
+    '<td class="stp-name"><input type="text" id="' + id + '-name" placeholder="Player name" value="' + escapeAttr(data.name) + '"></td>' +
+    '<td><div class="stp-status">' +
+      '<label><input type="radio" name="' + id + '-status" value="started"' + (status === 'started' ? ' checked' : '') + ' onchange="onStatsRowChange(this,\'' + prefix + '\')">S</label>' +
+      '<label><input type="radio" name="' + id + '-status" value="subbed"' + (status === 'subbed' ? ' checked' : '') + ' onchange="onStatsRowChange(this,\'' + prefix + '\')">Sub</label>' +
+      '<label><input type="radio" name="' + id + '-status" value="dnp"' + (status === 'dnp' ? ' checked' : '') + ' onchange="onStatsRowChange(this,\'' + prefix + '\')">DNP</label>' +
+    '</div></td>' +
+    '<td><input type="number" id="' + id + '-g" min="0" placeholder="0" value="' + escapeAttr(data.g) + '" class="stp-num" oninput="updateTotals(\'' + prefix + '\')"></td>' +
+    '<td><input type="number" id="' + id + '-a" min="0" placeholder="0" value="' + escapeAttr(data.a) + '" class="stp-num" oninput="updateTotals(\'' + prefix + '\')"></td>' +
+    '<td><input type="number" id="' + id + '-r" min="0" max="10" step="0.1" placeholder="—" value="' + escapeAttr(data.r) + '" class="stp-num stp-rating"></td>' +
+    '<td class="stp-mom-cell"><input type="radio" name="' + prefix + '-mom" id="' + id + '-mom" value="' + id + '"' + (data.mom ? ' checked' : '') + '>' +
+      '<button type="button" class="btn-remove" onclick="removeManualRow(\'' + prefix + '\', ' + idx + ')" title="Remove row">×</button></td>' +
+    '</tr>';
+}
+
+function addManualRow(prefix, data) {
+  var idx = manualCounters[prefix]++;
+  manualRowIds[prefix].push(idx);
+  var tbody = document.querySelector('#' + MANUAL_CONTAINER[prefix] + ' tbody');
+  tbody.insertAdjacentHTML('beforeend', renderManualRow(prefix, idx, data));
+  updateTotals(prefix);
+}
+
+function removeManualRow(prefix, idx) {
+  var nameEl = document.getElementById(prefix + '-man-' + idx + '-name');
+  if (nameEl) {
+    var tr = nameEl.closest('tr');
+    if (tr) tr.remove();
+  }
+  manualRowIds[prefix] = manualRowIds[prefix].filter(function(i) { return i !== idx; });
+  updateTotals(prefix);
+}
+
+function clearManualRows(prefix) {
+  manualRowIds[prefix].slice().forEach(function(idx) { removeManualRow(prefix, idx); });
+}
+
+function restoreManualRows(manualArr, prefix) {
+  (manualArr || []).forEach(function(d) { addManualRow(prefix, d); });
+}
+
 renderStatsTable('stats-table-match', ROSTER_SENIOR, 'ms');
 renderStatsTable('stats-table-youth', ROSTER_ACADEMY, 'ys');
 
@@ -690,6 +752,17 @@ function updateTotals(prefix) {
     g += parseInt(document.getElementById(id + '-g').value) || 0;
     a += parseInt(document.getElementById(id + '-a').value) || 0;
   });
+  (manualRowIds[prefix] || []).forEach(function(idx) {
+    var id = prefix + '-man-' + idx;
+    var statusEl = document.querySelector('input[name="' + id + '-status"]:checked');
+    var status = statusEl ? statusEl.value : 'dnp';
+    if (status === 'started') started++;
+    else if (status === 'subbed') subbed++;
+    else dnp++;
+    var gEl = document.getElementById(id + '-g'), aEl = document.getElementById(id + '-a');
+    g += (gEl && parseInt(gEl.value)) || 0;
+    a += (aEl && parseInt(aEl.value)) || 0;
+  });
   el.innerHTML =
     '<span class="stp-total"><strong>' + g + '</strong>Goals</span>' +
     '<span class="stp-total"><strong>' + a + '</strong>Assists</span>' +
@@ -700,7 +773,7 @@ function updateTotals(prefix) {
 
 function collectPlayerStats(roster, prefix) {
   var checked = document.querySelector('input[name="' + prefix + '-mom"]:checked');
-  var momIdx = checked ? parseInt(checked.value) : -1;
+  var momVal = checked ? checked.value : null;
   var lines = [], raw = [];
   roster.forEach(function(p, i) {
     var id = prefix + '-' + i;
@@ -710,7 +783,7 @@ function collectPlayerStats(roster, prefix) {
     var g = document.getElementById(id + '-g').value;
     var a = document.getElementById(id + '-a').value;
     var r = document.getElementById(id + '-r').value;
-    var isMom = (i === momIdx);
+    var isMom = (momVal === String(i));
     raw.push({ status: status, g: g, a: a, r: r, mom: isMom });
     if (played || g || a || r || isMom) {
       var parts = [];
@@ -722,7 +795,31 @@ function collectPlayerStats(roster, prefix) {
       lines.push('- ' + p.name + (parts.length ? ': ' + parts.join(', ') : ' (appeared)'));
     }
   });
-  return { lines: lines.join('\n'), raw: raw };
+  var manual = [];
+  (manualRowIds[prefix] || []).forEach(function(idx) {
+    var id = prefix + '-man-' + idx;
+    var nameEl = document.getElementById(id + '-name');
+    var name = nameEl ? nameEl.value.trim() : '';
+    var statusEl = document.querySelector('input[name="' + id + '-status"]:checked');
+    var status = statusEl ? statusEl.value : 'started';
+    var g = document.getElementById(id + '-g').value;
+    var a = document.getElementById(id + '-a').value;
+    var r = document.getElementById(id + '-r').value;
+    var isMom = (momVal === id);
+    manual.push({ name: name, status: status, g: g, a: a, r: r, mom: isMom });
+    if (!name) return;
+    var played = status !== 'dnp';
+    if (played || g || a || r || isMom) {
+      var parts = [];
+      if (status === 'subbed') parts.push('Sub');
+      if (g) parts.push(g + ' G');
+      if (a) parts.push(a + ' A');
+      if (r) parts.push('Rating ' + r);
+      if (isMom) parts.push('MOM');
+      lines.push('- ' + name + ' (not on roster snapshot)' + (parts.length ? ': ' + parts.join(', ') : ' (appeared)'));
+    }
+  });
+  return { lines: lines.join('\n'), raw: raw, manual: manual };
 }
 
 function syncStatsRowClasses(roster, prefix) {
@@ -749,6 +846,7 @@ function resetPlayerStatsTable(roster, prefix) {
     document.getElementById(id + '-r').value = '';
     document.getElementById(id + '-mom').checked = false;
   });
+  clearManualRows(prefix);
   syncStatsRowClasses(roster, prefix);
   updateTotals(prefix);
 }
@@ -1215,6 +1313,7 @@ ${stats.lines || '(none logged)'}
     opponent: opponent, venue: venue, scoreThem: scoreThem, scoreUs: scoreUs,
     scorers: scorers, notes: notes,
     ysStats: stats.raw,
+    ysManual: stats.manual,
     attrChanges: JSON.parse(JSON.stringify(attrChanges))
   };
 
@@ -1498,6 +1597,7 @@ ${stats.lines || '(none logged)'}${attrText}
     transfers: t.raw,
     injuries: inj.raw,
     msStats: stats.raw,
+    msManual: stats.manual,
     attrChanges: JSON.parse(JSON.stringify(attrChanges))
   };
 
@@ -1604,6 +1704,7 @@ function populateForm(raw) {
     document.getElementById('y-scorers').value = raw.scorers || '';
     document.getElementById('y-notes').value = raw.notes || '';
     restorePlayerStats(raw.ysStats, ROSTER_ACADEMY, 'ys');
+    restoreManualRows(raw.ysManual, 'ys');
     return;
   }
 
@@ -1627,6 +1728,7 @@ function populateForm(raw) {
   document.getElementById('ts-passacc').value = ts.passAcc || '';
   document.getElementById('ts-tackles').value = ts.tackles || '';
   restorePlayerStats(raw.msStats, ROSTER_SENIOR, 'ms');
+  restoreManualRows(raw.msManual, 'ms');
 
   var ss = raw.ss || {};
   document.getElementById('ss-table').checked     = !!ss.table;

@@ -5,10 +5,12 @@ Phase 3B. Data-driven, like scripts/generate_media_pages.py -- every player page
 is regenerated from source data, never hand-edited. Sources (never invented):
 
   wrexham_squad.csv          identity/attributes/dev-plan (also drives squad_data.js)
-  docs/assets/player_stats.js current-season (2026/27) Apps/Goals/Assists/Rating + last5
-  docs/season/season-01.html  archived season (2025/26) Player Season Stats table --
+  docs/assets/player_stats.js current-season Apps/Goals/Assists/Rating + last5
+  docs/season/season-NN.html  every archived season's Player Season Stats table --
                                parsed with the same regex sync_home_player_stats.py uses,
-                               giving a real second Wrexham season for the career timeline
+                               one career-timeline row per rolled-over season (season
+                               label/competition read from docs/season.html's own
+                               "Past Seasons" links, so nothing is hand-typed per season)
   player_career_history.csv   real pre-Wrexham club career (season/club/competition/apps/goals)
   player_bios.json            recovered "Player Profile" prose (see extraction note below)
   season_log.json             transfers (direction=in), for Movement
@@ -31,6 +33,7 @@ import html
 import json
 import re
 import unicodedata
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -38,8 +41,8 @@ SQUAD_CSV = ROOT / "wrexham_squad.csv"
 CAREER_CSV = ROOT / "player_career_history.csv"
 BIOS_JSON = ROOT / "player_bios.json"
 SEASON_LOG = ROOT / "season_log.json"
-SEASON01_JSON = ROOT / "season_logs" / "season-01.json"
-SEASON01_HTML = ROOT / "docs" / "season" / "season-01.html"
+SEASON_HTML = ROOT / "docs" / "season.html"
+SEASON_LOGS_DIR = ROOT / "season_logs"
 PLAYER_STATS_JS = ROOT / "docs" / "assets" / "player_stats.js"
 MEDIA_ARTICLES_JSON = ROOT / "media-articles.json"
 MEDIA_INDEX_JS = ROOT / "docs" / "assets" / "media_index.js"
@@ -51,6 +54,20 @@ def load_current_season_label():
     text = PL_TABLE_JS.read_text(encoding="utf-8")
     m = re.search(r"season:\s*'([^']+)'", text)
     return m.group(1) if m else "2026/27"
+
+
+def load_current_competition():
+    """Most-frequent competition among this season's logged matches, so the
+    live-season career row doesn't hard-code a competition name that goes
+    stale on promotion/relegation. No matches logged yet (start of season)
+    falls back to "Premier League" -- the current top-flight status."""
+    if not SEASON_LOG.exists():
+        return "Premier League"
+    d = json.loads(SEASON_LOG.read_text(encoding="utf-8"))
+    comps = [m["competition"] for m in d.get("matches", []) if m.get("competition")]
+    if not comps:
+        return "Premier League"
+    return Counter(comps).most_common(1)[0][0]
 
 # Column indices into wrexham_squad.csv / youth_academy.csv rows -- see
 # CLAUDE.md's "squad CSV -- Column Index" for the authoritative reference.
@@ -140,6 +157,8 @@ PHOTO_MAP = {
     "Nico Kopp": "assets/photos/kopp.png",
     "Fabricio Sandoval": "assets/photos/sandoval.png",
     "Lilian Faure": "assets/photos/faure.png",
+    "Stephane Bertrand": "assets/photos/bertrand.png",
+    "Adrian Kaczmarek": "assets/photos/adrian_kaczmarek.png",
 }
 
 
@@ -199,7 +218,7 @@ def load_current_season_stats():
     return json.loads(m.group(1)) if m else {}
 
 
-SEASON01_ROW_RE = re.compile(
+SEASON_ARCHIVE_ROW_RE = re.compile(
     r'<div class="stats-row">\s*'
     r'<div><div class="s-name">(?P<name>.*?)</div><div class="s-pos">(?P<pos>.*?)</div></div>\s*'
     r'<span class="s-num">(?P<apps>\d+)</span>\s*'
@@ -210,37 +229,65 @@ SEASON01_ROW_RE = re.compile(
     re.S,
 )
 
+PAST_SEASON_LINK_RE = re.compile(
+    r'<a href="season/(season-(?P<num>\d+)\.html)"[^>]*>'
+    r'Season \d+ ·\s*(?P<year>[\d&;a-z]+?)\s*&middot;\s*(?P<desc>.*?)\s*\(',
+    re.S,
+)
 
-def load_season01_stats():
-    """Archived 2025/26 EFL Championship Player Season Stats -- same table
-    shape docs/season.html uses for the current season, just frozen in the
-    season-01 archive. Gives the career timeline a real second Wrexham season."""
-    if not SEASON01_HTML.exists():
-        return {}
-    text = SEASON01_HTML.read_text(encoding="utf-8")
-    start = text.find("PLAYER SEASON STATS")
-    if start == -1:
-        return {}
-    end = text.find('<div class="footer">', start)
-    table_html = text[start: end if end != -1 else len(text)]
-    out = {}
-    for m in SEASON01_ROW_RE.finditer(table_html):
-        name = html.unescape(m.group("name")).strip()
-        out[last_name_key(name)] = {
-            "apps": int(m.group("apps")), "goals": int(m.group("goals")),
-        }
-    return out
+
+def load_archived_seasons_stats():
+    """Every archived Wrexham season (docs/season/season-NN.html), not just
+    Season 1 -- each rolled-over season must keep contributing a real row to
+    every player's career timeline on their dossier, or the timeline silently
+    stops the moment a season is archived (this happened for real: Season 2,
+    2026/27, the Premier League + FA Cup double, was missing entirely from
+    every dossier until this generalization). Season label/competition text
+    is read from docs/season.html's "Past Seasons" links so nothing here is
+    hand-typed per season; table shape is the same one docs/season.html uses
+    for the live season, just frozen in each archive file.
+
+    Returns {season_num: {"season": "2025/26", "competition": "...",
+                           "stats": {last_name_key: {"apps", "goals"}}}}
+    """
+    seasons = {}
+    if not SEASON_HTML.exists():
+        return seasons
+    index_text = SEASON_HTML.read_text(encoding="utf-8")
+    for lm in PAST_SEASON_LINK_RE.finditer(index_text):
+        num = int(lm.group("num"))
+        year = html.unescape(lm.group("year")).replace("–", "/").replace("-", "/").strip()
+        desc = html.unescape(lm.group("desc")).strip()
+        competition = desc.split(",", 1)[1].strip() if "," in desc else desc
+
+        archive_path = ROOT / "docs" / "season" / f"season-{num:02d}.html"
+        if not archive_path.exists():
+            continue
+        text = archive_path.read_text(encoding="utf-8")
+        start = text.find("PLAYER SEASON STATS")
+        if start == -1:
+            continue
+        end = text.find('<div class="footer">', start)
+        table_html = text[start: end if end != -1 else len(text)]
+        stats = {}
+        for m in SEASON_ARCHIVE_ROW_RE.finditer(table_html):
+            name = html.unescape(m.group("name")).strip()
+            stats[last_name_key(name)] = {
+                "apps": int(m.group("apps")), "goals": int(m.group("goals")),
+            }
+        seasons[num] = {"season": year, "competition": competition, "stats": stats}
+    return seasons
 
 
 def load_transfers_in(squad_names):
     """Joined-Wrexham transfer, keyed by last-name -- merges the current
-    season_log.json (full player names) with the archived season-01.json
-    (which used abbreviated "F. Lastname" names for this field), taking the
-    earliest "in" transfer on record per player."""
+    season_log.json (full player names) with every archived season_logs/
+    season-NN.json (which used abbreviated "F. Lastname" names for this
+    field), taking the earliest "in" transfer on record per player."""
     by_lastname = {}
     sources = [SEASON_LOG]
-    if SEASON01_JSON.exists():
-        sources.append(SEASON01_JSON)
+    if SEASON_LOGS_DIR.exists():
+        sources.extend(sorted(SEASON_LOGS_DIR.glob("season-*.json")))
     for src in sources:
         d = json.loads(src.read_text(encoding="utf-8"))
         for t in d.get("transfers", []):
@@ -336,8 +383,9 @@ def opponent_tag(opponent):
     return first[:3].upper()
 
 
-def build_players(rows, career_history, bios, current_stats, season01_stats,
-                   transfers_in, gk_log, media_matches, media_index):
+def build_players(rows, career_history, bios, current_stats, archived_seasons,
+                   transfers_in, gk_log, media_matches, media_index,
+                   current_season_label, current_competition):
     players = []
     by_group = {GK: [], DEF: [], MID: [], FWD: []}
     for row in rows:
@@ -413,12 +461,15 @@ def build_players(rows, career_history, bios, current_stats, season01_stats,
                 last5.append({"tag": opponent_tag(opp) if opp else "—", "rating": pt["rating"]})
 
         career = list(career_history.get(name, []))
-        s01 = season01_stats.get(lk)
-        if s01:
-            career.append({"season": "2025/26", "club": "Wrexham", "competition": "EFL Championship",
-                            "apps": s01["apps"], "goals": None if group == GK else s01["goals"]})
+        for num in sorted(archived_seasons):
+            archived = archived_seasons[num]
+            s = archived["stats"].get(lk)
+            if not s:
+                continue
+            career.append({"season": archived["season"], "club": "Wrexham", "competition": archived["competition"],
+                            "apps": s["apps"], "goals": None if group == GK else s["goals"]})
         if season.get("apps"):
-            career.append({"season": "2026/27", "club": "Wrexham", "competition": "Premier League",
+            career.append({"season": current_season_label, "club": "Wrexham", "competition": current_competition,
                             "apps": season["apps"], "goals": None if group == GK else season.get("goals")})
 
         bio = bios.get(name, {}).get("paragraphs", [])
@@ -836,16 +887,18 @@ def main():
     career_history = load_career_history()
     bios = load_bios()
     current_stats = load_current_season_stats()
-    season01_stats = load_season01_stats()
+    archived_seasons = load_archived_seasons_stats()
     transfers_in = load_transfers_in([r[0] for r in rows])
     gk_log = load_gk_match_log()
     media_matches = build_media_matches()
     media_index = load_media_index()
     season_label = load_current_season_label()
+    current_competition = load_current_competition()
 
     players, by_group = build_players(
-        rows, career_history, bios, current_stats, season01_stats,
+        rows, career_history, bios, current_stats, archived_seasons,
         transfers_in, gk_log, media_matches, media_index,
+        season_label, current_competition,
     )
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)

@@ -5,15 +5,241 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-08-24"
+    "last_updated": "2027-08-25"
   },
-  "matches": [],
+  "matches": [
+    {
+      "date": "2027-07-24",
+      "opponent": "Mallorca",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Round 1",
+      "notes": "Gómez 73', Tine 82' (sub). MOTM: M. Tine (7.5 rating, highest on the pitch). Macia started at CM. Tine subbed on at ST and scored the second goal. Cuenca subbed on at CB, Kaczmarek subbed on at GK (for Klaverboer, 56'). Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
+      "journal_entry": true,
+      "player_ratings": {
+        "R. Ngumoha": 7.1,
+        "M. Tine": 7.5,
+        "C. Obi": 6.0,
+        "A. Gómez": 7.0,
+        "L. Sauer": 6.9,
+        "J. Vargas": 6.3,
+        "T. Fruk": 6.7,
+        "T. Pitarch": 6.7,
+        "D. Bobadilla": 6.8,
+        "M. Vitális": 6.0,
+        "C. Macia": 7.2,
+        "M. Barbieri": 7.0,
+        "J. Mokio": 6.3,
+        "A. Cuenca": 6.0,
+        "C. Doyle": 6.9,
+        "J. Belghazi": 7.0,
+        "A. Heaven": 6.3,
+        "E. Dijkstra": 7.2,
+        "A. Kaczmarek": 6.9,
+        "B. Klaverboer": 6.6
+      }
+    },
+    {
+      "date": "2027-07-27",
+      "opponent": "M'gladbach",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Round 2",
+      "notes": "Gómez 6', Obi 18'. Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Kaczmarek": 6.0,
+        "A. Gómez": 6.6,
+        "A. Okonkwo": 6.2,
+        "A. Heaven": 5.9,
+        "B. Gutiérrez": 6.3,
+        "C. Doyle": 6.2,
+        "C. Obi": 7.6,
+        "E. Dijkstra": 6.9,
+        "J. Belghazi": 7.1,
+        "J. Vargas": 5.7,
+        "L. Cacace": 7.5,
+        "M. Barbieri": 7.7,
+        "M. Vitális": 6.9,
+        "M. Tine": 5.9,
+        "R. Ngumoha": 5.9,
+        "T. Pitarch": 5.4,
+        "T. Fruk": 6.1,
+        "V. Veleten": 6.1,
+        "A. Cuenca": 7.2,
+        "C. Macia": 7.0
+      }
+    },
+    {
+      "date": "2027-07-31",
+      "opponent": "RCD Espanyol",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Round 3",
+      "notes": "Sauer 14' (MOTM, 7.9 rating), Tine 87' (sub), Espanyol own goal 74' (F. Calero sent off same minute). Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage) — Wrexham complete the group stage with a 3-0-0 record (Mallorca, M'gladbach, Espanyol).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Cuenca": 6.8,
+        "A. Gómez": 6.4,
+        "A. Heaven": 7.0,
+        "A. Kaczmarek": 6.1,
+        "B. Gutiérrez": 6.1,
+        "B. Klaverboer": 6.1,
+        "C. Macia": 6.8,
+        "C. Obi": 6.3,
+        "D. Bobadilla": 6.0,
+        "E. Dijkstra": 6.4,
+        "J. Belghazi": 6.2,
+        "J. Mokio": 6.6,
+        "L. Sauer": 7.9,
+        "M. Barbieri": 6.2,
+        "M. Tine": 6.7,
+        "M. Vitális": 6.6,
+        "R. Ngumoha": 6.5,
+        "T. Fruk": 6.6,
+        "T. Pitarch": 6.9,
+        "V. Veleten": 6.0
+      }
+    }
+  ],
   "transfers": [
-    { "date": "2027-08-24", "player": "Y. Callens", "direction": "in", "club": "Free Agent", "fee": "£0 (Free Transfer)", "wage": "$54k/w" }
+    {
+      "date": "2027-08-25",
+      "player": "M. Tine",
+      "direction": "in",
+      "club": "Free Agent",
+      "fee": "£0 (Free Transfer)",
+      "wage": "$17k/w"
+    },
+    {
+      "date": "2027-07-31",
+      "player": "J. Vargas",
+      "direction": "out",
+      "club": "Ipswich Town",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Stephane Bertrand",
+      "direction": "out",
+      "club": "Carrarese Calcio",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Nathan Salaun",
+      "direction": "out",
+      "club": "Barnet",
+      "fee": "Two-Year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Fabricio Sandoval",
+      "direction": "out",
+      "club": "Hull City",
+      "fee": "Two-Year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Nico Kopp",
+      "direction": "out",
+      "club": "FC Basel 1893",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Vittorio Martini",
+      "direction": "out",
+      "club": "CD Castellon",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Matthieu Brunel",
+      "direction": "out",
+      "club": "West Brom",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-01",
+      "player": "Lilian Faure",
+      "direction": "out",
+      "club": "Bristol City",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-12",
+      "player": "Santiago Ortega",
+      "direction": "out",
+      "club": "Watford",
+      "fee": "One-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-14",
+      "player": "Emiliano Bianchi",
+      "direction": "out",
+      "club": "Jagiellonia",
+      "fee": "Two-year Loan",
+      "wage": ""
+    },
+    {
+      "date": "2027-07-15",
+      "player": "Bailey Cadamarteri",
+      "direction": "out",
+      "club": "Fulham",
+      "fee": "Two-year Loan",
+      "wage": ""
+    }
   ],
   "injuries": [],
   "milestones": [
-    { "date": "2027-08-24", "description": "Wrexham AFC sign Belgian CAM Yanis Callens (20) on a free transfer, agreeing a 4-year deal worth $54,000/week. The 78-rated playmaker arrives with no fee, only a $470,000 signing bonus, adding depth and quality behind the front line as the club begins its first full season in the Premier League." }
+    {
+      "date": "2027-07-31",
+      "description": "Wrexham AFC finish the European International Cup group stage with a perfect record — wins over Mallorca (2-0), M'gladbach (2-0), and RCD Espanyol (3-0), the last capped by Leo Sauer's Man of the Match display."
+    },
+    {
+      "date": "2027-07-31",
+      "description": "Juan Cruz Vargas (17) loaned to Ipswich Town for the 2027-28 season, seeking senior development minutes away from Wrexham's crowded CAM options."
+    },
+    {
+      "date": "2027-08-25",
+      "description": "Wrexham AFC sign Gabonese striker Musa Tine (17) as a free agent, agreeing a 4-year deal worth $17,000/week plus a $175,000 signing bonus. The 68-rated forward gives the club a genuine young No. 9 option behind Obi while Yacel Amrizi continues his recovery from injury."
+    },
+    {
+      "date": "2027-08-25",
+      "description": "FA Community Shield final confirmed: Wrexham AFC (Premier League champions) vs Manchester City (FA Cup holders), Wembley Stadium, Saturday 7 August 2027, kickoff 5:00 PM — the club's first-ever Community Shield appearance."
+    },
+    {
+      "date": "2027-07-01",
+      "description": "Pre-season loan business: seven players sent out for 2027-28 development minutes, including academy graduates Stephane Bertrand (Carrarese Calcio, 1yr) and Nathan Salaun (Barnet, 2yr), both promoted to the senior squad and loaned out the same day. Also out: Fabricio Sandoval (Hull City, 2yr), Nico Kopp (FC Basel 1893, 1yr), Vittorio Martini (CD Castellon, 1yr), Matthieu Brunel (West Brom, 1yr), and Lilian Faure (Bristol City, 1yr)."
+    },
+    {
+      "date": "2027-08-24",
+      "description": "Wrexham AFC sign Polish goalkeeper Adrian Kaczmarek (17) from Club Atlético Vélez Sarsfield for $12.7M, agreeing a 4-year deal at $6,200/week. Tagged 'World Class Prospect Goalkeeper' by the club's scouting network (Potential 84-90), he slots in as rotation depth behind Okonkwo and Klaverboer."
+    },
+    {
+      "date": "2027-07-15",
+      "description": "Pre-season loan business continues: Santiago Ortega loaned to Watford (1yr, 12 Jul), Emiliano Bianchi loaned to Jagiellonia (2yr, 14 Jul), and Bailey Cadamarteri loaned to Fulham (2yr, 15 Jul, after an initial loan proposal was rejected)."
+    },
+    {
+      "date": "2027-05-26",
+      "description": "Premier League Team of the Season announced — no Wrexham player named, despite the club winning the title. XI: Donnarumma (GK); Mauro Jr, Gvardiol, Thiaw, Frimpong; B. Barcola, B. Fernandes, Traoré, Saka; Gyökeres, Haaland."
+    }
   ],
   "fixtures": []
 }

@@ -376,8 +376,12 @@
         '<span class="player-mini-meta">' + esc(p.position) + ' &middot; ' + esc(p.age) + '</span>' +
         (stats ?
           '<span class="player-mini-stats">' +
-          '<b>' + esc(stats.goals) + '</b>G &middot; ' +
-          '<b>' + esc(stats.assists) + '</b>A &middot; ' +
+          (stats.position === 'GK' ?
+            '<b>' + esc(stats.cleanSheets) + '</b>CS &middot; ' +
+            '<b>' + esc(stats.goalsConceded) + '</b>GA &middot; '
+            :
+            '<b>' + esc(stats.goals) + '</b>G &middot; ' +
+            '<b>' + esc(stats.assists) + '</b>A &middot; ') +
           '<b>' + esc(stats.rating.toFixed(1)) + '</b>Rtg' +
           '</span>'
           : '') +
@@ -407,8 +411,12 @@
         '<div class="player-feature-season">' +
         '<span class="player-feature-season-label">2026&ndash;27 Season</span>' +
         '<div class="player-feature-season-stats">' +
-        '<span><strong>' + esc(stats.goals) + '</strong>Goals</span>' +
-        '<span><strong>' + esc(stats.assists) + '</strong>Assists</span>' +
+        (stats.position === 'GK' ?
+          '<span><strong>' + esc(stats.cleanSheets) + '</strong>Clean Sheets</span>' +
+          '<span><strong>' + esc(stats.goalsConceded) + '</strong>Goals Against</span>'
+          :
+          '<span><strong>' + esc(stats.goals) + '</strong>Goals</span>' +
+          '<span><strong>' + esc(stats.assists) + '</strong>Assists</span>') +
         '<span><strong>' + esc(stats.rating.toFixed(1)) + '</strong>Avg Rating</span>' +
         '</div></div>'
         : '') +
@@ -524,6 +532,7 @@
   try { renderPulse(); } catch (e) { }
   try { renderTitleRace(); } catch (e) { }
   try { renderFullTable('home-full-table-body', PREMIER_LEAGUE_TABLE); } catch (e) { }
+  try { renderFullTable('home-archive-table-body-2026-27', PREMIER_LEAGUE_2026_27_FINAL); } catch (e) { }
   try { renderFullTable('home-archive-table-body', CHAMPIONSHIP_2025_26_FINAL); } catch (e) { }
   try { renderWriters(); } catch (e) { }
   try { renderSquad(); } catch (e) { }
