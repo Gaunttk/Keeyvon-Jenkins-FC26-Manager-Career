@@ -3,4 +3,470 @@
    table; last5 sparkline points from season_log.json's player_ratings field.
    Keyed by the abbreviated "F. Lastname" form used in that table.
    Re-run after any session that updates either source. */
-const PLAYER_SEASON_STATS = {};
+const PLAYER_SEASON_STATS = {
+  "M. Tine": {
+    "position": "ST",
+    "apps": 3,
+    "goals": 2,
+    "assists": 0,
+    "rating": 6.7,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.5
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.7
+      }
+    ]
+  },
+  "C. Macia": {
+    "position": "CM",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 7.0,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.2
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.8
+      }
+    ]
+  },
+  "E. Dijkstra": {
+    "position": "RB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.8,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.2
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.4
+      }
+    ]
+  },
+  "R. Ngumoha": {
+    "position": "LW",
+    "apps": 3,
+    "goals": 0,
+    "assists": 2,
+    "rating": 6.5,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.1
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.5
+      }
+    ]
+  },
+  "A. Gómez": {
+    "position": "RW",
+    "apps": 3,
+    "goals": 2,
+    "assists": 0,
+    "rating": 6.7,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.6
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.4
+      }
+    ]
+  },
+  "M. Barbieri": {
+    "position": "LB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 7.0,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.7
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.2
+      }
+    ]
+  },
+  "J. Belghazi": {
+    "position": "RCB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.8,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.1
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.2
+      }
+    ]
+  },
+  "D. Bobadilla": {
+    "position": "LCM",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.4,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.8
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.0
+      }
+    ]
+  },
+  "L. Sauer": {
+    "position": "RW",
+    "apps": 2,
+    "goals": 1,
+    "assists": 0,
+    "rating": 7.4,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 7.9
+      }
+    ]
+  },
+  "C. Doyle": {
+    "position": "LCB",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.6,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.9
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.2
+      }
+    ]
+  },
+  "A. Kaczmarek": {
+    "position": "GK",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.3,
+    "trackedApps": 3,
+    "cleanSheets": 3,
+    "goalsConceded": 0,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.9
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.1
+      }
+    ]
+  },
+  "B. Klaverboer": {
+    "position": "GK",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.4,
+    "trackedApps": 2,
+    "cleanSheets": 2,
+    "goalsConceded": 0,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.6
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.1
+      }
+    ]
+  },
+  "T. Fruk": {
+    "position": "CAM",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.5,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.7
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.1
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.6
+      }
+    ]
+  },
+  "T. Pitarch": {
+    "position": "LCM",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.3,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.7
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.4
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.9
+      }
+    ]
+  },
+  "J. Vargas": {
+    "position": "CAM",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.0,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.3
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.7
+      }
+    ]
+  },
+  "J. Mokio": {
+    "position": "LB",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.5,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.3
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.6
+      }
+    ]
+  },
+  "A. Heaven": {
+    "position": "RCB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.4,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.3
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 7.0
+      }
+    ]
+  },
+  "C. Obi": {
+    "position": "ST",
+    "apps": 3,
+    "goals": 2,
+    "assists": 0,
+    "rating": 6.6,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.6
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.3
+      }
+    ]
+  },
+  "M. Vitális": {
+    "position": "RCM",
+    "apps": 3,
+    "goals": 0,
+    "assists": 1,
+    "rating": 6.5,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.6
+      }
+    ]
+  },
+  "A. Cuenca": {
+    "position": "LCB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.7,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.2
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.8
+      }
+    ]
+  },
+  "B. Gutiérrez": {
+    "position": "CAM",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.2,
+    "last5": [
+      {
+        "date": "2027-07-27",
+        "rating": 6.3
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.1
+      }
+    ]
+  },
+  "A. Okonkwo": {
+    "position": "GK",
+    "apps": 1,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.2,
+    "trackedApps": 1,
+    "cleanSheets": 1,
+    "goalsConceded": 0,
+    "last5": [
+      {
+        "date": "2027-07-27",
+        "rating": 6.2
+      }
+    ]
+  },
+  "L. Cacace": {
+    "position": "RB",
+    "apps": 1,
+    "goals": 0,
+    "assists": 0,
+    "rating": 7.5,
+    "last5": [
+      {
+        "date": "2027-07-27",
+        "rating": 7.5
+      }
+    ]
+  },
+  "V. Veleten": {
+    "position": "RW",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.1,
+    "last5": [
+      {
+        "date": "2027-07-27",
+        "rating": 6.1
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.0
+      }
+    ]
+  }
+};
