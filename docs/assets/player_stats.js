@@ -6,266 +6,465 @@
 const PLAYER_SEASON_STATS = {
   "M. Tine": {
     "position": "ST",
-    "apps": 1,
-    "goals": 1,
+    "apps": 3,
+    "goals": 2,
     "assists": 0,
-    "rating": 7.5,
+    "rating": 6.7,
     "last5": [
       {
         "date": "2027-07-24",
         "rating": 7.5
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.7
       }
     ]
   },
   "C. Macia": {
     "position": "CM",
-    "apps": 1,
+    "apps": 3,
     "goals": 0,
     "assists": 0,
-    "rating": 7.2,
+    "rating": 7.0,
     "last5": [
       {
         "date": "2027-07-24",
         "rating": 7.2
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.8
       }
     ]
   },
   "E. Dijkstra": {
     "position": "RB",
-    "apps": 1,
-    "goals": 0,
-    "assists": 0,
-    "rating": 7.2,
-    "last5": [
-      {
-        "date": "2027-07-24",
-        "rating": 7.2
-      }
-    ]
-  },
-  "R. Ngumoha": {
-    "position": "LW",
-    "apps": 1,
-    "goals": 0,
-    "assists": 1,
-    "rating": 7.1,
-    "last5": [
-      {
-        "date": "2027-07-24",
-        "rating": 7.1
-      }
-    ]
-  },
-  "A. Gómez": {
-    "position": "RW",
-    "apps": 1,
-    "goals": 1,
-    "assists": 0,
-    "rating": 7.0,
-    "last5": [
-      {
-        "date": "2027-07-24",
-        "rating": 7.0
-      }
-    ]
-  },
-  "M. Barbieri": {
-    "position": "LB",
-    "apps": 1,
-    "goals": 0,
-    "assists": 0,
-    "rating": 7.0,
-    "last5": [
-      {
-        "date": "2027-07-24",
-        "rating": 7.0
-      }
-    ]
-  },
-  "J. Belghazi": {
-    "position": "RCB",
-    "apps": 1,
-    "goals": 0,
-    "assists": 0,
-    "rating": 7.0,
-    "last5": [
-      {
-        "date": "2027-07-24",
-        "rating": 7.0
-      }
-    ]
-  },
-  "D. Bobadilla": {
-    "position": "LCM",
-    "apps": 1,
+    "apps": 3,
     "goals": 0,
     "assists": 0,
     "rating": 6.8,
     "last5": [
       {
         "date": "2027-07-24",
+        "rating": 7.2
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.4
+      }
+    ]
+  },
+  "R. Ngumoha": {
+    "position": "LW",
+    "apps": 3,
+    "goals": 0,
+    "assists": 2,
+    "rating": 6.5,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.1
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.5
+      }
+    ]
+  },
+  "A. Gómez": {
+    "position": "RW",
+    "apps": 3,
+    "goals": 2,
+    "assists": 0,
+    "rating": 6.7,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.6
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.4
+      }
+    ]
+  },
+  "M. Barbieri": {
+    "position": "LB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 7.0,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.7
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.2
+      }
+    ]
+  },
+  "J. Belghazi": {
+    "position": "RCB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.8,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 7.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.1
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.2
+      }
+    ]
+  },
+  "D. Bobadilla": {
+    "position": "LCM",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.4,
+    "last5": [
+      {
+        "date": "2027-07-24",
         "rating": 6.8
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.0
       }
     ]
   },
   "L. Sauer": {
     "position": "RW",
-    "apps": 1,
-    "goals": 0,
+    "apps": 2,
+    "goals": 1,
     "assists": 0,
-    "rating": 6.9,
+    "rating": 7.4,
     "last5": [
       {
         "date": "2027-07-24",
         "rating": 6.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 7.9
       }
     ]
   },
   "C. Doyle": {
     "position": "LCB",
-    "apps": 1,
+    "apps": 2,
     "goals": 0,
     "assists": 0,
-    "rating": 6.9,
+    "rating": 6.6,
     "last5": [
       {
         "date": "2027-07-24",
         "rating": 6.9
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.2
       }
     ]
   },
   "A. Kaczmarek": {
     "position": "GK",
-    "apps": 1,
+    "apps": 3,
     "goals": 0,
     "assists": 0,
-    "rating": 6.9,
-    "trackedApps": 1,
-    "cleanSheets": 1,
+    "rating": 6.3,
+    "trackedApps": 3,
+    "cleanSheets": 3,
     "goalsConceded": 0,
     "last5": [
       {
         "date": "2027-07-24",
         "rating": 6.9
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.1
       }
     ]
   },
   "B. Klaverboer": {
     "position": "GK",
-    "apps": 1,
+    "apps": 2,
     "goals": 0,
     "assists": 0,
-    "rating": 6.6,
-    "trackedApps": 1,
-    "cleanSheets": 1,
+    "rating": 6.4,
+    "trackedApps": 2,
+    "cleanSheets": 2,
     "goalsConceded": 0,
     "last5": [
       {
         "date": "2027-07-24",
         "rating": 6.6
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.1
       }
     ]
   },
   "T. Fruk": {
     "position": "CAM",
-    "apps": 1,
+    "apps": 3,
     "goals": 0,
     "assists": 0,
-    "rating": 6.7,
+    "rating": 6.5,
     "last5": [
       {
         "date": "2027-07-24",
         "rating": 6.7
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.1
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.6
       }
     ]
   },
   "T. Pitarch": {
     "position": "LCM",
-    "apps": 1,
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.3,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.7
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.4
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.9
+      }
+    ]
+  },
+  "J. Vargas": {
+    "position": "CAM",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.0,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.3
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.7
+      }
+    ]
+  },
+  "J. Mokio": {
+    "position": "LB",
+    "apps": 2,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.5,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.3
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.6
+      }
+    ]
+  },
+  "A. Heaven": {
+    "position": "RCB",
+    "apps": 3,
+    "goals": 0,
+    "assists": 0,
+    "rating": 6.4,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.3
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 5.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 7.0
+      }
+    ]
+  },
+  "C. Obi": {
+    "position": "ST",
+    "apps": 3,
+    "goals": 2,
+    "assists": 0,
+    "rating": 6.6,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.6
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.3
+      }
+    ]
+  },
+  "M. Vitális": {
+    "position": "RCM",
+    "apps": 3,
+    "goals": 0,
+    "assists": 1,
+    "rating": 6.5,
+    "last5": [
+      {
+        "date": "2027-07-24",
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 6.9
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.6
+      }
+    ]
+  },
+  "A. Cuenca": {
+    "position": "LCB",
+    "apps": 3,
     "goals": 0,
     "assists": 0,
     "rating": 6.7,
     "last5": [
       {
         "date": "2027-07-24",
-        "rating": 6.7
+        "rating": 6.0
+      },
+      {
+        "date": "2027-07-27",
+        "rating": 7.2
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.8
       }
     ]
   },
-  "J. Vargas": {
+  "B. Gutiérrez": {
     "position": "CAM",
-    "apps": 1,
+    "apps": 3,
     "goals": 0,
     "assists": 0,
-    "rating": 6.3,
+    "rating": 6.2,
     "last5": [
       {
-        "date": "2027-07-24",
+        "date": "2027-07-27",
         "rating": 6.3
+      },
+      {
+        "date": "2027-07-31",
+        "rating": 6.1
       }
     ]
   },
-  "J. Mokio": {
-    "position": "LB",
+  "A. Okonkwo": {
+    "position": "GK",
     "apps": 1,
     "goals": 0,
     "assists": 0,
-    "rating": 6.3,
+    "rating": 6.2,
+    "trackedApps": 1,
+    "cleanSheets": 1,
+    "goalsConceded": 0,
     "last5": [
       {
-        "date": "2027-07-24",
-        "rating": 6.3
+        "date": "2027-07-27",
+        "rating": 6.2
       }
     ]
   },
-  "A. Heaven": {
-    "position": "RCB",
+  "L. Cacace": {
+    "position": "RB",
     "apps": 1,
     "goals": 0,
     "assists": 0,
-    "rating": 6.3,
+    "rating": 7.5,
     "last5": [
       {
-        "date": "2027-07-24",
-        "rating": 6.3
+        "date": "2027-07-27",
+        "rating": 7.5
       }
     ]
   },
-  "C. Obi": {
-    "position": "ST",
-    "apps": 1,
+  "V. Veleten": {
+    "position": "RW",
+    "apps": 2,
     "goals": 0,
     "assists": 0,
-    "rating": 6.0,
+    "rating": 6.1,
     "last5": [
       {
-        "date": "2027-07-24",
-        "rating": 6.0
-      }
-    ]
-  },
-  "M. Vitális": {
-    "position": "RCM",
-    "apps": 1,
-    "goals": 0,
-    "assists": 0,
-    "rating": 6.0,
-    "last5": [
+        "date": "2027-07-27",
+        "rating": 6.1
+      },
       {
-        "date": "2027-07-24",
-        "rating": 6.0
-      }
-    ]
-  },
-  "A. Cuenca": {
-    "position": "LCB",
-    "apps": 1,
-    "goals": 0,
-    "assists": 0,
-    "rating": 6.0,
-    "last5": [
-      {
-        "date": "2027-07-24",
+        "date": "2027-07-31",
         "rating": 6.0
       }
     ]

@@ -73,11 +73,6 @@ var ROSTER_SENIOR = [
     "starter": true
   },
   {
-    "name": "Juan Cruz Vargas",
-    "pos": "CAM",
-    "starter": false
-  },
-  {
     "name": "Leo Sauer",
     "pos": "LW/LM",
     "starter": true
@@ -1689,7 +1684,7 @@ var ROSTER_ATTR_DATA = {
     "Pref_Foot": "Right",
     "Squad_Role": "Prospect",
     "Contract_Length": "3y1m",
-    "Status": "Has Potential To Be Special",
+    "Status": "On Loan at Ipswich Town (back 31 Jul 2028)",
     "OVR": "68",
     "Pace": "74",
     "Shooting": "55",
@@ -1734,7 +1729,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "10000",
     "Market_Value": "4500000",
     "Development_Plan": "Advanced Playmaker 68→69 ETA 33w",
-    "Notes": "CAM: Half-Winger++/Shadow Striker++/Playmaker+. Not willing to negotiate new contract terms. End-of-season review 2027-05-23."
+    "Notes": "CAM: Half-Winger++/Shadow Striker++/Playmaker+. Not willing to negotiate new contract terms. Carries the \"Has Potential To Be Special\" scouting tag. Loaned to Ipswich Town for the 2027-28 season (one-year loan, back 31 Jul 2028), 31 Jul 2027. End-of-season review 2027-05-23."
   },
   "Marco Soria": {
     "Position": "LW",

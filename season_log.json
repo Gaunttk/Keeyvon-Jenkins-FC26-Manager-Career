@@ -40,6 +40,72 @@
         "A. Kaczmarek": 6.9,
         "B. Klaverboer": 6.6
       }
+    },
+    {
+      "date": "2027-07-27",
+      "opponent": "M'gladbach",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Round 2",
+      "notes": "Gómez 6', Obi 18'. Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Kaczmarek": 6.0,
+        "A. Gómez": 6.6,
+        "A. Okonkwo": 6.2,
+        "A. Heaven": 5.9,
+        "B. Gutiérrez": 6.3,
+        "C. Doyle": 6.2,
+        "C. Obi": 7.6,
+        "E. Dijkstra": 6.9,
+        "J. Belghazi": 7.1,
+        "J. Vargas": 5.7,
+        "L. Cacace": 7.5,
+        "M. Barbieri": 7.7,
+        "M. Vitális": 6.9,
+        "M. Tine": 5.9,
+        "R. Ngumoha": 5.9,
+        "T. Pitarch": 5.4,
+        "T. Fruk": 6.1,
+        "V. Veleten": 6.1,
+        "A. Cuenca": 7.2,
+        "C. Macia": 7.0
+      }
+    },
+    {
+      "date": "2027-07-31",
+      "opponent": "RCD Espanyol",
+      "home": false,
+      "score": "3-0",
+      "result": "W",
+      "competition": "European International Cup",
+      "round": "Round 3",
+      "notes": "Sauer 14' (MOTM, 7.9 rating), Tine 87' (sub), Espanyol own goal 74' (F. Calero sent off same minute). Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage) — Wrexham complete the group stage with a 3-0-0 record (Mallorca, M'gladbach, Espanyol).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Cuenca": 6.8,
+        "A. Gómez": 6.4,
+        "A. Heaven": 7.0,
+        "A. Kaczmarek": 6.1,
+        "B. Gutiérrez": 6.1,
+        "B. Klaverboer": 6.1,
+        "C. Macia": 6.8,
+        "C. Obi": 6.3,
+        "D. Bobadilla": 6.0,
+        "E. Dijkstra": 6.4,
+        "J. Belghazi": 6.2,
+        "J. Mokio": 6.6,
+        "L. Sauer": 7.9,
+        "M. Barbieri": 6.2,
+        "M. Tine": 6.7,
+        "M. Vitális": 6.6,
+        "R. Ngumoha": 6.5,
+        "T. Fruk": 6.6,
+        "T. Pitarch": 6.9,
+        "V. Veleten": 6.0
+      }
     }
   ],
   "transfers": [
@@ -50,6 +116,14 @@
       "club": "Free Agent",
       "fee": "£0 (Free Transfer)",
       "wage": "$17k/w"
+    },
+    {
+      "date": "2027-07-31",
+      "player": "J. Vargas",
+      "direction": "out",
+      "club": "Ipswich Town",
+      "fee": "One-year Loan",
+      "wage": ""
     },
     {
       "date": "2027-07-01",
@@ -134,6 +208,14 @@
   ],
   "injuries": [],
   "milestones": [
+    {
+      "date": "2027-07-31",
+      "description": "Wrexham AFC finish the European International Cup group stage with a perfect record — wins over Mallorca (2-0), M'gladbach (2-0), and RCD Espanyol (3-0), the last capped by Leo Sauer's Man of the Match display."
+    },
+    {
+      "date": "2027-07-31",
+      "description": "Juan Cruz Vargas (17) loaned to Ipswich Town for the 2027-28 season, seeking senior development minutes away from Wrexham's crowded CAM options."
+    },
     {
       "date": "2027-08-25",
       "description": "Wrexham AFC sign Gabonese striker Musa Tine (17) as a free agent, agreeing a 4-year deal worth $17,000/week plus a $175,000 signing bonus. The 68-rated forward gives the club a genuine young No. 9 option behind Obi while Yacel Amrizi continues his recovery from injury."
