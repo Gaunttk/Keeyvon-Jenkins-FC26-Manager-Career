@@ -147,6 +147,30 @@ const MEDIA_INDEX = {
    "image_alt": null,
    "url": "journal.html#entry-001"
   },
+  "2027-08-07-meredith-community-shield-man-city": {
+   "id": "2027-08-07-meredith-community-shield-man-city",
+   "headline": "A Wembley First Ends in Haaland's Shadow as City Edge the Community Shield",
+   "dek": "Wrexham's first appearance in the curtain-raiser stayed level for eighty-eight minutes before Erling Haaland settled it in the final minute — a 1-0 loss that still doubled as a statement of arrival.",
+   "date": "2027-08-07",
+   "date_label": "Aug 7, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "fa-community-shield",
+    "pre-season",
+    "match-coverage"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-07-meredith-community-shield-man-city"
+  },
   "2027-07-31-meredith-espanyol-euro-cup": {
    "id": "2027-07-31-meredith-espanyol-euro-cup",
    "headline": "Sauer's Man of the Match Turn Seals a Perfect Group Stage as Wrexham Rout Espanyol",
@@ -2208,6 +2232,7 @@ const MEDIA_INDEX = {
   "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",
   "entry-001",
+  "2027-08-07-meredith-community-shield-man-city",
   "2027-07-31-meredith-espanyol-euro-cup",
   "2027-07-27-meredith-gladbach-euro-cup",
   "2027-07-24-meredith-mallorca-euro-cup",

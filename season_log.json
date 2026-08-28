@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-08-25"
+    "last_updated": "2027-08-28"
   },
   "matches": [
     {
@@ -106,6 +106,16 @@
         "T. Pitarch": 6.9,
         "V. Veleten": 6.0
       }
+    },
+    {
+      "date": "2027-08-07",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "0-1",
+      "result": "L",
+      "competition": "FA Community Shield",
+      "notes": "Haaland 89'. Neutral venue (Wembley Stadium).",
+      "journal_entry": true
     }
   ],
   "transfers": [
@@ -204,6 +214,14 @@
       "club": "Fulham",
       "fee": "Two-year Loan",
       "wage": ""
+    },
+    {
+      "date": "2027-08-28",
+      "player": "Max Cleworth",
+      "direction": "out",
+      "club": "M'Gladbach",
+      "fee": "£4.6m",
+      "wage": ""
     }
   ],
   "injuries": [],
@@ -239,6 +257,10 @@
     {
       "date": "2027-05-26",
       "description": "Premier League Team of the Season announced — no Wrexham player named, despite the club winning the title. XI: Donnarumma (GK); Mauro Jr, Gvardiol, Thiaw, Frimpong; B. Barcola, B. Fernandes, Traoré, Saka; Gyökeres, Haaland."
+    },
+    {
+      "date": "2027-08-28",
+      "description": "Squad update"
     }
   ],
   "fixtures": [
