@@ -88,11 +88,6 @@ var ROSTER_SENIOR = [
     "starter": false
   },
   {
-    "name": "Max Cleworth",
-    "pos": "CB",
-    "starter": false
-  },
-  {
     "name": "Milán Vitális",
     "pos": "CM/CDM",
     "starter": false
@@ -296,61 +291,6 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "5500000",
     "Development_Plan": "N/A",
     "Notes": "RB: Wingback++. LB: Falseback+. LM: Winger+. CAM: role detail cut off. Not willing to negotiate new terms. Development Complete. End-of-season review 2027-05-23. (Technical breakdown not captured this session.)"
-  },
-  "Max Cleworth": {
-    "Position": "CB",
-    "Age": "24",
-    "Height": "6'3\"",
-    "Weight": "191lbs",
-    "Pref_Foot": "Right",
-    "Squad_Role": "Important",
-    "Contract_Length": "3y",
-    "Status": "At Club Since 2020",
-    "OVR": "72",
-    "Pace": "74",
-    "Shooting": "27",
-    "Passing": "56",
-    "Dribbling": "63",
-    "Defending": "72",
-    "Physical": "77",
-    "Potential": "",
-    "Acceleration": "72",
-    "Agility": "69",
-    "Balance": "58",
-    "Jumping": "78",
-    "Sprint_Speed": "75",
-    "Stamina": "74",
-    "Strength": "81",
-    "Aggression": "68",
-    "Att_Position": "30",
-    "Composure": "69",
-    "Interceptions": "75",
-    "Reactions": "66",
-    "Vision": "60",
-    "Ball_Control": "62",
-    "Crossing": "35",
-    "Curve": "47",
-    "Def_Aware": "73",
-    "Dribbling_Tech": "62",
-    "FK_Acc": "21",
-    "Finishing": "26",
-    "Heading_Acc": "70",
-    "Long_Pass": "64",
-    "Long_Shots": "22",
-    "Penalties": "28",
-    "Short_Pass": "69",
-    "Shot_Power": "36",
-    "Slide_Tackle": "75",
-    "Stand_Tackle": "68",
-    "Volleys": "22",
-    "Skill_Moves": "2",
-    "Weak_Foot": "5",
-    "PlayStyles": "Precision Header/Long Ball Pass/Jockey/Anticipate/Aerial Fortress/Long Throw",
-    "Roles": "4",
-    "Wage": "21000",
-    "Market_Value": "3000000",
-    "Development_Plan": "Wide Back",
-    "Notes": "CB: Defender++/Stopper/Wide Back++/Ball-Playing Defender. Willing to negotiate new terms. End-of-season review 2027-05-23."
   },
   "Callum Doyle": {
     "Position": "CB/LB",
@@ -3214,12 +3154,6 @@ var ROSTER_ATTR_DATA = {
   }
 };
 var SCHEDULED_FIXTURES = [
-  {
-    "date": "2027-08-07",
-    "opponent": "Manchester City",
-    "venue": "neutral",
-    "competition": "FA Community Shield"
-  },
   {
     "date": "2027-08-15",
     "opponent": "Aston Villa",

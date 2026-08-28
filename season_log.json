@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-08-25"
+    "last_updated": "2027-08-28"
   },
   "matches": [
     {
@@ -106,6 +106,38 @@
         "T. Pitarch": 6.9,
         "V. Veleten": 6.0
       }
+    },
+    {
+      "date": "2027-08-07",
+      "opponent": "Manchester City",
+      "home": false,
+      "score": "0-1",
+      "result": "L",
+      "competition": "FA Community Shield",
+      "notes": "Haaland 89'. Neutral venue (Wembley Stadium).",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Heaven": 6.9,
+        "B. Gutiérrez": 6.9,
+        "B. Klaverboer": 7.2,
+        "C. Doyle": 6.6,
+        "C. Obi": 5.8,
+        "D. Bobadilla": 6.3,
+        "J. Mokio": 7.5,
+        "L. Cacace": 6.6,
+        "L. Sauer": 6.0,
+        "M. Barbieri": 6.0,
+        "R. Ngumoha": 5.6,
+        "T. Fruk": 6.2,
+        "T. Pitarch": 6.5
+      },
+      "team_stats": {
+        "possession": 41,
+        "shots": "4-12",
+        "shots_on_target": "2-8",
+        "pass_accuracy": 85,
+        "tackles": 8
+      }
     }
   ],
   "transfers": [
@@ -204,6 +236,14 @@
       "club": "Fulham",
       "fee": "Two-year Loan",
       "wage": ""
+    },
+    {
+      "date": "2027-08-28",
+      "player": "Max Cleworth",
+      "direction": "out",
+      "club": "M'Gladbach",
+      "fee": "£4.6m",
+      "wage": ""
     }
   ],
   "injuries": [],
@@ -239,6 +279,10 @@
     {
       "date": "2027-05-26",
       "description": "Premier League Team of the Season announced — no Wrexham player named, despite the club winning the title. XI: Donnarumma (GK); Mauro Jr, Gvardiol, Thiaw, Frimpong; B. Barcola, B. Fernandes, Traoré, Saka; Gyökeres, Haaland."
+    },
+    {
+      "date": "2027-08-28",
+      "description": "Squad update"
     }
   ],
   "fixtures": [
