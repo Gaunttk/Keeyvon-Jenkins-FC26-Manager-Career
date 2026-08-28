@@ -115,7 +115,29 @@
       "result": "L",
       "competition": "FA Community Shield",
       "notes": "Haaland 89'. Neutral venue (Wembley Stadium).",
-      "journal_entry": true
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Heaven": 6.9,
+        "B. Gutiérrez": 6.9,
+        "B. Klaverboer": 7.2,
+        "C. Doyle": 6.6,
+        "C. Obi": 5.8,
+        "D. Bobadilla": 6.3,
+        "J. Mokio": 7.5,
+        "L. Cacace": 6.6,
+        "L. Sauer": 6.0,
+        "M. Barbieri": 6.0,
+        "R. Ngumoha": 5.6,
+        "T. Fruk": 6.2,
+        "T. Pitarch": 6.5
+      },
+      "team_stats": {
+        "possession": 41,
+        "shots": "4-12",
+        "shots_on_target": "2-8",
+        "pass_accuracy": 85,
+        "tackles": 8
+      }
     }
   ],
   "transfers": [

@@ -72,7 +72,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 4,
     "goals": 0,
     "assists": 2,
-    "rating": 6.5,
+    "rating": 6.3,
     "last5": [
       {
         "date": "2027-07-24",
@@ -85,6 +85,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.5
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 5.6
       }
     ]
   },
@@ -114,7 +118,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 4,
     "goals": 0,
     "assists": 0,
-    "rating": 7.0,
+    "rating": 6.8,
     "last5": [
       {
         "date": "2027-07-24",
@@ -127,6 +131,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.2
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.0
       }
     ]
   },
@@ -165,6 +173,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.0
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.3
       }
     ]
   },
@@ -173,7 +185,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 3,
     "goals": 1,
     "assists": 0,
-    "rating": 7.4,
+    "rating": 6.9,
     "last5": [
       {
         "date": "2027-07-24",
@@ -182,6 +194,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 7.9
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.0
       }
     ]
   },
@@ -199,6 +215,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-27",
         "rating": 6.2
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.6
       }
     ]
   },
@@ -231,10 +251,10 @@ const PLAYER_SEASON_STATS = {
     "apps": 3,
     "goals": 0,
     "assists": 0,
-    "rating": 6.4,
-    "trackedApps": 2,
+    "rating": 6.7,
+    "trackedApps": 3,
     "cleanSheets": 2,
-    "goalsConceded": 0,
+    "goalsConceded": 1,
     "last5": [
       {
         "date": "2027-07-24",
@@ -243,6 +263,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.1
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 7.2
       }
     ]
   },
@@ -251,7 +275,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 4,
     "goals": 0,
     "assists": 0,
-    "rating": 6.5,
+    "rating": 6.4,
     "last5": [
       {
         "date": "2027-07-24",
@@ -264,6 +288,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.6
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.2
       }
     ]
   },
@@ -285,6 +313,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.9
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.5
       }
     ]
   },
@@ -310,7 +342,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 3,
     "goals": 0,
     "assists": 0,
-    "rating": 6.5,
+    "rating": 6.8,
     "last5": [
       {
         "date": "2027-07-24",
@@ -319,6 +351,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.6
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 7.5
       }
     ]
   },
@@ -327,7 +363,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 4,
     "goals": 0,
     "assists": 0,
-    "rating": 6.4,
+    "rating": 6.5,
     "last5": [
       {
         "date": "2027-07-24",
@@ -340,6 +376,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 7.0
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.9
       }
     ]
   },
@@ -348,7 +388,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 4,
     "goals": 2,
     "assists": 0,
-    "rating": 6.6,
+    "rating": 6.4,
     "last5": [
       {
         "date": "2027-07-24",
@@ -361,6 +401,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.3
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 5.8
       }
     ]
   },
@@ -411,7 +455,7 @@ const PLAYER_SEASON_STATS = {
     "apps": 4,
     "goals": 0,
     "assists": 0,
-    "rating": 6.2,
+    "rating": 6.4,
     "last5": [
       {
         "date": "2027-07-27",
@@ -420,6 +464,10 @@ const PLAYER_SEASON_STATS = {
       {
         "date": "2027-07-31",
         "rating": 6.1
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.9
       }
     ]
   },
@@ -444,11 +492,15 @@ const PLAYER_SEASON_STATS = {
     "apps": 2,
     "goals": 0,
     "assists": 0,
-    "rating": 7.5,
+    "rating": 7.0,
     "last5": [
       {
         "date": "2027-07-27",
         "rating": 7.5
+      },
+      {
+        "date": "2027-08-07",
+        "rating": 6.6
       }
     ]
   },

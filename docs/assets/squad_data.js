@@ -55,7 +55,7 @@ const SQUAD_DATA = {
         "apps": 2,
         "goals": 0,
         "assists": 0,
-        "rating": 7.5
+        "rating": 7.0
       }
     },
     {
@@ -198,7 +198,7 @@ const SQUAD_DATA = {
         "apps": 4,
         "goals": 0,
         "assists": 0,
-        "rating": 6.2
+        "rating": 6.4
       }
     },
     {
@@ -373,7 +373,7 @@ const SQUAD_DATA = {
         "apps": 4,
         "goals": 2,
         "assists": 0,
-        "rating": 6.6
+        "rating": 6.4
       }
     },
     {
@@ -403,7 +403,7 @@ const SQUAD_DATA = {
         "apps": 3,
         "goals": 0,
         "assists": 0,
-        "rating": 6.5
+        "rating": 6.8
       }
     },
     {
@@ -430,7 +430,7 @@ const SQUAD_DATA = {
         "apps": 4,
         "goals": 0,
         "assists": 0,
-        "rating": 6.5
+        "rating": 6.4
       }
     },
     {
@@ -484,7 +484,7 @@ const SQUAD_DATA = {
         "apps": 4,
         "goals": 0,
         "assists": 0,
-        "rating": 7.0
+        "rating": 6.8
       }
     },
     {
@@ -513,7 +513,7 @@ const SQUAD_DATA = {
         "apps": 4,
         "goals": 0,
         "assists": 2,
-        "rating": 6.5
+        "rating": 6.3
       }
     },
     {
@@ -541,7 +541,7 @@ const SQUAD_DATA = {
         "apps": 4,
         "goals": 0,
         "assists": 0,
-        "rating": 6.4
+        "rating": 6.5
       }
     },
     {
@@ -625,7 +625,7 @@ const SQUAD_DATA = {
         "apps": 3,
         "goals": 1,
         "assists": 0,
-        "rating": 7.4
+        "rating": 6.9
       }
     },
     {
@@ -674,10 +674,10 @@ const SQUAD_DATA = {
       "season": {
         "isGk": true,
         "apps": 3,
-        "rating": 6.4,
-        "trackedApps": 2,
+        "rating": 6.7,
+        "trackedApps": 3,
         "cleanSheets": 2,
-        "goalsConceded": 0
+        "goalsConceded": 1
       }
     },
     {
