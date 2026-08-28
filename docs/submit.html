@@ -549,6 +549,22 @@ if ('serviceWorker' in navigator) {
       </div>
     </div>
 
+    <!-- ── Loans (optional) ── -->
+    <div style="margin-top:8px;">
+      <label style="display:block; margin-bottom:8px;">Loans (optional)</label>
+      <div class="stats-hint">A player heading out on loan, or coming back from one. Loan-outs are added to the <code>transfers</code> array in <code>season_log.json</code>; a return updates the player's Status field instead — that line is noted in Details, not the transfers array (matching how existing loan returns are recorded).</div>
+      <div id="loans-list"></div>
+      <button class="btn-add" onclick="addLoan()">+ Add Loan</button>
+    </div>
+
+    <!-- ── Promotions (optional) ── -->
+    <div style="margin-top:14px;">
+      <label style="display:block; margin-bottom:8px;">Promotions (optional)</label>
+      <div class="stats-hint">Move a Youth Academy player up to the First Team. Position/OVR/Potential are pulled from their academy snapshot automatically, so Potential doesn't get dropped when the row moves to <code>wrexham_squad.csv</code>.</div>
+      <div id="promotions-list"></div>
+      <button class="btn-add" onclick="addPromotion()">+ Add Promotion</button>
+    </div>
+
     <!-- ── Attribute / Stat Editor ── -->
     <div style="margin-top:8px;">
       <label style="display:block; margin-bottom:8px;">Attribute / Stat Adjustments</label>
@@ -1159,6 +1175,43 @@ function collectTransfers(date) {
   return { lines: lines, json: json, raw: raw };
 }
 
+// ── Loans ──
+var loanCount = 0;
+function addLoan() {
+  var id = ++loanCount;
+  var div = document.createElement('div');
+  div.className = 'sub-row';
+  div.id = 'loan-' + id;
+  div.innerHTML = `
+    <input type="text" placeholder="Player name" id="l-player-${id}">
+    <select id="l-dir-${id}"><option value="out">Loaned OUT</option><option value="in">Returned FROM loan</option></select>
+    <input type="text" placeholder="Club" id="l-club-${id}">
+    <input type="text" placeholder="e.g. One-year Loan, or back 09 Jul 2027" id="l-duration-${id}" style="max-width:190px;">
+    <button class="btn-remove" onclick="document.getElementById('loan-${id}').remove()">×</button>
+  `;
+  document.getElementById('loans-list').appendChild(div);
+}
+
+function collectLoans(date) {
+  var lines = '', json = [], raw = [];
+  document.querySelectorAll('[id^="loan-"]').forEach(function(row) {
+    var id       = row.id.replace('loan-','');
+    var player   = (document.getElementById('l-player-'+id)||{}).value || '';
+    var dir      = (document.getElementById('l-dir-'+id)||{}).value || 'out';
+    var club     = (document.getElementById('l-club-'+id)||{}).value || '';
+    var duration = (document.getElementById('l-duration-'+id)||{}).value || '';
+    raw.push({ player: player, dir: dir, club: club, duration: duration });
+    if (!player) return;
+    if (dir === 'out') {
+      lines += '\n- ' + player + ' (OUT on loan to ' + club + (duration ? ' · ' + duration : '') + ')';
+      json.push('  { "date": "' + date + '", "player": "' + player + '", "direction": "out", "club": "' + club + '", "fee": "' + (duration || 'Loan') + '", "wage": "" }');
+    } else {
+      lines += '\n- ' + player + ' (Returned from loan at ' + club + (duration ? ' · ' + duration : '') + ') — update wrexham_squad.csv Status field; loan returns get no transfers-array entry';
+    }
+  });
+  return { lines: lines, json: json, raw: raw };
+}
+
 function collectInjuries(date) {
   var lines = '', json = [], raw = [];
   document.querySelectorAll('[id^="injury-"]').forEach(function(row) {
@@ -1174,19 +1227,72 @@ function collectInjuries(date) {
   return { lines: lines, json: json, raw: raw };
 }
 
+// ── Promotions ──
+var promotionCount = 0;
+function addPromotion() {
+  var id = ++promotionCount;
+  var div = document.createElement('div');
+  div.className = 'sub-row';
+  div.id = 'promotion-' + id;
+  div.innerHTML = `
+    <select id="p-player-${id}" onchange="onPromotionPlayerChange(${id})">
+      <option value="">— select academy player —</option>
+    </select>
+    <span id="p-meta-${id}" style="font-size:11px; color:var(--muted); white-space:nowrap;"></span>
+    <input type="text" placeholder="Note (e.g. immediately loaned to Barnet)" id="p-note-${id}">
+    <button class="btn-remove" onclick="document.getElementById('promotion-${id}').remove()">×</button>
+  `;
+  document.getElementById('promotions-list').appendChild(div);
+  var sel = document.getElementById('p-player-'+id);
+  ROSTER_ACADEMY.forEach(function(p) {
+    var o = document.createElement('option'); o.value = p.name;
+    o.textContent = p.name + ' (' + p.pos + ')';
+    sel.appendChild(o);
+  });
+}
+function onPromotionPlayerChange(id) {
+  var name = document.getElementById('p-player-'+id).value;
+  var meta = document.getElementById('p-meta-'+id);
+  var data = (typeof ROSTER_ATTR_DATA !== 'undefined' && ROSTER_ATTR_DATA[name]) || {};
+  meta.textContent = name ? ('OVR ' + (data.OVR || '?') + (data.Potential ? ' · POT ' + data.Potential : ' · POT not yet scouted')) : '';
+}
+
+function collectPromotions(date) {
+  var lines = '', json = [], raw = [];
+  document.querySelectorAll('[id^="promotion-"]').forEach(function(row) {
+    var id     = row.id.replace('promotion-','');
+    var player = (document.getElementById('p-player-'+id)||{}).value || '';
+    var note   = (document.getElementById('p-note-'+id)||{}).value || '';
+    raw.push({ player: player, note: note });
+    if (!player) return;
+    var data = (typeof ROSTER_ATTR_DATA !== 'undefined' && ROSTER_ATTR_DATA[player]) || {};
+    var pot  = data.Potential ? ('POT ' + data.Potential) : 'POT not yet scouted — leave blank, do not infer';
+    var summary = player + ' promoted from Youth Academy to First Team (' + (data.Position || '?') + ', OVR ' + (data.OVR || '?') + ', ' + pot + ')' + (note ? ' — ' + note : '');
+    lines += '\n- ' + summary + ' — move row from youth_academy.csv to wrexham_squad.csv, carrying Potential across';
+    json.push('  "' + summary.replace(/"/g,'\\"') + '"');
+  });
+  return { lines: lines, json: json, raw: raw };
+}
+
 // ── Squad Update event (roster/attribute/ratings, non-match) ──
 function collectSquadEventData() {
   var date = document.getElementById('date').value;
   var dateDisp = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {month:'numeric',day:'numeric',year:'2-digit'}) : '—';
 
+  var loanData = collectLoans(date);
+  var promoData = collectPromotions(date);
+
   var whatChanged = [];
   if (document.getElementById('su-attrs').checked)   whatChanged.push('Attributes updated');
   if (document.getElementById('su-ratings').checked) whatChanged.push('Ratings / potential reviewed');
   if (document.getElementById('su-roster').checked)  whatChanged.push('Roster change');
+  if (loanData.raw.some(function(l){ return l.player; }))  whatChanged.push('Loan movement');
+  if (promoData.raw.some(function(p){ return p.player; })) whatChanged.push('Academy promotion');
   var squadNotes = document.getElementById('squad-notes').value;
   var writeJournal = document.getElementById('squad-journal').checked;
 
   var t = collectTransfers(date);
+  t.json = t.json.concat(loanData.json);
   var inj = collectInjuries(date);
   var attrText = collectAttrChangesText();
 
@@ -1214,7 +1320,7 @@ function collectSquadEventData() {
 ${whatChanged.length ? whatChanged.map(function(w){return '- ' + w;}).join('\n') : '(none checked)'}
 
 ### Details
-${squadNotes || '—'}${t.lines || ''}${inj.lines || ''}${attrText}
+${squadNotes || '—'}${loanData.lines || ''}${promoData.lines || ''}${t.lines || ''}${inj.lines || ''}${attrText}
 
 ### Screenshots Pushed
 ${ssLines || '(none checked)'}
@@ -1228,8 +1334,9 @@ ${writeJournal ? 'Yes' : 'No'}
   var milestoneEntry = '{ "date": "' + date + '", "description": "' + milestoneDesc.replace(/"/g,'\\"') + '"' + (writeJournal ? ', "journal_entry": true' : '') + ' }';
 
   var logEntry = '// Add to season_log.json → "milestones" array:\n' + milestoneEntry;
-  if (t.json.length)   logEntry += '\n\n// Add to "transfers" array:\n' + t.json.join(',\n');
-  if (inj.json.length) logEntry += '\n\n// Add to "injuries" array:\n' + inj.json.join(',\n');
+  if (t.json.length)       logEntry += '\n\n// Add to "transfers" array:\n' + t.json.join(',\n');
+  if (inj.json.length)     logEntry += '\n\n// Add to "injuries" array:\n' + inj.json.join(',\n');
+  if (promoData.json.length) logEntry += '\n\n// Promotions — no dedicated season_log.json array; fold into a milestone and move the CSV row per CLAUDE.md "Academy Changes":\n' + promoData.json.join(',\n');
 
   var commitMsg = 'Squad update: ' + (whatChanged.join(', ') || 'roster/attributes') + '\n\nCo-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>';
 
@@ -1252,6 +1359,8 @@ ${writeJournal ? 'Yes' : 'No'}
     },
     transfers: t.raw,
     injuries: inj.raw,
+    loans: loanData.raw,
+    promotions: promoData.raw,
     attrChanges: JSON.parse(JSON.stringify(attrChanges))
   };
 
@@ -1403,6 +1512,8 @@ function clearForm() {
 
   document.getElementById('transfers-list').innerHTML = '';
   document.getElementById('injuries-list').innerHTML = '';
+  document.getElementById('loans-list').innerHTML = '';
+  document.getElementById('promotions-list').innerHTML = '';
 
   attrChanges = [];
   renderAttrChangeChips();
@@ -1705,6 +1816,25 @@ function populateForm(raw) {
       var id = injuryCount;
       document.getElementById('i-player-'+id).value = inj.player || '';
       document.getElementById('i-desc-'+id).value    = inj.desc || '';
+    });
+
+    document.getElementById('loans-list').innerHTML = '';
+    (raw.loans || []).forEach(function(l) {
+      addLoan();
+      var id = loanCount;
+      document.getElementById('l-player-'+id).value   = l.player || '';
+      document.getElementById('l-dir-'+id).value       = l.dir || 'out';
+      document.getElementById('l-club-'+id).value      = l.club || '';
+      document.getElementById('l-duration-'+id).value  = l.duration || '';
+    });
+
+    document.getElementById('promotions-list').innerHTML = '';
+    (raw.promotions || []).forEach(function(p) {
+      addPromotion();
+      var id = promotionCount;
+      document.getElementById('p-player-'+id).value = p.player || '';
+      onPromotionPlayerChange(id);
+      document.getElementById('p-note-'+id).value = p.note || '';
     });
     return;
   }
