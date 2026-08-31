@@ -97,22 +97,26 @@ def build_schedule(log, league_name):
     home and away exactly once per season, so this stays correct even if a
     fixture's actual played date drifts from the originally scheduled one.
     """
-    fixtures = log.get("fixtures", [])
+    fixtures = [fx for fx in log.get("fixtures", []) if fx.get("competition") == league_name]
     league_matches = {
         (m.get("opponent"), m.get("home")): m
         for m in log.get("matches", [])
         if m.get("competition") == league_name
     }
 
+    def fx_home(fx):
+        return fx["home"] if "home" in fx else fx.get("venue") == "home"
+
     schedule = []
     for i, fx in enumerate(fixtures, start=1):
-        key = (fx.get("opponent"), fx.get("home"))
+        home = fx_home(fx)
+        key = (fx.get("opponent"), home)
         played = league_matches.get(key)
         entry = {
             "md": i,
             "date": fx.get("date"),
             "opponent": fx.get("opponent"),
-            "home": fx.get("home"),
+            "home": home,
         }
         if played:
             entry["score"] = played.get("score")
