@@ -510,7 +510,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "26500",
     "Market_Value": "14000000",
     "Development_Plan": "Winger 76→77 ETA 133w",
-    "Notes": "Injured: Torn Quad Muscle, 3 months (from 2027-05-15 vs Man City, per season_log.json) -- explains the injury icon seen in every squad-hub screenshot this cycle. ST: Poacher++/Advanced Forward++. Injury icon shown next to name in squad list but no detail confirmed this cycle -- needs a dedicated Status-tab screenshot of Amrizi himself. Not willing to negotiate new terms. End-of-season review 2027-05-23."
+    "Notes": "Injured: Torn Quad Muscle, 3 months (from 2027-05-15 vs Man City, per season_log.json) -- back in first-team training as of 2027-08-15, nearing full recovery. ST: Poacher++/Advanced Forward++. Injury icon shown next to name in squad list but no detail confirmed this cycle -- needs a dedicated Status-tab screenshot of Amrizi himself. Not willing to negotiate new terms. End-of-season review 2027-05-23."
   },
   "Andrés Gómez": {
     "Position": "RM/RW",
@@ -3154,12 +3154,6 @@ var ROSTER_ATTR_DATA = {
   }
 };
 var SCHEDULED_FIXTURES = [
-  {
-    "date": "2027-08-15",
-    "opponent": "Aston Villa",
-    "venue": "away",
-    "competition": "Premier League"
-  },
   {
     "date": "2027-08-21",
     "opponent": "Brentford",

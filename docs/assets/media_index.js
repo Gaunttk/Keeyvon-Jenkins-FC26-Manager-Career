@@ -147,6 +147,115 @@ const MEDIA_INDEX = {
    "image_alt": null,
    "url": "journal.html#entry-001"
   },
+  "2027-08-16-mcallister-low-possession-efficiency": {
+   "id": "2027-08-16-mcallister-low-possession-efficiency",
+   "headline": "The Numbers Behind Wrexham's Opening Fortnight: Losing the Ball, Winning the Game",
+   "dek": "A 1-0 defeat to Manchester City and a 2-0 win at Aston Villa look like unrelated results a week apart. The underlying data says they're the same team doing the same thing — just with a different finish at the end of it.",
+   "date": "2027-08-16",
+   "date_label": "Aug 16, 2027",
+   "author_id": "james-mcallister",
+   "outlet": "The Athletic",
+   "section": "Tactical Analysis",
+   "content_type": "tactical",
+   "entry_number": null,
+   "category": "analysis",
+   "category_label": "Analysis",
+   "season": "2027/28",
+   "tags": [
+    "data-analysis",
+    "tactics",
+    "possession",
+    "chido-obi"
+   ],
+   "featured": false,
+   "image": "assets/photos/chido_obi.png",
+   "image_alt": "Chido Obi",
+   "url": "media/articles/2027-08-16-mcallister-low-possession-efficiency.html"
+  },
+  "2027-08-15-meredith-aston-villa-away": {
+   "id": "2027-08-15-meredith-aston-villa-away",
+   "headline": "Nine Minutes, Two Goals: Obi Punishes Villa to Open the Title Defence",
+   "dek": "Wrexham barely touched the ball at Villa Park. It didn't matter. Chido Obi scored twice inside nine second-half minutes, and the champions began the defence of their Premier League title with a very different kind of statement than the one Manchester City made at Wembley eight days ago.",
+   "date": "2027-08-15",
+   "date_label": "Aug 15, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "chido-obi"
+   ],
+   "featured": true,
+   "image": "assets/photos/chido_obi.png",
+   "image_alt": "Chido Obi",
+   "url": "journal.html#2027-08-15-meredith-aston-villa-away"
+  },
+  "2027-08-15-meredith-burnley-yrt-final": {
+   "id": "2027-08-15-meredith-burnley-yrt-final",
+   "headline": "The Streak Ends: Burnley Rout Wrexham's Academy in the Rush Final",
+   "dek": "Four straight Youth Rush titles came to a stop in the worst possible way — a 1-4 final defeat that had nothing in common with the three routine knockout wins that preceded it on the same afternoon.",
+   "date": "2027-08-15",
+   "date_label": "Aug 15, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-15-meredith-burnley-yrt-final"
+  },
+  "2027-08-15-meredith-nottingham-yrt-semi": {
+   "id": "2027-08-15-meredith-nottingham-yrt-semi",
+   "headline": "Knut Inge Bakke Takes Over as Wrexham's Academy Book a Fifth Straight Rush Final",
+   "dek": "The defensive worries from the quarter-final never resurfaced. A dominant Bakke display did the rest.",
+   "date": "2027-08-15",
+   "date_label": "Aug 15, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-15-meredith-nottingham-yrt-semi"
+  },
+  "2027-08-15-meredith-fulham-yrt-quarters": {
+   "id": "2027-08-15-meredith-fulham-yrt-quarters",
+   "headline": "Lien and Besse Combine for Four as Wrexham's Academy Open the New Rush Campaign With a Shootout Against Fulham",
+   "dek": "A 5-3 quarter-final win that owed as much to a busy afternoon in front of goal as it did to defending — Wrexham's kids matched Fulham strike for strike and came out the right side of it.",
+   "date": "2027-08-15",
+   "date_label": "Aug 15, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-08-15-meredith-fulham-yrt-quarters"
+  },
   "2027-08-07-meredith-community-shield-man-city": {
    "id": "2027-08-07-meredith-community-shield-man-city",
    "headline": "A Wembley First Ends in Haaland's Shadow as City Edge the Community Shield",
@@ -2232,6 +2341,11 @@ const MEDIA_INDEX = {
   "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",
   "entry-001",
+  "2027-08-16-mcallister-low-possession-efficiency",
+  "2027-08-15-meredith-aston-villa-away",
+  "2027-08-15-meredith-burnley-yrt-final",
+  "2027-08-15-meredith-nottingham-yrt-semi",
+  "2027-08-15-meredith-fulham-yrt-quarters",
   "2027-08-07-meredith-community-shield-man-city",
   "2027-07-31-meredith-espanyol-euro-cup",
   "2027-07-27-meredith-gladbach-euro-cup",
@@ -2334,6 +2448,11 @@ const MEDIA_INDEX = {
  ],
  "categories": [
   {
+   "slug": "analysis",
+   "label": "Analysis",
+   "count": 1
+  },
+  {
    "slug": "history",
    "label": "History",
    "count": 5
@@ -2361,6 +2480,12 @@ const MEDIA_INDEX = {
  ],
  "publications": [
   {
+   "name": "The Athletic",
+   "count": 3,
+   "latest_id": "2027-08-16-mcallister-low-possession-efficiency",
+   "latest_date": "2027-08-16"
+  },
+  {
    "name": "Sky Sports",
    "count": 5,
    "latest_id": "2027-05-23-hargreaves-pl-champions",
@@ -2383,12 +2508,6 @@ const MEDIA_INDEX = {
    "count": 1,
    "latest_id": "2027-05-23-bennett-jenkins-american-champion",
    "latest_date": "2027-05-23"
-  },
-  {
-   "name": "The Athletic",
-   "count": 2,
-   "latest_id": "2027-03-06-mcallister-academy-pipeline-fourth-title",
-   "latest_date": "2027-03-06"
   }
  ],
  "seasons": [
