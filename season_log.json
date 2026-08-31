@@ -172,6 +172,39 @@
         "pass_accuracy": 85,
         "tackles": 7
       }
+    },
+    {
+      "date": "2027-08-15",
+      "opponent": "Fulham",
+      "home": false,
+      "score": "5-3",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Quarter-final",
+      "notes": "Neutral venue. Scorers/assists: A. Lien 1G 2A, J. Collin 1G (MOM), M. Drouet 2G, T. Besse 1G 2A.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-08-15",
+      "opponent": "Nottingham",
+      "home": true,
+      "score": "4-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi-final",
+      "notes": "Scorers/assists: E. Jensen 1G, J. Van Vliet 1G, K. I. Bakke 2G 1A (MOM). Session note flagged a 'Knut Inge Pedersen' as missing from the academy roster -- no such player exists in youth_academy.csv (K. I. Bakke, who played in this match, is the closest name on file). Left unresolved pending clarification.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-08-15",
+      "opponent": "Burnley",
+      "home": false,
+      "score": "1-4",
+      "result": "L",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Neutral venue. Scorer/assist: M. Leon 1G, B. Forster 1A.",
+      "journal_entry": false
     }
   ],
   "transfers": [
@@ -321,6 +354,10 @@
     {
       "date": "2027-08-15",
       "description": "Squad update — Yacel Amrizi back in first-team training, nearing full recovery from his torn quad injury (sustained 2027-05-15 vs Manchester City)."
+    },
+    {
+      "date": "2027-08-15",
+      "description": "Youth Academy Rush Tournament: Wrexham beat Fulham 5-3 (QF) and Nottingham Forest 4-1 (SF) before losing the final 1-4 to Burnley, ending the academy's run of four straight titles."
     }
   ],
   "fixtures": [
