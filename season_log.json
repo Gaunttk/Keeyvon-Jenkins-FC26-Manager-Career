@@ -138,6 +138,40 @@
         "pass_accuracy": 85,
         "tackles": 8
       }
+    },
+    {
+      "date": "2027-08-15",
+      "opponent": "Aston Villa",
+      "home": false,
+      "score": "2-0",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "Obi 54', 60' (both goals, MOTM 7.6). Assists: Mokio, Fruk.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.4,
+        "A. Heaven": 7.2,
+        "A. Okonkwo": 6.8,
+        "B. Gutiérrez": 7.0,
+        "C. Doyle": 6.2,
+        "C. Obi": 7.6,
+        "D. Bobadilla": 7.2,
+        "J. Belghazi": 6.2,
+        "J. Mokio": 6.9,
+        "L. Cacace": 7.0,
+        "L. Sauer": 5.8,
+        "M. Barbieri": 6.5,
+        "M. Vitális": 6.0,
+        "R. Ngumoha": 6.5,
+        "T. Fruk": 7.3,
+        "T. Pitarch": 5.7
+      },
+      "team_stats": {
+        "possession": 37,
+        "shots": "5-1",
+        "pass_accuracy": 85,
+        "tackles": 7
+      }
     }
   ],
   "transfers": [
@@ -283,6 +317,10 @@
     {
       "date": "2027-08-28",
       "description": "Squad update"
+    },
+    {
+      "date": "2027-08-15",
+      "description": "Squad update — Yacel Amrizi back in first-team training, nearing full recovery from his torn quad injury (sustained 2027-05-15 vs Manchester City)."
     }
   ],
   "fixtures": [
