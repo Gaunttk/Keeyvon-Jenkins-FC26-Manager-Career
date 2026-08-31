@@ -91,6 +91,55 @@
     "image_alt": "Chido Obi"
   },
   {
+    "id": "2027-08-15-meredith-burnley-yrt-final",
+    "author_id": "owen-meredith",
+    "content_type": "dispatch",
+    "date": "2027-08-15",
+    "section": "Match Coverage",
+    "competition": "Youth Academy Rush Tournament",
+    "season": "Season 2027–28",
+    "date_line": "August 15, 2027 &middot; Neutral Venue",
+    "headline": "The Streak Ends: Burnley Rout Wrexham's Academy in the Rush Final",
+    "dek": "Four straight Youth Rush titles came to a stop in the worst possible way — a 1-4 final defeat that had nothing in common with the three routine knockout wins that preceded it on the same afternoon.",
+    "tags": [],
+    "featured": true,
+    "body_html": "<p>Two wins and eleven goals scored across the quarter-final and semi-final had this academy side looking every bit the four-time defending champions heading into Saturday's final. Burnley had other ideas. A heavily rotated Wrexham side — Avram Lien, Jayden Van Vliet, Knut Inge Bakke and Mathieu Drouet, three of them starters earlier in the day, all held back on the bench — never got a foothold, and Martin Leon's consolation goal was the only thing to show for an afternoon that ended the run at four.</p><p>\"Three matches in one day catches up with any squad, but we're not going to hide behind that,\" academy coaching staff said afterward. \"Burnley were the better side tonight and deserved it.\" Ben Forster, whose assist for Leon's goal was one of the few bright spots, was more direct: \"Four in a row was never going to last forever. Doesn't make it easy to take.\"</p><div class=\"context-card\">\n  <div class=\"context-card-label\">Neutral Venue &middot; Youth Academy Rush Tournament, Final</div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Result</span><span class=\"context-card-val danger\">Wrexham 1&ndash;4 Burnley</span></div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Goals / Assists</span><span class=\"context-card-val\">M. Leon 1G &middot; B. Forster 1A</span></div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Youth Academy Rush</span><span class=\"context-card-val danger\">Runners-up &middot; Four-title streak ends</span></div>\n</div><p>Whether the scale of the rotation from the semi-final explains the scoreline or simply accompanies it, four straight titles was always going to end somewhere, and it ends here, on a night when the group that had looked so sharp against Fulham and Nottingham a few hours earlier had nothing left to give against a side that wanted it more. It is the first final this academy has lost since the pipeline that produced Chido Obi and Rio Ngumoha first started collecting trophies.</p><div class=\"pull-quote\">\n  <p>Four in a row was never going to last forever. Doesn't make it easy to take.</p>\n  <span class=\"pull-quote-attr\">&mdash; Ben Forster, midfielder</span>\n</div><p>There is no shame in a runners-up medal after three matches in a day, and a squad this deep — deep enough to field an almost entirely different XI for the final than the one that won the semi-final by three — will have more cracks at a fifth title before this crop ages out of Rush eligibility. But for one evening, the streak that had become the easy shorthand for this academy's success is a streak no longer.</p>"
+  },
+  {
+    "id": "2027-08-15-meredith-nottingham-yrt-semi",
+    "author_id": "owen-meredith",
+    "content_type": "dispatch",
+    "date": "2027-08-15",
+    "section": "Match Coverage",
+    "competition": "Youth Academy Rush Tournament",
+    "season": "Season 2027–28",
+    "date_line": "August 15, 2027 &middot; The Racecourse, Wrexham",
+    "headline": "Knut Inge Bakke Takes Over as Wrexham's Academy Book a Fifth Straight Rush Final",
+    "dek": "The defensive worries from the quarter-final never resurfaced. A dominant Bakke display did the rest.",
+    "tags": [],
+    "featured": false,
+    "body_html": "<p>Whatever went wrong defensively against Fulham a few hours earlier was nowhere to be seen against Nottingham at the Racecourse. Wrexham's academy side controlled the semi-final from the opening whistle, with Knut Inge Bakke the difference-maker — two goals, an assist, and a man-of-the-match display that pushed his side clear before Nottingham had a foothold in the game. Even Jensen and Jayden Van Vliet added a goal apiece either side of Bakke's contribution.</p><p>\"That's the response we wanted after this morning,\" academy coaching staff said, a pointed reference to the leaky quarter-final. \"Knut was excellent — that kind of performance from a wide player doesn't happen by accident.\" Bakke himself was matter-of-fact about it: \"We fixed what we said we'd fix. Now we're back in a final.\"</p><div class=\"context-card\">\n  <div class=\"context-card-label\">The Racecourse, Wrexham &middot; Youth Academy Rush Tournament, Semi-Final</div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Result</span><span class=\"context-card-val safe\">Wrexham 4&ndash;1 Nottingham</span></div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Goals / Assists</span><span class=\"context-card-val safe\">E. Jensen 1G &middot; J. Van Vliet 1G &middot; K. I. Bakke 2G 1A (MOM)</span></div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Youth Academy Rush</span><span class=\"context-card-val progress\">Advance to the Final &middot; Fifth straight appearance</span></div>\n</div><p>A fifth straight final is not a small thing for this pipeline, whatever the eventual result — the four titles that preceded this campaign were not going to defend themselves, and getting back to the last match of the competition with an afternoon's turnaround from a shakier quarter-final says something about the squad's depth as much as its front-line quality.</p><div class=\"pull-quote\">\n  <p>We fixed what we said we'd fix. Now we're back in a final.</p>\n  <span class=\"pull-quote-attr\">&mdash; Knut Inge Bakke</span>\n</div><p>The final follows immediately, and with it a fifth title on the line. Four in a row is a streak Wrexham's academy would very much like to make five.</p>"
+  },
+  {
+    "id": "2027-08-15-meredith-fulham-yrt-quarters",
+    "author_id": "owen-meredith",
+    "content_type": "dispatch",
+    "date": "2027-08-15",
+    "section": "Match Coverage",
+    "competition": "Youth Academy Rush Tournament",
+    "season": "Season 2027–28",
+    "marker": {
+      "text": "Youth Academy Rush Tournament · August 2027",
+      "date_label": "Aug 15, 2027"
+    },
+    "date_line": "August 15, 2027 &middot; Neutral Venue",
+    "headline": "Lien and Besse Combine for Four as Wrexham's Academy Open the New Rush Campaign With a Shootout Against Fulham",
+    "dek": "A 5-3 quarter-final win that owed as much to a busy afternoon in front of goal as it did to defending — Wrexham's kids matched Fulham strike for strike and came out the right side of it.",
+    "tags": [],
+    "featured": false,
+    "body_html": "<p>Four Youth Rush titles in a row had this academy side used to routine quarter-final wins. Saturday's 5-3 defeat of Fulham was not that — an eight-goal afternoon with the lead changing hands more than once before Wrexham's extra quality up front eventually told. Avram Lien and Thierry Besse were the story, combining for three goals and four assists between them, with Jules Collin's man-of-the-match display and Mathieu Drouet's brace either side of them rounding out a scoreline that flattered nobody's defending.</p><p>\"We'll take the three points out of a game like that every time, but we know it wasn't our tidiest afternoon at the back,\" academy coaching staff said afterward. Collin, picking up the match ball after his goal and man-of-the-match display, was blunter about it: \"We were better going forward than we were stopping them going forward. We know that needs sorting before the semi-final.\"</p><div class=\"context-card\">\n  <div class=\"context-card-label\">Neutral Venue &middot; Youth Academy Rush Tournament, Quarter-Final</div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Result</span><span class=\"context-card-val safe\">Wrexham 5&ndash;3 Fulham</span></div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Goals / Assists</span><span class=\"context-card-val safe\">A. Lien 1G 2A &middot; J. Collin 1G (MOM) &middot; M. Drouet 2G &middot; T. Besse 1G 2A</span></div>\n  <div class=\"context-card-row\"><span class=\"context-card-key\">Youth Academy Rush</span><span class=\"context-card-val progress\">Advance to the Semi-Final</span></div>\n</div><p>It is early in the new campaign to be reading much into a shootout of a quarter-final, but the names doing the damage are worth noting — Lien and Besse are both still only academy regulars rather than first-team fringe players, and both look sharper for a summer of development than either did in the spring. Whether that translates into anything more than a wide quarter-final scoreline remains to be seen.</p><div class=\"pull-quote\">\n  <p>We were better going forward than we were stopping them going forward. We know that needs sorting before the semi-final.</p>\n  <span class=\"pull-quote-attr\">&mdash; Jules Collin, Man of the Match</span>\n</div><p>A semi-final follows on the same afternoon under the Rush Tournament's compressed format — little time for this group to fix what went wrong at the back before finding out if their attack can outscore the next lot too.</p>"
+  },
+  {
     "id": "2027-08-07-meredith-community-shield-man-city",
     "author_id": "owen-meredith",
     "content_type": "dispatch",
