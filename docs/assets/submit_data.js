@@ -64,12 +64,12 @@ var ROSTER_SENIOR = [
   },
   {
     "name": "Jamal Belghazi",
-    "pos": "CDM/CM",
+    "pos": "CB/CDM/CM",
     "starter": false
   },
   {
     "name": "Jorthy Mokio",
-    "pos": "CDM/CM/LB",
+    "pos": "LB/CDM/CM",
     "starter": true
   },
   {
@@ -119,7 +119,7 @@ var ROSTER_SENIOR = [
   },
   {
     "name": "Yacel Amrizi",
-    "pos": "ST/LW",
+    "pos": "ST/RW",
     "starter": true
   }
 ];
@@ -151,6 +151,10 @@ var ROSTER_ACADEMY = [
   {
     "name": "Jules Collin",
     "pos": "RW"
+  },
+  {
+    "name": "K. Pedersen",
+    "pos": "LB"
   },
   {
     "name": "Knut Inge Bakke",
@@ -458,7 +462,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "ST: Poacher++/Advanced Forward+. Not willing to negotiate. Confirmed no PlayStyles tab. End-of-season review 2027-05-23."
   },
   "Yacel Amrizi": {
-    "Position": "ST/LW",
+    "Position": "ST/RW",
     "Age": "23",
     "Height": "6'2\"",
     "Weight": "167lbs",
@@ -1008,7 +1012,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "ST: Target Forward++/False 9+/Poacher+/Advanced Forward+. Signed from Manchester United academy as a striker prospect. Not willing to negotiate new terms. End-of-season review 2027-05-23."
   },
   "Jorthy Mokio": {
-    "Position": "CDM/CM/LB",
+    "Position": "LB/CDM/CM",
     "Age": "19",
     "Height": "6'0\"",
     "Weight": "158lbs",
@@ -1118,7 +1122,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "ST: Advanced Forward+. CAM: Half-Winger+/Shadow Striker++. Not willing to negotiate new terms. Signing bonus $550,000. End-of-season review 2027-05-23."
   },
   "Jamal Belghazi": {
-    "Position": "CDM/CM",
+    "Position": "CB/CDM/CM",
     "Age": "18",
     "Height": "6'0\"",
     "Weight": "165lbs",
@@ -1998,7 +2002,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "GK: Div 59/Han 69/Kic 54/Ref 65/Spd 41/Pos 68. Roles: Goalkeeper+/Ball-Playing Keeper+. Joining FC Basel 1893 when the loan ends. End-of-season review 2027-05-23. Loan confirmed 2027-07-01: On Loan at FC Basel 1893 (back Jul 2028)."
   },
   "Fabricio Sandoval": {
-    "Position": "CAM",
+    "Position": "CAM/LW",
     "Age": "18",
     "Height": "5'7\"",
     "Weight": "145lbs",
@@ -3151,6 +3155,61 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "",
     "Development_Plan": "Dynamic",
     "Notes": "Norway. Dev Dynamic 53→54 ETA 9w. RB: Attacking Wingback+. CB: Defender/Stopper/Wide Back/Ball-Playing Defender. LB: Falseback/Attacking Wingback (RW slots not screenshotted). PlayStyles confirmed complete 2027-08-25: Relentless (regular); remaining 3 slots show as Unknown per the game's own legend. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
+  },
+  "K. Pedersen": {
+    "Position": "LB",
+    "Age": "16",
+    "Height": "",
+    "Weight": "",
+    "Pref_Foot": "",
+    "Squad_Role": "Academy",
+    "Contract_Length": "",
+    "Status": "Academy Player",
+    "OVR": "61",
+    "Pace": "",
+    "Shooting": "",
+    "Passing": "",
+    "Dribbling": "",
+    "Defending": "",
+    "Physical": "",
+    "Potential": "77-94",
+    "Acceleration": "",
+    "Agility": "",
+    "Balance": "",
+    "Jumping": "",
+    "Sprint_Speed": "",
+    "Stamina": "",
+    "Strength": "",
+    "Aggression": "",
+    "Att_Position": "",
+    "Composure": "",
+    "Interceptions": "",
+    "Reactions": "",
+    "Vision": "",
+    "Ball_Control": "",
+    "Crossing": "",
+    "Curve": "",
+    "Def_Aware": "",
+    "Dribbling_Tech": "",
+    "FK_Acc": "",
+    "Finishing": "",
+    "Heading_Acc": "",
+    "Long_Pass": "",
+    "Long_Shots": "",
+    "Penalties": "",
+    "Short_Pass": "",
+    "Shot_Power": "",
+    "Slide_Tackle": "",
+    "Stand_Tackle": "",
+    "Volleys": "",
+    "Skill_Moves": "",
+    "Weak_Foot": "",
+    "PlayStyles": "",
+    "Roles": "",
+    "Wage": "",
+    "Market_Value": "",
+    "Development_Plan": "Wingback",
+    "Notes": "New Youth Squad entry, first appearance in a squad-hub screenshot 2027 cycle. Only Pos/Age/OVR/POT/Development Plan confirmed (Youth Squad list view) -- full name, Height/Weight, Pref. Foot, attributes, Skill Moves, Weak Foot, PlayStyles and Roles not yet screenshotted."
   }
 };
 var SCHEDULED_FIXTURES = [
