@@ -64,12 +64,12 @@ var ROSTER_SENIOR = [
   },
   {
     "name": "Jamal Belghazi",
-    "pos": "CDM/CM",
+    "pos": "CB/CDM/CM",
     "starter": false
   },
   {
     "name": "Jorthy Mokio",
-    "pos": "CDM/CM/LB",
+    "pos": "LB/CDM/CM",
     "starter": true
   },
   {
@@ -119,7 +119,7 @@ var ROSTER_SENIOR = [
   },
   {
     "name": "Yacel Amrizi",
-    "pos": "ST/LW",
+    "pos": "ST/RW",
     "starter": true
   }
 ];
@@ -155,6 +155,10 @@ var ROSTER_ACADEMY = [
   {
     "name": "Knut Inge Bakke",
     "pos": "RM"
+  },
+  {
+    "name": "Knut Inge Pedersen",
+    "pos": "LB"
   },
   {
     "name": "Martin Leon",
@@ -458,7 +462,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "ST: Poacher++/Advanced Forward+. Not willing to negotiate. Confirmed no PlayStyles tab. End-of-season review 2027-05-23."
   },
   "Yacel Amrizi": {
-    "Position": "ST/LW",
+    "Position": "ST/RW",
     "Age": "23",
     "Height": "6'2\"",
     "Weight": "167lbs",
@@ -1008,7 +1012,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "ST: Target Forward++/False 9+/Poacher+/Advanced Forward+. Signed from Manchester United academy as a striker prospect. Not willing to negotiate new terms. End-of-season review 2027-05-23."
   },
   "Jorthy Mokio": {
-    "Position": "CDM/CM/LB",
+    "Position": "LB/CDM/CM",
     "Age": "19",
     "Height": "6'0\"",
     "Weight": "158lbs",
@@ -1118,7 +1122,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "ST: Advanced Forward+. CAM: Half-Winger+/Shadow Striker++. Not willing to negotiate new terms. Signing bonus $550,000. End-of-season review 2027-05-23."
   },
   "Jamal Belghazi": {
-    "Position": "CDM/CM",
+    "Position": "CB/CDM/CM",
     "Age": "18",
     "Height": "6'0\"",
     "Weight": "165lbs",
@@ -1998,7 +2002,7 @@ var ROSTER_ATTR_DATA = {
     "Notes": "GK: Div 59/Han 69/Kic 54/Ref 65/Spd 41/Pos 68. Roles: Goalkeeper+/Ball-Playing Keeper+. Joining FC Basel 1893 when the loan ends. End-of-season review 2027-05-23. Loan confirmed 2027-07-01: On Loan at FC Basel 1893 (back Jul 2028)."
   },
   "Fabricio Sandoval": {
-    "Position": "CAM",
+    "Position": "CAM/LW",
     "Age": "18",
     "Height": "5'7\"",
     "Weight": "145lbs",
@@ -3151,6 +3155,61 @@ var ROSTER_ATTR_DATA = {
     "Market_Value": "",
     "Development_Plan": "Dynamic",
     "Notes": "Norway. Dev Dynamic 53→54 ETA 9w. RB: Attacking Wingback+. CB: Defender/Stopper/Wide Back/Ball-Playing Defender. LB: Falseback/Attacking Wingback (RW slots not screenshotted). PlayStyles confirmed complete 2027-08-25: Relentless (regular); remaining 3 slots show as Unknown per the game's own legend. Status/Financial (contract, wage, market value) not yet screenshotted — only Academy Development-plan screens captured this session (2027-05-20)."
+  },
+  "Knut Inge Pedersen": {
+    "Position": "LB",
+    "Age": "16",
+    "Height": "5'10\"",
+    "Weight": "156lbs",
+    "Pref_Foot": "Left",
+    "Squad_Role": "Academy",
+    "Contract_Length": "",
+    "Status": "Academy Player",
+    "OVR": "61",
+    "Pace": "73",
+    "Shooting": "39",
+    "Passing": "53",
+    "Dribbling": "61",
+    "Defending": "57",
+    "Physical": "58",
+    "Potential": "77-94",
+    "Acceleration": "74",
+    "Agility": "70",
+    "Balance": "67",
+    "Jumping": "56",
+    "Sprint_Speed": "72",
+    "Stamina": "67",
+    "Strength": "57",
+    "Aggression": "52",
+    "Att_Position": "50",
+    "Composure": "47",
+    "Interceptions": "63",
+    "Reactions": "56",
+    "Vision": "47",
+    "Ball_Control": "58",
+    "Crossing": "58",
+    "Curve": "46",
+    "Def_Aware": "54",
+    "Dribbling_Tech": "62",
+    "FK_Acc": "32",
+    "Finishing": "39",
+    "Heading_Acc": "51",
+    "Long_Pass": "45",
+    "Long_Shots": "34",
+    "Penalties": "42",
+    "Short_Pass": "60",
+    "Shot_Power": "43",
+    "Slide_Tackle": "54",
+    "Stand_Tackle": "59",
+    "Volleys": "35",
+    "Skill_Moves": "5",
+    "Weak_Foot": "3",
+    "PlayStyles": "Technical, Quick Step, Relentless",
+    "Roles": "4",
+    "Wage": "",
+    "Market_Value": "",
+    "Development_Plan": "Wingback",
+    "Notes": "Norway. Dev Wingback 61→62 ETA 13w. LB: Falseback+/Attacking Wingback+/Inverted Wingback/Fullback/Wingback++. PlayStyles confirmed complete 2027-08-31: Technical (regular), Quick Step (regular), Relentless (regular); remaining 5 slots show as Unknown per the game's own legend. Status/Financial (contract, wage, market value) not shown -- no Financial screen exists for academy players pre-promotion. Real-world profile photo received 2027-08-31 (docs/assets/photos/pedersen.png)."
   }
 };
 var SCHEDULED_FIXTURES = [
