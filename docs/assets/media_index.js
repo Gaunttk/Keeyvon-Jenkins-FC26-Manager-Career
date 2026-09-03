@@ -147,6 +147,31 @@ const MEDIA_INDEX = {
    "image_alt": null,
    "url": "journal.html#entry-001"
   },
+  "2027-08-21-meredith-brentford-home": {
+   "id": "2027-08-21-meredith-brentford-home",
+   "headline": "Tine off the Bench Settles It as Wrexham Survive a Brentford Scare",
+   "dek": "Chido Obi's early strike should have made this a formality. Instead Brentford dominated the ball and peppered Bernt Klaverboer's goal, and it took a goalkeeper's finest afternoon of the season and a substitute's late intervention to keep the perfect start alive.",
+   "date": "2027-08-21",
+   "date_label": "Aug 21, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "musa-tine",
+    "rio-ngumoha"
+   ],
+   "featured": false,
+   "image": "",
+   "image_alt": "",
+   "url": "journal.html#2027-08-21-meredith-brentford-home"
+  },
   "2027-08-16-mcallister-low-possession-efficiency": {
    "id": "2027-08-16-mcallister-low-possession-efficiency",
    "headline": "The Numbers Behind Wrexham's Opening Fortnight: Losing the Ball, Winning the Game",
@@ -2341,6 +2366,7 @@ const MEDIA_INDEX = {
   "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",
   "entry-001",
+  "2027-08-21-meredith-brentford-home",
   "2027-08-16-mcallister-low-possession-efficiency",
   "2027-08-15-meredith-aston-villa-away",
   "2027-08-15-meredith-burnley-yrt-final",

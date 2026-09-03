@@ -3155,12 +3155,6 @@ var ROSTER_ATTR_DATA = {
 };
 var SCHEDULED_FIXTURES = [
   {
-    "date": "2027-08-21",
-    "opponent": "Brentford",
-    "venue": "home",
-    "competition": "Premier League"
-  },
-  {
     "date": "2027-08-28",
     "opponent": "Liverpool",
     "venue": "away",

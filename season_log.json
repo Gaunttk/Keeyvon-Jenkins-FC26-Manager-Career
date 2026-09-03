@@ -205,6 +205,41 @@
       "round": "Final",
       "notes": "Neutral venue. Scorer/assist: M. Leon 1G, B. Forster 1A.",
       "journal_entry": false
+    },
+    {
+      "date": "2027-08-21",
+      "opponent": "Brentford",
+      "home": true,
+      "score": "2-1",
+      "result": "W",
+      "competition": "Premier League",
+      "notes": "C. Obi 47' · Igor Thiago 54' (opp.) · M. Tine 81'",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Gómez": 5.6,
+        "A. Heaven": 6.4,
+        "B. Gutiérrez": 6.9,
+        "B. Klaverboer": 7.2,
+        "C. Macia": 7.0,
+        "C. Obi": 6.5,
+        "D. Bobadilla": 7.0,
+        "E. Dijkstra": 6.6,
+        "J. Belghazi": 6.2,
+        "J. Mokio": 6.6,
+        "L. Sauer": 6.6,
+        "M. Barbieri": 6.7,
+        "M. Tine": 6.8,
+        "R. Ngumoha": 6.7,
+        "T. Fruk": 5.8,
+        "T. Pitarch": 6.3
+      },
+      "team_stats": {
+        "possession": 46,
+        "shots": "9-13",
+        "shots_on_target": "2-11",
+        "pass_accuracy": 87,
+        "tackles": 5
+      }
     }
   ],
   "transfers": [
