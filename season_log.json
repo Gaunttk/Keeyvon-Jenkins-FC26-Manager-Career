@@ -240,6 +240,41 @@
         "pass_accuracy": 87,
         "tackles": 5
       }
+    },
+    {
+      "date": "2027-08-28",
+      "opponent": "Liverpool",
+      "home": false,
+      "score": "0-3",
+      "result": "L",
+      "competition": "Premier League",
+      "notes": "Wirtz 16', 44' · Diaby 74' (all Liverpool). L. Sauer booked 23'. Okonkwo started in goal over Klaverboer. Jenkins made five subs at once (76') with the game already lost.",
+      "journal_entry": true,
+      "player_ratings": {
+        "A. Okonkwo": 5.5,
+        "A. Heaven": 6.9,
+        "J. Belghazi": 6.9,
+        "L. Cacace": 6.6,
+        "J. Mokio": 6.8,
+        "B. Gutiérrez": 6.7,
+        "D. Bobadilla": 6.4,
+        "T. Fruk": 5.9,
+        "L. Sauer": 5.9,
+        "C. Obi": 5.7,
+        "R. Ngumoha": 5.8,
+        "M. Tine": 5.9,
+        "A. Gómez": 5.9,
+        "T. Pitarch": 6.0,
+        "M. Vitális": 6.2,
+        "C. Macia": 5.9
+      },
+      "team_stats": {
+        "possession": 37,
+        "shots": "4-9",
+        "shots_on_target": "1-7",
+        "pass_accuracy": 86,
+        "tackles": 13
+      }
     }
   ],
   "transfers": [
@@ -397,6 +432,10 @@
     {
       "date": "2027-08-15",
       "description": "Academy roster gap flagged: Knut Inge Pedersen is a real youth academy player not yet entered in youth_academy.csv. Awaiting screenshots to add his row (attributes, position, age, potential) -- do not confuse with Knut Inge Bakke, an existing academy player who also featured in the 2027-08-15 Youth Rush semi-final."
+    },
+    {
+      "date": "2027-08-28",
+      "description": "First defeat of the Premier League title defence: 0-3 away to Liverpool at Anfield, ending the perfect start (2W-0L). Wrexham drop to 6th (6 pts) but stay in a UEFA Conference League qualification spot."
     }
   ],
   "fixtures": [
