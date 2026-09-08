@@ -65,9 +65,9 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
+    { articleId: '2027-08-28-meredith-liverpool-away', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
     { articleId: '2027-08-25-meredith-tine-signing', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-08-21-meredith-brentford-home', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' },
-    { articleId: '2027-05-15-hargreaves-first-trophy', image: 'assets/photos/toni_fruk.png', imageAlt: 'Toni Fruk' }
+    { articleId: '2027-08-21-meredith-brentford-home', image: 'assets/photos/rio_ngumoha.png', imageAlt: 'Rio Ngumoha' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */

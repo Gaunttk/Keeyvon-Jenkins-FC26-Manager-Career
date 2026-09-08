@@ -100,6 +100,31 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-08-28-meredith-liverpool-away": {
+   "id": "2027-08-28-meredith-liverpool-away",
+   "headline": "Wirtz Does It Twice as the Perfect Start Dies at Anfield",
+   "dek": "Two wins from two had Wrexham dreaming. A gulf in class at Anfield, a goalkeeping gamble that didn't pay off, and a first defeat of the title defence brought them back down with real force.",
+   "date": "2027-08-28",
+   "date_label": "Aug 28, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "arthur-okonkwo",
+    "florian-wirtz"
+   ],
+   "featured": false,
+   "image": "",
+   "image_alt": "",
+   "url": "journal.html#2027-08-28-meredith-liverpool-away"
+  },
   "2027-08-24-meredith-callens-signing": {
    "id": "2027-08-24-meredith-callens-signing",
    "headline": "Deal Collapses: Wrexham Miss Out on Callens, Move Fast on a Different Kind of Bet",
@@ -2363,6 +2388,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-08-28-meredith-liverpool-away",
   "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",
   "entry-001",
