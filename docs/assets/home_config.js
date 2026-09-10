@@ -65,9 +65,9 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
+    { articleId: '2027-09-18-meredith-man-city-away', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
     { articleId: '2027-09-15-hargreaves-first-ucl-fixture', image: 'assets/photos/champions-league-games-banner.png', imageAlt: 'Wrexham players walk out under the UEFA Champions League branding' },
-    { articleId: '2027-09-14-meredith-inter-milan-ucl-away', image: 'assets/photos/callum_doyle.png', imageAlt: 'Callum Doyle' },
-    { articleId: '2027-08-28-meredith-liverpool-away', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' }
+    { articleId: '2027-09-11-meredith-sunderland-home', image: 'assets/photos/leo_sauer.png', imageAlt: 'Leo Sauer' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */

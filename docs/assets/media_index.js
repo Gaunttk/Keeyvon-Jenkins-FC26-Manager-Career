@@ -100,6 +100,30 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-09-18-meredith-man-city-away": {
+   "id": "2027-09-18-meredith-man-city-away",
+   "headline": "The Run Ends at the Etihad",
+   "dek": "A first Premier League defeat since the opening weekend, and a first sign that a fortnight of squeezing European football into a Championship-winning schedule might be starting to cost something.",
+   "date": "2027-09-18",
+   "date_label": "Sep 18, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "manchester-city"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-18-meredith-man-city-away"
+  },
   "2027-09-14-meredith-inter-milan-ucl-away": {
    "id": "2027-09-14-meredith-inter-milan-ucl-away",
    "headline": "A Youth XI Holds Inter Milan Scoreless as Wrexham's European Story Actually Begins",
@@ -150,6 +174,31 @@ const MEDIA_INDEX = {
    "image": null,
    "image_alt": null,
    "url": "media/articles/2027-09-15-hargreaves-first-ucl-fixture.html"
+  },
+  "2027-09-11-meredith-sunderland-home": {
+   "id": "2027-09-11-meredith-sunderland-home",
+   "headline": "The Record Signing Needed Nine Minutes to Look Like He Belonged",
+   "dek": "Lewis Miley's transfer fee was the story all week. By half-time at the Racecourse, the football had already started answering the only question that mattered.",
+   "date": "2027-09-11",
+   "date_label": "Sep 11, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "lewis-miley",
+    "brian-gutierrez"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-11-meredith-sunderland-home"
   },
   "2027-08-28-meredith-liverpool-away": {
    "id": "2027-08-28-meredith-liverpool-away",
@@ -2439,8 +2488,10 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-09-18-meredith-man-city-away",
   "2027-09-15-hargreaves-first-ucl-fixture",
   "2027-09-14-meredith-inter-milan-ucl-away",
+  "2027-09-11-meredith-sunderland-home",
   "2027-08-28-meredith-liverpool-away",
   "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",

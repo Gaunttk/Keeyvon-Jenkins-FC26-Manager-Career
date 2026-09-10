@@ -308,6 +308,49 @@
                 "pass_accuracy": 84,
                 "tackles": 10
             }
+        },
+        {
+            "date": "2027-09-11",
+            "opponent": "Sunderland",
+            "home": true,
+            "score": "2-1",
+            "result": "W",
+            "competition": "Premier League",
+            "notes": "Ngumoha 29', Sauer 43' (Wrexham); Brobbey 86' (Sunderland). MOTM: B. Gutiérrez (8.1 rating), subbed off 61'. Lewis Miley's Wrexham debut at CDM (7.4 rating) following his club-record deadline-day arrival from Newcastle United. Klaverboer started in goal.",
+            "journal_entry": true,
+            "player_ratings": {
+                "B. Klaverboer": 5.8,
+                "L. Cacace": 6.8,
+                "A. Heaven": 7.0,
+                "C. Doyle": 7.1,
+                "J. Mokio": 6.2,
+                "L. Miley": 7.4,
+                "B. Gutiérrez": 8.1,
+                "T. Fruk": 6.9,
+                "R. Ngumoha": 6.8,
+                "L. Sauer": 8.1,
+                "C. Obi": 7.6,
+                "A. Gómez": 5.8,
+                "T. Pitarch": 6.3,
+                "Y. Amrizi": 5.8,
+                "D. Bobadilla": 6.1
+            },
+            "team_stats": {
+                "possession": 51,
+                "shots": "10-3",
+                "pass_accuracy": 91,
+                "tackles": 4
+            }
+        },
+        {
+            "date": "2027-09-18",
+            "opponent": "Man City",
+            "home": false,
+            "score": "0-2",
+            "result": "L",
+            "competition": "Premier League",
+            "notes": "No match-detail screenshots provided this session (no lineup, ratings, or events screens) -- score derived from the confirmed Premier League standings delta (Wrexham's GF unchanged, GA +2, losses +1 between the post-Sunderland and post-this-match tables). Goalscorers, Man of the Match, and player ratings are not on record and were not estimated.",
+            "journal_entry": false
         }
     ],
     "transfers": [
@@ -414,6 +457,38 @@
             "club": "M'Gladbach",
             "fee": "£4.6m",
             "wage": ""
+        },
+        {
+            "date": "2027-08-31",
+            "player": "Lewis Miley",
+            "direction": "in",
+            "club": "Newcastle United",
+            "fee": "$37,500,000 (club-record transfer fee)",
+            "wage": "$100,000/w"
+        },
+        {
+            "date": "2027-08-31",
+            "player": "Vladyslav Veleten",
+            "direction": "out",
+            "club": "Unconfirmed -- shown as LOSC Lille in one board-email screenshot and Getafe CF in another (same message, re-opened); likely a game text-template display bug",
+            "fee": "$8,000,000",
+            "wage": ""
+        },
+        {
+            "date": "2027-08-31",
+            "player": "Milán Vitális",
+            "direction": "out",
+            "club": "Ipswich Town",
+            "fee": "$7,000,000",
+            "wage": ""
+        },
+        {
+            "date": "2027-08-31",
+            "player": "Musa Tine",
+            "direction": "out",
+            "club": "FC St. Pauli (2-year loan, recall option available for an agreed fee)",
+            "fee": "Loan",
+            "wage": ""
         }
     ],
     "injuries": [],
@@ -473,6 +548,14 @@
         {
             "date": "2027-09-14",
             "description": "Wrexham AFC play their first-ever UEFA Champions League match -- a 0-0 away draw at Inter Milan (shown in-game as \"Lombardia FC\") in the League Phase opener. A club that was playing National League football in 2020-21 now shares a European table with Real Madrid, Bayern Munich, and Barcelona. Jenkins rotated heavily, fielding a youth-led XI."
+        },
+        {
+            "date": "2027-08-31",
+            "description": "Deadline-day business: Lewis Miley signed from Newcastle United for $37,500,000 -- a club-record transfer fee. Milán Vitális (Ipswich Town, $7m) and Vladyslav Veleten ($8m, destination unconfirmed) sold, and Musa Tine loaned to FC St. Pauli for two years."
+        },
+        {
+            "date": "2027-09-11",
+            "description": "Lewis Miley makes his Wrexham debut in a 2-1 win over Sunderland, rated 7.4 at CDM -- an immediate return on the club-record fee."
         }
     ],
     "fixtures": [
