@@ -349,8 +349,32 @@
             "score": "0-2",
             "result": "L",
             "competition": "Premier League",
-            "notes": "No match-detail screenshots provided this session (no lineup, ratings, or events screens) -- score derived from the confirmed Premier League standings delta (Wrexham's GF unchanged, GA +2, losses +1 between the post-Sunderland and post-this-match tables). Goalscorers, Man of the Match, and player ratings are not on record and were not estimated.",
-            "journal_entry": false
+            "notes": "Haaland 48', Reijnders 69' (Man City). Jenkins made all five substitutions at once in the 80th minute (Amrizi/Obi, Gomez/Sauer, Gutierrez/Fruk, Pitarch/Bobadilla, Barbieri/Mokio) with the game already lost. R. Ngumoha booked 89'. A. Heaven (7.3) was the pick of a stretched back line; Callum Doyle was an unused substitute, with Jamal Belghazi starting at LCB instead.",
+            "journal_entry": true,
+            "player_ratings": {
+                "B. Klaverboer": 6.3,
+                "L. Cacace": 6.6,
+                "A. Heaven": 7.3,
+                "J. Belghazi": 6.3,
+                "J. Mokio": 7.2,
+                "M. Barbieri": 5.9,
+                "L. Miley": 6.5,
+                "D. Bobadilla": 6.8,
+                "T. Pitarch": 5.8,
+                "B. Gutiérrez": 6.0,
+                "T. Fruk": 6.1,
+                "L. Sauer": 6.0,
+                "A. Gómez": 5.4,
+                "C. Obi": 6.1,
+                "Y. Amrizi": 5.9,
+                "R. Ngumoha": 6.8
+            },
+            "team_stats": {
+                "possession": 43,
+                "shots": "2-9",
+                "pass_accuracy": 85,
+                "tackles": 9
+            }
         }
     ],
     "transfers": [
@@ -470,7 +494,7 @@
             "date": "2027-08-31",
             "player": "Vladyslav Veleten",
             "direction": "out",
-            "club": "Unconfirmed -- shown as LOSC Lille in one board-email screenshot and Getafe CF in another (same message, re-opened); likely a game text-template display bug",
+            "club": "Getafe CF",
             "fee": "$8,000,000",
             "wage": ""
         },
@@ -551,7 +575,7 @@
         },
         {
             "date": "2027-08-31",
-            "description": "Deadline-day business: Lewis Miley signed from Newcastle United for $37,500,000 -- a club-record transfer fee. Milán Vitális (Ipswich Town, $7m) and Vladyslav Veleten ($8m, destination unconfirmed) sold, and Musa Tine loaned to FC St. Pauli for two years."
+            "description": "Deadline-day business: Lewis Miley signed from Newcastle United for $37,500,000 -- a club-record transfer fee. Milán Vitális (Ipswich Town, $7m) and Vladyslav Veleten sold to Getafe CF ($8m), and Musa Tine loaned to FC St. Pauli for two years."
         },
         {
             "date": "2027-09-11",

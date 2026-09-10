@@ -102,8 +102,8 @@ const MEDIA_INDEX = {
  "articles": {
   "2027-09-18-meredith-man-city-away": {
    "id": "2027-09-18-meredith-man-city-away",
-   "headline": "The Run Ends at the Etihad",
-   "dek": "A first Premier League defeat since the opening weekend, and a first sign that a fortnight of squeezing European football into a Championship-winning schedule might be starting to cost something.",
+   "headline": "Haaland, Reijnders, and a Five-Man Surrender at the Etihad",
+   "dek": "Ten days after the Champions League anthem played for the first time, the fixture list finally sent a bill Wrexham couldn't pay. A flat display, five substitutions in one go, and the longest unbeaten run of the season ends where most of them do.",
    "date": "2027-09-18",
    "date_label": "Sep 18, 2027",
    "author_id": "owen-meredith",
@@ -117,7 +117,8 @@ const MEDIA_INDEX = {
    "tags": [
     "premier-league",
     "match-coverage",
-    "manchester-city"
+    "manchester-city",
+    "ayden-heaven"
    ],
    "featured": false,
    "image": null,
