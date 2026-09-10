@@ -1,695 +1,738 @@
 {
-  "_meta": {
-    "club": "Wrexham AFC",
-    "manager": "Keeyvon Jenkins",
-    "game": "FC26 Career Mode",
-    "season": "2027-28",
-    "competition": "Premier League",
-    "last_updated": "2027-08-28"
-  },
-  "matches": [
-    {
-      "date": "2027-07-24",
-      "opponent": "Mallorca",
-      "home": false,
-      "score": "2-0",
-      "result": "W",
-      "competition": "European International Cup",
-      "round": "Round 1",
-      "notes": "Gómez 73', Tine 82' (sub). MOTM: M. Tine (7.5 rating, highest on the pitch). Macia started at CM. Tine subbed on at ST and scored the second goal. Cuenca subbed on at CB, Kaczmarek subbed on at GK (for Klaverboer, 56'). Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
-      "journal_entry": true,
-      "player_ratings": {
-        "R. Ngumoha": 7.1,
-        "M. Tine": 7.5,
-        "C. Obi": 6.0,
-        "A. Gómez": 7.0,
-        "L. Sauer": 6.9,
-        "J. Vargas": 6.3,
-        "T. Fruk": 6.7,
-        "T. Pitarch": 6.7,
-        "D. Bobadilla": 6.8,
-        "M. Vitális": 6.0,
-        "C. Macia": 7.2,
-        "M. Barbieri": 7.0,
-        "J. Mokio": 6.3,
-        "A. Cuenca": 6.0,
-        "C. Doyle": 6.9,
-        "J. Belghazi": 7.0,
-        "A. Heaven": 6.3,
-        "E. Dijkstra": 7.2,
-        "A. Kaczmarek": 6.9,
-        "B. Klaverboer": 6.6
-      }
-    },
-    {
-      "date": "2027-07-27",
-      "opponent": "M'gladbach",
-      "home": false,
-      "score": "2-0",
-      "result": "W",
-      "competition": "European International Cup",
-      "round": "Round 2",
-      "notes": "Gómez 6', Obi 18'. Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
-      "journal_entry": true,
-      "player_ratings": {
-        "A. Kaczmarek": 6.0,
-        "A. Gómez": 6.6,
-        "A. Okonkwo": 6.2,
-        "A. Heaven": 5.9,
-        "B. Gutiérrez": 6.3,
-        "C. Doyle": 6.2,
-        "C. Obi": 7.6,
-        "E. Dijkstra": 6.9,
-        "J. Belghazi": 7.1,
-        "J. Vargas": 5.7,
-        "L. Cacace": 7.5,
-        "M. Barbieri": 7.7,
-        "M. Vitális": 6.9,
-        "M. Tine": 5.9,
-        "R. Ngumoha": 5.9,
-        "T. Pitarch": 5.4,
-        "T. Fruk": 6.1,
-        "V. Veleten": 6.1,
-        "A. Cuenca": 7.2,
-        "C. Macia": 7.0
-      }
-    },
-    {
-      "date": "2027-07-31",
-      "opponent": "RCD Espanyol",
-      "home": false,
-      "score": "3-0",
-      "result": "W",
-      "competition": "European International Cup",
-      "round": "Round 3",
-      "notes": "Sauer 14' (MOTM, 7.9 rating), Tine 87' (sub), Espanyol own goal 74' (F. Calero sent off same minute). Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage) — Wrexham complete the group stage with a 3-0-0 record (Mallorca, M'gladbach, Espanyol).",
-      "journal_entry": true,
-      "player_ratings": {
-        "A. Cuenca": 6.8,
-        "A. Gómez": 6.4,
-        "A. Heaven": 7.0,
-        "A. Kaczmarek": 6.1,
-        "B. Gutiérrez": 6.1,
-        "B. Klaverboer": 6.1,
-        "C. Macia": 6.8,
-        "C. Obi": 6.3,
-        "D. Bobadilla": 6.0,
-        "E. Dijkstra": 6.4,
-        "J. Belghazi": 6.2,
-        "J. Mokio": 6.6,
-        "L. Sauer": 7.9,
-        "M. Barbieri": 6.2,
-        "M. Tine": 6.7,
-        "M. Vitális": 6.6,
-        "R. Ngumoha": 6.5,
-        "T. Fruk": 6.6,
-        "T. Pitarch": 6.9,
-        "V. Veleten": 6.0
-      }
-    },
-    {
-      "date": "2027-08-07",
-      "opponent": "Manchester City",
-      "home": false,
-      "score": "0-1",
-      "result": "L",
-      "competition": "FA Community Shield",
-      "notes": "Haaland 89'. Neutral venue (Wembley Stadium).",
-      "journal_entry": true,
-      "player_ratings": {
-        "A. Heaven": 6.9,
-        "B. Gutiérrez": 6.9,
-        "B. Klaverboer": 7.2,
-        "C. Doyle": 6.6,
-        "C. Obi": 5.8,
-        "D. Bobadilla": 6.3,
-        "J. Mokio": 7.5,
-        "L. Cacace": 6.6,
-        "L. Sauer": 6.0,
-        "M. Barbieri": 6.0,
-        "R. Ngumoha": 5.6,
-        "T. Fruk": 6.2,
-        "T. Pitarch": 6.5
-      },
-      "team_stats": {
-        "possession": 41,
-        "shots": "4-12",
-        "shots_on_target": "2-8",
-        "pass_accuracy": 85,
-        "tackles": 8
-      }
-    },
-    {
-      "date": "2027-08-15",
-      "opponent": "Aston Villa",
-      "home": false,
-      "score": "2-0",
-      "result": "W",
-      "competition": "Premier League",
-      "notes": "Obi 54', 60' (both goals, MOTM 7.6). Assists: Mokio, Fruk.",
-      "journal_entry": true,
-      "player_ratings": {
-        "A. Gómez": 5.4,
-        "A. Heaven": 7.2,
-        "A. Okonkwo": 6.8,
-        "B. Gutiérrez": 7.0,
-        "C. Doyle": 6.2,
-        "C. Obi": 7.6,
-        "D. Bobadilla": 7.2,
-        "J. Belghazi": 6.2,
-        "J. Mokio": 6.9,
-        "L. Cacace": 7.0,
-        "L. Sauer": 5.8,
-        "M. Barbieri": 6.5,
-        "M. Vitális": 6.0,
-        "R. Ngumoha": 6.5,
-        "T. Fruk": 7.3,
-        "T. Pitarch": 5.7
-      },
-      "team_stats": {
-        "possession": 37,
-        "shots": "5-1",
-        "pass_accuracy": 85,
-        "tackles": 7
-      }
-    },
-    {
-      "date": "2027-08-15",
-      "opponent": "Fulham",
-      "home": false,
-      "score": "5-3",
-      "result": "W",
-      "competition": "Youth Academy Rush Tournament",
-      "round": "Quarter-final",
-      "notes": "Neutral venue. Scorers/assists: A. Lien 1G 2A, J. Collin 1G (MOM), M. Drouet 2G, T. Besse 1G 2A.",
-      "journal_entry": false
-    },
-    {
-      "date": "2027-08-15",
-      "opponent": "Nottingham",
-      "home": true,
-      "score": "4-1",
-      "result": "W",
-      "competition": "Youth Academy Rush Tournament",
-      "round": "Semi-final",
-      "notes": "Scorers/assists: E. Jensen 1G, J. Van Vliet 1G, K. I. Bakke 2G 1A (MOM). Session note also referenced Knut Inge Pedersen as missing from the club's records -- confirmed by the user (2027-08-31) to be a real academy player not yet added to youth_academy.csv. Screenshots to follow; add his row once received.",
-      "journal_entry": false
-    },
-    {
-      "date": "2027-08-15",
-      "opponent": "Burnley",
-      "home": false,
-      "score": "1-4",
-      "result": "L",
-      "competition": "Youth Academy Rush Tournament",
-      "round": "Final",
-      "notes": "Neutral venue. Scorer/assist: M. Leon 1G, B. Forster 1A.",
-      "journal_entry": false
-    },
-    {
-      "date": "2027-08-21",
-      "opponent": "Brentford",
-      "home": true,
-      "score": "2-1",
-      "result": "W",
-      "competition": "Premier League",
-      "notes": "C. Obi 47' · Igor Thiago 54' (opp.) · M. Tine 81'",
-      "journal_entry": true,
-      "player_ratings": {
-        "A. Gómez": 5.6,
-        "A. Heaven": 6.4,
-        "B. Gutiérrez": 6.9,
-        "B. Klaverboer": 7.2,
-        "C. Macia": 7.0,
-        "C. Obi": 6.5,
-        "D. Bobadilla": 7.0,
-        "E. Dijkstra": 6.6,
-        "J. Belghazi": 6.2,
-        "J. Mokio": 6.6,
-        "L. Sauer": 6.6,
-        "M. Barbieri": 6.7,
-        "M. Tine": 6.8,
-        "R. Ngumoha": 6.7,
-        "T. Fruk": 5.8,
-        "T. Pitarch": 6.3
-      },
-      "team_stats": {
-        "possession": 46,
-        "shots": "9-13",
-        "shots_on_target": "2-11",
-        "pass_accuracy": 87,
-        "tackles": 5
-      }
-    },
-    {
-      "date": "2027-08-28",
-      "opponent": "Liverpool",
-      "home": false,
-      "score": "0-3",
-      "result": "L",
-      "competition": "Premier League",
-      "notes": "Wirtz 16', 44' · Diaby 74' (all Liverpool). L. Sauer booked 23'. Okonkwo started in goal over Klaverboer. Jenkins made five subs at once (76') with the game already lost.",
-      "journal_entry": true,
-      "player_ratings": {
-        "A. Okonkwo": 5.5,
-        "A. Heaven": 6.9,
-        "J. Belghazi": 6.9,
-        "L. Cacace": 6.6,
-        "J. Mokio": 6.8,
-        "B. Gutiérrez": 6.7,
-        "D. Bobadilla": 6.4,
-        "T. Fruk": 5.9,
-        "L. Sauer": 5.9,
-        "C. Obi": 5.7,
-        "R. Ngumoha": 5.8,
-        "M. Tine": 5.9,
-        "A. Gómez": 5.9,
-        "T. Pitarch": 6.0,
-        "M. Vitális": 6.2,
-        "C. Macia": 5.9
-      },
-      "team_stats": {
-        "possession": 37,
-        "shots": "4-9",
-        "shots_on_target": "1-7",
-        "pass_accuracy": 86,
-        "tackles": 13
-      }
-    }
-  ],
-  "transfers": [
-    {
-      "date": "2027-08-25",
-      "player": "M. Tine",
-      "direction": "in",
-      "club": "Free Agent",
-      "fee": "£0 (Free Transfer)",
-      "wage": "$17k/w"
-    },
-    {
-      "date": "2027-07-31",
-      "player": "J. Vargas",
-      "direction": "out",
-      "club": "Ipswich Town",
-      "fee": "One-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-01",
-      "player": "Stephane Bertrand",
-      "direction": "out",
-      "club": "Carrarese Calcio",
-      "fee": "One-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-01",
-      "player": "Nathan Salaun",
-      "direction": "out",
-      "club": "Barnet",
-      "fee": "Two-Year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-01",
-      "player": "Fabricio Sandoval",
-      "direction": "out",
-      "club": "Hull City",
-      "fee": "Two-Year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-01",
-      "player": "Nico Kopp",
-      "direction": "out",
-      "club": "FC Basel 1893",
-      "fee": "One-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-01",
-      "player": "Vittorio Martini",
-      "direction": "out",
-      "club": "CD Castellon",
-      "fee": "One-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-01",
-      "player": "Matthieu Brunel",
-      "direction": "out",
-      "club": "West Brom",
-      "fee": "One-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-01",
-      "player": "Lilian Faure",
-      "direction": "out",
-      "club": "Bristol City",
-      "fee": "One-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-12",
-      "player": "Santiago Ortega",
-      "direction": "out",
-      "club": "Watford",
-      "fee": "One-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-14",
-      "player": "Emiliano Bianchi",
-      "direction": "out",
-      "club": "Jagiellonia",
-      "fee": "Two-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-07-15",
-      "player": "Bailey Cadamarteri",
-      "direction": "out",
-      "club": "Fulham",
-      "fee": "Two-year Loan",
-      "wage": ""
-    },
-    {
-      "date": "2027-08-28",
-      "player": "Max Cleworth",
-      "direction": "out",
-      "club": "M'Gladbach",
-      "fee": "£4.6m",
-      "wage": ""
-    }
-  ],
-  "injuries": [],
-  "milestones": [
-    {
-      "date": "2027-07-31",
-      "description": "Wrexham AFC finish the European International Cup group stage with a perfect record — wins over Mallorca (2-0), M'gladbach (2-0), and RCD Espanyol (3-0), the last capped by Leo Sauer's Man of the Match display."
-    },
-    {
-      "date": "2027-07-31",
-      "description": "Juan Cruz Vargas (17) loaned to Ipswich Town for the 2027-28 season, seeking senior development minutes away from Wrexham's crowded CAM options."
-    },
-    {
-      "date": "2027-08-25",
-      "description": "Wrexham AFC sign Gabonese striker Musa Tine (17) as a free agent, agreeing a 4-year deal worth $17,000/week plus a $175,000 signing bonus. The 68-rated forward gives the club a genuine young No. 9 option behind Obi while Yacel Amrizi continues his recovery from injury."
-    },
-    {
-      "date": "2027-08-25",
-      "description": "FA Community Shield final confirmed: Wrexham AFC (Premier League champions) vs Manchester City (FA Cup holders), Wembley Stadium, Saturday 7 August 2027, kickoff 5:00 PM — the club's first-ever Community Shield appearance."
-    },
-    {
-      "date": "2027-07-01",
-      "description": "Pre-season loan business: seven players sent out for 2027-28 development minutes, including academy graduates Stephane Bertrand (Carrarese Calcio, 1yr) and Nathan Salaun (Barnet, 2yr), both promoted to the senior squad and loaned out the same day. Also out: Fabricio Sandoval (Hull City, 2yr), Nico Kopp (FC Basel 1893, 1yr), Vittorio Martini (CD Castellon, 1yr), Matthieu Brunel (West Brom, 1yr), and Lilian Faure (Bristol City, 1yr)."
-    },
-    {
-      "date": "2027-08-24",
-      "description": "Wrexham AFC sign Polish goalkeeper Adrian Kaczmarek (17) from Club Atlético Vélez Sarsfield for $12.7M, agreeing a 4-year deal at $6,200/week. Tagged 'World Class Prospect Goalkeeper' by the club's scouting network (Potential 84-90), he slots in as rotation depth behind Okonkwo and Klaverboer."
-    },
-    {
-      "date": "2027-07-15",
-      "description": "Pre-season loan business continues: Santiago Ortega loaned to Watford (1yr, 12 Jul), Emiliano Bianchi loaned to Jagiellonia (2yr, 14 Jul), and Bailey Cadamarteri loaned to Fulham (2yr, 15 Jul, after an initial loan proposal was rejected)."
-    },
-    {
-      "date": "2027-05-26",
-      "description": "Premier League Team of the Season announced — no Wrexham player named, despite the club winning the title. XI: Donnarumma (GK); Mauro Jr, Gvardiol, Thiaw, Frimpong; B. Barcola, B. Fernandes, Traoré, Saka; Gyökeres, Haaland."
-    },
-    {
-      "date": "2027-08-28",
-      "description": "Squad update"
-    },
-    {
-      "date": "2027-08-15",
-      "description": "Squad update — Yacel Amrizi back in first-team training, nearing full recovery from his torn quad injury (sustained 2027-05-15 vs Manchester City)."
-    },
-    {
-      "date": "2027-08-15",
-      "description": "Youth Academy Rush Tournament: Wrexham beat Fulham 5-3 (QF) and Nottingham Forest 4-1 (SF) before losing the final 1-4 to Burnley, ending the academy's run of four straight titles."
-    },
-    {
-      "date": "2027-08-15",
-      "description": "Academy roster gap flagged: Knut Inge Pedersen is a real youth academy player not yet entered in youth_academy.csv. Awaiting screenshots to add his row (attributes, position, age, potential) -- do not confuse with Knut Inge Bakke, an existing academy player who also featured in the 2027-08-15 Youth Rush semi-final."
-    },
-    {
-      "date": "2027-08-28",
-      "description": "First defeat of the Premier League title defence: 0-3 away to Liverpool at Anfield, ending the perfect start (2W-0L). Wrexham drop to 6th (6 pts) but stay in a UEFA Conference League qualification spot."
-    }
-  ],
-  "fixtures": [
-    {
-      "date": "2027-07-24",
-      "opponent": "Mallorca",
-      "competition": "European International Cup",
-      "venue": "neutral"
-    },
-    {
-      "date": "2027-07-27",
-      "opponent": "M'gladbach",
-      "competition": "European International Cup",
-      "venue": "neutral"
-    },
-    {
-      "date": "2027-07-31",
-      "opponent": "Espanyol",
-      "competition": "European International Cup",
-      "venue": "neutral"
-    },
-    {
-      "date": "2027-08-07",
-      "opponent": "Manchester City",
-      "competition": "FA Community Shield",
-      "venue": "neutral"
-    },
-    {
-      "date": "2027-08-15",
-      "opponent": "Aston Villa",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-08-21",
-      "opponent": "Brentford",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-08-28",
-      "opponent": "Liverpool",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-09-11",
-      "opponent": "Sunderland",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-09-18",
-      "opponent": "Man City",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-09-25",
-      "opponent": "Newcastle Utd",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-10-02",
-      "opponent": "Brighton",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-10-16",
-      "opponent": "Leeds United",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-10-23",
-      "opponent": "Crystal Palace",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-10-30",
-      "opponent": "AFC Bournemouth",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-11-06",
-      "opponent": "Everton",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-11-20",
-      "opponent": "Fulham",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-11-27",
-      "opponent": "Burnley",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-11-30",
-      "opponent": "Arsenal",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-12-04",
-      "opponent": "Nott'm Forest",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-12-11",
-      "opponent": "Spurs",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-12-18",
-      "opponent": "West Ham",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2027-12-25",
-      "opponent": "Man Utd",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2027-12-28",
-      "opponent": "Chelsea",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-01-01",
-      "opponent": "Man Utd",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-01-04",
-      "opponent": "West Ham",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-01-15",
-      "opponent": "Spurs",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-01-23",
-      "opponent": "Nott'm Forest",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-01-29",
-      "opponent": "Arsenal",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-02-05",
-      "opponent": "Burnley",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-02-09",
-      "opponent": "Brentford",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-02-20",
-      "opponent": "Aston Villa",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-02-27",
-      "opponent": "AFC Bournemouth",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-03-01",
-      "opponent": "Crystal Palace",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-03-11",
-      "opponent": "Chelsea",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-03-18",
-      "opponent": "Newcastle Utd",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-04-08",
-      "opponent": "Man City",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-04-15",
-      "opponent": "Sunderland",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-04-22",
-      "opponent": "Liverpool",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-04-29",
-      "opponent": "Leeds United",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-05-07",
-      "opponent": "Brighton",
-      "competition": "Premier League",
-      "venue": "home"
-    },
-    {
-      "date": "2028-05-14",
-      "opponent": "Fulham",
-      "competition": "Premier League",
-      "venue": "away"
-    },
-    {
-      "date": "2028-05-21",
-      "opponent": "Everton",
-      "competition": "Premier League",
-      "venue": "home"
-    }
-  ]
+    "_meta": {
+        "club": "Wrexham AFC",
+        "manager": "Keeyvon Jenkins",
+        "game": "FC26 Career Mode",
+        "season": "2027-28",
+        "competition": "Premier League",
+        "last_updated": "2027-08-28"
+    },
+    "matches": [
+        {
+            "date": "2027-07-24",
+            "opponent": "Mallorca",
+            "home": false,
+            "score": "2-0",
+            "result": "W",
+            "competition": "European International Cup",
+            "round": "Round 1",
+            "notes": "Gómez 73', Tine 82' (sub). MOTM: M. Tine (7.5 rating, highest on the pitch). Macia started at CM. Tine subbed on at ST and scored the second goal. Cuenca subbed on at CB, Kaczmarek subbed on at GK (for Klaverboer, 56'). Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
+            "journal_entry": true,
+            "player_ratings": {
+                "R. Ngumoha": 7.1,
+                "M. Tine": 7.5,
+                "C. Obi": 6.0,
+                "A. Gómez": 7.0,
+                "L. Sauer": 6.9,
+                "J. Vargas": 6.3,
+                "T. Fruk": 6.7,
+                "T. Pitarch": 6.7,
+                "D. Bobadilla": 6.8,
+                "M. Vitális": 6.0,
+                "C. Macia": 7.2,
+                "M. Barbieri": 7.0,
+                "J. Mokio": 6.3,
+                "A. Cuenca": 6.0,
+                "C. Doyle": 6.9,
+                "J. Belghazi": 7.0,
+                "A. Heaven": 6.3,
+                "E. Dijkstra": 7.2,
+                "A. Kaczmarek": 6.9,
+                "B. Klaverboer": 6.6
+            }
+        },
+        {
+            "date": "2027-07-27",
+            "opponent": "M'gladbach",
+            "home": false,
+            "score": "2-0",
+            "result": "W",
+            "competition": "European International Cup",
+            "round": "Round 2",
+            "notes": "Gómez 6', Obi 18'. Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage vs Espanyol/Mallorca/M'gladbach).",
+            "journal_entry": true,
+            "player_ratings": {
+                "A. Kaczmarek": 6.0,
+                "A. Gómez": 6.6,
+                "A. Okonkwo": 6.2,
+                "A. Heaven": 5.9,
+                "B. Gutiérrez": 6.3,
+                "C. Doyle": 6.2,
+                "C. Obi": 7.6,
+                "E. Dijkstra": 6.9,
+                "J. Belghazi": 7.1,
+                "J. Vargas": 5.7,
+                "L. Cacace": 7.5,
+                "M. Barbieri": 7.7,
+                "M. Vitális": 6.9,
+                "M. Tine": 5.9,
+                "R. Ngumoha": 5.9,
+                "T. Pitarch": 5.4,
+                "T. Fruk": 6.1,
+                "V. Veleten": 6.1,
+                "A. Cuenca": 7.2,
+                "C. Macia": 7.0
+            }
+        },
+        {
+            "date": "2027-07-31",
+            "opponent": "RCD Espanyol",
+            "home": false,
+            "score": "3-0",
+            "result": "W",
+            "competition": "European International Cup",
+            "round": "Round 3",
+            "notes": "Sauer 14' (MOTM, 7.9 rating), Tine 87' (sub), Espanyol own goal 74' (F. Calero sent off same minute). Macia started at CM, Cuenca started at CB. Neutral venue (Germany, group stage) — Wrexham complete the group stage with a 3-0-0 record (Mallorca, M'gladbach, Espanyol).",
+            "journal_entry": true,
+            "player_ratings": {
+                "A. Cuenca": 6.8,
+                "A. Gómez": 6.4,
+                "A. Heaven": 7.0,
+                "A. Kaczmarek": 6.1,
+                "B. Gutiérrez": 6.1,
+                "B. Klaverboer": 6.1,
+                "C. Macia": 6.8,
+                "C. Obi": 6.3,
+                "D. Bobadilla": 6.0,
+                "E. Dijkstra": 6.4,
+                "J. Belghazi": 6.2,
+                "J. Mokio": 6.6,
+                "L. Sauer": 7.9,
+                "M. Barbieri": 6.2,
+                "M. Tine": 6.7,
+                "M. Vitális": 6.6,
+                "R. Ngumoha": 6.5,
+                "T. Fruk": 6.6,
+                "T. Pitarch": 6.9,
+                "V. Veleten": 6.0
+            }
+        },
+        {
+            "date": "2027-08-07",
+            "opponent": "Manchester City",
+            "home": false,
+            "score": "0-1",
+            "result": "L",
+            "competition": "FA Community Shield",
+            "notes": "Haaland 89'. Neutral venue (Wembley Stadium).",
+            "journal_entry": true,
+            "player_ratings": {
+                "A. Heaven": 6.9,
+                "B. Gutiérrez": 6.9,
+                "B. Klaverboer": 7.2,
+                "C. Doyle": 6.6,
+                "C. Obi": 5.8,
+                "D. Bobadilla": 6.3,
+                "J. Mokio": 7.5,
+                "L. Cacace": 6.6,
+                "L. Sauer": 6.0,
+                "M. Barbieri": 6.0,
+                "R. Ngumoha": 5.6,
+                "T. Fruk": 6.2,
+                "T. Pitarch": 6.5
+            },
+            "team_stats": {
+                "possession": 41,
+                "shots": "4-12",
+                "shots_on_target": "2-8",
+                "pass_accuracy": 85,
+                "tackles": 8
+            }
+        },
+        {
+            "date": "2027-08-15",
+            "opponent": "Aston Villa",
+            "home": false,
+            "score": "2-0",
+            "result": "W",
+            "competition": "Premier League",
+            "notes": "Obi 54', 60' (both goals, MOTM 7.6). Assists: Mokio, Fruk.",
+            "journal_entry": true,
+            "player_ratings": {
+                "A. Gómez": 5.4,
+                "A. Heaven": 7.2,
+                "A. Okonkwo": 6.8,
+                "B. Gutiérrez": 7.0,
+                "C. Doyle": 6.2,
+                "C. Obi": 7.6,
+                "D. Bobadilla": 7.2,
+                "J. Belghazi": 6.2,
+                "J. Mokio": 6.9,
+                "L. Cacace": 7.0,
+                "L. Sauer": 5.8,
+                "M. Barbieri": 6.5,
+                "M. Vitális": 6.0,
+                "R. Ngumoha": 6.5,
+                "T. Fruk": 7.3,
+                "T. Pitarch": 5.7
+            },
+            "team_stats": {
+                "possession": 37,
+                "shots": "5-1",
+                "pass_accuracy": 85,
+                "tackles": 7
+            }
+        },
+        {
+            "date": "2027-08-15",
+            "opponent": "Fulham",
+            "home": false,
+            "score": "5-3",
+            "result": "W",
+            "competition": "Youth Academy Rush Tournament",
+            "round": "Quarter-final",
+            "notes": "Neutral venue. Scorers/assists: A. Lien 1G 2A, J. Collin 1G (MOM), M. Drouet 2G, T. Besse 1G 2A.",
+            "journal_entry": false
+        },
+        {
+            "date": "2027-08-15",
+            "opponent": "Nottingham",
+            "home": true,
+            "score": "4-1",
+            "result": "W",
+            "competition": "Youth Academy Rush Tournament",
+            "round": "Semi-final",
+            "notes": "Scorers/assists: E. Jensen 1G, J. Van Vliet 1G, K. I. Bakke 2G 1A (MOM). Session note also referenced Knut Inge Pedersen as missing from the club's records -- confirmed by the user (2027-08-31) to be a real academy player not yet added to youth_academy.csv. Screenshots to follow; add his row once received.",
+            "journal_entry": false
+        },
+        {
+            "date": "2027-08-15",
+            "opponent": "Burnley",
+            "home": false,
+            "score": "1-4",
+            "result": "L",
+            "competition": "Youth Academy Rush Tournament",
+            "round": "Final",
+            "notes": "Neutral venue. Scorer/assist: M. Leon 1G, B. Forster 1A.",
+            "journal_entry": false
+        },
+        {
+            "date": "2027-08-21",
+            "opponent": "Brentford",
+            "home": true,
+            "score": "2-1",
+            "result": "W",
+            "competition": "Premier League",
+            "notes": "C. Obi 47' · Igor Thiago 54' (opp.) · M. Tine 81'",
+            "journal_entry": true,
+            "player_ratings": {
+                "A. Gómez": 5.6,
+                "A. Heaven": 6.4,
+                "B. Gutiérrez": 6.9,
+                "B. Klaverboer": 7.2,
+                "C. Macia": 7.0,
+                "C. Obi": 6.5,
+                "D. Bobadilla": 7.0,
+                "E. Dijkstra": 6.6,
+                "J. Belghazi": 6.2,
+                "J. Mokio": 6.6,
+                "L. Sauer": 6.6,
+                "M. Barbieri": 6.7,
+                "M. Tine": 6.8,
+                "R. Ngumoha": 6.7,
+                "T. Fruk": 5.8,
+                "T. Pitarch": 6.3
+            },
+            "team_stats": {
+                "possession": 46,
+                "shots": "9-13",
+                "shots_on_target": "2-11",
+                "pass_accuracy": 87,
+                "tackles": 5
+            }
+        },
+        {
+            "date": "2027-08-28",
+            "opponent": "Liverpool",
+            "home": false,
+            "score": "0-3",
+            "result": "L",
+            "competition": "Premier League",
+            "notes": "Wirtz 16', 44' · Diaby 74' (all Liverpool). L. Sauer booked 23'. Okonkwo started in goal over Klaverboer. Jenkins made five subs at once (76') with the game already lost.",
+            "journal_entry": true,
+            "player_ratings": {
+                "A. Okonkwo": 5.5,
+                "A. Heaven": 6.9,
+                "J. Belghazi": 6.9,
+                "L. Cacace": 6.6,
+                "J. Mokio": 6.8,
+                "B. Gutiérrez": 6.7,
+                "D. Bobadilla": 6.4,
+                "T. Fruk": 5.9,
+                "L. Sauer": 5.9,
+                "C. Obi": 5.7,
+                "R. Ngumoha": 5.8,
+                "M. Tine": 5.9,
+                "A. Gómez": 5.9,
+                "T. Pitarch": 6.0,
+                "M. Vitális": 6.2,
+                "C. Macia": 5.9
+            },
+            "team_stats": {
+                "possession": 37,
+                "shots": "4-9",
+                "shots_on_target": "1-7",
+                "pass_accuracy": 86,
+                "tackles": 13
+            }
+        },
+        {
+            "date": "2027-09-14",
+            "opponent": "Inter Milan",
+            "home": false,
+            "score": "0-0",
+            "result": "D",
+            "competition": "UEFA Champions League",
+            "round": "League Phase · Matchday 1",
+            "notes": "Wrexham's first-ever UEFA Champions League fixture. Displayed in-game as \"Lombardia FC\" due to licensing -- real identity is Inter Milan (Waldstadion, World Class difficulty, ref. Iacob Săulescu). Jenkins fielded a heavily rotated, youth-led XI (Klaverboer, Cacace, Heaven, Doyle, Mokio, Miley, Bobadilla, Gutiérrez, Obi, Ngumoha, Sauer). Subs: T. Fruk on for Gutiérrez 59', A. Gómez on for Sauer 63', Y. Amrizi on for Obi 90' (Amrizi's first appearance back from his torn quad injury). L. Miley (RCM, rated 6.5) started but is not yet on file in wrexham_squad.csv or youth_academy.csv -- needs a Status/Attributes screenshot to add him properly.",
+            "journal_entry": true,
+            "player_ratings": {
+                "B. Klaverboer": 7.1,
+                "L. Cacace": 6.6,
+                "A. Heaven": 6.2,
+                "C. Doyle": 7.2,
+                "J. Mokio": 6.6,
+                "L. Miley": 6.5,
+                "D. Bobadilla": 6.7,
+                "B. Gutiérrez": 5.9,
+                "T. Fruk": 6.4,
+                "A. Gómez": 5.8,
+                "L. Sauer": 5.4,
+                "Y. Amrizi": 6.0,
+                "C. Obi": 6.1,
+                "R. Ngumoha": 6.7
+            },
+            "team_stats": {
+                "possession": 38,
+                "shots": "8-8",
+                "pass_accuracy": 84,
+                "tackles": 10
+            }
+        }
+    ],
+    "transfers": [
+        {
+            "date": "2027-08-25",
+            "player": "M. Tine",
+            "direction": "in",
+            "club": "Free Agent",
+            "fee": "£0 (Free Transfer)",
+            "wage": "$17k/w"
+        },
+        {
+            "date": "2027-07-31",
+            "player": "J. Vargas",
+            "direction": "out",
+            "club": "Ipswich Town",
+            "fee": "One-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-01",
+            "player": "Stephane Bertrand",
+            "direction": "out",
+            "club": "Carrarese Calcio",
+            "fee": "One-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-01",
+            "player": "Nathan Salaun",
+            "direction": "out",
+            "club": "Barnet",
+            "fee": "Two-Year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-01",
+            "player": "Fabricio Sandoval",
+            "direction": "out",
+            "club": "Hull City",
+            "fee": "Two-Year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-01",
+            "player": "Nico Kopp",
+            "direction": "out",
+            "club": "FC Basel 1893",
+            "fee": "One-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-01",
+            "player": "Vittorio Martini",
+            "direction": "out",
+            "club": "CD Castellon",
+            "fee": "One-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-01",
+            "player": "Matthieu Brunel",
+            "direction": "out",
+            "club": "West Brom",
+            "fee": "One-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-01",
+            "player": "Lilian Faure",
+            "direction": "out",
+            "club": "Bristol City",
+            "fee": "One-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-12",
+            "player": "Santiago Ortega",
+            "direction": "out",
+            "club": "Watford",
+            "fee": "One-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-14",
+            "player": "Emiliano Bianchi",
+            "direction": "out",
+            "club": "Jagiellonia",
+            "fee": "Two-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-07-15",
+            "player": "Bailey Cadamarteri",
+            "direction": "out",
+            "club": "Fulham",
+            "fee": "Two-year Loan",
+            "wage": ""
+        },
+        {
+            "date": "2027-08-28",
+            "player": "Max Cleworth",
+            "direction": "out",
+            "club": "M'Gladbach",
+            "fee": "£4.6m",
+            "wage": ""
+        }
+    ],
+    "injuries": [],
+    "milestones": [
+        {
+            "date": "2027-07-31",
+            "description": "Wrexham AFC finish the European International Cup group stage with a perfect record — wins over Mallorca (2-0), M'gladbach (2-0), and RCD Espanyol (3-0), the last capped by Leo Sauer's Man of the Match display."
+        },
+        {
+            "date": "2027-07-31",
+            "description": "Juan Cruz Vargas (17) loaned to Ipswich Town for the 2027-28 season, seeking senior development minutes away from Wrexham's crowded CAM options."
+        },
+        {
+            "date": "2027-08-25",
+            "description": "Wrexham AFC sign Gabonese striker Musa Tine (17) as a free agent, agreeing a 4-year deal worth $17,000/week plus a $175,000 signing bonus. The 68-rated forward gives the club a genuine young No. 9 option behind Obi while Yacel Amrizi continues his recovery from injury."
+        },
+        {
+            "date": "2027-08-25",
+            "description": "FA Community Shield final confirmed: Wrexham AFC (Premier League champions) vs Manchester City (FA Cup holders), Wembley Stadium, Saturday 7 August 2027, kickoff 5:00 PM — the club's first-ever Community Shield appearance."
+        },
+        {
+            "date": "2027-07-01",
+            "description": "Pre-season loan business: seven players sent out for 2027-28 development minutes, including academy graduates Stephane Bertrand (Carrarese Calcio, 1yr) and Nathan Salaun (Barnet, 2yr), both promoted to the senior squad and loaned out the same day. Also out: Fabricio Sandoval (Hull City, 2yr), Nico Kopp (FC Basel 1893, 1yr), Vittorio Martini (CD Castellon, 1yr), Matthieu Brunel (West Brom, 1yr), and Lilian Faure (Bristol City, 1yr)."
+        },
+        {
+            "date": "2027-08-24",
+            "description": "Wrexham AFC sign Polish goalkeeper Adrian Kaczmarek (17) from Club Atlético Vélez Sarsfield for $12.7M, agreeing a 4-year deal at $6,200/week. Tagged 'World Class Prospect Goalkeeper' by the club's scouting network (Potential 84-90), he slots in as rotation depth behind Okonkwo and Klaverboer."
+        },
+        {
+            "date": "2027-07-15",
+            "description": "Pre-season loan business continues: Santiago Ortega loaned to Watford (1yr, 12 Jul), Emiliano Bianchi loaned to Jagiellonia (2yr, 14 Jul), and Bailey Cadamarteri loaned to Fulham (2yr, 15 Jul, after an initial loan proposal was rejected)."
+        },
+        {
+            "date": "2027-05-26",
+            "description": "Premier League Team of the Season announced — no Wrexham player named, despite the club winning the title. XI: Donnarumma (GK); Mauro Jr, Gvardiol, Thiaw, Frimpong; B. Barcola, B. Fernandes, Traoré, Saka; Gyökeres, Haaland."
+        },
+        {
+            "date": "2027-08-28",
+            "description": "Squad update"
+        },
+        {
+            "date": "2027-08-15",
+            "description": "Squad update — Yacel Amrizi back in first-team training, nearing full recovery from his torn quad injury (sustained 2027-05-15 vs Manchester City)."
+        },
+        {
+            "date": "2027-08-15",
+            "description": "Youth Academy Rush Tournament: Wrexham beat Fulham 5-3 (QF) and Nottingham Forest 4-1 (SF) before losing the final 1-4 to Burnley, ending the academy's run of four straight titles."
+        },
+        {
+            "date": "2027-08-15",
+            "description": "Academy roster gap flagged: Knut Inge Pedersen is a real youth academy player not yet entered in youth_academy.csv. Awaiting screenshots to add his row (attributes, position, age, potential) -- do not confuse with Knut Inge Bakke, an existing academy player who also featured in the 2027-08-15 Youth Rush semi-final."
+        },
+        {
+            "date": "2027-08-28",
+            "description": "First defeat of the Premier League title defence: 0-3 away to Liverpool at Anfield, ending the perfect start (2W-0L). Wrexham drop to 6th (6 pts) but stay in a UEFA Conference League qualification spot."
+        },
+        {
+            "date": "2027-09-14",
+            "description": "Wrexham AFC play their first-ever UEFA Champions League match -- a 0-0 away draw at Inter Milan (shown in-game as \"Lombardia FC\") in the League Phase opener. A club that was playing National League football in 2020-21 now shares a European table with Real Madrid, Bayern Munich, and Barcelona. Jenkins rotated heavily, fielding a youth-led XI."
+        }
+    ],
+    "fixtures": [
+        {
+            "date": "2027-07-24",
+            "opponent": "Mallorca",
+            "competition": "European International Cup",
+            "venue": "neutral"
+        },
+        {
+            "date": "2027-07-27",
+            "opponent": "M'gladbach",
+            "competition": "European International Cup",
+            "venue": "neutral"
+        },
+        {
+            "date": "2027-07-31",
+            "opponent": "Espanyol",
+            "competition": "European International Cup",
+            "venue": "neutral"
+        },
+        {
+            "date": "2027-08-07",
+            "opponent": "Manchester City",
+            "competition": "FA Community Shield",
+            "venue": "neutral"
+        },
+        {
+            "date": "2027-08-15",
+            "opponent": "Aston Villa",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-08-21",
+            "opponent": "Brentford",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-08-28",
+            "opponent": "Liverpool",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-09-11",
+            "opponent": "Sunderland",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-09-18",
+            "opponent": "Man City",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-09-25",
+            "opponent": "Newcastle Utd",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-09-29",
+            "opponent": "Legia Warszawa",
+            "competition": "UEFA Champions League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-10-02",
+            "opponent": "Brighton",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-10-16",
+            "opponent": "Leeds United",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-10-23",
+            "opponent": "Crystal Palace",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-10-30",
+            "opponent": "AFC Bournemouth",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-11-06",
+            "opponent": "Everton",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-11-20",
+            "opponent": "Fulham",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-11-27",
+            "opponent": "Burnley",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-11-30",
+            "opponent": "Arsenal",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-12-04",
+            "opponent": "Nott'm Forest",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-12-11",
+            "opponent": "Spurs",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-12-18",
+            "opponent": "West Ham",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2027-12-25",
+            "opponent": "Man Utd",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2027-12-28",
+            "opponent": "Chelsea",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-01-01",
+            "opponent": "Man Utd",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-01-04",
+            "opponent": "West Ham",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-01-15",
+            "opponent": "Spurs",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-01-23",
+            "opponent": "Nott'm Forest",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-01-29",
+            "opponent": "Arsenal",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-02-05",
+            "opponent": "Burnley",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-02-09",
+            "opponent": "Brentford",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-02-20",
+            "opponent": "Aston Villa",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-02-27",
+            "opponent": "AFC Bournemouth",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-03-01",
+            "opponent": "Crystal Palace",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-03-11",
+            "opponent": "Chelsea",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-03-18",
+            "opponent": "Newcastle Utd",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-04-08",
+            "opponent": "Man City",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-04-15",
+            "opponent": "Sunderland",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-04-22",
+            "opponent": "Liverpool",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-04-29",
+            "opponent": "Leeds United",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-05-07",
+            "opponent": "Brighton",
+            "competition": "Premier League",
+            "venue": "home"
+        },
+        {
+            "date": "2028-05-14",
+            "opponent": "Fulham",
+            "competition": "Premier League",
+            "venue": "away"
+        },
+        {
+            "date": "2028-05-21",
+            "opponent": "Everton",
+            "competition": "Premier League",
+            "venue": "home"
+        }
+    ]
 }

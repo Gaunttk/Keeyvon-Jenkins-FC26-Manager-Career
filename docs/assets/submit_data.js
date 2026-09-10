@@ -514,7 +514,7 @@ var ROSTER_ATTR_DATA = {
     "Wage": "26500",
     "Market_Value": "14000000",
     "Development_Plan": "Winger 76→77 ETA 133w",
-    "Notes": "Injured: Torn Quad Muscle, 3 months (from 2027-05-15 vs Man City, per season_log.json) -- back in first-team training as of 2027-08-15, nearing full recovery. ST: Poacher++/Advanced Forward++. Injury icon shown next to name in squad list but no detail confirmed this cycle -- needs a dedicated Status-tab screenshot of Amrizi himself. Not willing to negotiate new terms. End-of-season review 2027-05-23."
+    "Notes": "Returned from torn quad injury (originally 3 months, from 2027-05-15 vs Man City) -- made his first appearance back, coming on as a substitute in the UEFA Champions League opener at Inter Milan (2027-09-14). ST: Poacher++/Advanced Forward++. Injury icon shown next to name in squad list but no detail confirmed this cycle -- needs a dedicated Status-tab screenshot of Amrizi himself. Not willing to negotiate new terms. End-of-season review 2027-05-23."
   },
   "Andrés Gómez": {
     "Position": "RM/RW",
@@ -3214,12 +3214,6 @@ var ROSTER_ATTR_DATA = {
 };
 var SCHEDULED_FIXTURES = [
   {
-    "date": "2027-08-28",
-    "opponent": "Liverpool",
-    "venue": "away",
-    "competition": "Premier League"
-  },
-  {
     "date": "2027-09-11",
     "opponent": "Sunderland",
     "venue": "home",
@@ -3236,6 +3230,12 @@ var SCHEDULED_FIXTURES = [
     "opponent": "Newcastle Utd",
     "venue": "home",
     "competition": "Premier League"
+  },
+  {
+    "date": "2027-09-29",
+    "opponent": "Legia Warszawa",
+    "venue": "home",
+    "competition": "UEFA Champions League"
   },
   {
     "date": "2027-10-02",

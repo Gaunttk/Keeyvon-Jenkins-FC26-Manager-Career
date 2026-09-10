@@ -319,7 +319,7 @@ if ('serviceWorker' in navigator) {
     <div class="record-label">Wins</div>
   </div>
   <div class="record-cell">
-    <div class="record-num gold">0</div>
+    <div class="record-num gold">1</div>
     <div class="record-label">Draws</div>
   </div>
   <div class="record-cell">
@@ -427,6 +427,35 @@ if ('serviceWorker' in navigator) {
 
 <details class="comp-accordion" open>
   <summary class="comp-summary">
+    <span class="comp-summary-name">UEFA Champions League</span>
+    <span class="comp-summary-stats"><strong>P1 W0 D1 L0</strong> &nbsp;GF0 GA0</span>
+    <span class="comp-summary-arrow">▾</span>
+  </summary>
+
+  <div class="match-log-header">
+    <span>Date</span>
+    <span>Opponent</span>
+    <span>H/A</span>
+    <span>Competition</span>
+    <span style="text-align:center">Result</span>
+    <span>Man of the Match</span>
+    <span>Goals</span>
+  </div>
+
+  <div class="match-log-row">
+    <span class="ml-date">Sep 14, 2027</span>
+    <div><div class="ml-opponent"><img class="opponent-crest" src="assets/photos/crests/italy-serie-a-2025-2026.football-logos.cc/256x256/inter.football-logos.cc.png" alt="Inter Milan" style="height:16px; width:16px; vertical-align:-2px; margin-right:4px;">Inter Milan</div><div class="ml-comp">UEFA Champions League &middot; League Phase, MD1</div></div>
+    <span class="ml-ha">Away</span>
+    <span></span>
+    <span class="ml-result d">D 0&ndash;0</span>
+    <span class="ml-mom">C. Doyle <span style="font-size:10px; color:var(--muted)">Rtg 7.2</span></span>
+    <span class="ml-goals">&mdash;</span>
+  </div>
+  <div class="data-note">Wrexham's first-ever UEFA Champions League fixture &mdash; a heavily rotated, youth-led XI held Inter Milan (shown in-game as &ldquo;Lombardia FC&rdquo; due to licensing) to a scoreless draw away at Waldstadion. See <a href="#cl-standings" style="color:var(--dispatch-blue);">League Phase standings below</a>.</div>
+</details>
+
+<details class="comp-accordion" open>
+  <summary class="comp-summary">
     <span class="comp-summary-name">Premier League</span>
     <span class="comp-summary-stats"><strong>P3 W2 D0 L1</strong> &nbsp;GF4 GA4</span>
     <span class="comp-summary-arrow">▾</span>
@@ -472,6 +501,52 @@ if ('serviceWorker' in navigator) {
     <span class="ml-goals"><strong>Wirtz</strong> 16' <span style="font-size:10px; color:var(--muted)">(opp.)</span> &middot; <strong>Wirtz</strong> 44' <span style="font-size:10px; color:var(--muted)">(opp.)</span> &middot; <strong>Diaby</strong> 74' <span style="font-size:10px; color:var(--muted)">(opp.)</span></span>
   </div>
 </details>
+
+<!-- ══════════════════════════════════════════
+     UEFA CHAMPIONS LEAGUE — LEAGUE PHASE STANDINGS
+     Data lives in assets/ucl_table.js (hand-maintained, same philosophy
+     as pl_table.js) — rendered here so the source of truth is one file.
+══════════════════════════════════════════ -->
+<div class="section-divider" id="cl-standings">UEFA Champions League &middot; League Phase Standings</div>
+<p style="font-family:'Barlow',sans-serif; font-size:13px; color:var(--muted); padding:0 16px; margin:0 0 8px;" id="cl-standings-note"></p>
+<div style="overflow-x:auto; padding:0 16px 16px;">
+  <table class="standings-table" style="min-width:560px;">
+    <thead>
+      <tr><th>#</th><th>Club</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th></tr>
+    </thead>
+    <tbody id="cl-standings-body"></tbody>
+  </table>
+</div>
+<script src="assets/ucl_table.js"></script>
+<script>
+(function () {
+  if (typeof CHAMPIONS_LEAGUE_TABLE === 'undefined') return;
+  var table = CHAMPIONS_LEAGUE_TABLE;
+  var noteEl = document.getElementById('cl-standings-note');
+  if (noteEl && table.note) noteEl.textContent = table.note;
+  var body = document.getElementById('cl-standings-body');
+  if (!body) return;
+  var esc = function (s) { return String(s === undefined || s === null ? '' : s); };
+  var html = '';
+  table.rows.forEach(function (r) {
+    var marker = table.markers[r.pos];
+    if (marker) {
+      html += '<tr class="table-gap gap-' + esc(marker.cls) + '"><td colspan="10">' + marker.label + '</td></tr>';
+    }
+    var cls = r.cls ? 'table-' + r.cls : '';
+    if (r.wrexham) cls += ' wrexham-row';
+    html += '<tr class="' + cls.trim() + '">' +
+      '<td>' + esc(r.pos) + '</td>' +
+      '<td><div class="st-club">' + (r.crest ? '<img class="st-crest" src="' + esc(r.crest) + '" alt="">' : '') +
+      esc(r.club) + (r.wrexham ? ' ★' : '') + (r.note ? ' <span style="font-size:10px; color:var(--muted); font-weight:400;">(' + esc(r.note) + ')</span>' : '') + '</div></td>' +
+      '<td>' + esc(r.p) + '</td><td>' + esc(r.w) + '</td><td>' + esc(r.d) + '</td><td>' + esc(r.l) + '</td>' +
+      '<td>' + esc(r.gf) + '</td><td>' + esc(r.ga) + '</td>' +
+      '<td>' + (r.gd > 0 ? '+' : '') + esc(r.gd) + '</td>' +
+      '<td>' + esc(r.pts) + '</td></tr>';
+  });
+  body.innerHTML = html;
+})();
+</script>
 
 <!-- ══════════════════════════════════════════
      PLAYER SEASON STATS
@@ -520,17 +595,17 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">R. Ngumoha</div><div class="s-pos">LW</div></div>
-  <span class="s-num">7</span>
+  <span class="s-num">8</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">4</span>
   <span class="s-motm"></span>
-  <span class="s-rating">6.3</span>
+  <span class="s-rating">6.4</span>
   <span class="s-award"></span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">A. Gómez</div><div class="s-pos">RW</div></div>
-  <span class="s-num">6</span>
+  <span class="s-num">7</span>
   <span class="s-num highlight">2</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm"></span>
@@ -560,7 +635,7 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">D. Bobadilla</div><div class="s-pos">LCM</div></div>
-  <span class="s-num">6</span>
+  <span class="s-num">7</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm"></span>
@@ -570,21 +645,21 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">L. Sauer</div><div class="s-pos">RW</div></div>
-  <span class="s-num">6</span>
+  <span class="s-num">7</span>
   <span class="s-num highlight">1</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm">&#9733;&times;1</span>
-  <span class="s-rating">6.5</span>
+  <span class="s-rating">6.3</span>
   <span class="s-award"></span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">C. Doyle</div><div class="s-pos">LCB</div></div>
-  <span class="s-num">4</span>
+  <span class="s-num">5</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm"></span>
-  <span class="s-rating">6.5</span>
+  <span class="s-rating">6.6</span>
   <span class="s-award"></span>
 </div>
 
@@ -600,17 +675,17 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">B. Klaverboer</div><div class="s-pos">GK</div></div>
-  <span class="s-num">4</span>
+  <span class="s-num">5</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm">&#9733;&times;1</span>
-  <span class="s-rating">6.8</span>
+  <span class="s-rating">6.9</span>
   <span class="s-award"></span>
 </div>
 
 <div class="stats-row">
   <div><div class="s-name">T. Fruk</div><div class="s-pos">CAM</div></div>
-  <span class="s-num">7</span>
+  <span class="s-num">8</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">1</span>
   <span class="s-motm"></span>
@@ -640,7 +715,7 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">J. Mokio</div><div class="s-pos">LB</div></div>
-  <span class="s-num">6</span>
+  <span class="s-num">7</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">1</span>
   <span class="s-motm"></span>
@@ -650,7 +725,7 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">A. Heaven</div><div class="s-pos">RCB</div></div>
-  <span class="s-num">7</span>
+  <span class="s-num">8</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm"></span>
@@ -660,7 +735,7 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">C. Obi</div><div class="s-pos">ST</div></div>
-  <span class="s-num">7</span>
+  <span class="s-num">8</span>
   <span class="s-num highlight">5</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm">&#9733;&times;1</span>
@@ -690,11 +765,11 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">B. Gutiérrez</div><div class="s-pos">CAM</div></div>
-  <span class="s-num">7</span>
+  <span class="s-num">8</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm"></span>
-  <span class="s-rating">6.6</span>
+  <span class="s-rating">6.5</span>
   <span class="s-award"></span>
 </div>
 
@@ -710,11 +785,11 @@ if ('serviceWorker' in navigator) {
 
 <div class="stats-row">
   <div><div class="s-name">L. Cacace</div><div class="s-pos">RB</div></div>
-  <span class="s-num">4</span>
+  <span class="s-num">5</span>
   <span class="s-num highlight">0</span>
   <span class="s-num highlight">0</span>
   <span class="s-motm"></span>
-  <span class="s-rating">6.9</span>
+  <span class="s-rating">6.8</span>
   <span class="s-award"></span>
 </div>
 
@@ -727,6 +802,27 @@ if ('serviceWorker' in navigator) {
   <span class="s-rating">6.1</span>
   <span class="s-award"></span>
 </div>
+
+<div class="stats-row">
+  <div><div class="s-name">Y. Amrizi</div><div class="s-pos">ST</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num highlight">0</span>
+  <span class="s-num highlight">0</span>
+  <span class="s-motm"></span>
+  <span class="s-rating">6.0</span>
+  <span class="s-award"></span>
+</div>
+
+<div class="stats-row">
+  <div><div class="s-name">L. Miley</div><div class="s-pos">RCM</div></div>
+  <span class="s-num">1</span>
+  <span class="s-num highlight">0</span>
+  <span class="s-num highlight">0</span>
+  <span class="s-motm"></span>
+  <span class="s-rating">6.5</span>
+  <span class="s-award"></span>
+</div>
+<div class="data-note"><strong>L. Miley</strong> is not yet on file in <code>wrexham_squad.csv</code> or <code>youth_academy.csv</code> &mdash; his 2027-09-14 UCL appearance is recorded here from the match rating screen only. Needs a Status/Attributes screenshot to add him properly.</div>
 
 <div class="footer">
   <span class="footer-brand">Season Stats</span>

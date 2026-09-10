@@ -52,10 +52,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/liberato_cacace.png",
       "season": {
         "isGk": false,
-        "apps": 4,
+        "apps": 5,
         "goals": 0,
         "assists": 0,
-        "rating": 6.9
+        "rating": 6.8
       }
     },
     {
@@ -78,10 +78,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/callum_doyle.png",
       "season": {
         "isGk": false,
-        "apps": 4,
+        "apps": 5,
         "goals": 0,
         "assists": 0,
-        "rating": 6.5
+        "rating": 6.6
       }
     },
     {
@@ -146,7 +146,13 @@ const SQUAD_DATA = {
       "loan": null,
       "devStatus": null,
       "image": "assets/photos/yacel_amrizi.png",
-      "season": null
+      "season": {
+        "isGk": false,
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "rating": 6.0
+      }
     },
     {
       "name": "Andrés Gómez",
@@ -168,7 +174,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/andres_gomez.png",
       "season": {
         "isGk": false,
-        "apps": 6,
+        "apps": 7,
         "goals": 2,
         "assists": 0,
         "rating": 6.1
@@ -195,10 +201,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/brian_gutierrez.png",
       "season": {
         "isGk": false,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 0,
-        "rating": 6.6
+        "rating": 6.5
       }
     },
     {
@@ -221,7 +227,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/damian_bobadilla.png",
       "season": {
         "isGk": false,
-        "apps": 6,
+        "apps": 7,
         "goals": 0,
         "assists": 0,
         "rating": 6.6
@@ -370,7 +376,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/chido_obi.png",
       "season": {
         "isGk": false,
-        "apps": 7,
+        "apps": 8,
         "goals": 5,
         "assists": 0,
         "rating": 6.5
@@ -400,7 +406,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/jorthy_mokio.png",
       "season": {
         "isGk": false,
-        "apps": 6,
+        "apps": 7,
         "goals": 0,
         "assists": 1,
         "rating": 6.8
@@ -427,7 +433,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/toni_fruk.png",
       "season": {
         "isGk": false,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 1,
         "rating": 6.4
@@ -511,10 +517,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/rio_ngumoha.png",
       "season": {
         "isGk": false,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 4,
-        "rating": 6.3
+        "rating": 6.4
       }
     },
     {
@@ -539,7 +545,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/ayden_heaven.png",
       "season": {
         "isGk": false,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 0,
         "rating": 6.6
@@ -623,10 +629,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/leo_sauer.png",
       "season": {
         "isGk": false,
-        "apps": 6,
+        "apps": 7,
         "goals": 1,
         "assists": 0,
-        "rating": 6.5
+        "rating": 6.3
       }
     },
     {
@@ -674,10 +680,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/bernt_klaverboer.png",
       "season": {
         "isGk": true,
-        "apps": 4,
-        "rating": 6.8,
-        "trackedApps": 4,
-        "cleanSheets": 2,
+        "apps": 5,
+        "rating": 6.9,
+        "trackedApps": 5,
+        "cleanSheets": 3,
         "goalsConceded": 2
       }
     },
@@ -1036,7 +1042,13 @@ const SQUAD_DATA = {
     "loan": null,
     "devStatus": null,
     "image": "assets/photos/yacel_amrizi.png",
-    "season": null
+    "season": {
+      "isGk": false,
+      "apps": 1,
+      "goals": 0,
+      "assists": 0,
+      "rating": 6.0
+    }
   },
   "glance": {
     "squadSize": 40,
@@ -1139,7 +1151,7 @@ const SQUAD_DATA = {
           "CM",
           "LM"
         ],
-        "value": 7
+        "value": 8
       },
       {
         "name": "Chido Obi",
@@ -1147,7 +1159,7 @@ const SQUAD_DATA = {
         "positions": [
           "ST"
         ],
-        "value": 7
+        "value": 8
       },
       {
         "name": "Toni Fruk",
@@ -1157,7 +1169,7 @@ const SQUAD_DATA = {
           "CAM",
           "CM"
         ],
-        "value": 7
+        "value": 8
       },
       {
         "name": "Rio Ngumoha",
@@ -1166,7 +1178,7 @@ const SQUAD_DATA = {
           "LM",
           "LW"
         ],
-        "value": 7
+        "value": 8
       },
       {
         "name": "Ayden Heaven",
@@ -1174,10 +1186,18 @@ const SQUAD_DATA = {
         "positions": [
           "CB"
         ],
-        "value": 7
+        "value": 8
       }
     ],
     "rating": [
+      {
+        "name": "Liberato Cacace",
+        "image": "assets/photos/liberato_cacace.png",
+        "positions": [
+          "RB"
+        ],
+        "value": 6.8
+      },
       {
         "name": "Jorthy Mokio",
         "image": "assets/photos/jorthy_mokio.png",
@@ -1209,21 +1229,11 @@ const SQUAD_DATA = {
         "value": 6.7
       },
       {
-        "name": "Brian Gutiérrez",
-        "image": "assets/photos/brian_gutierrez.png",
+        "name": "Callum Doyle",
+        "image": "assets/photos/callum_doyle.png",
         "positions": [
-          "CAM",
-          "CM",
-          "LM"
-        ],
-        "value": 6.6
-      },
-      {
-        "name": "Damián Bobadilla",
-        "image": "assets/photos/damian_bobadilla.png",
-        "positions": [
-          "CM",
-          "CDM"
+          "CB",
+          "LB"
         ],
         "value": 6.6
       }
