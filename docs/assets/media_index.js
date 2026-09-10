@@ -100,6 +100,107 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-09-18-meredith-man-city-away": {
+   "id": "2027-09-18-meredith-man-city-away",
+   "headline": "Haaland, Reijnders, and a Five-Man Surrender at the Etihad",
+   "dek": "Ten days after the Champions League anthem played for the first time, the fixture list finally sent a bill Wrexham couldn't pay. A flat display, five substitutions in one go, and the longest unbeaten run of the season ends where most of them do.",
+   "date": "2027-09-18",
+   "date_label": "Sep 18, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "manchester-city",
+    "ayden-heaven"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-18-meredith-man-city-away"
+  },
+  "2027-09-14-meredith-inter-milan-ucl-away": {
+   "id": "2027-09-14-meredith-inter-milan-ucl-away",
+   "headline": "A Youth XI Holds Inter Milan Scoreless as Wrexham's European Story Actually Begins",
+   "dek": "Eleven kids and reserves, most of them born after the club fell out of the Football League, walked out under the Champions League anthem and didn't concede. Some nights the scoreline undersells it. This wasn't one of them.",
+   "date": "2027-09-14",
+   "date_label": "Sep 14, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "champions-league",
+    "match-coverage",
+    "academy",
+    "callum-doyle",
+    "yacel-amrizi",
+    "l-miley"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-14-meredith-inter-milan-ucl-away"
+  },
+  "2027-09-15-hargreaves-first-ucl-fixture": {
+   "id": "2027-09-15-hargreaves-first-ucl-fixture",
+   "headline": "Fifteen Years in the Wilderness, Then the Champions League Anthem. There Is No Modern Comparison Left to Reach For.",
+   "dek": "I wrote in May that Wrexham's Premier League title had no real precedent in the modern English game. I did not expect to be writing a follow-up to that column about European football four months later. There genuinely isn't a template for this.",
+   "date": "2027-09-15",
+   "date_label": "Sep 15, 2027",
+   "author_id": "oliver-hargreaves",
+   "outlet": "Sky Sports",
+   "section": "Featured Columns",
+   "content_type": "feature",
+   "entry_number": null,
+   "category": "history",
+   "category_label": "History",
+   "season": "2027/28",
+   "tags": [
+    "history",
+    "champions-league",
+    "milestone"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-09-15-hargreaves-first-ucl-fixture.html"
+  },
+  "2027-09-11-meredith-sunderland-home": {
+   "id": "2027-09-11-meredith-sunderland-home",
+   "headline": "The Record Signing Needed Nine Minutes to Look Like He Belonged",
+   "dek": "Lewis Miley's transfer fee was the story all week. By half-time at the Racecourse, the football had already started answering the only question that mattered.",
+   "date": "2027-09-11",
+   "date_label": "Sep 11, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "lewis-miley",
+    "brian-gutierrez"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-11-meredith-sunderland-home"
+  },
   "2027-08-28-meredith-liverpool-away": {
    "id": "2027-08-28-meredith-liverpool-away",
    "headline": "Wirtz Does It Twice as the Perfect Start Dies at Anfield",
@@ -2388,6 +2489,10 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-09-18-meredith-man-city-away",
+  "2027-09-15-hargreaves-first-ucl-fixture",
+  "2027-09-14-meredith-inter-milan-ucl-away",
+  "2027-09-11-meredith-sunderland-home",
   "2027-08-28-meredith-liverpool-away",
   "2027-08-25-meredith-tine-signing",
   "2027-08-24-meredith-callens-signing",
@@ -2500,14 +2605,14 @@ const MEDIA_INDEX = {
  ],
  "categories": [
   {
+   "slug": "history",
+   "label": "History",
+   "count": 6
+  },
+  {
    "slug": "analysis",
    "label": "Analysis",
    "count": 1
-  },
-  {
-   "slug": "history",
-   "label": "History",
-   "count": 5
   },
   {
    "slug": "coverage",
@@ -2532,16 +2637,16 @@ const MEDIA_INDEX = {
  ],
  "publications": [
   {
+   "name": "Sky Sports",
+   "count": 6,
+   "latest_id": "2027-09-15-hargreaves-first-ucl-fixture",
+   "latest_date": "2027-09-15"
+  },
+  {
    "name": "The Athletic",
    "count": 3,
    "latest_id": "2027-08-16-mcallister-low-possession-efficiency",
    "latest_date": "2027-08-16"
-  },
-  {
-   "name": "Sky Sports",
-   "count": 5,
-   "latest_id": "2027-05-23-hargreaves-pl-champions",
-   "latest_date": "2027-05-23"
   },
   {
    "name": "BBC Sport",
