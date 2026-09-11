@@ -174,10 +174,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/andres_gomez.png",
       "season": {
         "isGk": false,
-        "apps": 9,
-        "goals": 2,
-        "assists": 0,
-        "rating": 6.0
+        "apps": 10,
+        "goals": 3,
+        "assists": 1,
+        "rating": 6.1
       }
     },
     {
@@ -324,8 +324,8 @@ const SQUAD_DATA = {
       "image": "assets/photos/chido_obi.png",
       "season": {
         "isGk": false,
-        "apps": 10,
-        "goals": 5,
+        "apps": 11,
+        "goals": 6,
         "assists": 1,
         "rating": 6.6
       }
@@ -354,7 +354,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/jorthy_mokio.png",
       "season": {
         "isGk": false,
-        "apps": 9,
+        "apps": 10,
         "goals": 0,
         "assists": 1,
         "rating": 6.8
@@ -408,10 +408,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/jamal_belghazi.png",
       "season": {
         "isGk": false,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 0,
-        "rating": 6.6
+        "rating": 6.7
       }
     },
     {
@@ -436,7 +436,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/mario_barbieri.png",
       "season": {
         "isGk": false,
-        "apps": 7,
+        "apps": 8,
         "goals": 0,
         "assists": 0,
         "rating": 6.6
@@ -523,7 +523,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/elijah_dijkstra.png",
       "season": {
         "isGk": false,
-        "apps": 4,
+        "apps": 5,
         "goals": 0,
         "assists": 0,
         "rating": 6.8
@@ -548,10 +548,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/andres_cuenca.png",
       "season": {
         "isGk": false,
-        "apps": 3,
+        "apps": 4,
         "goals": 0,
         "assists": 0,
-        "rating": 6.7
+        "rating": 6.8
       }
     },
     {
@@ -603,9 +603,9 @@ const SQUAD_DATA = {
       "image": "assets/photos/carlos_macia.png",
       "season": {
         "isGk": false,
-        "apps": 5,
+        "apps": 6,
         "goals": 0,
-        "assists": 0,
+        "assists": 1,
         "rating": 6.8
       }
     },
@@ -731,7 +731,7 @@ const SQUAD_DATA = {
       "image": "assets/photos/thiago_pitarch.png",
       "season": {
         "isGk": false,
-        "apps": 9,
+        "apps": 10,
         "goals": 0,
         "assists": 0,
         "rating": 6.2
@@ -964,10 +964,10 @@ const SQUAD_DATA = {
       "image": "assets/photos/adrian_kaczmarek.png",
       "season": {
         "isGk": true,
-        "apps": 3,
-        "rating": 6.3,
-        "trackedApps": 3,
-        "cleanSheets": 3,
+        "apps": 4,
+        "rating": 6.4,
+        "trackedApps": 4,
+        "cleanSheets": 4,
         "goalsConceded": 0
       }
     },
@@ -995,10 +995,10 @@ const SQUAD_DATA = {
       "image": null,
       "season": {
         "isGk": false,
-        "apps": 3,
+        "apps": 4,
         "goals": 0,
         "assists": 0,
-        "rating": 6.8
+        "rating": 6.6
       }
     },
     {
@@ -1021,7 +1021,13 @@ const SQUAD_DATA = {
         "label": "An Exciting Prospect"
       },
       "image": null,
-      "season": null
+      "season": {
+        "isGk": false,
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "rating": 6.7
+      }
     },
     {
       "name": "Even Jensen",
@@ -1043,7 +1049,13 @@ const SQUAD_DATA = {
         "label": "An Exciting Prospect"
       },
       "image": null,
-      "season": null
+      "season": {
+        "isGk": false,
+        "apps": 1,
+        "goals": 0,
+        "assists": 0,
+        "rating": 7.0
+      }
     }
   ],
   "featured": {
@@ -1083,7 +1095,7 @@ const SQUAD_DATA = {
     "onLoan": 17,
     "captain": "Callum Doyle",
     "topScorer": "Chido Obi",
-    "topScorerGoals": 5,
+    "topScorerGoals": 6,
     "mostAssists": "Rio Ngumoha",
     "mostAssistsValue": 4
   },
@@ -1095,15 +1107,7 @@ const SQUAD_DATA = {
         "positions": [
           "ST"
         ],
-        "value": 5
-      },
-      {
-        "name": "Musa Tine",
-        "image": null,
-        "positions": [
-          "ST"
-        ],
-        "value": 3
+        "value": 6
       },
       {
         "name": "Andrés Gómez",
@@ -1112,7 +1116,15 @@ const SQUAD_DATA = {
           "RM",
           "RW"
         ],
-        "value": 2
+        "value": 3
+      },
+      {
+        "name": "Musa Tine",
+        "image": null,
+        "positions": [
+          "ST"
+        ],
+        "value": 3
       },
       {
         "name": "Leo Sauer",
@@ -1154,6 +1166,15 @@ const SQUAD_DATA = {
         "value": 2
       },
       {
+        "name": "Andrés Gómez",
+        "image": "assets/photos/andres_gomez.png",
+        "positions": [
+          "RM",
+          "RW"
+        ],
+        "value": 1
+      },
+      {
         "name": "Chido Obi",
         "image": "assets/photos/chido_obi.png",
         "positions": [
@@ -1174,6 +1195,23 @@ const SQUAD_DATA = {
     ],
     "apps": [
       {
+        "name": "Chido Obi",
+        "image": "assets/photos/chido_obi.png",
+        "positions": [
+          "ST"
+        ],
+        "value": 11
+      },
+      {
+        "name": "Andrés Gómez",
+        "image": "assets/photos/andres_gomez.png",
+        "positions": [
+          "RM",
+          "RW"
+        ],
+        "value": 10
+      },
+      {
         "name": "Brian Gutiérrez",
         "image": "assets/photos/brian_gutierrez.png",
         "positions": [
@@ -1184,10 +1222,12 @@ const SQUAD_DATA = {
         "value": 10
       },
       {
-        "name": "Chido Obi",
-        "image": "assets/photos/chido_obi.png",
+        "name": "Jorthy Mokio",
+        "image": "assets/photos/jorthy_mokio.png",
         "positions": [
-          "ST"
+          "LB",
+          "CDM",
+          "CM"
         ],
         "value": 10
       },
@@ -1198,23 +1238,6 @@ const SQUAD_DATA = {
           "ST",
           "CAM",
           "CM"
-        ],
-        "value": 10
-      },
-      {
-        "name": "Rio Ngumoha",
-        "image": "assets/photos/rio_ngumoha.png",
-        "positions": [
-          "LM",
-          "LW"
-        ],
-        "value": 10
-      },
-      {
-        "name": "Ayden Heaven",
-        "image": "assets/photos/ayden_heaven.png",
-        "positions": [
-          "CB"
         ],
         "value": 10
       }
@@ -1239,6 +1262,16 @@ const SQUAD_DATA = {
         "value": 6.8
       },
       {
+        "name": "Elijah Dijkstra",
+        "image": "assets/photos/elijah_dijkstra.png",
+        "positions": [
+          "RB",
+          "LB",
+          "CM"
+        ],
+        "value": 6.8
+      },
+      {
         "name": "Carlos Macia",
         "image": "assets/photos/carlos_macia.png",
         "positions": [
@@ -1253,14 +1286,6 @@ const SQUAD_DATA = {
         "positions": [
           "CB",
           "LB"
-        ],
-        "value": 6.7
-      },
-      {
-        "name": "Ayden Heaven",
-        "image": "assets/photos/ayden_heaven.png",
-        "positions": [
-          "CB"
         ],
         "value": 6.7
       }

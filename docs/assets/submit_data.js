@@ -2334,7 +2334,7 @@ var ROSTER_ATTR_DATA = {
     "Weight": "147lbs",
     "Pref_Foot": "Right",
     "Squad_Role": "Prospect",
-    "Contract_Length": "",
+    "Contract_Length": "3y9m",
     "Status": "An Exciting Prospect — Contract already accepted",
     "OVR": "66",
     "Pace": "85",
@@ -2377,10 +2377,10 @@ var ROSTER_ATTR_DATA = {
     "Weak_Foot": "2",
     "PlayStyles": "Dead Ball, Technical",
     "Roles": "2",
-    "Wage": "",
-    "Market_Value": "",
+    "Wage": "17500",
+    "Market_Value": "2800000",
     "Development_Plan": "Balanced",
-    "Notes": "Norway. Promoted from the Academy 2027-09-18. Dev Balanced 66→67 ETA 52w. RM: Winger+/Wide Playmaker+/Wide Midfielder/Inside Forward. PlayStyles confirmed 2027-08-25: Dead Ball (regular), Technical (regular); remaining 2 slots show as Unknown per the game's own legend. Technical sub-attributes (Ball Control through Volleys) carried forward from last academy capture (2027-08-25) — not re-screenshotted this session. Contract/Wage/Market Value not yet screenshotted since promotion — need the Financial tab screenshot."
+    "Notes": "Norway. Promoted from the Academy 2027-09-18. Dev Balanced 66→67 ETA 52w. RM: Winger+/Wide Playmaker+/Wide Midfielder/Inside Forward. PlayStyles confirmed 2027-08-25: Dead Ball (regular), Technical (regular); remaining 2 slots show as Unknown per the game's own legend. Technical sub-attributes (Ball Control through Volleys) carried forward from last academy capture (2027-08-25) — not re-screenshotted this session. Willing to negotiate new terms."
   },
   "Even Jensen": {
     "Position": "LB",
