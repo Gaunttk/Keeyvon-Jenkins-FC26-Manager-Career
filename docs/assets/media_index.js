@@ -2486,9 +2486,36 @@ const MEDIA_INDEX = {
    "image": null,
    "image_alt": null,
    "url": "journal.html#2027-08-25-meredith-tine-signing"
+  },
+  "2027-09-19-mcallister-title-defense-data-review": {
+   "id": "2027-09-19-mcallister-title-defense-data-review",
+   "headline": "Champions With a Minus Sign: The Numbers Behind Wrexham's Uneven Title Defense",
+   "dek": "Five Premier League games into defending a maiden top-flight title, Wrexham sit seventh with a negative goal difference. The record has more wins in it than the title-winning start did twelve months ago — but the process numbers, tracked in this kind of depth for the first time this season, tell a shakier story underneath it.",
+   "date": "2027-09-19",
+   "date_label": "Sep 19, 2027",
+   "author_id": "james-mcallister",
+   "outlet": "The Athletic",
+   "section": "Tactical Analysis",
+   "content_type": "tactical",
+   "entry_number": null,
+   "category": "analysis",
+   "category_label": "Analysis",
+   "season": "2027/28",
+   "tags": [
+    "data-analysis",
+    "tactics",
+    "recruitment",
+    "title-defense",
+    "academy-pipeline"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-09-19-mcallister-title-defense-data-review.html"
   }
  },
  "recent_ids": [
+  "2027-09-19-mcallister-title-defense-data-review",
   "2027-09-18-meredith-man-city-away",
   "2027-09-15-hargreaves-first-ucl-fixture",
   "2027-09-14-meredith-inter-milan-ucl-away",
@@ -2612,7 +2639,7 @@ const MEDIA_INDEX = {
   {
    "slug": "analysis",
    "label": "Analysis",
-   "count": 1
+   "count": 2
   },
   {
    "slug": "coverage",
@@ -2637,16 +2664,16 @@ const MEDIA_INDEX = {
  ],
  "publications": [
   {
+   "name": "The Athletic",
+   "count": 4,
+   "latest_id": "2027-09-19-mcallister-title-defense-data-review",
+   "latest_date": "2027-09-19"
+  },
+  {
    "name": "Sky Sports",
    "count": 6,
    "latest_id": "2027-09-15-hargreaves-first-ucl-fixture",
    "latest_date": "2027-09-15"
-  },
-  {
-   "name": "The Athletic",
-   "count": 3,
-   "latest_id": "2027-08-16-mcallister-low-possession-efficiency",
-   "latest_date": "2027-08-16"
   },
   {
    "name": "BBC Sport",
