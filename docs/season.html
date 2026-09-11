@@ -142,6 +142,7 @@
     .ml-date { font-size: 11px; color: var(--muted); }
     .ml-opponent { display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--white); }
     /* .ml-crest defined in style.css */
+    .ml-opponent .opponent-crest { height: 16px; width: 16px; object-fit: contain; flex-shrink: 0; }
     .ml-ha {
       font-size: 10px;
       font-weight: 700;
@@ -236,10 +237,16 @@
 
     @media (max-width: 700px) {
       .match-log-header, .match-log-row {
-        grid-template-columns: 70px 1fr 40px 70px;
+        grid-template-columns: 54px 1fr 54px;
       }
-      .match-log-header > *:nth-child(n+5),
-      .match-log-row > *:nth-child(n+5) { display: none; }
+      .match-log-header > *:nth-child(3),
+      .match-log-header > *:nth-child(4),
+      .match-log-header > *:nth-child(6),
+      .match-log-header > *:nth-child(7),
+      .match-log-row > *:nth-child(3),
+      .match-log-row > *:nth-child(4),
+      .match-log-row > *:nth-child(6),
+      .match-log-row > *:nth-child(7) { display: none; }
       .stats-header, .stats-row {
         grid-template-columns: 1fr 36px 36px 50px;
       }
@@ -444,7 +451,7 @@ if ('serviceWorker' in navigator) {
 
   <div class="match-log-row">
     <span class="ml-date">Sep 14, 2027</span>
-    <div><div class="ml-opponent"><img class="opponent-crest" src="assets/photos/crests/italy-serie-a-2025-2026.football-logos.cc/256x256/inter.football-logos.cc.png" alt="Inter Milan" style="height:16px; width:16px; vertical-align:-2px; margin-right:4px;">Inter Milan</div><div class="ml-comp">UEFA Champions League &middot; League Phase, MD1</div></div>
+    <div><div class="ml-opponent"><img class="opponent-crest" src="assets/photos/crests/italy-serie-a-2025-2026.football-logos.cc/256x256/inter.football-logos.cc.png" alt="Inter Milan">Inter Milan</div><div class="ml-comp">UEFA Champions League &middot; League Phase, MD1</div></div>
     <span class="ml-ha">Away</span>
     <span></span>
     <span class="ml-result d">D 0&ndash;0</span>
