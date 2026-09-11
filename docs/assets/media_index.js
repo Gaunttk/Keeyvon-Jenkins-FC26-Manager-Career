@@ -100,6 +100,105 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-09-29-meredith-legia-warszawa-ucl-home": {
+   "id": "2027-09-29-meredith-legia-warszawa-ucl-home",
+   "headline": "Eleven Days After His Promotion, Knut Inge Bakke Scores in the Champions League",
+   "dek": "Rio Ngumoha and Lewis Miley did the heavy lifting against Legia Warszawa. But it was a substitute who hadn't been a first-team player a fortnight ago who finished the night — and the scoreline was almost the second-biggest story to come out of the Racecourse.",
+   "date": "2027-09-29",
+   "date_label": "Sep 29, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "champions-league",
+    "match-coverage",
+    "knut-inge-bakke",
+    "academy"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-29-meredith-legia-warszawa-ucl-home"
+  },
+  "2027-09-29-holt-uswnt-appointment-confirmed": {
+   "id": "2027-09-29-holt-uswnt-appointment-confirmed",
+   "headline": "Confirmed: Keeyvon Jenkins Appointed Head Coach of the United States Women's National Team",
+   "dek": "Jenkins will continue as Wrexham manager while taking on the USWNT post. The U.S. Soccer Federation's contract is contingent on winning the Women's International Cup within 12 months. Here is what we know.",
+   "date": "2027-09-29",
+   "date_label": "Sep 29, 2027",
+   "author_id": "rebecca-holt",
+   "outlet": "BBC Sport",
+   "section": "Press Conferences",
+   "content_type": "breaking",
+   "entry_number": null,
+   "category": "coverage",
+   "category_label": "Coverage",
+   "season": "2027/28",
+   "tags": [
+    "breaking",
+    "keeyvon-jenkins",
+    "uswnt",
+    "contract"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-09-29-holt-uswnt-appointment-confirmed.html"
+  },
+  "2027-09-29-bennett-uswnt-appointment-american-angle": {
+   "id": "2027-09-29-bennett-uswnt-appointment-american-angle",
+   "headline": "Keeyvon Jenkins Just Became Two Different American Soccer Stories at Once",
+   "dek": "The USWNT job lands on a résumé that already had FC Dallas, USMNT caps, a career-ending injury, and a Premier League title on it. Tara Bennett on why this one is harder to explain back home than any of the others.",
+   "date": "2027-09-29",
+   "date_label": "Sep 29, 2027",
+   "author_id": "tara-bennett",
+   "outlet": "ESPN FC",
+   "section": "International Reaction",
+   "content_type": "international",
+   "entry_number": null,
+   "category": "coverage",
+   "category_label": "Coverage",
+   "season": "2027/28",
+   "tags": [
+    "american-angle",
+    "keeyvon-jenkins",
+    "uswnt"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-09-29-bennett-uswnt-appointment-american-angle.html"
+  },
+  "2027-09-29-cole-uswnt-appointment-debate": {
+   "id": "2027-09-29-cole-uswnt-appointment-debate",
+   "headline": "Cole: \"He's About to Find Out What 'Too Much' Actually Feels Like\"",
+   "dek": "Darren Cole isn't questioning whether Keeyvon Jenkins can coach. He's questioning whether one man can run a Champions League campaign and a national team rebuild on the same calendar — and whether U.S. Soccer just handed him a trophy-or-you're-out clause to make sure everyone finds out fast.",
+   "date": "2027-09-29",
+   "date_label": "Sep 29, 2027",
+   "author_id": "darren-cole",
+   "outlet": "Sky Sports (Studio Pundit)",
+   "section": "Television Debate",
+   "content_type": "tv-debate",
+   "entry_number": null,
+   "category": "opinion",
+   "category_label": "Opinion",
+   "season": "2027/28",
+   "tags": [
+    "tv-debate",
+    "keeyvon-jenkins",
+    "uswnt",
+    "controversy"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-09-29-cole-uswnt-appointment-debate.html"
+  },
   "2027-09-25-meredith-newcastle-home": {
    "id": "2027-09-25-meredith-newcastle-home",
    "headline": "Yacel Amrizi Ends a Four-Month Wait With the Goal That Beats Newcastle",
@@ -2591,6 +2690,10 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-09-29-meredith-legia-warszawa-ucl-home",
+  "2027-09-29-holt-uswnt-appointment-confirmed",
+  "2027-09-29-bennett-uswnt-appointment-american-angle",
+  "2027-09-29-cole-uswnt-appointment-debate",
   "2027-09-25-meredith-newcastle-home",
   "2027-09-21-meredith-bolton-carabao-cup-home",
   "entry-002",
@@ -2711,6 +2814,16 @@ const MEDIA_INDEX = {
  ],
  "categories": [
   {
+   "slug": "coverage",
+   "label": "Coverage",
+   "count": 4
+  },
+  {
+   "slug": "opinion",
+   "label": "Opinion",
+   "count": 3
+  },
+  {
    "slug": "history",
    "label": "History",
    "count": 6
@@ -2718,16 +2831,6 @@ const MEDIA_INDEX = {
   {
    "slug": "analysis",
    "label": "Analysis",
-   "count": 2
-  },
-  {
-   "slug": "coverage",
-   "label": "Coverage",
-   "count": 2
-  },
-  {
-   "slug": "opinion",
-   "label": "Opinion",
    "count": 2
   },
   {
@@ -2743,6 +2846,24 @@ const MEDIA_INDEX = {
  ],
  "publications": [
   {
+   "name": "BBC Sport",
+   "count": 3,
+   "latest_id": "2027-09-29-holt-uswnt-appointment-confirmed",
+   "latest_date": "2027-09-29"
+  },
+  {
+   "name": "Sky Sports (Studio Pundit)",
+   "count": 3,
+   "latest_id": "2027-09-29-cole-uswnt-appointment-debate",
+   "latest_date": "2027-09-29"
+  },
+  {
+   "name": "ESPN FC",
+   "count": 2,
+   "latest_id": "2027-09-29-bennett-uswnt-appointment-american-angle",
+   "latest_date": "2027-09-29"
+  },
+  {
    "name": "The Athletic",
    "count": 4,
    "latest_id": "2027-09-19-mcallister-title-defense-data-review",
@@ -2753,24 +2874,6 @@ const MEDIA_INDEX = {
    "count": 6,
    "latest_id": "2027-09-15-hargreaves-first-ucl-fixture",
    "latest_date": "2027-09-15"
-  },
-  {
-   "name": "BBC Sport",
-   "count": 2,
-   "latest_id": "2027-05-23-holt-title-confirmed",
-   "latest_date": "2027-05-23"
-  },
-  {
-   "name": "Sky Sports (Studio Pundit)",
-   "count": 2,
-   "latest_id": "2027-05-23-cole-title-debate",
-   "latest_date": "2027-05-23"
-  },
-  {
-   "name": "ESPN FC",
-   "count": 1,
-   "latest_id": "2027-05-23-bennett-jenkins-american-champion",
-   "latest_date": "2027-05-23"
   }
  ],
  "seasons": [

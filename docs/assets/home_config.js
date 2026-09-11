@@ -65,9 +65,9 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-09-25-meredith-newcastle-home', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-09-21-meredith-bolton-carabao-cup-home', image: 'assets/photos/bolton-carabao-cup-celebration.jpeg', imageAlt: 'Wrexham players celebrate a goal against Bolton in the Carabao Cup' },
-    { articleId: '2027-09-19-mcallister-title-defense-data-review', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' }
+    { articleId: '2027-09-29-holt-uswnt-appointment-confirmed', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
+    { articleId: '2027-09-29-meredith-legia-warszawa-ucl-home', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
+    { articleId: '2027-09-29-bennett-uswnt-appointment-american-angle', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
