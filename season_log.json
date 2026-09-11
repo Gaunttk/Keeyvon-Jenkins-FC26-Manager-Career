@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-09-21"
+    "last_updated": "2027-09-29"
   },
   "matches": [
     {
@@ -408,6 +408,77 @@
         "pass_accuracy": 90,
         "tackles": 5
       }
+    },
+    {
+      "date": "2027-09-25",
+      "opponent": "Newcastle Utd",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "journal_entry": true,
+      "notes": "Y. Amrizi 22' (assist: T. Fruk). MOTM: Y. Amrizi (7.5 rating, 1G). Jenkins made all five substitutions at once in the 67th minute (Obi/Amrizi, Gómez/Cacace, Pitarch/Sauer, Jensen/Dijkstra, Barbieri/Fruk), managing the lead out against a Newcastle side chasing an equalizer. Result keeps Wrexham in 5th, a UEFA Europa League qualification spot.",
+      "player_ratings": {
+        "B. Klaverboer": 6.4,
+        "E. Dijkstra": 7.4,
+        "A. Heaven": 7.4,
+        "C. Doyle": 6.4,
+        "L. Cacace": 6.9,
+        "L. Miley": 7.3,
+        "T. Fruk": 6.8,
+        "D. Bobadilla": 6.6,
+        "L. Sauer": 6.5,
+        "Y. Amrizi": 7.5,
+        "R. Ngumoha": 6.0,
+        "C. Obi": 5.9,
+        "A. Gómez": 5.8,
+        "T. Pitarch": 6.6,
+        "E. Jensen": 6.7,
+        "M. Barbieri": 5.9
+      },
+      "team_stats": {
+        "possession": 47,
+        "shots": "5-2",
+        "shots_on_target": "2-0",
+        "pass_accuracy": 89,
+        "tackles": 10
+      }
+    },
+    {
+      "date": "2027-09-29",
+      "opponent": "Legia Warszawa",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "UEFA Champions League",
+      "round": "League Phase, MD2",
+      "journal_entry": true,
+      "notes": "R. Ngumoha 6', R. Adamski 11' (Legia), L. Miley 17', K. Bakke 90'. MOTM: L. Miley (7.5 rating, 1G). Subs: L. Sauer off / A. Gómez on 73', R. Ngumoha off / T. Pitarch on 73', B. Gutiérrez off / C. Macia on 73', Y. Amrizi off / K. Bakke on 73', T. Fruk off / C. Obi on 73'. Knut Inge Bakke -- promoted from the academy 2027-09-18, made his senior debut in the Carabao Cup a week later -- scored his first senior goal in stoppage time on his Champions League debut.",
+      "player_ratings": {
+        "B. Klaverboer": 6.3,
+        "C. Doyle": 6.9,
+        "A. Heaven": 6.5,
+        "R. Ngumoha": 7.0,
+        "L. Miley": 7.5,
+        "Y. Amrizi": 5.7,
+        "T. Fruk": 6.5,
+        "L. Sauer": 6.2,
+        "L. Cacace": 6.4,
+        "B. Gutiérrez": 6.9,
+        "J. Mokio": 6.8,
+        "K. Bakke": 6.9,
+        "C. Obi": 5.8,
+        "A. Gómez": 6.0,
+        "T. Pitarch": 6.8,
+        "C. Macia": 6.3
+      },
+      "team_stats": {
+        "possession": 47,
+        "shots": "5-5",
+        "shots_on_target": "3-4",
+        "pass_accuracy": 85,
+        "tackles": 11
+      }
     }
   ],
   "transfers": [
@@ -621,6 +692,18 @@
     {
       "date": "2027-09-21",
       "description": "Wrexham beat Bolton 2-0 in the Carabao Cup third round at Racecourse II to reach Round 4, with academy graduates Knut Inge Bakke and Even Jensen making their senior debuts a week after their promotion."
+    },
+    {
+      "date": "2027-09-25",
+      "description": "Wrexham beat Newcastle United 1-0 at the Racecourse, Yacel Amrizi's 22nd-minute strike (assisted by Toni Fruk) enough to see off Lewis Miley's former club. The win moves Wrexham up to 5th on 12 points, back into a UEFA Europa League qualification spot."
+    },
+    {
+      "date": "2027-09-29",
+      "description": "Wrexham beat Legia Warszawa 3-1 in UEFA Champions League League Phase Matchday 2, Rio Ngumoha and Lewis Miley scoring either side of Legia's equalizer before Knut Inge Bakke -- promoted from the academy just 11 days earlier -- scored his first senior goal in stoppage time on his Champions League debut. Wrexham move to 9 points from two matches, inside the League Phase's knockout play-off positions."
+    },
+    {
+      "date": "2027-09-29",
+      "description": "Keeyvon Jenkins accepts an offer to become Head Coach of the United States Women's National Team, effective immediately, while remaining Wrexham AFC manager. The US Soccer Federation's contract is contingent on winning the Women's International Cup within 12 months. Jenkins becomes the first manager in Wrexham's history to hold a concurrent national-team post while in charge of the club."
     }
   ],
   "fixtures": [
