@@ -100,6 +100,56 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-09-21-meredith-bolton-carabao-cup-home": {
+   "id": "2027-09-21-meredith-bolton-carabao-cup-home",
+   "headline": "A Week After Promotion, Two Academy Kids Get Their Night at the Racecourse",
+   "dek": "Chido Obi and Andrés Gómez did the routine part of the job against a League One side. The story of the evening belonged to two eighteen-year-olds who weren't on this roster a fortnight ago.",
+   "date": "2027-09-21",
+   "date_label": "Sep 21, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "carabao-cup",
+    "match-coverage",
+    "bolton",
+    "knut-inge-bakke",
+    "even-jensen"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-21-meredith-bolton-carabao-cup-home"
+  },
+  "entry-002": {
+   "id": "entry-002",
+   "headline": "Two Losses, One Draw, One Record Fee, and Two Kids Who Cost Us Nothing",
+   "dek": "A month that refused to be one thing. Writing it down before I let the scoreline from Manchester decide how I remember all of it.",
+   "date": "2027-09-21",
+   "date_label": "Sep 21, 2027",
+   "author_id": "keeyvon-jenkins",
+   "outlet": "The Hawk's Nest (Private Journal)",
+   "section": null,
+   "content_type": "diary",
+   "entry_number": "Entry 002",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2027/28",
+   "tags": [
+    "reflection",
+    "academy",
+    "form"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#entry-002"
+  },
   "2027-09-18-meredith-man-city-away": {
    "id": "2027-09-18-meredith-man-city-away",
    "headline": "Haaland, Reijnders, and a Five-Man Surrender at the Etihad",
@@ -2515,6 +2565,8 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-09-21-meredith-bolton-carabao-cup-home",
+  "entry-002",
   "2027-09-19-mcallister-title-defense-data-review",
   "2027-09-18-meredith-man-city-away",
   "2027-09-15-hargreaves-first-ucl-fixture",

@@ -65,16 +65,16 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-09-18-meredith-man-city-away', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
+    { articleId: '2027-09-21-meredith-bolton-carabao-cup-home', image: 'assets/photos/bolton-carabao-cup-celebration.jpeg', imageAlt: 'Wrexham players celebrate a goal against Bolton in the Carabao Cup' },
     { articleId: '2027-09-19-mcallister-title-defense-data-review', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-09-11-meredith-sunderland-home', image: 'assets/photos/leo_sauer.png', imageAlt: 'Leo Sauer' }
+    { articleId: '2027-09-18-meredith-man-city-away', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
   /* The card whose author is Keeyvon Jenkins renders in the Hawk's Nest
      treatment automatically — no flag needed. */
   writers: [
-    { articleId: 'entry-001', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
+    { articleId: 'entry-002', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
     { articleId: '2027-05-23-bennett-jenkins-american-champion', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
     { articleId: '2027-05-23-cole-title-debate', image: 'assets/photos/damian_bobadilla.png', imageAlt: 'Damián Bobadilla' }
   ],
