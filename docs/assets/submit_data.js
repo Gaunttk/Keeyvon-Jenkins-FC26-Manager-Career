@@ -3210,12 +3210,6 @@ var ROSTER_ATTR_DATA = {
 };
 var SCHEDULED_FIXTURES = [
   {
-    "date": "2027-09-25",
-    "opponent": "Newcastle Utd",
-    "venue": "home",
-    "competition": "Premier League"
-  },
-  {
     "date": "2027-09-29",
     "opponent": "Legia Warszawa",
     "venue": "home",

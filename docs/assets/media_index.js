@@ -100,6 +100,32 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-09-25-meredith-newcastle-home": {
+   "id": "2027-09-25-meredith-newcastle-home",
+   "headline": "Yacel Amrizi Ends a Four-Month Wait With the Goal That Beats Newcastle",
+   "dek": "Twenty-two minutes into his fourth game back from a torn quad, the striker finally had something to show for it. Then Jenkins spent the other sixty-eight defending it — against the club that used to own Lewis Miley's registration.",
+   "date": "2027-09-25",
+   "date_label": "Sep 25, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "yacel-amrizi",
+    "lewis-miley",
+    "newcastle-utd"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-09-25-meredith-newcastle-home"
+  },
   "2027-09-21-meredith-bolton-carabao-cup-home": {
    "id": "2027-09-21-meredith-bolton-carabao-cup-home",
    "headline": "A Week After Promotion, Two Academy Kids Get Their Night at the Racecourse",
@@ -2565,6 +2591,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-09-25-meredith-newcastle-home",
   "2027-09-21-meredith-bolton-carabao-cup-home",
   "entry-002",
   "2027-09-19-mcallister-title-defense-data-review",

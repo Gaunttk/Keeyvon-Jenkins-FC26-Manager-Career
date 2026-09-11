@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-09-21"
+    "last_updated": "2027-09-25"
   },
   "matches": [
     {
@@ -408,6 +408,41 @@
         "pass_accuracy": 90,
         "tackles": 5
       }
+    },
+    {
+      "date": "2027-09-25",
+      "opponent": "Newcastle Utd",
+      "home": true,
+      "score": "1-0",
+      "result": "W",
+      "competition": "Premier League",
+      "journal_entry": true,
+      "notes": "Y. Amrizi 22' (assist: T. Fruk). MOTM: Y. Amrizi (7.5 rating, 1G). Jenkins made all five substitutions at once in the 67th minute (Obi/Amrizi, Gómez/Cacace, Pitarch/Sauer, Jensen/Dijkstra, Barbieri/Fruk), managing the lead out against a Newcastle side chasing an equalizer. Result keeps Wrexham in 5th, a UEFA Europa League qualification spot.",
+      "player_ratings": {
+        "B. Klaverboer": 6.4,
+        "E. Dijkstra": 7.4,
+        "A. Heaven": 7.4,
+        "C. Doyle": 6.4,
+        "L. Cacace": 6.9,
+        "L. Miley": 7.3,
+        "T. Fruk": 6.8,
+        "D. Bobadilla": 6.6,
+        "L. Sauer": 6.5,
+        "Y. Amrizi": 7.5,
+        "R. Ngumoha": 6.0,
+        "C. Obi": 5.9,
+        "A. Gómez": 5.8,
+        "T. Pitarch": 6.6,
+        "E. Jensen": 6.7,
+        "M. Barbieri": 5.9
+      },
+      "team_stats": {
+        "possession": 47,
+        "shots": "5-2",
+        "shots_on_target": "2-0",
+        "pass_accuracy": 89,
+        "tackles": 10
+      }
     }
   ],
   "transfers": [
@@ -621,6 +656,10 @@
     {
       "date": "2027-09-21",
       "description": "Wrexham beat Bolton 2-0 in the Carabao Cup third round at Racecourse II to reach Round 4, with academy graduates Knut Inge Bakke and Even Jensen making their senior debuts a week after their promotion."
+    },
+    {
+      "date": "2027-09-25",
+      "description": "Wrexham beat Newcastle United 1-0 at the Racecourse, Yacel Amrizi's 22nd-minute strike (assisted by Toni Fruk) enough to see off Lewis Miley's former club. The win moves Wrexham up to 5th on 12 points, back into a UEFA Europa League qualification spot."
     }
   ],
   "fixtures": [

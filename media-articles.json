@@ -1,5 +1,30 @@
 [
   {
+    "id": "2027-09-25-meredith-newcastle-home",
+    "author_id": "owen-meredith",
+    "content_type": "dispatch",
+    "date": "2027-09-25",
+    "section": "Match Coverage",
+    "competition": "Premier League",
+    "season": "Season 2027–28",
+    "date_line": "<img src=\"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/newcastle.football-logos.cc.png\" class=\"opponent-crest\" alt=\"Newcastle Utd\"> September 25, 2027 · Racecourse Ground (Home)",
+    "headline": "Yacel Amrizi Ends a Four-Month Wait With the Goal That Beats Newcastle",
+    "dek": "Twenty-two minutes into his fourth game back from a torn quad, the striker finally had something to show for it. Then Jenkins spent the other sixty-eight defending it — against the club that used to own Lewis Miley's registration.",
+    "tags": [
+      "premier-league",
+      "match-coverage",
+      "yacel-amrizi",
+      "lewis-miley",
+      "newcastle-utd"
+    ],
+    "featured": false,
+    "related_match": {
+      "date": "2027-09-25",
+      "opponent": "Newcastle Utd"
+    },
+    "body_html": "<p>There's a particular way a striker celebrates a goal when it means more than the three points attached to it, and Yacel Amrizi's, in the 22nd minute at the Racecourse, was that kind. Toni Fruk's ball found him in space between Newcastle's centre-backs; the finish itself was almost businesslike, low and first-time. What followed — arms out, eyes closed for a beat longer than the moment strictly required — belonged to a player who hadn't scored a competitive goal since a torn quad took most of his summer away in May. Four appearances into his return, on a rebuilt fitness base and a manager's patience, Amrizi finally had the thing both had been waiting on.</p><p>It was also, in the end, the only goal of the match — which made the remaining sixty-eight minutes a different kind of test entirely. Newcastle had 53% of the ball and outpassed Wrexham 216 to 165, Bruno Guimarães and Sandro Tonali probing patiently through midfield without ever quite finding the finish to match the approach play. \"We controlled large spells of that game and have nothing to show for it,\" Newcastle manager Manuel Pellegrini said afterwards, more exasperated than angry. \"You cannot give a team like this one clear sight of goal and expect nothing to come of it.\" Wrexham's counter to that discipline was arithmetic rather than artistry: five shots to Newcastle's two, and only one of the away side's efforts troubled Bernt Klaverboer at all.</p><div class=\"context-card\"><div class=\"context-card-label\">Racecourse Ground, By the Numbers</div><div class=\"context-card-row\"><span class=\"context-card-key\">Result</span><span class=\"context-card-val safe\">W 1–0 (home)</span></div><div class=\"context-card-row\"><span class=\"context-card-key\">Possession</span><span class=\"context-card-val danger\">Wrexham 47% – Newcastle 53%</span></div><div class=\"context-card-row\"><span class=\"context-card-key\">Shots on target</span><span class=\"context-card-val safe\">Wrexham 2 – Newcastle 0</span></div><div class=\"context-card-row\"><span class=\"context-card-key\">Tackles</span><span class=\"context-card-val progress\">Wrexham 10 – Newcastle 17</span></div><div class=\"context-card-row\"><span class=\"context-card-key\">Table movement</span><span class=\"context-card-val safe\">7th → 5th</span></div></div><p>Jenkins made all five of his substitutions in a single stoppage at the 67th minute — Chido Obi on for Amrizi, Andrés Gómez for Liberato Cacace, Thiago Pitarch for Leo Sauer, Even Jensen for Elijah Dijkstra, Mario Barbieri for Fruk — a wholesale reshuffle built for game management rather than fresh legs chasing something. \"When you've got a one-goal lead against a squad with that much quality on the bench, you don't wait for the fatigue to show up,\" Jenkins said. \"You make the changes before it costs you, not after.\" It held. Ayden Heaven and Elijah Dijkstra shared the match's joint-highest rating at 7.4 apiece, the back four conceding fifteen interceptions' worth of territory but nothing more dangerous than that.</p><div class=\"pull-quote\"><p>You cannot give a team like this one clear sight of goal and expect nothing to come of it.</p><span class=\"pull-quote-attr\">— Manuel Pellegrini, Newcastle United manager</span></div><p>There was a subplot running underneath the scoreline that the Racecourse crowd hadn't forgotten either: Lewis Miley, Wrexham's club-record midfielder, lining up against the academy that produced him and the first team that sold him on deadline day. He didn't score or assist, and didn't need to — a tidy, unspectacular 90 minutes shielding the back four was its own answer to the only question anyone in St James' Park still asks about that fee. Miley kept his post-match comments diplomatic. \"It's a club I owe a lot to. Doesn't change what shirt I'm playing for now, though.\" Newcastle's fee-funded rebuild will keep making headlines regardless of one September afternoon in north Wales; what matters more locally is that Wrexham are back in 5th, level on points with Brighton and inside the Europa League places, with the visit of Legia Warszawa in the Champions League four days away.</p>"
+  },
+  {
     "id": "2027-09-21-meredith-bolton-carabao-cup-home",
     "author_id": "owen-meredith",
     "content_type": "dispatch",
