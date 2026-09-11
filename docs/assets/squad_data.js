@@ -1000,6 +1000,50 @@ const SQUAD_DATA = {
         "assists": 0,
         "rating": 6.8
       }
+    },
+    {
+      "name": "Knut Inge Bakke",
+      "slug": "knut-inge-bakke",
+      "positions": [
+        "RM"
+      ],
+      "group": "Midfielders",
+      "age": 18,
+      "ovr": 66,
+      "height": "5'8\"",
+      "foot": "Right",
+      "squadRole": "Prospect",
+      "potential": "80-94",
+      "captain": false,
+      "loan": null,
+      "devStatus": {
+        "code": "EP",
+        "label": "An Exciting Prospect"
+      },
+      "image": null,
+      "season": null
+    },
+    {
+      "name": "Even Jensen",
+      "slug": "even-jensen",
+      "positions": [
+        "LB"
+      ],
+      "group": "Defenders",
+      "age": 18,
+      "ovr": 64,
+      "height": "5'8\"",
+      "foot": "Left",
+      "squadRole": "Prospect",
+      "potential": "78-92",
+      "captain": false,
+      "loan": null,
+      "devStatus": {
+        "code": "EP",
+        "label": "An Exciting Prospect"
+      },
+      "image": null,
+      "season": null
     }
   ],
   "featured": {
@@ -1029,9 +1073,9 @@ const SQUAD_DATA = {
     }
   },
   "glance": {
-    "squadSize": 39,
-    "avgAge": 20.0,
-    "avgOvr": 71.4,
+    "squadSize": 41,
+    "avgAge": 19.9,
+    "avgOvr": 71.1,
     "highestOvr": "Toni Fruk",
     "highestOvrValue": 81,
     "youngest": "Stephane Bertrand",
