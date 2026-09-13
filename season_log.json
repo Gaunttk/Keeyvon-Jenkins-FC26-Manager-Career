@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-10-02"
+    "last_updated": "2027-10-16"
   },
   "matches": [
     {
@@ -514,6 +514,23 @@
         "pass_accuracy": 87,
         "tackles": 12
       }
+    },
+    {
+      "date": "2027-10-16",
+      "opponent": "Leeds United",
+      "home": true,
+      "score": "0-4",
+      "result": "L",
+      "competition": "Premier League",
+      "journal_entry": true,
+      "notes": "L. Nmecha 4', A. Stach 42', L. Nmecha 90' (Leeds; a fourth Leeds goal is on the scoreboard but its scorer/minute was not visible in the screenshots provided). Brian Gutiérrez, honoured with a pre-match tifo from the Racecourse crowd, was booked in the 20th minute and sent off for a second yellow in the 28th, leaving Wrexham to play the last hour-plus a man down. Jenkins made all five substitutions at once in the 66th minute (Dijkstra/Mokio, Barbieri/Cacace, Gómez/Ngumoha, Pitarch/Fruk, Miley/Bobadilla). No Player Performance ratings screen was captured for this match, so no player_ratings are recorded here and the Player Season Stats table on docs/season.html was not updated for it. Heaviest defeat of the season; Wrexham drop to 4th but stay on 15 points.",
+      "team_stats": {
+        "possession": 42,
+        "shots": "4-6",
+        "shots_on_target": "0-6",
+        "pass_accuracy": 87,
+        "tackles": 18
+      }
     }
   ],
   "transfers": [
@@ -743,6 +760,10 @@
     {
       "date": "2027-10-02",
       "description": "Wrexham win 3-1 away at Brighton -- Lewis Miley, Yacel Amrizi, and Chido Obi on the scoresheet -- to move up to 2nd in the Premier League on 15 points, into the UEFA Champions League qualification places. It is the club's best league position since the title-winning 2026-27 season."
+    },
+    {
+      "date": "2027-10-16",
+      "description": "Wrexham lose 0-4 at home to Leeds United, the season's heaviest defeat -- Brian Gutiérrez, honoured with a pre-match tifo, was sent off for two bookable offences inside the first 28 minutes, leaving the side a man down for over an hour. Jenkins was visibly furious with the dismissal after the match. Wrexham drop to 4th but remain on 15 points."
     }
   ],
   "fixtures": [

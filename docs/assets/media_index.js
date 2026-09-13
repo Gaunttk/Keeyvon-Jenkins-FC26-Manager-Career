@@ -100,6 +100,55 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-10-16-meredith-leeds-home": {
+   "id": "2027-10-16-meredith-leeds-home",
+   "headline": "Wrexham Honour Brian Gutiérrez With a Tifo. He Gets Sent Off Inside Half an Hour.",
+   "dek": "The Racecourse unveiled its biggest tribute banner of the season for its own academy graduate. By the 28th minute he'd seen two yellow cards, and by full time Leeds had put four past ten men in the club's heaviest defeat since promotion.",
+   "date": "2027-10-16",
+   "date_label": "Oct 16, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "brian-gutierrez",
+    "red-card"
+   ],
+   "featured": true,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-10-16-meredith-leeds-home"
+  },
+  "2027-10-17-mcallister-red-card-data-review": {
+   "id": "2027-10-17-mcallister-red-card-data-review",
+   "headline": "The Numbers Were Fine Until They Weren't: Reading Wrexham's Last Month Through One Red Card",
+   "dek": "Four matches, three wins, nineteen shots for and nineteen against — a perfectly balanced stretch of underlying data, right up until Brian Gutiérrez's 28th-minute dismissal turned one match into a outlier that drags the whole month's numbers down with it.",
+   "date": "2027-10-17",
+   "date_label": "Oct 17, 2027",
+   "author_id": "james-mcallister",
+   "outlet": "The Athletic",
+   "section": "Tactical Analysis",
+   "content_type": "tactical",
+   "entry_number": null,
+   "category": "analysis",
+   "category_label": "Analysis",
+   "season": "2027/28",
+   "tags": [
+    "tactical-analysis",
+    "data-review",
+    "discipline"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-10-17-mcallister-red-card-data-review.html"
+  },
   "2027-10-02-meredith-brighton-away": {
    "id": "2027-10-02-meredith-brighton-away",
    "headline": "Wrexham Go Second After Coming From Behind at the Amex",
@@ -2715,6 +2764,8 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-10-17-mcallister-red-card-data-review",
+  "2027-10-16-meredith-leeds-home",
   "2027-10-02-meredith-brighton-away",
   "2027-09-29-meredith-legia-warszawa-ucl-home",
   "2027-09-29-holt-uswnt-appointment-confirmed",
@@ -2840,6 +2891,11 @@ const MEDIA_INDEX = {
  ],
  "categories": [
   {
+   "slug": "analysis",
+   "label": "Analysis",
+   "count": 3
+  },
+  {
    "slug": "coverage",
    "label": "Coverage",
    "count": 4
@@ -2855,11 +2911,6 @@ const MEDIA_INDEX = {
    "count": 6
   },
   {
-   "slug": "analysis",
-   "label": "Analysis",
-   "count": 2
-  },
-  {
    "slug": "academy",
    "label": "Academy",
    "count": 2
@@ -2871,6 +2922,12 @@ const MEDIA_INDEX = {
   }
  ],
  "publications": [
+  {
+   "name": "The Athletic",
+   "count": 5,
+   "latest_id": "2027-10-17-mcallister-red-card-data-review",
+   "latest_date": "2027-10-17"
+  },
   {
    "name": "BBC Sport",
    "count": 3,
@@ -2888,12 +2945,6 @@ const MEDIA_INDEX = {
    "count": 2,
    "latest_id": "2027-09-29-bennett-uswnt-appointment-american-angle",
    "latest_date": "2027-09-29"
-  },
-  {
-   "name": "The Athletic",
-   "count": 4,
-   "latest_id": "2027-09-19-mcallister-title-defense-data-review",
-   "latest_date": "2027-09-19"
   },
   {
    "name": "Sky Sports",

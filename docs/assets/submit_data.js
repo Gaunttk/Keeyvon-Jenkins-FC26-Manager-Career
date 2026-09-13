@@ -3210,12 +3210,6 @@ var ROSTER_ATTR_DATA = {
 };
 var SCHEDULED_FIXTURES = [
   {
-    "date": "2027-10-16",
-    "opponent": "Leeds United",
-    "venue": "home",
-    "competition": "Premier League"
-  },
-  {
     "date": "2027-10-23",
     "opponent": "Crystal Palace",
     "venue": "away",
