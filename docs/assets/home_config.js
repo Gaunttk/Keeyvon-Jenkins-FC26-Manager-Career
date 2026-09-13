@@ -65,9 +65,9 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
-    { articleId: '2027-09-29-holt-uswnt-appointment-confirmed', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-09-29-meredith-legia-warszawa-ucl-home', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-09-29-bennett-uswnt-appointment-american-angle', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' }
+    { articleId: '2027-10-02-meredith-brighton-away', image: 'assets/photos/brighton-amex-away-end.png', imageAlt: 'Wrexham supporters in the away end at the American Express Stadium' },
+    { articleId: '2027-09-29-holt-uswnt-appointment-confirmed', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
+    { articleId: '2027-09-29-meredith-legia-warszawa-ucl-home', image: 'assets/photos/racecourse-champions-league-crowd.png', imageAlt: 'Wrexham fans at the Racecourse for a UEFA Champions League match' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */

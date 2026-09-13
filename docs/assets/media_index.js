@@ -100,6 +100,31 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-10-02-meredith-brighton-away": {
+   "id": "2027-10-02-meredith-brighton-away",
+   "headline": "Wrexham Go Second After Coming From Behind at the Amex",
+   "dek": "Georginio Rutter had Brighton dreaming for four minutes before Lewis Miley, Yacel Amrizi, and Chido Obi turned the afternoon into the club's best league position since the title. Leo Sauer, subbed off with an hour gone, was gone before he saw any of it — and still walked away Man of the Match.",
+   "date": "2027-10-02",
+   "date_label": "Oct 2, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "leo-sauer",
+    "table-movement"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-10-02-meredith-brighton-away"
+  },
   "2027-09-29-meredith-legia-warszawa-ucl-home": {
    "id": "2027-09-29-meredith-legia-warszawa-ucl-home",
    "headline": "Eleven Days After His Promotion, Knut Inge Bakke Scores in the Champions League",
@@ -2690,6 +2715,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-10-02-meredith-brighton-away",
   "2027-09-29-meredith-legia-warszawa-ucl-home",
   "2027-09-29-holt-uswnt-appointment-confirmed",
   "2027-09-29-bennett-uswnt-appointment-american-angle",
