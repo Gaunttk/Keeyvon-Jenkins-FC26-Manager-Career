@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-09-29"
+    "last_updated": "2027-10-02"
   },
   "matches": [
     {
@@ -479,6 +479,41 @@
         "pass_accuracy": 85,
         "tackles": 11
       }
+    },
+    {
+      "date": "2027-10-02",
+      "opponent": "Brighton",
+      "home": false,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Premier League",
+      "journal_entry": true,
+      "notes": "L. Miley 45', Y. Amrizi 51' (assist: L. Sauer), C. Obi 89' (assist: L. Miley); G. Rutter 41' (Brighton). MOTM: L. Sauer (7.7 rating, 1A). Jenkins made all five substitutions at once in the 61st minute (Obi/Mokio, Bakke/Amrizi, Pitarch/Gutiérrez, Macia/Sauer, Jensen/Fruk). The win moves Wrexham up to 2nd on 15 points, into the UEFA Champions League qualification places.",
+      "player_ratings": {
+        "B. Klaverboer": 6.4,
+        "L. Cacace": 6.7,
+        "A. Heaven": 7.1,
+        "C. Doyle": 7.3,
+        "J. Mokio": 6.2,
+        "E. Jensen": 6.7,
+        "B. Gutiérrez": 5.7,
+        "L. Miley": 7.6,
+        "T. Fruk": 7.6,
+        "T. Pitarch": 6.2,
+        "C. Macia": 6.4,
+        "L. Sauer": 7.7,
+        "Y. Amrizi": 7.2,
+        "C. Obi": 7.4,
+        "K. Bakke": 5.8,
+        "R. Ngumoha": 5.9
+      },
+      "team_stats": {
+        "possession": 49,
+        "shots": "5-6",
+        "shots_on_target": "4-4",
+        "pass_accuracy": 87,
+        "tackles": 12
+      }
     }
   ],
   "transfers": [
@@ -704,6 +739,10 @@
     {
       "date": "2027-09-29",
       "description": "Keeyvon Jenkins accepts an offer to become Head Coach of the United States Women's National Team, effective immediately, while remaining Wrexham AFC manager. The US Soccer Federation's contract is contingent on winning the Women's International Cup within 12 months. Jenkins becomes the first manager in Wrexham's history to hold a concurrent national-team post while in charge of the club."
+    },
+    {
+      "date": "2027-10-02",
+      "description": "Wrexham win 3-1 away at Brighton -- Lewis Miley, Yacel Amrizi, and Chido Obi on the scoresheet -- to move up to 2nd in the Premier League on 15 points, into the UEFA Champions League qualification places. It is the club's best league position since the title-winning 2026-27 season."
     }
   ],
   "fixtures": [
