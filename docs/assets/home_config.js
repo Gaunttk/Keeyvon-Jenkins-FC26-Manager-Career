@@ -65,16 +65,16 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
+    { articleId: '2027-10-20-meredith-slavia-praha-ucl-away', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' },
     { articleId: '2027-10-16-meredith-leeds-home', image: 'assets/photos/leeds-home-tifo-gutierrez.png', imageAlt: 'A giant tifo of Brian Gutiérrez unveiled by Wrexham supporters at the Racecourse' },
-    { articleId: '2027-10-17-mcallister-red-card-data-review', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-10-02-meredith-brighton-away', image: 'assets/photos/brighton-amex-away-end.png', imageAlt: 'Wrexham supporters in the away end at the American Express Stadium' }
+    { articleId: '2027-10-17-mcallister-red-card-data-review', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
   /* The card whose author is Keeyvon Jenkins renders in the Hawk's Nest
      treatment automatically — no flag needed. */
   writers: [
-    { articleId: 'entry-002', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
+    { articleId: 'entry-003', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
     { articleId: '2027-05-23-bennett-jenkins-american-champion', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
     { articleId: '2027-05-23-cole-title-debate', image: 'assets/photos/damian_bobadilla.png', imageAlt: 'Damián Bobadilla' }
   ],
@@ -87,15 +87,15 @@ const HOME_CONFIG = {
      they never go stale. */
   spotlight: {
     featured: {
-      name: 'Yacel Amrizi', position: 'ST / LW', age: 23, height: '6\'2"',
-      ovr: 76, role: 'Important',
+      name: 'Yacel Amrizi', position: 'ST / RW', age: 23, height: '6\'2"',
+      ovr: 75, role: 'Important',
       image: 'assets/photos/yacel_amrizi.png'
     },
     others: [
-      { name: 'Toni Fruk', position: 'ST / CAM / CM', age: 26, ovr: 81, image: 'assets/photos/toni_fruk.png' },
-      { name: 'Rio Ngumoha', position: 'LM / LW', age: 18, ovr: 79, image: 'assets/photos/rio_ngumoha.png' },
-      { name: 'Leo Sauer', position: 'LW / LM', age: 21, ovr: 80, image: 'assets/photos/leo_sauer.png' },
-      { name: 'Arthur Okonkwo', position: 'GK', age: 25, ovr: 76, image: 'assets/photos/arthur_okonkwo.png' }
+      { name: 'Toni Fruk', position: 'ST / CAM / CM', age: 26, ovr: 83, image: 'assets/photos/toni_fruk.png' },
+      { name: 'Rio Ngumoha', position: 'LM / LW', age: 18, ovr: 81, image: 'assets/photos/rio_ngumoha.png' },
+      { name: 'Leo Sauer', position: 'LW / LM', age: 21, ovr: 81, image: 'assets/photos/leo_sauer.png' },
+      { name: 'Arthur Okonkwo', position: 'GK', age: 25, ovr: 77, image: 'assets/photos/arthur_okonkwo.png' }
     ]
   },
 
@@ -104,14 +104,14 @@ const HOME_CONFIG = {
      the head of that player's Notes column — nothing inferred. */
   academy: {
     featured: {
-      name: 'Jules Collin', position: 'RW', age: 17, ovr: 62, potential: '81-87',
+      name: 'Jules Collin', position: 'RW', age: 17, ovr: 63, potential: '81-87',
       nationality: 'France',
       image: 'assets/photos/collin.png'
     },
     others: [
-      { name: 'Victor Cardoso', position: 'RB', age: 14, ovr: 50, potential: '77-85', image: 'assets/photos/cardoso.png' },
+      { name: 'Victor Cardoso', position: 'RB', age: 15, ovr: 51, potential: '78-84', image: 'assets/photos/cardoso.png' },
       { name: 'Stephane Bertrand', position: 'RW', age: 16, ovr: 60, potential: '91-94', image: 'assets/photos/bertrand.png' },
-      { name: 'Ben Forster', position: 'CM', age: 16, ovr: 62, potential: '79-85', image: 'assets/photos/forster.png' }
+      { name: 'Ben Forster', position: 'CM / CB', age: 17, ovr: 64, potential: '79-85', image: 'assets/photos/forster.png' }
     ]
   }
 };
