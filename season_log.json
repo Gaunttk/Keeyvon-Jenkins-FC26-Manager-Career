@@ -549,6 +549,42 @@
         "pass_accuracy": 87,
         "tackles": 18
       }
+    },
+    {
+      "date": "2027-10-20",
+      "opponent": "Slavia Praha",
+      "home": false,
+      "score": "2-1",
+      "result": "W",
+      "competition": "UEFA Champions League",
+      "round": "League Phase, MD3",
+      "journal_entry": true,
+      "notes": "T. Fruk 53', D. Jurásek 57' (Slavia), L. Sauer 78'. MOTM: A. Okonkwo (7.3 rating, 5 saves) despite Slavia dominating possession (54%) and shots (7-4). Jenkins made a triple substitution in the 66th minute (Jensen/Cacace, Cuenca/Belghazi, Obi/Amrizi) followed by two more at 81' (Gómez/Sauer, Pitarch/Fruk). Wrexham move to 8th in the League Phase table on 7 points (2W 1D 0L, GF5 GA2) after three matchdays -- inside the automatic Round of 16 qualification places.",
+      "player_ratings": {
+        "A. Okonkwo": 7.3,
+        "J. Belghazi": 7.2,
+        "A. Heaven": 7.1,
+        "R. Ngumoha": 7.0,
+        "T. Fruk": 6.9,
+        "J. Mokio": 6.9,
+        "D. Bobadilla": 6.8,
+        "L. Miley": 6.8,
+        "L. Cacace": 6.7,
+        "L. Sauer": 6.4,
+        "T. Pitarch": 6.1,
+        "A. Gómez": 6.0,
+        "E. Jensen": 6.0,
+        "A. Cuenca": 5.7,
+        "C. Obi": 5.7,
+        "Y. Amrizi": 5.7
+      },
+      "team_stats": {
+        "possession": 46,
+        "shots": "4-7",
+        "shots_on_target": "3-6",
+        "pass_accuracy": 86,
+        "tackles": 11
+      }
     }
   ],
   "transfers": [
@@ -786,6 +822,10 @@
     {
       "date": "2027-10-16",
       "description": "Keeyvon Jenkins names his first USWNT call-up list ahead of his opening FIFA international window as head coach -- a 23-player squad (4 ATT / 9 MID / 7 DEF / 3 GK), topped by Sophia Wilson (90 OVR) and Rose Lavelle."
+    },
+    {
+      "date": "2027-10-20",
+      "description": "Wrexham win 2-1 away at Slavia Praha in the UEFA Champions League League Phase (Fruk, Sauer) despite being outshot 7-4 and out-possessed 54-46 -- Arthur Okonkwo's 5-save MOTM display the difference. The result moves Wrexham to 8th in the 36-team table on 7 points from three matches (2W 1D 0L), inside the automatic Round of 16 qualification places for the first time in the club's debut European campaign."
     }
   ],
   "fixtures": [

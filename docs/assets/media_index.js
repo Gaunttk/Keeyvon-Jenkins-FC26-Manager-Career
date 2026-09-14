@@ -100,6 +100,54 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-10-20-meredith-slavia-praha-ucl-away": {
+   "id": "2027-10-20-meredith-slavia-praha-ucl-away",
+   "headline": "Arthur Okonkwo Turns Prague Into a Highlight Reel, and Wrexham Sneak Into the Automatic Places",
+   "dek": "Outshot, out-possessed, and second-best for long stretches of this one, Wrexham won anyway — five saves from a goalkeeper half the message boards spent last spring trying to replace.",
+   "date": "2027-10-20",
+   "date_label": "Oct 20, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "champions-league",
+    "match-coverage",
+    "arthur-okonkwo"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-10-20-meredith-slavia-praha-ucl-away"
+  },
+  "entry-003": {
+   "id": "entry-003",
+   "headline": "Four Weeks, Two Flags, and a Red Card I'm Still Not Over",
+   "dek": "Writing this one from a hotel room in Prague instead of Wrexham, which tells you most of what you need to know about how the last month has gone.",
+   "date": "2027-10-20",
+   "date_label": "Oct 20, 2027",
+   "author_id": "keeyvon-jenkins",
+   "outlet": "The Hawk's Nest (Private Journal)",
+   "section": null,
+   "content_type": "diary",
+   "entry_number": "Entry 003",
+   "category": "hawks-nest",
+   "category_label": "Hawk's Nest",
+   "season": "2027/28",
+   "tags": [
+    "reflection",
+    "form",
+    "uswnt"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#entry-003"
+  },
   "2027-10-16-meredith-leeds-home": {
    "id": "2027-10-16-meredith-leeds-home",
    "headline": "Wrexham Honour Brian Gutiérrez With a Tifo. He Gets Sent Off Inside Half an Hour.",
@@ -2764,6 +2812,8 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-10-20-meredith-slavia-praha-ucl-away",
+  "entry-003",
   "2027-10-17-mcallister-red-card-data-review",
   "2027-10-16-meredith-leeds-home",
   "2027-10-02-meredith-brighton-away",
