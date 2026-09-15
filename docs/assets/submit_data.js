@@ -3216,12 +3216,6 @@ var SCHEDULED_FIXTURES = [
     "competition": "Premier League"
   },
   {
-    "date": "2027-10-30",
-    "opponent": "AFC Bournemouth",
-    "venue": "home",
-    "competition": "Premier League"
-  },
-  {
     "date": "2027-11-06",
     "opponent": "Everton",
     "venue": "away",
