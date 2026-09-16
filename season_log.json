@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-10-24"
+    "last_updated": "2027-11-14"
   },
   "matches": [
     {
@@ -620,6 +620,39 @@
         "pass_accuracy": 89,
         "tackles": 6
       }
+    },
+    {
+      "date": "2027-11-10",
+      "opponent": "Manchester City",
+      "home": true,
+      "score": "5-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Quarter-final",
+      "notes": "Player of the Match: J. Collin (8.5 rating, Top Passer 12, Clinical 2, Pinpoint Crossing 1). Full goalscorer list not confirmed from screenshots.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-11-10",
+      "opponent": "Aston Villa",
+      "home": true,
+      "score": "3-1",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Semi-final",
+      "notes": "Player of the Match: H. Driessen (8.6 rating, Marathon Runner 7569m, Defensive Dueler 3). Full goalscorer list not confirmed from screenshots.",
+      "journal_entry": false
+    },
+    {
+      "date": "2027-11-10",
+      "opponent": "Brighton",
+      "home": true,
+      "score": "4-2",
+      "result": "W",
+      "competition": "Youth Academy Rush Tournament",
+      "round": "Final",
+      "notes": "Wrexham's academy side win the tournament. Player of the Match: A. Lien (8.0 rating, Top Passer 9, Most Interceptions 3). Full goalscorer list not confirmed from screenshots.",
+      "journal_entry": false
     }
   ],
   "transfers": [
@@ -869,6 +902,14 @@
     {
       "date": "2027-10-24",
       "description": "Wrexham thrash Crystal Palace 4-1 away, with Rio Ngumoha recording 4 assists in a Man of the Match display without scoring himself. The win lifts Wrexham to 2nd in the Premier League table on 18 points from 9 matches."
+    },
+    {
+      "date": "2027-11-10",
+      "description": "Academy squad shuffle: Victor Cardoso (RB, 15) is released from the Youth Academy. Three American signings arrive after a three-month U.S. scouting trip -- Hunter Ross (RW, 16, 59 OVR), Ian Jackson (RM, 15, 57 OVR), and Chris Campbell (ST, 15, 55 OVR). The scouting report flagged the U.S. talent pool as light for first-division English football relative to the trip's cost -- debatable how well any of the three will develop."
+    },
+    {
+      "date": "2027-11-14",
+      "description": "Keeyvon Jenkins wins his second match as USWNT head coach, beating Finland 2-0 in a follow-up Women's International Friendly (T. Rodman 12', S. Wilson 28'; N. Girma booked 28'). The travel between USWNT camps and Wrexham duty is starting to add up for Jenkins."
     }
   ],
   "fixtures": [
