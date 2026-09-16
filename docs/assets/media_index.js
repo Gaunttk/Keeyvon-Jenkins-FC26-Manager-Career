@@ -100,12 +100,12 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
-  "2027-10-30-meredith-crystal-palace-away": {
-   "id": "2027-10-30-meredith-crystal-palace-away",
+  "2027-10-24-meredith-crystal-palace-away": {
+   "id": "2027-10-24-meredith-crystal-palace-away",
    "headline": "Rio Ngumoha Gets Four Assists and Zero Goals as Wrexham Go Second",
    "dek": "Yacel Amrizi, a Leo Sauer brace, and Chido Obi did the finishing at Selhurst Park, but every one of Wrexham's four goals ran through a nineteen-year-old who somehow ended the afternoon without scoring.",
-   "date": "2027-10-30",
-   "date_label": "Oct 30, 2027",
+   "date": "2027-10-24",
+   "date_label": "Oct 24, 2027",
    "author_id": "owen-meredith",
    "outlet": "The Red Dragon Dispatch",
    "section": "Match Coverage",
@@ -124,7 +124,7 @@ const MEDIA_INDEX = {
    "featured": false,
    "image": null,
    "image_alt": null,
-   "url": "journal.html#2027-10-30-meredith-crystal-palace-away"
+   "url": "journal.html#2027-10-24-meredith-crystal-palace-away"
   },
   "2027-10-20-meredith-slavia-praha-ucl-away": {
    "id": "2027-10-20-meredith-slavia-praha-ucl-away",
@@ -2838,7 +2838,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
-  "2027-10-30-meredith-crystal-palace-away",
+  "2027-10-24-meredith-crystal-palace-away",
   "2027-10-20-meredith-slavia-praha-ucl-away",
   "entry-003",
   "2027-10-17-mcallister-red-card-data-review",

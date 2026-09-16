@@ -57,7 +57,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.4
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.6
       }
     ]
@@ -115,7 +115,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 7.0
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 7.9
       }
     ]
@@ -260,7 +260,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.4
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 7.2
       }
     ]
@@ -289,7 +289,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 5.6
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 7.3
       }
     ]
@@ -349,7 +349,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.4
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.3
       }
     ]
@@ -378,7 +378,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.9
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.5
       }
     ]
@@ -407,7 +407,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.1
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.8
       }
     ]
@@ -453,7 +453,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.9
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 7.0
       }
     ]
@@ -482,7 +482,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 7.1
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.5
       }
     ]
@@ -511,7 +511,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 5.7
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 7.2
       }
     ]
@@ -569,7 +569,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 5.7
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.3
       }
     ]
@@ -659,7 +659,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.7
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 7.4
       }
     ]
@@ -705,7 +705,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 5.7
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 7.7
       }
     ]
@@ -734,7 +734,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.8
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.9
       }
     ]
@@ -763,7 +763,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 6.0
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 6.2
       }
     ]
@@ -788,7 +788,7 @@ const PLAYER_SEASON_STATS = {
         "rating": 5.8
       },
       {
-        "date": "2027-10-30",
+        "date": "2027-10-24",
         "rating": 5.7
       }
     ]

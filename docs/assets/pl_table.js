@@ -19,7 +19,7 @@
 const PREMIER_LEAGUE_TABLE = {
   competition: 'Premier League',
   season: '2027/28',
-  note: 'Table after Matchday 9, per a full-standings screenshot taken after the Crystal Palace (A) session (2027-10-30).',
+  note: 'Table after Matchday 9, per a full-standings screenshot taken after the Crystal Palace (A) session (2027-10-24).',
   // Zone divider rows, keyed by the position they appear ABOVE.
   markers: {
     1: { label: '\u2605 Champion', cls: 'promo' },

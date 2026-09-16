@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-10-30"
+    "last_updated": "2027-10-24"
   },
   "matches": [
     {
@@ -587,7 +587,7 @@
       }
     },
     {
-      "date": "2027-10-30",
+      "date": "2027-10-24",
       "opponent": "Crystal Palace",
       "home": false,
       "score": "4-1",
@@ -867,7 +867,7 @@
       "description": "Keeyvon Jenkins wins his first match as USWNT head coach, beating Finland 4-2 in a Women's International Friendly (Wilson 19', Macario 45', Lavelle 72', Heaps 82'; Peltola 56' and Halttunen 78' for Finland). J. Rogerson was the standout performer (7.8 rating). Jenkins was pleased with the performance but stressed the squad has a long way to go with far tougher competition ahead."
     },
     {
-      "date": "2027-10-30",
+      "date": "2027-10-24",
       "description": "Wrexham thrash Crystal Palace 4-1 away, with Rio Ngumoha recording 4 assists in a Man of the Match display without scoring himself. The win lifts Wrexham to 2nd in the Premier League table on 18 points from 9 matches."
     }
   ],
@@ -957,7 +957,7 @@
       "venue": "away"
     },
     {
-      "date": "2027-10-30",
+      "date": "2027-10-24",
       "opponent": "AFC Bournemouth",
       "competition": "Premier League",
       "venue": "home"
