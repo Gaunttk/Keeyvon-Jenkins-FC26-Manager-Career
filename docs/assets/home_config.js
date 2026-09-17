@@ -65,9 +65,9 @@ const HOME_CONFIG = {
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
+    { articleId: '2027-10-30-meredith-bournemouth-home', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
     { articleId: '2027-10-24-meredith-crystal-palace-away', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-10-20-meredith-slavia-praha-ucl-away', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' },
-    { articleId: '2027-10-17-mcallister-red-card-data-review', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' }
+    { articleId: '2027-10-20-meredith-slavia-praha-ucl-away', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */

@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-11-14"
+    "last_updated": "2027-10-30"
   },
   "matches": [
     {
@@ -653,6 +653,75 @@
       "round": "Final",
       "notes": "Wrexham's academy side win the tournament. Player of the Match: A. Lien (8.0 rating, Top Passer 9, Most Interceptions 3). Full goalscorer list not confirmed from screenshots.",
       "journal_entry": false
+    },
+    {
+      "date": "2027-10-27",
+      "opponent": "Newcastle Utd",
+      "home": true,
+      "score": "1-4",
+      "result": "L",
+      "competition": "Carabao Cup",
+      "round": "Semi-final",
+      "journal_entry": false,
+      "notes": "Marquinhos 12', B. Guimaraes 23', Joelinton 52', G. Sa 90' (Newcastle); L. Sauer 57' (Wrexham). T. Pitarch booked 38'. Jenkins fielded a heavily rotated academy-and-fringe side. Newcastle progress to the final; Wrexham eliminated.",
+      "player_ratings": {
+        "A. Kaczmarek": 5.7,
+        "M. Barbieri": 6.6,
+        "A. Cuenca": 7.4,
+        "J. Belghazi": 6.8,
+        "E. Jensen": 6.3,
+        "J. Mokio": 6.8,
+        "C. Macia": 6.4,
+        "T. Pitarch": 5.7,
+        "K. Bakke": 5.9,
+        "C. Obi": 6.3,
+        "A. Gomez": 5.6,
+        "L. Sauer": 6.8,
+        "L. Miley": 6.9,
+        "T. Fruk": 6.6,
+        "E. Dijkstra": 6.1,
+        "R. Ngumoha": 6.0
+      },
+      "team_stats": {
+        "possession": 41,
+        "shots": "8-10",
+        "shots_on_target": "4-9",
+        "pass_accuracy": 83,
+        "tackles": 6
+      }
+    },
+    {
+      "date": "2027-10-30",
+      "opponent": "AFC Bournemouth",
+      "home": true,
+      "score": "0-2",
+      "result": "L",
+      "competition": "Premier League",
+      "journal_entry": true,
+      "notes": "A. Toth 44', A. Adli 73' (Bournemouth). No reply from Wrexham, held to 1 shot all game. Best performer: A. Heaven (7.5 rating). Subs: T. Pitarch/B. Gutierrez 73', C. Macia/T. Fruk 78', D. Bobadilla/L. Miley 86'.",
+      "player_ratings": {
+        "A. Okonkwo": 6.5,
+        "L. Cacace": 7.0,
+        "C. Doyle": 6.7,
+        "A. Heaven": 7.5,
+        "J. Mokio": 6.2,
+        "T. Fruk": 6.6,
+        "B. Gutierrez": 6.0,
+        "L. Miley": 6.3,
+        "R. Ngumoha": 5.9,
+        "Y. Amrizi": 5.7,
+        "L. Sauer": 5.8,
+        "T. Pitarch": 6.5,
+        "C. Macia": 6.0,
+        "D. Bobadilla": 5.9
+      },
+      "team_stats": {
+        "possession": 42,
+        "shots": "1-12",
+        "shots_on_target": "0-9",
+        "pass_accuracy": 82,
+        "tackles": 17
+      }
     }
   ],
   "transfers": [
@@ -910,6 +979,14 @@
     {
       "date": "2027-11-14",
       "description": "Keeyvon Jenkins wins his second match as USWNT head coach, beating Finland 2-0 in a follow-up Women's International Friendly (T. Rodman 12', S. Wilson 28'; N. Girma booked 28'). The travel between USWNT camps and Wrexham duty is starting to add up for Jenkins."
+    },
+    {
+      "date": "2027-10-27",
+      "description": "Wrexham's Carabao Cup run ends in the semi-final, losing 1-4 at home to Newcastle United (Marquinhos, Guimaraes, Joelinton, G. Sa; Sauer replied) with a heavily rotated side of academy and fringe players."
+    },
+    {
+      "date": "2027-10-30",
+      "description": "Wrexham lose 0-2 at home to AFC Bournemouth (Toth, Adli), managing just 1 shot all match. The result snaps Wrexham's 2nd-place run and drops them down the Premier League table after Matchday 10."
     }
   ],
   "fixtures": [
