@@ -19,7 +19,7 @@
 const PREMIER_LEAGUE_TABLE = {
   competition: 'Premier League',
   season: '2027/28',
-  note: 'Table after Matchday 9, per a full-standings screenshot taken after the Crystal Palace (A) session (2027-10-24).',
+  note: 'Table after Matchday 10, per full-standings screenshots from the Bournemouth (H) session (2027-10-30).',
   // Zone divider rows, keyed by the position they appear ABOVE.
   markers: {
     1: { label: '\u2605 Champion', cls: 'promo' },
@@ -30,25 +30,25 @@ const PREMIER_LEAGUE_TABLE = {
   },
   rows: [
   { pos:1, club:"Man City", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/manchester-city.football-logos.cc.png", p:9, w:8, d:1, l:0, gf:18, ga:7, gd:11, pts:25, cls:"promo" },
-  { pos:2, club:"Wrexham", crest:"assets/photos/crests/wrexham-crest.png", p:9, w:6, d:0, l:3, gf:14, ga:13, gd:1, pts:18, cls:"playoff", wrexham:true },
-  { pos:3, club:"Liverpool", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/liverpool.football-logos.cc.png", p:9, w:5, d:2, l:2, gf:18, ga:13, gd:5, pts:17, cls:"playoff" },
-  { pos:4, club:"Brighton", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/brighton.football-logos.cc.png", p:9, w:5, d:1, l:3, gf:14, ga:13, gd:1, pts:16, cls:"playoff" },
-  { pos:5, club:"Everton", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/everton.football-logos.cc.png", p:9, w:5, d:1, l:3, gf:11, ga:11, gd:0, pts:16, cls:"playoff" },
-  { pos:6, club:"Newcastle Utd", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/newcastle.football-logos.cc.png", p:9, w:5, d:0, l:4, gf:14, ga:13, gd:1, pts:15, cls:"playoff" },
-  { pos:7, club:"Fulham", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/fulham.football-logos.cc.png", p:9, w:4, d:2, l:3, gf:12, ga:11, gd:1, pts:14, cls:"" },
-  { pos:8, club:"Aston Villa", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/aston-villa.football-logos.cc.png", p:9, w:4, d:2, l:3, gf:13, ga:14, gd:-1, pts:14, cls:"" },
-  { pos:9, club:"Arsenal", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/arsenal.football-logos.cc.png", p:9, w:4, d:1, l:4, gf:15, ga:12, gd:3, pts:13, cls:"" },
-  { pos:10, club:"Chelsea", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/chelsea.football-logos.cc.png", p:9, w:3, d:4, l:2, gf:15, ga:12, gd:3, pts:13, cls:"" },
-  { pos:11, club:"AFC Bournemouth", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/bournemouth.football-logos.cc.png", p:9, w:4, d:1, l:4, gf:12, ga:10, gd:2, pts:13, cls:"" },
-  { pos:12, club:"Sunderland", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/sunderland.football-logos.cc.png", p:9, w:3, d:4, l:2, gf:9, ga:7, gd:2, pts:13, cls:"" },
-  { pos:13, club:"Spurs", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/tottenham.football-logos.cc.png", p:8, w:3, d:2, l:3, gf:10, ga:9, gd:1, pts:11, cls:"" },
-  { pos:14, club:"Brentford", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/brentford.football-logos.cc.png", p:9, w:3, d:2, l:4, gf:12, ga:12, gd:0, pts:11, cls:"" },
-  { pos:15, club:"Leeds United", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/leeds-united.football-logos.cc.png", p:8, w:3, d:1, l:4, gf:12, ga:13, gd:-1, pts:10, cls:"" },
-  { pos:16, club:"Nott'm Forest", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/nottingham-forest.football-logos.cc.png", p:9, w:3, d:1, l:5, gf:10, ga:11, gd:-1, pts:10, cls:"" },
-  { pos:17, club:"Crystal Palace", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/crystal-palace.football-logos.cc.png", p:9, w:2, d:2, l:5, gf:10, ga:14, gd:-4, pts:8, cls:"" },
+  { pos:2, club:"Liverpool", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/liverpool.football-logos.cc.png", p:10, w:6, d:2, l:2, gf:22, ga:14, gd:8, pts:20, cls:"playoff" },
+  { pos:3, club:"Wrexham", crest:"assets/photos/crests/wrexham-crest.png", p:10, w:6, d:0, l:4, gf:14, ga:15, gd:-1, pts:18, cls:"playoff", wrexham:true },
+  { pos:4, club:"Brighton", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/brighton.football-logos.cc.png", p:10, w:5, d:2, l:3, gf:15, ga:14, gd:1, pts:17, cls:"playoff" },
+  { pos:5, club:"Arsenal", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/arsenal.football-logos.cc.png", p:10, w:5, d:1, l:4, gf:17, ga:13, gd:4, pts:16, cls:"playoff" },
+  { pos:6, club:"AFC Bournemouth", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/bournemouth.football-logos.cc.png", p:10, w:5, d:1, l:4, gf:14, ga:10, gd:4, pts:16, cls:"playoff" },
+  { pos:7, club:"Sunderland", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/sunderland.football-logos.cc.png", p:10, w:4, d:4, l:2, gf:11, ga:8, gd:3, pts:16, cls:"" },
+  { pos:8, club:"Newcastle Utd", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/newcastle.football-logos.cc.png", p:10, w:5, d:1, l:4, gf:15, ga:14, gd:1, pts:16, cls:"" },
+  { pos:9, club:"Everton", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/everton.football-logos.cc.png", p:10, w:5, d:1, l:4, gf:12, ga:13, gd:-1, pts:16, cls:"" },
+  { pos:10, club:"Fulham", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/fulham.football-logos.cc.png", p:10, w:4, d:3, l:3, gf:12, ga:11, gd:1, pts:15, cls:"" },
+  { pos:11, club:"Chelsea", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/chelsea.football-logos.cc.png", p:10, w:3, d:5, l:2, gf:16, ga:13, gd:3, pts:14, cls:"" },
+  { pos:12, club:"Spurs", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/tottenham.football-logos.cc.png", p:10, w:4, d:2, l:4, gf:13, ga:11, gd:2, pts:14, cls:"" },
+  { pos:13, club:"Aston Villa", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/aston-villa.football-logos.cc.png", p:9, w:4, d:2, l:3, gf:13, ga:14, gd:-1, pts:14, cls:"" },
+  { pos:14, club:"Brentford", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/brentford.football-logos.cc.png", p:10, w:3, d:2, l:5, gf:13, ga:14, gd:-1, pts:11, cls:"" },
+  { pos:15, club:"Crystal Palace", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/crystal-palace.football-logos.cc.png", p:10, w:3, d:2, l:5, gf:11, ga:14, gd:-3, pts:11, cls:"" },
+  { pos:16, club:"Leeds United", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/leeds-united.football-logos.cc.png", p:9, w:3, d:1, l:5, gf:13, ga:16, gd:-3, pts:10, cls:"" },
+  { pos:17, club:"Nott'm Forest", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/nottingham-forest.football-logos.cc.png", p:10, w:3, d:1, l:6, gf:11, ga:15, gd:-4, pts:10, cls:"" },
   { pos:18, club:"West Ham", crest:"assets/photos/crests/england-efl-championship-2026-2027.football-logos.cc/256x256/west-ham.football-logos.cc.png", p:9, w:2, d:2, l:5, gf:9, ga:18, gd:-9, pts:8, cls:"relegate" },
-  { pos:19, club:"Man Utd", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/manchester-united.football-logos.cc.png", p:9, w:0, d:4, l:5, gf:9, ga:14, gd:-5, pts:4, cls:"relegate" },
-  { pos:20, club:"Burnley", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/burnley.football-logos.cc.png", p:9, w:0, d:1, l:8, gf:6, ga:16, gd:-10, pts:1, cls:"relegate" }
+  { pos:19, club:"Man Utd", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/manchester-united.football-logos.cc.png", p:10, w:0, d:5, l:5, gf:10, ga:15, gd:-5, pts:5, cls:"relegate" },
+  { pos:20, club:"Burnley", crest:"assets/photos/crests/english-premier-league-2026-2027.football-logos.cc/256x256/burnley.football-logos.cc.png", p:10, w:0, d:2, l:8, gf:6, ga:16, gd:-10, pts:2, cls:"relegate" }
   ]
 };
 
