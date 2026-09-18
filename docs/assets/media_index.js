@@ -100,6 +100,31 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-10-30-meredith-bournemouth-home": {
+   "id": "2027-10-30-meredith-bournemouth-home",
+   "headline": "One Shot, Zero Goals: Wrexham's Flat Week Ends With Bournemouth Shutting Them Out",
+   "dek": "Four days after a kids-and-fringe side went down 4-1 to Newcastle in the Carabao Cup, a full-strength Wrexham managed a single shot against Bournemouth and slipped out of the Champions League places.",
+   "date": "2027-10-30",
+   "date_label": "Oct 30, 2027",
+   "author_id": "owen-meredith",
+   "outlet": "The Red Dragon Dispatch",
+   "section": "Match Coverage",
+   "content_type": "dispatch",
+   "entry_number": null,
+   "category": "match-reports",
+   "category_label": "Match Reports",
+   "season": "2027/28",
+   "tags": [
+    "premier-league",
+    "match-coverage",
+    "ayden-heaven",
+    "table-movement"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "journal.html#2027-10-30-meredith-bournemouth-home"
+  },
   "2027-10-24-meredith-crystal-palace-away": {
    "id": "2027-10-24-meredith-crystal-palace-away",
    "headline": "Rio Ngumoha Gets Four Assists and Zero Goals as Wrexham Go Second",
@@ -2838,6 +2863,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-10-30-meredith-bournemouth-home",
   "2027-10-24-meredith-crystal-palace-away",
   "2027-10-20-meredith-slavia-praha-ucl-away",
   "entry-003",
