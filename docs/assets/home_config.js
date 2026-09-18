@@ -55,19 +55,19 @@ const HOME_CONFIG = {
 
   /* ── Editorial hero ───────────────────────────────────────────────────── */
   lead: {
-    articleId: '2027-05-23-hargreaves-pl-champions',
-    image: 'assets/photos/md38-leeds-pl-trophy.jpg',
-    imageAlt: 'Wrexham players celebrate with the Premier League trophy at the Racecourse Ground',
-    layout: 'wide',
-    focusX: '50%',
-    focusY: '45%'
+    articleId: '2027-10-24-meredith-crystal-palace-away',
+    image: 'assets/photos/rio_ngumoha.png',
+    imageAlt: 'Rio Ngumoha',
+    layout: 'subject-right',
+    focusX: '68%',
+    focusY: '25%'
   },
 
   /* Three supporting stories stacked beside the lead. */
   supporting: [
     { articleId: '2027-10-30-meredith-bournemouth-home', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-10-24-meredith-crystal-palace-away', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' },
-    { articleId: '2027-10-20-meredith-slavia-praha-ucl-away', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' }
+    { articleId: '2027-10-20-meredith-slavia-praha-ucl-away', image: 'assets/photos/arthur_okonkwo.png', imageAlt: 'Arthur Okonkwo' },
+    { articleId: '2027-10-17-mcallister-red-card-data-review', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' }
   ],
 
   /* ── From Our Writers ─────────────────────────────────────────────────── */
@@ -75,8 +75,8 @@ const HOME_CONFIG = {
      treatment automatically — no flag needed. */
   writers: [
     { articleId: 'entry-003', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
-    { articleId: '2027-05-23-bennett-jenkins-american-champion', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
-    { articleId: '2027-05-23-cole-title-debate', image: 'assets/photos/damian_bobadilla.png', imageAlt: 'Damián Bobadilla' }
+    { articleId: '2027-09-29-bennett-uswnt-appointment-american-angle', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
+    { articleId: '2027-09-29-cole-uswnt-appointment-debate', image: 'assets/photos/wrexham-crest.png', imageAlt: 'Wrexham AFC crest' }
   ],
 
   /* ── Squad Spotlight ──────────────────────────────────────────────────── */
