@@ -34,6 +34,28 @@
     "headshot": null
   },
   {
+    "id": "earle-durow",
+    "name": "Earle Durow",
+    "outlet": "Wrexham AFC (Internal)",
+    "role": "Head of Recruitment & Squad Analysis, Wrexham AFC",
+    "is_press": false,
+    "article_noun": [
+      "briefing",
+      "briefings"
+    ],
+    "bio": "Brought onto Keeyvon Jenkins' backroom staff in the National League years and never given a title that quite covers what he does. Built the European scouting network that produced Jorthy Mokio and most of the club's German and Scandinavian intake. Writes periodic internal briefings for the head coach — squad audits, depth ladders, sell lists — which are circulated to nobody else and published here only because the club's record of itself is kept in the open.",
+    "voice": "Blunt, numerate, allergic to reputation. Leads with the conclusion the coach will like least, shows the arithmetic underneath it, and marks his own confidence honestly — he will say 'I don't know' in a paragraph he expects to be quoted back at him. Advocates hard for players he found and is the first to write them down when they stop performing.",
+    "specialties": [
+      "Squad depth audits",
+      "Recruitment strategy",
+      "Scouting network & potential tiers",
+      "Sell-list construction"
+    ],
+    "relationship_with_wrexham": "Staff, not press. His job is to tell Jenkins what the squad actually is rather than what the table says it is, which means his briefings are routinely out of step with the mood around the club.",
+    "accent_color": "var(--durow-accent)",
+    "headshot": null
+  },
+  {
     "id": "oliver-hargreaves",
     "name": "Oliver Hargreaves",
     "outlet": "Sky Sports",

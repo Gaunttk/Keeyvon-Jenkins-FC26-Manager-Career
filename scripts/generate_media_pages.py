@@ -220,6 +220,8 @@ def derive_category(a):
         return ("opinion", "Opinion")
     if ct == "press-conference":
         return ("transfers", "Transfers")
+    if ct == "briefing":
+        return ("recruitment", "Recruitment")
     return ("coverage", "Coverage")
 
 
@@ -596,12 +598,20 @@ def render_journalists_page(people, people_by_id, articles):
     cards = []
     for p in people:
         arts = by_author.get(p["id"], [])
-        n = len(arts) if p["is_press"] else diary_count
+        # Keeyvon's diary lives in journal.html, not the Media Centre, so his
+        # count comes from the diary entries rather than `by_author`. Every
+        # other voice — press or internal staff — is counted off their own
+        # non-journal articles.
+        n = diary_count if p["id"] == "keeyvon-jenkins" else len(arts)
         avatar = person_avatar(p, 1, "press-avatar", "press-avatar-mono")
         specialties = ", ".join(p["specialties"])
-        outlet_line = p["outlet"] if p["is_press"] else "The Hawk's Nest (Private Journal)"
-        noun = "article" if p["is_press"] else "entry"
-        noun_plural = "articles" if p["is_press"] else "entries"
+        outlet_line = p["outlet"]
+        # Optional per-person noun so an internal voice reads "3 briefings"
+        # rather than "3 articles"; defaults preserve the press/diary wording.
+        noun, noun_plural = p.get(
+            "article_noun",
+            ["article", "articles"] if p["is_press"] else ["entry", "entries"],
+        )
         latest_line = (
             f'<p class="press-card-bio"><strong style="color:var(--white)">Latest:</strong> {arts[0]["headline"]}</p>'
             if arts else ""

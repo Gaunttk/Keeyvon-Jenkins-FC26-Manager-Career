@@ -41,7 +41,8 @@
 
   function kicker(a) {
     var p = person(a.author_id);
-    if (p && p.is_press === false) return "The Hawk's Nest";
+    if (a.content_type === 'diary') return "The Hawk's Nest";
+    if (p && p.is_press === false) return a.outlet || p.outlet;
     if (a.content_type === 'dispatch') return 'The Red Dragon Dispatch';
     return a.outlet || a.category_label || 'Coverage';
   }

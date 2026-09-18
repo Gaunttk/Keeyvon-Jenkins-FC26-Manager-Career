@@ -80,7 +80,8 @@
      stored section otherwise. Nothing invented — both come from the JSON. */
   function kicker(a) {
     var p = person(a.author_id);
-    if (p && !p.is_press) return "The Hawk's Nest";
+    if (a.content_type === 'diary') return "The Hawk's Nest";
+    if (p && !p.is_press) return a.outlet || p.outlet;
     if (a.content_type === 'dispatch') return 'The Red Dragon Dispatch';
     return a.outlet || (a.section || 'Feature');
   }
@@ -297,7 +298,7 @@
       var a = article(item.articleId);
       if (!a) return '';
       var p = person(a.author_id) || {};
-      var hawk = p.is_press === false;
+      var hawk = p.is_press === false && a.content_type === 'diary';
       return '<a class="writer-card' + (hawk ? ' writer-card-hawk' : '') + '" href="' + esc(a.url) + '"' +
         (p.accent_color && !hawk ? ' style="--writer-accent:' + esc(p.accent_color) + '"' : '') + '>' +
         '<div class="writer-card-media"><img src="' + esc(item.image) + '" alt="' + esc(item.imageAlt) + '"></div>' +
