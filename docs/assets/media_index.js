@@ -113,7 +113,7 @@ const MEDIA_INDEX = {
   "2027-11-16-durow-squad-audit-depth-standard": {
    "id": "2027-11-16-durow-squad-audit-depth-standard",
    "headline": "Borrowed Time: A Squad Audit Against the Standard You Set Me",
-   "dek": "Third in the table on the underlying numbers of a twelfth-placed side. Internal briefing to the head coach on who is being underused, who is being carried, and the four positions where the squad fails the depth standard outright.",
+   "dek": "Third in the table on the underlying numbers of a twelfth-placed side. Internal briefing to the head coach on who is being underused, who is being carried, and the positions where the squad fails the depth standard — including the two wings, which fail it in opposite directions.",
    "date": "2027-11-16",
    "date_label": "Nov 16, 2027",
    "author_id": "earle-durow",
