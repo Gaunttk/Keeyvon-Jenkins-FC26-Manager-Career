@@ -109,7 +109,7 @@ const HOME_CONFIG = {
       image: 'assets/photos/collin.png'
     },
     others: [
-      { name: 'Hunter Ross', position: 'RW', age: 16, ovr: 59, potential: '71-94', image: 'assets/photos/hunter_ross.png' },
+      { name: 'Hunter Ross', position: 'RW', age: 16, ovr: 59, potential: '70-90', image: 'assets/photos/hunter_ross.png' },
       { name: 'Stephane Bertrand', position: 'RW', age: 16, ovr: 60, potential: '91-94', image: 'assets/photos/bertrand.png' },
       { name: 'Ben Forster', position: 'CM / CB', age: 17, ovr: 64, potential: '79-85', image: 'assets/photos/forster.png' }
     ]

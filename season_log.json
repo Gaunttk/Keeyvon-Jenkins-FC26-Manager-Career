@@ -5,7 +5,7 @@
     "game": "FC26 Career Mode",
     "season": "2027-28",
     "competition": "Premier League",
-    "last_updated": "2027-10-30"
+    "last_updated": "2027-11-16"
   },
   "matches": [
     {
@@ -987,6 +987,10 @@
     {
       "date": "2027-10-30",
       "description": "Wrexham lose 0-2 at home to AFC Bournemouth (Toth, Adli), managing just 1 shot all match. The result snaps Wrexham's 2nd-place run and drops them down the Premier League table after Matchday 10."
+    },
+    {
+      "date": "2027-11-16",
+      "description": "Monthly development review (2027-11-16): 40 players reviewed across the senior squad and Youth Academy via the Development Plans screens. OVR risers -- Lewis Miley 81->82, Brian Gutierrez 80->81, Andres Cuenca 69->70, Carlos Macia 69->70, Martin Leon 59->60, Thierry Besse 59->60, Huub Driessen 62->63. Potential re-scouted for six academy prospects: Ian Jackson 76-94 -> 81-94, Huub Driessen 77-85 -> 80-86, Knut Inge Pedersen 82-92 -> 84-90, Harry Bound 74-94 -> 74-90, Chris Campbell 72-94 -> 72-92, Hunter Ross 71-94 -> 70-90."
     }
   ],
   "fixtures": [
