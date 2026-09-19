@@ -25,6 +25,8 @@
   --bennett-accent: #3E9E8F;
   --cole-accent: #8C4A3F;
   --price-accent: #5B6EAA;
+  /* Internal club voice (staff, not press) — Earle Durow's recruitment briefings */
+  --durow-accent: #7A8B5A;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -4809,6 +4811,21 @@ body.theme-blue .copy-btn:hover { border-color: var(--dispatch-blue); color: var
 .article-body p:last-child { margin-bottom: 0; }
 .article-body strong { color: var(--white); font-weight: 600; }
 .article-body em { color: var(--light); font-style: italic; }
+/* Section headings inside a long-form piece (Earle Durow's briefings run to
+   numbered sections). Barlow Condensed to match every other label/header on
+   the site rather than the Playfair used for entry titles. */
+.article-body h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--white);
+  border-top: 1px solid var(--steel);
+  padding-top: 26px;
+  margin: 38px 0 18px;
+}
+.article-body h3:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
 .article-body blockquote {
   font-family: 'Playfair Display', serif;
   font-style: italic;

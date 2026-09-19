@@ -75,8 +75,8 @@ const HOME_CONFIG = {
      treatment automatically — no flag needed. */
   writers: [
     { articleId: 'entry-003', image: 'assets/photos/keeyvon-jenkins.png', imageAlt: 'Keeyvon Jenkins' },
-    { articleId: '2027-05-23-bennett-jenkins-american-champion', image: 'assets/photos/keeyvon-touchline.png', imageAlt: 'Keeyvon Jenkins on the touchline' },
-    { articleId: '2027-05-23-cole-title-debate', image: 'assets/photos/damian_bobadilla.png', imageAlt: 'Damián Bobadilla' }
+    { articleId: '2027-11-16-durow-squad-audit-depth-standard', image: 'assets/photos/ayden_heaven.png', imageAlt: 'Ayden Heaven' },
+    { articleId: '2027-10-17-mcallister-red-card-data-review', image: 'assets/photos/brian_gutierrez.png', imageAlt: 'Brian Gutiérrez' }
   ],
 
   /* ── Squad Spotlight ──────────────────────────────────────────────────── */

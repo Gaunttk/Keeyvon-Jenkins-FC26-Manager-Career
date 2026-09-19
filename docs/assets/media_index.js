@@ -24,6 +24,15 @@ const MEDIA_INDEX = {
    "headshot": null,
    "bio": "Wrexham's American head coach, in post since January 2025. Keeps a private journal reflecting on the arc of a season rather than any single result — an internal counterpoint to the press coverage, not a piece of media in its own right."
   },
+  "earle-durow": {
+   "name": "Earle Durow",
+   "outlet": "Wrexham AFC (Internal)",
+   "role": "Head of Recruitment & Squad Analysis, Wrexham AFC",
+   "is_press": false,
+   "accent_color": "var(--durow-accent)",
+   "headshot": null,
+   "bio": "Brought onto Keeyvon Jenkins' backroom staff in the National League years and never given a title that quite covers what he does. Built the European scouting network that produced Jorthy Mokio and most of the club's German and Scandinavian intake. Writes periodic internal briefings for the head coach — squad audits, depth ladders, sell lists — which are circulated to nobody else and published here only because the club's record of itself is kept in the open."
+  },
   "oliver-hargreaves": {
    "name": "Oliver Hargreaves",
    "outlet": "Sky Sports",
@@ -91,6 +100,7 @@ const MEDIA_INDEX = {
  "people_order": [
   "owen-meredith",
   "keeyvon-jenkins",
+  "earle-durow",
   "oliver-hargreaves",
   "rebecca-holt",
   "james-mcallister",
@@ -100,6 +110,32 @@ const MEDIA_INDEX = {
   "gareth-price"
  ],
  "articles": {
+  "2027-11-16-durow-squad-audit-depth-standard": {
+   "id": "2027-11-16-durow-squad-audit-depth-standard",
+   "headline": "Borrowed Time: A Squad Audit Against the Standard You Set Me",
+   "dek": "Third in the table on the underlying numbers of a twelfth-placed side. Internal briefing to the head coach on who is being underused, who is being carried, and the positions where the squad fails the depth standard — including the two wings, which fail it in opposite directions.",
+   "date": "2027-11-16",
+   "date_label": "Nov 16, 2027",
+   "author_id": "earle-durow",
+   "outlet": "Wrexham AFC (Internal)",
+   "section": "Recruitment Briefings",
+   "content_type": "briefing",
+   "entry_number": null,
+   "category": "recruitment",
+   "category_label": "Recruitment",
+   "season": "2027/28",
+   "tags": [
+    "squad-audit",
+    "recruitment",
+    "depth-chart",
+    "internal-briefing",
+    "data-review"
+   ],
+   "featured": false,
+   "image": null,
+   "image_alt": null,
+   "url": "media/articles/2027-11-16-durow-squad-audit-depth-standard.html"
+  },
   "2027-10-30-meredith-bournemouth-home": {
    "id": "2027-10-30-meredith-bournemouth-home",
    "headline": "One Shot, Zero Goals: Wrexham's Flat Week Ends With Bournemouth Shutting Them Out",
@@ -2863,6 +2899,7 @@ const MEDIA_INDEX = {
   }
  },
  "recent_ids": [
+  "2027-11-16-durow-squad-audit-depth-standard",
   "2027-10-30-meredith-bournemouth-home",
   "2027-10-24-meredith-crystal-palace-away",
   "2027-10-20-meredith-slavia-praha-ucl-away",
@@ -2993,6 +3030,11 @@ const MEDIA_INDEX = {
   "entry-transfers"
  ],
  "categories": [
+  {
+   "slug": "recruitment",
+   "label": "Recruitment",
+   "count": 1
+  },
   {
    "slug": "analysis",
    "label": "Analysis",
